@@ -13,32 +13,7 @@
           <h3 class="mt-2 text-4xl text-gray-600">
             From 🇳🇵, based in 🇩🇪
           </h3>
-          <div class="mt-6">
-            <a
-              href="https://www.linkedin.com/in/subodhdahal/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button--grey"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/SubodhDahal"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button--grey"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://stackoverflow.com/users/1083422/sub0dh"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button--grey"
-            >
-              StackOverflow
-            </a>
-          </div>
+          <social-links class="mt-8" />
         </div>
         <object class="w-2/5" type="image/svg+xml" data="/avatar_animated.svg" />
       </div>
