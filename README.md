@@ -1,4 +1,12 @@
-# subodhdahal-website
+```
+ _____       _               _ _    ______      _           _
+/  ___|     | |             | | |   |  _  \    | |         | |
+\ `--. _   _| |__   ___   __| | |__ | | | |__ _| |__   __ _| |  ___ ___  _ __ ___
+ `--. \ | | | '_ \ / _ \ / _` | '_ \| | | / _` | '_ \ / _` | | / __/ _ \| '_ ` _ \
+/\__/ / |_| | |_) | (_) | (_| | | | | |/ / (_| | | | | (_| | || (_| (_) | | | | | |
+\____/ \__,_|_.__/ \___/ \__,_|_| |_|___/ \__,_|_| |_|\__,_|_(_)___\___/|_| |_| |_|
+```
+Created using  [Nuxt.js](https://nuxtjs.org)
 
 ## Build Setup
 
@@ -16,5 +24,3 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
