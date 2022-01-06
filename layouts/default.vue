@@ -5,8 +5,11 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro&family=Source+Serif+Pro:wght@600&display=swap');
+
 html {
   font-family:
+    'Lato',
     'Source Sans Pro',
     -apple-system,
     BlinkMacSystemFont,
@@ -29,5 +32,9 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.container-wrap {
+  max-width: 1280px;
 }
 </style>
