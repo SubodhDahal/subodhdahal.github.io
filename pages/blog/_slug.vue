@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="cover-image w-full md:w-1/2">
-        <img :src="article.img" :alt="article.alt" class="cover-image__img">
+        <img :src="article.image" :alt="article.alt" class="cover-image__img">
       </div>
     </div>
 
@@ -42,6 +42,8 @@
 </template>
 
 <script>
+import { createSEOMeta } from '../../utils/seo'
+
 export default {
   async asyncData ({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
@@ -58,7 +60,15 @@ export default {
       next
     }
   },
+  head () {
+    const url = this.article.slug
+    const { title, description, image } = this.article
 
+    return {
+      title: `${title} - Subodh Dahal`,
+      meta: createSEOMeta({ title, description, image, url })
+    }
+  },
   methods: {
     formatDate (date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -75,6 +85,10 @@ export default {
   .nuxt-content h1{
     font-weight: bold;
     font-size: 28px;
+  }
+  .nuxt-content h2 {
+    font-weight: bold;
+    font-size: 25px;
   }
   .nuxt-content h3 {
     font-weight: bold;

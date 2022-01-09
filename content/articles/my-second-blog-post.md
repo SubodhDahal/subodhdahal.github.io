@@ -1,7 +1,7 @@
 ---
 title: My second Blog Post
 description: Learning how to use @nuxt/content to create a blog
-img: https://images.unsplash.com/photo-1576948187290-457c015b3bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cG9raGFyYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60
+image: https://images.unsplash.com/photo-1576948187290-457c015b3bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cG9raGFyYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60
 alt: my second blog post
 ---
 
