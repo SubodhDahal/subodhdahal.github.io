@@ -7,11 +7,11 @@
     <div class="cover md:flex flex-row">
       <div class="cover-text grid content-center w-full md:w-1/2">
         <div class="ml-auto px-5 w-full md:pl-10 lg:pl-5 lg:w-3/5 2xl:w-2/5">
-          <h1 class="text-4xl mb-2">
+          <h1 class="text-5xl mb-2">
             {{ article.title }}
           </h1>
           <p>{{ article.description }}</p>
-          <p>{{ formatDate(article.createdAt) }}</p>
+          <small>Posted on {{ formatDate(article.createdAt) }}</small>
         </div>
       </div>
       <div class="cover-image w-full md:w-1/2">
@@ -78,26 +78,49 @@ export default {
 }
 </script>
 
-<style>
+<style >
   .cover h1 {
     font-family: 'Source Serif Pro', serif;
   }
-  .nuxt-content h1{
+  .cover p {
+    font-size: 18px;
+  }
+  .cover-image__img {
+    max-height: 500px;
+  }
+  .nuxt-content {
+    font-size: 18px;
+  }
+  .nuxt-content h1, h2 {
+    font-family: 'Source Serif Pro', serif;
     font-weight: bold;
+  }
+  .nuxt-content h1 {
     font-size: 28px;
   }
   .nuxt-content h2 {
-    font-weight: bold;
     font-size: 25px;
   }
   .nuxt-content h3 {
     font-weight: bold;
     font-size: 22px;
   }
-  .nuxt-content p {
+  .nuxt-content p, .nuxt-content ul {
     margin-bottom: 20px;
+    line-height: 1.7em;
   }
-  .cover-image__img {
-    max-height: 500px;
+  .nuxt-content figure {
+    width: 500px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+  }
+  .nuxt-content figure.w-full {
+    width: 100%;
+  }
+  .nuxt-content figure figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic 13px sans-serif;
+    padding: 4px;
   }
 </style>
