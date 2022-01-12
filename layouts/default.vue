@@ -5,7 +5,7 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro&family=Source+Serif+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro&family=Source+Serif+Pro:wght@400;600&display=swap');
 
 html {
   font-family:
