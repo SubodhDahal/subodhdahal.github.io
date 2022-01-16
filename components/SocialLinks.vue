@@ -1,39 +1,44 @@
 <template>
-  <div>
+  <div class="self-center ">
     <a
       href="https://www.linkedin.com/in/subodhdahal"
+      title="LinkedIn"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <font-awesome-icon :icon="faLinkedin" class="text-3xl mr-2 text-gray-900" />
+      <font-awesome-icon :icon="faLinkedin" class="text-3xl mr-2 text-gray-700" />
     </a>
     <a
       href="https://www.xing.com/profile/Subodh_Dahal"
+      title="Xing"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <font-awesome-icon :icon="faXingSquare" class="text-3xl mr-2 text-gray-900" />
+      <font-awesome-icon :icon="faXingSquare" class="text-3xl mr-2 text-gray-700" />
     </a>
     <a
       href="https://github.com/SubodhDahal"
+      title="GitHub"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <font-awesome-icon :icon="faGithubSquare" class="text-3xl mr-2 text-gray-900" />
+      <font-awesome-icon :icon="faGithubSquare" class="text-3xl mr-2 text-gray-700" />
     </a>
     <a
       href="https://stackoverflow.com/users/1083422/sub0dh"
+      title="Stackoverflow"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <font-awesome-icon :icon="faStackOverflow" class="text-3xl mr-2 text-gray-900" />
+      <font-awesome-icon :icon="faStackOverflow" class="text-3xl mr-2 text-gray-700" />
     </a>
     <a
       href="https://instagram.com/sub0dh_d"
+      title="Instagram"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <font-awesome-icon :icon="faInstagramSquare" class="text-3xl mr-2 text-gray-900" />
+      <font-awesome-icon :icon="faInstagramSquare" class="text-3xl mr-2 text-gray-700" />
     </a>
   </div>
 </template>

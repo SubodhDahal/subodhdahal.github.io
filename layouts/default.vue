@@ -25,6 +25,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  @apply text-gray-700;
 }
 
 *,
@@ -34,7 +35,7 @@ html {
   margin: 0;
 }
 
-.container-wrap {
-  max-width: 1280px;
+.container {
+  @apply mx-auto px-10 md:px-0;
 }
 </style>

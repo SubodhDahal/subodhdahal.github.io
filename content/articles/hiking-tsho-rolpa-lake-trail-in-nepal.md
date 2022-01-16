@@ -408,6 +408,8 @@ I certainly felt that I became a different person, for the better after my journ
 
 <hr class="mb-2">
 
+<div class="text-gray-500">
+
 ### Addendum
 
 <div class="text-sm">

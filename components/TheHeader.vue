@@ -1,11 +1,18 @@
 <template>
-  <header class="flex p-10">
-    <NuxtLink to="/">
+  <div class="bg-gray-100">
+    <header class="container flex justify-between mx-auto px-5 pt-5">
       <div class="text-2xl font-bold mb-4">
-        SubodhDahal
+        <NuxtLink to="/">
+          SubodhDahal
+        </NuxtLink>
       </div>
-    </NuxtLink>
-  </header>
+      <div class="text-lg uppercase">
+        <NuxtLink to="/blog">
+          Blog
+        </NuxtLink>
+      </div>
+    </header>
+  </div>
 </template>
 
 <style scoped>

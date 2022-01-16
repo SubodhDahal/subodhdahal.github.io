@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div class="container-wrap mx-auto my-5">
-      <TheHeader />
-    </div>
+    <TheHeader />
 
     <div class="cover md:flex flex-row">
       <div class="cover-text grid content-center w-full md:w-1/2">
@@ -10,11 +8,11 @@
           <h1 class="text-5xl mb-2">
             {{ article.title }}
           </h1>
-          <p class="mb-2">
+          <p class="mb-2 text-gray-600">
             {{ article.description }}
           </p>
-          <div class="mb-3">
-            <small>Posted on {{ formatDate(article.postedAt) }}</small>
+          <div class="mb-3 text-gray-500 text-sm">
+            Posted on {{ formatDate(article.postDate) }}
           </div>
         </div>
       </div>
@@ -23,8 +21,8 @@
       </div>
     </div>
 
-    <div class="container-wrap mx-auto my-10 md:my-15">
-      <article class="w-5/6 md:w-4/6 mx-auto">
+    <div class="container mx-auto mt-10 md:mt-15">
+      <article class="md:w-4/6 mx-auto">
         <!-- TOC -->
         <!-- TODO: Add to the right -->
         <!-- <nav>
@@ -42,6 +40,8 @@
         <prev-next :prev="prev" :next="next" />
       </article>
     </div>
+
+    <TheFooter />
   </div>
 </template>
 
@@ -96,7 +96,7 @@ export default {
   .nuxt-content {
     font-size: 18px;
   }
-  .nuxt-content h1, h2 {
+  .nuxt-content h1, .nuxt-content h2 {
     font-family: 'Source Serif Pro', serif;
     font-weight: bold;
   }
