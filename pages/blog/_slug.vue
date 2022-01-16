@@ -2,7 +2,7 @@
   <div>
     <TheHeader />
 
-    <div class="cover md:flex flex-row">
+    <div class="cover md:flex flex-row my-10">
       <div class="cover-text grid content-center w-full md:w-1/2">
         <div class="ml-auto px-5 w-full md:pl-10 lg:pl-5 lg:w-3/5 2xl:w-2/5">
           <h1 class="text-5xl mb-2">
@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import { createSEOMeta } from '../../utils/seo'
+import { createSEOMeta } from '@/utils/seo'
 
 export default {
   async asyncData ({ $content, params }) {
@@ -65,12 +65,11 @@ export default {
     }
   },
   head () {
-    const url = this.article.slug
-    const { title, description, image } = this.article
+    const { title, description, image, slug } = this.article
 
     return {
       title: `${title} - Subodh Dahal`,
-      meta: createSEOMeta({ title, description, image, url })
+      meta: createSEOMeta({ title, description, image, url: slug })
     }
   },
   methods: {

@@ -10,7 +10,6 @@
 html {
   font-family:
     'Lato',
-    'Source Sans Pro',
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',

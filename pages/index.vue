@@ -2,8 +2,9 @@
   <div>
     <TheHeader />
     <div class="bg-gray-100">
-      <div class="container">
-        <div class="md:flex w-full pt-10 md:pt-20 mb-4">
+      <div class="container py-2 md:py-0">
+        <div class="md:flex-row-reverse md:flex w-full pt-2 md:pt-10 md:pt-20 mb-4">
+          <object class="w-40 md:w-2/5 mx-auto md:mt-0" type="image/svg+xml" data="/avatar_animated.svg" />
           <div class="w-full md:w-3/5 self-center">
             <h1 class="text-5xl md:text-7xl mb-7 text-gray-700 leading-snug">
               Hi! <br>
@@ -16,7 +17,6 @@
               From 🇳🇵, based in 🇩🇪
             </h3>
           </div>
-          <object class="w-40 md:w-2/5 mx-auto mt-8 md:mt-0" type="image/svg+xml" data="/avatar_animated.svg" />
         </div>
       </div>
     </div>

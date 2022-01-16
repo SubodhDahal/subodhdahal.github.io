@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import { createSEOMeta } from '@/utils/seo'
 export default {
   async asyncData ({ $content }) {
     const tags = await $content('tags')

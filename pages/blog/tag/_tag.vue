@@ -1,81 +1,86 @@
 <template>
-  <div
-    class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
-  >
-    <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
-      <img
-        :src="tag.image"
-        :alt="tag.name"
-        class="absolute h-full w-full object-cover"
-      >
-    </div>
+  <div>
+    <TheHeader />
+    <div
+      class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
+    >
+      <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
+        <img
+          :src="tag.image"
+          :alt="tag.name"
+          class="absolute h-full w-full object-cover"
+        >
+      </div>
 
-    <div class="overlay" />
-    <div class="absolute top-32 left-32 right-32 text-white">
-      <NuxtLink to="/">
-        <Logo />
-      </NuxtLink>
-      <div class="mt-16 -mb-3 flex flex-col text-sm">
-        <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
-          <h1 class="text-4xl font-bold uppercase">
-            {{ tag.name }}
-          </h1>
-          <p class="mb-4 uppercase">
-            {{ tag.description }}
-          </p>
+      <div class="overlay" />
+      <div class="absolute top-32 left-32 right-32 text-white">
+        <NuxtLink to="/">
+          <Logo />
+        </NuxtLink>
+        <div class="mt-16 -mb-3 flex flex-col text-sm">
+          <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
+            <h1 class="text-4xl font-bold uppercase">
+              {{ tag.name }}
+            </h1>
+            <p class="mb-4 uppercase">
+              {{ tag.description }}
+            </p>
 
-          <nuxt-content :document="tag" />
+            <nuxt-content :document="tag" />
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      class="relative xs:py-8 xs:px-8 lg:py-32 lg:px-16 lg:w-1/2 xs:w-full h-full overflow-y-scroll markdown-body post-right custom-scroll"
-    >
-      <h3 class="mb-4 font-bold text-4xl">
-        Articles tagged {{ tag.name }}:
-      </h3>
-      <ul>
-        <li
-          v-for="article in articles"
-          :key="article.slug"
-          class="w-full px-2 xs:mb-6 md:mb-12 article-card"
-        >
-          <NuxtLink
-            :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-            class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
+      <div
+        class="relative xs:py-8 xs:px-8 lg:py-32 lg:px-16 lg:w-1/2 xs:w-full h-full overflow-y-scroll markdown-body post-right custom-scroll"
+      >
+        <h3 class="mb-4 font-bold text-4xl">
+          Articles tagged {{ tag.name }}:
+        </h3>
+        <ul>
+          <li
+            v-for="article in articles"
+            :key="article.slug"
+            class="w-full px-2 xs:mb-6 md:mb-12 article-card"
           >
-            <img
-              v-if="article.image"
-              class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
-              :src="article.image"
-              :alt="article.alt"
+            <NuxtLink
+              :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+              class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
             >
+              <img
+                v-if="article.image"
+                class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
+                :src="article.image"
+                :alt="article.alt"
+              >
 
-            <div
-              class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full"
-            >
-              <h2 class="font-bold">
-                {{ article.title }}
-              </h2>
-              <p>{{ article.description }}</p>
-              <p class="font-bold text-gray-600 text-sm">
-                {{ formatDate(article.postDate) }}
-              </p>
-            </div>
-          </NuxtLink>
-        </li>
-      </ul>
+              <div
+                class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full"
+              >
+                <h2 class="font-bold">
+                  {{ article.title }}
+                </h2>
+                <p>{{ article.description }}</p>
+                <p class="font-bold text-gray-600 text-sm">
+                  {{ formatDate(article.postDate) }}
+                </p>
+              </div>
+            </NuxtLink>
+          </li>
+        </ul>
 
-      <NuxtLink to="/blog">
-        <p class="hover:underline mt-5">
-          &larr; Back to All Articles
-        </p>
-      </NuxtLink>
+        <NuxtLink to="/blog">
+          <p class="hover:underline mt-5">
+            &larr; Back to All Articles
+          </p>
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { createSEOMeta } from '@/utils/seo'
+
 export default {
   async asyncData ({ $content, params }) {
     const tags = await $content('tags')
@@ -90,6 +95,14 @@ export default {
     return {
       articles,
       tag
+    }
+  },
+  head () {
+    const { name, description, image, slug } = this.tag
+
+    return {
+      title: 'Article Tags - Subodh Dahal',
+      meta: createSEOMeta({ title: name, description, image, url: slug })
     }
   },
   methods: {
