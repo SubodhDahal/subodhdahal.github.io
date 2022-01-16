@@ -13,7 +13,9 @@
           <p class="mb-2">
             {{ article.description }}
           </p>
-          <small>Posted on {{ formatDate(article.postedAt) }}</small>
+          <div class="mb-3">
+            <small>Posted on {{ formatDate(article.postedAt) }}</small>
+          </div>
         </div>
       </div>
       <div class="cover-image w-full md:w-1/2">
@@ -21,8 +23,8 @@
       </div>
     </div>
 
-    <div class="container-wrap mx-auto my-20">
-      <article class="w-4/6 mx-auto">
+    <div class="container-wrap mx-auto my-10 md:my-15">
+      <article class="w-5/6 md:w-4/6 mx-auto">
         <!-- TOC -->
         <!-- TODO: Add to the right -->
         <!-- <nav>
@@ -113,12 +115,12 @@ export default {
     line-height: 1.7em;
   }
   .nuxt-content figure.image {
-    width: 500px;
+    max-width: 500px;
     margin: 0 auto 20px auto;
     text-align: center;
   }
   .nuxt-content figure.image.w-full {
-    width: 100%;
+    max-width: 100%;
   }
   .nuxt-content figure.image figcaption {
     background-color: #222;
