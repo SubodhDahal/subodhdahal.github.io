@@ -1,7 +1,5 @@
 <template>
   <div>
-    <TheHeader />
-
     <div class="cover md:flex flex-row my-10">
       <div class="cover-text grid content-center w-full md:w-1/2">
         <div class="ml-auto px-5 w-full md:pl-10 lg:pl-5 lg:w-3/5 2xl:w-2/5">
@@ -40,8 +38,6 @@
         <prev-next :prev="prev" :next="next" />
       </article>
     </div>
-
-    <TheFooter />
   </div>
 </template>
 

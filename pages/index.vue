@@ -1,6 +1,5 @@
 <template>
   <div>
-    <TheHeader />
     <div class="bg-gray-100">
       <div class="container py-2 md:py-0">
         <div class="md:flex-row-reverse md:flex w-full pt-2 md:pt-10 md:pt-20 mb-4">
@@ -23,7 +22,6 @@
     <div class="container mt-10">
       <BlogPosts />
     </div>
-    <TheFooter />
   </div>
 </template>
 
