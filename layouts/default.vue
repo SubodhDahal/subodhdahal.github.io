@@ -39,4 +39,28 @@ html {
 .container {
   @apply mx-auto px-10 md:px-0;
 }
+
+a {
+  @apply text-blue-500;
+}
+
+table {
+  @apply table-auto;
+}
+table thead {
+  @apply bg-gray-200;
+}
+table th,
+table td {
+  @apply border border-gray-50;
+  @apply px-5 py-3;
+  @apply text-left;
+}
+ul.list {
+  @apply list-disc;
+  @apply list-inside;
+}
+ul.list li {
+  @apply ml-5 mb-2;
+}
 </style>
