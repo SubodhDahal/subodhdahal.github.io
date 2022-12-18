@@ -28,7 +28,7 @@ export default {
   async asyncData ({ $content }) {
     const tags = await $content('tags')
       .only(['name', 'description', 'image', 'slug'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('postDate', 'desc')
       .fetch()
     return { tags }
   },

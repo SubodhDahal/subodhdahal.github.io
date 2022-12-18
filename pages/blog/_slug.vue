@@ -50,7 +50,7 @@ export default {
 
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('postDate', 'desc')
       .surround(params.slug)
       .fetch()
 

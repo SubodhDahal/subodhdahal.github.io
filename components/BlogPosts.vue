@@ -41,7 +41,7 @@ export default {
   async fetch () {
     this.articles = await this.$content('articles')
       .only(['title', 'description', 'image', 'slug', 'author'])
-      .sortBy('createdAt', 'desc')
+      .sortBy('postDate', 'desc')
       .fetch()
   }
 }
