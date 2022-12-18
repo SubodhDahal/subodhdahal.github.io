@@ -7,7 +7,14 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro&family=Source+Serif+Pro:wght@400;600&display=swap');
+@font-face {
+  font-family: 'Lato';
+  src: url('../static/fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  src: url('../static/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf') format('truetype');
+}
 
 html {
   font-family:

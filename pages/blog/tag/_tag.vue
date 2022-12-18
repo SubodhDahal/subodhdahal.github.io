@@ -37,7 +37,7 @@
           <li
             v-for="article in articles"
             :key="article.slug"
-            class="w-full px-2 xs:mb-6 md:mb-12 article-card"
+            class="w-full px-2 xs:mb-6 md:mb-12 mb-6 article-card"
           >
             <NuxtLink
               :to="{ name: 'blog-slug', params: { slug: article.slug } }"
