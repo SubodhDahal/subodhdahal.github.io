@@ -6,7 +6,7 @@
           <img src="/logo.svg" class="logo">
         </NuxtLink>
       </div>
-      <div class="text-lg uppercase">
+      <div class="text-xl mt-1 uppercase">
         <NuxtLink to="/blog">
           Blog
         </NuxtLink>
@@ -18,6 +18,7 @@
 <style scoped>
   header {
     font-family: 'Source Serif Pro', serif;
+    font-weight: bold;
   }
   header .logo {
     height: 40px;
