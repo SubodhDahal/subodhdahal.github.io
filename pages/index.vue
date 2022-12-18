@@ -5,7 +5,7 @@
         <div class="md:flex-row-reverse md:flex w-full pt-2 md:pt-10 md:pt-20 mb-4">
           <object class="w-40 md:w-2/5 mx-auto md:mt-0" type="image/svg+xml" data="/avatar_animated.svg" />
           <div class="w-full md:w-3/5 self-center">
-            <h1 class="text-5xl md:text-7xl mb-7 text-gray-700 leading-snug">
+            <h1 class="heading leading-snug">
               Hi! <br>
               I'm Subodh Dahal
             </h1>
@@ -28,3 +28,10 @@
 <script>
 export default {}
 </script>
+
+<style scoped>
+.heading {
+  font-family: 'Source Serif Pro', serif;
+  @apply text-5xl md:text-7xl mb-7 text-gray-700;
+}
+</style>
