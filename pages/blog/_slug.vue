@@ -9,6 +9,7 @@
           <p class="mb-2 text-gray-600">
             {{ article.description }}
           </p>
+          <ArticleTags :tags="article.tags" class="my-4" />
           <div class="mb-3 text-gray-500 text-sm">
             Posted on {{ formatDate(article.postDate) }}
           </div>
@@ -42,9 +43,11 @@
 </template>
 
 <script>
+import ArticleTags from '@/components/ArticleTags.vue'
 import { createSEOMeta } from '@/utils/seo'
 
 export default {
+  components: { ArticleTags },
   async asyncData ({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
 
