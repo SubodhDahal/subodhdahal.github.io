@@ -23,7 +23,7 @@ When using git from the command-line you are expected to write commands but this
 Here are some of the aliases that I use frequently:
 
 <div class="flex justify-center">
-  <table class="table-auto justify-center mb-4">
+  <table class="table-auto justify-center mb-4 w-1/2">
     <thead>
       <tr>
         <th>alias</th>
@@ -114,9 +114,7 @@ The value of `help.autoCorrect` is the number of deciseconds git waits before it
 The `--global` flag specifies that auto-correction will be enabled for all git repositories in the system. If you omit this, it will only take effect in the current repo.
 
 <figure class="image">
-  <div>
-    <img src="/images/git-and-command-line/git-autocorrect.png" alt="git auto-correct in action"/>
-  </div>
+  <img src="/images/git-and-command-line/git-autocorrect.png" alt="git auto-correct in action"/>
   <figcaption>Git auto-correct in action</figcaption>
 </figure>
 
@@ -166,9 +164,7 @@ alias gco='git_checkout_branch'
 If you already know the branch name and don't want to be presented with a list of options, you can just use the command as `gco <branch_name>`, eg: `gco develop`.
 
 <figure class="image">
-  <div>
-    <img src="/images/git-and-command-line/git-checkout-fzf.gif" alt="fzf in action"/>
-  </div>
+  <img src="/images/git-and-command-line/git-checkout-fzf.gif" alt="fzf in action"/>
   <figcaption>Git checkout with fzf in action</figcaption>
 </figure>
 
@@ -190,9 +186,7 @@ You can learn more about rebasing in [https://git-rebase.io/](https://git-rebase
 [Git Interactive Rebase Tool](https://github.com/MitMaro/git-interactive-rebase-tool) can help make the process of interactive rebasing easier. It is a GUI tool that runs in the terminal and can be used to rebase commits in a git repo. It is written in Rust and is available for Linux, macOS and Windows.
 
 <figure class="image" style="background: #272733">
-  <div>
-    <img src="/images/git-and-command-line/interactive-rebase-tool.gif" alt="fzf in action"/>
-  </div>
+  <img src="/images/git-and-command-line/interactive-rebase-tool.gif" alt="fzf in action"/>
   <figcaption>Basic usage of Interactive Rebase Tool</figcaption>
 </figure>
 

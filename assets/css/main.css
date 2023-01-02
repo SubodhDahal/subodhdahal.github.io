@@ -37,30 +37,6 @@ html {
 .container {
   @apply mx-auto px-10 md:px-0;
 }
-
-a {
-  @apply text-blue-500;
-}
-
-table {
-  @apply table-auto;
-}
-table thead {
-  @apply bg-gray-200;
-}
-table th,
-table td {
-  @apply border border-gray-50;
-  @apply px-5 py-3;
-  @apply text-left;
-}
-ul.list {
-  @apply list-disc;
-  @apply list-inside;
-}
-ul.list li {
-  @apply ml-5 mb-2;
-}
 header {
   font-family: 'Source Serif Pro', serif;
   font-weight: bold;
@@ -71,4 +47,7 @@ header .logo {
 .blog-page h1, .blog-page h2 {
   font-family: 'Source Serif Pro', serif;
   font-weight: bold;
+}
+.image figcaption {
+  margin-top: 0;
 }
