@@ -1,3 +1,14 @@
+<script setup lang="ts">
+const { data: articles } = await useAsyncData('articles-home',
+  () => queryContent('blog')
+    // .where({ published: { $ne: false } })
+    .without('body')
+    .sort({ postDate: -1 })
+    .limit(6)
+    .find()
+)
+</script>
+
 <template>
   <div class="blog-page">
     <h1 class="font-bold text-4xl text-center mb-10">
@@ -6,11 +17,12 @@
     <ul class="flex flex-wrap">
       <li
         v-for="article of articles"
-        :key="article.slug"
+        :key="article.url  || article._path"
         class="xs:w-full md:w-1/2 px-2 xs:mb-6 md:mb-12 mb-6 article-card"
       >
         <NuxtLink
-          :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+          :to="article.url || article._path"
+          :target="article.url ? '_blank' : '_self'"
           class="md:flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
         >
           <img
@@ -26,30 +38,10 @@
             <p class="text-gray-600">
               {{ article.description }}
             </p>
-            <!-- <ArticleTags :tags="article.tags" class="mt-4" /> -->
+            <ArticleTags :tags="article.tags" class="mt-4" />
           </div>
         </NuxtLink>
       </li>
     </ul>
   </div>
 </template>
-
-<script setup lang="ts">
-import ArticleTags from './ArticleTags.vue'
-const { data: articles } = await useAsyncData('articles-home',
-  () => queryContent('articles')
-    // .where({ published: { $ne: false } })
-    .without('body')
-    .sort({ postDate: -1 })
-    .limit(6)
-    .find()
-)
-console.log(articles)
-</script>
-
-<style>
-.blog-page h1, .blog-page h2 {
-  font-family: 'Source Serif Pro', serif;
-  font-weight: bold;
-}
-</style>
