@@ -36,9 +36,6 @@ export default <Partial<Config>>{
       margin: {
         'top-bar': '100px',
       },
-      maxWidth: {
-        '1/4': '25%',
-      },
     },
   },
   variants: {
