@@ -40,7 +40,7 @@ export default {
         title,
         description: 'Blog posts',
         image: '',
-        url: '/blog'
+        url: 'blog'
       })
     }
   }

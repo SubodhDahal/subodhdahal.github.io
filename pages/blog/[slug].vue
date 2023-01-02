@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="nuxt-content">
     <div class="cover md:flex flex-row my-10">
       <div class="cover-text grid content-center w-full md:w-1/2">
         <div class="ml-auto px-5 w-full md:pl-10 lg:pl-5 lg:w-3/5 2xl:w-2/5">
@@ -39,50 +39,52 @@
           </template>
         </ContentRenderer>
 
-        <hr>
-
-        <prev-next :prev="prev" :next="next" />
+        <BlogPrevNext :prev="prev" :next="next" />
       </article>
     </div>
   </div>
 </template>
 
-<script>
-import ArticleTags from '@/components/ArticleTags.vue'
+<script setup lang="ts">
+import type { BlogPost, PrevNext } from '~/types'
 import { createSEOMeta } from '@/utils/seo'
 
-export default {
-  components: { ArticleTags },
-  async asyncData ({ $content, params }) {
-    const article = await $content('articles', params.slug).fetch()
+const { path } = useRoute()
+const { data: article } = await useAsyncData(path.replace(/\/$/, ''),
+  () => queryContent<BlogPost>('blog')
+    .where({ _path: path })
+    .findOne(),
+)
 
-    const [prev, next] = await $content('articles')
-      .only(['title', 'slug'])
-      .sortBy('postDate', 'desc')
-      .surround(params.slug)
-      .fetch()
+const { data } = await useAsyncData('prev-next',
+  () => queryContent<PrevNext>('blog')
+    .where({ published: { $ne: false }, featured: { $ne: true } })
+    .sort({ date: -1 })
+    .only(['_path', 'title'])
+    .findSurround(path),
+)
+const [prev, next] = data.value || []
 
-    return {
-      article,
-      prev,
-      next
-    }
-  },
-  head () {
-    const { title, description, image, slug } = this.article
-
-    return {
-      title: `${title} - Subodh Dahal`,
-      meta: createSEOMeta({ title, description, image, url: slug })
-    }
-  },
-  methods: {
-    formatDate (date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
-    }
-  }
+function formatDate (date) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' }
+  return new Date(date).toLocaleDateString('en', options)
 }
+
+const title: string = article.value?.title || ''
+const description: string = article.value?.description || ''
+const image: string = article.value?.image || ''
+// const ogImage: string = article.value?.ogImage || ''
+
+useHead({
+  title,
+  meta: createSEOMeta({ title, description, image, url: path }),
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://subodhdahal.com${path}`,
+    },
+  ],
+})
 </script>
 
 <style >

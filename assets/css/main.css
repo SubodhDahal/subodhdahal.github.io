@@ -61,3 +61,14 @@ ul.list {
 ul.list li {
   @apply ml-5 mb-2;
 }
+header {
+  font-family: 'Source Serif Pro', serif;
+  font-weight: bold;
+}
+header .logo {
+  height: 40px;
+}
+.blog-page h1, .blog-page h2 {
+  font-family: 'Source Serif Pro', serif;
+  font-weight: bold;
+}
