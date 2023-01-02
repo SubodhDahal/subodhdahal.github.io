@@ -15,12 +15,3 @@
   </div>
 </template>
 
-<style scoped>
-  header {
-    font-family: 'Source Serif Pro', serif;
-    font-weight: bold;
-  }
-  header .logo {
-    height: 40px;
-  }
-</style>

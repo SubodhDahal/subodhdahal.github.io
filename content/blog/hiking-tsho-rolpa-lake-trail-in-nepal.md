@@ -43,9 +43,7 @@ started having debilitating effects from the high altitude.
 - **Difficulty level:** moderate/difficult
 
 <figure class="image w-full">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/elevation-change-graph.png" width="1200" />
-  </div>
+  <img src="/images/tsho-rolpa/elevation-change-graph.png" width="1200" />
   <figcaption>Elevation change graph for the trip</figcaption>
 </figure>
 
@@ -63,9 +61,7 @@ motorbike along with our backpacks. I rode my younger brother's KTM Duke 200cc m
 comfortable ride for two persons with heavy backpacks.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/me-on-motorbike.jpg" />
-  </div>
+  <img src="/images/tsho-rolpa/me-on-motorbike.jpg" />
   <figcaption>Me on the motorbike at Dolalghat where we had breakfast</figcaption>
 </figure>
 
@@ -77,9 +73,7 @@ The Gaurishankar Conservation Area starts from
 Singati, where visitors must pay an entrance fee. Foreigners might also need extra documents and trekking permits.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/himalayas-on-the-way.jpg" />
-  </div>
+  <img src="/images/tsho-rolpa/himalayas-on-the-way.jpg" />
   <figcaption>One of the first views of Mount Gaurishankar on our trip</figcaption>
 </figure>
 
@@ -90,9 +84,7 @@ Shortly before reaching Chhetchhet, we came across a gorgeous waterfall flowing 
 Tamakoshi river. A rainbow had also formed in front of it, making the view even more surreal.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/chhetchhet-waterfall2.jpg" alt="Waterfall just before reaching Chhetchhet"/>
-  </div>
+  <img src="/images/tsho-rolpa/chhetchhet-waterfall2.jpg" alt="Waterfall just before reaching Chhetchhet"/>
   <figcaption>A gorgeous waterfall just before reaching Chhetchhet</figcaption>
 </figure>
 
@@ -111,9 +103,7 @@ electricity. Trekkers on the Tsho-Rolpa route typically stop there first to char
 continue further to the next village.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/simigaun.jpg" alt="A typical village house in Simigaun"/>
-  </div>
+  <img src="/images/tsho-rolpa/simigaun.jpg" alt="A typical village house in Simigaun"/>
   <figcaption>A typical village house in Simigaun</figcaption>
 </figure>
 
@@ -129,9 +119,7 @@ With another day of a long walk ahead of us and the exhaustion from the day's bi
 time going to bed.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/mount-gaurishankar-sunlight.jpg" alt="Mount Gaurishankar illuminated by the last rays of the day's sunlight"/>
-  </div>
+  <img src="/images/tsho-rolpa/mount-gaurishankar-sunlight.jpg" alt="Mount Gaurishankar illuminated by the last rays of the day's sunlight"/>
   <figcaption>Mount Gaurishankar illuminated by the last rays of the day's sunlight</figcaption>
 </figure>
 
@@ -144,18 +132,14 @@ our hike. This was also an uphill hike, but the elevation change didn't feel as 
 maybe we got used to it.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/surmuche-morning-views.jpg" alt="Morning views from our lodge in Surmuche"/>
-  </div>
+  <img src="/images/tsho-rolpa/surmuche-morning-views.jpg" alt="Morning views from our lodge in Surmuche"/>
   <figcaption>Morning views from our lodge in Surmuche</figcaption>
 </figure>
 
 After hiking for about 2 hours, we reached the next stop of Kyalche. We felt fine, so we rested briefly and took some pictures before continuing.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/stop-at-kyalche.jpg" alt="Me at the short stop in Kyalche"/>
-  </div>
+  <img src="/images/tsho-rolpa/stop-at-kyalche.jpg" alt="Me at the short stop in Kyalche"/>
   <figcaption>Me during the stop in Kyalche</figcaption>
 </figure>
 
@@ -167,9 +151,7 @@ blue water. The water's almost surreal color probably comes from minerals washed
 not so far away.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/dongang.jpg" alt="The settlement at Dongang"/>
-  </div>
+  <img src="/images/tsho-rolpa/dongang.jpg" alt="The settlement at Dongang"/>
   <figcaption>The settlement at Dongang along the Tamakoshi river</figcaption>
 </figure>
 
@@ -183,9 +165,7 @@ We resumed the hike from Dongang at around 1 pm. The mountains felt closer now, 
 while, we began to notice that the vegetation was changing and starting to be more alpine-like.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/after-donggang.jpg" alt="Views a short while after Dongang"/>
-  </div>
+  <img src="/images/tsho-rolpa/after-donggang.jpg" alt="Views a short while after Dongang"/>
   <figcaption>Views a short while after Dongang</figcaption>
 </figure>
 
@@ -204,9 +184,7 @@ Beding, also known as the village of Everest climbers, was where we stayed on th
 had arrived in darkness, we got a pleasant surprise in the morning. Beautiful mountain views greeted us from our lodge.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/beding-morning-views.jpg" alt="Morning views from our lodge at Beding"/>
-  </div>
+  <img src="/images/tsho-rolpa/beding-morning-views.jpg" alt="Morning views from our lodge at Beding"/>
   <figcaption>Morning views from our lodge at Beding</figcaption>
 </figure>
 
@@ -218,15 +196,11 @@ Along the way, we could enjoy the stunning views of the Rolwaling valley. In the
 Rolwaling means "valley carved by a plow," and the landscape did look the part.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/rolwaling-valley-1.jpg" alt="Views of the Rolwaling valley"/>
-  </div>
+  <img src="/images/tsho-rolpa/rolwaling-valley-1.jpg" alt="Views of the Rolwaling valley"/>
   <figcaption>Views of the Rolwaling valley</figcaption>
 </figure>
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/rolwaling-valley-2.jpg" alt="Views of the Rolwaling valley"/>
-  </div>
+  <img src="/images/tsho-rolpa/rolwaling-valley-2.jpg" alt="Views of the Rolwaling valley"/>
   <figcaption>Views of the Rolwaling valley</figcaption>
 </figure>
 
@@ -242,9 +216,7 @@ past few days felt surreal. We lingered for a while over the stunning views of t
 valley behind us. We also met other travelers from Nepal at the lake.
 
 <figure class="image w-full">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/lake-view.jpg" alt="Views of the Tsho-Rolpa lake"/>
-  </div>
+  <img src="/images/tsho-rolpa/lake-view.jpg" alt="Views of the Tsho-Rolpa lake"/>
   <figcaption>Views of the Tsho-Rolpa lake</figcaption>
 </figure>
 
@@ -255,9 +227,7 @@ Tsho-Rolpa lake. Everyone had to return unless they planned to camp.
 While making our descent from the lake to Na village, we saw the golden hour set in. Beautiful light filled the horizon ahead of us.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/na-village.jpg" alt="Views of the Na village"/>
-  </div>
+  <img src="/images/tsho-rolpa/na-village.jpg" alt="Views of the Na village"/>
   <figcaption>Views of the Na village</figcaption>
 </figure>
 
@@ -265,9 +235,7 @@ Behind us, the last light
 of the day glowed on top of the mountains, an exquisite view of its own.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/illuminated-mountain.jpg" alt="Mountain peak illuminated by sunset"/>
-  </div>
+  <img src="/images/tsho-rolpa/illuminated-mountain.jpg" alt="Mountain peak illuminated by sunset"/>
   <figcaption>Mountain peak illuminated by sunset</figcaption>
 </figure>
 
@@ -296,9 +264,7 @@ to Tongba, an alcoholic drink made from fermented millet. We mulled over our jou
 as often happens over drinks.
 
 <figure class="image">
-  <div>
-    <nuxt-picture src="/images/tsho-rolpa/tongba-vessel.jpg" alt="Tongba"/>
-  </div>
+  <img src="/images/tsho-rolpa/tongba-vessel.jpg" alt="Tongba"/>
   <figcaption>Tongba served in its regular vessel</figcaption>
 </figure>
 

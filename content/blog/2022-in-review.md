@@ -30,9 +30,7 @@ This year, I set off on a series of solo adventures that opened my eyes to new e
 Along the way, I met a cast of intriguing characters and took time to reflect on my life and future goals. And when I wasn't venturing out on my own, I made some unforgettable memories with my closest friends.
 
 <figure class="image">
-  <div>
-    <img src="/images/2022-in-review/europe-map-visited.svg" alt="Europe map"/>
-  </div>
+  <img src="/images/2022-in-review/europe-map-visited.svg" alt="Europe map"/>
   <figcaption>A map of Europe with the countries I traveled to in 2022 marked in blue</figcaption>
 </figure>
 

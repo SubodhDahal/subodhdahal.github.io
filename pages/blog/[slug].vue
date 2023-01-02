@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="cover-image w-full md:w-1/2">
-        <nuxt-picture :src="article.image" :alt="article.alt" class="cover-image__img" />
+        <img :src="article.image" :alt="article.alt" class="cover-image__img" />
       </div>
     </div>
 
@@ -33,7 +33,7 @@
           </li>
         </ul>
       </nav> -->
-        <ContentRenderer :value="article">
+        <ContentRenderer :value="article" class="prose max-w-none">
           <template #empty>
             <p>No content found.</p>
           </template>
@@ -95,7 +95,7 @@ useHead({
   .cover p {
     font-size: 18px;
   }
-  .cover-image__img img {
+  img.cover-image__img {
     max-height: 500px;
   }
   .nuxt-content {
