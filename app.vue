@@ -31,6 +31,6 @@ useHead({
   <div>
     <TheHeader />
     <NuxtPage />
-    <!-- <TheFooter /> -->
+    <TheFooter />
   </div>
 </template>
