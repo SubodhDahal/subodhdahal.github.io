@@ -1,19 +1,10 @@
-<template>
-  <div>
-    <TheHeader />
-    <Nuxt />
-    <TheFooter />
-  </div>
-</template>
-
-<style>
 @font-face {
   font-family: 'Lato';
-  src: url('../static/fonts/Lato/Lato-Regular.ttf') format('truetype');
+  src: url('/fonts/Lato/Lato-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Source Serif Pro';
-  src: url('../static/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf') format('truetype');
+  src: url('/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf') format('truetype');
 }
 
 html {
@@ -70,4 +61,3 @@ ul.list {
 ul.list li {
   @apply ml-5 mb-2;
 }
-</style>

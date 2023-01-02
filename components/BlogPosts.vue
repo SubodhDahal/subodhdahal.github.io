@@ -26,7 +26,7 @@
             <p class="text-gray-600">
               {{ article.description }}
             </p>
-            <ArticleTags :tags="article.tags" class="mt-4" />
+            <!-- <ArticleTags :tags="article.tags" class="mt-4" /> -->
           </div>
         </NuxtLink>
       </li>
@@ -34,20 +34,17 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import ArticleTags from './ArticleTags.vue'
-export default {
-  components: { ArticleTags },
-  data: () => ({
-    articles: []
-  }),
-  async fetch () {
-    this.articles = await this.$content('articles')
-      .only(['title', 'description', 'image', 'slug', 'author', 'tags'])
-      .sortBy('postDate', 'desc')
-      .fetch()
-  }
-}
+const { data: articles } = await useAsyncData('articles-home',
+  () => queryContent('articles')
+    // .where({ published: { $ne: false } })
+    .without('body')
+    .sort({ postDate: -1 })
+    .limit(6)
+    .find()
+)
+console.log(articles)
 </script>
 
 <style>

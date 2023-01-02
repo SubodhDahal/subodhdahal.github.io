@@ -33,8 +33,11 @@
           </li>
         </ul>
       </nav> -->
-
-        <nuxt-content :document="article" />
+        <ContentRenderer :value="article">
+          <template #empty>
+            <p>No content found.</p>
+          </template>
+        </ContentRenderer>
 
         <hr>
 

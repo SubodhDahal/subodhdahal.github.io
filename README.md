@@ -1,26 +1,42 @@
-```
- _____       _               _ _    ______      _           _
-/  ___|     | |             | | |   |  _  \    | |         | |
-\ `--. _   _| |__   ___   __| | |__ | | | |__ _| |__   __ _| |  ___ ___  _ __ ___
- `--. \ | | | '_ \ / _ \ / _` | '_ \| | | / _` | '_ \ / _` | | / __/ _ \| '_ ` _ \
-/\__/ / |_| | |_) | (_) | (_| | | | | |/ / (_| | | | | (_| | || (_| (_) | | | | | |
-\____/ \__,_|_.__/ \___/ \__,_|_| |_|___/ \__,_|_| |_|\__,_|_(_)___\___/|_| |_| |_|
-```
-Created using  [Nuxt.js](https://nuxtjs.org)
+# Nuxt 3 Minimal Starter
 
-## Build Setup
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+## Setup
+
+Make sure to install the dependencies:
 
 ```bash
-# install dependencies
-$ npm install
+# yarn
+yarn install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# npm
+npm install
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+# pnpm
+pnpm install --shamefully-hoist
 ```
+
+## Development Server
+
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
