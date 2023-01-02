@@ -36,6 +36,8 @@
 
         <nuxt-content :document="article" />
 
+        <hr>
+
         <prev-next :prev="prev" :next="next" />
       </article>
     </div>
