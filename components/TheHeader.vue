@@ -6,9 +6,12 @@
           <img src="/logo.svg" class="logo">
         </NuxtLink>
       </div>
-      <div class="text-xl mt-1 uppercase">
+      <div class="text-xl mt-1">
         <NuxtLink to="/blog">
           Blog
+        </NuxtLink>
+        <NuxtLink to="/about" class="ml-4">
+          About
         </NuxtLink>
       </div>
     </header>
