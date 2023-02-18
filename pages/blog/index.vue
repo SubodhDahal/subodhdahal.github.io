@@ -1,7 +1,10 @@
 <template>
-  <div class="container blog-page">
-    <BlogPosts class="mt-10" />
-    <BlogTags class="mb-10" />
+  <div class="container blog-page m-10">
+    <h1 class="font-bold text-4xl text-center mb-5">
+      Blog Articles
+    </h1>
+    <Tags section="blog" @tagsSelected="setSelectedTags" />
+    <BlogPosts class="mt-10" :tags="selectedTags" />
   </div>
 </template>
 
@@ -20,6 +23,10 @@ useHead({
     },
   ],
 })
+
+let selectedTags: string[] = ref([])
+
+const setSelectedTags = (tags: string[]) => { selectedTags.value = tags }
 </script>
 
 <style>
