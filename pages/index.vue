@@ -20,7 +20,10 @@
       </div>
     </div>
     <div class="container mt-10">
-      <BlogPosts />
+      <h1 class="font-bold text-4xl text-center mb-5">
+        Recent Articles
+      </h1>
+      <BlogPosts :quantity="6" />
     </div>
   </div>
 </template>

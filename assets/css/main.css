@@ -37,6 +37,9 @@ html {
 .container {
   @apply mx-auto px-10 md:px-0;
 }
+.serif {
+  font-family: 'Source Serif Pro', serif;
+}
 header {
   font-family: 'Source Serif Pro', serif;
   font-weight: bold;
@@ -44,8 +47,10 @@ header {
 header .logo {
   height: 40px;
 }
-.blog-page h1, .blog-page h2 {
+h1, h2 {
   font-family: 'Source Serif Pro', serif;
+}
+.blog-page h1, .blog-page h2 {
   font-weight: bold;
 }
 .image figcaption {
