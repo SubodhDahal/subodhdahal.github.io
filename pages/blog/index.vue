@@ -31,7 +31,6 @@ const setSelectedTags = (tags: string[]) => { selectedTags.value = tags }
 
 <style>
   .blog-page h1, .blog-page h2, .blog-page h3 {
-    font-family: 'Source Serif Pro', serif;
     font-weight: bold;
   }
   .article-title {

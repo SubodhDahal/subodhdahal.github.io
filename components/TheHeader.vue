@@ -10,6 +10,9 @@
         <NuxtLink to="/blog">
           Blog
         </NuxtLink>
+        <NuxtLink to="/library" class="ml-4">
+          Library
+        </NuxtLink>
         <NuxtLink to="/about" class="ml-4">
           About
         </NuxtLink>
