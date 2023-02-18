@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   tags: string[]
+  quantity: number
 }>()
 let articles = ref([])
 async function getArticles (section: string) {
@@ -8,7 +9,7 @@ async function getArticles (section: string) {
       .where({ tags: { $contains: props.tags } })
       .without('body')
       .sort({ postDate: -1 })
-      .limit(6)
+      .limit(props.quantity)
       .find()
   )
   return articles

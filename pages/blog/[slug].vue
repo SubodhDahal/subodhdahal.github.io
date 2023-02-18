@@ -89,7 +89,6 @@ useHead({
 
 <style >
   .cover h1 {
-    font-family: 'Source Serif Pro', serif;
     line-height: 1.2;
   }
   .cover p {
