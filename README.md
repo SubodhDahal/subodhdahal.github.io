@@ -1,6 +1,14 @@
-# Nuxt 3 Minimal Starter
+```
+ _____       _               _ _    ______      _           _
+/  ___|     | |             | | |   |  _  \    | |         | |
+\ `--. _   _| |__   ___   __| | |__ | | | |__ _| |__   __ _| |  ___ ___  _ __ ___
+ `--. \ | | | '_ \ / _ \ / _` | '_ \| | | / _` | '_ \ / _` | | / __/ _ \| '_ ` _ \
+/\__/ / |_| | |_) | (_) | (_| | | | | |/ / (_| | | | | (_| | || (_| (_) | | | | | |
+\____/ \__,_|_.__/ \___/ \__,_|_| |_|___/ \__,_|_| |_|\__,_|_(_)___\___/|_| |_| |_|
+```
+Source code for [subodhdahal.com](https://subodhdahal.com).
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Created using  [Nuxt.js](https://nuxtjs.org).
 
 ## Setup
 
@@ -38,5 +46,3 @@ Locally preview production build:
 ```bash
 npm run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
