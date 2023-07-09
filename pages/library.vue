@@ -15,11 +15,14 @@
               <img :src="imageUrl(book.image)" class="h-full object-cover border border-gray-200 shadow-xl rounded-lg" />
             </div>
             <div class="mt-3">
-              <h2 class="text-xl font-bold">
+              <h2 class="text-lg font-bold">
                 {{ book.title }}
               </h2>
-              <p class="text-gray-600">
+              <p class="text-gray-600 text-sm">
                 {{ book.author }}
+              </p>
+              <p class="text-gray-400 text-xs mt-1">
+                {{ book.genres.join(', ') }}
               </p>
             </div>
           </div>
