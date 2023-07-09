@@ -3,42 +3,50 @@
     {
       "title": "Brave New World",
       "author": "Aldous Huxley",
-      "image": "brave-new-world.jpg"
+      "image": "brave-new-world.jpg",
+      "genres": ["Science Fiction", "Dystopian Fiction"]
     },
     {
       "title": "Dune",
       "author": "Frank Herbert",
-      "image": "dune.jpg"
+      "image": "dune.jpg",
+      "genres": ["Science Fiction", "Space Opera"]
     },
     {
       "title": "Factfulness",
       "author": "Hans Rosling, Anna Rosling Rönnlund, and Ola Rosling",
-      "image": "factfulness.jpg"
+      "image": "factfulness.jpg",
+      "genres": ["Non-fiction", "Social Science"]
     },
     {
       "title": "Atomic Habits",
       "author": "James Clear",
-      "image": "atomic-habits.jpg"
+      "image": "atomic-habits.jpg",
+      "genres": ["Self-help", "Personal Development"]
     },
     {
       "title": "Stillness Is the Key",
       "author": "Ryan Holiday",
-      "image": "stillness-is-the-key.jpg"
+      "image": "stillness-is-the-key.jpg",
+      "genres": ["Self-help", "Philosophy"]
     },
     {
       "title": "Indistractable",
       "author": "Nir Eyal",
-      "image": "indistractable.jpg"
+      "image": "indistractable.jpg",
+      "genres": ["Self-help", "Psychology", "Productivity"]
     },
     {
       "title": "Show Your Work",
       "author": "Austin Kleon",
-      "image": "show-your-work.jpg"
+      "image": "show-your-work.jpg",
+      "genres": ["Self-help", "Creativity", "Art"]
     },
     {
       "title": "Deep Work",
       "author": "Cal Newport",
-      "image": "deep-work.jpg"
+      "image": "deep-work.jpg",
+      "genres": ["Self-help", "Productivity", "Work Efficiency"]
     }
   ]
 }
