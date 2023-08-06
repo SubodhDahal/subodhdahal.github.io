@@ -16,8 +16,8 @@
         <NuxtLink to="/about" class="ml-4">
           About
         </NuxtLink>
-        <button v-on:click="toggleDarkMode" class="ml-4" aria-label="Toggle dark mode">
-          {{ darkModeEnabled ? 'Disable Dark Mode' : 'Enable Dark Mode' }}
+        <button v-on:click="toggleDarkMode" class="ml-4 btn-dark-mode" aria-label="Toggle dark mode">
+          {{ darkModeEnabled ? 'Switch to Light Mode' : 'Switch to Dark Mode' }}
         </button>
       </div>
     </header>
