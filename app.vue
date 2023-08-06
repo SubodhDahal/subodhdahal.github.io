@@ -29,8 +29,31 @@ useHead({
 
 <template>
   <div>
-    <TheHeader />
+    <TheHeader @toggle-dark-mode="toggleDarkMode" />
     <NuxtPage />
     <TheFooter />
   </div>
 </template>
+
+<script>
+export default {
+  created() {
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  },
+  methods: {
+    toggleDarkMode() {
+      if (document.body.classList.contains('dark')) {
+        document.body.classList.remove('dark');
+        localStorage.setItem('darkMode', 'false');
+      } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('darkMode', 'true');
+      }
+    },
+  },
+};
+</script>
