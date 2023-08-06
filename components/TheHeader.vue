@@ -16,8 +16,10 @@
         <NuxtLink to="/about" class="ml-4">
           About
         </NuxtLink>
+        <button v-on:click="$emit('toggle-dark-mode')" class="ml-4">
+          Toggle Dark Mode
+        </button>
       </div>
     </header>
   </div>
 </template>
-
