@@ -77,7 +77,8 @@ h1, h2 {
   transform-origin: bottom left;
 }
 
-.dark {
+/* Assuming that the 'dark' class should only affect the main content area */
+.main-content.dark {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   --tw-bg-opacity: 1;
