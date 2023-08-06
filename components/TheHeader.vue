@@ -16,10 +16,26 @@
         <NuxtLink to="/about" class="ml-4">
           About
         </NuxtLink>
-        <button v-on:click="$emit('toggle-dark-mode')" class="ml-4" aria-label="Toggle dark mode">
-          Toggle Dark Mode
+        <button v-on:click="toggleDarkMode" class="ml-4" aria-label="Toggle dark mode">
+          {{ darkModeEnabled ? 'Disable Dark Mode' : 'Enable Dark Mode' }}
         </button>
       </div>
     </header>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      darkModeEnabled: localStorage.getItem('darkMode') === 'true',
+    };
+  },
+  methods: {
+    toggleDarkMode() {
+      this.darkModeEnabled = !this.darkModeEnabled;
+      this.$emit('toggle-dark-mode');
+    },
+  },
+};
+</script>
