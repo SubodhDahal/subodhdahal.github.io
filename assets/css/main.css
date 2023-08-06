@@ -76,3 +76,10 @@ h1, h2 {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.dark {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+}
