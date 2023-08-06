@@ -1,0 +1,1 @@
+import{a as o,o as t,b as s,e as a,r,f as n}from"./entry.c3a040b7.js";const c={},l={class:"p-4 mb-4 text-white bg-blue-500"};function d(e,f,p,_,i,u){return t(),s("div",l,[a("p",null,[r(e.$slots,"info-box",{},()=>[n(" default ")])])])}const b=o(c,[["render",d]]);export{b as default};
