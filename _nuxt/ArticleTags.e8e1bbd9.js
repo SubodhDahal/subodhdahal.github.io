@@ -1,1 +1,0 @@
-import{a as r,o as t,b as e,Z as n,$ as o,Y as c}from"./entry.7d9c928a.js";const p={props:{tags:{type:Array,default:()=>[]}}},_={class:"tags"};function l(u,d,a,i,f,m){return t(),e("div",_,[(t(!0),e(n,null,o(a.tags,s=>(t(),e("span",{key:s,class:"text-blue-500 text-xs font-bold mr-3"},c(s.toUpperCase()),1))),128))])}const g=r(p,[["render",l]]);export{g as default};
