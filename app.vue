@@ -43,6 +43,13 @@ export default {
     } else {
       document.body.classList.remove('dark');
     }
+    window.addEventListener('storage', () => {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.remove('dark');
+      }
+    });
   },
   methods: {
     toggleDarkMode() {
