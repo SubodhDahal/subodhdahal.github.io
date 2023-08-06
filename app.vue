@@ -37,28 +37,24 @@ useHead({
 
 <script>
 export default {
+  data() {
+    return {
+      darkMode: localStorage && localStorage.getItem('darkMode') === 'true',
+    };
+  },
   created() {
-    if (localStorage.getItem('darkMode') === 'true') {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
+    if (localStorage) {
+      this.darkMode = localStorage.getItem('darkMode') === 'true';
+      window.addEventListener('storage', () => {
+        this.darkMode = localStorage.getItem('darkMode') === 'true';
+      });
     }
-    window.addEventListener('storage', () => {
-      if (localStorage.getItem('darkMode') === 'true') {
-        document.body.classList.add('dark');
-      } else {
-        document.body.classList.remove('dark');
-      }
-    });
   },
   methods: {
     toggleDarkMode() {
-      if (document.body.classList.contains('dark')) {
-        document.body.classList.remove('dark');
-        localStorage.setItem('darkMode', 'false');
-      } else {
-        document.body.classList.add('dark');
-        localStorage.setItem('darkMode', 'true');
+      this.darkMode = !this.darkMode;
+      if (localStorage) {
+        localStorage.setItem('darkMode', this.darkMode ? 'true' : 'false');
       }
     },
   },
