@@ -3,8 +3,10 @@ name: cd
 on: [push, pull_request]
 
 jobs:
-  cd:
+  cd: # deploy to gh-pages
     runs-on: ${{ matrix.os }}
+
+    if: github.ref == 'refs/heads/master' ## only deploy on master branch
 
     strategy:
       matrix:
