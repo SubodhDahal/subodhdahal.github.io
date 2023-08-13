@@ -1,5 +1,5 @@
 <template>
-  <div class="self-center no-prose">
+  <div class="self-center no-prose" :class="$colorMode.preference === 'dark' ? 'fill-gray-50' : 'fill-gray-700'">
     <li>
       <a
         href="https://www.linkedin.com/in/subodhdahal"

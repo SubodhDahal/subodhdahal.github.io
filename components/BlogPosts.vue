@@ -47,7 +47,7 @@ async function getArticles (tags: string[] = [], quantity: number = 100) {
           <h2 class="text-2xl font-bold">
             {{ article.title }}
           </h2>
-          <p class="text-gray-600">
+          <p class="text-gray-600 dark:text-white">
             {{ article.description }}
           </p>
           <ArticleTags :tags="article.tags" class="mt-2" />
