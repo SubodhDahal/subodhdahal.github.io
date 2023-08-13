@@ -1,24 +1,28 @@
 <script setup lang="ts">
+import { ParsedContent } from '@nuxt/content/dist/runtime/types'
+
 const props = defineProps<{
   tags: string[]
   quantity: number
 }>()
-let articles = ref([])
-async function getArticles (section: string) {
+let articles: Ref<Omit<ParsedContent, "body">[] | null> = ref([])
+
+articles = await getArticles(props.tags, props.quantity)
+
+watch(() => props.tags, async (newTags) => {
+  articles = await getArticles(newTags, props.quantity)
+})
+
+async function getArticles (tags: string[] = [], quantity: number = 100) {
   const { data: articles } = await useAsyncData('articles-home', () => queryContent('blog')
-      .where({ tags: { $contains: props.tags } })
+      .where({ tags: { $contains: tags } })
       .without('body')
       .sort({ postDate: -1 })
-      .limit(props.quantity)
+      .limit(quantity)
       .find()
   )
   return articles
 }
-articles = await getArticles()
-
-watch(props, async (newVal, oldVal) => {
-  articles = await getArticles()
-}, { deep: true })
 </script>
 
 <template>
