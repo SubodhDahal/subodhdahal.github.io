@@ -4,7 +4,7 @@
       Blog Articles
     </h1>
     <Tags section="blog" @tagsSelected="setSelectedTags" />
-    <BlogPosts class="mt-10" :tags="selectedTags" />
+    <BlogPosts class="mt-10" :tags="selectedTags" :quantity="100" />
   </div>
 </template>
 
@@ -24,8 +24,7 @@ useHead({
   ],
 })
 
-let selectedTags: string[] = ref([])
-
+let selectedTags: Ref<string[]> = ref([])
 const setSelectedTags = (tags: string[]) => { selectedTags.value = tags }
 </script>
 
