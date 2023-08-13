@@ -16,7 +16,6 @@ export default <Partial<Config>>{
   darkMode: 'class',
 
   theme: {
-    darkSelector: '.dark',
     extend: {
       typography: {
         DEFAULT: {

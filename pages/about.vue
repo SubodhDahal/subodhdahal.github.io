@@ -1,8 +1,8 @@
 <template>
   <div class="container blog-page my-10">
-    <div class="prose max-w-none">
+    <div class="prose max-w-none dark:text-gray-50">
       <p>ABOUT</p>
-      <h1 class="mb-1">Subodh Dahal</h1>
+      <h1 class="mb-1 dark:text-gray-50">Subodh Dahal</h1>
 
       <div class="md:flex md:flex-row-reverse">
         <div class="w-1/2 md:w-1/3 md:ml-10 not-prose mt-5">

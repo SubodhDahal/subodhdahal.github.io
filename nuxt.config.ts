@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/image-edge',
     '@nuxt/content',
+    '@nuxtjs/color-mode'
   ],
   css: [
     '~/assets/css/main.css',
@@ -15,5 +16,10 @@ export default defineNuxtConfig({
     highlight: {
       theme: 'github-dark'
     },
+  },
+  colorMode: {
+    classSuffix: '',
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'light',
   },
 })

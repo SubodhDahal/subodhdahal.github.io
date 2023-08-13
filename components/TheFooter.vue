@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-5 flex justify-center items-center text-center bg-gray-100">
+  <footer class="py-5 flex justify-center items-center text-center bg-gray-100 dark:bg-gray-800">
     <SocialLinks />
   </footer>
 </template>

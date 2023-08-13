@@ -34,6 +34,11 @@ html {
   margin: 0;
 }
 
+.dark body {
+  @apply bg-gray-900;
+  @apply text-gray-300;
+}
+
 .container {
   @apply mx-auto px-10 md:px-0;
 }

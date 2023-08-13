@@ -345,7 +345,7 @@ I felt like a different person, for the better, after my journey.
 
 <hr class="mb-2">
 
-<div class="text-gray-500">
+<div class="article-description">
 
 ### Addendum
 
