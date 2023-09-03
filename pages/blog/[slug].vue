@@ -6,11 +6,11 @@
           <h1 class="text-5xl mb-2">
             {{ article.title }}
           </h1>
-          <p class="mb-2 text-gray-600">
+          <p class="mb-2 text-gray-600 dark:text-gray-200">
             {{ article.description }}
           </p>
           <ArticleTags :tags="article.tags" class="my-4" />
-          <div class="mb-3 text-gray-500 text-sm">
+          <div class="mb-3 text-gray-500 dark:text-gray-200 text-sm">
             Posted on {{ formatDate(article.postDate) }}
           </div>
         </div>
@@ -33,7 +33,7 @@
           </li>
         </ul>
       </nav> -->
-        <ContentRenderer :value="article" class="prose max-w-none">
+        <ContentRenderer :value="article" class="prose max-w-none dark:text-gray-200">
           <template #empty>
             <p>No content found.</p>
           </template>
@@ -156,5 +156,12 @@ useHead({
   }
   .nuxt-content figure.quote figcaption {
     text-align: right;
+  }
+  .dark .nuxt-content code {
+    background-color: #222;
+    color: #fff;
+  }
+  .dark .nuxt-content a {
+    color: #3393e1;
   }
 </style>
