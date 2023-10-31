@@ -29,7 +29,7 @@
           </NuxtLink>
         </li>
         <li class="mr-5">
-          <NuxtLink to="/about" class="hover:text-blue-500">
+          <NuxtLink to="/#about"  class="hover:text-blue-500">
             About
           </NuxtLink>
         </li>
