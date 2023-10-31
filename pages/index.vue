@@ -7,7 +7,7 @@
           <div class="w-full md:w-3/5 self-center dark:text-gray-50">
             <h1 class="heading leading-snug">
               Hi! <br>
-              I'm <NuxtLink to="/about" class="hover-underline-animation">Subodh Dahal</NuxtLink>
+              I'm Subodh Dahal
             </h1>
             <h2 class="text-2xl md:text-4xl text-gray-600 dark:text-gray-50 leading-snug">
               Software Engineer, Automation Enthusiast,<br> Hobbyist Photographer &amp; Avid Ponderer
@@ -29,9 +29,9 @@
 </template>
 
 <script setup lang="ts">
-const title: string = 'Subodh Dahal\'s musings on software engineering, automation, photography and more'
-const description: string = 'Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer'
-const image: string = ''
+const title: string = 'About me'
+const description: string = 'About Subodh Dahal'
+const image: string = '/images/me.jpg'
 const path: string = '/'
 useHead({
   title,
@@ -44,6 +44,20 @@ useHead({
   ],
 })
 </script>
+    <div class="container blog-page my-10">
+      <div class="prose max-w-none dark:text-gray-50">
+        <p>ABOUT</p>
+        <h1 class="mb-1 dark:text-gray-50">Subodh Dahal</h1>
+
+        <div class="md:flex md:flex-row-reverse">
+          <div class="w-1/2 md:w-1/3 md:ml-10 not-prose mt-5">
+            <img src="/images/me.jpg" class="max-w-full h-auto" alt="Subodh Dahal" />
+          </div>
+
+          <ContentDoc class="md:w-2/3" />
+        </div>
+      </div>
+    </div>
 
 <style scoped>
 .heading {
