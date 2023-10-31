@@ -7,7 +7,7 @@
           <div class="w-full md:w-3/5 self-center dark:text-gray-50">
             <h1 class="heading leading-snug">
               Hi! <br>
-              I'm Subodh Dahal
+              I'm <NuxtLink to="/#about" class="hover-underline-animation">Subodh Dahal</NuxtLink>
             </h1>
             <h2 class="text-2xl md:text-4xl text-gray-600 dark:text-gray-50 leading-snug">
               Software Engineer, Automation Enthusiast,<br> Hobbyist Photographer &amp; Avid Ponderer
