@@ -37,6 +37,11 @@
           <ColorMode />
         </li>
       </ul>
+        <li class="mr-5">
+          <NuxtLink to="/book-notes" class="hover:text-blue-500">
+            Book Notes
+          </NuxtLink>
+        </li>
     </header>
   </div>
 </template>
