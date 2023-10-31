@@ -1,7 +1,3 @@
----
-title: About
----
-
 Hi! I'm Subodh Dahal, an experienced software engineer with a strong passion for technology.
 
 Originally from Nepal, I've been in Germany since 2016, where I earned a Master's in Information Engineering, specializing in Intelligent Systems.
