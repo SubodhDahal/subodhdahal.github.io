@@ -24,7 +24,7 @@
         <h1 class="font-bold text-4xl text-center mb-10">
           Recent Articles
         </h1>
-        <ArticlePosts content="blog" :tags=[] :quantity="6" />
+        <BlogPosts content="blog" :tags=[] :quantity="6" />
       </div>
     </div>
     <div class="bg-gray-100 dark:bg-gray-800">
