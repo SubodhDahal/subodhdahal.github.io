@@ -47,8 +47,8 @@
 </template>
 
 <script setup lang="ts">
-const title: string = 'About me'
-const description: string = 'About Subodh Dahal'
+const title: string = 'Subodh Dahal\'s musings on software engineering, automation, photography and more'
+const description: string = 'Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer'
 const image: string = '/images/me.jpg'
 const path: string = '/'
 useHead({
