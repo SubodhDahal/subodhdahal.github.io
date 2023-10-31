@@ -4,7 +4,7 @@
       Blog Articles
     </h1>
     <Tags section="blog" @tagsSelected="setSelectedTags" />
-    <ArticlePosts content="blog" class="mt-10" :tags="selectedTags" :quantity="100" />
+    <BlogPosts content="blog" class="mt-10" :tags="selectedTags" :quantity="100" />
   </div>
 </template>
 
