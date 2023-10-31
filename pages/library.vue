@@ -1,6 +1,6 @@
 <template>
   <div class="container blog-page my-10">
-    <div class="prose max-w-none dark:text-gray-50">
+    <div class="prose max-w-none dark:text-gray-50 text-center">
       <h1 class="mb-1 dark:text-gray-50">Library</h1>
       <p class="mb-5">
         Some of the books that I have read in the past few years and recommend, in no particular order.
