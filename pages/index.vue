@@ -21,7 +21,7 @@
     </div>
     <div>
       <div class="container mt-10">
-        <h1 class="font-bold text-4xl text-center mb-5">
+        <h1 class="font-bold text-4xl text-center mb-10">
           Recent Articles
         </h1>
         <BlogPosts :tags=[] :quantity="6" />
@@ -30,9 +30,9 @@
     <div class="bg-gray-100 dark:bg-gray-800">
       <div class="container mt-10 pt-5" id="about">
         <h1 class="font-bold text-4xl text-center mb-5 pt-5">
-          About Subodh Dahal
+          About me
         </h1>
-        <div class="prose max-w-none md:w-4/5 m-auto dark:text-gray-50">
+        <div class="prose max-w-none md:w-3/5 m-auto dark:text-gray-50">
           <div class="md:flex">
             <div class="w-1/2 md:w-1/3 md:mr-10 m-auto not-prose mt-5">
               <img src="/images/me.jpg" class="max-w-full h-auto" alt="Subodh Dahal" />
