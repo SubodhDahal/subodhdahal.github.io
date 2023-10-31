@@ -7,7 +7,7 @@
           <div class="w-full md:w-3/5 self-center dark:text-gray-50">
             <h1 class="heading leading-snug">
               Hi! <br>
-              I'm <NuxtLink to="/about" class="hover-underline-animation">Subodh Dahal</NuxtLink>
+              I'm <NuxtLink to="/#about" class="hover-underline-animation">Subodh Dahal</NuxtLink>
             </h1>
             <h2 class="text-2xl md:text-4xl text-gray-600 dark:text-gray-50 leading-snug">
               Software Engineer, Automation Enthusiast,<br> Hobbyist Photographer &amp; Avid Ponderer
@@ -19,11 +19,29 @@
         </div>
       </div>
     </div>
-    <div class="container mt-10">
-      <h1 class="font-bold text-4xl text-center mb-5">
-        Recent Articles
-      </h1>
-      <BlogPosts :tags=[] :quantity="6" />
+    <div>
+      <div class="container mt-10">
+        <h1 class="font-bold text-4xl text-center mb-10">
+          Recent Articles
+        </h1>
+        <BlogPosts :tags=[] :quantity="6" />
+      </div>
+    </div>
+    <div class="bg-gray-100 dark:bg-gray-800">
+      <div class="container mt-10 pt-5" id="about">
+        <h1 class="font-bold text-4xl text-center mb-5 pt-5">
+          About me
+        </h1>
+        <div class="prose max-w-none md:w-3/5 m-auto dark:text-gray-50">
+          <div class="md:flex">
+            <div class="w-1/2 md:w-1/3 md:mr-10 m-auto not-prose mt-5">
+              <img src="/images/me.jpg" class="max-w-full h-auto" alt="Subodh Dahal" />
+            </div>
+
+            <ContentDoc path="about" class="md:w-2/3" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -31,7 +49,7 @@
 <script setup lang="ts">
 const title: string = 'Subodh Dahal\'s musings on software engineering, automation, photography and more'
 const description: string = 'Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer'
-const image: string = ''
+const image: string = '/images/me.jpg'
 const path: string = '/'
 useHead({
   title,
