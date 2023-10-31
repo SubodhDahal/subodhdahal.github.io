@@ -29,9 +29,9 @@
           </NuxtLink>
         </li>
         <li class="mr-5">
-          <NuxtLink to="/about" class="hover:text-blue-500">
+          <a href="/#about" v-scroll-to="'#about'" class="hover:text-blue-500">
             About
-          </NuxtLink>
+          </a>
         </li>
         <li>
           <ColorMode />
