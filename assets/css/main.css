@@ -6,7 +6,12 @@
   font-family: 'Source Serif Pro';
   src: url('/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf') format('truetype');
 }
-
+@font-face {
+  font-family: 'Samble Tracie';
+  src: url('/fonts/Sample_Tracie/Samble_Tracie.woff2') format('woff2'),
+       url('/fonts/Samble_Tracie/Samble_Tracie.woff') format('woff'),
+       url('/fonts/Samble_Tracie/Samble_Tracie.ttf') format('truetype');
+}
 html {
   font-family:
     'Lato',

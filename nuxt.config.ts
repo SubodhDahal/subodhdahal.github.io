@@ -16,6 +16,9 @@ export default defineNuxtConfig({
     highlight: {
       theme: 'github-dark'
     },
+    markdown: {
+      anchorLinks: false,
+    },
   },
   colorMode: {
     classSuffix: '',
