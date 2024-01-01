@@ -1,6 +1,6 @@
 <template>
   <div class="nuxt-content">
-    <div class="cover md:flex flex-row my-10">
+    <div class="cover md:flex flex-row my-10" v-if="article">
       <div class="cover-text grid content-center w-full md:w-1/2">
         <div class="ml-auto px-5 w-full md:pl-10 lg:pl-5 lg:w-3/5 2xl:w-2/5">
           <h1 class="text-5xl mb-2">
@@ -70,9 +70,9 @@ function formatDate (date) {
   return new Date(date).toLocaleDateString('en', options)
 }
 
-const title: string = article.value?.title || ''
-const description: string = article.value?.description || ''
-const image: string = article.value?.image || ''
+const title: string = article?.value?.title || ''
+const description: string = article?.value?.description || ''
+const image: string = article?.value?.image || ''
 // const ogImage: string = article.value?.ogImage || ''
 
 useHead({
