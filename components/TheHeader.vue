@@ -17,7 +17,7 @@
           </svg>
         </NuxtLink>
       </div>
-      <ul class="text-xl mt-1 flex list-none">
+      <ul :class="{'block': isOpen, 'hidden': !isOpen}" class="text-xl mt-1 flex flex-col md:flex-row list-none md:block md:flex">
         <li class="mr-5">
           <NuxtLink to="/blog" class="hover:text-blue-500">
             Blog
@@ -37,7 +37,24 @@
           <ColorMode />
         </li>
       </ul>
+      <div class="md:hidden">
+        <button @click="isOpen = !isOpen" class="flex items-center px-3 py-2 border rounded text-gray-800 border-gray-300">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z"/>
+          </svg>
+        </button>
+      </div>
     </header>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      isOpen: false,
+    }
+  },
+}
+</script>
