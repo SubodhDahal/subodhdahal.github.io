@@ -2,17 +2,17 @@
   <div class="nuxt-content">
     <div class="relative h-screen overflow-hidden">
       <div class="absolute inset-0 flex flex-col items-center justify-center z-10 backdrop-blur-lg">
-        <div class="text-white text-5xl text-travel-heading">My travels</div>
-        <div class="text-white text-5xl text-travel-heading">in</div>
+        <div class="text-white text-5xl md:text-9xl text-travel-heading">My travels</div>
+        <div class="text-white text-5xl md:text-9xl text-travel-heading">in</div>
         <div class="text-white font-bold text-2023">2023</div>
-        <div class="text-white uppercase border-t-4 border-white text-4xl py-6 mt-5">A visual journey</div>
+        <div class="text-white uppercase border-t-4 border-white text-xl md:text-4xl py-6 mt-5">A visual journey</div>
         <button @click="scrollToContent" class="mt-4 text-white text-4xl animate-bounce">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-white">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
       </div>
-      <div class="grid grid-cols-4 gap-4 absolute inset-0">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 absolute inset-0">
         <img v-for="(image, index) in images" :key="image" :src="image" alt="Image" class="object-cover h-full w-full opacity-0 animate-fade-in" :style="{ animationDelay: `${index * 0.2}s` }">
       </div>
     </div>
@@ -120,7 +120,6 @@ useHead({
 }
 .text-travel-heading {
   font-family: 'Samble Tracie', cursive;
-  font-size: 6rem;
   line-height: 1.2;
 }
 .text-2023 {
@@ -128,6 +127,11 @@ useHead({
   font-size: 9rem;
   line-height: 1.2;
   letter-spacing: 0.02em;
+}
+@media screen and (max-width: 640px) {
+  .text-2023 {
+    font-size:5rem;
+  }
 }
 .nuxt-content {
   font-size: 18px;
