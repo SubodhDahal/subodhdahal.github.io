@@ -1,0 +1,1 @@
+import{_ as r,o as t,c as e,F as a,n as o,t as c}from"./entry.35eiWiLl.js";const _={props:{tags:{type:Array,default:()=>[]}}},p={class:"tags"};function l(i,u,n,d,f,m){return t(),e("div",p,[(t(!0),e(a,null,o(n.tags,s=>(t(),e("span",{key:s,class:"text-blue-500 text-xs font-bold mr-3"},c(s.toUpperCase()),1))),128))])}const g=r(_,[["render",l]]);export{g as _};
