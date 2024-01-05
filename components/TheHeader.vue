@@ -3,24 +3,29 @@
     <header class="md:container flex justify-between mx-auto px-5 pt-5">
       <div class="mb-4">
         <NuxtLink to="/">
-          <svg
-            width="80.688"
-            height="47.118"
-            viewBox="0 0 21.349 12.467"
-            xmlns="http://www.w3.org/2000/svg"
-            class="logo dark:fill-gray-50 dark:stroke-gray-50 fill-gray-700 stroke-gray-700">
-            <g transform="translate(-13.999 -74.065)">
-              <path d="m18.285 76.065c-1.2594 0-2.286 1.0372-2.286 2.2966 0 1.27 1.0266 2.2966 2.286 2.2966h3.8841c0.86783 0 1.5769 0.70908 1.5769 1.5875 0 0.86783-0.70908 1.5769-1.5769 1.5769h-6.1701v0.70908h6.1701c1.2594 0 2.2966-1.0266 2.2966-2.286 0-1.27-1.0372-2.2966-2.2966-2.2966h-3.8841c-0.86783 0-1.5769-0.70908-1.5769-1.5875 0-0.86783 0.70908-1.5769 1.5769-1.5769h7.1253v-0.71967z" stroke-width=".52917" style="white-space:pre"/>
-              <path d="m30.172 76.065h-4.2333v0.71967h4.2333c1.9368 0 3.5137 1.5769 3.5137 3.5137 0 1.9473-1.5769 3.5242-3.5137 3.5242h-3.5242v-3.8735h-0.70908v4.5826h4.2333c2.3283 0 4.2333-1.8944 4.2333-4.2333 0-2.3283-1.905-4.2333-4.2333-4.2333z" stroke-width=".52917" style="white-space:pre"/>
-            </g>
-          </svg>
+          <IconLogo class="h-12 w-12" />
         </NuxtLink>
       </div>
-      <ul :class="{'block': isOpen, 'hidden': !isOpen}" class="text-xl mt-1 flex flex-col md:flex-row list-none md:block md:flex">
+      <div class="md:hidden">
+        <button
+          @click="isMobileNavOpen = !isMobileNavOpen"
+          class="flex items-center px-3 py-2 border rounded dark:text-gray-50 dark:border-gray-50 text-gray-800 border-gray-300"
+        >
+          <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Mobile Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z" />
+          </svg>
+        </button>
+      </div>
+      <ul
+        class="hidden text-xl mt-1 flex flex-col md:flex-row list-none md:block md:flex"
+      >
         <li class="mr-5">
-          <NuxtLink to="/blog" class="hover:text-blue-500">
-            Blog
-          </NuxtLink>
+          <NuxtLink to="/blog" class="hover:text-blue-500"> Blog </NuxtLink>
         </li>
         <li class="mr-5">
           <NuxtLink to="/library" class="hover:text-blue-500">
@@ -28,23 +33,70 @@
           </NuxtLink>
         </li>
         <li class="mr-5">
-          <NuxtLink to="/#about"  class="hover:text-blue-500">
-            About
-          </NuxtLink>
+          <NuxtLink to="/#about" class="hover:text-blue-500"> About </NuxtLink>
         </li>
         <li>
           <ColorMode />
         </li>
       </ul>
-      <div class="md:hidden">
-        <button
-          @click="isOpen = !isOpen"
-          class="flex items-center px-3 py-2 border rounded dark:text-gray-50 dark:border-gray-50 text-gray-800 border-gray-300">
-          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z"/>
-          </svg>
-        </button>
+      <div
+        class="navbar-menu relative z-50"
+        :class="{ block: isMobileNavOpen, hidden: !isMobileNavOpen }"
+      >
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 dark:bg-gray-600 opacity-25"></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-gray-100 dark:bg-gray-800 overflow-y-auto"
+        >
+          <div class="flex items-center mb-8">
+            <NuxtLink to="/" class="mr-auto">
+              <IconLogo class="h-15 w-15" />
+            </NuxtLink>
+            <button class="navbar-close" @click="isMobileNavOpen = false">
+              <svg
+                class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                ß
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul>
+              <li class="mb-5">
+                <NuxtLink to="/blog" class="hover:text-blue-500" @click="isMobileNavOpen = false">
+                  Blog
+                </NuxtLink>
+              </li>
+              <li class="mb-5">
+                <NuxtLink to="/library" class="hover:text-blue-500" @click="isMobileNavOpen = false">
+                  Library
+                </NuxtLink>
+              </li>
+              <li class="mb-5">
+                <NuxtLink to="/#about" class="hover:text-blue-500" @click="isMobileNavOpen = false">
+                  About
+                </NuxtLink>
+              </li>
+              <li>
+                <ColorMode />
+              </li>
+            </ul>
+          </div>
+          <div class="mt-auto">
+            <div class="pt-6">
+              <SocialLinks />
+            </div>
+          </div>
+        </nav>
       </div>
     </header>
   </div>
@@ -54,8 +106,8 @@
 export default {
   data() {
     return {
-      isOpen: false,
-    }
+      isMobileNavOpen: false,
+    };
   },
-}
+};
 </script>
