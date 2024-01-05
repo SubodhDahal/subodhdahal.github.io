@@ -18,22 +18,22 @@ Yet another year has passed. I've been lucky enough to travel to some amazing pl
 
 ### Kathmandu valley
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-  <img src="/images/2023-visual-journey/nepal-10.jpg" loading="lazy">
-  <img src="/images/2023-visual-journey/nepal-9.jpg" loading="lazy">
-  <img src="/images/2023-visual-journey/nepal-1.jpg" loading="lazy">
+  <img src="/images/2023-visual-journey/nepal-10.jpg" title="Nyatapole temple in Bhaktapur" loading="lazy">
+  <img src="/images/2023-visual-journey/nepal-9.jpg" title="The Himalayas as seen from Kathmandu" loading="lazy">
+  <img src="/images/2023-visual-journey/nepal-1.jpg" title="A temple in Bhaktapur" loading="lazy">
 </div>
 
 ### Bharatpur
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-  <img src="/images/2023-visual-journey/nepal-4.jpg" loading="lazy">
-  <img src="/images/2023-visual-journey/nepal-3.jpg" loading="lazy">
-  <img src="/images/2023-visual-journey/nepal-5.jpg" loading="lazy">
+  <img src="/images/2023-visual-journey/nepal-4.jpg" title="Landscape view from Maulakalika temple" loading="lazy">
+  <img src="/images/2023-visual-journey/nepal-3.jpg" title="Landscape view from Maulakalika temple" loading="lazy">
+  <img src="/images/2023-visual-journey/nepal-5.jpg" title="Evening in Sauraha" loading="lazy">
 </div>
 
 ### Pokhara
-<img src="/images/2023-visual-journey/nepal-2.jpg" loading="lazy">
-<img src="/images/2023-visual-journey/nepal-11.jpg" loading="lazy">
+<img src="/images/2023-visual-journey/nepal-2.jpg" title="View of Mount Machhapuchhre" loading="lazy">
+<img src="/images/2023-visual-journey/nepal-11.jpg" title="Boating in Phewa Lake" loading="lazy">
 
 ## Croatia 🇭🇷
 
@@ -161,9 +161,8 @@ Yet another year has passed. I've been lucky enough to travel to some amazing pl
 </div>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-  <img src="/images/2023-visual-journey/mar-3.jpg" loading="lazy">
-  <img src="/images/2023-visual-journey/mar-5.jpg" loading="lazy">
-  <img src="/images/2023-visual-journey/mar-6.jpg" loading="lazy">
+  <img src="/images/2023-visual-journey/mar-5.jpg" title="The illumanted stained glass windows of Sagrada Família church" loading="lazy">
+  <img src="/images/2023-visual-journey/mar-6.jpg" title="The illumanted stained glass windows of Sagrada Família church" loading="lazy">
 </div>
 
 ### Montserrat
@@ -174,6 +173,6 @@ Yet another year has passed. I've been lucky enough to travel to some amazing pl
   <img src="/images/2023-visual-journey/mar-10.jpg" loading="lazy">
 </div>
 
-<div class="text-travel-heading text-center mt-8 pb-8">
+<div class="text-travel-heading text-5xl text-center mt-8 pb-8">
   Fin
 </div>
