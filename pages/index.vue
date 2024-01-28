@@ -51,15 +51,25 @@ const title: string = 'Subodh Dahal\'s musings on software engineering, automati
 const description: string = 'Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer'
 const image: string = '/images/me.jpg'
 const path: string = '/'
-useHead({
-  title,
-  meta: createSEOMeta({ title, description, image, url: path }),
-  link: [
-    {
-      rel: 'canonical',
-      href: `https://subodhdahal.com${path}`,
-    },
-  ],
+useMeta({
+  title: 'Subodh Dahal\'s musings on software engineering, automation, photography and more',
+  description: 'Subodh Dahal - Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer',
+  image: '/images/me.jpg',
+  canonical: 'https://subodhdahal.com',
+  openGraph: {
+    type: 'website',
+    url: 'https://subodhdahal.com',
+    title: 'Subodh Dahal\'s musings on software engineering, automation, photography and more',
+    description: 'Subodh Dahal - Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer',
+    image: 'https://subodhdahal.com/images/me.jpg'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@SubodhDahal',
+    title: 'Subodh Dahal\'s musings on software engineering, automation, photography and more',
+    description: 'Subodh Dahal - Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer',
+    image: 'https://subodhdahal.com/images/me.jpg'
+  }
 })
 </script>
 
