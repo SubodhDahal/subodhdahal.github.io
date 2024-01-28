@@ -14,5 +14,8 @@
     "@nuxtjs/tailwindcss": "^6.11.1",
     "@tailwindcss/typography": "^0.5.10",
     "nuxt": "^3.9.3"
+  },
+  "dependencies": {
+    "@nuxtjs/seo": "^1.4.0"
   }
 }
