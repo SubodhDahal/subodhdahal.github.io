@@ -47,7 +47,7 @@
 
 <script setup lang="ts">
 import type { BlogPost, PrevNext } from '~/types'
-import { createSEOMeta } from '@/utils/seo'
+import type { BlogPost, PrevNext } from '~/types'
 
 const { path } = useRoute()
 const { data: article } = await useAsyncData(path.replace(/\/$/, ''),
@@ -73,17 +73,26 @@ function formatDate (date) {
 const title: string = article?.value?.title || ''
 const description: string = article?.value?.description || ''
 const image: string = article?.value?.image || ''
-// const ogImage: string = article.value?.ogImage || ''
 
-useHead({
+useMeta({
   title,
-  meta: createSEOMeta({ title, description, image, url: path }),
-  link: [
-    {
-      rel: 'canonical',
-      href: `https://subodhdahal.com${path}`,
-    },
-  ],
+  description,
+  image,
+  canonical: `https://subodhdahal.com${path}`, 
+  openGraph: {
+    type: 'article',
+    url: `https://subodhdahal.com${path}`, 
+    title,
+    description,
+    image
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@SubodhDahal',
+    title,
+    description,
+    image
+  }
 })
 </script>
 
