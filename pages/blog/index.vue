@@ -13,15 +13,25 @@ const title: string = 'Blog posts'
 const description: string = 'Blog posts by Subodh Dahal'
 const image: string = ''
 const path: string = '/blog'
-useHead({
-  title,
-  meta: createSEOMeta({ title, description, image, url: path }),
-  link: [
-    {
-      rel: 'canonical',
-      href: `https://subodhdahal.com${path}`,
-    },
-  ],
+useMeta({
+  title: 'Blog posts',
+  description: 'Blog posts by Subodh Dahal',
+  image: '',
+  canonical: 'https://subodhdahal.com/blog',
+  openGraph: {
+    type: 'website',
+    url: 'https://subodhdahal.com/blog',
+    title: 'Blog posts',
+    description: 'Blog posts by Subodh Dahal',
+    image: ''
+  },
+  twitter: {
+    card: 'summary',
+    site: '@SubodhDahal',
+    title: 'Blog posts',
+    description: 'Blog posts by Subodh Dahal',
+    image: ''
+  }
 })
 
 let selectedTags: Ref<string[]> = ref([])

@@ -1,28 +1,22 @@
 <script setup>
-import { createSEOMeta } from '@/utils/seo'
-
-const description = 'Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer'
-const ogTitle = 'Subodh Dahal\'s musings on software engineering, automation, photography and more'
-const twitterCard = 'https://subodhdahal.com/twitter-card.png'
-const mySite = 'https://subodhdahal.com'
-
-useHead({
-  htmlAttrs: {
-    lang: 'en',
-  },
-  charset: 'utf-8',
-  title: ogTitle,
-  titleTemplate: title =>
-    title !== ogTitle
-      ? `${title} · Subodh Dahal`
-      : title,
-  meta: createSEOMeta({ title: ogTitle, description, image: twitterCard, url: '' }),
+useMeta({
+  title: 'Subodh Dahal\'s musings on software engineering, automation, photography and more',
+  description: 'Subodh Dahal - Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer',
   link: [
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    {
-      rel: 'canonical',
-      href: mySite,
-    },
+    { rel: 'canonical', href: 'https://subodhdahal.com' },
+  ],
+  meta: [
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:site', content: '@SubodhDahal' },
+    { name: 'twitter:title', content: 'Subodh Dahal\'s musings on software engineering, automation, photography and more' },
+    { name: 'twitter:description', content: 'Subodh Dahal - Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer' },
+    { name: 'twitter:image', content: 'https://subodhdahal.com/twitter-card.png' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://subodhdahal.com' },
+    { property: 'og:title', content: 'Subodh Dahal\'s musings on software engineering, automation, photography and more' },
+    { property: 'og:description', content: 'Subodh Dahal - Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer' },
+    { property: 'og:image', content: 'https://subodhdahal.com/twitter-card.png' }
   ],
 })
 </script>
