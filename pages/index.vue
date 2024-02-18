@@ -2,16 +2,16 @@
   <div>
     <div class="bg-gray-100 dark:bg-gray-800" id="homepage-header">
       <div class="container md:py-0">
-        <div class="md:flex-row-reverse md:flex w-full pt-2 md:pt-40 mb-4 justify-end items-end px-8 md:px-8">
-          <div class="w-full md:w-3/5 self-center dark:text-gray-50">
+        <div class="md:flex-row-reverse md:flex w-full pt-10 md:pt-40 mb-4 justify-end items-end px-0 md:px-8">
+          <div class="w-full self-center dark:text-gray-50">
             <h1 class="heading leading-snug pb-4">
               Hi! <br>
               I'm <NuxtLink to="/#about" class="hover-underline-animation">Subodh Dahal</NuxtLink>
             </h1>
-            <h2 class="text-2xl md:text-3xl text-gray-600 dark:text-gray-50">
+            <h2 class="text-xl md:text-3xl text-gray-600 dark:text-gray-50">
               Software Engineer, Automation Enthusiast,<br> Hobbyist Photographer &amp; Avid Ponderer
             </h2>
-            <h3 class="mt-8 mb-10 text-xl md:text-3xl text-gray-500 dark:text-gray-50">
+            <h3 class="mt-8 pb-10 text-xl md:text-3xl text-gray-500 dark:text-gray-50">
               From 🇳🇵, based in 🇩🇪
             </h3>
           </div>
@@ -86,5 +86,13 @@ useHead({
 }
 #homepage-header h2 {
   line-height: 2.6rem;
+}
+@media (max-width: 640px) {
+  #homepage-header h1 {
+    line-height: 3.5rem;
+  }
+  #homepage-header h2 {
+    line-height: 1.8rem;
+  }
 }
 </style>
