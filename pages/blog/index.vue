@@ -25,7 +25,10 @@ useHead({
 })
 
 let selectedTags: Ref<string[]> = ref([])
-const setSelectedTags = (tags: string[]) => { selectedTags.value = tags }
+const setSelectedTags = (tags: string[]) => {
+  console.log('Selected tags:', tags)
+  selectedTags.value = tags
+}
 </script>
 
 <style>
