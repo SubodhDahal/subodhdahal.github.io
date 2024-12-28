@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+import type { ParsedContent } from '@nuxt/content'
 
 const props = defineProps<{
   tags: string[]
@@ -11,10 +11,18 @@ let articles: Ref<Omit<ParsedContent, "body">[] | null> = ref([])
 articles = await getArticles(props.tags, props.quantity, props.content)
 
 watch(() => props.tags, async (newTags) => {
+  console.log('Tags changed:', newTags)
   articles = await getArticles(newTags, props.quantity, props.content)
 })
 
 async function getArticles (tags: string[] = [], quantity: number = 100, content: string) {
+  console.log('Fetching articles with tags:', tags)
+  console.log('Query content:', queryContent(content)
+      .where({ tags: { $contains: tags } })
+      .without('body')
+      .sort({ postDate: -1 })
+      .limit(quantity)
+      .find())
   const { data: articles } = await useAsyncData('articles-home', () => queryContent(content)
       .where({ tags: { $contains: tags } })
       .without('body')
@@ -22,6 +30,7 @@ async function getArticles (tags: string[] = [], quantity: number = 100, content
       .limit(quantity)
       .find()
   )
+  console.log('Fetched articles:', articles)
   return articles
 }
 </script>
