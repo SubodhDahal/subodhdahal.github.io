@@ -3,15 +3,18 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/image-edge',
     '@nuxt/content',
     '@nuxtjs/color-mode'
   ],
+
   css: [
     '~/assets/css/main.css',
   ],
+
   content: {
     highlight: {
       theme: 'github-dark'
@@ -20,9 +23,12 @@ export default defineNuxtConfig({
       anchorLinks: false,
     },
   },
+
   colorMode: {
     classSuffix: '',
     preference: 'system', // default value of $colorMode.preference
     fallback: 'light',
   },
+
+  compatibilityDate: '2025-01-12',
 })
