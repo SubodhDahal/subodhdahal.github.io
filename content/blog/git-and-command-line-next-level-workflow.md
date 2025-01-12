@@ -6,6 +6,7 @@ alt: Supercharge your Git-workflow
 postDate: 2022-12-18
 tags:
   - programming
+  - developer productivity
 ---
 
 # What is Git?

@@ -157,6 +157,9 @@ useHead({
   .nuxt-content figure.quote figcaption {
     text-align: right;
   }
+  .dark strong, .dark h1, .dark h2, .dark h3 {
+    color: #fff;
+  }
   .dark .nuxt-content code {
     background-color: #222;
     color: #fff;
