@@ -23,7 +23,15 @@
         <h1 class="font-bold text-2xl text-center mb-8">
           Recent Articles
         </h1>
-        <BlogPosts content="blog" :tags=[] :quantity="6" :showDescription="false" />
+        <BlogPosts content="blog" :tags="[]" :quantity="5" :showDescription="false" />
+        <div class="text-center mt-8">
+          <NuxtLink
+            to="/blog"
+            class="inline-block px-6 py-2 text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            View All Articles →
+          </NuxtLink>
+        </div>
       </div>
     </div>
     <div class="bg-gray-100 dark:bg-gray-800">
