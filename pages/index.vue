@@ -20,10 +20,10 @@
     </div>
     <div>
       <div class="container mt-10">
-        <h1 class="font-bold text-4xl text-center mb-10">
+        <h1 class="font-bold text-2xl text-center mb-8">
           Recent Articles
         </h1>
-        <BlogPosts content="blog" :tags=[] :quantity="6" />
+        <BlogPosts content="blog" :tags=[] :quantity="6" :showDescription="false" />
       </div>
     </div>
     <div class="bg-gray-100 dark:bg-gray-800">

@@ -15,12 +15,14 @@ interface Props {
   tags: string[]
   quantity: number
   content: string
+  showDescription?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   tags: () => [],
   quantity: 100,
-  content: 'blog'
+  content: 'blog',
+  showDescription: true
 })
 
 const articles = ref<Article[]>([])
@@ -78,35 +80,28 @@ watch(() => props.tags, async (newTags) => {
       Loading articles...
     </div>
 
-    <ul v-else-if="articles.length" class="flex flex-wrap">
+    <ul v-else-if="articles.length" class="flex flex-col">
       <li
         v-for="article in articles"
         :key="article.url || article._path"
-        class="xs:w-full md:w-1/2 px-2 xs:mb-6 md:mb-12 mb-6 article-card"
+        class="w-full mb-3 article-card border-b border-gray-200 dark:border-gray-700 pb-3 last:border-b-0 last:mb-0"
       >
         <NuxtLink
           :to="article.url || article._path"
           :target="article.url ? '_blank' : '_self'"
-          class="md:flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
+          class="block hover:opacity-80 transition-opacity duration-150"
         >
-          <img
-            v-if="article.image"
-            class="w-full md:w-48 xxlmin:w-1/2 xxlmax:w-full h-48 mx-auto object-cover"
-            :src="article.image"
-            :alt="article.title"
-          >
-
-          <div class="p-0 pt-4 md:p-6 md:pt-0 xxlmin:w-1/2 xxlmax:w-full">
-            <h2 class="text-2xl font-bold">
+          <div class="px-1">
+            <h2 class="text-base">
               {{ article.title }}
             </h2>
-            <p v-if="article.description" class="text-gray-600 dark:text-white">
+            <p v-if="showDescription && article.description" class="text-sm mt-1 text-gray-600 dark:text-white">
               {{ article.description }}
             </p>
             <ArticleTags
               v-if="article.tags?.length"
               :tags="article.tags"
-              class="mt-2"
+              class="mt-1"
             />
           </div>
         </NuxtLink>
