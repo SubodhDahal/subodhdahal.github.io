@@ -25,10 +25,18 @@
         class="hidden text-xl mt-1 flex flex-col md:flex-row list-none md:block md:flex"
       >
         <li class="mr-5">
-          <NuxtLink to="/blog" class="hover:text-blue-500"> Blog </NuxtLink>
+          <NuxtLink
+            to="/blog"
+            active-class="text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+            class="hover:text-blue-500 relative pb-1">
+            Blog
+          </NuxtLink>
         </li>
         <li class="mr-5">
-          <NuxtLink to="/library" class="hover:text-blue-500">
+          <NuxtLink
+            to="/library"
+            active-class="text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+            class="hover:text-blue-500 relative pb-1">
             Library
           </NuxtLink>
         </li>
@@ -72,17 +80,28 @@
           <div>
             <ul>
               <li class="mb-5">
-                <NuxtLink to="/blog" class="hover:text-blue-500" @click="isMobileNavOpen = false">
+                <NuxtLink
+                  to="/blog"
+                  active-class="text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+                  class="hover:text-blue-500 relative pb-1 inline-block"
+                  @click="isMobileNavOpen = false">
                   Blog
                 </NuxtLink>
               </li>
               <li class="mb-5">
-                <NuxtLink to="/library" class="hover:text-blue-500" @click="isMobileNavOpen = false">
+                <NuxtLink
+                  to="/library"
+                  active-class="text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+                  class="hover:text-blue-500 relative pb-1 inline-block"
+                  @click="isMobileNavOpen = false">
                   Library
                 </NuxtLink>
               </li>
               <li class="mb-5">
-                <NuxtLink to="/#about" class="hover:text-blue-500" @click="isMobileNavOpen = false">
+                <NuxtLink
+                  to="/#about"
+                  class="hover:text-blue-500"
+                  @click="isMobileNavOpen = false">
                   About
                 </NuxtLink>
               </li>
