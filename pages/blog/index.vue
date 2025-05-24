@@ -3,11 +3,9 @@
     <h1 class="font-bold text-2xl text-center mb-5">
       Blog Articles
     </h1>
-    <Tags section="blog" @tagsSelected="setSelectedTags" />
     <BlogPosts
       content="blog"
       class="mt-10"
-      :tags="selectedTags"
       :quantity="100"
     />
   </div>
@@ -29,10 +27,6 @@ useHead({
   ],
 })
 
-const selectedTags: Ref<string[]> = ref([])
-const setSelectedTags = (tags: string[]) => {
-  selectedTags.value = tags
-}
 </script>
 
 <style>
