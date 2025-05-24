@@ -1,6 +1,6 @@
 <template>
-  <div class="container blog-page m-10">
-    <h1 class="font-bold text-4xl text-center mb-5">
+  <div class="blog-page mx-auto max-w-6xl px-4 py-10">
+    <h1 class="font-bold text-2xl text-center mb-5">
       Blog Articles
     </h1>
     <Tags section="blog" @tagsSelected="setSelectedTags" />
