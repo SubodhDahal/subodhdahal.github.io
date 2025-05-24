@@ -39,14 +39,14 @@
           </template>
         </ContentRenderer>
 
-        <BlogPrevNext :prev="prev" :next="next" />
+        <BlogPrevNext :current-path="path" />
       </article>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { BlogPost, PrevNext } from '~/types'
+import type { BlogPost } from '~/types'
 import { createSEOMeta } from '@/utils/seo'
 
 const { path } = useRoute()
@@ -55,15 +55,6 @@ const { data: article } = await useAsyncData(path.replace(/\/$/, ''),
     .where({ _path: path })
     .findOne(),
 )
-
-const { data } = await useAsyncData('prev-next',
-  () => queryContent<PrevNext>('blog')
-    .where({ published: { $ne: false }, featured: { $ne: true } })
-    .sort({ date: -1 })
-    .only(['_path', 'title'])
-    .findSurround(path),
-)
-const [prev, next] = data.value || []
 
 function formatDate (date) {
   const options = { year: 'numeric', month: 'long', day: 'numeric' }
