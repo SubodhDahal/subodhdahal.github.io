@@ -1,27 +1,31 @@
 <template>
-  <div class="container blog-page my-10">
-    <div class="prose max-w-none dark:text-gray-50 text-center">
-      <h1 class="mb-1 dark:text-gray-50">Library</h1>
-      <p class="mb-5">
+  <div class="container my-10">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h1 class="font-serif text-4xl font-bold mb-4 dark:text-gray-50">Library</h1>
+      <p class="text-gray-600 dark:text-gray-300 text-lg">
         Some of the books that I have read in the past few years and recommend, in no particular order.
       </p>
     </div>
 
-    <div class="mt-10 mx-10">
-      <div class="grid md:grid-cols-5 md:gap-20 gap-10">
+    <div class="px-4">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8 md:gap-12">
         <ContentDoc v-slot="{ doc }">
-          <div v-for="book of doc.books" :key="book.title">
-            <div class="h-60">
-              <img :src="imageUrl(book.image)" class="h-full object-cover border border-gray-200 shadow-xl rounded-lg" />
+          <div v-for="book of doc.books" :key="book.title" class="group transition-all duration-200 hover:-translate-y-1">
+            <div class="relative pb-[150%] overflow-hidden rounded-lg shadow-md transition-shadow duration-300 group-hover:shadow-xl">
+              <img
+                :src="imageUrl(book.image)"
+                :alt="book.title"
+                class="absolute inset-0 w-full h-full object-contain transition-all duration-300 group-hover:scale-105 rounded-lg bg-gray-50 dark:bg-gray-800"
+              />
             </div>
-            <div class="mt-3">
-              <h2 class="text-lg font-bold dark:text-gray-50">
+            <div class="mt-4">
+              <h2 class="text-lg font-bold font-serif dark:text-gray-50 line-clamp-2">
                 {{ book.title }}
               </h2>
-              <p class="text-gray-600 dark:text-gray-100 text-sm">
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">
                 {{ book.author }}
               </p>
-              <p class="text-gray-400 dark:text-gray-200 text-xs mt-1">
+              <p class="text-gray-400 dark:text-gray-400 text-xs mt-2">
                 {{ book.genres.join(', ') }}
               </p>
             </div>
