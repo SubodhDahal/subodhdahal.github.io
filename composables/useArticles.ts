@@ -1,5 +1,5 @@
 import type { ParsedContent } from '@nuxt/content'
-import { ref, watch } from 'vue'
+import { ref } from 'vue'
 
 interface Article extends Omit<ParsedContent, 'body'> {
   url?: string
@@ -12,7 +12,6 @@ interface Article extends Omit<ParsedContent, 'body'> {
 }
 
 interface UseArticlesOptions {
-  tags?: string[]
   quantity?: number
   content?: string
   page?: number
@@ -23,7 +22,6 @@ interface UseArticlesOptions {
 
 export function useArticles(options: UseArticlesOptions = {}) {
   const {
-    tags = [],
     quantity = 100,
     content = 'blog',
     page = 1,
@@ -36,18 +34,17 @@ export function useArticles(options: UseArticlesOptions = {}) {
   const isLoading = ref(false)
   const error = ref<string | null>(null)
 
-  async function getArticles(tags: string[] = [], quantity: number = 100, content: string): Promise<Article[]> {
+  async function getArticles(quantity: number = 100, content: string): Promise<Article[]> {
     try {
       const query = queryContent(content)
         .where({
-          published: { $ne: false },
-          ...(tags.length > 0 && { tags: { $contains: tags } })
+          published: { $ne: false }
         })
         .without('body')
         .sort({ postDate: -1 })
         .limit(quantity)
 
-      const { data } = await useAsyncData(`articles-${tags.join('-')}`, () => query.find())
+      const { data } = await useAsyncData(`articles-all`, () => query.find())
       return data.value as Article[] || []
     } catch (e) {
       console.error('Error fetching articles:', e)
@@ -60,7 +57,7 @@ export function useArticles(options: UseArticlesOptions = {}) {
     isLoading.value = true
     error.value = null
     try {
-      articles.value = await getArticles(tags, quantity, content)
+      articles.value = await getArticles(quantity, content)
     } catch (e) {
       error.value = 'Failed to fetch articles'
     } finally {
@@ -68,18 +65,13 @@ export function useArticles(options: UseArticlesOptions = {}) {
     }
   }
 
-  // Watch for tag changes
-  watch(() => tags, async (newTags) => {
-    await fetchArticles()
-  }, { deep: true })
-
   // Initial fetch
   fetchArticles()
 
   // Get paginated articles
   async function getPaginatedArticles() {
     const start = (page - 1) * pageSize
-    const articles = await getArticles(tags, quantity, content)
+    const articles = await getArticles(quantity, content)
     const totalPages = Math.ceil(articles.length / pageSize)
     return {
       articles: articles.slice(start, start + pageSize),
@@ -90,7 +82,7 @@ export function useArticles(options: UseArticlesOptions = {}) {
 
   // Get adjacent (prev/next) articles
   async function getAdjacentArticles(currentPath: string) {
-    const allArticles = await getArticles([], Infinity, content)
+    const allArticles = await getArticles(Infinity, content)
     const currentIndex = allArticles.findIndex(article => article._path === currentPath)
 
     return {
@@ -103,7 +95,7 @@ export function useArticles(options: UseArticlesOptions = {}) {
   async function getRelatedArticles(sourceTags: string[], excludePath: string) {
     if (!sourceTags?.length) return []
 
-    const allArticles = await getArticles([], quantity, content)
+    const allArticles = await getArticles(quantity, content)
     return allArticles
       .filter(article =>
         article._path !== excludePath &&
