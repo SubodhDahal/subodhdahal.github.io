@@ -1,20 +1,17 @@
 <script setup lang="ts">
 interface Props {
-  tags: string[]
   quantity: number
   content: string
   showDescription?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  tags: () => [],
   quantity: 100,
   content: 'blog',
   showDescription: true
 })
 
 const { articles, isLoading, error } = useArticles({
-  tags: props.tags,
   quantity: props.quantity,
   content: props.content
 })
