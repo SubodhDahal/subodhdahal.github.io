@@ -1,16 +1,4 @@
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content'
-
-interface Article extends Omit<ParsedContent, 'body'> {
-  url?: string
-  _path?: string
-  title: string
-  description?: string
-  image?: string
-  tags?: string[]
-  postDate: string
-}
-
 interface Props {
   tags: string[]
   quantity: number
@@ -25,49 +13,11 @@ const props = withDefaults(defineProps<Props>(), {
   showDescription: true
 })
 
-const articles = ref<Article[]>([])
-const isLoading = ref(false)
-const error = ref<string | null>(null)
-
-async function getArticles(tags: string[] = [], quantity: number = 100, content: string): Promise<Article[]> {
-  try {
-    const query = queryContent(content)
-      .where({
-        published: { $ne: false },
-        ...(tags.length > 0 && { tags: { $contains: tags } })
-      })
-      .without('body')
-      .sort({ postDate: -1 })
-      .limit(quantity)
-
-    const { data } = await useAsyncData(`articles-${tags.join('-')}`, () => query.find())
-    return data.value as Article[] || []
-  } catch (e) {
-    console.error('Error fetching articles:', e)
-    error.value = 'Failed to fetch articles'
-    return []
-  }
-}
-
-// Initial fetch
-const fetchArticles = async () => {
-  isLoading.value = true
-  error.value = null
-  try {
-    articles.value = await getArticles(props.tags, props.quantity, props.content)
-  } catch (e) {
-    error.value = 'Failed to fetch articles'
-  } finally {
-    isLoading.value = false
-  }
-}
-
-await fetchArticles()
-
-// Watch for tag changes with debounce
-watch(() => props.tags, async (newTags) => {
-  await fetchArticles()
-}, { deep: true })
+const { articles, isLoading, error } = useArticles({
+  tags: props.tags,
+  quantity: props.quantity,
+  content: props.content
+})
 </script>
 
 <template>
