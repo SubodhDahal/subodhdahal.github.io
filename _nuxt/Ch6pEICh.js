@@ -1,1 +1,0 @@
-import{_ as t,c as s,o as a,a as n,y as r,d as c}from"./CBc77pHG.js";const d={},l={class:"p-4 mb-4 text-white bg-blue-500"};function p(o,e,f,i,_,u){return a(),s("div",l,[n("p",null,[r(o.$slots,"info-box",{},()=>[e[0]||(e[0]=c(" default "))])])])}const m=t(d,[["render",p]]);export{m as default};
