@@ -39,7 +39,7 @@
         <h1 class="font-bold text-4xl text-center mb-5 pt-5">
           About me
         </h1>
-        <div class="prose max-w-none md:w-3/5 m-auto dark:text-gray-50">
+        <div class="prose max-w-none m-auto dark:text-gray-50">
           <div class="md:flex">
             <div class="w-1/2 md:w-1/3 md:mr-10 m-auto not-prose mt-5">
               <img src="/images/me.jpg" class="max-w-full h-auto" alt="Subodh Dahal" />
