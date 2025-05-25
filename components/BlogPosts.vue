@@ -27,19 +27,19 @@ const { articles, isLoading, error } = useArticles({
       Loading articles...
     </div>
 
-    <ul v-else-if="articles.length" class="flex flex-col">
+    <ul v-else-if="articles.length" class="flex flex-col max-w-2xl mx-auto">
       <li
         v-for="article in articles"
         :key="article.url || article._path"
-        class="w-full mb-3 article-card border-b border-gray-200 dark:border-gray-700 pb-3 last:border-b-0 last:mb-0"
+        class="article-card py-8 border-b border-gray-200 dark:border-gray-700 last:border-b-0"
       >
         <NuxtLink
           :to="article.url || article._path"
           :target="article.url ? '_blank' : '_self'"
           class="block hover:opacity-80 transition-opacity duration-150"
         >
-          <div class="px-1">
-            <h2 class="text-base">
+          <div>
+            <h2 class="text-lg font-semibold">
               {{ article.title }}
             </h2>
             <p v-if="showDescription && article.description" class="text-sm mt-1 text-gray-600 dark:text-white">
