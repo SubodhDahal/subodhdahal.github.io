@@ -1,27 +1,31 @@
 <template>
-  <div class="nuxt-content">
-    <div class="cover md:flex flex-row my-10" v-if="article">
-      <div class="cover-text grid content-center w-full md:w-1/2">
-        <div class="ml-auto px-5 w-full md:pl-10 lg:pl-5 lg:w-3/5 2xl:w-2/5">
-          <h1 class="text-5xl mb-2">
+  <div class="nuxt-content bg-white dark:bg-secondary-900">
+    <div v-if="article" class="cover container py-2">
+      <div class="md:flex items-center gap-12">
+        <div class="flex-1">
+          <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-secondary-900 dark:text-white">
             {{ article.title }}
           </h1>
-          <p class="mb-2 text-gray-600 dark:text-gray-200">
+          <p class="text-lg md:text-xl mb-4 text-secondary-600 dark:text-secondary-300">
             {{ article.description }}
           </p>
-          <ArticleTags :tags="article.tags" class="my-4" />
-          <div class="mb-3 text-gray-500 dark:text-gray-200 text-sm">
+          <ArticleTags :tags="article.tags" class="my-6" />
+          <div class="text-secondary-500 dark:text-secondary-400 text-sm">
             Posted on {{ formatDate(article.postDate) }}
           </div>
         </div>
-      </div>
-      <div class="cover-image w-full md:w-1/2">
-        <img :src="article.image" :alt="article.alt" class="cover-image__img" />
+        <div class="flex-1 mt-8 md:mt-0">
+          <img
+            :src="article.image"
+            :alt="article.alt"
+            class="rounded-lg shadow-lg w-full object-cover max-h-[500px]"
+          />
+        </div>
       </div>
     </div>
 
-    <div class="container mx-auto mt-10 md:mt-15">
-      <article class="md:w-4/6 mx-auto">
+    <div class="container">
+      <article class="max-w-3xl mx-auto">
         <!-- TOC -->
         <!-- TODO: Add to the right -->
         <!-- <nav>
@@ -33,7 +37,7 @@
           </li>
         </ul>
       </nav> -->
-        <ContentRenderer :value="article" class="prose max-w-none dark:text-gray-200">
+        <ContentRenderer v-if="article" :value="article" class="blog-page pb-5">
           <template #empty>
             <p>No content found.</p>
           </template>
@@ -49,26 +53,39 @@
 import type { BlogPost } from '~/types'
 import { createSEOMeta } from '@/utils/seo'
 
+// Fetch article data
+const article = ref<BlogPost | null>(null)
 const { path } = useRoute()
-const { data: article } = await useAsyncData(path.replace(/\/$/, ''),
+const { data } = await useAsyncData('article',
   () => queryContent<BlogPost>('blog')
     .where({ _path: path })
-    .findOne(),
+    .findOne()
 )
+article.value = unref(data)
 
-function formatDate (date) {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' }
-  return new Date(date).toLocaleDateString('en', options)
+// Format date helper
+function formatDate(date: string): string {
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }
+  return new Date(date).toLocaleDateString('en-US', options)
 }
 
-const title: string = article?.value?.title || ''
-const description: string = article?.value?.description || ''
-const image: string = article?.value?.image || ''
-// const ogImage: string = article.value?.ogImage || ''
+// Head meta tags
+const title = computed(() => article.value?.title || '')
+const description = computed(() => article.value?.description || '')
+const image = computed(() => article.value?.image || '')
 
 useHead({
-  title,
-  meta: createSEOMeta({ title, description, image, url: path }),
+  title: computed(() => title.value),
+  meta: computed(() => createSEOMeta({
+    title: title.value,
+    description: description.value,
+    image: image.value,
+    url: path
+  })),
   link: [
     {
       rel: 'canonical',
@@ -76,86 +93,9 @@ useHead({
     },
   ],
 })
+
 </script>
 
-<style >
-  .cover h1 {
-    line-height: 1.2;
-  }
-  .cover p {
-    font-size: 18px;
-  }
-  img.cover-image__img {
-    max-height: 500px;
-  }
-  .nuxt-content {
-    font-size: 18px;
-  }
-  .nuxt-content h1, .nuxt-content h2 {
-    font-family: 'Source Serif Pro', serif;
-    font-weight: bold;
-  }
-  .nuxt-content h1 {
-    font-size: 28px;
-  }
-  .nuxt-content h2 {
-    font-size: 25px;
-  }
-  .nuxt-content h3 {
-    font-weight: bold;
-    font-size: 22px;
-  }
-  .nuxt-content p, .nuxt-content ul {
-    margin-bottom: 20px;
-    line-height: 1.7em;
-  }
-  .nuxt-content figure.image {
-    max-width: 500px;
-    margin: 0 auto 20px auto;
-    text-align: center;
-  }
-  .nuxt-content figure.image.w-full {
-    max-width: 100%;
-  }
-  .nuxt-content figure.image figcaption {
-    background-color: #222;
-    color: #fff;
-    font: italic 13px sans-serif;
-    padding: 4px;
-  }
-  .nuxt-content figure.quote {
-    font-family: 'Source Serif Pro', serif;
-    background: #f9f9f9;
-    border-left: 10px solid #ccc;
-    margin: 1.5em 10px;
-    padding: 0.5em 20px 0.7em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
-  }
-  .nuxt-content figure.quote:before {
-    color: #ccc;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
-  }
-  .nuxt-content figure.quote blockquote {
-    margin-left: 40px;
-  }
-  .nuxt-content figure.quote p {
-    display: inline;
-  }
-  .nuxt-content figure.quote figcaption {
-    text-align: right;
-  }
-  .dark strong, .dark h1, .dark h2, .dark h3 {
-    color: #fff;
-  }
-  .dark .nuxt-content code {
-    background-color: #222;
-    color: #fff;
-  }
-  .dark .nuxt-content a {
-    color: #3393e1;
-  }
+<style scoped>
+/* All styles are now handled by Tailwind classes */
 </style>

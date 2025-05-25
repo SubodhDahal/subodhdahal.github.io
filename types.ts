@@ -4,6 +4,7 @@ export type Sections = 'blog'
 export interface BlogPost extends MarkdownParsedContent {
   title: string,
   date: string,
+  postDate: string,
   description: string,
   url?: string,
   image: string,

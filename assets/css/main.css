@@ -18,53 +18,127 @@
   font-display: swap;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Base styles */
-html {
-  @apply font-sans text-lg text-blog-text-light;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+@layer base {
+  html {
+    @apply font-sans text-base text-secondary-700;
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-secondary-700 leading-relaxed transition-colors duration-200;
+  }
+
+  ::selection {
+    @apply bg-primary-100 text-primary-900;
+  }
+
+  /* Dark mode */
+  .dark body {
+    @apply bg-secondary-900 text-secondary-300;
+  }
+
+  .dark ::selection {
+    @apply bg-primary-900 text-primary-100;
+  }
 }
 
-/* Reset */
-*,
-*::before,
-*::after {
-  @apply m-0 box-border;
-}
+/* Components */
+@layer components {
+  .container {
+    @apply mx-auto px-4 sm:px-6 md:px-8 max-w-5xl;
+  }
 
-/* Dark mode */
-.dark body {
-  @apply bg-blog-bg-dark text-blog-text-dark;
-}
+  /* Header styles */
+  header {
+    @apply font-serif font-bold bg-white dark:bg-secondary-900 transition-colors duration-200;
+  }
 
-/* Layout */
-.container {
-  @apply mx-auto px-4 sm:px-6 md:px-8 max-w-7xl;
-}
+  header .logo {
+    @apply h-10 transition-opacity duration-200 hover:opacity-80;
+  }
 
-/* Header */
-header {
-  @apply font-serif font-bold;
-}
-
-header .logo {
-  @apply h-10;
-}
-
-/* Typography */
-.serif {
-  @apply font-serif;
-}
-
+/* Blog typography */
 .blog-page {
-  @apply prose prose-lg mx-auto dark:prose-invert;
+  @apply prose prose-lg mx-auto dark:prose-invert
+           prose-headings:font-serif
+           prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-8
+           prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10
+           prose-p:text-secondary-700 dark:prose-p:text-secondary-300
+           prose-a:text-primary-600 dark:prose-a:text-primary-400
+           prose-strong:text-secondary-900 dark:prose-strong:text-secondary-100
+           prose-code:text-primary-600 dark:prose-code:text-primary-400 prose-code:bg-secondary-50 dark:prose-code:bg-secondary-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-sm
+           prose-pre:bg-secondary-900 dark:prose-pre:bg-secondary-800
+           prose-img:rounded-lg prose-img:shadow-md;
 }
 
-.image figcaption {
-  @apply mt-0 text-sm text-gray-600 dark:text-gray-400;
+/* Override Tailwind Typography's defaults */
+.blog-page :is(:where(a):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
+  text-decoration: none !important;
+}
+
+.blog-page :is(:where(a):not(:where([class~="not-prose"], [class~="not-prose"] *))):hover {
+  text-decoration: none !important;
+}
+
+/* Code styling */
+.blog-page :is(:where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
+  /* Reset all styles for both inline and block code */
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+}
+
+/* Style only inline code (not inside pre) */
+.blog-page :is(:where(p code, li code):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
+  border-radius: 0.375rem;
+  background-color: rgb(249 250 251);
+  padding: 0.125rem 0.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(225 29 72);
+}
+
+/* Remove code block pseudo-elements */
+.blog-page :is(:where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)))::before,
+.blog-page :is(:where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)))::after {
+  content: none !important;
+}
+
+/* Dark mode inline code */
+.dark .blog-page :is(:where(p code, li code):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
+  background-color: rgb(17 24 39);
+  color: rgb(248 113 113);
+}
+
+  /* Image caption */
+  .image figcaption {
+    @apply mt-2 text-sm text-secondary-600 dark:text-secondary-400 text-center italic;
+  }
+
+  /* Links with underline animation */
+  .link-underline {
+    @apply relative no-underline;
+  }
+
+  .link-underline::after {
+    @apply absolute w-full scale-x-0 h-0.5 bottom-0 left-0 bg-primary-600 dark:bg-primary-400 origin-bottom-right transition-transform duration-300 ease-out;
+    content: '';
+  }
+
+  .link-underline:hover::after {
+    @apply scale-x-100 origin-bottom-left;
+  }
 }
 
 /* Animations */
