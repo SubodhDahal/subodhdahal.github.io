@@ -58,7 +58,7 @@ export function useArticles(options: UseArticlesOptions = {}) {
 
   // Get adjacent (prev/next) articles
   async function getAdjacentArticles(currentPath: string): Promise<AdjacentArticles> {
-    const allArticles = await getArticles(Infinity);
+    const allArticles = await getArticles(10);
     const currentIndex = allArticles.findIndex(
       (article) => article.path === currentPath,
     );

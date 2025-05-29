@@ -17,12 +17,12 @@ const { prev, next } = await getAdjacentArticles(props.currentPath)
 <template>
   <div v-if="prev || next" class="flex gap-4 justify-between p-4 my-6 border border-slate-200 rounded-lg">
     <div class="prev">
-      <NuxtLink v-if="prev" :to="prev._path">
+      <NuxtLink v-if="prev" :to="prev.path">
         <span> &larr; {{ prev.title }} </span>
       </NuxtLink>
     </div>
     <div class="next">
-      <NuxtLink v-if="next" :to="next._path">
+      <NuxtLink v-if="next" :to="next.path">
         <span> {{ next.title }} &rarr; </span>
       </NuxtLink>
     </div>
