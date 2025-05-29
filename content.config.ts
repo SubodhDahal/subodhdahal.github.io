@@ -1,4 +1,4 @@
-import { defineCollection, defineContentConfig, z } from "@nuxt/content";
+import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
 export default defineContentConfig({
   collections: {
@@ -14,5 +14,17 @@ export default defineContentConfig({
         // : z.string(),
       }),
     }),
-  },
-});
+    library: defineCollection({
+      type: 'page',
+      source: 'library.json',
+      schema: z.object({
+        books: z.array(z.object({
+          title: z.string(),
+          author: z.string(),
+          image: z.string(),
+          genres: z.array(z.string())
+        }))
+      })
+    }),
+  }
+})
