@@ -20,7 +20,8 @@
                 Engineering Manager
               </h2>
               <div class="text-xl md:text-2xl font-light mt-3 text-gray-600 dark:text-gray-300">
-                Previously Software Engineer • Automation Enthusiast • Hobbyist Photographer
+                Software Engineer • Automation Enthusiast •<br>
+                Hobbyist Photographer • Avid explorer
               </div>
               <h3 class="mt-8 text-xl md:text-2xl text-gray-500 dark:text-gray-400">
                 <div class="flex items-center gap-2">
@@ -87,16 +88,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-gray-100 dark:bg-gray-800">
-      <div class="container mt-10 pt-5" id="about">
-        <h1 class="font-bold text-4xl text-center mb-5 pt-5">
-          About me
-        </h1>
-        <div class="prose max-w-none m-auto dark:text-gray-50">
-          <ContentRenderer v-if="about" :value="about" />
-        </div>
-      </div>
-    </div>
+    <AboutSection />
   </div>
 </template>
 
