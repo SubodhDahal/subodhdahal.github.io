@@ -1,0 +1,32 @@
+# START nuxt-robots (indexable)
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /api/*
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+Sitemap: https://subodhdahal.com/sitemap.xml
+# END nuxt-robots
