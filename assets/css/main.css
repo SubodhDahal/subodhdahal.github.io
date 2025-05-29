@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'Samble Tracie';
-  src: url('/fonts/Sample_Tracie/Samble_Tracie.woff2') format('woff2'),
+  src: url('/fonts/Samble_Tracie/Samble_Tracie.woff2') format('woff2'),
        url('/fonts/Samble_Tracie/Samble_Tracie.woff') format('woff'),
        url('/fonts/Samble_Tracie/Samble_Tracie.ttf') format('truetype');
   font-display: swap;
