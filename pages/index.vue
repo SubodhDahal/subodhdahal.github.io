@@ -2,7 +2,7 @@
   <div>
     <div class="relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900" id="homepage-header">
       <!-- Background Pattern -->
-      <div class="absolute inset-0 opacity-10 dark:opacity-20 background-pattern"></div>
+      <div class="absolute inset-0 opacity-30 dark:opacity-25 background-pattern"></div>
 
       <div class="container relative">
         <!-- Two Column Layout -->
@@ -13,24 +13,24 @@
               <h1 class="heading leading-tight mb-4">
                 Hi! I'm <NuxtLink to="/#about" class="hover-highlight">Subodh Dahal</NuxtLink>.
               </h1>
-              <p class="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-8">
+                <p class="text-2xl md:text-3xl text-gray-600 dark:text-gray-100 mb-8">
                 I build software solutions that automate and simplify.
               </p>
-              <h2 class="text-2xl md:text-4xl mt-6 text-gray-700 dark:text-gray-200 font-semibold">
+              <h2 class="text-2xl md:text-4xl mt-6 text-gray-700 dark:text-gray-50 font-semibold">
                 Engineering Manager
               </h2>
-              <div class="text-xl md:text-2xl font-light mt-3 text-gray-600 dark:text-gray-300">
+              <div class="text-xl md:text-2xl font-light mt-3 text-gray-600 dark:text-gray-100">
                 Software Engineer • Automation Enthusiast •<br>
                 Hobbyist Photographer • Avid explorer
               </div>
-              <h3 class="mt-8 text-xl md:text-2xl text-gray-500 dark:text-gray-400">
+              <h3 class="mt-8 text-xl md:text-2xl text-gray-500 dark:text-gray-200">
                 <div class="flex items-center gap-2">
                   <span>From Bhaktapur</span>
-                  <img src="https://flagcdn.com/np.svg" alt="Nepal Flag" class="w-6 inline-block" />
+                  <span class="text-2xl">🇳🇵</span>
                 </div>
                 <div class="flex items-center gap-2 mt-2">
                   <span>Based in Stuttgart</span>
-                  <img src="https://flagcdn.com/de.svg" alt="Germany Flag" class="w-6 inline-block" />
+                  <span class="text-2xl">🇩🇪</span>
                 </div>
               </h3>
             </div>
@@ -175,8 +175,9 @@ useSeoMeta({
 }
 
 .background-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0L15 30 30 60 45 30z' fill='%239C92AC' fill-opacity='0.4'/%3E%3C/svg%3E");
+  background-image: url('/images/bg.png');
   background-repeat: repeat;
+  background-position: center;
 }
 
 @media (max-width: 640px) {
