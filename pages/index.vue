@@ -45,20 +45,8 @@
               <img src="/images/me.jpg" class="max-w-full h-auto" alt="Subodh Dahal" />
             </div>
 
-            <!-- TODO: fix not reading from markdown file -->
-            <!-- <ContentDoc path="about" class="md:w-2/3" /> -->
             <div class="md:w-2/3">
-              <div>
-                <p>Hi! I'm Subodh Dahal, an experienced software engineer with a strong passion for technology and a growing interest in Large Language Models (LLMs).</p>
-
-                <p>Originally from Nepal, I've been in Germany since 2017, where I earned a Master's in Information Engineering, specializing in Intelligent Systems and Machine Learning.</p>
-
-                <p>Over a decade, I've become skilled in various programming languages like Python, Javascript, Typescript, NodeJS, and PHP. I have a successful track record of delivering innovative solutions.</p>
-
-                <p>As a team lead and mentor, I prioritize effective communication and teamwork for success. I'm dedicated to making technology accessible and supporting the open-source community.</p>
-
-                <p>In my spare time, I enjoy exploring nature, photography, and diving into science fiction for inspiration.</p>
-              </div>
+              <ContentRenderer v-if="about" :value="about" />
             </div>
           </div>
         </div>
@@ -68,6 +56,10 @@
 </template>
 
 <script setup lang="ts">
+const { data: about } = await useAsyncData('about', () =>
+  queryCollection('about').first()
+)
+
 const title: string = 'Subodh Dahal\'s musings on software engineering, automation, photography and more'
 const description: string = 'Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer'
 const image: string = '/images/me.jpg'
