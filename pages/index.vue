@@ -66,13 +66,25 @@ const image: string = '/images/me.jpg'
 const path: string = '/'
 useHead({
   title,
-  meta: createSEOMeta({ title, description, image, url: path }),
   link: [
     {
       rel: 'canonical',
       href: `https://subodhdahal.com${path}`,
     },
   ],
+})
+
+useSeoMeta({
+  title: title,
+  description: description,
+  ogTitle: title,
+  ogDescription: description,
+  ogImage: image,
+  ogUrl: `https://subodhdahal.com${path}`,
+  twitterCard: 'summary_large_image',
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImage: image
 })
 </script>
 
