@@ -6,7 +6,7 @@
 
       <div class="container relative">
         <!-- Two Column Layout -->
-        <div class="md:flex md:items-center md:justify-between md:gap-12 min-h-[80vh] py-20">
+        <div class="md:flex md:items-center md:justify-between md:gap-12 min-h-[65vh] py-12">
           <!-- Left Column: Content -->
           <div class="w-full md:w-3/5 space-y-6 md:space-y-8">
             <div class="animate-fade-in">
