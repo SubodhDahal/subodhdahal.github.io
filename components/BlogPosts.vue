@@ -1,20 +1,20 @@
 <script setup lang="ts">
 interface Props {
-  quantity: number
-  content: string
-  showDescription?: boolean
+  quantity: number;
+  content: string;
+  showDescription?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   quantity: 100,
-  content: 'blog',
-  showDescription: true
-})
+  content: "blog",
+  showDescription: true,
+});
 
 const { articles, isLoading, error } = useArticles({
   quantity: props.quantity,
-  content: props.content
-})
+  content: props.content,
+});
 </script>
 
 <template>
@@ -30,11 +30,11 @@ const { articles, isLoading, error } = useArticles({
     <ul v-else-if="articles.length" class="flex flex-col max-w-2xl mx-auto">
       <li
         v-for="article in articles"
-        :key="article.url || article._path"
+        :key="article.url || article.path"
         class="article-card py-8 border-b border-gray-200 dark:border-gray-700 last:border-b-0"
       >
         <NuxtLink
-          :to="article.url || article._path"
+          :to="article.url || article.path"
           :target="article.url ? '_blank' : '_self'"
           class="block hover:opacity-80 transition-opacity duration-150"
         >
@@ -42,7 +42,10 @@ const { articles, isLoading, error } = useArticles({
             <h2 class="text-lg font-semibold">
               {{ article.title }}
             </h2>
-            <p v-if="showDescription && article.description" class="text-sm mt-1 text-gray-600 dark:text-white">
+            <p
+              v-if="showDescription && article.description"
+              class="text-sm mt-1 text-gray-600 dark:text-white"
+            >
               {{ article.description }}
             </p>
             <ArticleTags
@@ -55,8 +58,6 @@ const { articles, isLoading, error } = useArticles({
       </li>
     </ul>
 
-    <p v-else class="text-center text-gray-500">
-      No articles found
-    </p>
+    <p v-else class="text-center text-gray-500">No articles found</p>
   </div>
 </template>
