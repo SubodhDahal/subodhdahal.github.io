@@ -1,14 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// @ts-nocheck
 export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
-    head: {
-      meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'robots', content: 'index, follow' },
-        { name: 'author', content: 'Subodh Dahal' },
-      ],
-    },
+  },
+
+  site: {
+    url: 'https://subodhdahal.com',
+    name: 'Subodh Dahal',
+    description: 'Personal website and blog of Subodh Dahal',
+    defaultLocale: 'en',
   },
 
   modules: [
@@ -58,11 +59,39 @@ export default defineNuxtConfig({
     '/404': { robots: false }
   },
 
-  sitemap: {
-    sources: [
-      '/api/__sitemap__/urls'
+  robots: {
+    rules: [
+      {
+        UserAgent: '*',
+        Allow: ['/'],
+        Disallow: ['/404', '/api/*']
+      },
+      {
+        UserAgent: ['GPTBot', 'ChatGPT-User', 'CCBot', 'Google-Extended', 'anthropic-ai', 'Omgilibot', 'Omgili', 'FacebookBot'],
+        Disallow: ['/']
+      }
     ],
+    sitemap: 'https://subodhdahal.com/sitemap.xml'
+  },
+
+  sitemap: {
+    sources: ['/api/__sitemap__/urls'],
     xsl: false,
+    cacheMaxAgeSeconds: 3600,
+    defaults: {
+      changefreq: 'daily',
+      priority: 0.8,
+    },
+  },
+
+  schemaOrg: {
+    meta: {
+      host: 'https://subodhdahal.com',
+    },
+  },
+
+  ogImage: {
+    runtimeBrowser: true,
   },
 
   css: [

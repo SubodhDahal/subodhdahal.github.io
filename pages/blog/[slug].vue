@@ -63,7 +63,6 @@
 </template>
 
 <script setup lang="ts">
-import { createSEOMeta } from "@/utils/seo";
 import type { BlogCollectionItem } from "@nuxt/content";
 
 // Fetch article data
@@ -84,34 +83,68 @@ function formatDate(date: Date): string {
     return new Date(date).toLocaleDateString("en-US", options);
 }
 
-// Head meta tags
 const title = computed(() => article.value?.title || "");
 const description = computed(() => article.value?.description || "");
 const image = computed(() => article.value?.image || "");
-const postDate = computed(() => article.value?.postDate || "");
+const postDate = computed(() => new Date(article.value?.postDate || "").toISOString());
 const tags = computed(() => article.value?.tags || []);
+const url = computed(() => `https://subodhdahal.com${path}`);
 
+// SEO Meta
 useHead({
-    title: computed(() => title.value),
-    meta: computed(() =>
-        createSEOMeta({
-            title: title.value,
-            description: description.value,
-            image: image.value,
-            url: path,
-            type: 'article',
-            postDate: postDate.value,
-            keywords: tags.value,
-            updatedAt: article.value?.postDate,
-        }),
-    ),
+    title: title,
     link: [
         {
             rel: "canonical",
-            href: `https://subodhdahal.com${path}`,
+            href: url,
         },
     ],
 });
+
+useSeoMeta({
+    title: title,
+    description: description,
+    ogTitle: title,
+    ogDescription: description,
+    ogImage: image,
+    ogUrl: url,
+    ogType: "article",
+    twitterCard: "summary_large_image",
+    twitterTitle: title,
+    twitterDescription: description,
+    twitterImage: image,
+    articlePublishedTime: postDate,
+    articleModifiedTime: postDate,
+    articleTag: tags,
+});
+
+// Schema.org
+useSchemaOrg([
+    defineArticle({
+        headline: title.value,
+        description: description.value,
+        image: image.value,
+        datePublished: postDate.value,
+        dateModified: postDate.value,
+        articleSection: tags.value,
+        author: {
+            "@type": "Person",
+            name: "Subodh Dahal",
+            url: "https://subodhdahal.com"
+        },
+    })
+]);
+
+// OG Image
+if (image.value) {
+    defineOgImage({
+        component: "blog",
+        props: {
+            title: title.value,
+            image: image.value,
+        },
+    });
+}
 </script>
 
 <style scoped>
