@@ -1,9 +1,12 @@
 <template>
-  <div class="bg-gray-100 dark:bg-gray-800" id="about">
-    <div class="container mt-10 py-16">
-      <h1 class="font-bold text-4xl text-center mb-12">
-        About me
-      </h1>
+  <div class="bg-gray-100 dark:bg-gray-600" id="about">
+    <div class="container pt-16 pb-20">
+      <div class="relative mb-12">
+        <h2 class="text-3xl font-serif font-bold text-center text-gray-800 dark:text-gray-100">
+          About Me
+        </h2>
+        <div class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
+      </div>
       <div class="grid md:grid-cols-2 gap-8 mb-12">
         <!-- Professional Background -->
         <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8 transform hover:-translate-y-1 transition-transform duration-300">
