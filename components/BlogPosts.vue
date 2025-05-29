@@ -11,10 +11,7 @@ const props = withDefaults(defineProps<Props>(), {
   showDescription: true,
 });
 
-const { articles, isLoading, error } = useArticles({
-  quantity: props.quantity,
-  content: props.content,
-});
+const { articles, isLoading, error } = useArticles({ quantity: props.quantity });
 </script>
 
 <template>

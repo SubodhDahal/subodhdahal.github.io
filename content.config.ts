@@ -5,14 +5,23 @@ export default defineContentConfig({
     blog: defineCollection({
       source: "blog/*.md",
       type: "page",
-      // Define custom schema for docs collection
       schema: z.object({
         title: z.string(),
-        tags: z.array(z.string()),
-        image: z.string(),
+        date: z.string(),
         postDate: z.date(),
-        // : z.string(),
-      }),
+        description: z.string(),
+        url: z.string().optional(),
+        image: z.string(),
+        alt: z.string(),
+        ogImage: z.string().optional(),
+        provider: z.string(),
+        tags: z.array(z.string()),
+        published: z.boolean().optional(),
+        seo: z.object({
+          title: z.string().optional(),
+          description: z.string().optional()
+        }).optional()
+      })
     }),
     library: defineCollection({
       type: 'page',

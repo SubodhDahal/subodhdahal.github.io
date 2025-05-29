@@ -60,11 +60,11 @@
 </template>
 
 <script setup lang="ts">
-import type { BlogPost } from "~/types";
 import { createSEOMeta } from "@/utils/seo";
+import type { BlogCollectionItem } from "@nuxt/content";
 
 // Fetch article data
-const article = ref<BlogPost | null>(null);
+const article = ref<BlogCollectionItem | null>(null);
 const { path } = useRoute();
 const { data } = await useAsyncData("article", () =>
     queryCollection("blog").where("path", "=", path).first(),
@@ -72,7 +72,7 @@ const { data } = await useAsyncData("article", () =>
 article.value = unref(data);
 
 // Format date helper
-function formatDate(date: string): string {
+function formatDate(date: Date): string {
     const options: Intl.DateTimeFormatOptions = {
         year: "numeric",
         month: "long",

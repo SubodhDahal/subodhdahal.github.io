@@ -1,28 +1,32 @@
-import type { MarkdownParsedContent } from '@nuxt/content/dist/runtime/types'
+import type { ContentNavigationItem, BlogCollectionItem } from '@nuxt/content'
+
 export type Sections = 'blog'
 
-export interface BlogPost extends MarkdownParsedContent {
-  title: string,
-  date: string,
-  postDate: string,
-  description: string,
-  url?: string,
-  image: string,
-  alt: string,
-  ogImage?: string,
-  provider: string,
-  tags: string[],
-  published?: boolean
+export type BlogPostPreview = Pick<BlogCollectionItem, "title" | "postDate" | "description" | "url" | "tags" | "path">
+
+export interface PaginationResult {
+  articles: BlogPostPreview[]
+  totalPages: number
+  currentPage: number
 }
 
-export type BlogPostPreview = Omit<BlogPost, 'body'>
-
-export interface PrevNext {
-  title?: string,
-  _path?: string
+export interface AdjacentArticles {
+  prev: BlogPostPreview | null
+  next: BlogPostPreview | null
 }
+
+export interface UseArticlesOptions {
+  quantity?: number
+  content?: string
+  page?: number
+  pageSize?: number
+  currentArticle?: string
+  relatedTo?: string[]
+}
+
+export type PrevNext = ContentNavigationItem
 
 export interface Navigation {
-  url: string,
+  url: string
   link: string
 }
