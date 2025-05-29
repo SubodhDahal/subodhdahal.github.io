@@ -1,113 +1,119 @@
-import type { ParsedContent } from '@nuxt/content'
-import { ref } from 'vue'
+import type { ParsedContent } from "@nuxt/content";
+import { ref } from "vue";
 
-interface Article extends Omit<ParsedContent, 'body'> {
-  url?: string
-  _path?: string
-  title: string
-  description?: string
-  image?: string
-  tags?: string[]
-  postDate: string
+interface Article extends Omit<ParsedContent, "body"> {
+  url?: string;
+  _path?: string;
+  title: string;
+  description?: string;
+  image?: string;
+  tags?: string[];
+  postDate: string;
 }
 
 interface UseArticlesOptions {
-  quantity?: number
-  content?: string
-  page?: number
-  pageSize?: number
-  currentArticle?: string
-  relatedTo?: string[]
+  quantity?: number;
+  content?: string;
+  page?: number;
+  pageSize?: number;
+  currentArticle?: string;
+  relatedTo?: string[];
 }
 
 export function useArticles(options: UseArticlesOptions = {}) {
   const {
     quantity = 100,
-    content = 'blog',
+    content = "blog",
     page = 1,
     pageSize = 10,
     currentArticle,
-    relatedTo
-  } = options
+    relatedTo,
+  } = options;
 
-  const articles = ref<Article[]>([])
-  const isLoading = ref(false)
-  const error = ref<string | null>(null)
+  const articles = ref<Article[]>([]);
+  const isLoading = ref(false);
+  const error = ref<string | null>(null);
 
-  async function getArticles(quantity: number = 100, content: string): Promise<Article[]> {
+  async function getArticles(quantity: number = 100, content): Promise<any> {
     try {
-      const query = queryContent(content)
-        .where({
-          published: { $ne: false }
-        })
-        .without('body')
-        .sort({ postDate: -1 })
-        .limit(quantity)
-
-      const { data } = await useAsyncData(`articles-all`, () => query.find())
-      return data.value as Article[] || []
+      const { data } = await useAsyncData(`articles-all`, () =>
+        queryCollection(content)
+          .select("title", "description", "tags", "postDate", "path")
+          .order("postDate", "DESC")
+          .limit(quantity)
+          .all(),
+      );
+      return data.value || [];
     } catch (e) {
-      console.error('Error fetching articles:', e)
-      error.value = 'Failed to fetch articles'
-      return []
+      console.error("Error fetching articles:", e);
+      error.value = "Failed to fetch articles";
+      return [];
     }
   }
 
   const fetchArticles = async () => {
-    isLoading.value = true
-    error.value = null
+    isLoading.value = true;
+    error.value = null;
     try {
-      articles.value = await getArticles(quantity, content)
+      articles.value = await getArticles(quantity, content);
     } catch (e) {
-      error.value = 'Failed to fetch articles'
+      error.value = "Failed to fetch articles";
     } finally {
-      isLoading.value = false
+      isLoading.value = false;
     }
-  }
+  };
 
   // Initial fetch
-  fetchArticles()
+  fetchArticles();
 
   // Get paginated articles
   async function getPaginatedArticles() {
-    const start = (page - 1) * pageSize
-    const articles = await getArticles(quantity, content)
-    const totalPages = Math.ceil(articles.length / pageSize)
+    const start = (page - 1) * pageSize;
+    const articles = await getArticles(quantity, content);
+    const totalPages = Math.ceil(articles.length / pageSize);
     return {
       articles: articles.slice(start, start + pageSize),
       totalPages,
-      currentPage: page
-    }
+      currentPage: page,
+    };
   }
 
   // Get adjacent (prev/next) articles
   async function getAdjacentArticles(currentPath: string) {
-    const allArticles = await getArticles(Infinity, content)
-    const currentIndex = allArticles.findIndex(article => article._path === currentPath)
+    const allArticles = await getArticles(Infinity, content);
+    const currentIndex = allArticles.findIndex(
+      (article) => article._path === currentPath,
+    );
 
     return {
       prev: currentIndex > 0 ? allArticles[currentIndex - 1] : null,
-      next: currentIndex < allArticles.length - 1 ? allArticles[currentIndex + 1] : null
-    }
+      next:
+        currentIndex < allArticles.length - 1
+          ? allArticles[currentIndex + 1]
+          : null,
+    };
   }
 
   // Get related articles
   async function getRelatedArticles(sourceTags: string[], excludePath: string) {
-    if (!sourceTags?.length) return []
+    if (!sourceTags?.length) return [];
 
-    const allArticles = await getArticles(quantity, content)
+    const allArticles = await getArticles(quantity, content);
     return allArticles
-      .filter(article =>
-        article._path !== excludePath &&
-        article.tags?.some(tag => sourceTags.includes(tag))
+      .filter(
+        (article) =>
+          article._path !== excludePath &&
+          article.tags?.some((tag) => sourceTags.includes(tag)),
       )
       .sort((a, b) => {
         // Sort by number of matching tags
-        const aMatches = a.tags?.filter(tag => sourceTags.includes(tag)).length || 0
-        const bMatches = b.tags?.filter(tag => sourceTags.includes(tag)).length || 0
-        return bMatches - aMatches
+        const aMatches =
+          a.tags?.filter((tag) => sourceTags.includes(tag)).length || 0;
+        const bMatches =
+          b.tags?.filter((tag) => sourceTags.includes(tag)).length || 0;
+        return bMatches - aMatches;
       })
-      .slice(0, 3) // Limit to 3 related articles
+      .slice(0, 3); // Limit to 3 related articles
   }
 
   return {
@@ -117,6 +123,6 @@ export function useArticles(options: UseArticlesOptions = {}) {
     fetchArticles,
     getPaginatedArticles,
     getAdjacentArticles,
-    getRelatedArticles
-  }
+    getRelatedArticles,
+  };
 }

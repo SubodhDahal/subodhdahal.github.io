@@ -9,7 +9,7 @@
 
     <div class="px-4">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8 md:gap-12">
-        <ContentDoc v-slot="{ doc }">
+        <ContentRenderer v-slot="{ doc }">
           <div v-for="book of doc.books" :key="book.title" class="group transition-all duration-200 hover:-translate-y-1">
             <div class="relative pb-[150%] overflow-hidden rounded-lg shadow-md transition-shadow duration-300 group-hover:shadow-xl">
               <img
@@ -30,7 +30,7 @@
               </p>
             </div>
           </div>
-        </ContentDoc>
+        </ContentRenderer>
       </div>
     </div>
   </div>
