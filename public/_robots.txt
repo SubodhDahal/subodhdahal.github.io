@@ -5,5 +5,4 @@ Allow: /
 Sitemap: https://subodhdahal.com/sitemap.xml
 
 # Common crawl optimizations
-Disallow: /api/
 Disallow: /*.json$
