@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://subodhdahal.com/sitemap.xml
+
+# Common crawl optimizations
+Disallow: /api/
+Disallow: /*.json$
