@@ -35,5 +35,10 @@ export default defineContentConfig({
         }))
       })
     }),
+    about: defineCollection({
+      type: 'page',
+      source: 'about.md',
+      schema: z.object({})
+    })
   }
 })
