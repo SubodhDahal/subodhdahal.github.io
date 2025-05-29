@@ -4,7 +4,6 @@ import { ref } from "vue";
 export function useArticles(options: UseArticlesOptions = {}) {
   const {
     quantity = 100,
-    content = "blog",
     page = 1,
     pageSize = 10,
   } = options;

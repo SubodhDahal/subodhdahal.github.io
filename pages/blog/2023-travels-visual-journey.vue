@@ -54,6 +54,7 @@
       </div>
       <article class="md:w-4/6 mx-auto">
         <ContentRenderer
+          v-if="article"
           :value="article"
           class="prose max-w-none dark:text-gray-200"
         >
@@ -62,17 +63,17 @@
           </template>
         </ContentRenderer>
 
-        <BlogPrevNext :prev="prev" :next="next" />
+        <BlogPrevNext :current-path="path" />
       </article>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { BlogPost, PrevNext } from "~/types";
 import { createSEOMeta } from "@/utils/seo";
 
 import { ref } from "vue";
+import type { BlogCollectionItem } from "@nuxt/content";
 
 const images = ref([
   "/images/2023-visual-journey/nepal-11.jpg",
@@ -89,19 +90,13 @@ const images = ref([
   "/images/2023-visual-journey/apr-8.jpg",
 ]);
 
+// Fetch article data
+const article = ref<BlogCollectionItem | null>(null);
 const { path } = useRoute();
-const { data: article } = await useAsyncData(path.replace(/\/$/, ""), () =>
-  queryCollection<BlogPost>("blog").where({ _path: path }).findOne()
+const { data } = await useAsyncData("article", () =>
+    queryCollection("blog").where("path", "=", path).first(),
 );
-
-const { data } = await useAsyncData("prev-next", () =>
-  queryCollection<PrevNext>("blog")
-    .where({ published: { $ne: false }, featured: { $ne: true } })
-    .sort({ date: -1 })
-    .only(["_path", "title"])
-    .findSurround(path)
-);
-const [prev, next] = data.value || [];
+article.value = unref(data);
 
 function scrollToContent() {
   const content = document.getElementById("main-content");
@@ -110,10 +105,10 @@ function scrollToContent() {
   }
 }
 
-const title: string = article.value?.title || "";
-const description: string = article.value?.description || "";
-const image: string = article.value?.image || "";
-// const ogImage: string = article.value?.ogImage || ''
+// Head meta tags
+const title = computed(() => article.value?.title || "");
+const description = computed(() => article.value?.description || "");
+const image = computed(() => article.value?.image || "");
 
 useHead({
   title,
