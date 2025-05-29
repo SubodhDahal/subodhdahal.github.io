@@ -1,5 +1,6 @@
 <template>
     <div class="nuxt-content bg-white dark:bg-secondary-900">
+        <Breadcrumbs :current-page="article?.title" v-if="article" />
         <div v-if="article" class="cover container py-2">
             <div class="md:flex items-center gap-12">
                 <div class="flex-1">
@@ -21,10 +22,12 @@
                     </div>
                 </div>
                 <div class="flex-1 mt-8 md:mt-0">
-                    <img
+                    <nuxt-img
                         :src="article.image"
                         :alt="article.alt"
+                        preset="blog"
                         class="rounded-lg shadow-lg w-full object-cover max-h-[500px]"
+                        loading="lazy"
                     />
                 </div>
             </div>
@@ -85,6 +88,8 @@ function formatDate(date: Date): string {
 const title = computed(() => article.value?.title || "");
 const description = computed(() => article.value?.description || "");
 const image = computed(() => article.value?.image || "");
+const postDate = computed(() => article.value?.postDate || "");
+const tags = computed(() => article.value?.tags || []);
 
 useHead({
     title: computed(() => title.value),
@@ -94,6 +99,10 @@ useHead({
             description: description.value,
             image: image.value,
             url: path,
+            type: 'article',
+            postDate: postDate.value,
+            keywords: tags.value,
+            updatedAt: article.value?.postDate,
         }),
     ),
     link: [
