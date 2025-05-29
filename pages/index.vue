@@ -42,11 +42,8 @@
 
             <!-- CTA Button -->
             <div class="pt-4 animate-fade-in-delay">
-              <NuxtLink to="/#about" class="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 rounded-lg transition-colors">
-                About Me
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
+              <NuxtLink to="/#about" class="inline-block text-lg px-6 py-2 text-primary-600 dark:text-primary-400 border border-primary-600 dark:border-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/30 rounded-md transition-colors">
+                About Me →
               </NuxtLink>
             </div>
           </div>
@@ -72,19 +69,24 @@
         </svg>
       </div>
     </div>
-    <div>
-      <div class="container mt-10">
-        <h1 class="font-bold text-2xl text-center mb-8">
-          Recent Articles
-        </h1>
-        <BlogPosts content="blog" :tags="[]" :quantity="5" :showDescription="false" />
-        <div class="text-center mt-8">
-          <NuxtLink
-            to="/blog"
-            class="inline-block px-6 py-2 text-blue-600 dark:text-blue-400 hover:underline"
-          >
-            View All Articles →
-          </NuxtLink>
+    <div class="bg-white dark:bg-gray-800 pt-20 pb-16">
+      <div class="container">
+        <div class="relative mb-8">
+          <h2 class="text-3xl font-serif font-bold text-center text-gray-800 dark:text-gray-100">
+            Recent Articles
+          </h2>
+          <div class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
+        </div>
+        <div class="mb-2">
+          <BlogPosts content="blog" :tags="[]" :quantity="5" :showDescription="false" />
+          <div class="text-center mt-2">
+            <NuxtLink
+              to="/blog"
+              class="inline-block text-primary-600 dark:text-primary-400 hover:opacity-80"
+            >
+              View All Articles →
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>
