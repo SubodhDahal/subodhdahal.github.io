@@ -1,5 +1,8 @@
 <template>
-  <div class="self-center no-prose" :class="$colorMode.preference === 'dark' ? 'fill-gray-50' : 'fill-gray-700'">
+  <div class="self-center no-prose" :class="[
+    $colorMode.preference === 'dark' ? 'fill-gray-50' : 'fill-gray-700',
+    isHero ? 'flex gap-4' : ''
+  ]">
     <li>
       <a
         href="https://www.linkedin.com/in/subodhdahal"
@@ -7,7 +10,9 @@
         target="_blank"
         rel="me noopener noreferrer"
       >
-        <IconLinkedIn class="h-8 w-8 mr-2 text-gray-700" />
+        <IconLinkedIn :class="[
+          isHero ? 'w-6 h-6 text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400' : 'h-8 w-8 mr-2 text-gray-700'
+        ]" />
       </a>
     </li>
     <li>
@@ -17,7 +22,9 @@
         target="_blank"
         rel="me noopener noreferrer"
       >
-        <IconXing class="h-8 w-8 mr-2 text-gray-700" />
+        <IconXing :class="[
+          isHero ? 'w-6 h-6 text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400' : 'h-8 w-8 mr-2 text-gray-700'
+        ]" />
       </a>
     </li>
     <li>
@@ -27,7 +34,9 @@
         target="_blank"
         rel="me noopener noreferrer"
       >
-        <IconGitHub class="h-8 w-8 mr-2 text-gray-700" />
+        <IconGitHub :class="[
+          isHero ? 'w-6 h-6 text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400' : 'h-8 w-8 mr-2 text-gray-700'
+        ]" />
       </a>
     </li>
     <li>
@@ -37,7 +46,9 @@
         target="_blank"
         rel="me noopener noreferrer"
       >
-        <IconStackOverflow class="h-8 w-8 mr-2 text-gray-700" />
+        <IconStackOverflow :class="[
+          isHero ? 'w-6 h-6 text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400' : 'h-8 w-8 mr-2 text-gray-700'
+        ]" />
       </a>
     </li>
     <li>
@@ -47,14 +58,26 @@
         target="_blank"
         rel="me noopener noreferrer"
       >
-        <IconInstagram class="h-8 w-8 mr-2 text-gray-700" />
+        <IconInstagram :class="[
+          isHero ? 'w-6 h-6 text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400' : 'h-8 w-8 mr-2 text-gray-700'
+        ]" />
       </a>
     </li>
   </div>
 </template>
 
+<script setup lang="ts">
+defineProps<{
+  isHero?: boolean
+}>()
+</script>
+
 <style scoped>
 li {
   display: inline-block;
+}
+
+a {
+  @apply transition-colors;
 }
 </style>
