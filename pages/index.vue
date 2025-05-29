@@ -51,7 +51,7 @@
               <div>
                 <p>Hi! I'm Subodh Dahal, an experienced software engineer with a strong passion for technology and a growing interest in Large Language Models (LLMs).</p>
 
-                <p>Originally from Nepal, I've been in Germany since 2016, where I earned a Master's in Information Engineering, specializing in Intelligent Systems and Machine Learning.</p>
+                <p>Originally from Nepal, I've been in Germany since 2017, where I earned a Master's in Information Engineering, specializing in Intelligent Systems and Machine Learning.</p>
 
                 <p>Over a decade, I've become skilled in various programming languages like Python, Javascript, Typescript, NodeJS, and PHP. I have a successful track record of delivering innovative solutions.</p>
 

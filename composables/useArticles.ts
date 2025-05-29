@@ -1,24 +1,5 @@
-import type { ParsedContent } from "@nuxt/content";
+import type { BlogPostPreview, UseArticlesOptions, PaginationResult, AdjacentArticles } from "~/types";
 import { ref } from "vue";
-
-interface Article extends Omit<ParsedContent, "body"> {
-  url?: string;
-  _path?: string;
-  title: string;
-  description?: string;
-  image?: string;
-  tags?: string[];
-  postDate: string;
-}
-
-interface UseArticlesOptions {
-  quantity?: number;
-  content?: string;
-  page?: number;
-  pageSize?: number;
-  currentArticle?: string;
-  relatedTo?: string[];
-}
 
 export function useArticles(options: UseArticlesOptions = {}) {
   const {
@@ -26,19 +7,17 @@ export function useArticles(options: UseArticlesOptions = {}) {
     content = "blog",
     page = 1,
     pageSize = 10,
-    currentArticle,
-    relatedTo,
   } = options;
 
-  const articles = ref<Article[]>([]);
+  const articles = ref<BlogPostPreview[]>([]);
   const isLoading = ref(false);
   const error = ref<string | null>(null);
 
-  async function getArticles(quantity: number = 100, content): Promise<any> {
+  async function getArticles(quantity = 100): Promise<BlogPostPreview[]> {
     try {
       const { data } = await useAsyncData(`articles-all`, () =>
-        queryCollection(content)
-          .select("title", "description", "tags", "postDate", "path")
+        queryCollection("blog")
+          .select("title", "description", "tags", "postDate", "path", "url")
           .order("postDate", "DESC")
           .limit(quantity)
           .all(),
@@ -51,11 +30,11 @@ export function useArticles(options: UseArticlesOptions = {}) {
     }
   }
 
-  const fetchArticles = async () => {
+  const fetchArticles = async (): Promise<void> => {
     isLoading.value = true;
     error.value = null;
     try {
-      articles.value = await getArticles(quantity, content);
+      articles.value = await getArticles(quantity);
     } catch (e) {
       error.value = "Failed to fetch articles";
     } finally {
@@ -67,9 +46,9 @@ export function useArticles(options: UseArticlesOptions = {}) {
   fetchArticles();
 
   // Get paginated articles
-  async function getPaginatedArticles() {
+  async function getPaginatedArticles(): Promise<PaginationResult> {
     const start = (page - 1) * pageSize;
-    const articles = await getArticles(quantity, content);
+    const articles = await getArticles(quantity);
     const totalPages = Math.ceil(articles.length / pageSize);
     return {
       articles: articles.slice(start, start + pageSize),
@@ -79,10 +58,10 @@ export function useArticles(options: UseArticlesOptions = {}) {
   }
 
   // Get adjacent (prev/next) articles
-  async function getAdjacentArticles(currentPath: string) {
-    const allArticles = await getArticles(Infinity, content);
+  async function getAdjacentArticles(currentPath: string): Promise<AdjacentArticles> {
+    const allArticles = await getArticles(Infinity);
     const currentIndex = allArticles.findIndex(
-      (article) => article._path === currentPath,
+      (article) => article.path === currentPath,
     );
 
     return {
@@ -95,22 +74,23 @@ export function useArticles(options: UseArticlesOptions = {}) {
   }
 
   // Get related articles
-  async function getRelatedArticles(sourceTags: string[], excludePath: string) {
+  async function getRelatedArticles(sourceTags: string[], excludePath: string): Promise<BlogPostPreview[]> {
     if (!sourceTags?.length) return [];
 
-    const allArticles = await getArticles(quantity, content);
+    const allArticles = await getArticles(quantity);
     return allArticles
       .filter(
-        (article) =>
-          article._path !== excludePath &&
-          article.tags?.some((tag) => sourceTags.includes(tag)),
+        (article: BlogPostPreview) =>
+          article.path !== excludePath &&
+          Array.isArray(article.tags) &&
+          article.tags.some((tag: string) => sourceTags.includes(tag)),
       )
-      .sort((a, b) => {
+      .sort((a: BlogPostPreview, b: BlogPostPreview) => {
         // Sort by number of matching tags
         const aMatches =
-          a.tags?.filter((tag) => sourceTags.includes(tag)).length || 0;
+          (Array.isArray(a.tags) ? a.tags.filter((tag: string) => sourceTags.includes(tag)).length : 0);
         const bMatches =
-          b.tags?.filter((tag) => sourceTags.includes(tag)).length || 0;
+          (Array.isArray(b.tags) ? b.tags.filter((tag: string) => sourceTags.includes(tag)).length : 0);
         return bMatches - aMatches;
       })
       .slice(0, 3); // Limit to 3 related articles
