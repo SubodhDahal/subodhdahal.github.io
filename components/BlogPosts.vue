@@ -28,7 +28,7 @@ const { articles, isLoading, error } = useArticles({ quantity: props.quantity })
       <li
         v-for="article in articles"
         :key="article.url || article.path"
-        class="article-card py-8 border-b border-gray-200 dark:border-gray-700 last:border-b-0"
+        class="article-card py-4 border-b border-gray-200 dark:border-gray-700 last:border-b-0"
       >
         <NuxtLink
           :to="article.url || article.path"
