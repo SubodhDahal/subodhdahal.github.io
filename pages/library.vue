@@ -1,13 +1,10 @@
 <template>
     <div class="container my-10">
-        <div class="max-w-3xl mx-auto text-center mb-12">
-            <h1 class="font-serif text-4xl font-bold mb-4 dark:text-gray-50">
+        <div class="relative mb-8">
+            <h1 class="text-3xl font-serif font-bold text-center text-gray-800 dark:text-gray-100">
                 Library
             </h1>
-            <p class="text-gray-600 dark:text-gray-300 text-lg">
-                Some of the books that I have read in the past few years and
-                recommend, in no particular order.
-            </p>
+            <div class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
         </div>
 
         <div class="px-4">
