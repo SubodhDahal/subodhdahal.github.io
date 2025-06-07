@@ -7,6 +7,7 @@
       content="blog"
       class="mt-10"
       :quantity="100"
+      key="blog-list"
     />
   </div>
 </template>
