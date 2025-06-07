@@ -14,9 +14,9 @@ export function useArticles(options: UseArticlesOptions = {}) {
 
   async function getArticles(quantity = 100): Promise<BlogPostPreview[]> {
     try {
-      const { data } = await useAsyncData(`articles-all`, () =>
+      const { data } = await useAsyncData(`articles-${quantity}`, () =>
         queryCollection("blog")
-          .select("title", "description", "tags", "postDate", "path", "url")
+           .select("title", "description", "tags", "postDate", "path", "url")
           .order("postDate", "DESC")
           .limit(quantity)
           .all(),
