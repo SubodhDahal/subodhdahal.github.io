@@ -1,11 +1,14 @@
 <template>
-  <div class="container py-10">
-    <h1 class="font-bold text-2xl text-center mb-5">
-      Blog Articles
-    </h1>
+  <div class="container my-10">
+    <div class="relative mb-8">
+      <h1 class="text-3xl font-serif font-bold text-center text-gray-800 dark:text-gray-100">
+        Blog Articles
+      </h1>
+      <div class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
+    </div>
     <BlogPosts
       content="blog"
-      class="mt-10"
+      class="mt-6"
       :quantity="100"
       key="blog-list"
     />
