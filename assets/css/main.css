@@ -25,7 +25,7 @@
 /* Base styles */
 @layer base {
   html {
-    @apply font-sans text-base text-secondary-700;
+    @apply font-sans text-base text-secondary-900;
     word-spacing: 1px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -35,20 +35,20 @@
   }
 
   body {
-    @apply bg-white text-secondary-700 leading-relaxed transition-colors duration-200;
+    @apply bg-white text-secondary-900 leading-relaxed transition-colors duration-300;
   }
 
   ::selection {
-    @apply bg-primary-100 text-primary-900;
+    @apply bg-primary-100 text-primary-900 transition-colors duration-200;
   }
 
   /* Dark mode */
   .dark body {
-    @apply bg-secondary-900 text-secondary-300;
+    @apply bg-secondary-900 text-secondary-100;
   }
 
   .dark ::selection {
-    @apply bg-primary-900 text-primary-100;
+    @apply bg-primary-900 text-primary-50;
   }
 }
 
@@ -70,15 +70,22 @@
 /* Blog typography */
 .blog-page {
   @apply prose prose-lg mx-auto dark:prose-invert
-           prose-headings:font-serif
+           prose-headings:font-serif prose-headings:tracking-tight
            prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-8
            prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10
-           prose-p:text-secondary-700 dark:prose-p:text-secondary-300
-           prose-a:text-primary-600 dark:prose-a:text-primary-400
-           prose-strong:text-secondary-900 dark:prose-strong:text-secondary-100
-           prose-code:text-primary-600 dark:prose-code:text-primary-400 prose-code:bg-secondary-50 dark:prose-code:bg-secondary-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-sm
-           prose-pre:bg-secondary-900 dark:prose-pre:bg-secondary-800
-           prose-img:rounded-lg prose-img:shadow-md;
+           prose-p:text-secondary-900 prose-p:leading-relaxed dark:prose-p:text-secondary-100
+           prose-p:mb-6 dark:prose-p:mb-7
+           prose-a:text-primary-700 dark:prose-a:text-primary-300 prose-a:transition-colors prose-a:duration-200
+           prose-strong:text-secondary-900 dark:prose-strong:text-secondary-50
+           prose-code:text-primary-700 dark:prose-code:text-primary-300
+           prose-code:bg-secondary-50 dark:prose-code:bg-secondary-800/90
+           prose-code:px-2 prose-code:py-0.5 prose-code:rounded-md prose-code:text-[0.875em]
+           prose-code:border prose-code:border-secondary-100 dark:prose-code:border-secondary-700
+           prose-pre:bg-secondary-50 dark:prose-pre:bg-secondary-800/90
+           prose-pre:border prose-pre:border-secondary-100 dark:prose-pre:border-secondary-700
+           prose-pre:rounded-lg
+           prose-img:rounded-lg prose-img:shadow-md
+           transition-colors duration-300;
 }
 
 /* Override Tailwind Typography's defaults */
@@ -102,11 +109,13 @@
 /* Style only inline code (not inside pre) */
 .blog-page :is(:where(p code, li code):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
   border-radius: 0.375rem;
-  background-color: rgb(249 250 251);
-  padding: 0.125rem 0.375rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: rgb(225 29 72);
+  background-color: var(--tw-prose-pre-bg);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875em;
+  line-height: 1.5;
+  color: var(--tw-prose-pre-code);
+  border: 1px solid var(--tw-prose-pre-border);
+  transition: all 0.2s ease-in-out;
 }
 
 /* Remove code block pseudo-elements */
@@ -117,8 +126,16 @@
 
 /* Dark mode inline code */
 .dark .blog-page :is(:where(p code, li code):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
-  background-color: rgb(17 24 39);
-  color: rgb(248 113 113);
+  --tw-prose-pre-bg: rgb(30 41 59 / 0.9);
+  --tw-prose-pre-code: rgb(226 232 240);
+  --tw-prose-pre-border: rgb(51 65 85);
+}
+
+/* Light mode inline code */
+.blog-page :is(:where(p code, li code):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
+  --tw-prose-pre-bg: rgb(248 250 252);
+  --tw-prose-pre-code: rgb(51 65 85);
+  --tw-prose-pre-border: rgb(226 232 240);
 }
 
   /* Image caption */
