@@ -8,7 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/content": "^3.5.1",
+    "@nuxt/content": "^3.6.1",
     "@nuxt/image-edge": "^1.1.0-28416198.1e7d37b",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/seo": "^3.0.3",
