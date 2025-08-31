@@ -1,19 +1,13 @@
-import { createBaseFeed, addPostsToFeed } from "../utils/feed";
-import { getBlogPosts } from "../utils/blog";
+import { generateFeed } from "../utils/feed";
 
 export default defineEventHandler(async (event) => {
   const baseUrl = "https://subodhdahal.com";
-  const blogPosts = await getBlogPosts(event);
-
-  const feed = createBaseFeed(baseUrl);
-  addPostsToFeed(feed, blogPosts, baseUrl);
-
-  console.log("RSS feed generated successfully", feed);
+  const feedContent = await generateFeed(event, baseUrl, "rss");
 
   setResponseHeader(
     event,
     "content-type",
     "application/rss+xml; charset=utf-8",
   );
-  return feed.rss2();
+  return feedContent;
 });
