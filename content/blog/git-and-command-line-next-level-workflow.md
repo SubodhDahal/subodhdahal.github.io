@@ -9,7 +9,7 @@ tags:
   - developer productivity
 ---
 
-# What is Git?
+# What is git?
 Git is a version control system that helps developers track changes to their code and collaborate with others on software projects. It allows developers to easily switch between different versions of their code and work on different features in parallel without affecting the main codebase.
 
 # Why use the command-line?
