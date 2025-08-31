@@ -4,11 +4,21 @@
         <title>Subodh Dahal</title>
         <link>https://subodhdahal.com</link>
         <description>Personal website and blog of Subodh Dahal</description>
-        <lastBuildDate>Sun, 31 Aug 2025 16:44:16 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 31 Aug 2025 19:15:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright 2025 Subodh Dahal</copyright>
+        <item>
+            <title><![CDATA[Why I added RSS feeds to my blog (and how I did it in Nuxt 3)]]></title>
+            <link>https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3</guid>
+            <pubDate>Sun, 31 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[How I built RSS and Atom feed support for my Nuxt 3 website to let readers follow my content without social media algorithms.]]></description>
+            <category>nuxt</category>
+            <category>web development</category>
+            <category>tutorial</category>
+        </item>
         <item>
             <title><![CDATA[Revisiting my Stream Deck for music control]]></title>
             <link>https://subodhdahal.com/blog/stream-deck-youtube-music</link>
@@ -21,7 +31,7 @@
             <category>home-office</category>
         </item>
         <item>
-            <title><![CDATA[FZF + Fabric: Smart Selection for LLM Patterns and Models]]></title>
+            <title><![CDATA[fzf + fabric: Smart selection for LLM patterns and models]]></title>
             <link>https://subodhdahal.com/blog/ai-pattern-selection-in-fabric</link>
             <guid isPermaLink="false">https://subodhdahal.com/blog/ai-pattern-selection-in-fabric</guid>
             <pubDate>Sat, 24 May 2025 00:00:00 GMT</pubDate>
@@ -29,7 +39,7 @@
             <category>developer productivity</category>
         </item>
         <item>
-            <title><![CDATA[Effortless Configuration Syncing with GNU Stow and Git: A Software Engineer’s Workflow]]></title>
+            <title><![CDATA[Effortless configuration syncing with GNU Stow and Git: A software engineer's workflow]]></title>
             <link>https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow</link>
             <guid isPermaLink="false">https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow</guid>
             <pubDate>Sun, 12 Jan 2025 00:00:00 GMT</pubDate>
@@ -65,7 +75,7 @@
             <category>travel</category>
         </item>
         <item>
-            <title><![CDATA[Git and the command-line: Take Your Workflow to the Next Level]]></title>
+            <title><![CDATA[Git and the command-line: Take your workflow to the next level]]></title>
             <link>https://subodhdahal.com/blog/git-and-command-line-next-level-workflow</link>
             <guid isPermaLink="false">https://subodhdahal.com/blog/git-and-command-line-next-level-workflow</guid>
             <pubDate>Sun, 18 Dec 2022 00:00:00 GMT</pubDate>
