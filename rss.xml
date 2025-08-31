@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Subodh Dahal</title>
+        <link>https://subodhdahal.com</link>
+        <description>Personal website and blog of Subodh Dahal</description>
+        <lastBuildDate>Sun, 31 Aug 2025 16:44:16 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <copyright>Copyright 2025 Subodh Dahal</copyright>
+        <item>
+            <title><![CDATA[Revisiting my Stream Deck for music control]]></title>
+            <link>https://subodhdahal.com/blog/stream-deck-youtube-music</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/stream-deck-youtube-music</guid>
+            <pubDate>Sat, 07 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.]]></description>
+            <category>productivity</category>
+            <category>Developer Productivity</category>
+            <category>automation</category>
+            <category>home-office</category>
+        </item>
+        <item>
+            <title><![CDATA[FZF + Fabric: Smart Selection for LLM Patterns and Models]]></title>
+            <link>https://subodhdahal.com/blog/ai-pattern-selection-in-fabric</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/ai-pattern-selection-in-fabric</guid>
+            <pubDate>Sat, 24 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.]]></description>
+            <category>developer productivity</category>
+        </item>
+        <item>
+            <title><![CDATA[Effortless Configuration Syncing with GNU Stow and Git: A Software Engineer’s Workflow]]></title>
+            <link>https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow</guid>
+            <pubDate>Sun, 12 Jan 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Discover how to manage and sync configuration files across Linux and macOS using GNU Stow and Git. Simplify your workflow with centralized, version-controlled setups.]]></description>
+            <category>developer productivity</category>
+        </item>
+        <item>
+            <title><![CDATA[My 2023 travels: A visual journey]]></title>
+            <link>https://subodhdahal.com/blog/2023-travels-visual-journey</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/2023-travels-visual-journey</guid>
+            <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Looking back at the best pictures from my travel adventures in 2023]]></description>
+            <category>personal</category>
+            <category>travel</category>
+            <category>photography</category>
+        </item>
+        <item>
+            <title><![CDATA[Re-living memories through proper media organization]]></title>
+            <link>https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization</guid>
+            <pubDate>Mon, 06 Feb 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.]]></description>
+            <category>personal</category>
+            <category>technology</category>
+        </item>
+        <item>
+            <title><![CDATA[Looking back: My 2022 in review]]></title>
+            <link>https://subodhdahal.com/blog/2022-in-review</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/2022-in-review</guid>
+            <pubDate>Sat, 31 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.]]></description>
+            <category>personal</category>
+            <category>travel</category>
+        </item>
+        <item>
+            <title><![CDATA[Git and the command-line: Take Your Workflow to the Next Level]]></title>
+            <link>https://subodhdahal.com/blog/git-and-command-line-next-level-workflow</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/git-and-command-line-next-level-workflow</guid>
+            <pubDate>Sun, 18 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Some tips on how to improve your Git productivity using the command-line]]></description>
+            <category>programming</category>
+            <category>developer productivity</category>
+        </item>
+        <item>
+            <title><![CDATA[Hiking Tsho-Rolpa lake trail in Nepal]]></title>
+            <link>https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal</guid>
+            <pubDate>Sat, 22 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level]]></description>
+            <category>travel</category>
+        </item>
+    </channel>
+</rss>

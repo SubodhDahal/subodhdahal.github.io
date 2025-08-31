@@ -4,6 +4,9 @@
         <loc>https://subodhdahal.com/</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/me.jpg</image:loc>
+        </image:image>
     </url>
     <url>
         <loc>https://subodhdahal.com/about</loc>
@@ -19,12 +22,42 @@
         <loc>https://subodhdahal.com/library</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/library/brave-new-world.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/library/dune.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/library/factfulness.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/library/atomic-habits.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/library/stillness-is-the-key.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/library/indistractable.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/library/show-your-work.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/library/deep-work.jpg</image:loc>
+        </image:image>
     </url>
     <url>
         <loc>https://subodhdahal.com/blog/2022-in-review</loc>
         <lastmod>2022-12-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/2022-in-review/looking-back.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2022-in-review/europe-map-visited.svg</image:loc>
+        </image:image>
     </url>
     <url>
         <loc>https://subodhdahal.com/blog/2023-travels-visual-journey</loc>
@@ -45,42 +78,303 @@
         <image:image>
             <image:loc>https://subodhdahal.com/images/2023-visual-journey/june-budapest-6.jpg</image:loc>
         </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/2023-visual-journey/apr-9.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/2023-visual-journey/nepal-3.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/2023-visual-journey/may-schwaebisch-hall-1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/2023-visual-journey/nepal-5.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/2023-visual-journey/june-kiel-2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-3.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/2023-visual-journey/apr-8.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/nepal-10.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/nepal-9.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/nepal-1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/nepal-4.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/nepal-3.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/nepal-5.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/nepal-2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/nepal-11.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-8.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-9.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-6.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-3.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-4.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-10.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-13.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-14.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-strasbourg-1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-strasbourg-2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-strasbourg-4.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-colmar-2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-colmar-1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/apr-colmar-3.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/may-nice-7.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/may-nice-3.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/may-nice-2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/may-nice-8.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/may-nice-5.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/may-nice-6.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/june-kiel-2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/may-schwaebisch-hall-1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/aug-wuerzburg-2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/may-monaco-1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/june-budapest-6.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/june-budapest-4.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/june-budapest-1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/jan-3.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/sep-amsterdam-3.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/sep-amsterdam-2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/sep-amsterdam-4.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/sep-amsterdam-5.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/jan-5.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/jan-7.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/mar-1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/mar-8.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/mar-7.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/mar-5.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/mar-6.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/mar-9.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/mar-11.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/2023-visual-journey/mar-10.jpg</image:loc>
+        </image:image>
     </url>
     <url>
         <loc>https://subodhdahal.com/blog/ai-pattern-selection-in-fabric</loc>
         <lastmod>2025-05-24</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/fabric-ai-pattern-selection.png</image:loc>
+        </image:image>
     </url>
     <url>
         <loc>https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/configuration-management-across-os.jpg</image:loc>
+        </image:image>
     </url>
     <url>
         <loc>https://subodhdahal.com/blog/git-and-command-line-next-level-workflow</loc>
         <lastmod>2022-12-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/git-and-command-line/programmer.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/git-and-command-line/git-autocorrect.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/git-and-command-line/git-checkout-fzf.gif</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/git-and-command-line/interactive-rebase-tool.gif</image:loc>
+        </image:image>
     </url>
     <url>
         <loc>https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal</loc>
         <lastmod>2022-01-22</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/tsho-rolpa/lake-view.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/w_1200/images/tsho-rolpa/elevation-change-graph.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/me-on-motorbike.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/himalayas-on-the-way.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/chhetchhet-waterfall2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/simigaun.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/mount-gaurishankar-sunlight.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/surmuche-morning-views.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/stop-at-kyalche.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/dongang.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/after-donggang.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/beding-morning-views.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/rolwaling-valley-1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/rolwaling-valley-2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/lake-view.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/na-village.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/illuminated-mountain.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/tsho-rolpa/tongba-vessel.jpg</image:loc>
+        </image:image>
     </url>
     <url>
         <loc>https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization</loc>
         <lastmod>2023-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/digital-media-2023/image-collection.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/digital-media-2023/digikam-red-flags.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/digital-media-2023/digikam.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/digital-media-2023/digikam-image-editor-tools.png</image:loc>
+        </image:image>
     </url>
     <url>
         <loc>https://subodhdahal.com/blog/stream-deck-youtube-music</loc>
         <lastmod>2025-06-07</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/stream-deck/stream-deck-bg.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/stream-deck/stream-deck-youtube-music.png</image:loc>
+        </image:image>
     </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v7.3.1 at 2025-06-07T16:25:41.342Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v7.4.3 at 2025-08-31T16:44:30.365Z -->

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://subodhdahal.com</id>
+    <title>Subodh Dahal</title>
+    <updated>2025-08-31T16:44:16.328Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Subodh Dahal</name>
+        <uri>https://subodhdahal.com</uri>
+    </author>
+    <link rel="alternate" href="https://subodhdahal.com"/>
+    <link rel="self" href="https://subodhdahal.com/atom.xml"/>
+    <subtitle>Personal website and blog of Subodh Dahal</subtitle>
+    <rights>Copyright 2025 Subodh Dahal</rights>
+    <entry>
+        <title type="html"><![CDATA[Revisiting my Stream Deck for music control]]></title>
+        <id>https://subodhdahal.com/blog/stream-deck-youtube-music</id>
+        <link href="https://subodhdahal.com/blog/stream-deck-youtube-music"/>
+        <updated>2025-06-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.]]></summary>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com</uri>
+        </author>
+        <category label="productivity"/>
+        <category label="Developer Productivity"/>
+        <category label="automation"/>
+        <category label="home-office"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FZF + Fabric: Smart Selection for LLM Patterns and Models]]></title>
+        <id>https://subodhdahal.com/blog/ai-pattern-selection-in-fabric</id>
+        <link href="https://subodhdahal.com/blog/ai-pattern-selection-in-fabric"/>
+        <updated>2025-05-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.]]></summary>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com</uri>
+        </author>
+        <category label="developer productivity"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Effortless Configuration Syncing with GNU Stow and Git: A Software Engineer’s Workflow]]></title>
+        <id>https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow</id>
+        <link href="https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow"/>
+        <updated>2025-01-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Discover how to manage and sync configuration files across Linux and macOS using GNU Stow and Git. Simplify your workflow with centralized, version-controlled setups.]]></summary>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com</uri>
+        </author>
+        <category label="developer productivity"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[My 2023 travels: A visual journey]]></title>
+        <id>https://subodhdahal.com/blog/2023-travels-visual-journey</id>
+        <link href="https://subodhdahal.com/blog/2023-travels-visual-journey"/>
+        <updated>2024-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Looking back at the best pictures from my travel adventures in 2023]]></summary>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com</uri>
+        </author>
+        <category label="personal"/>
+        <category label="travel"/>
+        <category label="photography"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Re-living memories through proper media organization]]></title>
+        <id>https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization</id>
+        <link href="https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization"/>
+        <updated>2023-02-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.]]></summary>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com</uri>
+        </author>
+        <category label="personal"/>
+        <category label="technology"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Looking back: My 2022 in review]]></title>
+        <id>https://subodhdahal.com/blog/2022-in-review</id>
+        <link href="https://subodhdahal.com/blog/2022-in-review"/>
+        <updated>2022-12-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.]]></summary>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com</uri>
+        </author>
+        <category label="personal"/>
+        <category label="travel"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Git and the command-line: Take Your Workflow to the Next Level]]></title>
+        <id>https://subodhdahal.com/blog/git-and-command-line-next-level-workflow</id>
+        <link href="https://subodhdahal.com/blog/git-and-command-line-next-level-workflow"/>
+        <updated>2022-12-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Some tips on how to improve your Git productivity using the command-line]]></summary>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com</uri>
+        </author>
+        <category label="programming"/>
+        <category label="developer productivity"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hiking Tsho-Rolpa lake trail in Nepal]]></title>
+        <id>https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal</id>
+        <link href="https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal"/>
+        <updated>2022-01-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level]]></summary>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com</uri>
+        </author>
+        <category label="travel"/>
+    </entry>
+</feed>
