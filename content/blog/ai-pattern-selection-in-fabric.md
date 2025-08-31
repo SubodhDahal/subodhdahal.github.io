@@ -1,5 +1,5 @@
 ---
-title: "FZF + Fabric: Smart Selection for LLM Patterns and Models"
+title: "fzf + fabric: Smart selection for LLM patterns and models"
 description: Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.
 image:  /images/fabric-ai-pattern-selection.png
 alt: AI Pattern Selection in Fabric
@@ -12,7 +12,7 @@ I have been using [fabric](https://github.com/danielmiessler/fabric) to run LLM 
 
 But here's the thing: there were too many patterns available. I kept staring at my screen trying to remember how they are named. Plus, I wanted to have the flexibility to choose different LLM models without having to memorize their names.
 
-## The Solution
+## The solution
 
 I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool, to create searchable menus for fabric. Instead of memorizing commands, I just:
 1. Send text to fabric
