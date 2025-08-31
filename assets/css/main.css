@@ -1,20 +1,22 @@
 @font-face {
-  font-family: 'Lato';
-  src: url('/fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Source Serif Pro';
-  src: url('/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf') format('truetype');
+  font-family: "Source Serif Pro";
+  src: url("/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf")
+    format("truetype");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Samble Tracie';
-  src: url('/fonts/Samble_Tracie/Samble_Tracie.woff2') format('woff2'),
-       url('/fonts/Samble_Tracie/Samble_Tracie.woff') format('woff'),
-       url('/fonts/Samble_Tracie/Samble_Tracie.ttf') format('truetype');
+  font-family: "Samble Tracie";
+  src:
+    url("/fonts/Samble_Tracie/Samble_Tracie.woff2") format("woff2"),
+    url("/fonts/Samble_Tracie/Samble_Tracie.woff") format("woff"),
+    url("/fonts/Samble_Tracie/Samble_Tracie.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -67,9 +69,9 @@
     @apply h-10 transition-opacity duration-200 hover:opacity-80;
   }
 
-/* Blog typography */
-.blog-page {
-  @apply prose prose-lg mx-auto dark:prose-invert
+  /* Blog typography */
+  .blog-page {
+    @apply prose prose-lg mx-auto dark:prose-invert
            prose-headings:font-serif prose-headings:tracking-tight
            prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-8
            prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10
@@ -83,60 +85,102 @@
            prose-code:border prose-code:border-secondary-100 dark:prose-code:border-secondary-700
            prose-pre:bg-secondary-50 dark:prose-pre:bg-secondary-800/90
            prose-pre:border prose-pre:border-secondary-100 dark:prose-pre:border-secondary-700
-           prose-pre:rounded-lg
+           prose-pre:rounded-lg prose-pre:my-4
+           [&>pre]:my-4 [&>pre>code]:my-0 [&>pre]:!p-0
+           [&>div>pre]:my-4 [&>div>pre>code]:my-0 [&>div>pre]:!p-0
            prose-img:rounded-lg prose-img:shadow-md
            transition-colors duration-300;
-}
+  }
 
-/* Override Tailwind Typography's defaults */
-.blog-page :is(:where(a):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
-  text-decoration: none !important;
-}
+  /* Override Tailwind Typography's defaults */
+  .blog-page
+    :is(:where(a):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
+    text-decoration: none !important;
+  }
 
-.blog-page :is(:where(a):not(:where([class~="not-prose"], [class~="not-prose"] *))):hover {
-  text-decoration: none !important;
-}
+  .blog-page
+    :is(
+      :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *))
+    ):hover {
+    text-decoration: none !important;
+  }
 
-/* Code styling */
-.blog-page :is(:where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
-  /* Reset all styles for both inline and block code */
-  background: none;
-  border-radius: 0;
-  padding: 0;
-  color: inherit;
-}
+  /* Code styling */
+  .blog-page
+    :is(
+      :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))
+    ) {
+    /* Reset all styles for both inline and block code */
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    color: inherit;
+    margin: 0;
+  }
 
-/* Style only inline code (not inside pre) */
-.blog-page :is(:where(p code, li code):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
-  border-radius: 0.375rem;
-  background-color: var(--tw-prose-pre-bg);
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875em;
-  line-height: 1.5;
-  color: var(--tw-prose-pre-code);
-  border: 1px solid var(--tw-prose-pre-border);
-  transition: all 0.2s ease-in-out;
-}
+  .blog-page pre {
+    margin: 1rem 0 !important;
+  }
 
-/* Remove code block pseudo-elements */
-.blog-page :is(:where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)))::before,
-.blog-page :is(:where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)))::after {
-  content: none !important;
-}
+  .blog-page pre code {
+    margin: 0 !important;
+    padding: 1rem !important;
+    display: block;
+  }
 
-/* Dark mode inline code */
-.dark .blog-page :is(:where(p code, li code):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
-  --tw-prose-pre-bg: rgb(30 41 59 / 0.9);
-  --tw-prose-pre-code: rgb(226 232 240);
-  --tw-prose-pre-border: rgb(51 65 85);
-}
+  /* Style only inline code (not inside pre) */
+  .blog-page
+    :is(
+      :where(p code, li code):not(
+        :where([class~="not-prose"], [class~="not-prose"] *)
+      )
+    ) {
+    border-radius: 0.375rem;
+    background-color: var(--tw-prose-pre-bg);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875em;
+    line-height: 1.5;
+    color: var(--tw-prose-pre-code);
+    border: 1px solid var(--tw-prose-pre-border);
+    transition: all 0.2s ease-in-out;
+  }
 
-/* Light mode inline code */
-.blog-page :is(:where(p code, li code):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
-  --tw-prose-pre-bg: rgb(248 250 252);
-  --tw-prose-pre-code: rgb(51 65 85);
-  --tw-prose-pre-border: rgb(226 232 240);
-}
+  /* Remove code block pseudo-elements */
+  .blog-page
+    :is(
+      :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))
+    )::before,
+  .blog-page
+    :is(
+      :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))
+    )::after {
+    content: none !important;
+  }
+
+  /* Dark mode inline code */
+  .dark
+    .blog-page
+    :is(
+      :where(p code, li code):not(
+        :where([class~="not-prose"], [class~="not-prose"] *)
+      )
+    ) {
+    --tw-prose-pre-bg: rgb(30 41 59 / 0.9);
+    --tw-prose-pre-code: rgb(226 232 240);
+    --tw-prose-pre-border: rgb(51 65 85);
+  }
+
+  /* Light mode inline code */
+  .blog-page
+    :is(
+      :where(p code, li code):not(
+        :where([class~="not-prose"], [class~="not-prose"] *)
+      )
+    ) {
+    --tw-prose-pre-bg: rgb(248 250 252);
+    --tw-prose-pre-code: rgb(51 65 85);
+    --tw-prose-pre-border: rgb(226 232 240);
+  }
 
   /* Image caption */
   .image figcaption {
@@ -150,7 +194,7 @@
 
   .link-underline::after {
     @apply absolute w-full scale-x-0 h-0.5 bottom-0 left-0 bg-primary-600 dark:bg-primary-400 origin-bottom-right transition-transform duration-300 ease-out;
-    content: '';
+    content: "";
   }
 
   .link-underline:hover::after {
@@ -164,7 +208,7 @@
 }
 
 .hover-underline-animation::after {
-  content: '';
+  content: "";
   @apply absolute w-full h-0.5 bottom-0 left-0 bg-gray-600 dark:bg-gray-400;
   transform: scaleX(0);
   transform-origin: bottom right;

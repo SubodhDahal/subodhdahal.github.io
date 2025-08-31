@@ -1,5 +1,8 @@
 import { Feed } from "feed";
 import type { BlogPostPreview } from "~/types";
+import { getBlogPosts } from "./blog";
+
+export type FeedFormat = "rss" | "atom";
 
 const DEFAULT_TITLE = "Subodh Dahal";
 const DEFAULT_DESCRIPTION = "Personal website and blog of Subodh Dahal";
@@ -66,6 +69,23 @@ export function addPostsToFeed(
     }
   } catch (error) {
     console.error("Error adding posts to feed:", error);
+    throw error;
+  }
+}
+
+export async function generateFeed(
+  event: any,
+  baseUrl: string,
+  format: FeedFormat,
+): Promise<string> {
+  try {
+    const blogPosts = await getBlogPosts(event);
+    const feed = createBaseFeed(baseUrl);
+    addPostsToFeed(feed, blogPosts, baseUrl);
+
+    return format === "rss" ? feed.rss2() : feed.atom1();
+  } catch (error) {
+    console.error(`Error generating ${format} feed:`, error);
     throw error;
   }
 }
