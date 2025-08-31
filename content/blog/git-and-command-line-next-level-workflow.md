@@ -1,5 +1,5 @@
 ---
-title: "Git and the command-line: Take Your Workflow to the Next Level"
+title: "Git and the command-line: Take your workflow to the next level"
 description: Some tips on how to improve your Git productivity using the command-line
 image: /images/git-and-command-line/programmer.png
 alt: Supercharge your Git-workflow

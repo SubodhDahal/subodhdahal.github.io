@@ -18,7 +18,7 @@ Since I didn't have any specific use for it, it sat in storage for months until 
 
 Instead of trying to automate everything at once, I focused on solving one specific daily annoyance: controlling music without breaking my workflow. This targeted approach made me actually use the Stream Deck regularly.
 
-## Setting Up Music Controls
+## Setting up music controls
 
 My initial challenge was simple: I wanted to control YouTube Music without switching windows.
 
@@ -44,7 +44,7 @@ http://0.0.0.0:26538/api/v1/pause    # Pause/play
   <figcaption class="text-center mt-2 text-sm text-gray-600 dark:text-gray-400">My buttons setup for YouTube Music on Stream Deck</figcaption>
 </figure>
 
-## Solving a Related Problem
+## Solving a related problem
 
 I use Super Whisper for speech-to-text via a Stream Deck button. But there was a problem: If music is playing, Super Whisper picks up the audio from it and the dictation doesn't work reliably.
 
@@ -52,11 +52,11 @@ I solved this by creating a multi-action button in Stream Deck that first pauses
 
 The launcher button for it is on the top right in the image above.
 
-## Physical Layout Change
+## Physical layout change
 
 I moved the Stream Deck from directly in front of me to the left of my keyboard. This position feels more natural—no more reaching forward to press buttons.
 
-## Beyond Music Control
+## Beyond music control
 
 I also use Stream Deck for:
 
@@ -64,6 +64,6 @@ I also use Stream Deck for:
 - **Home office lighting** via Home Assistant integration
 - **System shortcuts** like Do Not Disturb or taking screenshots
 
-## The Bigger Picture
+## The bigger picture
 
 This music control workflow is step one in an ongoing automation experiment. I'm documenting this success to create a template for future improvements and stay motivated. The key was finding the right approach to turn a failed purchase into a useful tool.

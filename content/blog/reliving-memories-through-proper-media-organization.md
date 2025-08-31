@@ -9,7 +9,7 @@ tags:
   - technology
 ---
 
-# Capturing Life's Moments
+# Capturing life's moments
 
 We make priceless memories as life progresses &ndash; memories we want to keep forever. They can be minor, everyday occurrences or significant, life-altering occasions that serve as a reminder of who we were, what we've been through, and what we've learned. They are really valuable and can make us feel sad, happy, or nostalgic.
 
@@ -118,7 +118,7 @@ digiKam has a powerful editing tool called "Image Editor" where I mostly perform
 
 digiKam also has features to create panoramas and HDR images from multiple pictures, which I make occasional use of.
 
-### 5. Cloud Backup
+### 5. Cloud backup
 
 Even though I chose local storage as the main destination for my media, I still back them up to the cloud. Hard drives can fail and catastrophes like fire can happen which destroy years of memories. Having an off-site backup is a good way to ensure that the media remain safe.
 
