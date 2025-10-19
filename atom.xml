@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://subodhdahal.com</id>
     <title>Subodh Dahal</title>
-    <updated>2025-10-05T13:22:20.056Z</updated>
+    <updated>2025-10-19T14:23:43.515Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Subodh Dahal</name>
@@ -12,6 +12,22 @@
     <link rel="self" href="https://subodhdahal.com/atom.xml"/>
     <subtitle>Personal website and blog of Subodh Dahal</subtitle>
     <rights>Copyright 2025 Subodh Dahal</rights>
+    <entry>
+        <title type="html"><![CDATA[Quickly Outline Large JSON Responses with a Custom jq Function]]></title>
+        <id>https://subodhdahal.com/blog/jq-json-outline</id>
+        <link href="https://subodhdahal.com/blog/jq-json-outline"/>
+        <updated>2025-10-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.]]></summary>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com</uri>
+        </author>
+        <category label="jq"/>
+        <category label="json"/>
+        <category label="command line"/>
+        <category label="automation"/>
+        <category label="developer productivity"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Why I added RSS feeds to my blog (and how I did it in Nuxt 3)]]></title>
         <id>https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3</id>
