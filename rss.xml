@@ -4,11 +4,20 @@
         <title>Subodh Dahal</title>
         <link>https://subodhdahal.com</link>
         <description>Personal website and blog of Subodh Dahal</description>
-        <lastBuildDate>Sun, 19 Oct 2025 18:39:45 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 31 Oct 2025 16:48:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright 2025 Subodh Dahal</copyright>
+        <item>
+            <title><![CDATA[Fixing my broken Docker Immich+Traefik setup]]></title>
+            <link>https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup</guid>
+            <pubDate>Fri, 31 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Photo indexing and other jobs failed in my Immich+Traefik setup. Turns out I'd misconfigured my Docker networking with Traefik. Here's how I figured it out and what I changed.]]></description>
+            <category>homelab</category>
+            <category>networking</category>
+        </item>
         <item>
             <title><![CDATA[Quickly Outline Large JSON Responses with a Custom jq Function]]></title>
             <link>https://subodhdahal.com/blog/jq-json-outline</link>

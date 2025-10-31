@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://subodhdahal.com</id>
     <title>Subodh Dahal</title>
-    <updated>2025-10-19T18:39:45.015Z</updated>
+    <updated>2025-10-31T16:48:05.096Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Subodh Dahal</name>
@@ -12,6 +12,19 @@
     <link rel="self" href="https://subodhdahal.com/atom.xml"/>
     <subtitle>Personal website and blog of Subodh Dahal</subtitle>
     <rights>Copyright 2025 Subodh Dahal</rights>
+    <entry>
+        <title type="html"><![CDATA[Fixing my broken Docker Immich+Traefik setup]]></title>
+        <id>https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup</id>
+        <link href="https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup"/>
+        <updated>2025-10-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Photo indexing and other jobs failed in my Immich+Traefik setup. Turns out I'd misconfigured my Docker networking with Traefik. Here's how I figured it out and what I changed.]]></summary>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com</uri>
+        </author>
+        <category label="homelab"/>
+        <category label="networking"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Quickly Outline Large JSON Responses with a Custom jq Function]]></title>
         <id>https://subodhdahal.com/blog/jq-json-outline</id>
