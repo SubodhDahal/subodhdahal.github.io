@@ -67,9 +67,10 @@ import type { BlogCollectionItem } from "@nuxt/content";
 
 // Fetch article data
 const article = ref<BlogCollectionItem | null>(null);
-const { path } = useRoute();
-const { data } = await useAsyncData("article", () =>
-    queryCollection("blog").where("path", "=", path).first(),
+const { path, params } = useRoute();
+const uniqueKey = `article-${params.slug || path}`;
+const { data } = await useAsyncData(uniqueKey, () =>
+  queryCollection("blog").where("path", "=", path).first(),
 );
 article.value = unref(data);
 
