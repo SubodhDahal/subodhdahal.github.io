@@ -1,1 +1,0 @@
-import{_ as t,c as s,o as a,a as n,N as r,d as c}from"./ohoDqDnK.js";const d={},l={class:"p-4 mb-4 text-white bg-blue-500"};function f(o,e,p,_,i,u){return a(),s("div",l,[n("p",null,[r(o.$slots,"info-box",{},()=>[e[0]||(e[0]=c(" default ",-1))])])])}const m=Object.assign(t(d,[["render",f]]),{__name:"InfoBox"});export{m as default};
