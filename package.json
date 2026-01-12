@@ -16,7 +16,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^24.10.1",
     "better-sqlite3": "^12.5.0",
-    "feed": "^5.1.0",
+    "feed": "^5.2.0",
     "nuxt": "^4.2.2"
   }
 }
