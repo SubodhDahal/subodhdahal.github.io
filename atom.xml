@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://subodhdahal.com</id>
     <title>Subodh Dahal</title>
-    <updated>2025-12-29T15:12:32.120Z</updated>
+    <updated>2026-02-03T17:05:46.433Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Subodh Dahal</name>
@@ -11,7 +11,7 @@
     <link rel="alternate" href="https://subodhdahal.com"/>
     <link rel="self" href="https://subodhdahal.com/atom.xml"/>
     <subtitle>Personal website and blog of Subodh Dahal</subtitle>
-    <rights>Copyright 2025 Subodh Dahal</rights>
+    <rights>Copyright 2026 Subodh Dahal</rights>
     <entry>
         <title type="html"><![CDATA[Fixing my broken Docker Immich+Traefik setup]]></title>
         <id>https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup</id>
