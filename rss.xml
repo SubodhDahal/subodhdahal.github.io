@@ -4,11 +4,23 @@
         <title>Subodh Dahal</title>
         <link>https://subodhdahal.com</link>
         <description>Personal website and blog of Subodh Dahal</description>
-        <lastBuildDate>Tue, 28 Apr 2026 17:03:02 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 29 Apr 2026 06:38:23 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright 2026 Subodh Dahal</copyright>
+        <item>
+            <title><![CDATA[Self-Hosting my Git forge with Forgejo]]></title>
+            <link>https://subodhdahal.com/blog/self-hosting-my-git-forge</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/self-hosting-my-git-forge</guid>
+            <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Why I moved away from GitHub and chose a lightweight, community-driven alternative]]></description>
+            <author>Subodh Dahal</author>
+            <category>Homelab</category>
+            <category>Open source</category>
+            <category>Self-hosting</category>
+            <category>Workflow</category>
+        </item>
         <item>
             <title><![CDATA[Curating my own reading and discovery feed with RSS]]></title>
             <link>https://subodhdahal.com/blog/reading-and-discovery-feed-curation</link>

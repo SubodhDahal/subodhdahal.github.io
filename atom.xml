@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://subodhdahal.com</id>
     <title>Subodh Dahal</title>
-    <updated>2026-04-28T17:03:02.465Z</updated>
+    <updated>2026-04-29T06:38:23.658Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Subodh Dahal</name>
@@ -12,6 +12,21 @@
     <link rel="self" href="https://subodhdahal.com/atom.xml"/>
     <subtitle>Personal website and blog of Subodh Dahal</subtitle>
     <rights>Copyright 2026 Subodh Dahal</rights>
+    <entry>
+        <title type="html"><![CDATA[Self-Hosting my Git forge with Forgejo]]></title>
+        <id>https://subodhdahal.com/blog/self-hosting-my-git-forge</id>
+        <link href="https://subodhdahal.com/blog/self-hosting-my-git-forge"/>
+        <updated>2026-04-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Why I moved away from GitHub and chose a lightweight, community-driven alternative]]></summary>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com</uri>
+        </author>
+        <category label="Homelab"/>
+        <category label="Open source"/>
+        <category label="Self-hosting"/>
+        <category label="Workflow"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Curating my own reading and discovery feed with RSS]]></title>
         <id>https://subodhdahal.com/blog/reading-and-discovery-feed-curation</id>
