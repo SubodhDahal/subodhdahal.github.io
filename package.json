@@ -10,7 +10,7 @@
   "devDependencies": {
     "@nuxt/content": "^3.13.0",
     "@nuxt/image-nightly": "^2.0.0-20251104-155553-b7f4a95",
-    "@nuxtjs/color-mode": "^4.0.0",
+    "@nuxtjs/color-mode": "^4.0.1",
     "@nuxtjs/seo": "^3.4.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@tailwindcss/typography": "^0.5.19",
