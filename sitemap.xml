@@ -48,7 +48,7 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/2022-in-review/looking-back.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/2022-in-review/looking-back.png</image:loc>
         </image:image>
         <image:image>
             <image:loc>https://subodhdahal.com/_ipx/_/images/2022-in-review/europe-map-visited.svg</image:loc>
@@ -251,7 +251,7 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/fabric-ai-pattern-selection.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/fabric-ai-pattern-selection.png</image:loc>
         </image:image>
     </url>
     <url>
@@ -260,7 +260,7 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/configuration-management-across-os.jpg</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/configuration-management-across-os.jpg</image:loc>
         </image:image>
     </url>
     <url>
@@ -269,7 +269,7 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/broken-docker-network.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/broken-docker-network.png</image:loc>
         </image:image>
     </url>
     <url>
@@ -278,7 +278,7 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/git-and-command-line/programmer.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/git-and-command-line/programmer.png</image:loc>
         </image:image>
         <image:image>
             <image:loc>https://subodhdahal.com/_ipx/_/images/git-and-command-line/git-autocorrect.png</image:loc>
@@ -296,7 +296,7 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/tsho-rolpa/lake-view.jpg</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/tsho-rolpa/lake-view.jpg</image:loc>
         </image:image>
         <image:image>
             <image:loc>https://subodhdahal.com/_ipx/w_1200/images/tsho-rolpa/elevation-change-graph.png</image:loc>
@@ -356,7 +356,7 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/jq-json-structure.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/jq-json-structure.png</image:loc>
         </image:image>
     </url>
     <url>
@@ -365,7 +365,7 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/reading-feed-curation.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/reading-feed-curation.png</image:loc>
         </image:image>
     </url>
     <url>
@@ -374,7 +374,7 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/digital-media-2023/image-collection.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/digital-media-2023/image-collection.png</image:loc>
         </image:image>
         <image:image>
             <image:loc>https://subodhdahal.com/_ipx/_/images/digital-media-2023/digikam-red-flags.png</image:loc>
@@ -392,7 +392,7 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/self-hosting-git-forge.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/self-hosting-git-forge.png</image:loc>
         </image:image>
     </url>
     <url>
@@ -401,7 +401,7 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/rss-feed-nuxt.jpg</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/rss-feed-nuxt.jpg</image:loc>
         </image:image>
     </url>
     <url>
@@ -410,11 +410,11 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;amp;s_800x400/images/stream-deck/stream-deck-bg.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/stream-deck/stream-deck-bg.png</image:loc>
         </image:image>
         <image:image>
             <image:loc>https://subodhdahal.com/_ipx/_/images/stream-deck/stream-deck-youtube-music.png</image:loc>
         </image:image>
     </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v7.6.0 at 2026-04-29T06:38:33.925Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v8.3.4 at 2026-08-16T17:29:22.880Z -->

@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://subodhdahal.com</id>
     <title>Subodh Dahal</title>
-    <updated>2026-04-29T06:38:23.658Z</updated>
+    <updated>2026-08-16T17:29:12.665Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Subodh Dahal</name>
-        <uri>https://subodhdahal.com</uri>
+        <uri>https://subodhdahal.com/</uri>
     </author>
-    <link rel="alternate" href="https://subodhdahal.com"/>
+    <link rel="alternate" href="https://subodhdahal.com/"/>
     <link rel="self" href="https://subodhdahal.com/atom.xml"/>
     <subtitle>Personal website and blog of Subodh Dahal</subtitle>
     <rights>Copyright 2026 Subodh Dahal</rights>
@@ -20,7 +20,7 @@
         <summary type="html"><![CDATA[Why I moved away from GitHub and chose a lightweight, community-driven alternative]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="Homelab"/>
         <category label="Open source"/>
@@ -35,7 +35,7 @@
         <summary type="html"><![CDATA[Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="Homelab"/>
         <category label="Open source"/>
@@ -50,7 +50,7 @@
         <summary type="html"><![CDATA[Photo indexing and other jobs failed in my Immich+Traefik setup. Turns out I'd misconfigured my Docker networking with Traefik. Here's how I figured it out and what I changed.]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="homelab"/>
         <category label="networking"/>
@@ -63,7 +63,7 @@
         <summary type="html"><![CDATA[Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="jq"/>
         <category label="json"/>
@@ -79,7 +79,7 @@
         <summary type="html"><![CDATA[How I built RSS and Atom feed support for my Nuxt 3 website to let readers follow my content without social media algorithms.]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="nuxt"/>
         <category label="web development"/>
@@ -93,7 +93,7 @@
         <summary type="html"><![CDATA[How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="productivity"/>
         <category label="Developer Productivity"/>
@@ -108,7 +108,7 @@
         <summary type="html"><![CDATA[Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="developer productivity"/>
     </entry>
@@ -120,7 +120,7 @@
         <summary type="html"><![CDATA[Discover how to manage and sync configuration files across Linux and macOS using GNU Stow and Git. Simplify your workflow with centralized, version-controlled setups.]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="developer productivity"/>
     </entry>
@@ -132,7 +132,7 @@
         <summary type="html"><![CDATA[Looking back at the best pictures from my travel adventures in 2023]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="personal"/>
         <category label="travel"/>
@@ -146,7 +146,7 @@
         <summary type="html"><![CDATA[Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="personal"/>
         <category label="technology"/>
@@ -159,7 +159,7 @@
         <summary type="html"><![CDATA[From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="personal"/>
         <category label="travel"/>
@@ -172,7 +172,7 @@
         <summary type="html"><![CDATA[Some tips on how to improve your Git productivity using the command-line]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="programming"/>
         <category label="developer productivity"/>
@@ -185,7 +185,7 @@
         <summary type="html"><![CDATA[Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level]]></summary>
         <author>
             <name>Subodh Dahal</name>
-            <uri>https://subodhdahal.com</uri>
+            <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="travel"/>
     </entry>

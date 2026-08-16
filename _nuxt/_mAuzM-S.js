@@ -1,0 +1,1 @@
+import{L as e,V as t,d as n,m as r,v as i}from"./Bc8Wfywi.js";import{t as a}from"./BDNMzG2s.js";var o={},s={class:`p-4 mb-4 text-white bg-blue-500`};function c(a,o,c,l,u,d){return e(),r(`div`,s,[n(`p`,null,[t(a.$slots,`info-box`,{},()=>[o[0]||=i(` default `,-1)])])])}var l=Object.assign(a(o,[[`render`,c]]),{__name:`InfoBox`});export{l as default};
