@@ -10,6 +10,7 @@
       <a
         href="https://www.linkedin.com/in/subodhdahal"
         title="LinkedIn"
+        aria-label="LinkedIn"
         target="_blank"
         rel="me noopener noreferrer"
       >
@@ -26,6 +27,7 @@
       <a
         href="https://www.xing.com/profile/Subodh_Dahal"
         title="Xing"
+        aria-label="Xing"
         target="_blank"
         rel="me noopener noreferrer"
       >
@@ -42,6 +44,7 @@
       <a
         href="https://github.com/SubodhDahal"
         title="GitHub"
+        aria-label="GitHub"
         target="_blank"
         rel="me noopener noreferrer"
       >
@@ -58,6 +61,7 @@
       <a
         href="https://stackoverflow.com/users/1083422/sub0dh"
         title="Stackoverflow"
+        aria-label="Stack Overflow"
         target="_blank"
         rel="me noopener noreferrer"
       >
@@ -74,6 +78,7 @@
       <a
         href="https://instagram.com/wanderluster_subodh"
         title="Instagram"
+        aria-label="Instagram"
         target="_blank"
         rel="me noopener noreferrer"
       >
@@ -87,7 +92,7 @@
       </a>
     </li>
     <li>
-      <a href="/rss.xml" title="RSS Feed" rel="alternate">
+      <a href="/rss.xml" title="RSS Feed" aria-label="RSS Feed" rel="alternate">
         <IconRSS
           :class="[
             isHero
