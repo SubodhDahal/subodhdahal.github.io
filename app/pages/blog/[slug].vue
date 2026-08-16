@@ -138,12 +138,9 @@ useSchemaOrg([
 
 // OG Image
 if (image.value) {
-    defineOgImage({
-        component: "blog",
-        props: {
-            title: title.value,
-            image: image.value,
-        },
+    defineOgImage("SimpleBlog", {
+        title: title.value,
+        image: image.value,
     });
 }
 </script>

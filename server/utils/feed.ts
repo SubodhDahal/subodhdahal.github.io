@@ -21,7 +21,7 @@ export function createBaseFeed(baseUrl: string) {
       language: "en",
       copyright: `Copyright ${new Date().getFullYear()} Subodh Dahal`,
       feedLinks: {
-        rss2: `${baseUrl}/rss.xml`,
+        rss: `${baseUrl}/rss.xml`,
         atom: `${baseUrl}/atom.xml`,
       },
       author: {
