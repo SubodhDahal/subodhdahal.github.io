@@ -3,7 +3,7 @@
     <div class="shadow-sm border-b border-gray-200 dark:border-gray-700">
       <header class="md:container flex justify-between mx-auto px-5 py-4">
       <div class="mb-4">
-        <NuxtLink to="/">
+        <NuxtLink to="/" aria-label="Home">
           <IconLogo class="h-12 w-12 transition-transform hover:scale-105" />
         </NuxtLink>
       </div>
@@ -57,7 +57,7 @@
           class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-gray-100 dark:bg-gray-800 overflow-y-auto transform transition-transform duration-300 ease-in-out"
         >
           <div class="flex items-center mb-8">
-            <NuxtLink to="/" class="mr-auto">
+            <NuxtLink to="/" class="mr-auto" aria-label="Home">
               <IconLogo class="h-15 w-15" />
             </NuxtLink>
             <button class="navbar-close p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" @click="isMobileNavOpen = false">
