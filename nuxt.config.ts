@@ -24,16 +24,15 @@ export default defineNuxtConfig({
 
   experimental: {
     clientNodeCompat: true,
-    // Keep your existing experimental flags
-    routeRules: true,
   },
 
+  // @nuxtjs/seo must be registered before @nuxt/content (v5 module-order requirement)
   modules: [
     "@nuxtjs/tailwindcss",
+    "@nuxtjs/seo",
     "@nuxt/image-nightly",
     "@nuxt/content",
     "@nuxtjs/color-mode",
-    "@nuxtjs/seo",
   ],
 
   image: {
@@ -66,24 +65,19 @@ export default defineNuxtConfig({
     format: ["webp", "jpg", "png"],
   },
 
-  experimental: {
-    // Enable route rules to work with sitemap
-    routeRules: true,
-  },
-
   routeRules: {
     "/404": { robots: false },
   },
 
   robots: {
-    rules: [
+    groups: [
       {
-        UserAgent: "*",
-        Allow: ["/"],
-        Disallow: ["/404", "/api/*"],
+        userAgent: "*",
+        allow: ["/"],
+        disallow: ["/404", "/api/*"],
       },
       {
-        UserAgent: [
+        userAgent: [
           "GPTBot",
           "ChatGPT-User",
           "CCBot",
@@ -93,7 +87,7 @@ export default defineNuxtConfig({
           "Omgili",
           "FacebookBot",
         ],
-        Disallow: ["/"],
+        disallow: ["/"],
       },
     ],
     sitemap: "https://subodhdahal.com/sitemap.xml",
@@ -109,14 +103,17 @@ export default defineNuxtConfig({
     },
   },
 
-  schemaOrg: {
-    meta: {
-      host: "https://subodhdahal.com",
-    },
-  },
-
   ogImage: {
-    runtimeBrowser: true,
+    // 15s default cliff causes flaky 408s on cold prerender — satori+resvg of
+    // a 1200x600 image is seconds, not minutes. 60s gives cold renders room.
+    security: {
+      renderTimeout: 60_000,
+    },
+    // Persist rendered PNGs to disk so subsequent prerender runs are cache hits.
+    // Keyed on (options incl. title/image props, component hash, module version) —
+    // invalidates exactly when a post or template changes.
+    buildCache: true,
+    cacheMaxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
   },
 
   css: ["~/assets/css/main.css"],
