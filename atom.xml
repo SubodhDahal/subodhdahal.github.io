@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://subodhdahal.com</id>
     <title>Subodh Dahal</title>
-    <updated>2026-08-16T17:32:53.945Z</updated>
+    <updated>2026-08-16T19:12:09.683Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Subodh Dahal</name>
@@ -12,6 +12,23 @@
     <link rel="self" href="https://subodhdahal.com/atom.xml"/>
     <subtitle>Personal website and blog of Subodh Dahal</subtitle>
     <rights>Copyright 2026 Subodh Dahal</rights>
+    <entry>
+        <title type="html"><![CDATA[Stop stashing half-finished work: Git worktrees and Worktrunk]]></title>
+        <id>https://subodhdahal.com/blog/worktrees-with-worktrunk</id>
+        <link href="https://subodhdahal.com/blog/worktrees-with-worktrunk"/>
+        <updated>2026-08-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Git worktrees let you keep multiple branches checked out at once, so a review fix doesn't mean stashing your current work. Worktrunk automates the per-worktree setup, and the same isolation also gives parallel AI coding agents their own working directories.]]></summary>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com/</uri>
+        </author>
+        <category label="git"/>
+        <category label="worktrees"/>
+        <category label="worktrunk"/>
+        <category label="developer productivity"/>
+        <category label="command line"/>
+        <category label="workflow"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Self-Hosting my Git forge with Forgejo]]></title>
         <id>https://subodhdahal.com/blog/self-hosting-my-git-forge</id>
