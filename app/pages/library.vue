@@ -52,7 +52,7 @@
 const title: string = "Library";
 const description: string = "Books that I have read and recommend";
 const image: string = "";
-const path: string = "/library";
+const path: string = "/library/";
 
 const { data } = await useAsyncData('library', () =>
     queryCollection('library').path('/library').first()

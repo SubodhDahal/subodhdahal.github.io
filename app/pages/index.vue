@@ -81,7 +81,7 @@
           <BlogPosts content="blog" :tags="[]" :quantity="5" :showDescription="false" />
           <div class="text-center mt-2">
             <NuxtLink
-              to="/blog"
+              to="/blog/"
               class="inline-block text-primary-600 dark:text-primary-400 hover:opacity-80"
             >
               View All Articles →

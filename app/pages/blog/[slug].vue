@@ -56,7 +56,7 @@
                     </template>
                 </ContentRenderer>
 
-                <BlogPrevNext :current-path="path" />
+                <BlogPrevNext :current-path="withTrailingSlash(path)" />
             </article>
         </div>
     </div>
@@ -67,7 +67,11 @@ import type { BlogCollectionItem } from "@nuxt/content";
 
 // Fetch article data
 const article = ref<BlogCollectionItem | null>(null);
-const { path, params } = useRoute();
+// @nuxt/content stores paths without a trailing slash, but the URL (and
+// useRoute().path) may include one. Strip it so the DB query matches; display
+// and link paths get their trailing slash back via withTrailingSlash below.
+const { path: routePath, params } = useRoute();
+const path = routePath.replace(/\/+$/, '') || routePath;
 const uniqueKey = `article-${params.slug || path}`;
 const { data } = await useAsyncData(uniqueKey, () =>
   queryCollection("blog").where("path", "=", path).first(),
@@ -89,7 +93,7 @@ const description = computed(() => article.value?.description || "");
 const image = computed(() => article.value?.image || "");
 const postDate = computed(() => new Date(article.value?.postDate || "").toISOString());
 const tags = computed(() => article.value?.tags || []);
-const url = computed(() => `https://subodhdahal.com${path}`);
+const url = computed(() => `https://subodhdahal.com${withTrailingSlash(path)}`);
 
 // SEO Meta
 useHead({

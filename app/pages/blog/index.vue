@@ -19,7 +19,7 @@
 const title: string = 'Blog posts'
 const description: string = 'Blog posts by Subodh Dahal'
 const image: string = ''
-const path: string = '/blog'
+const path: string = '/blog/'
 useHead({
   title,
   link: [

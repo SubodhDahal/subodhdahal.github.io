@@ -13,6 +13,11 @@ export default defineNuxtConfig({
         },
       ],
     },
+    router: {
+      options: {
+        trailingSlash: true,
+      },
+    },
   },
 
   site: {
