@@ -9,7 +9,7 @@
       </li>
       <li class="text-secondary-300">/</li>
       <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <NuxtLink to="/blog" class="hover:text-primary-600" itemprop="item">
+        <NuxtLink to="/blog/" class="hover:text-primary-600" itemprop="item">
           <span itemprop="name">Blog</span>
         </NuxtLink>
         <meta itemprop="position" content="2" />

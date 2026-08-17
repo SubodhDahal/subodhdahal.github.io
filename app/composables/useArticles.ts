@@ -1,5 +1,6 @@
 import type { BlogPostPreview, UseArticlesOptions, PaginationResult, AdjacentArticles } from "~/types";
 import { ref } from "vue";
+import { withTrailingSlash } from "~/composables/utils";
 
 export function useArticles(options: UseArticlesOptions = {}) {
   const {
@@ -21,7 +22,10 @@ export function useArticles(options: UseArticlesOptions = {}) {
           .limit(quantity)
           .all(),
       );
-      return data.value || [];
+      return (data.value || []).map((article) => ({
+        ...article,
+        path: withTrailingSlash(article.path),
+      }));
     } catch (e) {
       console.error("Error fetching articles:", e);
       error.value = "Failed to fetch articles";

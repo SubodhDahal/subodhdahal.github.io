@@ -27,7 +27,7 @@
       >
         <li>
           <NuxtLink
-            to="/blog"
+            to="/blog/"
             active-class="text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
             class="hover:text-blue-500 relative pb-1 font-medium transition-all hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500">
             Blog
@@ -35,7 +35,7 @@
         </li>
         <li>
           <NuxtLink
-            to="/library"
+            to="/library/"
             active-class="text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
             class="hover:text-blue-500 relative pb-1 font-medium transition-all hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500">
             Library
@@ -82,7 +82,7 @@
             <ul>
               <li class="mb-5">
                 <NuxtLink
-                  to="/blog"
+                  to="/blog/"
                   active-class="text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
                   class="hover:text-blue-500 relative pb-1 inline-block text-lg font-medium transition-all"
                   @click="isMobileNavOpen = false">
@@ -91,7 +91,7 @@
               </li>
               <li class="mb-5">
                 <NuxtLink
-                  to="/library"
+                  to="/library/"
                   active-class="text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
                   class="hover:text-blue-500 relative pb-1 inline-block text-lg font-medium transition-all"
                   @click="isMobileNavOpen = false">
