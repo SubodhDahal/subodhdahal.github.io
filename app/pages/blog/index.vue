@@ -1,10 +1,13 @@
 <template>
   <div class="container my-10">
-    <div class="relative mb-8">
-      <h1 class="text-3xl font-serif font-bold text-center text-gray-800 dark:text-gray-100">
+    <div class="mb-8">
+      <h1 class="text-3xl font-serif font-bold text-center text-secondary-800 dark:text-secondary-100">
         Blog Articles
       </h1>
-      <div class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
+      <div class="w-24 h-1 bg-primary-500 mx-auto mt-4"></div>
+      <p class="font-serif italic text-center text-secondary-600 dark:text-secondary-300 mt-4">
+        Notes on software, automation, and the tools I build with.
+      </p>
     </div>
     <BlogPosts
       content="blog"

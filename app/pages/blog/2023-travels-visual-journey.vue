@@ -1,24 +1,24 @@
 <template>
   <div class="nuxt-content">
-    <div class="relative h-screen overflow-hidden">
+    <div class="relative min-h-screen md:h-screen overflow-hidden">
       <div
         class="absolute inset-0 flex flex-col items-center justify-center z-10 backdrop-blur-lg"
       >
-        <div class="text-white text-5xl md:text-9xl text-travel-heading">
-          My travels
-        </div>
-        <div class="text-white text-5xl md:text-9xl text-travel-heading">
-          in
-        </div>
-        <div class="text-white font-bold text-2023">2023</div>
+        <h1 class="text-white text-travel-heading text-center">
+          <span class="block text-5xl md:text-9xl">My travels</span>
+          <span class="block text-5xl md:text-9xl">in</span>
+          <span class="block font-bold text-2023">2023</span>
+        </h1>
         <div
           class="text-white uppercase border-t-4 border-white text-xl md:text-4xl py-6 mt-5"
         >
           A visual journey
         </div>
         <button
+          type="button"
+          aria-label="Scroll to article content"
           @click="scrollToContent"
-          class="mt-4 text-white text-4xl animate-bounce"
+          class="mt-4 text-white text-4xl animate-pulse-soft inline-flex items-center justify-center min-h-[44px] min-w-[44px] p-2 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,6 +26,7 @@
             viewBox="0 0 24 24"
             stroke="currentColor"
             class="h-6 w-6 text-white"
+            aria-hidden="true"
           >
             <path
               stroke-linecap="round"
@@ -36,12 +37,13 @@
           </svg>
         </button>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 absolute inset-0">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 absolute inset-0" aria-hidden="true">
         <img
           v-for="(image, index) in images"
           :key="image"
           :src="image"
-          alt="Image"
+          alt=""
+          loading="lazy"
           class="object-cover h-full w-full opacity-0 animate-fade-in"
           :style="{ animationDelay: `${index * 0.2}s` }"
         />
@@ -56,7 +58,7 @@
         <ContentRenderer
           v-if="article"
           :value="article"
-          class="prose max-w-none dark:text-gray-200"
+          class="prose max-w-none dark:text-secondary-200"
         >
           <template #empty>
             <p>No content found.</p>
@@ -141,18 +143,9 @@ useSeoMeta({
     opacity: 1;
   }
 }
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-.animate-bounce {
-  animation: bounce 2s infinite;
-}
+/* Soft pulse for the chevron — defined globally in main.css as
+   .animate-pulse-soft + @keyframes pulseSoft to keep motion centralised
+   and reduced-motion-aware. */
 .animate-fade-in {
   animation-name: fadeIn;
   animation-duration: 1s;
@@ -186,8 +179,8 @@ useSeoMeta({
 .nuxt-content h1,
 .nuxt-content h2,
 .nuxt-content h3 {
-  font-family: "Source Serif Pro", serif;
-  font-weight: bold;
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 700;
   line-height: 1.3; /* Added line height for better readability */
   letter-spacing: 0.02em; /* Added letter spacing for better readability */
 }

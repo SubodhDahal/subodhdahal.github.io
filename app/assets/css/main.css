@@ -1,14 +1,113 @@
 @font-face {
-  font-family: "Lato";
-  src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 400;
   font-display: swap;
+  src: url("/fonts/Newsreader/Newsreader-400-normal.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Source Serif Pro";
-  src: url("/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf")
-    format("truetype");
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 400;
   font-display: swap;
+  src: url("/fonts/Newsreader/Newsreader-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Newsreader/Newsreader-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Newsreader/Newsreader-500-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Newsreader/Newsreader-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Newsreader/Newsreader-600-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Newsreader/Newsreader-700-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Newsreader/Newsreader-700-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-700-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/IBM_Plex_Mono/IBMPlexMono-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/IBM_Plex_Mono/IBMPlexMono-500-normal.woff2") format("woff2");
 }
 
 @font-face {
@@ -23,6 +122,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Honor users who request reduced motion: keep opacity/color state
+   feedback, drop the spatial movement. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-fade-in,
+  .animate-fade-in-delay,
+  .scroll-cue,
+  .animate-pulse-soft {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Soft pulse for the 2023 travels page chevron — replaces the dated bounce. */
+@keyframes pulseSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+.animate-pulse-soft {
+  animation: pulseSoft 2.6s ease-in-out infinite;
+}
 
 /* Base styles */
 @layer base {
@@ -62,7 +198,7 @@
 
   /* Header styles */
   header {
-    @apply font-serif font-bold bg-white dark:bg-secondary-900 transition-colors duration-200;
+    @apply font-sans bg-white dark:bg-secondary-900 transition-colors duration-200;
   }
 
   header .logo {
@@ -88,7 +224,7 @@
            prose-pre:rounded-lg prose-pre:my-4
            [&>pre]:my-4 [&>pre>code]:my-0 [&>pre]:!p-0
            [&>div>pre]:my-4 [&>div>pre>code]:my-0 [&>div>pre]:!p-0
-           prose-img:rounded-lg prose-img:shadow-md
+           prose-img:rounded-lg
            transition-colors duration-300;
   }
 
@@ -186,36 +322,4 @@
   .image figcaption {
     @apply mt-2 text-sm text-secondary-600 dark:text-secondary-400 text-center italic;
   }
-
-  /* Links with underline animation */
-  .link-underline {
-    @apply relative no-underline;
-  }
-
-  .link-underline::after {
-    @apply absolute w-full scale-x-0 h-0.5 bottom-0 left-0 bg-primary-600 dark:bg-primary-400 origin-bottom-right transition-transform duration-300 ease-out;
-    content: "";
-  }
-
-  .link-underline:hover::after {
-    @apply scale-x-100 origin-bottom-left;
-  }
-}
-
-/* Animations */
-.hover-underline-animation {
-  @apply relative no-underline;
-}
-
-.hover-underline-animation::after {
-  content: "";
-  @apply absolute w-full h-0.5 bottom-0 left-0 bg-gray-600 dark:bg-gray-400;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
 }

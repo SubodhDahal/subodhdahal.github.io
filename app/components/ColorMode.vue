@@ -7,16 +7,16 @@ const setColorTheme = (newTheme: Theme) => {
 
 <template>
   <button
-    :aria-label="$colorMode.preference"
+    :aria-label="`Switch to ${$colorMode.preference === 'dark' ? 'light' : 'dark'} mode`"
     type="button"
-    class="block mt-1"
+    class="flex items-center justify-center min-h-[44px] min-w-[44px] p-2 rounded-md hover:bg-secondary-200 dark:hover:bg-secondary-700 transition-colors"
     @click="setColorTheme($colorMode.preference === 'dark' ? 'light' : 'dark')"
     :title="$colorMode.preference === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
   >
     <svg
       v-if="$colorMode.value === 'dark'"
       xmlns="http://www.w3.org/2000/svg"
-      class="w-8 h-8 lg:h-5 lg:w-5 fill-gray-50"
+      class="w-6 h-6 fill-secondary-50"
       viewBox="0 0 20 20"
     >
       <path
@@ -26,7 +26,7 @@ const setColorTheme = (newTheme: Theme) => {
     <svg
       v-else
       xmlns="http://www.w3.org/2000/svg"
-      class="w-8 h-8 lg:h-5 lg:w-5 fill-gray-700"
+      class="w-6 h-6 fill-secondary-700"
       viewBox="0 0 20 20"
     >
       <path

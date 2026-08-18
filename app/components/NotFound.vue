@@ -12,7 +12,7 @@
       </p>
       <NuxtLink
         to="/"
-        class="sm:w-full lg:w-auto my-2 border rounded md py-4 px-8 text-center bg-gray-600 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-opacity-50"
+        class="sm:w-full lg:w-auto my-2 border rounded-md py-4 px-8 text-center bg-secondary-600 text-white hover:bg-secondary-700 focus:outline-none focus:ring-2 focus:ring-secondary-700 focus:ring-opacity-50"
       >
         Take me there!
       </NuxtLink>

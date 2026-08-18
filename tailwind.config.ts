@@ -29,7 +29,7 @@ export default <Partial<Config>>{
             'pre code::before': { content: 'none' },
             'pre code::after': { content: 'none' },
             h1: {
-              fontFamily: 'Source Serif Pro, serif',
+              fontFamily: 'Newsreader, serif',
               fontWeight: '700',
               fontSize: '2.25rem',
               lineHeight: '1.2',
@@ -38,7 +38,7 @@ export default <Partial<Config>>{
               letterSpacing: '-0.025em'
             },
             h2: {
-              fontFamily: 'Source Serif Pro, serif',
+              fontFamily: 'Newsreader, serif',
               fontWeight: '700',
               fontSize: '1.875rem',
               lineHeight: '1.3',
@@ -47,7 +47,7 @@ export default <Partial<Config>>{
               marginBottom: '1.25rem'
             },
             h3: {
-              fontFamily: 'Source Serif Pro, serif',
+              fontFamily: 'Newsreader, serif',
               fontWeight: '600',
               fontSize: '1.5rem',
               lineHeight: '1.4',
@@ -56,6 +56,7 @@ export default <Partial<Config>>{
               marginBottom: '1rem'
             },
             p: {
+              fontFamily: 'Newsreader, serif',
               marginTop: '1.25rem',
               marginBottom: '1.25rem'
             },
@@ -69,6 +70,7 @@ export default <Partial<Config>>{
               paddingLeft: '0.375em'
             },
             blockquote: {
+              fontFamily: 'Newsreader, serif',
               fontStyle: 'italic',
               borderLeftWidth: '0.25rem',
               borderLeftColor: '#E5E7EB',
@@ -109,19 +111,22 @@ export default <Partial<Config>>{
               fontStyle: 'italic'
             },
             code: {
-              color: '#DC2626',  // red-600
-              backgroundColor: '#FEF2F2',  // red-50
+              fontFamily: 'IBM Plex Mono, monospace',
+              color: '#BE123C',  // rose-700
+              backgroundColor: '#FFF1F3',  // rose-50
               padding: '0.2em 0.4em',
               borderRadius: '0.25rem',
               fontSize: '0.875em'
             },
             'pre code': {
+              fontFamily: 'IBM Plex Mono, monospace',
               color: 'inherit',
               backgroundColor: 'transparent',
               padding: '0',
               fontSize: 'inherit'
             },
             pre: {
+              fontFamily: 'IBM Plex Mono, monospace',
               backgroundColor: '#1F2937',
               color: '#F3F4F6',
               padding: '1.25rem',
@@ -158,8 +163,9 @@ export default <Partial<Config>>{
               color: '#9CA3AF'
             },
             code: {
-              color: '#F87171',  // red-400
-              backgroundColor: '#991B1B'  // red-800
+              fontFamily: 'IBM Plex Mono, monospace',
+              color: '#FDA4B4',  // rose-300
+              backgroundColor: '#4C0519'  // rose-950
             }
           }
         }
@@ -206,19 +212,15 @@ export default <Partial<Config>>{
         }
       },
       fontFamily: {
-        sans: ['Lato', ...defaultTheme.fontFamily.sans],
-        serif: ['Source Serif Pro', ...defaultTheme.fontFamily.serif],
+        sans: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
+        serif: ['Newsreader', ...defaultTheme.fontFamily.serif],
+        mono: ['IBM Plex Mono', ...defaultTheme.fontFamily.mono],
         display: ['Samble Tracie', 'cursive']
       },
       margin: {
         'top-bar': '100px',
       },
     },
-  },
-  variants: {
-    extend: {
-      typography: ['dark']
-    }
   },
   plugins: [
     require('@tailwindcss/typography'),

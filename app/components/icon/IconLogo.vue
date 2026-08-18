@@ -2,7 +2,7 @@
   <svg
     viewBox="0 0 21.349 12.467"
     xmlns="http://www.w3.org/2000/svg"
-    class="logo dark:fill-gray-50 dark:stroke-gray-50 fill-gray-700 stroke-gray-700"
+    class="logo dark:fill-secondary-50 dark:stroke-secondary-50 fill-secondary-700 stroke-secondary-700"
   >
     <g transform="translate(-13.999 -74.065)">
       <path
