@@ -1,6 +1,6 @@
 <template>
-  <div class="dark:text-gray-50">
-    <div class="shadow-sm border-b border-gray-200 dark:border-gray-700">
+  <div class="dark:text-secondary-50">
+    <div class="border-b border-secondary-200 dark:border-secondary-700">
       <header class="md:container flex justify-between mx-auto px-5 py-4">
       <div class="mb-4">
         <NuxtLink to="/" aria-label="Home">
@@ -10,7 +10,9 @@
       <div class="md:hidden">
         <button
           @click="isMobileNavOpen = !isMobileNavOpen"
-          class="flex items-center p-3 border-2 rounded-md dark:text-gray-50 dark:border-gray-600 text-gray-800 border-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          type="button"
+          aria-label="Open navigation menu"
+          class="flex items-center min-h-[44px] min-w-[44px] justify-center p-3 border-2 rounded-md dark:text-secondary-50 dark:border-secondary-600 text-secondary-800 border-secondary-300 hover:bg-secondary-200 dark:hover:bg-secondary-700 transition-colors"
         >
           <svg
             class="fill-current h-4 w-4"
@@ -18,7 +20,7 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <title>Mobile Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z" />
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v2z" />
           </svg>
         </button>
       </div>
@@ -52,23 +54,27 @@
         class="navbar-menu relative z-50"
         :class="{ block: isMobileNavOpen, hidden: !isMobileNavOpen }"
       >
-        <div class="navbar-backdrop fixed inset-0 bg-gray-800 dark:bg-gray-600 opacity-25"></div>
+        <div class="navbar-backdrop fixed inset-0 bg-secondary-800/60 dark:bg-secondary-900/70"></div>
         <nav
-          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-gray-100 dark:bg-gray-800 overflow-y-auto transform transition-transform duration-300 ease-in-out"
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-secondary-100 dark:bg-secondary-800 overflow-y-auto transform transition-transform duration-300 ease-in-out"
         >
           <div class="flex items-center mb-8">
             <NuxtLink to="/" class="mr-auto" aria-label="Home">
               <IconLogo class="h-15 w-15" />
             </NuxtLink>
-            <button class="navbar-close p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" @click="isMobileNavOpen = false">
+            <button
+              type="button"
+              aria-label="Close navigation menu"
+              class="navbar-close p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full hover:bg-secondary-200 dark:hover:bg-secondary-700 transition-colors"
+              @click="isMobileNavOpen = false"
+            >
               <svg
-                class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                class="h-6 w-6 text-secondary-400 cursor-pointer hover:text-secondary-500"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                ß
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"

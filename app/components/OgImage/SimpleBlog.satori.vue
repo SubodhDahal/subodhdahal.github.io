@@ -16,21 +16,21 @@ const website = computed(() => {
 <template>
   <div class="h-full w-full flex relative overflow-hidden bg-neutral-50 dark:bg-neutral-900">
     <!-- Accent bar -->
-    <div class="absolute left-0 top-0 bottom-0 w-3 bg-blue-500" />
+    <div class="absolute left-0 top-0 bottom-0 w-3 bg-primary-500" />
 
     <!-- Subtle pattern -->
     <div
       class="absolute inset-0"
-      style="opacity: 0.015; display: block; backgroundImage: radial-gradient(rgb(115 115 115) 1px, transparent 1px); backgroundSize: 24px 24px;"
+      style="opacity: 0.015; display: block; backgroundImage: radial-gradient(rgb(156 163 175) 1px, transparent 1px); backgroundSize: 24px 24px;"
     />
 
     <!-- Decorative circles -->
     <div
-      class="absolute rounded-full bg-blue-500"
+      class="absolute rounded-full bg-primary-500"
       style="top: -100px; right: -50px; width: 300px; height: 300px; opacity: 0.04;"
     />
     <div
-      class="absolute rounded-full bg-blue-500"
+      class="absolute rounded-full bg-primary-500"
       style="bottom: -50px; right: 200px; width: 200px; height: 200px; opacity: 0.03;"
     />
 
@@ -39,12 +39,12 @@ const website = computed(() => {
       <div class="flex flex-col justify-between flex-1 h-full min-w-0" style="padding-right: 48px;">
         <h1
           class="font-bold text-neutral-800 dark:text-neutral-100 leading-[1.1] tracking-tight"
-          style="display: block; font-size: 56px; line-clamp: 4; text-overflow: ellipsis; text-wrap: balance;"
+          style="display: block; font-size: 48px; line-clamp: 4; text-overflow: ellipsis; text-wrap: balance;"
         >
           {{ title }}
         </h1>
         <div class="flex items-center" style="gap: 12px;">
-          <div class="rounded-full bg-blue-500" style="width: 12px; height: 12px;" />
+          <div class="rounded-full bg-primary-500" style="width: 12px; height: 12px;" />
           <p
             class="font-bold text-neutral-500 dark:text-neutral-400"
             style="display: block; font-size: 24px; line-clamp: 1; text-overflow: ellipsis;"
@@ -68,9 +68,8 @@ const website = computed(() => {
             backgroundPosition: 'center',
             width: '100%',
             height: '440px',
-            borderRadius: '16px',
-            border: '4px solid #ffffff',
-            boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.15)'
+            borderRadius: '12px',
+            border: '4px solid #ffffff'
           }"
         />
       </div>

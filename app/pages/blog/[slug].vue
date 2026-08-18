@@ -2,23 +2,25 @@
     <div class="nuxt-content bg-white dark:bg-secondary-900">
         <Breadcrumbs :current-page="article?.title" v-if="article" />
         <div v-if="article" class="cover container py-2">
-            <div class="md:flex items-center gap-12">
+            <div class="md:flex items-start gap-12">
                 <div class="flex-1">
-                    <h1
-                        class="font-serif text-4xl md:text-5xl font-bold mb-4 text-secondary-900 dark:text-white"
-                    >
-                        {{ article.title }}
-                    </h1>
+                    <div class="flex flex-wrap items-baseline gap-3 mb-4">
+                        <h1
+                            class="font-serif text-2xl md:text-3xl font-semibold text-secondary-900 dark:text-white"
+                        >
+                            {{ article.title }}
+                        </h1>
+                        <span class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500">
+                            {{ formatDate(article.postDate) }}
+                        </span>
+                    </div>
                     <p
                         class="text-lg md:text-xl mb-4 text-secondary-600 dark:text-secondary-300"
                     >
                         {{ article.description }}
                     </p>
-                    <ArticleTags :tags="article.tags" class="my-6" />
-                    <div
-                        class="text-secondary-500 dark:text-secondary-400 text-sm"
-                    >
-                        Posted on {{ formatDate(article.postDate) }}
+                    <div class="mt-2">
+                        <ArticleTags :tags="article.tags" />
                     </div>
                 </div>
                 <div class="flex-1 mt-8 md:mt-0">
@@ -26,7 +28,7 @@
                         :src="article.image"
                         :alt="article.alt"
                         preset="blog"
-                        class="rounded-lg shadow-lg w-full object-cover max-h-[500px]"
+                        class="rounded-lg border border-secondary-200 dark:border-secondary-700 w-full object-cover max-h-[500px]"
                         loading="lazy"
                     />
                 </div>
@@ -34,36 +36,39 @@
         </div>
 
         <div class="container">
-            <article class="max-w-3xl mx-auto">
-                <!-- TOC -->
-                <!-- TODO: Add to the right -->
-                <!-- <nav>
-        <ul>
-          <li v-for="link of article.toc" :key="link.id" :class="{ 'py-2': link.depth === 2, 'ml-2 pb-2': link.depth === 3 }">
-            <NuxtLink :to="`#${link.id}`">
-              {{ link.text }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </nav> -->
-                <ContentRenderer
-                    v-if="article"
-                    :value="article"
-                    class="blog-page pb-5"
-                >
-                    <template #empty>
-                        <p>No content found.</p>
-                    </template>
-                </ContentRenderer>
+            <div class="lg:flex lg:gap-12">
+                <details class="lg:hidden mb-6">
+                    <summary class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 cursor-pointer">
+                        Table of Contents
+                    </summary>
+                    <TableOfContents :article="article" class="mt-2" />
+                </details>
 
-                <BlogPrevNext :current-path="withTrailingSlash(path)" />
-            </article>
+                <article class="flex-1 max-w-3xl mx-auto lg:mx-0">
+                    <ContentRenderer
+                        v-if="article"
+                        :value="article"
+                        class="blog-page pb-5"
+                    >
+                        <template #empty>
+                            <p>No content found.</p>
+                        </template>
+                    </ContentRenderer>
+
+                    <BlogPrevNext :current-path="withTrailingSlash(path)" />
+                </article>
+
+                <aside class="hidden lg:block w-64 flex-shrink-0">
+                    <TableOfContents :article="article" class="lg:sticky lg:top-24" />
+                </aside>
+            </div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import type { BlogCollectionItem } from "@nuxt/content";
+import TableOfContents from "~/components/TableOfContents.vue";
 
 // Fetch article data
 const article = ref<BlogCollectionItem | null>(null);

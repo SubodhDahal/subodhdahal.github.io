@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900" id="homepage-header">
+    <div class="relative overflow-hidden bg-gradient-to-br from-secondary-100 to-secondary-200 dark:from-secondary-800 dark:to-secondary-900" id="homepage-header">
       <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-30 dark:opacity-25 background-pattern"></div>
 
@@ -13,24 +13,24 @@
               <h1 class="heading leading-tight mb-4">
                 Hi! I'm <NuxtLink to="/#about" class="hover-highlight">Subodh Dahal</NuxtLink>.
               </h1>
-                <p class="text-2xl md:text-3xl text-gray-600 dark:text-gray-100 mb-8">
+                <p class="text-2xl md:text-3xl text-secondary-600 dark:text-secondary-100 mb-8">
                 I build software solutions that automate and simplify.
               </p>
-              <h2 class="text-2xl md:text-4xl mt-6 text-gray-700 dark:text-gray-50 font-semibold">
+              <h2 class="text-2xl md:text-4xl mt-6 text-secondary-700 dark:text-secondary-50 font-semibold">
                 Engineering Manager
               </h2>
-              <div class="text-xl md:text-2xl font-light mt-3 text-gray-600 dark:text-gray-100">
+              <div class="text-xl md:text-2xl font-light mt-3 text-secondary-600 dark:text-secondary-100">
                 Software Engineer • Automation Enthusiast •<br>
                 Hobbyist Photographer • Avid explorer
               </div>
-              <h3 class="mt-8 text-xl md:text-2xl text-gray-500 dark:text-gray-200">
+              <h3 class="mt-8 text-xl md:text-2xl text-secondary-500 dark:text-secondary-200">
                 <div class="flex items-center gap-2">
                   <span>From Bhaktapur</span>
-                  <span class="text-2xl">🇳🇵</span>
+                  <span class="text-2xl" aria-hidden="true">🇳🇵</span>
                 </div>
                 <div class="flex items-center gap-2 mt-2">
                   <span>Based in Stuttgart</span>
-                  <span class="text-2xl">🇩🇪</span>
+                  <span class="text-2xl" aria-hidden="true">🇩🇪</span>
                 </div>
               </h3>
             </div>
@@ -42,8 +42,9 @@
 
             <!-- CTA Button -->
             <div class="pt-4 animate-fade-in-delay">
-              <NuxtLink to="/#about" class="inline-block text-lg px-6 py-2 text-primary-600 dark:text-primary-400 border border-primary-600 dark:border-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/30 rounded-md transition-colors">
-                About Me →
+              <NuxtLink to="/#about" class="inline-flex items-center min-h-[44px] text-lg px-6 py-3 text-primary-600 dark:text-primary-400 border border-primary-600 dark:border-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/30 rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2">
+                About Me
+                <span class="ml-2" aria-hidden="true">→</span>
               </NuxtLink>
             </div>
           </div>
@@ -55,7 +56,10 @@
               <img
                 src="/images/me.jpg"
                 alt="Subodh Dahal"
-                class="relative rounded-full shadow-xl w-full h-auto transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+                width="320"
+                height="320"
+                fetchpriority="high"
+                class="relative rounded-full w-full h-auto transform transition-transform duration-500 hover:scale-[1.02]"
               />
             </div>
           </div>
@@ -63,16 +67,16 @@
       </div>
 
       <!-- Scroll Indicator -->
-      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-cue">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary-400 dark:text-secondary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </div>
     </div>
-    <div class="bg-white dark:bg-gray-800 pt-20 pb-16">
+    <div class="bg-white dark:bg-secondary-800 pt-20 pb-16">
       <div class="container">
         <div class="relative mb-8">
-          <h2 class="text-3xl font-serif font-bold text-center text-gray-800 dark:text-gray-100">
+          <h2 class="text-3xl font-serif font-bold text-center text-secondary-800 dark:text-secondary-100">
             Recent Articles
           </h2>
           <div class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
@@ -82,9 +86,10 @@
           <div class="text-center mt-2">
             <NuxtLink
               to="/blog/"
-              class="inline-block text-primary-600 dark:text-primary-400 hover:opacity-80"
+              class="inline-block text-primary-600 dark:text-primary-400 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
             >
-              View All Articles →
+              View All Articles
+              <span aria-hidden="true"> →</span>
             </NuxtLink>
           </div>
         </div>
@@ -110,6 +115,12 @@ useHead({
       rel: 'canonical',
       href: `https://subodhdahal.com${path}`,
     },
+    {
+      rel: 'preload',
+      as: 'image',
+      href: image,
+      fetchpriority: 'high',
+    },
   ],
 })
 
@@ -129,8 +140,9 @@ useSeoMeta({
 
 <style scoped lang="postcss">
 .heading {
-  font-family: 'Source Serif Pro', serif;
-  @apply text-5xl md:text-7xl mb-7 text-gray-700 dark:text-gray-50;
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 700;
+  @apply text-5xl md:text-7xl mb-7 text-secondary-700 dark:text-secondary-50;
 }
 
 .hover-highlight {
@@ -176,18 +188,25 @@ useSeoMeta({
   opacity: 0;
 }
 
+.scroll-cue {
+  animation: scrollCue 2.4s ease-in-out infinite;
+}
+
+@keyframes scrollCue {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -6px);
+    opacity: 1;
+  }
+}
+
 .background-pattern {
   background-image: url('/images/bg.png');
   background-repeat: repeat;
   background-position: center;
-}
-
-@media (max-width: 640px) {
-  #homepage-header h1 {
-    line-height: 3.5rem;
-  }
-  #homepage-header h2 {
-    line-height: 1.8rem;
-  }
 }
 </style>

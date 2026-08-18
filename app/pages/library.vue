@@ -1,7 +1,7 @@
 <template>
     <div class="container my-10">
         <div class="relative mb-8">
-            <h1 class="text-3xl font-serif font-bold text-center text-gray-800 dark:text-gray-100">
+            <h1 class="text-3xl font-serif font-bold text-center text-secondary-800 dark:text-secondary-100">
                 Library
             </h1>
             <div class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
@@ -17,27 +17,28 @@
                     class="group transition-all duration-200 hover:-translate-y-1"
                 >
                     <div
-                        class="relative pb-[150%] overflow-hidden rounded-lg shadow-md transition-shadow duration-300 group-hover:shadow-xl"
+                        class="relative pb-[150%] overflow-hidden rounded-lg border border-secondary-200 dark:border-secondary-700 transition-colors duration-300 group-hover:border-secondary-300 dark:group-hover:border-secondary-600"
                     >
                         <img
                             :src="imageUrl(book.image)"
-                            :alt="book.title"
-                            class="absolute inset-0 w-full h-full object-contain transition-all duration-300 group-hover:scale-105 rounded-lg bg-gray-50 dark:bg-gray-800"
+                            :alt="`Cover of ${book.title} by ${book.author}`"
+                            loading="lazy"
+                            class="absolute inset-0 w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02] bg-secondary-50 dark:bg-secondary-800"
                         />
                     </div>
                     <div class="mt-4">
                         <h2
-                            class="text-lg font-bold font-serif dark:text-gray-50 line-clamp-2"
+                            class="text-lg font-bold font-serif dark:text-secondary-50 line-clamp-2"
                         >
                             {{ book.title }}
                         </h2>
                         <p
-                            class="text-gray-600 dark:text-gray-300 text-sm mt-1"
+                            class="text-secondary-600 dark:text-secondary-300 text-sm mt-1"
                         >
                             {{ book.author }}
                         </p>
                         <p
-                            class="text-gray-400 dark:text-gray-400 text-xs mt-2"
+                            class="text-secondary-500 dark:text-secondary-400 text-xs mt-2"
                         >
                             {{ book.genres.join(", ") }}
                         </p>
