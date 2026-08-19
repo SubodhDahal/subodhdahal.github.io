@@ -24,22 +24,20 @@
           </svg>
         </button>
       </div>
-        <ul
+      <ul
         class="hidden text-lg mt-1 flex flex-col md:flex-row list-none md:block md:flex items-center gap-6"
       >
         <li>
           <NuxtLink
             to="/blog/"
-            active-class="is-active"
-            class="nav-link">
+            :class="['nav-link', { 'is-active': isBlogActive }]">
             Blog
           </NuxtLink>
         </li>
         <li>
           <NuxtLink
             to="/library/"
-            active-class="is-active"
-            class="nav-link">
+            :class="['nav-link', { 'is-active': isLibraryActive }]">
             Library
           </NuxtLink>
         </li>
@@ -89,8 +87,7 @@
               <li class="mb-5">
                 <NuxtLink
                   to="/blog/"
-                  active-class="is-active"
-                  class="nav-link text-lg"
+                  :class="['nav-link text-lg', { 'is-active': isBlogActive }]"
                   @click="isMobileNavOpen = false">
                   Blog
                 </NuxtLink>
@@ -98,8 +95,7 @@
               <li class="mb-5">
                 <NuxtLink
                   to="/library/"
-                  active-class="is-active"
-                  class="nav-link text-lg"
+                  :class="['nav-link text-lg', { 'is-active': isLibraryActive }]"
                   @click="isMobileNavOpen = false">
                   Library
                 </NuxtLink>
@@ -129,12 +125,19 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isMobileNavOpen: false,
-    };
-  },
-};
+<script setup>
+const route = useRoute();
+
+// /blog/ and /blog/<slug>/ are sibling routes in the router tree, so
+// NuxtLink's active-class only matches the exact /blog/ path. Check the
+// URL prefix instead so the link stays active on individual posts too.
+// Normalize the trailing slash so /library and /library/ both match.
+const normalizedPath = computed(() => {
+  const p = route.path;
+  return p.length > 1 && p.endsWith('/') ? p.slice(0, -1) : p;
+});
+const isBlogActive = computed(() => normalizedPath.value === '/blog' || normalizedPath.value.startsWith('/blog/'));
+const isLibraryActive = computed(() => normalizedPath.value === '/library' || normalizedPath.value.startsWith('/library/'));
+
+const isMobileNavOpen = ref(false);
 </script>
