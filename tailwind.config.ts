@@ -86,16 +86,14 @@ export default <Partial<Config>>{
               content: 'none'
             },
             a: {
-              color: '#2563EB',  // blue-600
-              textDecoration: 'none !important',
+              color: '#BE123C',  // primary-700 — rose link (matches link-rose system)
               fontWeight: '500',
-              borderBottom: '1px solid #2563EB',
-              transition: 'all 0.2s ease-in-out',
+              textDecoration: 'none',
+              transition: 'color 0.2s ease-in-out',
               '&:hover': {
-                color: '#1D4ED8',  // blue-700
-                borderBottom: '1px solid #1D4ED8',
-                backgroundColor: 'rgba(37, 99, 235, 0.1)',
-                textDecoration: 'none !important'
+                color: '#E11D48',  // primary-600
+                textDecoration: 'none',
+                backgroundColor: 'transparent'
               }
             },
             img: {
@@ -148,15 +146,13 @@ export default <Partial<Config>>{
               borderLeftColor: '#374151'
             },
             a: {
-              color: '#60A5FA',  // blue-400
-              textDecoration: 'none !important',
-              borderBottom: '1px solid #60A5FA',
-              transition: 'all 0.2s ease-in-out',
+              color: '#FDA4B4',  // primary-300 — rose link on dark
+              textDecoration: 'none',
+              transition: 'color 0.2s ease-in-out',
               '&:hover': {
-                color: '#93C5FD',  // blue-300
-                borderBottom: '1px solid #93C5FD',
-                backgroundColor: 'rgba(96, 165, 250, 0.1)',
-                textDecoration: 'none !important'
+                color: '#FB7185',  // primary-400
+                textDecoration: 'none',
+                backgroundColor: 'transparent'
               }
             },
             figcaption: {

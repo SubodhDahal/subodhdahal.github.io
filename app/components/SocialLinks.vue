@@ -1,10 +1,7 @@
 <template>
   <ul
-    class="self-center no-prose list-none"
-    :class="[
-      $colorMode.preference === 'dark' ? 'fill-secondary-50' : 'fill-secondary-700',
-      isHero ? 'flex gap-4' : 'flex flex-wrap justify-center',
-    ]"
+    class="self-center no-prose list-none flex"
+    :class="isHero ? 'gap-4' : 'flex-wrap justify-center'"
   >
     <li>
       <a
@@ -13,15 +10,9 @@
         aria-label="LinkedIn"
         target="_blank"
         rel="me noopener noreferrer"
-        class="inline-flex items-center justify-center min-h-[44px] min-w-[44px]"
+        class="inline-flex items-center justify-center min-h-[44px] min-w-[44px] transition-transform duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
       >
-        <IconLinkedIn
-          :class="[
-            isHero
-              ? 'w-6 h-6 text-secondary-600 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400'
-              : 'h-8 w-8 mr-2 text-secondary-700',
-          ]"
-        />
+        <IconLinkedIn :class="iconClass" />
       </a>
     </li>
     <li>
@@ -31,15 +22,9 @@
         aria-label="Xing"
         target="_blank"
         rel="me noopener noreferrer"
-        class="inline-flex items-center justify-center min-h-[44px] min-w-[44px]"
+        class="inline-flex items-center justify-center min-h-[44px] min-w-[44px] transition-transform duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
       >
-        <IconXing
-          :class="[
-            isHero
-              ? 'w-6 h-6 text-secondary-600 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400'
-              : 'h-8 w-8 mr-2 text-secondary-700',
-          ]"
-        />
+        <IconXing :class="iconClass" />
       </a>
     </li>
     <li>
@@ -49,15 +34,9 @@
         aria-label="GitHub"
         target="_blank"
         rel="me noopener noreferrer"
-        class="inline-flex items-center justify-center min-h-[44px] min-w-[44px]"
+        class="inline-flex items-center justify-center min-h-[44px] min-w-[44px] transition-transform duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
       >
-        <IconGitHub
-          :class="[
-            isHero
-              ? 'w-6 h-6 text-secondary-600 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400'
-              : 'h-8 w-8 mr-2 text-secondary-700',
-          ]"
-        />
+        <IconGitHub :class="iconClass" />
       </a>
     </li>
     <li>
@@ -67,15 +46,9 @@
         aria-label="Stack Overflow"
         target="_blank"
         rel="me noopener noreferrer"
-        class="inline-flex items-center justify-center min-h-[44px] min-w-[44px]"
+        class="inline-flex items-center justify-center min-h-[44px] min-w-[44px] transition-transform duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
       >
-        <IconStackOverflow
-          :class="[
-            isHero
-              ? 'w-6 h-6 text-secondary-600 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400'
-              : 'h-8 w-8 mr-2 text-secondary-700',
-          ]"
-        />
+        <IconStackOverflow :class="iconClass" />
       </a>
     </li>
     <li>
@@ -85,26 +58,20 @@
         aria-label="Instagram"
         target="_blank"
         rel="me noopener noreferrer"
-        class="inline-flex items-center justify-center min-h-[44px] min-w-[44px]"
+        class="inline-flex items-center justify-center min-h-[44px] min-w-[44px] transition-transform duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
       >
-        <IconInstagram
-          :class="[
-            isHero
-              ? 'w-6 h-6 text-secondary-600 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400'
-              : 'h-8 w-8 mr-2 text-secondary-700',
-          ]"
-        />
+        <IconInstagram :class="iconClass" />
       </a>
     </li>
     <li>
-      <a href="/rss.xml" title="RSS Feed" aria-label="RSS Feed" rel="alternate" class="inline-flex items-center justify-center min-h-[44px] min-w-[44px]">
-        <IconRSS
-          :class="[
-            isHero
-              ? 'w-6 h-6 text-secondary-600 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400'
-              : 'h-8 w-8 mr-2 text-secondary-700',
-          ]"
-        />
+      <a
+        href="/rss.xml"
+        title="RSS Feed"
+        aria-label="RSS Feed"
+        rel="alternate"
+        class="inline-flex items-center justify-center min-h-[44px] min-w-[44px] transition-transform duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
+      >
+        <IconRSS :class="iconClass" />
       </a>
     </li>
   </ul>
@@ -113,17 +80,22 @@
 <script setup lang="ts">
 import IconRSS from "~/components/icon/IconRSS.vue";
 
-defineProps<{
-  isHero?: boolean;
-}>();
+const props = withDefaults(
+  defineProps<{
+    isHero?: boolean;
+  }>(),
+  { isHero: false }
+);
+
+const iconClass = computed(() =>
+  props.isHero
+    ? "w-6 h-6 fill-secondary-600 dark:fill-secondary-400 hover:fill-primary-600 dark:hover:fill-primary-400 transition-colors"
+    : "h-8 w-8 mr-2 fill-secondary-700 dark:fill-secondary-300 hover:fill-primary-600 dark:hover:fill-primary-400 transition-colors"
+);
 </script>
 
 <style scoped>
 li {
   display: inline-block;
-}
-
-a {
-  @apply transition-colors;
 }
 </style>

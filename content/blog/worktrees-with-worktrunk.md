@@ -37,9 +37,9 @@ My normal clone is already one worktree (Git calls it the main worktree). I can 
 
 For example:
 
-```text
-~/code/shop/                    # main worktree, branch: feature/new-checkout
-~/code/shop.review-fix/         # linked worktree, branch: fix/payment-review
+```bash
+~/code/shop/                  # main worktree, branch: feature/new-checkout
+~/code/shop.review-fix/        # linked worktree, branch: fix/payment-review
 ~/code/shop.order-history/      # linked worktree, branch: feature/order-history
 ```
 
@@ -63,7 +63,7 @@ My current directory stays on `feature/new-checkout`, including all its unfinish
 
 `git worktree list` shows every attached worktree:
 
-```text
+```bash
 ~/code/shop             7db81af [feature/new-checkout]
 ~/code/shop.review-fix  b132aa0 [fix/payment-review]
 ```
