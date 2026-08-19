@@ -35,15 +35,17 @@ const website = computed(() => {
     />
 
     <div class="flex w-full h-full relative" style="padding: 56px 48px;">
-      <!-- Left column: title + website -->
+      <!-- Left column: wordmark + title + website -->
       <div class="flex flex-col justify-between flex-1 h-full min-w-0" style="padding-right: 48px;">
+        <span style="display: block; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 600; font-size: 44px; line-height: 1; color: #1F2937; letter-spacing: -0.01em; margin-bottom: 8px;">Subodh Dahal</span>
+        <div style="display: block; width: 64px; height: 4px; background-color: #F43F5E; margin-bottom: 24px;" />
         <h1
           class="font-bold text-neutral-800 dark:text-neutral-100 leading-[1.1] tracking-tight"
           style="display: block; font-size: 48px; line-clamp: 4; text-overflow: ellipsis; text-wrap: balance;"
         >
           {{ title }}
         </h1>
-        <div class="flex items-center" style="gap: 12px;">
+        <div class="flex items-center" style="display: flex; align-items: center; gap: 12px;">
           <div class="rounded-full bg-primary-500" style="width: 12px; height: 12px;" />
           <p
             class="font-bold text-neutral-500 dark:text-neutral-400"
