@@ -8,44 +8,28 @@
         <!-- Two Column Layout -->
         <div class="md:flex md:items-center md:justify-between md:gap-12 min-h-[65vh] py-12">
           <!-- Left Column: Content -->
-          <div class="w-full md:w-3/5 space-y-6 md:space-y-8">
-            <div class="animate-fade-in">
-              <h1 class="heading leading-tight mb-4">
+          <div class="w-full md:w-3/5 space-y-6">
+            <div class="animate-fade-in space-y-5">
+              <h1 class="heading">
                 Hi! I'm <NuxtLink to="/#about" class="hover-highlight">Subodh Dahal</NuxtLink>.
               </h1>
-                <p class="text-2xl md:text-3xl text-secondary-600 dark:text-secondary-100 mb-8">
-                I build software solutions that automate and simplify.
-              </p>
-              <h2 class="text-2xl md:text-4xl mt-6 text-secondary-700 dark:text-secondary-50 font-semibold">
+              <h2 class="font-serif text-2xl md:text-3xl font-bold text-secondary-800 dark:text-secondary-50 leading-tight tracking-tight">
                 Engineering Manager
               </h2>
-              <div class="text-xl md:text-2xl font-light mt-3 text-secondary-600 dark:text-secondary-100">
-                Software Engineer • Automation Enthusiast •<br>
-                Hobbyist Photographer • Avid explorer
-              </div>
-              <h3 class="mt-8 text-xl md:text-2xl text-secondary-500 dark:text-secondary-200">
-                <div class="flex items-center gap-2">
-                  <span>From Bhaktapur</span>
-                  <span class="text-2xl" aria-hidden="true">🇳🇵</span>
-                </div>
-                <div class="flex items-center gap-2 mt-2">
-                  <span>Based in Stuttgart</span>
-                  <span class="text-2xl" aria-hidden="true">🇩🇪</span>
-                </div>
-              </h3>
+              <p class="font-sans text-sm md:text-base text-secondary-500 dark:text-secondary-400">
+                From Bhaktapur <span aria-hidden="true">🇳🇵</span><span class="mx-2 text-secondary-300 dark:text-secondary-600" aria-hidden="true">·</span>Based in Stuttgart <span aria-hidden="true">🇩🇪</span>
+              </p>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1 max-w-xl font-serif italic text-base md:text-lg text-secondary-600 dark:text-secondary-200">
+                <li>Software Engineer</li>
+                <li>Engineering Leader</li>
+                <li>Automation Enthusiast</li>
+                <li>Photographer &amp; Explorer</li>
+              </ul>
             </div>
 
             <!-- Social Links -->
-            <div class="mt-8 animate-fade-in-delay">
+            <div class="animate-fade-in-delay">
               <SocialLinks :isHero="true" />
-            </div>
-
-            <!-- CTA Button -->
-            <div class="pt-4 animate-fade-in-delay">
-              <NuxtLink to="/#about" class="inline-flex items-center min-h-[44px] text-lg px-6 py-3 text-primary-600 dark:text-primary-400 border border-primary-600 dark:border-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/30 rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2">
-                About Me
-                <span class="ml-2" aria-hidden="true">→</span>
-              </NuxtLink>
             </div>
           </div>
 
@@ -142,7 +126,16 @@ useSeoMeta({
 .heading {
   font-family: 'Newsreader', Georgia, serif;
   font-weight: 700;
-  @apply text-5xl md:text-7xl mb-7 text-secondary-700 dark:text-secondary-50;
+  @apply text-secondary-700 dark:text-secondary-50;
+  font-size: 3rem;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 4.5rem;
+  }
 }
 
 .hover-highlight {
@@ -158,14 +151,6 @@ useSeoMeta({
 
 .hover-highlight:hover::after {
   @apply scale-x-100 origin-bottom-left;
-}
-
-#homepage-header h1 {
-  line-height: 5rem;
-}
-
-#homepage-header h2 {
-  line-height: 2.6rem;
 }
 
 @keyframes fadeIn {
