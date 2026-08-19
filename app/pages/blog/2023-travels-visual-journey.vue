@@ -92,9 +92,14 @@ const images = ref([
 
 // Fetch article data
 const article = ref<BlogCollectionItem | null>(null);
-const { path } = useRoute();
-const { data } = await useAsyncData("article", () =>
-    queryCollection("blog").where("path", "=", path).first(),
+// @nuxt/content stores paths without a trailing slash, but the URL (and
+// useRoute().path) may include one. Strip it so the DB query matches; display
+// and link paths get their trailing slash back via withTrailingSlash below.
+const { path: routePath } = useRoute();
+const path = routePath.replace(/\/+$/, "") || routePath;
+const uniqueKey = `article-${path}`;
+const { data } = await useAsyncData(uniqueKey, () =>
+  queryCollection("blog").where("path", "=", path).first(),
 );
 article.value = unref(data);
 
@@ -109,13 +114,14 @@ function scrollToContent() {
 const title = computed(() => article.value?.title || "");
 const description = computed(() => article.value?.description || "");
 const image = computed(() => article.value?.image || "");
+const url = computed(() => `https://subodhdahal.com${withTrailingSlash(path)}`);
 
 useHead({
   title,
   link: [
     {
       rel: "canonical",
-      href: `https://subodhdahal.com${path}`,
+      href: url,
     },
   ],
 });
@@ -126,7 +132,7 @@ useSeoMeta({
   ogTitle: title,
   ogDescription: description,
   ogImage: image,
-  ogUrl: `https://subodhdahal.com${path}`,
+  ogUrl: url,
   twitterCard: 'summary_large_image',
   twitterTitle: title,
   twitterDescription: description,
