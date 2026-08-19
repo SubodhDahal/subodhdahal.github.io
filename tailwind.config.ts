@@ -62,12 +62,25 @@ export default <Partial<Config>>{
             },
             'ul': {
               listStyleType: 'disc',
-              paddingLeft: '1.625em'
+              paddingLeft: '1.625em',
+              fontFamily: 'Newsreader, serif'
             },
             'ul > li': {
               marginTop: '0.5rem',
               marginBottom: '0.5rem',
-              paddingLeft: '0.375em'
+              paddingLeft: '0.375em',
+              fontFamily: 'Newsreader, serif'
+            },
+            'ol': {
+              listStyleType: 'decimal',
+              paddingLeft: '1.625em',
+              fontFamily: 'Newsreader, serif'
+            },
+            'ol > li': {
+              marginTop: '0.5rem',
+              marginBottom: '0.5rem',
+              paddingLeft: '0.375em',
+              fontFamily: 'Newsreader, serif'
             },
             blockquote: {
               fontFamily: 'Newsreader, serif',
