@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-secondary-100 dark:bg-secondary-800" id="about">
+  <section class="bg-secondary-100 dark:bg-secondary-900 border-t border-secondary-200 dark:border-secondary-700" id="about">
     <div class="container pt-16 pb-20">
-      <div class="relative mb-12">
+      <div class="relative mb-20 md:mb-28">
         <h2
           class="text-3xl font-serif font-bold text-center text-secondary-800 dark:text-secondary-100"
         >
@@ -11,90 +11,39 @@
           class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"
         ></div>
       </div>
-      <div class="grid md:grid-cols-2 gap-8 mb-12">
-        <!-- Professional Background -->
-        <div
-          class="bg-white dark:bg-secondary-900 rounded-lg border border-secondary-200 dark:border-secondary-700 p-8 transform hover:-translate-y-1 hover:border-secondary-300 dark:hover:border-secondary-600 transition-[transform,border-color] duration-300"
-        >
-          <h2
-            class="text-2xl font-semibold mb-4 text-secondary-800 dark:text-secondary-100"
-          >
-            Professional Journey
-          </h2>
-          <div class="space-y-4 text-secondary-600 dark:text-secondary-300">
-            <p>
-              An experienced software engineer with a strong passion for
-              technology and hands-on experience building products that leverage
-              Large Language Models (LLMs).
-            </p>
-            <p>
-              Over a decade of experience with various programming languages
-              including Python, Javascript, Typescript, NodeJS, and PHP.
-            </p>
-            <p class="font-medium">
-              Currently working as an Engineering Manager, leading teams and
-              mentoring developers.
-            </p>
-          </div>
-        </div>
 
-        <!-- Education & Background -->
-        <div
-          class="bg-white dark:bg-secondary-900 rounded-lg border border-secondary-200 dark:border-secondary-700 p-8 transform hover:-translate-y-1 hover:border-secondary-300 dark:hover:border-secondary-600 transition-[transform,border-color] duration-300"
-        >
-          <h2
-            class="text-2xl font-semibold mb-4 text-secondary-800 dark:text-secondary-100"
-          >
-            Education & Background
-          </h2>
-          <div class="space-y-4 text-secondary-600 dark:text-secondary-300">
-            <p>
-              Master's in Information Engineering from Germany, specializing in:
-            </p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Intelligent Systems</li>
-              <li>Machine Learning</li>
-            </ul>
-            <p>
-              Been in Germany since 2017, bringing a global perspective to
-              technology solutions.
-            </p>
-          </div>
-        </div>
+      <div class="max-w-3xl mx-auto mb-8 md:mb-10 text-center">
+        <p class="font-serif italic font-semibold text-2xl md:text-3xl text-secondary-800 dark:text-secondary-100 leading-snug">
+          More than a decade building different kinds of software, from web systems to products at scale. As an Engineering Manager, I help engineers grow while still writing code with the team.
+        </p>
       </div>
 
-      <!-- Leadership & Interests -->
-      <div
-        class="bg-white dark:bg-secondary-900 rounded-lg border border-secondary-200 dark:border-secondary-700 p-8 max-w-3xl mx-auto transform hover:-translate-y-1 hover:border-secondary-300 dark:hover:border-secondary-600 transition-[transform,border-color] duration-300"
-      >
-        <h2
-          class="text-2xl font-semibold mb-4 text-secondary-800 dark:text-secondary-100"
-        >
-          Beyond Code
-        </h2>
-        <div class="space-y-4 text-secondary-600 dark:text-secondary-300">
-          <p>
-            As a team lead and mentor, I prioritize effective communication and
-            teamwork for success. I'm dedicated to making technology accessible
-            and supporting the open-source community.
-          </p>
-          <p>In my spare time, I enjoy:</p>
-          <div class="grid grid-cols-3 gap-4 mt-4">
-            <div class="text-center p-4 bg-secondary-50 dark:bg-secondary-800 rounded-lg">
-              <span class="block text-xl mb-2" aria-hidden="true">🏃‍♂️</span>
-              <span>Exploring Nature</span>
-            </div>
-            <div class="text-center p-4 bg-secondary-50 dark:bg-secondary-800 rounded-lg">
-              <span class="block text-xl mb-2" aria-hidden="true">📸</span>
-              <span>Photography</span>
-            </div>
-            <div class="text-center p-4 bg-secondary-50 dark:bg-secondary-800 rounded-lg">
-              <span class="block text-xl mb-2" aria-hidden="true">📚</span>
-              <span>Science Fiction</span>
-            </div>
-          </div>
-        </div>
+      <div class="max-w-3xl mx-auto mb-8 md:mb-10 text-center">
+        <p class="font-serif italic text-lg md:text-xl text-secondary-600 dark:text-secondary-300 leading-relaxed">
+          My work spans people, delivery, technical quality, cross-functional alignment, and organizational clarity.
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto mb-8 md:mb-10 text-center">
+        <p class="font-serif italic text-lg md:text-xl text-secondary-600 dark:text-secondary-300 leading-relaxed">
+          I co-founded a web agency in Nepal, then moved into product engineering for international clients. I joined a German startup for customer-facing and backoffice products, where the team scaled from a dozen to 100+ people; now I lead an engineering team at a large German Edutech company.
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto mb-8 md:mb-10 text-center">
+        <p class="font-serif italic text-lg md:text-xl text-secondary-600 dark:text-secondary-300 leading-relaxed">
+          I also run a small homelab, tinkering with self-hosted services and automation pipelines.
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="font-serif italic text-lg md:text-xl text-secondary-600 dark:text-secondary-300 leading-relaxed">
+            In my free time, I like being outdoors and photographing the beauty of nature and the world.
+        </p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
+
+<script setup lang="ts">
+</script>
