@@ -1,5 +1,5 @@
 <template>
-  <div class="nuxt-content">
+  <div class="nuxt-content travels-page">
     <div class="relative min-h-screen md:h-screen overflow-hidden">
       <div
         class="absolute inset-0 flex flex-col items-center justify-center z-10 backdrop-blur-lg"
@@ -166,42 +166,42 @@ useSeoMeta({
     font-size: 5rem;
   }
 }
-.nuxt-content {
+.travels-page {
   font-size: 18px;
   line-height: 1.6; /* Added line height for better readability */
 }
-.dark .nuxt-content h1,
-.dark .nuxt-content h2,
-.dark .nuxt-content h3,
-.dark .nuxt-content a {
+.dark .travels-page h1,
+.dark .travels-page h2,
+.dark .travels-page h3,
+.dark .travels-page a {
   color: #d7d7d7;
 }
-.nuxt-content h1,
-.nuxt-content h2,
-.nuxt-content h3 {
+.travels-page h1,
+.travels-page h2,
+.travels-page h3 {
   font-family: "Newsreader", Georgia, serif;
   font-weight: 700;
   line-height: 1.3; /* Added line height for better readability */
   letter-spacing: 0.02em; /* Added letter spacing for better readability */
 }
 
-.nuxt-content h1 {
+.travels-page h1 {
   font-size: 32px; /* Increased font size for better hierarchy */
 }
 
-.nuxt-content h2 {
+.travels-page h2 {
   font-size: 28px; /* Increased font size for better hierarchy */
   margin-bottom: 0.5em; /* Reduced space below the heading */
   margin-top: 1em; /* Reduced space above the heading */
 }
 
-.nuxt-content h3 {
+.travels-page h3 {
   font-size: 24px; /* Increased font size for better hierarchy */
   margin-bottom: 0.5em; /* Reduced space below the heading */
   margin-top: 1em; /* Reduced space above the heading */
 }
 
-.nuxt-content img {
+.travels-page img {
   margin-top: 1em;
   margin-bottom: 1em;
 }

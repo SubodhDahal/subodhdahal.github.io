@@ -322,4 +322,124 @@
   .image figcaption {
     @apply mt-2 text-sm text-secondary-600 dark:text-secondary-400 text-center italic;
   }
+
+  /* ----------------------------------------------------------------
+     Unified link hover system.
+
+     One hover language across the whole site. Every text link
+     speaks rose; the shade tells you the state.
+
+       - at rest:  secondary text, no underline
+       - on hover: primary-600 / primary-400 — rose, with an
+                   underline that grows in from the left
+       - on the   : primary-700 / primary-300 — one step deeper
+         active     in light mode, one step lighter in dark, so
+         route      "where you are" reads more emphatic than
+                    "what you're touching right now." The underline
+                    is persistent (already grown in) and matches
+                    the text.
+
+     .link-underline — drop-in class for any in-content text link.
+
+     .nav-link — header nav (desktop + mobile drawer). Uses the same
+     currentColor trick on the underline so it always matches the
+     text.
+
+     Both honor prefers-reduced-motion via the global block above:
+     transform/opacity transitions collapse to 0.001ms.
+     ---------------------------------------------------------------- */
+  .link-underline {
+    @apply relative inline-block transition-colors duration-200;
+    text-decoration: none;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+  }
+  .link-underline:hover {
+    text-decoration: none;
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .nav-link {
+    @apply relative inline-block font-medium pb-1 text-secondary-800 dark:text-secondary-50 transition-colors duration-200;
+    text-decoration: none;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+  }
+  .nav-link:hover {
+    @apply text-primary-600 dark:text-primary-400;
+    text-decoration: none;
+  }
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .nav-link.is-active {
+    @apply text-primary-700 dark:text-primary-300;
+  }
+  .nav-link.is-active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .nav-link.is-active:hover {
+    @apply text-primary-700 dark:text-primary-300;
+  }
+
+  /* Prose text links use the same unified underline-grow motion as
+     .link-underline. The typography plugin's static border-bottom
+     Color comes from the .blog-page prose-a: utilities (rose) or
+     the prose a's own color. */
+  .prose a,
+  .blog-page a {
+    position: relative;
+    text-decoration: none !important;
+  }
+  .prose a::after,
+  .blog-page a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+  }
+  .prose a:hover,
+  .blog-page a:hover {
+    text-decoration: none !important;
+    background-color: transparent !important;
+  }
+  .prose a:hover::after,
+  .blog-page a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }

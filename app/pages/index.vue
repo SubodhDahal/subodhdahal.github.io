@@ -11,7 +11,7 @@
           <div class="w-full md:w-3/5 space-y-6">
             <div class="animate-fade-in space-y-5">
               <h1 class="heading">
-                Hi! I'm <NuxtLink to="/#about" class="hover-highlight">Subodh Dahal</NuxtLink>.
+                Hi! I'm <NuxtLink to="/#about" class="hover-highlight">Subodh Dahal</NuxtLink>
               </h1>
               <h2 class="font-serif text-2xl md:text-3xl font-bold text-secondary-800 dark:text-secondary-50 leading-tight tracking-tight">
                 Engineering Manager
@@ -70,7 +70,7 @@
           <div class="text-center mt-2">
             <NuxtLink
               to="/blog/"
-              class="inline-block text-primary-600 dark:text-primary-400 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
+              class="link-underline inline-block text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
             >
               View All Articles
               <span aria-hidden="true"> →</span>
@@ -138,6 +138,10 @@ useSeoMeta({
   }
 }
 
+/* Hero name "Subodh Dahal" — a heavier rose underline than the
+   standard .link-underline. The line scales with the h1's font size
+   (height: 0.15em) so it stays a noticeable mark on the home hero
+   without ever being loud. Reserved for this one moment. */
 .hover-highlight {
   @apply relative inline-block;
 }

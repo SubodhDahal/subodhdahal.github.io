@@ -45,7 +45,7 @@ function formatDate(date: string | Date): string {
         >
           <div class="flex justify-between items-start gap-4">
             <div class="flex-1 min-w-0">
-              <h2 class="text-lg font-semibold text-secondary-700 dark:text-secondary-200 group-hover:text-secondary-900 dark:group-hover:text-secondary-50 transition-colors duration-150">
+              <h2 class="text-lg font-semibold text-secondary-700 dark:text-secondary-200 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-150">
                 {{ article.title }}
               </h2>
               <p

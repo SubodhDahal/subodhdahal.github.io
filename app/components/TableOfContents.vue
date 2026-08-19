@@ -83,7 +83,7 @@ onUnmounted(() => {
           class="block py-1 pl-3 transition-all duration-150 hover:translate-x-px"
           :class="activeId === link.id
             ? 'text-secondary-900 dark:text-secondary-50'
-            : 'text-secondary-500 dark:text-secondary-400 hover:text-secondary-700 dark:hover:text-secondary-300'
+            : 'text-secondary-500 dark:text-secondary-400 hover:text-primary-600 dark:hover:text-primary-400'
           "
           @click.prevent="onClick(link.id)"
         >

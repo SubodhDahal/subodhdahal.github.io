@@ -24,27 +24,27 @@
           </svg>
         </button>
       </div>
-      <ul
+        <ul
         class="hidden text-lg mt-1 flex flex-col md:flex-row list-none md:block md:flex items-center gap-6"
       >
         <li>
           <NuxtLink
             to="/blog/"
-            active-class="text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
-            class="hover:text-blue-500 relative pb-1 font-medium transition-all hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500">
+            active-class="is-active"
+            class="nav-link">
             Blog
           </NuxtLink>
         </li>
         <li>
           <NuxtLink
             to="/library/"
-            active-class="text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
-            class="hover:text-blue-500 relative pb-1 font-medium transition-all hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500">
+            active-class="is-active"
+            class="nav-link">
             Library
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/#about" class="hover:text-blue-500 font-medium transition-colors"> About </NuxtLink>
+          <NuxtLink to="/#about" class="nav-link"> About </NuxtLink>
         </li>
         <li>
           <ColorMode />
@@ -89,8 +89,8 @@
               <li class="mb-5">
                 <NuxtLink
                   to="/blog/"
-                  active-class="text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
-                  class="hover:text-blue-500 relative pb-1 inline-block text-lg font-medium transition-all"
+                  active-class="is-active"
+                  class="nav-link text-lg"
                   @click="isMobileNavOpen = false">
                   Blog
                 </NuxtLink>
@@ -98,8 +98,8 @@
               <li class="mb-5">
                 <NuxtLink
                   to="/library/"
-                  active-class="text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
-                  class="hover:text-blue-500 relative pb-1 inline-block text-lg font-medium transition-all"
+                  active-class="is-active"
+                  class="nav-link text-lg"
                   @click="isMobileNavOpen = false">
                   Library
                 </NuxtLink>
@@ -107,7 +107,7 @@
               <li class="mb-5">
                 <NuxtLink
                   to="/#about"
-                  class="hover:text-blue-500 text-lg font-medium transition-colors"
+                  class="nav-link text-lg"
                   @click="isMobileNavOpen = false">
                   About
                 </NuxtLink>
