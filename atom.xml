@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://subodhdahal.com</id>
     <title>Subodh Dahal</title>
-    <updated>2026-08-19T15:52:28.275Z</updated>
+    <updated>2026-08-20T15:54:23.097Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Subodh Dahal</name>
@@ -17,7 +17,7 @@
         <id>https://subodhdahal.com/blog/worktrees-with-worktrunk</id>
         <link href="https://subodhdahal.com/blog/worktrees-with-worktrunk"/>
         <updated>2026-08-16T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Git worktrees let you keep multiple branches checked out at once, so a review fix doesn't mean stashing your current work. Worktrunk automates the per-worktree setup, and the same isolation also gives parallel AI coding agents their own working directories.]]></summary>
+        <summary type="html"><![CDATA[Git worktrees let you keep more than one branch checked out at once, so a review fix doesn't mean stashing your current work. Worktrunk automates the per-worktree setup, and the same isolation also gives parallel AI coding agents their own working directories.]]></summary>
         <author>
             <name>Subodh Dahal</name>
             <uri>https://subodhdahal.com/</uri>
