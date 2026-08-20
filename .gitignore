@@ -12,3 +12,14 @@ dist
 .impeccable/
 DESIGN.md
 PRODUCT.md
+
+# Vale: ignore synced style packages, keep only local configuration
+# (packages are restored with `vale sync`)
+.github/styles/*
+!.github/styles/config/
+
+.github/styles/config/*
+!.github/styles/config/vocabularies/
+
+.github/styles/config/vocabularies/*
+!.github/styles/config/vocabularies/Blog

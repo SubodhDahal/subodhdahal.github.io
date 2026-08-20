@@ -1,0 +1,15 @@
+# Words to flag as errors for subodhdahal.github.io
+# ------------------------------------------------------------------
+# One entry per line, matched against a full token. Entries are added
+# to the built-in Vale.Avoid rule, which reports every occurrence as
+# an error (message: "Avoid '...'").
+#
+# Note: entries from accept.txt also suppress this rule, so don't list
+# the same word in both files. Typos like "beacuse" are already caught
+# by Vale.Spelling, which gives a better "did you mean ...?" message.
+#
+# Lines starting with `#` are comments.
+#
+# Example:
+#   Github    # use "GitHub" (usually redundant - Vale.Terms handles casing)
+#   eg        # use "e.g."
