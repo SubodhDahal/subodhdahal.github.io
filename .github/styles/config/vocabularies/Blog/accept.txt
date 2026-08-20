@@ -1,0 +1,142 @@
+# Accepted words for subodhdahal.github.io
+# ------------------------------------------------------------------
+# One entry per line, matched against a full token (case-sensitive by
+# default). Use `(?i)` to accept any casing.
+#
+# Entries are also enforced for casing by Vale.Terms: e.g. having
+# `Traefik` here means "traefik" is flagged and "Traefik" is required.
+# Use `(?i)prefix` for terms where casing should not be enforced.
+#
+# Lines starting with `#` are comments.
+
+# ------------------------------------------------------------------
+# Names (people)
+# ------------------------------------------------------------------
+Subodh
+Dahal
+
+# ------------------------------------------------------------------
+# Brands, tools & services (casing enforced)
+# ------------------------------------------------------------------
+GitHub
+GitLab
+YouTube
+iCloud
+Postgres
+Traefik
+Immich
+Forgejo
+Codeberg
+Proxmox
+Tailscale
+Logseq
+Nuxt
+fzf
+jq
+tig
+lazygit
+Tmux
+Zsh
+digiKam
+Feedly
+Inoreader
+Readrops
+Reeder
+Lemmy
+RSSHub
+Substack
+Worktrunk
+Karakeep
+Youlag
+FreshRSS
+Automator
+Af_Readability
+# "Git" with the possessive form, e.g. "Git's terminology"
+# Case-insensitive: "git" (the command) and "Git" (the product) are both fine
+(?i)git('s)?
+
+# ------------------------------------------------------------------
+# Brands that are also ordinary English words (casing not enforced)
+# ------------------------------------------------------------------
+(?i)downloader
+(?i)validator
+(?i)inlines
+
+# ------------------------------------------------------------------
+# Technical terms & jargon (casing not enforced)
+# ------------------------------------------------------------------
+(?i)dotfiles
+(?i)homelab
+(?i)worktrees?
+(?i)repos?
+(?i)rebase
+(?i)rebasing
+(?i)configs?
+(?i)env
+(?i)dev
+(?i)json
+(?i)apis?
+(?i)toolchain
+(?i)untracked
+(?i)hardcoding
+(?i)geocoding
+(?i)rescanning
+(?i)deciseconds
+(?i)superproject
+(?i)cronjob
+(?i)misconfigured
+(?i)recurse
+(?i)unregister
+(?i)restow
+(?i)restowing
+(?i)unstows?
+extract_wisdom
+summarize_text
+
+# ------------------------------------------------------------------
+# Git aliases (used in the "Git and command line" post)
+# ------------------------------------------------------------------
+g
+ga
+gb
+gc
+gco
+gcb
+gcp
+grb
+grbi
+
+# ------------------------------------------------------------------
+# Places
+# ------------------------------------------------------------------
+Bhaktapur
+Bharatpur
+Beding
+Chhetchhet
+Surmuche
+Simigaun
+Kyalche
+Dongang
+Rolwaling
+Gaurishankar
+Tamakoshi
+Dudh
+Kunda
+Charikot
+Dolakha
+Dolalghat
+Bhimeswor
+Singati
+Plitvice
+Pokhara
+Zaandam
+Zugspitze
+Sognsvann
+Stuttgarter
+Laserhub
+
+# ------------------------------------------------------------------
+# Other proper nouns
+# ------------------------------------------------------------------
+Tongba
+Kessel
