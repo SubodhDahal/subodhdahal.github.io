@@ -1,6 +1,6 @@
 ---
 title: "Stop stashing half-finished work: Git worktrees and Worktrunk"
-description: "Git worktrees let you keep more than one branch checked out at once, so a review fix doesn't mean stashing your current work. Worktrunk automates the per-worktree setup, and the same isolation also gives parallel AI coding agents their own working directories."
+description: "Git worktrees keep multiple branches checked out at once. Worktrunk automates per-worktree setup — the same isolation also works for parallel AI agents."
 image: /images/git-worktrees.png
 alt: "Git worktree directories side by side, each with its own branch checked out"
 postDate: 2026-08-16

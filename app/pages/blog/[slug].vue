@@ -28,8 +28,9 @@
                         :src="article.image"
                         :alt="article.alt"
                         preset="blog"
+                        width="800"
+                        height="400"
                         class="rounded-lg border border-secondary-200 dark:border-secondary-700 w-full object-cover max-h-[500px]"
-                        loading="lazy"
                     />
                 </div>
             </div>

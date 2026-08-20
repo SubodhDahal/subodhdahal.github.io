@@ -3,7 +3,7 @@ const description =
   "Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer";
 const ogTitle =
   "Subodh Dahal's musings on software engineering, automation, photography and more";
-const ogImage = "https://subodhdahal.com/twitter-card.png";
+const ogImage = "/images/me.jpg";
 const mySite = "https://subodhdahal.com";
 
 useHead({
@@ -46,14 +46,13 @@ useSeoMeta({
   twitterImage: ogImage,
 });
 
-useSchemaOrg({
-  website: {
+useSchemaOrg([
+  defineWebSite({
     name: "Subodh Dahal",
     url: mySite,
     description: description,
-    image: ogImage,
-  },
-  person: {
+  }),
+  definePerson({
     name: "Subodh Dahal",
     url: mySite,
     image: "/images/me.jpg",
@@ -62,8 +61,8 @@ useSchemaOrg({
       "https://github.com/subodhdahal",
       "https://linkedin.com/in/subodhdahal",
     ],
-  },
-});
+  }),
+]);
 </script>
 
 <template>
