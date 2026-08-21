@@ -48,16 +48,6 @@ export default defineContentConfig({
         ogImage: defineOgImageSchema(),
         schemaOrg: defineSchemaOrgSchema(),
       })
-    }),
-    about: defineCollection({
-      type: 'page',
-      source: 'about.md',
-      schema: z.object({
-        robots: defineRobotsSchema(),
-        sitemap: defineSitemapSchema(),
-        ogImage: defineOgImageSchema(),
-        schemaOrg: defineSchemaOrgSchema(),
-      })
     })
   }
 })

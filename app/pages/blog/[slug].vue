@@ -66,12 +66,35 @@
                     <TableOfContents :article="article" class="lg:sticky lg:top-24" />
                 </aside>
             </div>
+
+            <section v-if="relatedArticles.length" class="container mx-auto my-12">
+                <h2 class="text-2xl font-serif font-bold text-center text-secondary-800 dark:text-secondary-100 mb-6">
+                    Related posts
+                </h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <NuxtLink
+                        v-for="rel in relatedArticles"
+                        :key="rel.path"
+                        :to="rel.path"
+                        class="block p-4 rounded-lg border border-secondary-200 dark:border-secondary-700 hover:border-primary-500 dark:hover:border-primary-400 transition-colors"
+                    >
+                        <h3 class="font-serif font-semibold text-lg text-secondary-800 dark:text-secondary-100 mb-1">
+                            {{ rel.title }}
+                        </h3>
+                        <p class="text-sm text-secondary-600 dark:text-secondary-300 line-clamp-2">
+                            {{ rel.description }}
+                        </p>
+                    </NuxtLink>
+                </div>
+            </section>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import type { BlogCollectionItem } from "@nuxt/content";
+import { watch } from "vue";
+import type { BlogPostPreview } from "~/types";
 import TableOfContents from "~/components/TableOfContents.vue";
 
 // Fetch article data
@@ -86,6 +109,19 @@ const { data } = await useAsyncData(uniqueKey, () =>
   queryCollection("blog").where("path", "=", path).first(),
 );
 article.value = unref(data);
+
+// Related posts (top 3 by tag overlap, excluding the current article)
+const { getRelatedArticles } = useArticles();
+const relatedArticles = ref<BlogPostPreview[]>([]);
+watch(
+    () => article.value?.path,
+    async (newPath) => {
+        if (newPath && article.value?.tags) {
+            relatedArticles.value = await getRelatedArticles(article.value.tags, newPath);
+        }
+    },
+    { immediate: true },
+);
 
 // Format date helper
 function formatDate(date: Date): string {
@@ -153,7 +189,7 @@ useSchemaOrg([
         author: {
             "@type": "Person",
             name: "Subodh Dahal",
-            url: "https://subodhdahal.com"
+            url: "https://subodhdahal.com/#about"
         },
     })
 ]);

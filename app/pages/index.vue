@@ -84,10 +84,6 @@
 </template>
 
 <script setup lang="ts">
-const { data: about } = await useAsyncData('about', () =>
-  queryCollection('about').first()
-)
-
 const title: string = 'Subodh Dahal\'s musings on software engineering, automation, photography and more'
 const description: string = 'Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer'
 const image: string = '/images/me.jpg'

@@ -46,4 +46,25 @@
 </template>
 
 <script setup lang="ts">
+useSchemaOrg([
+  {
+    "@type": "ProfilePage",
+    "@id": "https://subodhdahal.com/#about",
+    url: "https://subodhdahal.com/#about",
+    dateCreated: "2020-01-01T00:00:00+05:45",
+    mainEntity: definePerson({
+      name: "Subodh Dahal",
+      alternateName: "subodhdahal",
+      description:
+        "Engineering Manager and Software Engineer. Writes about software engineering, automation, photography, and travel.",
+      image: "https://subodhdahal.com/images/me.jpg",
+      url: "https://subodhdahal.com/#about",
+      sameAs: [
+        "https://github.com/subodhdahal",
+        "https://www.linkedin.com/in/subodhdahal",
+        "https://x.com/subodhdahal",
+      ],
+    }),
+  },
+]);
 </script>

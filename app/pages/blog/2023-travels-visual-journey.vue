@@ -153,7 +153,7 @@ useSchemaOrg([
     author: {
       "@type": "Person",
       name: "Subodh Dahal",
-      url: "https://subodhdahal.com",
+      url: "https://subodhdahal.com/#about",
     },
   }),
 ]);

@@ -15,6 +15,24 @@ useHead({
     title !== ogTitle ? `${title} · Subodh Dahal` : title,
   link: [
     { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+    { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+    { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
+    { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+    { rel: "manifest", href: "/manifest.json" },
+    {
+      rel: "preload",
+      as: "font",
+      type: "font/woff2",
+      href: "/fonts/Newsreader/Newsreader-700-normal.woff2",
+      crossorigin: "anonymous",
+    },
+    {
+      rel: "preload",
+      as: "font",
+      type: "font/woff2",
+      href: "/fonts/IBM_Plex_Sans/IBMPlexSans-400-normal.woff2",
+      crossorigin: "anonymous",
+    },
     { rel: "canonical", href: mySite },
     {
       rel: "alternate",
@@ -28,6 +46,11 @@ useHead({
       title: "Subodh Dahal (Atom)",
       href: "/atom.xml",
     },
+  ],
+  meta: [
+    { name: "theme-color", content: "#F43F5E", media: "(prefers-color-scheme: light)" },
+    { name: "theme-color", content: "#0f1115", media: "(prefers-color-scheme: dark)" },
+    { name: "color-scheme", content: "light dark" },
   ],
 });
 
