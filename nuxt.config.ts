@@ -68,7 +68,7 @@ export default defineNuxtConfig({
       },
     },
     domains: ["subodhdahal.com"],
-    format: ["webp", "jpg", "png"],
+    format: ["avif", "webp", "jpg", "png"],
   },
 
   routeRules: {

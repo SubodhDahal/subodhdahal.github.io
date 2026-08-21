@@ -58,6 +58,10 @@ export function addPostsToFeed(
         id: `${baseUrl}${withTrailingSlash(post.path)}`,
         link: `${baseUrl}${withTrailingSlash(post.path)}`,
         description: post.description || "",
+        content:
+          post.description
+            ? `<p>${post.description}</p>\n<p><a href="${baseUrl}${withTrailingSlash(post.path)}">Read the full post on subodhdahal.com →</a></p>`
+            : "",
         date: new Date(post.postDate || Date.now()),
         category: post.tags?.map((tag) => ({ name: tag })) || [],
         author: [
