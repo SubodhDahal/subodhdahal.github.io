@@ -1,7 +1,7 @@
 ---
 title: "fzf + fabric: Smart selection for LLM patterns and models"
 description: Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.
-image:  /images/fabric-ai-pattern-selection.png
+image:  /images/fabric-ai-pattern-selection.webp
 alt: AI Pattern Selection in Fabric
 postDate: 2025-05-24
 tags:

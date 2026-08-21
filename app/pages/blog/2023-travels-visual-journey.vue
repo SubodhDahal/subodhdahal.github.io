@@ -115,6 +115,7 @@ const title = computed(() => article.value?.title || "");
 const description = computed(() => article.value?.description || "");
 const image = computed(() => article.value?.image || "");
 const url = computed(() => `https://subodhdahal.com${withTrailingSlash(path)}`);
+const postDate = computed(() => article.value?.postDate ? new Date(article.value.postDate).toISOString() : '');
 
 useHead({
   title,
@@ -136,8 +137,33 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
   twitterTitle: title,
   twitterDescription: description,
-  twitterImage: image
+  twitterImage: image,
+  ogType: 'article',
+  articlePublishedTime: postDate,
 });
+
+useSchemaOrg([
+  defineArticle({
+    mainEntityOfPage: url.value,
+    headline: title.value,
+    description: description.value,
+    image: image.value,
+    datePublished: postDate.value,
+    dateModified: postDate.value,
+    author: {
+      "@type": "Person",
+      name: "Subodh Dahal",
+      url: "https://subodhdahal.com",
+    },
+  }),
+]);
+
+if (image.value) {
+  defineOgImage("SimpleBlog", {
+    title: title.value,
+    image: image.value,
+  });
+}
 </script>
 
 <style>

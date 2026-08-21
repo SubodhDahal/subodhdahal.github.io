@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     name: "Subodh Dahal",
     description: "Personal website and blog of Subodh Dahal",
     defaultLocale: "en",
+    trailingSlash: true,
   },
 
   experimental: {
@@ -90,7 +91,6 @@ export default defineNuxtConfig({
           "anthropic-ai",
           "Omgilibot",
           "Omgili",
-          "FacebookBot",
         ],
         disallow: ["/"],
       },

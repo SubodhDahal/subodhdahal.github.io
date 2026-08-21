@@ -1,4 +1,5 @@
 import { Feed } from "feed";
+import { withTrailingSlash } from "ufo";
 import type { BlogPostPreview } from "~/types";
 import { getBlogPosts } from "./blog";
 
@@ -54,8 +55,8 @@ export function addPostsToFeed(
 
       feed.addItem({
         title: post.title,
-        id: `${baseUrl}${post.path}`,
-        link: `${baseUrl}${post.path}`,
+        id: `${baseUrl}${withTrailingSlash(post.path)}`,
+        link: `${baseUrl}${withTrailingSlash(post.path)}`,
         description: post.description || "",
         date: new Date(post.postDate || Date.now()),
         category: post.tags?.map((tag) => ({ name: tag })) || [],

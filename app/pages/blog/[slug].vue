@@ -13,6 +13,9 @@
                         <span class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500">
                             {{ formatDate(article.postDate) }}
                         </span>
+                        <span v-if="article.updated" class="font-sans font-normal text-xs text-secondary-400 dark:text-secondary-500">
+                            · Updated {{ formatDate(article.updated) }}
+                        </span>
                     </div>
                     <p
                         class="text-lg md:text-xl mb-4 text-secondary-600 dark:text-secondary-300"
@@ -98,6 +101,7 @@ const title = computed(() => article.value?.title || "");
 const description = computed(() => article.value?.description || "");
 const image = computed(() => article.value?.image || "");
 const postDate = computed(() => new Date(article.value?.postDate || "").toISOString());
+const updated = computed(() => article.value?.updated ? new Date(article.value.updated).toISOString() : postDate.value);
 const tags = computed(() => article.value?.tags || []);
 const url = computed(() => `https://subodhdahal.com${withTrailingSlash(path)}`);
 
@@ -125,18 +129,26 @@ useSeoMeta({
     twitterDescription: description,
     twitterImage: image,
     articlePublishedTime: postDate,
-    articleModifiedTime: postDate,
+    articleModifiedTime: updated,
     articleTag: tags,
 });
 
 // Schema.org
 useSchemaOrg([
+    defineBreadcrumb({
+        itemListElement: [
+            { name: "Home", item: "https://subodhdahal.com/" },
+            { name: "Blog", item: "https://subodhdahal.com/blog/" },
+            { name: title.value || "Article", item: url.value },
+        ],
+    }),
     defineArticle({
+        mainEntityOfPage: url.value,
         headline: title.value,
         description: description.value,
         image: image.value,
         datePublished: postDate.value,
-        dateModified: postDate.value,
+        dateModified: updated.value,
         articleSection: tags.value,
         author: {
             "@type": "Person",

@@ -1,7 +1,7 @@
 ---
 title: "Curating my own reading and discovery feed with RSS"
 description: Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
-image:  /images/reading-feed-curation.png
+image:  /images/reading-feed-curation.webp
 alt: Shaping my personal reading content flow
 postDate: 2026-02-08
 tags:

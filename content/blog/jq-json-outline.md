@@ -1,7 +1,7 @@
 ---
 title: "Quickly outline large JSON responses with a custom jq function"
 description: "Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints."
-image: /images/jq-json-structure.png
+image: /images/jq-json-structure.webp
 alt: "Abstract image representing the essence of json structure"
 postDate: 2025-10-19
 tags:

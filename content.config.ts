@@ -13,14 +13,13 @@ export default defineContentConfig({
       type: "page",
       schema: z.object({
         title: z.string(),
-        date: z.string(),
         postDate: z.date(),
+        updated: z.date().optional(),
         description: z.string(),
         url: z.string().optional(),
         image: z.string(),
         alt: z.string(),
         ogImage: z.string().optional(),
-        provider: z.string(),
         tags: z.array(z.string()),
         published: z.boolean().optional(),
         seo: z.object({

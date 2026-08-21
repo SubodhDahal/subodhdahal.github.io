@@ -3,7 +3,6 @@ const description =
   "Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer";
 const ogTitle =
   "Subodh Dahal's musings on software engineering, automation, photography and more";
-const ogImage = "/images/me.jpg";
 const mySite = "https://subodhdahal.com";
 
 useHead({
@@ -37,13 +36,15 @@ useSeoMeta({
   description: description,
   ogTitle: ogTitle,
   ogDescription: description,
-  ogImage: ogImage,
   ogUrl: mySite,
   ogType: "website",
   twitterCard: "summary_large_image",
   twitterTitle: ogTitle,
   twitterDescription: description,
-  twitterImage: ogImage,
+});
+
+defineOgImage("SimpleBlog", {
+  title: "Subodh Dahal's musings on software engineering, automation, photography and more",
 });
 
 useSchemaOrg([

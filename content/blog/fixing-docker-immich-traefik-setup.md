@@ -1,7 +1,7 @@
 ---
 title: "Fixing my broken Docker Immich+Traefik setup"
-description: "Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking — here's how I figured it out and what I changed."
-image: /images/broken-docker-network.png
+description: "Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed."
+image: /images/broken-docker-network.webp
 alt: "Depiction of broken docker networking"
 postDate: 2025-10-31
 tags:
