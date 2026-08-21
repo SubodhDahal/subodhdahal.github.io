@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://subodhdahal.com</id>
     <title>Subodh Dahal</title>
-    <updated>2026-08-20T15:54:23.097Z</updated>
+    <updated>2026-08-21T06:53:25.996Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Subodh Dahal</name>
@@ -98,7 +98,7 @@
             <name>Subodh Dahal</name>
             <uri>https://subodhdahal.com/</uri>
         </author>
-        <category label="nuxt"/>
+        <category label="Nuxt"/>
         <category label="web development"/>
         <category label="tutorial"/>
     </entry>
