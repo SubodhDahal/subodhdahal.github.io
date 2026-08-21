@@ -4,7 +4,7 @@
         <title>Subodh Dahal</title>
         <link>https://subodhdahal.com/</link>
         <description>Personal website and blog of Subodh Dahal</description>
-        <lastBuildDate>Fri, 21 Aug 2026 06:53:25 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 21 Aug 2026 07:37:56 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -104,11 +104,11 @@
             <category>developer productivity</category>
         </item>
         <item>
-            <title><![CDATA[Effortless configuration syncing with GNU Stow and Git: A software engineer's workflow]]></title>
+            <title><![CDATA[Effortless configuration syncing with GNU Stow and Git: a software engineer's workflow]]></title>
             <link>https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow</link>
             <guid isPermaLink="false">https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow</guid>
             <pubDate>Sun, 12 Jan 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Discover how to manage and sync configuration files across Linux and macOS using GNU Stow and Git. Simplify your workflow with centralized, version-controlled setups.]]></description>
+            <description><![CDATA[Use GNU Stow and Git to keep config files in sync across Linux and macOS. Keep them in one repo with full history, and set up new machines in minutes.]]></description>
             <author>Subodh Dahal</author>
             <category>developer productivity</category>
         </item>
