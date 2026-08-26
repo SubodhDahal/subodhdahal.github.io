@@ -80,11 +80,17 @@ export function useArticles(options: UseArticlesOptions = {}) {
   async function getRelatedArticles(sourceTags: string[], excludePath: string): Promise<BlogPostPreview[]> {
     if (!sourceTags?.length) return [];
 
+    // getArticles() rewrites every path with a trailing slash, but the path
+    // passed in from the blog post page is the raw @nuxt/content path
+    // (no slash). Normalize once so the exclude check actually matches —
+    // without this the current article leaks into its own related list.
+    const normalizedExclude = withTrailingSlash(excludePath);
+
     const allArticles = await getArticles(quantity);
     return allArticles
       .filter(
         (article: BlogPostPreview) =>
-          article.path !== excludePath &&
+          article.path !== normalizedExclude &&
           Array.isArray(article.tags) &&
           article.tags.some((tag: string) => sourceTags.includes(tag)),
       )

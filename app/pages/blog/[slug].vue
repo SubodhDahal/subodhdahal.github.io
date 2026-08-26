@@ -67,23 +67,42 @@
                 </aside>
             </div>
 
-            <section v-if="relatedArticles.length" class="container mx-auto my-12">
-                <h2 class="text-2xl font-serif font-bold text-center text-secondary-800 dark:text-secondary-100 mb-6">
-                    Related posts
-                </h2>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <!-- Related posts: the signature section-rule under the heading, the
+                 card's hover translate + slate-border intensification, and the
+                 rose title on hover. All carried from the system; no new
+                 colors, no new geometry. -->
+            <section v-if="relatedArticles.length" class="my-16">
+                <div class="relative mb-10">
+                    <h2 class="text-3xl font-serif font-bold text-center text-secondary-800 dark:text-secondary-100">
+                        Related posts
+                    </h2>
+                    <div class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <NuxtLink
                         v-for="rel in relatedArticles"
                         :key="rel.path"
                         :to="rel.path"
-                        class="block p-4 rounded-lg border border-secondary-200 dark:border-secondary-700 hover:border-primary-500 dark:hover:border-primary-400 transition-colors"
+                        class="group block p-6 rounded-lg border border-secondary-200 dark:border-secondary-700 hover:border-secondary-300 dark:hover:border-secondary-600 hover:-translate-y-1 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-secondary-900"
                     >
-                        <h3 class="font-serif font-semibold text-lg text-secondary-800 dark:text-secondary-100 mb-1">
+                        <h3 class="font-serif font-semibold text-lg leading-snug text-secondary-700 dark:text-secondary-200 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-200 mb-2">
                             {{ rel.title }}
                         </h3>
-                        <p class="text-sm text-secondary-600 dark:text-secondary-300 line-clamp-2">
+                        <p
+                            v-if="rel.description"
+                            class="font-sans text-base leading-relaxed text-secondary-600 dark:text-secondary-300 line-clamp-2 mb-3"
+                        >
                             {{ rel.description }}
                         </p>
+                        <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+                            <ArticleTags v-if="rel.tags?.length" :tags="rel.tags" />
+                            <time
+                                v-if="rel.postDate"
+                                class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 ml-auto"
+                            >
+                                {{ formatDate(rel.postDate) }}
+                            </time>
+                        </div>
                     </NuxtLink>
                 </div>
             </section>
