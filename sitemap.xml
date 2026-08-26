@@ -9,12 +9,12 @@
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog</loc>
+        <loc>https://subodhdahal.com/blog/</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://subodhdahal.com/library</loc>
+        <loc>https://subodhdahal.com/library/</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -43,7 +43,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/2022-in-review</loc>
+        <loc>https://subodhdahal.com/blog/2022-in-review/</loc>
         <lastmod>2022-12-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
@@ -55,7 +55,8 @@
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/2023-travels-visual-journey</loc>
+        <loc>https://subodhdahal.com/blog/2023-travels-visual-journey/</loc>
+        <lastmod>2024-01-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -246,16 +247,16 @@
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/ai-pattern-selection-in-fabric</loc>
+        <loc>https://subodhdahal.com/blog/ai-pattern-selection-in-fabric/</loc>
         <lastmod>2025-05-24</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/fabric-ai-pattern-selection.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/fabric-ai-pattern-selection.webp</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow</loc>
+        <loc>https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow/</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
@@ -264,16 +265,16 @@
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup</loc>
+        <loc>https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/</loc>
         <lastmod>2025-10-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/broken-docker-network.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/broken-docker-network.webp</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/git-and-command-line-next-level-workflow</loc>
+        <loc>https://subodhdahal.com/blog/git-and-command-line-next-level-workflow/</loc>
         <lastmod>2022-12-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
@@ -291,7 +292,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal</loc>
+        <loc>https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal/</loc>
         <lastmod>2022-01-22</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
@@ -351,25 +352,25 @@
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/jq-json-outline</loc>
+        <loc>https://subodhdahal.com/blog/jq-json-outline/</loc>
         <lastmod>2025-10-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/jq-json-structure.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/jq-json-structure.webp</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/reading-and-discovery-feed-curation</loc>
+        <loc>https://subodhdahal.com/blog/reading-and-discovery-feed-curation/</loc>
         <lastmod>2026-02-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/reading-feed-curation.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/reading-feed-curation.webp</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization</loc>
+        <loc>https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization/</loc>
         <lastmod>2023-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
@@ -387,7 +388,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/self-hosting-my-git-forge</loc>
+        <loc>https://subodhdahal.com/blog/self-hosting-my-git-forge/</loc>
         <lastmod>2026-04-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
@@ -396,7 +397,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3</loc>
+        <loc>https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3/</loc>
         <lastmod>2025-08-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
@@ -405,7 +406,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/stream-deck-youtube-music</loc>
+        <loc>https://subodhdahal.com/blog/stream-deck-youtube-music/</loc>
         <lastmod>2025-06-07</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
@@ -417,13 +418,13 @@
         </image:image>
     </url>
     <url>
-        <loc>https://subodhdahal.com/blog/worktrees-with-worktrunk</loc>
+        <loc>https://subodhdahal.com/blog/worktrees-with-worktrunk/</loc>
         <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/git-worktrees.png</image:loc>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/git-worktrees.webp</image:loc>
         </image:image>
     </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v8.3.4 at 2026-08-21T07:38:06.320Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v8.3.4 at 2026-08-26T08:22:52.797Z -->

@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Subodh Dahal</title>
         <link>https://subodhdahal.com/</link>
         <description>Personal website and blog of Subodh Dahal</description>
-        <lastBuildDate>Fri, 21 Aug 2026 07:37:56 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Aug 2026 08:22:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright 2026 Subodh Dahal</copyright>
         <atom:link href="https://subodhdahal.com/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Stop stashing half-finished work: Git worktrees and Worktrunk]]></title>
-            <link>https://subodhdahal.com/blog/worktrees-with-worktrunk</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/worktrees-with-worktrunk</guid>
+            <title><![CDATA[Stop stashing half-finished work: use Git worktrees and Worktrunk]]></title>
+            <link>https://subodhdahal.com/blog/worktrees-with-worktrunk/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/worktrees-with-worktrunk/</guid>
             <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Git worktrees let you keep more than one branch checked out at once, so a review fix doesn't mean stashing your current work. Worktrunk automates the per-worktree setup, and the same isolation also gives parallel AI coding agents their own working directories.]]></description>
+            <description><![CDATA[Git worktrees keep separate branches checked out at once. Worktrunk automates per-worktree setup. The same isolation also works for parallel AI agents.]]></description>
+            <content:encoded><![CDATA[<p>Git worktrees keep separate branches checked out at once. Worktrunk automates per-worktree setup. The same isolation also works for parallel AI agents.</p>
+<p><a href="https://subodhdahal.com/blog/worktrees-with-worktrunk/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>git</category>
             <category>worktrees</category>
@@ -26,10 +28,12 @@
         </item>
         <item>
             <title><![CDATA[Self-Hosting my Git forge with Forgejo]]></title>
-            <link>https://subodhdahal.com/blog/self-hosting-my-git-forge</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/self-hosting-my-git-forge</guid>
+            <link>https://subodhdahal.com/blog/self-hosting-my-git-forge/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/self-hosting-my-git-forge/</guid>
             <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[Why I moved away from GitHub and chose a lightweight, community-driven alternative]]></description>
+            <content:encoded><![CDATA[<p>Why I moved away from GitHub and chose a lightweight, community-driven alternative</p>
+<p><a href="https://subodhdahal.com/blog/self-hosting-my-git-forge/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>Homelab</category>
             <category>Open source</category>
@@ -38,10 +42,12 @@
         </item>
         <item>
             <title><![CDATA[Curating my own reading and discovery feed with RSS]]></title>
-            <link>https://subodhdahal.com/blog/reading-and-discovery-feed-curation</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/reading-and-discovery-feed-curation</guid>
+            <link>https://subodhdahal.com/blog/reading-and-discovery-feed-curation/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/reading-and-discovery-feed-curation/</guid>
             <pubDate>Sun, 08 Feb 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.]]></description>
+            <content:encoded><![CDATA[<p>Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.</p>
+<p><a href="https://subodhdahal.com/blog/reading-and-discovery-feed-curation/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>Homelab</category>
             <category>Open source</category>
@@ -50,20 +56,24 @@
         </item>
         <item>
             <title><![CDATA[Fixing my broken Docker Immich+Traefik setup]]></title>
-            <link>https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup</guid>
+            <link>https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/</guid>
             <pubDate>Fri, 31 Oct 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Photo indexing and other jobs failed in my Immich+Traefik setup. Turns out I'd misconfigured my Docker networking with Traefik. Here's how I figured it out and what I changed.]]></description>
+            <description><![CDATA[Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.]]></description>
+            <content:encoded><![CDATA[<p>Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.</p>
+<p><a href="https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>homelab</category>
             <category>networking</category>
         </item>
         <item>
-            <title><![CDATA[Quickly Outline Large JSON Responses with a Custom jq Function]]></title>
-            <link>https://subodhdahal.com/blog/jq-json-outline</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/jq-json-outline</guid>
+            <title><![CDATA[Quickly outline large JSON responses with a custom jq function]]></title>
+            <link>https://subodhdahal.com/blog/jq-json-outline/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/jq-json-outline/</guid>
             <pubDate>Sun, 19 Oct 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.]]></description>
+            <content:encoded><![CDATA[<p>Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.</p>
+<p><a href="https://subodhdahal.com/blog/jq-json-outline/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>jq</category>
             <category>json</category>
@@ -73,10 +83,12 @@
         </item>
         <item>
             <title><![CDATA[Why I added RSS feeds to my blog (and how I did it in Nuxt 3)]]></title>
-            <link>https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3</guid>
+            <link>https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3/</guid>
             <pubDate>Sun, 31 Aug 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[How I built RSS and Atom feed support for my Nuxt 3 website to let readers follow my content without social media algorithms.]]></description>
+            <content:encoded><![CDATA[<p>How I built RSS and Atom feed support for my Nuxt 3 website to let readers follow my content without social media algorithms.</p>
+<p><a href="https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>Nuxt</category>
             <category>web development</category>
@@ -84,10 +96,12 @@
         </item>
         <item>
             <title><![CDATA[Revisiting my Stream Deck for music control]]></title>
-            <link>https://subodhdahal.com/blog/stream-deck-youtube-music</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/stream-deck-youtube-music</guid>
+            <link>https://subodhdahal.com/blog/stream-deck-youtube-music/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/stream-deck-youtube-music/</guid>
             <pubDate>Sat, 07 Jun 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.]]></description>
+            <content:encoded><![CDATA[<p>How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.</p>
+<p><a href="https://subodhdahal.com/blog/stream-deck-youtube-music/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>productivity</category>
             <category>Developer Productivity</category>
@@ -96,28 +110,34 @@
         </item>
         <item>
             <title><![CDATA[fzf + fabric: Smart selection for LLM patterns and models]]></title>
-            <link>https://subodhdahal.com/blog/ai-pattern-selection-in-fabric</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/ai-pattern-selection-in-fabric</guid>
+            <link>https://subodhdahal.com/blog/ai-pattern-selection-in-fabric/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/ai-pattern-selection-in-fabric/</guid>
             <pubDate>Sat, 24 May 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.]]></description>
+            <content:encoded><![CDATA[<p>Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.</p>
+<p><a href="https://subodhdahal.com/blog/ai-pattern-selection-in-fabric/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>developer productivity</category>
         </item>
         <item>
             <title><![CDATA[Effortless configuration syncing with GNU Stow and Git: a software engineer's workflow]]></title>
-            <link>https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow</guid>
+            <link>https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow/</guid>
             <pubDate>Sun, 12 Jan 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Use GNU Stow and Git to keep config files in sync across Linux and macOS. Keep them in one repo with full history, and set up new machines in minutes.]]></description>
+            <content:encoded><![CDATA[<p>Use GNU Stow and Git to keep config files in sync across Linux and macOS. Keep them in one repo with full history, and set up new machines in minutes.</p>
+<p><a href="https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>developer productivity</category>
         </item>
         <item>
             <title><![CDATA[My 2023 travels: A visual journey]]></title>
-            <link>https://subodhdahal.com/blog/2023-travels-visual-journey</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/2023-travels-visual-journey</guid>
+            <link>https://subodhdahal.com/blog/2023-travels-visual-journey/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/2023-travels-visual-journey/</guid>
             <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Looking back at the best pictures from my travel adventures in 2023]]></description>
+            <content:encoded><![CDATA[<p>Looking back at the best pictures from my travel adventures in 2023</p>
+<p><a href="https://subodhdahal.com/blog/2023-travels-visual-journey/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>personal</category>
             <category>travel</category>
@@ -125,40 +145,48 @@
         </item>
         <item>
             <title><![CDATA[Re-living memories through proper media organization]]></title>
-            <link>https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization</guid>
+            <link>https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization/</guid>
             <pubDate>Mon, 06 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.]]></description>
+            <content:encoded><![CDATA[<p>Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.</p>
+<p><a href="https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>personal</category>
             <category>technology</category>
         </item>
         <item>
             <title><![CDATA[Looking back: My 2022 in review]]></title>
-            <link>https://subodhdahal.com/blog/2022-in-review</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/2022-in-review</guid>
+            <link>https://subodhdahal.com/blog/2022-in-review/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/2022-in-review/</guid>
             <pubDate>Sat, 31 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.]]></description>
+            <content:encoded><![CDATA[<p>From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.</p>
+<p><a href="https://subodhdahal.com/blog/2022-in-review/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>personal</category>
             <category>travel</category>
         </item>
         <item>
             <title><![CDATA[Git and the command-line: Take your workflow to the next level]]></title>
-            <link>https://subodhdahal.com/blog/git-and-command-line-next-level-workflow</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/git-and-command-line-next-level-workflow</guid>
+            <link>https://subodhdahal.com/blog/git-and-command-line-next-level-workflow/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/git-and-command-line-next-level-workflow/</guid>
             <pubDate>Sun, 18 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Some tips on how to improve your Git productivity using the command-line]]></description>
+            <content:encoded><![CDATA[<p>Some tips on how to improve your Git productivity using the command-line</p>
+<p><a href="https://subodhdahal.com/blog/git-and-command-line-next-level-workflow/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>programming</category>
             <category>developer productivity</category>
         </item>
         <item>
             <title><![CDATA[Hiking Tsho-Rolpa lake trail in Nepal]]></title>
-            <link>https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal</link>
-            <guid isPermaLink="false">https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal</guid>
+            <link>https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal/</guid>
             <pubDate>Sat, 22 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level]]></description>
+            <content:encoded><![CDATA[<p>Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level</p>
+<p><a href="https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
             <author>Subodh Dahal</author>
             <category>travel</category>
         </item>
