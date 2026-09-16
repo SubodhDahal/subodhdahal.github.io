@@ -4,49 +4,77 @@
       "title": "Brave New World",
       "author": "Aldous Huxley",
       "image": "brave-new-world.jpg",
-      "genres": ["Science Fiction", "Dystopian Fiction"]
+      "genres": ["Fiction"],
+      "description": "A future shaped by pleasure, conditioning, and the careful elimination of solitude, published in 1932, sharper with every decade.",
+      "recommendation": "Huxley's cautionary tale of scientific progress drew me back even when I don't agree with all the conclusions. The dystopia doesn't look like one. Everyone is comfortable, no one is alone, and the cost hides in plain sight. It sharpened my sense of what we trade away without noticing, especially after long stretches of optimising for comfort and convenience.",
+      "quote": "Words can be like X-rays, if you use them properly — they'll go through anything.",
+      "quoteAttribution": "Mustapha Mond"
     },
     {
       "title": "Dune",
       "author": "Frank Herbert",
       "image": "dune.jpg",
-      "genres": ["Science Fiction", "Space Opera"]
+      "genres": ["Fiction"],
+      "description": "Politics, religion, ecology, and the long memory of a desert planet collide across the first book of an unfinished universe.",
+      "recommendation": "Dune is worth recommending because it is far more than an epic science-fiction adventure: it uses a vivid desert world, political intrigue, religion, ecology, and personal tragedy to examine how power shapes people and societies.\n\nIt challenges readers to distrust charismatic “saviors,” question inherited beliefs, and notice how resource scarcity and institutions can drive exploitation. Its themes of courage, self-awareness, resilience, and learning give the story lasting personal as well as political relevance.",
+      "quote": "Fear is the mind-killer.",
+      "quoteAttribution": "The Bene Gesserit Litany"
     },
     {
       "title": "Factfulness",
       "author": "Hans Rosling, Anna Rosling Rönnlund, and Ola Rosling",
       "image": "factfulness.jpg",
-      "genres": ["Non-fiction", "Social Science"]
+      "genres": ["Non-fiction"],
+      "description": "A data-driven case that the world is in far better shape than most people think, and a catalogue of the instincts that make us believe otherwise.",
+      "recommendation": "Hans Rosling made me uncomfortable about how confidently I had been wrong on the basic facts of the world. The book is less about celebrating progress and more about naming the reflexes that distort your view.",
+      "quote": "The world cannot be understood without numbers. But it cannot be understood with numbers alone.",
+      "quoteAttribution": "Hans Rosling"
     },
     {
       "title": "Atomic Habits",
       "author": "James Clear",
       "image": "atomic-habits.jpg",
-      "genres": ["Self-help", "Personal Development"]
+      "genres": ["Self-help"],
+      "description": "A practical framework for building habits one percent at a time, with most of the energy going into the environment rather than the willpower.",
+      "recommendation": "The shift from 'become a better person' to 'design a better environment' is what makes this book stick. I treated the chapter on habit stacking as a workshop prompt and rewired a few small routines that had been quietly failing."
     },
     {
       "title": "Stillness Is the Key",
       "author": "Ryan Holiday",
       "image": "stillness-is-the-key.jpg",
-      "genres": ["Self-help", "Philosophy"]
+      "genres": ["Self-help", "Philosophy"],
+      "description": "A short, deliberate argument that the ability to be still (to think, to wait, to refuse the noise) is the underrated skill of a good life.",
+      "recommendation": "Holiday draws the same lesson from a chess player, a writer, and a Roman emperor without ever sounding preachy. The chapter on controlling your day is the one I marked up and lent out the most.",
+      "quote": "Where you stumble, there your treasure lies. In order to possess what you do not have, you must go through the narrow passage.",
+      "quoteAttribution": "Joseph Campbell, quoted in the book"
     },
     {
       "title": "Indistractable",
       "author": "Nir Eyal",
       "image": "indistractable.jpg",
-      "genres": ["Self-help", "Psychology", "Productivity"]
+      "genres": ["Self-help"],
+      "description": "A look at the psychology of distraction and a workable system for keeping your attention on what you chose to do.",
+      "recommendation": "Eyal refuses the easy claim that distraction is not your fault and walks you through the moments before you grab your phone. I applied the 'schedule your time, not just your tasks' idea to a week of calendar and watched my output shift. Useful even when you only agree with half of it."
     },
     {
       "title": "Show Your Work",
       "author": "Austin Kleon",
       "image": "show-your-work.jpg",
-      "genres": ["Self-help", "Creativity", "Art"]
+      "genres": ["Self-help", "Creativity"],
+      "description": "A small, generous book about sharing what you make while you are still making it, written as a sequence of one-page lessons.",
+      "recommendation": "Kleon is the antidote to the 'launch with a bang' school of putting work into the world. The whole book reads in an afternoon, and you finish it slightly braver about documenting in public.",
+      "quote": "Nobody is going to give you permission to do the thing you want to do.",
+      "quoteAttribution": "Austin Kleon"
     },
     {
       "title": "Deep Work",
       "author": "Cal Newport",
       "image": "deep-work.jpg",
-      "genres": ["Self-help", "Productivity", "Work Efficiency"]
+      "genres": ["Self-help"],
+      "description": "An argument for the economic and personal value of long, unbroken stretches of focused thinking, with rules for building them into a working week.",
+      "recommendation": "Newport wrote the book I needed during my first year as an engineering manager, when my calendar had quietly become other people's priorities.",
+      "quote": "Clarity about what matters provides clarity about what does not.",
+      "quoteAttribution": "Cal Newport"
     }
   ]
 }

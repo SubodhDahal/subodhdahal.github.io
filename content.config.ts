@@ -41,7 +41,20 @@ export default defineContentConfig({
           title: z.string(),
           author: z.string(),
           image: z.string(),
-          genres: z.array(z.string())
+          year: z.number().int().optional(),
+          genres: z.array(z.string()),
+          description: z.string(),
+          // Long-form "why it stayed with me" note. Multi-paragraph
+          // supported via blank-line (\n\n) separation; the template
+          // renders one <p> per paragraph.
+          recommendation: z.string(),
+          quote: z.string().optional(),
+          quoteAttribution: z.string().optional(),
+          // Up to a handful of pull quotes per book.
+          quotes: z.array(z.object({
+            text: z.string(),
+            attribution: z.string().optional(),
+          })).optional(),
         })),
         robots: defineRobotsSchema(),
         sitemap: defineSitemapSchema(),

@@ -174,3 +174,19 @@ Tongba
 Kessel
 Carsten
 Cierniak
+
+# ------------------------------------------------------------------
+# Library / book content (titles, authors, characters)
+# ------------------------------------------------------------------
+Factfulness
+Indistractable
+Rosling
+Kleon
+Eyal
+Mustapha
+Mond
+Bene
+Gesserit
+Fremen
+Aldous
+Nir
