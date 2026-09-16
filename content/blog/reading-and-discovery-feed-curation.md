@@ -26,7 +26,7 @@ Rather than relying on algorithms of platforms to decide which content they want
 - Substack: I subscribe to a creator's publication directly by using their Substack URL.
 - Websites without RSS: Not all websites provide RSS/Atom feeds. Luckily, there's an open-source and self-hostable project called [RSSHub](https://github.com/DIYgod/RSSHub) which can generate RSS feeds for many popular websites. It acts as a bridge between my FreshRSS instance and those websites. It also has a browser extension companion: [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar) to easily find and subscribe to RSS feeds.
 - Newsletters: Previously, I had subscribed to many newsletters on my personal email. This made my email inbox messy and it felt like a chore to go and read there. I now use [Kill the Newsletter!](https://kill-the-newsletter.com/) which provides an email address to subscribe to these newsletters. It generates an Atom feed which I can subscribe to in FreshRSS. This has the benefit of keeping my inbox clean and also consolidating all my reading into a single application.
-- Youtube Channels: Yes, I can directly subscribe to Youtube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
+- YouTube Channels: Yes, I can directly subscribe to YouTube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
 
 <figure class="w-full image">
   <iframe class="w-full" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="/images/freshrss-ui.png" style="border: 1px solid black"></iframe>
@@ -39,15 +39,15 @@ Since FreshRSS is an aggregator, I don't necessarily need to use the FreshRSS in
 
 Some newsletters I subscribe to, like those covering AI news, have a short shelf life. If I haven't read them within a month, the content is usually stale and there is little point in me reading them. That's why I've set up the `-pubdate:P30D` filter to automatically mark them as read.
 
-FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a Youtube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
+FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a YouTube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
 
-Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenver I get to them, so there's no need to rush.
+Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenever I get to them, so there's no need to rush.
 
 ## Extending and customizing FreshRSS
 
 FreshRSS is not the only self-hostable feed aggregator. The main reason I chose it is because of its support for extensions which allows for augmenting its functionality. The ones I find useful are:
 
-- Youlag: Better interface for Youtube videos than the default view
+- Youlag: Better interface for YouTube videos than the default view
 - Af_Readability: Inlines full article content for sites that only show excerpts in feeds.
 - Karakeep Button: Saves interesting posts directly to my Karakeep instance for long-term storage.
 

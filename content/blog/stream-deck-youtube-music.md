@@ -54,7 +54,7 @@ The launcher button for it is on the top right in the image above.
 
 ## Physical layout change
 
-I moved the Stream Deck from directly in front of me to the left of my keyboard. This position feels more natural—no more reaching forward to press buttons.
+I moved the Stream Deck from directly in front of me to the left of my keyboard. This position feels more natural, so I no longer reach forward to press buttons.
 
 ## Beyond music control
 

@@ -34,7 +34,7 @@ Along the way, I met a cast of intriguing characters and took time to reflect on
   <figcaption>A map of Europe with the countries I traveled to in 2022 marked in blue</figcaption>
 </figure>
 
-I embarked on a journey that took me to 10 countries, 8 of which were new to me. From the beautiful beaches of Greece and the breathtaking landscapes of Norway, to the charming streets of Belgium and the historic sites of Poland, I was constantly in awe of the diverse cultures and landscapes I encountered. In Italy, I marveled at the stunning architecture and savored the delicious cuisine. I also visited the smallest country in the world, Vatican City and marveled at the beauty of St. Peter's Basilica. In Estonia, I was struck by the country's natural beauty and rich history, and in Finland, I was fascinated by the unique blend of modern and traditional culture.
+I embarked on a journey that took me to 10 countries, 8 of which were new to me. From the beautiful beaches of Greece and the wide landscapes of Norway, to the charming streets of Belgium and the historic sites of Poland, I was constantly in awe of the diverse cultures and landscapes I encountered. In Italy, I marveled at the ancient architecture and savored the delicious cuisine. I also visited the smallest country in the world, Vatican City and marveled at the beauty of St. Peter's Basilica. In Estonia, I was struck by the country's natural beauty and rich history, and in Finland, I was fascinated by the unique blend of modern and traditional culture.
 
 And even though I've visited Switzerland and Austria before, I always find something new and exciting to discover in these beautiful countries. Along the way, I also explored countless charming towns and villages throughout Germany.
 
@@ -68,7 +68,7 @@ Hiking has allowed me to disconnect from the stresses of daily life and reconnec
 
 The most memorable hikes of the year were: to Zugspitze 🇩🇪, in the Black Forest 🇩🇪, in the Saxon Switzerland National Park 🇩🇪, and in Sognsvann 🇳🇴.
 
-Climbing to the top of Zugspitze, the highest mountain in Germany, proved to be a formidable challenge.The steep and rocky path halfway up the mountain was difficult, and the weather near the top was bad enough that we had to stop just a few hundred meters from the summit. However, the stunning views along the way and the feeling of accomplishment made it all worth it.
+Climbing to the top of Zugspitze, the highest mountain in Germany, proved to be a formidable challenge.The steep and rocky path halfway up the mountain was difficult, and the weather near the top was bad enough that we had to stop just a few hundred meters from the summit. However, the views along the way and the feeling of accomplishment made it all worth it.
 
 I was able to build a strong connection with my friends who accompanied me during these hikes as we bonded over the shared experience of exploring the beautiful nature these regions have to offer.
 

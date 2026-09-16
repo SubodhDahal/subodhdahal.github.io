@@ -1,8 +1,8 @@
 # Words to flag as errors for subodhdahal.github.io
 # ------------------------------------------------------------------
 # One entry per line, matched against a full token. Entries are added
-# to the built-in Vale.Avoid rule, which reports every occurrence as
-# an error (message: "Avoid '...'").
+# to the built-in Vale.Avoid rule, which reports every occurrence as an
+# error (message: "Avoid '...'").
 #
 # Note: entries from accept.txt also suppress this rule, so don't list
 # the same word in both files. Typos like "beacuse" are already caught
@@ -10,6 +10,173 @@
 #
 # Lines starting with `#` are comments.
 #
-# Example:
-#   Github    # use "GitHub" (usually redundant - Vale.Terms handles casing)
-#   eg        # use "e.g."
+# Source: forked from the draft-text skill's vocabulary
+# (../agent-skills/.agents/skills/productivity/draft-text/vale/styles/config/vocabularies/Draft/reject.txt).
+# Phrase-level AI tells (negative parallelism, "in order to", dead
+# transitions, hype compounds) are handled by the bundled Draft style
+# and the ai-tells package, not this list.
+#
+# Entries are case-sensitive regexes by default, so each word carries a
+# `(?i)` prefix to catch every casing. Add inflections as separate
+# entries because Vale matches whole tokens: `delve` will not also
+# catch `delving`.
+#
+# To tune the list, delete lines or comment them out with `#`.
+# ------------------------------------------------------------------
+
+# --- Dead AI vocabulary -------------------------------------------------
+(?i)delve
+(?i)delves
+(?i)delving
+(?i)delved
+(?i)realm
+(?i)realms
+(?i)unlock
+(?i)unlocks
+(?i)unlocking
+(?i)unlocked
+(?i)tapestry
+(?i)paradigm
+(?i)paradigms
+(?i)revolutionize
+(?i)revolutionizes
+(?i)revolutionizing
+(?i)intricacy
+(?i)intricacies
+(?i)showcase
+(?i)showcases
+(?i)showcasing
+(?i)showcased
+(?i)crucial
+(?i)pivotal
+(?i)paramount
+(?i)surpass
+(?i)surpasses
+(?i)surpassing
+(?i)meticulous
+(?i)meticulously
+(?i)vibrant
+(?i)unparalleled
+(?i)underscore
+(?i)underscores
+(?i)underscoring
+(?i)underscored
+(?i)leverage
+(?i)leverages
+(?i)leveraging
+(?i)leveraged
+(?i)synergy
+(?i)synergies
+(?i)innovative
+(?i)testament
+(?i)commendable
+(?i)emphasize
+(?i)emphasizes
+(?i)emphasizing
+(?i)emphasized
+(?i)boast
+(?i)boasts
+(?i)boasting
+(?i)boasted
+(?i)groundbreaking
+(?i)foster
+(?i)fosters
+(?i)fostering
+(?i)fostered
+(?i)enhance
+(?i)enhances
+(?i)enhancing
+(?i)enhanced
+(?i)enhancement
+(?i)enhancements
+(?i)holistic
+(?i)holistically
+(?i)garner
+(?i)garners
+(?i)garnering
+(?i)garnered
+(?i)accentuate
+(?i)accentuates
+(?i)accentuating
+(?i)pioneering
+(?i)trailblazing
+(?i)unleash
+(?i)unleashes
+(?i)unleashing
+(?i)transformative
+(?i)redefine
+(?i)redefines
+(?i)redefining
+(?i)seamless
+(?i)seamlessly
+(?i)streamline
+(?i)streamlines
+(?i)streamlining
+(?i)streamlined
+(?i)frictionless
+(?i)elevate
+(?i)elevates
+(?i)elevating
+(?i)elevated
+(?i)effortless
+(?i)effortlessly
+(?i)insightful
+(?i)proactive
+(?i)proactively
+(?i)visionary
+(?i)reimagine
+(?i)reimagines
+(?i)reimagining
+(?i)unprecedented
+(?i)synergize
+(?i)democratize
+(?i)democratizes
+(?i)immersive
+(?i)turnkey
+(?i)supercharge
+(?i)supercharges
+(?i)supercharging
+(?i)interplay
+(?i)captivate
+(?i)captivates
+(?i)captivating
+(?i)actionable
+(?i)impactful
+(?i)multifaceted
+(?i)nuanced
+(?i)myriad
+(?i)plethora
+(?i)burgeoning
+(?i)catalyst
+(?i)cornerstone
+(?i)cornerstones
+(?i)aforementioned
+(?i)endeavor
+(?i)endeavors
+(?i)bolster
+(?i)bolsters
+(?i)bolstering
+(?i)bolstered
+(?i)enduring
+(?i)landscape
+(?i)landscapes
+(?i)valuable
+(?i)actually
+(?i)nestled
+(?i)nestles
+(?i)nestling
+(?i)breathtaking
+(?i)breathtakingly
+(?i)stunning
+(?i)stunningly
+
+# --- Hype & corporate filler -------------------------------------------
+(?i)utilize
+(?i)utilizes
+(?i)utilizing
+(?i)utilized
+(?i)straightforward
+(?i)gamechanger
+(?i)revolutionary
+(?i)synergistic
+(?i)additionally

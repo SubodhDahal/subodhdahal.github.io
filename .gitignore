@@ -17,6 +17,7 @@ PRODUCT.md
 # (packages are restored with `vale sync`)
 .github/styles/*
 !.github/styles/config/
+!.github/styles/personal
 
 .github/styles/config/*
 !.github/styles/config/vocabularies/

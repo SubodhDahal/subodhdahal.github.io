@@ -11,7 +11,7 @@ tags:
 
 # Capturing life's moments
 
-We make priceless memories as life progresses &ndash; memories we want to keep forever. They can be minor, everyday occurrences or significant, life-altering occasions that serve as a reminder of who we were, what we've been through, and what we've learned. They are really valuable and can make us feel sad, happy, or nostalgic.
+We make priceless memories as life progresses, and these are the ones we want to keep forever. They can be minor, everyday occurrences or significant, life-altering occasions that serve as a reminder of who we were, what we've been through, and what we've learned. They are really valuable and can make us feel sad, happy, or nostalgic.
 
 Unfortunately, our memory is fallible and we can only remember so much. Despite our innate limitations, we have continually sought to immortalize moments of significance. From cave paintings to digital photos and videos, we have come a long way.
 
@@ -122,7 +122,7 @@ digiKam also has features to create panoramas and HDR images from multiple pictu
 
 Even though I chose local storage as the main destination for my media, I still back them up to the cloud. Hard drives can fail and catastrophes like fire can happen which destroy years of memories. Having an off-site backup is a good way to ensure that the media remain safe.
 
-Any pictures and videos that I take from my cellphone are automatically uploaded to Google Photos once I get connected to WiFi. I selectively upload pictures and videos from my GoPro or drone to conserve cloud storage space, uploading directly to Google Photos from digiKam.
+Any pictures and videos that I take from my cellphone are automatically uploaded to Google Photos once I join a WiFi network. I selectively upload pictures and videos from my GoPro or drone to conserve cloud storage space, uploading directly to Google Photos from digiKam.
 
 <!-- write a conclusion -->
 # Conclusion

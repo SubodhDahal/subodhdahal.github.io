@@ -18,7 +18,7 @@ Some popular web-based feed readers are FreshRSS, Feedly, Inoreader, and NewsBlu
 
 ## The rise, fall, and resurgence of RSS/Atom
 
-In the early days, RSS was everywhere - blogs and news sites all used it, and podcasts did too. Most people, including me, relied on feed readers to keep up with their favorite sites. Feeds were a simple and effective way to follow online content.
+In the early days, RSS was everywhere. Blogs and news sites all used it, and podcasts did too. Most people, including me, relied on feed readers to keep up with their favorite sites. Feeds were a simple and effective way to follow online content.
 
 Then social platforms came along. They promised to show us content based on our interests using recommendation algorithms. When Google Reader (a prominent feed reader at the time) shut down in 2013, it marked a shift in how we read online. Like many others, I switched to getting my news and updates from social media.
 
@@ -162,7 +162,7 @@ export async function generateFeed(
 
 ## Setting up the routes
 
-With the utility functions in place, I created two route handlers - one for RSS and one for Atom:
+With the utility functions in place, I created two route handlers, one for RSS and one for Atom:
 
 In `server/routes/rss.xml.ts`:
 

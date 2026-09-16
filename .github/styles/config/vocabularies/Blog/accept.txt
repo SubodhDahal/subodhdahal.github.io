@@ -14,6 +14,8 @@
 # ------------------------------------------------------------------
 Subodh
 Dahal
+Addy
+Osmani
 
 # ------------------------------------------------------------------
 # Brands, tools & services (casing enforced)
@@ -46,14 +48,33 @@ Lemmy
 RSSHub
 Substack
 Worktrunk
+Herdr
 Karakeep
 Youlag
 FreshRSS
 Automator
 Af_Readability
+Zellij
+Codex
+Claude
+npm
+Cloudmanic
+keypress
+cmux
+supacode
+pvgomes
+Collie
+O'Reilly
+(?i)collie
 # "Git" with the possessive form, e.g. "Git's terminology"
 # Case-insensitive: "git" (the command) and "Git" (the product) are both fine
 (?i)git('s)?
+# "herdr" is the binary (lowercase); allow the capitalized brand and the possessive
+(?i)herdr('s)?
+# "opencode" is lowercase by brand
+(?i)opencode
+# "worktrunk" can appear in URL slugs and prose
+(?i)worktrunk
 
 # ------------------------------------------------------------------
 # Brands that are also ordinary English words (casing not enforced)
@@ -61,6 +82,10 @@ Af_Readability
 (?i)downloader
 (?i)validator
 (?i)inlines
+# "eg" is the blog's informal abbreviation for "e.g." Vale.Spelling
+# flags it because the canonical form is "e.g." with periods, but the
+# inline style is consistent across posts.
+(?i)eg
 
 # ------------------------------------------------------------------
 # Technical terms & jargon (casing not enforced)
@@ -90,6 +115,7 @@ Af_Readability
 (?i)restow
 (?i)restowing
 (?i)unstows?
+(?i)agentic
 extract_wisdom
 summarize_text
 
@@ -134,9 +160,17 @@ Zugspitze
 Sognsvann
 Stuttgarter
 Laserhub
+Maulakalika
+Sauraha
+Phewa
+Nyatapole
+Machhapuchhre
+Sagrada
 
 # ------------------------------------------------------------------
 # Other proper nouns
 # ------------------------------------------------------------------
 Tongba
 Kessel
+Carsten
+Cierniak

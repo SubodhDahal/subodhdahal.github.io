@@ -161,8 +161,8 @@ Yet another year has passed. I've been lucky enough to travel to some amazing pl
 </div>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-  <img src="/images/2023-visual-journey/mar-5.jpg" alt="The illumanted stained glass windows of Sagrada Família church" loading="lazy">
-  <img src="/images/2023-visual-journey/mar-6.jpg" alt="The illumanted stained glass windows of Sagrada Família church" loading="lazy">
+  <img src="/images/2023-visual-journey/mar-5.jpg" alt="The illuminated stained glass windows of Sagrada Família church" loading="lazy">
+  <img src="/images/2023-visual-journey/mar-6.jpg" alt="The illuminated stained glass windows of Sagrada Família church" loading="lazy">
 </div>
 
 ### Montserrat

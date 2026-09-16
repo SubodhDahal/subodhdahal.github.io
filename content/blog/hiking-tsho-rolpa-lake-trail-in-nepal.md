@@ -192,7 +192,7 @@ On the third day, we had a quick breakfast and started the hike at 7 am, soon af
 up. This was the first day we didn't have to gain much elevation during our hike. The path ran nearly
 straight with only minor elevation changes.
 
-Along the way, we could enjoy the stunning views of the Rolwaling valley. In the local Sherpa language,
+Along the way, we could enjoy the views of the Rolwaling valley. In the local Sherpa language,
 Rolwaling means "valley carved by a plow," and the landscape did look the part.
 
 <figure class="image">
@@ -212,7 +212,7 @@ Walking alongside the Tamakoshi river on almost flat terrain, we reached Tsho-Ro
 The weather favored us that day, and we had clear views of the lake and the mountains. We had heard that fog often hides the lake after 11 am.
 
 Reaching our destination after the grueling walk and the pain we endured the
-past few days felt surreal. We lingered for a while over the stunning views of the lake and the mountains, with the Rolwaling
+past few days felt surreal. We lingered for a while over the lake and the mountains, with the Rolwaling
 valley behind us. We also met other travelers from Nepal at the lake.
 
 <figure class="image w-full">

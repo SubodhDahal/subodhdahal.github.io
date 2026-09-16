@@ -8,7 +8,7 @@ tags:
   - developer productivity
 ---
 
-I have been using [fabric](https://github.com/danielmiessler/fabric) to run LLM prompts on text. It's like having a Swiss Army knife of LLM tools - you feed it text, and it helps analyze it in different ways. With 31k+ GitHub stars, lots of people find it useful.
+I have been using [fabric](https://github.com/danielmiessler/fabric) to run LLM prompts on text. It's like having a Swiss Army knife of LLM tools. You feed it text, and it helps analyze it in different ways. With 31k+ GitHub stars, lots of people find it useful.
 
 But here's the thing: there were too many patterns available. I kept staring at my screen trying to remember how they are named. Plus, I wanted to have the flexibility to choose different LLM models without having to memorize their names.
 
@@ -16,7 +16,7 @@ But here's the thing: there were too many patterns available. I kept staring at 
 
 I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool, to create searchable menus for fabric. Instead of memorizing commands, I just:
 1. Send text to fabric
-2. Type any parts of what I want - fzf is smart about matching:
+2. Type any parts of what I want. fzf is smart about matching:
    - `xwis` finds "extract_wisdom"
    - `sumtext` matches "summarize_text"
 3. Press enter to run
@@ -142,6 +142,6 @@ Since patterns are just markdown files, changing them is as easy as editing a te
 
 ## Why This Matters
 
-I'm not reinventing the wheel here. These are just small tweaks that make fabric feel more natural to use. But sometimes that's all you need - tools that work the way your brain works.
+I'm not reinventing the wheel here. These are just small tweaks that make fabric feel more natural to use. But sometimes that's all you need: tools that work the way your brain works.
 
 Before, I'd hesitate to use fabric because remembering all the commands felt like work. Now? It's just copy, paste, pick, and done. If you use fabric, give these helpers a try.
