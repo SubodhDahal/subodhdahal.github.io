@@ -1,6 +1,16 @@
 {
   "books": [
     {
+        "title": "Player Piano",
+        "author": "Kurt Vonnegut Jr.",
+        "image": "player-piano.jpg",
+        "genres": ["Fiction"],
+        "description": "Published in 1952, the book is about a near-future America where machines and a supercomputer run almost everything, and the people they replaced must figure out what comes next.",
+        "recommendation": "The novel is about what happens to people after the machines take over. The book splits its attention between the system that runs without them, the engineers who keep it running, and the displaced majority who collect a salary for make-work like digging ditches and filling them back in. Vonnegut's worry is that even the engineers aren't happy, and the rest have to chase purpose in jobs no machine would bother with. The book reads today like a forecast for the AI moment, with one change: the machines are coming for knowledge work instead of factory work.",
+        "quote": "The main business of humanity is to do a good job of being human beings, not to serve as appendages to machines, institutions, and systems.",
+        "quoteAttribution": "Paul Proteus"
+    },
+    {
       "title": "Brave New World",
       "author": "Aldous Huxley",
       "image": "brave-new-world.jpg",
