@@ -219,14 +219,14 @@ const handleEntryNavigate = (title: string) => {
    class-based dark-mode rules need to target the global html.dark
    parent. */
 .library-filter__chip {
-  font-family: theme('fontFamily.sans');
+  font-family: var(--font-sans);
   font-size: 0.6875rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: theme('colors.secondary.600');
-  background-color: theme('colors.secondary.100');
-  border: 1px solid theme('colors.secondary.200');
+  color: var(--color-secondary-600);
+  background-color: var(--color-secondary-100);
+  border: 1px solid var(--color-secondary-200);
   padding: 10px 14px;
   border-radius: 4px;
   cursor: pointer;
@@ -240,37 +240,37 @@ const handleEntryNavigate = (title: string) => {
 }
 
 .library-filter__chip:hover {
-  background-color: theme('colors.secondary.200');
-  color: theme('colors.secondary.800');
+  background-color: var(--color-secondary-200);
+  color: var(--color-secondary-800);
 }
 
 .library-filter__chip:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px theme('colors.secondary.50'),
-    0 0 0 4px theme('colors.primary.500');
+  box-shadow: 0 0 0 2px var(--color-secondary-50),
+    0 0 0 4px var(--color-primary-500);
 }
 
 .library-filter__chip.is-active {
-  background-color: theme('colors.primary.50');
-  color: theme('colors.primary.700');
-  border-color: theme('colors.primary.300');
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-700);
+  border-color: var(--color-primary-300);
 }
 
 html.dark .library-filter__chip {
-  color: theme('colors.secondary.300');
-  background-color: theme('colors.secondary.800');
-  border-color: theme('colors.secondary.700');
+  color: var(--color-secondary-300);
+  background-color: var(--color-secondary-800);
+  border-color: var(--color-secondary-700);
 }
 
 html.dark .library-filter__chip:hover {
-  background-color: theme('colors.secondary.700');
-  color: theme('colors.secondary.50');
+  background-color: var(--color-secondary-700);
+  color: var(--color-secondary-50);
 }
 
 html.dark .library-filter__chip.is-active {
-  background-color: theme('colors.primary.900');
-  color: theme('colors.primary.200');
-  border-color: theme('colors.primary.700');
+  background-color: var(--color-primary-900);
+  color: var(--color-primary-200);
+  border-color: var(--color-primary-700);
 }
 
 @media (prefers-reduced-motion: reduce) {

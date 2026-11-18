@@ -124,9 +124,9 @@ const isEager = (index: number) => index < 5
    container so they align with the filter and entries below. */
 .library-shelf {
   position: relative;
-  background-color: theme('colors.secondary.50');
-  border-top: 1px solid theme('colors.secondary.200');
-  border-bottom: 1px solid theme('colors.secondary.200');
+  background-color: var(--color-secondary-50);
+  border-top: 1px solid var(--color-secondary-200);
+  border-bottom: 1px solid var(--color-secondary-200);
 }
 
 .library-shelf__inner {
@@ -178,7 +178,7 @@ const isEager = (index: number) => index < 5
 }
 
 .library-shelf__strip::-webkit-scrollbar-thumb {
-  background-color: theme('colors.secondary.300');
+  background-color: var(--color-secondary-300);
   border-radius: 9999px;
 }
 
@@ -204,8 +204,8 @@ const isEager = (index: number) => index < 5
   height: 198px; /* 2:3 */
   border-radius: 6px;
   overflow: hidden;
-  background-color: theme('colors.secondary.100');
-  border: 1px solid theme('colors.secondary.200');
+  background-color: var(--color-secondary-100);
+  border: 1px solid var(--color-secondary-200);
   transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
@@ -219,7 +219,7 @@ const isEager = (index: number) => index < 5
 .library-shelf__item:hover .library-shelf__cover,
 .library-shelf__item:focus-visible .library-shelf__cover {
   transform: translateY(-2px);
-  border-color: theme('colors.secondary.400');
+  border-color: var(--color-secondary-400);
 }
 
 .library-shelf__item:focus-visible {
@@ -227,12 +227,12 @@ const isEager = (index: number) => index < 5
 }
 
 .library-shelf__item:focus-visible .library-shelf__cover {
-  box-shadow: 0 0 0 2px theme('colors.secondary.50'),
-    0 0 0 4px theme('colors.primary.500');
+  box-shadow: 0 0 0 2px var(--color-secondary-50),
+    0 0 0 4px var(--color-primary-500);
 }
 
 .library-shelf__item.is-active .library-shelf__cover {
-  border-color: theme('colors.primary.500');
+  border-color: var(--color-primary-500);
 }
 
 .library-shelf__meta {
@@ -245,21 +245,21 @@ const isEager = (index: number) => index < 5
 }
 
 .library-shelf__index {
-  font-family: theme('fontFamily.sans');
+  font-family: var(--font-sans);
   font-size: 0.6875rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   /* secondary-500 over secondary-50 holds AA at this size. */
-  color: theme('colors.secondary.500');
+  color: var(--color-secondary-500);
   font-weight: 500;
 }
 
 .library-shelf__title {
-  font-family: theme('fontFamily.serif');
+  font-family: var(--font-serif);
   font-size: 0.9375rem;
   line-height: 1.25;
   font-weight: 600;
-  color: theme('colors.secondary.800');
+  color: var(--color-secondary-800);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -267,10 +267,10 @@ const isEager = (index: number) => index < 5
 }
 
 .library-shelf__author {
-  font-family: theme('fontFamily.sans');
+  font-family: var(--font-sans);
   font-size: 0.75rem;
   line-height: 1.4;
-  color: theme('colors.secondary.500');
+  color: var(--color-secondary-500);
 }
 
 /* The active book gets a small rose dot under the meta block, sitting
@@ -285,7 +285,7 @@ const isEager = (index: number) => index < 5
   width: 6px;
   height: 6px;
   border-radius: 9999px;
-  background-color: theme('colors.primary.500');
+  background-color: var(--color-primary-500);
   transform: translateX(-50%);
 }
 
@@ -293,7 +293,7 @@ const isEager = (index: number) => index < 5
    full viewport width. Reads as the surface the books rest on. */
 .library-shelf__edge {
   height: 2px;
-  background-color: theme('colors.primary.500');
+  background-color: var(--color-primary-500);
   opacity: 0.85;
 }
 
@@ -315,52 +315,52 @@ const isEager = (index: number) => index < 5
    class, so the surface stays in lockstep with the rest of the site
    when the reader toggles the theme. */
 html.dark .library-shelf {
-  background-color: theme('colors.secondary.800');
-  border-color: theme('colors.secondary.700');
+  background-color: var(--color-secondary-800);
+  border-color: var(--color-secondary-700);
 }
 
 html.dark .library-shelf__strip::-webkit-scrollbar-thumb {
-  background-color: theme('colors.secondary.600');
+  background-color: var(--color-secondary-600);
 }
 
 html.dark .library-shelf__cover {
-  background-color: theme('colors.secondary.700');
-  border-color: theme('colors.secondary.600');
+  background-color: var(--color-secondary-700);
+  border-color: var(--color-secondary-600);
 }
 
 html.dark .library-shelf__item:hover .library-shelf__cover,
 html.dark .library-shelf__item:focus-visible .library-shelf__cover {
-  border-color: theme('colors.secondary.500');
+  border-color: var(--color-secondary-500);
 }
 
 html.dark .library-shelf__item:focus-visible .library-shelf__cover {
-  box-shadow: 0 0 0 2px theme('colors.secondary.800'),
-    0 0 0 4px theme('colors.primary.400');
+  box-shadow: 0 0 0 2px var(--color-secondary-800),
+    0 0 0 4px var(--color-primary-400);
 }
 
 html.dark .library-shelf__item.is-active .library-shelf__cover {
-  border-color: theme('colors.primary.400');
+  border-color: var(--color-primary-400);
 }
 
 html.dark .library-shelf__index {
   /* secondary-400 on secondary-800 holds ~5.4:1 at 11px, passing AA.
      secondary-500 was 3.0:1 and failed. */
-  color: theme('colors.secondary.400');
+  color: var(--color-secondary-400);
 }
 
 html.dark .library-shelf__title {
-  color: theme('colors.secondary.50');
+  color: var(--color-secondary-50);
 }
 
 html.dark .library-shelf__author {
-  color: theme('colors.secondary.300');
+  color: var(--color-secondary-300);
 }
 
 html.dark .library-shelf__item.is-active .library-shelf__meta::after {
-  background-color: theme('colors.primary.400');
+  background-color: var(--color-primary-400);
 }
 
 html.dark .library-shelf__edge {
-  background-color: theme('colors.primary.400');
+  background-color: var(--color-primary-400);
 }
 </style>
