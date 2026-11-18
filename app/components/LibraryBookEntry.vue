@@ -138,7 +138,7 @@ const emit = defineEmits<{
 .library-entry {
   scroll-margin-top: 96px; /* anchor target lands below the page header */
   padding: 64px 0;
-  border-bottom: 1px solid theme('colors.secondary.200');
+  border-bottom: 1px solid var(--color-secondary-200);
 }
 
 .library-entry:last-of-type {
@@ -198,9 +198,9 @@ const emit = defineEmits<{
   aspect-ratio: 2 / 3;
   border-radius: 8px;
   overflow: hidden;
-  background-color: theme('colors.secondary.50');
-  border: 4px solid theme('colors.secondary.50');
-  outline: 1px solid theme('colors.secondary.200');
+  background-color: var(--color-secondary-50);
+  border: 4px solid var(--color-secondary-50);
+  outline: 1px solid var(--color-secondary-200);
   outline-offset: -1px;
   transition: transform 0.3s ease, outline-color 0.3s ease;
 }
@@ -213,7 +213,7 @@ const emit = defineEmits<{
 
 .library-entry:hover .library-entry__cover {
   transform: translateY(-2px);
-  outline-color: theme('colors.secondary.300');
+  outline-color: var(--color-secondary-300);
 }
 
 .library-entry__cover-img {
@@ -260,12 +260,12 @@ const emit = defineEmits<{
    text at this weight). Was primary-600 (4.0:1, fails AA). */
 .library-entry__kicker,
 .library-entry__essay-label {
-  font-family: theme('fontFamily.sans');
+  font-family: var(--font-sans);
   font-size: 0.6875rem;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: theme('colors.primary.700');
+  color: var(--color-primary-700);
 }
 
 .library-entry__essay-label {
@@ -273,21 +273,21 @@ const emit = defineEmits<{
 }
 
 .library-entry__year {
-  font-family: theme('fontFamily.sans');
+  font-family: var(--font-sans);
   font-size: 0.6875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 400;
-  color: theme('colors.secondary.500');
+  color: var(--color-secondary-500);
 }
 
 .library-entry__title {
-  font-family: theme('fontFamily.serif');
+  font-family: var(--font-serif);
   font-weight: 700;
   font-size: 1.625rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
-  color: theme('colors.secondary.800');
+  color: var(--color-secondary-800);
   margin: 0;
 }
 
@@ -298,9 +298,9 @@ const emit = defineEmits<{
 }
 
 .library-entry__author {
-  font-family: theme('fontFamily.sans');
+  font-family: var(--font-sans);
   font-size: 0.9375rem;
-  color: theme('colors.secondary.600');
+  color: var(--color-secondary-600);
   margin-top: 4px;
 }
 
@@ -314,13 +314,13 @@ const emit = defineEmits<{
 }
 
 .library-entry__genre {
-  font-family: theme('fontFamily.sans');
+  font-family: var(--font-sans);
   font-weight: 500;
   font-size: 0.6875rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background-color: theme('colors.secondary.100');
-  color: theme('colors.secondary.600');
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-600);
   padding: 4px 8px;
   border-radius: 4px;
 }
@@ -328,10 +328,10 @@ const emit = defineEmits<{
 /* Note column */
 
 .library-entry__description {
-  font-family: theme('fontFamily.sans');
+  font-family: var(--font-sans);
   font-size: 0.9375rem;
   line-height: 1.6;
-  color: theme('colors.secondary.600');
+  color: var(--color-secondary-600);
   margin: 0 0 32px;
   max-width: 60ch;
 }
@@ -341,10 +341,10 @@ const emit = defineEmits<{
 }
 
 .library-entry__paragraph {
-  font-family: theme('fontFamily.serif');
+  font-family: var(--font-serif);
   font-size: 1.0625rem;
   line-height: 1.75;
-  color: theme('colors.secondary.800');
+  color: var(--color-secondary-800);
   margin: 0 0 16px;
   max-width: 65ch;
 }
@@ -362,16 +362,16 @@ const emit = defineEmits<{
 .library-entry__quote {
   margin: 32px 0;
   padding: 4px 0 4px 24px;
-  border-left: 2px solid theme('colors.primary.500');
+  border-left: 2px solid var(--color-primary-500);
   max-width: 60ch;
 }
 
 .library-entry__quote-text {
-  font-family: theme('fontFamily.serif');
+  font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.0625rem;
   line-height: 1.6;
-  color: theme('colors.secondary.700');
+  color: var(--color-secondary-700);
   margin: 0;
 }
 
@@ -382,11 +382,11 @@ const emit = defineEmits<{
 }
 
 .library-entry__quote-attr {
-  font-family: theme('fontFamily.sans');
+  font-family: var(--font-sans);
   font-size: 0.75rem;
   font-style: normal;
   letter-spacing: 0.04em;
-  color: theme('colors.secondary.500');
+  color: var(--color-secondary-500);
   margin-top: 8px;
 }
 
@@ -404,58 +404,58 @@ const emit = defineEmits<{
    Kept in a non-scoped block so the html.dark ancestor selector is
    not constrained by this component's scope. */
 html.dark .library-entry {
-  border-color: theme('colors.secondary.700');
+  border-color: var(--color-secondary-700);
 }
 
 html.dark .library-entry__cover {
-  background-color: theme('colors.secondary.800');
-  border-color: theme('colors.secondary.800');
-  outline-color: theme('colors.secondary.700');
+  background-color: var(--color-secondary-800);
+  border-color: var(--color-secondary-800);
+  outline-color: var(--color-secondary-700);
 }
 
 html.dark .library-entry:hover .library-entry__cover {
-  outline-color: theme('colors.secondary.500');
+  outline-color: var(--color-secondary-500);
 }
 
 html.dark .library-entry__kicker,
 html.dark .library-entry__essay-label {
-  color: theme('colors.primary.300');
+  color: var(--color-primary-300);
 }
 
 html.dark .library-entry__year {
-  color: theme('colors.secondary.400');
+  color: var(--color-secondary-400);
 }
 
 html.dark .library-entry__title {
-  color: theme('colors.secondary.50');
+  color: var(--color-secondary-50);
 }
 
 html.dark .library-entry__author {
-  color: theme('colors.secondary.300');
+  color: var(--color-secondary-300);
 }
 
 html.dark .library-entry__genre {
-  background-color: theme('colors.secondary.800');
-  color: theme('colors.secondary.300');
+  background-color: var(--color-secondary-800);
+  color: var(--color-secondary-300);
 }
 
 html.dark .library-entry__description {
-  color: theme('colors.secondary.300');
+  color: var(--color-secondary-300);
 }
 
 html.dark .library-entry__paragraph {
-  color: theme('colors.secondary.100');
+  color: var(--color-secondary-100);
 }
 
 html.dark .library-entry__quote {
-  border-color: theme('colors.primary.400');
+  border-color: var(--color-primary-400);
 }
 
 html.dark .library-entry__quote-text {
-  color: theme('colors.secondary.200');
+  color: var(--color-secondary-200);
 }
 
 html.dark .library-entry__quote-attr {
-  color: theme('colors.secondary.400');
+  color: var(--color-secondary-400);
 }
 </style>

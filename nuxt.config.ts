@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // @ts-nocheck
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
@@ -34,7 +36,6 @@ export default defineNuxtConfig({
 
   // @nuxtjs/seo must be registered before @nuxt/content (v5 module-order requirement)
   modules: [
-    "@nuxtjs/tailwindcss",
     "@nuxtjs/seo",
     "@nuxt/image-nightly",
     "@nuxt/content",
@@ -99,7 +100,6 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    sources: ["/api/__sitemap__/urls"],
     xsl: false,
     cacheMaxAgeSeconds: 3600,
     defaults: {
@@ -122,6 +122,10 @@ export default defineNuxtConfig({
   },
 
   css: ["~/assets/css/main.css"],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 
   content: {
     build: {
