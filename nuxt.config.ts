@@ -133,10 +133,10 @@ export default defineNuxtConfig({
         highlight: {
           // Extra languages beyond the defaults bundled by @nuxtjs/mdc
           // (js, jsx, json, ts, tsx, vue, css, html, bash, md, mdc, yaml).
-          // Without toml, unknown languages fall back to plain text: the
+          // Without these, unknown languages fall back to plain text: the
           // spans get no per-token classes, inherit the pre's default
           // light color, and become invisible on the light-mode pre bg.
-          langs: ["toml"],
+          langs: ["toml", "nix"],
         },
       },
     },
