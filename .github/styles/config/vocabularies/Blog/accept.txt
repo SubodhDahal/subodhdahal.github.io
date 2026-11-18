@@ -193,3 +193,16 @@ Nir
 Vonnegut
 Proteus
 Player
+Razer
+hotplug
+hotplugged
+lspci
+PCIe
+sysfs
+prefetchable
+BARs
+dmesg
+udev
+Vulkan
+XWayland
+eGPU's
