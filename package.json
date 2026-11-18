@@ -24,8 +24,9 @@
     "feed": "^6.0.0",
     "nuxt": "^4.6.4",
     "nuxt-og-image": "^7.0.7",
+    "satori": "^0.47.1",
     "tailwindcss": "^4.3.5",
-    "satori": "^0.47.1"
+    "zod": "^4.6.7"
   },
   "overrides": {
     "@emnapi/core": "^1.11.3",
