@@ -138,80 +138,6 @@ meta:
 
 ---
 
-- **Page:** Library · Subodh Dahal
-- **Source:** https://subodhdahal.com/library
-- **Description:** Books I have read and recommend, with a short note on why each one earned its place.
-
-```yaml
-meta:
-  og:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
-  og:image:height: "600"
-  og:image:type: image/png
-  og:image:width: "1200"
-  twitter:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
-```
-
-```json
-{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/library/#webpage","@type":"WebPage","description":"Books I have read and recommend, with a short note on why each one earned its place.","name":"Library","url":"https://subodhdahal.com/library/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/library/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Software Engineer","name":"Subodh Dahal","url":"https://subodhdahal.com","image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"sameAs":["https://github.com/subodhdahal","https://linkedin.com/in/subodhdahal"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
-```
-
----
-
-- **Page:** Self-Hosting my Git forge with Forgejo
-- **Source:** https://subodhdahal.com/blog/self-hosting-my-git-forge
-- **Description:** Why I moved away from GitHub and chose a lightweight, community-driven alternative
-
-For years, GitHub held all my personal Git repos. It worked fine. I used it with friends during my bachelor's and master's studies. But over time it felt less like a tool and more like a service that just put up with me.
-
-GitHub has had its share of problems lately. Repos scanned for AI training unless you opt out, outages, and [Git history rewritten after merging pull requests](https://github.blog/news-insights/company-news/an-update-on-github-availability/) are a few examples.
-
-What pushed me to self-host was my unease with data on servers whose terms can change anytime. That's the thinking behind most of what I self-host. I run my own reading feed, my own photo library, and now my own Git forge. It's not the easy path, but ownership and privacy are worth the effort.
-
-## Why Not GitLab?
-
-[GitLab](https://gitlab.com) was the obvious first thing to look at. I've used it at work for years and it's solid. But it's built for teams and companies, and that shows in the resources it needs. Running it at home means a platform that needs gigabytes of RAM for things I'd never use. My small NUC runs other services and couldn't handle it.
-
-## Why Forgejo?
-
-[Forgejo](https://forgejo.org) is a lightweight, self-hosted Git forge from [Codeberg e.V.](https://codeberg.org/Codeberg/org), a non-profit. It's written in Go. It runs as one binary that fits in a few hundred megabytes of RAM.
-
-What I use day to day:
-
-- **Repository hosting:** that's mainly what I need it for and it does the job well.
-- **Container registry:** there's a built-in registry for container images. I push Docker images straight to my own instance.
-- **Forgejo Actions:** my projects use Actions to build the container image and push it to the registry. On the VM where I run my personal services, the `docker-compose` files point to my Forgejo registry directly. The syntax is close to GitHub Actions, and the whole flow from code to running container stays inside my homelab.
-- **Pull mirrors:** for repos that still live on GitHub, Forgejo syncs them on a schedule. It's a simple way to keep a local copy without changing the current setup.
-
-I'm also hosting forks of a few open source projects I've tweaked. Those get built and pushed to my own registry too.
-
-I don't use issue tracking, pull requests, or wikis yet. They're there if I need them.
-
-## How It's Running
-
-Forgejo runs on a NUC at home, inside an Ubuntu VM on Proxmox, alongside a few other core services. I only access it over my home network. I could route it through Tailscale to get in when I'm away, but I haven't felt the need yet.
-
-Getting Forgejo Actions to work with the Traefik proxy took a few tries. The Docker build steps took a while too. After that, it has worked without issues for more than 3 months.
-
-## Backups
-
-One thing I didn't want to skip on was backups. Forgejo has a built-in `forgejo dump` command. It packs up the repos, config, and attachments into an archive. I run a daily cronjob with this command. I also dump the Postgres database on its own. Both get pushed to my NAS.
-
-## Migrating from GitHub
-
-The move went better than I expected. Forgejo has a built-in import tool that pulls everything from a GitHub repo: code, issues, pull requests, and history. You just give it the repo URL and a GitHub token.
-
-I put my old projects into an organization of their own on my Forgejo instance, away from my main account. I'm not actively working on them, but they're there if I ever need to look something up.
-
-I also finally found a place for my Logseq notes, now stored in Git. Since I own the server, I don't worry about someone else having access to them.
-
-I still use GitHub where it makes sense. My personal website runs on GitHub Pages at no cost, so that repo stays there. I use Forgejo's pull mirror to sync it to my instance on a schedule. That way I always have a local copy without changing the setup. Most open source projects are on GitHub, so it's still where I go when I want to contribute to something.
-
-## Takeaway
-
-The setup was simple, upkeep is low, and pushing code to my own server feels good.
-
----
-
 - **Page:** Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot
 - **Source:** https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos
 
@@ -360,6 +286,89 @@ I'd rather list these than imply it all works:
 
 ---
 
+- **Page:** Curating my own reading and discovery feed with RSS
+- **Source:** https://subodhdahal.com/blog/reading-and-discovery-feed-curation
+- **Description:** Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
+
+For quite some time, I have wanted to rely less on algorithmically curated feeds. The daily scroll through YouTube, Substack, or LinkedIn felt less like discovery and more like dopamine mining. I wanted a system that delivered interesting content to satisfy my curiosity, without platforms whose best interest is to have me glued to them. These days, finding such a platform is tough. Even if one exists now, there's no guarantee it won't eventually mimic the ones I wanted to get away from.
+
+I wanted a system where I subscribe directly to creators or communities sharing content I like. That's exactly what a feed reader does. It pulls content chronologically from blogs and sites that support RSS/Atom feeds, with no middleman filtering or recommending.
+
+There are a few feed reader platforms, but I wanted to have full data ownership and more control over the system. This is why I decided to self-host [FreshRSS](https://github.com/FreshRSS/FreshRSS), an open-source feed aggregator and reader, on my homelab running on a mini-PC. This also has the added advantage of being resilient compared to an online service which may stop existing for reasons beyond my control.
+
+## Feed sources
+
+Rather than relying on algorithms of platforms to decide which content they want to show me, I now subscribe to content from sources where I have found interesting writings before. I categorize the content sources broadly into the following:
+
+- Communities: There's many interesting posts being shared on communities like Hacker News RSS, Lobsters, Lemmy. I started by directly subscribing to their content RSS feed. But the number of posts was overwhelming. So I now use [hnrss.com](https://hnrss.github.io/) and [upvote-rss](https://github.com/johnwarne/upvote-rss) to get only the top posts from them.
+- Personal Blogs: If a post catches my eye, I check the author’s site and subscribe to their personal RSS feed if they have other content that I also find interesting.
+- Substack: I subscribe to a creator's publication directly by using their Substack URL.
+- Websites without RSS: Not all websites provide RSS/Atom feeds. Luckily, there's an open-source and self-hostable project called [RSSHub](https://github.com/DIYgod/RSSHub) which can generate RSS feeds for many popular websites. It acts as a bridge between my FreshRSS instance and those websites. It also has a browser extension companion: [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar) to easily find and subscribe to RSS feeds.
+- Newsletters: Previously, I had subscribed to many newsletters on my personal email. This made my email inbox messy and it felt like a chore to go and read there. I now use [Kill the Newsletter!](https://kill-the-newsletter.com/) which provides an email address to subscribe to these newsletters. It generates an Atom feed which I can subscribe to in FreshRSS. This has the benefit of keeping my inbox clean and also consolidating all my reading into a single application.
+- YouTube Channels: Yes, I can directly subscribe to YouTube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
+
+<figure className="w-full,image">
+<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="/images/freshrss-ui.png" style="border: 1px solid black">
+
+
+
+</iframe>
+
+
+  <figcaption>
+
+This is how my FreshRSS looks like
+
+</figcaption>
+</figure>
+
+Since FreshRSS is an aggregator, I don't necessarily need to use the FreshRSS interface to access my feed. There are many applications for different platforms which can use FreshRSS as the source for the feeds. I use the Readrops app on my phone. I have occasionally used the NetNewsWire app on MacOS.
+
+## Filtering my feed
+
+Some newsletters I subscribe to, like those covering AI news, have a short shelf life. If I haven't read them within a month, the content is usually stale and there is little point in me reading them. That's why I've set up the `-pubdate:P30D` filter to automatically mark them as read.
+
+FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a YouTube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
+
+Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenever I get to them, so there's no need to rush.
+
+## Extending and customizing FreshRSS
+
+FreshRSS is not the only self-hostable feed aggregator. The main reason I chose it is because of its support for extensions which allows for augmenting its functionality. The ones I find useful are:
+
+- Youlag: Better interface for YouTube videos than the default view
+- Af_Readability: Inlines full article content for sites that only show excerpts in feeds.
+- Karakeep Button: Saves interesting posts directly to my Karakeep instance for long-term storage.
+
+There's a lot more extensions which can be browsed in the [official repository](https://github.com/FreshRSS/Extensions).
+
+## Conclusion
+
+After migrating to this setup, I am reading more in-depth content than what I did before. I've discovered authors sharing valuable perspectives on topics I find interesting that are not within the current hype-cycle. It's also refreshing to follow the creators whose writing feels like the pre-SEO, pre-marketing, pre-AISlop internet.
+
+I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my default way of finding new content is now the feed reader.
+
+---
+
+- **Page:** Library · Subodh Dahal
+- **Source:** https://subodhdahal.com/library
+- **Description:** Books I have read and recommend, with a short note on why each one earned its place.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+```
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/library/#webpage","@type":"WebPage","description":"Books I have read and recommend, with a short note on why each one earned its place.","name":"Library","url":"https://subodhdahal.com/library/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/library/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Software Engineer","name":"Subodh Dahal","url":"https://subodhdahal.com","image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"sameAs":["https://github.com/subodhdahal","https://linkedin.com/in/subodhdahal"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
 - **Page:** Fixing my broken Docker Immich+Traefik setup
 - **Source:** https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup
 - **Description:** Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.
@@ -440,6 +449,218 @@ The `traefik.docker.network=proxy` label tells Traefik which network to use for 
 Compose creates the internal network fresh, so DNS always works. When Immich sends jobs to Redis or reads from Postgres, names resolve fast. Traffic from Traefik arrives on the proxy network instead. Both networks reach the same containers through different paths, so the timing issues vanish.
 
 Now photo indexing and all the other jobs work as intended.
+
+---
+
+- **Page:** My 2023 travels: A visual journey
+- **Source:** https://subodhdahal.com/blog/2023-travels-visual-journey
+- **Description:** Looking back at the best pictures from my travel adventures in 2023
+
+## My 2023 travels: A visual journey
+
+Yet another year has passed. I've been lucky enough to travel to some amazing places, meet some amazing people and make wonderful memories. Here are some of my favourite pictures from my travels in 2023.
+
+## Nepal 🇳🇵
+
+### Kathmandu valley
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Nyatapole temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-10.jpg)
+  ![The Himalayas as seen from Kathmandu](https://subodhdahal.com/images/2023-visual-journey/nepal-9.jpg)
+  ![A temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-1.jpg)
+
+</div>
+
+### Bharatpur
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-4.jpg)
+  ![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-3.jpg)
+  ![Evening in Sauraha](https://subodhdahal.com/images/2023-visual-journey/nepal-5.jpg)
+
+</div>
+
+### Pokhara
+
+![View of Mount Machhapuchhre](https://subodhdahal.com/images/2023-visual-journey/nepal-2.jpg)![Boating in Phewa Lake](https://subodhdahal.com/images/2023-visual-journey/nepal-11.jpg)## Croatia 🇭🇷
+
+### Plitvice Lakes National Park
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-8.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-9.jpg)
+
+</div>
+
+### Zagreb
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-6.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-3.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-4.jpg)
+
+</div>
+
+### Split
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-10.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-13.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-14.jpg)
+
+</div>
+
+## France 🇫🇷
+
+### Strasbourg
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-1.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-2.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-4.jpg)
+
+</div>
+
+### Colmar
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-2.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-1.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-3.jpg)
+
+</div>
+
+### Nice and surrounding areas
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-7.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-3.jpg)
+  <div>
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-2.jpg)
+    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-8.jpg)
+
+</div>
+
+
+  <div>
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-5.jpg)
+    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-6.jpg)
+
+</div>
+</div>
+
+## Germany 🇩🇪
+
+### Kiel
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/june-kiel-2.jpg)
+
+</div>
+
+### Schwäbisch Hall
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/may-schwaebisch-hall-1.jpg)
+
+</div>
+
+### Würzburg
+
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/aug-wuerzburg-2.jpg)## Monaco 🇲🇨
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Monaco](https://subodhdahal.com/images/2023-visual-journey/may-monaco-1.jpg)
+
+</div>
+
+## Hungary 🇭🇺
+
+### Budapest
+
+![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-6.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-4.jpg)
+  ![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-1.jpg)
+
+</div>
+
+## Netherlands 🇳🇱
+
+### Amsterdam
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-3.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-3.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-2.jpg)
+
+</div>
+
+### The Hague
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-4.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-5.jpg)
+
+</div>
+
+### Zaandam
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-5.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-7.jpg)
+
+</div>
+
+## Spain 🇪🇸
+
+### Barcelona
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-1.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-8.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-7.jpg)
+
+</div>
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-5.jpg)
+  ![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-6.jpg)
+
+</div>
+
+### Montserrat
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-9.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-11.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-10.jpg)
+
+</div>
+
+<div className="text-travel-heading,text-5xl,text-center,mt-8,pb-8">
+
+Fin
+
+</div>
 
 ---
 
@@ -666,350 +887,217 @@ Then I'd add Worktrunk when the repeated environment setup starts getting irrita
 
 ---
 
-- **Page:** Curating my own reading and discovery feed with RSS
-- **Source:** https://subodhdahal.com/blog/reading-and-discovery-feed-curation
-- **Description:** Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
+- **Page:** Self-Hosting my Git forge with Forgejo
+- **Source:** https://subodhdahal.com/blog/self-hosting-my-git-forge
+- **Description:** Why I moved away from GitHub and chose a lightweight, community-driven alternative
 
-For quite some time, I have wanted to rely less on algorithmically curated feeds. The daily scroll through YouTube, Substack, or LinkedIn felt less like discovery and more like dopamine mining. I wanted a system that delivered interesting content to satisfy my curiosity, without platforms whose best interest is to have me glued to them. These days, finding such a platform is tough. Even if one exists now, there's no guarantee it won't eventually mimic the ones I wanted to get away from.
+For years, GitHub held all my personal Git repos. It worked fine. I used it with friends during my bachelor's and master's studies. But over time it felt less like a tool and more like a service that just put up with me.
 
-I wanted a system where I subscribe directly to creators or communities sharing content I like. That's exactly what a feed reader does. It pulls content chronologically from blogs and sites that support RSS/Atom feeds, with no middleman filtering or recommending.
+GitHub has had its share of problems lately. Repos scanned for AI training unless you opt out, outages, and [Git history rewritten after merging pull requests](https://github.blog/news-insights/company-news/an-update-on-github-availability/) are a few examples.
 
-There are a few feed reader platforms, but I wanted to have full data ownership and more control over the system. This is why I decided to self-host [FreshRSS](https://github.com/FreshRSS/FreshRSS), an open-source feed aggregator and reader, on my homelab running on a mini-PC. This also has the added advantage of being resilient compared to an online service which may stop existing for reasons beyond my control.
+What pushed me to self-host was my unease with data on servers whose terms can change anytime. That's the thinking behind most of what I self-host. I run my own reading feed, my own photo library, and now my own Git forge. It's not the easy path, but ownership and privacy are worth the effort.
 
-## Feed sources
+## Why Not GitLab?
 
-Rather than relying on algorithms of platforms to decide which content they want to show me, I now subscribe to content from sources where I have found interesting writings before. I categorize the content sources broadly into the following:
+[GitLab](https://gitlab.com) was the obvious first thing to look at. I've used it at work for years and it's solid. But it's built for teams and companies, and that shows in the resources it needs. Running it at home means a platform that needs gigabytes of RAM for things I'd never use. My small NUC runs other services and couldn't handle it.
 
-- Communities: There's many interesting posts being shared on communities like Hacker News RSS, Lobsters, Lemmy. I started by directly subscribing to their content RSS feed. But the number of posts was overwhelming. So I now use [hnrss.com](https://hnrss.github.io/) and [upvote-rss](https://github.com/johnwarne/upvote-rss) to get only the top posts from them.
-- Personal Blogs: If a post catches my eye, I check the author’s site and subscribe to their personal RSS feed if they have other content that I also find interesting.
-- Substack: I subscribe to a creator's publication directly by using their Substack URL.
-- Websites without RSS: Not all websites provide RSS/Atom feeds. Luckily, there's an open-source and self-hostable project called [RSSHub](https://github.com/DIYgod/RSSHub) which can generate RSS feeds for many popular websites. It acts as a bridge between my FreshRSS instance and those websites. It also has a browser extension companion: [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar) to easily find and subscribe to RSS feeds.
-- Newsletters: Previously, I had subscribed to many newsletters on my personal email. This made my email inbox messy and it felt like a chore to go and read there. I now use [Kill the Newsletter!](https://kill-the-newsletter.com/) which provides an email address to subscribe to these newsletters. It generates an Atom feed which I can subscribe to in FreshRSS. This has the benefit of keeping my inbox clean and also consolidating all my reading into a single application.
-- YouTube Channels: Yes, I can directly subscribe to YouTube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
+## Why Forgejo?
 
-<figure className="w-full,image">
-<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="/images/freshrss-ui.png" style="border: 1px solid black">
+[Forgejo](https://forgejo.org) is a lightweight, self-hosted Git forge from [Codeberg e.V.](https://codeberg.org/Codeberg/org), a non-profit. It's written in Go. It runs as one binary that fits in a few hundred megabytes of RAM.
 
+What I use day to day:
 
+- **Repository hosting:** that's mainly what I need it for and it does the job well.
+- **Container registry:** there's a built-in registry for container images. I push Docker images straight to my own instance.
+- **Forgejo Actions:** my projects use Actions to build the container image and push it to the registry. On the VM where I run my personal services, the `docker-compose` files point to my Forgejo registry directly. The syntax is close to GitHub Actions, and the whole flow from code to running container stays inside my homelab.
+- **Pull mirrors:** for repos that still live on GitHub, Forgejo syncs them on a schedule. It's a simple way to keep a local copy without changing the current setup.
 
-</iframe>
+I'm also hosting forks of a few open source projects I've tweaked. Those get built and pushed to my own registry too.
 
+I don't use issue tracking, pull requests, or wikis yet. They're there if I need them.
 
-  <figcaption>
+## How It's Running
 
-This is how my FreshRSS looks like
+Forgejo runs on a NUC at home, inside an Ubuntu VM on Proxmox, alongside a few other core services. I only access it over my home network. I could route it through Tailscale to get in when I'm away, but I haven't felt the need yet.
 
-</figcaption>
-</figure>
+Getting Forgejo Actions to work with the Traefik proxy took a few tries. The Docker build steps took a while too. After that, it has worked without issues for more than 3 months.
 
-Since FreshRSS is an aggregator, I don't necessarily need to use the FreshRSS interface to access my feed. There are many applications for different platforms which can use FreshRSS as the source for the feeds. I use the Readrops app on my phone. I have occasionally used the NetNewsWire app on MacOS.
+## Backups
 
-## Filtering my feed
+One thing I didn't want to skip on was backups. Forgejo has a built-in `forgejo dump` command. It packs up the repos, config, and attachments into an archive. I run a daily cronjob with this command. I also dump the Postgres database on its own. Both get pushed to my NAS.
 
-Some newsletters I subscribe to, like those covering AI news, have a short shelf life. If I haven't read them within a month, the content is usually stale and there is little point in me reading them. That's why I've set up the `-pubdate:P30D` filter to automatically mark them as read.
+## Migrating from GitHub
 
-FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a YouTube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
+The move went better than I expected. Forgejo has a built-in import tool that pulls everything from a GitHub repo: code, issues, pull requests, and history. You just give it the repo URL and a GitHub token.
 
-Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenever I get to them, so there's no need to rush.
+I put my old projects into an organization of their own on my Forgejo instance, away from my main account. I'm not actively working on them, but they're there if I ever need to look something up.
 
-## Extending and customizing FreshRSS
+I also finally found a place for my Logseq notes, now stored in Git. Since I own the server, I don't worry about someone else having access to them.
 
-FreshRSS is not the only self-hostable feed aggregator. The main reason I chose it is because of its support for extensions which allows for augmenting its functionality. The ones I find useful are:
+I still use GitHub where it makes sense. My personal website runs on GitHub Pages at no cost, so that repo stays there. I use Forgejo's pull mirror to sync it to my instance on a schedule. That way I always have a local copy without changing the setup. Most open source projects are on GitHub, so it's still where I go when I want to contribute to something.
 
-- Youlag: Better interface for YouTube videos than the default view
-- Af_Readability: Inlines full article content for sites that only show excerpts in feeds.
-- Karakeep Button: Saves interesting posts directly to my Karakeep instance for long-term storage.
+## Takeaway
 
-There's a lot more extensions which can be browsed in the [official repository](https://github.com/FreshRSS/Extensions).
+The setup was simple, upkeep is low, and pushing code to my own server feels good.
+
+---
+
+- **Page:** Quickly outline large JSON responses with a custom jq function
+- **Source:** https://subodhdahal.com/blog/jq-json-outline
+- **Description:** Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.
+
+I was recently digging into Immich’s API to see if it exposes the fields I needed for some details about my photos. Immich is my self-hosted photo-management service. The API returned hundreds of lines of JSON. I just wanted to see its structure to check the fields I needed, but scrolling through all that data felt slow. I did what any sane programmer would do: I spent even more time trying to automate it.
+
+I’ve used [jq](https://jqlang.org/) before for quick JSON tweaks (it’s basically `sed` or `awk` for JSON), so I wondered if it could help here. A quick search showed that jq can collapse arrays to a single-item preview, then recurse through the whole document for a clean outline of the JSON’s shape in one pass.
+
+I later found out the response structures are already listed in the Immich API docs. I could have just looked that up and saved myself the hassle. But hey, it could well have been an endpoint with no docs, and my method works for any JSON API response.
+
+## The jq function
+
+Here’s the jq function I came up with. You can run it in a terminal:
+
+```bash
+jq '
+def shape:
+  if type == "array" then
+    if length > 0 then [ (.[0] | shape) ] else [] end
+  elif type == "object" then
+    with_entries(.value |= shape)
+  else
+    type
+  end;
+shape
+' response.json
+```
+
+The function checks each value. If it's an array, keep just the first item and recurse. If it's an object, walk through each key and recurse into the value. If it's a primitive like a string or number, return just the type name.
+
+## Actual Immich API shape
+
+Here's a simplified output of the jq function applied to the Immich API response:
+
+```json
+{
+  "albums": {
+    "count": "number",
+    ...
+  },
+  "assets": {
+    "count": "number",
+    "facets": [],
+    "items": [
+      {
+        ...
+        "duration": "string",
+        "exifInfo": {
+          "city": "string",
+          "country": "string",
+          ...
+        },
+        "fileCreatedAt": "string",
+        "fileModifiedAt": "string",
+        "hasMetadata": "boolean",
+        ...
+      }
+    ],
+    "nextPage": "string",
+    "total": "number"
+  }
+}
+```
+
+Now I instantly see that `assets.items[i].exifInfo.country` is a string. That's exactly what I needed to know to map photos by country.
+
+## Extending it for sample values
+
+Next, I wondered: what if I wanted real examples, not just types? I modified the primitive case to return the value itself:
+
+```bash
+jq '
+def shape_with_samples:
+  if type == "array" then
+    if length > 0 then [ (.[0] | shape_with_samples) ] else [] end
+  elif type == "object" then
+    with_entries(.value |= shape_with_samples)
+  else
+    .
+  end;
+shape_with_samples
+' response.json
+```
+
+Now I get sample data like:
+
+```json
+{
+  "albums": {
+    "count": 10,
+    ...
+  },
+  "assets": {
+    "count": 25,
+    "facets": [],
+    "items": [
+      {
+        ...
+        "duration": "00:00:05",
+        "exifInfo": {
+          "city": "Zurich",
+          "country": "Switzerland"
+        },
+        "fileCreatedAt": "2025-09-01T10:00:00Z",
+        "fileModifiedAt": "2025-09-01T10:05:00Z",
+        "hasMetadata": true,
+        ...
+      }
+    ],
+    "nextPage": "2",
+    "total": 25
+  }
+}
+```
+
+Seeing `"Switzerland"` immediately confirmed I was pulling the right field.
+
+## Sampling the first few items
+
+When the first asset lacked optional tags, I extended the function to sample the first N items:
+
+```bash
+jq '
+def shape_with_samples(n):
+  if type == "array" then
+    if length > 0 then
+      [ .[:n][] | shape_with_samples(n) ]
+    else [] end
+  elif type == "object" then
+    with_entries(.value |= shape_with_samples(n))
+  else
+    .
+  end;
+shape_with_samples(3)
+' response.json
+```
+
+## Making it reusable
+
+I will definitely not remember these functions in a month, so I saved them as reusable scripts:
+
+```bash
+~/.jq/shape.jq
+~/.jq/shape_with_samples.jq
+```
+
+Now I can run them anytime via:
+
+```bash
+jq -f ~/.jq/shape.jq response.json
+jq -f ~/.jq/shape_with_samples.jq response.json
+```
 
 ## Conclusion
 
-After migrating to this setup, I am reading more in-depth content than what I did before. I've discovered authors sharing valuable perspectives on topics I find interesting that are not within the current hype-cycle. It's also refreshing to follow the creators whose writing feels like the pre-SEO, pre-marketing, pre-AISlop internet.
-
-I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my default way of finding new content is now the feed reader.
-
----
-
-- **Page:** My 2023 travels: A visual journey
-- **Source:** https://subodhdahal.com/blog/2023-travels-visual-journey
-- **Description:** Looking back at the best pictures from my travel adventures in 2023
-
-## My 2023 travels: A visual journey
-
-Yet another year has passed. I've been lucky enough to travel to some amazing places, meet some amazing people and make wonderful memories. Here are some of my favourite pictures from my travels in 2023.
-
-## Nepal 🇳🇵
-
-### Kathmandu valley
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Nyatapole temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-10.jpg)
-  ![The Himalayas as seen from Kathmandu](https://subodhdahal.com/images/2023-visual-journey/nepal-9.jpg)
-  ![A temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-1.jpg)
-
-</div>
-
-### Bharatpur
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-4.jpg)
-  ![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-3.jpg)
-  ![Evening in Sauraha](https://subodhdahal.com/images/2023-visual-journey/nepal-5.jpg)
-
-</div>
-
-### Pokhara
-
-![View of Mount Machhapuchhre](https://subodhdahal.com/images/2023-visual-journey/nepal-2.jpg)![Boating in Phewa Lake](https://subodhdahal.com/images/2023-visual-journey/nepal-11.jpg)## Croatia 🇭🇷
-
-### Plitvice Lakes National Park
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-8.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-9.jpg)
-
-</div>
-
-### Zagreb
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-6.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-3.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-4.jpg)
-
-</div>
-
-### Split
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-10.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-13.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-14.jpg)
-
-</div>
-
-## France 🇫🇷
-
-### Strasbourg
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-1.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-2.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-4.jpg)
-
-</div>
-
-### Colmar
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-2.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-1.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-3.jpg)
-
-</div>
-
-### Nice and surrounding areas
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-7.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-3.jpg)
-  <div>
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-2.jpg)
-    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-8.jpg)
-
-</div>
-
-
-  <div>
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-5.jpg)
-    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-6.jpg)
-
-</div>
-</div>
-
-## Germany 🇩🇪
-
-### Kiel
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/june-kiel-2.jpg)
-
-</div>
-
-### Schwäbisch Hall
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/may-schwaebisch-hall-1.jpg)
-
-</div>
-
-### Würzburg
-
-![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/aug-wuerzburg-2.jpg)## Monaco 🇲🇨
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Monaco](https://subodhdahal.com/images/2023-visual-journey/may-monaco-1.jpg)
-
-</div>
-
-## Hungary 🇭🇺
-
-### Budapest
-
-![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-6.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-4.jpg)
-  ![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-1.jpg)
-
-</div>
-
-## Netherlands 🇳🇱
-
-### Amsterdam
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-3.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-3.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-2.jpg)
-
-</div>
-
-### The Hague
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-4.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-5.jpg)
-
-</div>
-
-### Zaandam
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-5.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-7.jpg)
-
-</div>
-
-## Spain 🇪🇸
-
-### Barcelona
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-1.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-8.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-7.jpg)
-
-</div>
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-5.jpg)
-  ![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-6.jpg)
-
-</div>
-
-### Montserrat
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-9.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-11.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-10.jpg)
-
-</div>
-
-<div className="text-travel-heading,text-5xl,text-center,mt-8,pb-8">
-
-Fin
-
-</div>
-
----
-
-- **Page:** Revisiting my Stream Deck for music control
-- **Source:** https://subodhdahal.com/blog/stream-deck-youtube-music
-- **Description:** How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.
-
-I bought a Stream Deck years ago hoping to improve my productivity in the home office, but quickly lost interest after the novelty wore off.
-
-Stream Deck is a customizable control panel with LCD buttons that trigger computer actions like launching apps, controlling media, automating workflows. Originally designed for streamers, it's gained popularity among developers and productivity enthusiasts.
-
-Since I didn't have any specific use for it, it sat in storage for months until I recently decided to give it another chance. This time with a focused approach.
-
-Instead of trying to automate everything at once, I focused on solving one specific daily annoyance: controlling music without breaking my workflow. This targeted approach made me actually use the Stream Deck regularly.
-
-## Setting up music controls
-
-My initial challenge was simple: I wanted to control YouTube Music without switching windows.
-
-While mapping Stream Deck buttons to Mac's multimedia keys for basic playback (play/pause, next, previous) was easy, I also needed a way to like or dislike songs to curate my collection effectively.
-
-I use the unofficial [YouTube Music Desktop App](https://github.com/th-ch/youtube-music) which offers an API server plugin for controlling the app. However, there was a catch: Stream Deck couldn't directly execute terminal commands on Mac, and bash scripts weren't working. After some research, I found that I need to create Automator apps to execute the terminal commands. Not the most straightforward solution, but it works.
-
-Here's how I set it up:
-
-1. Configure buttons on the Stream Deck to use the Mac's multimedia keys for basic playback controls.
-2. Install YouTube Music Desktop App and enable its API server plugin
-3. Install [`xh`](https://github.com/ducaale/xh) for HTTP requests
-4. Create [Automator apps](https://support.apple.com/guide/automator/welcome/mac) for these API endpoints:
-
-```bash
-http://0.0.0.0:26538/api/v1/like     # Like/unlike
-http://0.0.0.0:26538/api/v1/dislike  # Dislike
-http://0.0.0.0:26538/api/v1/pause    # Pause/play
-```
-
-1. Assign the Automator apps to Stream Deck buttons
-
-<figure className="mx-auto,my-8,max-w-3xl">
-
-![Stream Deck buttons setup for YouTube Music control](https://subodhdahal.com/images/stream-deck/stream-deck-youtube-music.png)
-  <figcaption className="text-center,mt-2,text-sm,text-gray-600,dark:text-gray-400">
-
-My buttons setup for YouTube Music on Stream Deck
-
-</figcaption>
-</figure>
-
-## Solving a related problem
-
-I use Super Whisper for speech-to-text via a Stream Deck button. But there was a problem: If music is playing, Super Whisper picks up the audio from it and the dictation doesn't work reliably.
-
-I solved this by creating a multi-action button in Stream Deck that first pauses YouTube Music using the `pause` API endpoint, then launches Super Whisper. I added an `&` at the end of the script to run it in the background. This prevents error messages when YouTube Music is not running.
-
-The launcher button for it is on the top right in the image above.
-
-## Physical layout change
-
-I moved the Stream Deck from directly in front of me to the left of my keyboard. This position feels more natural, so I no longer reach forward to press buttons.
-
-## Beyond music control
-
-I also use Stream Deck for:
-
-- **App launchers** for development tools
-- **Home office lighting** via Home Assistant integration
-- **System shortcuts** like Do Not Disturb or taking screenshots
-
-## The bigger picture
-
-This music control workflow is step one in an ongoing automation experiment. I'm documenting this success to create a template for future improvements and stay motivated. The key was finding the right approach to turn a failed purchase into a useful tool.
+It’s a simple trick, but it makes large JSON responses much easier to read. When you hit an undocumented API, jq maps its structure fast and without guesswork.
 
 ---
 
@@ -1268,162 +1356,74 @@ The full code is in my [GitHub repository](https://github.com/SubodhDahal/subodh
 
 ---
 
-- **Page:** Quickly outline large JSON responses with a custom jq function
-- **Source:** https://subodhdahal.com/blog/jq-json-outline
-- **Description:** Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.
+- **Page:** Revisiting my Stream Deck for music control
+- **Source:** https://subodhdahal.com/blog/stream-deck-youtube-music
+- **Description:** How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.
 
-I was recently digging into Immich’s API to see if it exposes the fields I needed for some details about my photos. Immich is my self-hosted photo-management service. The API returned hundreds of lines of JSON. I just wanted to see its structure to check the fields I needed, but scrolling through all that data felt slow. I did what any sane programmer would do: I spent even more time trying to automate it.
+I bought a Stream Deck years ago hoping to improve my productivity in the home office, but quickly lost interest after the novelty wore off.
 
-I’ve used [jq](https://jqlang.org/) before for quick JSON tweaks (it’s basically `sed` or `awk` for JSON), so I wondered if it could help here. A quick search showed that jq can collapse arrays to a single-item preview, then recurse through the whole document for a clean outline of the JSON’s shape in one pass.
+Stream Deck is a customizable control panel with LCD buttons that trigger computer actions like launching apps, controlling media, automating workflows. Originally designed for streamers, it's gained popularity among developers and productivity enthusiasts.
 
-I later found out the response structures are already listed in the Immich API docs. I could have just looked that up and saved myself the hassle. But hey, it could well have been an endpoint with no docs, and my method works for any JSON API response.
+Since I didn't have any specific use for it, it sat in storage for months until I recently decided to give it another chance. This time with a focused approach.
 
-## The jq function
+Instead of trying to automate everything at once, I focused on solving one specific daily annoyance: controlling music without breaking my workflow. This targeted approach made me actually use the Stream Deck regularly.
 
-Here’s the jq function I came up with. You can run it in a terminal:
+## Setting up music controls
 
-```bash
-jq '
-def shape:
-  if type == "array" then
-    if length > 0 then [ (.[0] | shape) ] else [] end
-  elif type == "object" then
-    with_entries(.value |= shape)
-  else
-    type
-  end;
-shape
-' response.json
-```
+My initial challenge was simple: I wanted to control YouTube Music without switching windows.
 
-The function checks each value. If it's an array, keep just the first item and recurse. If it's an object, walk through each key and recurse into the value. If it's a primitive like a string or number, return just the type name.
+While mapping Stream Deck buttons to Mac's multimedia keys for basic playback (play/pause, next, previous) was easy, I also needed a way to like or dislike songs to curate my collection effectively.
 
-## Actual Immich API shape
+I use the unofficial [YouTube Music Desktop App](https://github.com/th-ch/youtube-music) which offers an API server plugin for controlling the app. However, there was a catch: Stream Deck couldn't directly execute terminal commands on Mac, and bash scripts weren't working. After some research, I found that I need to create Automator apps to execute the terminal commands. Not the most straightforward solution, but it works.
 
-Here's a simplified output of the jq function applied to the Immich API response:
+Here's how I set it up:
 
-```json
-{
-  "albums": {
-    "count": "number",
-    ...
-  },
-  "assets": {
-    "count": "number",
-    "facets": [],
-    "items": [
-      {
-        ...
-        "duration": "string",
-        "exifInfo": {
-          "city": "string",
-          "country": "string",
-          ...
-        },
-        "fileCreatedAt": "string",
-        "fileModifiedAt": "string",
-        "hasMetadata": "boolean",
-        ...
-      }
-    ],
-    "nextPage": "string",
-    "total": "number"
-  }
-}
-```
-
-Now I instantly see that `assets.items[i].exifInfo.country` is a string. That's exactly what I needed to know to map photos by country.
-
-## Extending it for sample values
-
-Next, I wondered: what if I wanted real examples, not just types? I modified the primitive case to return the value itself:
+1. Configure buttons on the Stream Deck to use the Mac's multimedia keys for basic playback controls.
+2. Install YouTube Music Desktop App and enable its API server plugin
+3. Install [`xh`](https://github.com/ducaale/xh) for HTTP requests
+4. Create [Automator apps](https://support.apple.com/guide/automator/welcome/mac) for these API endpoints:
 
 ```bash
-jq '
-def shape_with_samples:
-  if type == "array" then
-    if length > 0 then [ (.[0] | shape_with_samples) ] else [] end
-  elif type == "object" then
-    with_entries(.value |= shape_with_samples)
-  else
-    .
-  end;
-shape_with_samples
-' response.json
+http://0.0.0.0:26538/api/v1/like     # Like/unlike
+http://0.0.0.0:26538/api/v1/dislike  # Dislike
+http://0.0.0.0:26538/api/v1/pause    # Pause/play
 ```
 
-Now I get sample data like:
+1. Assign the Automator apps to Stream Deck buttons
 
-```json
-{
-  "albums": {
-    "count": 10,
-    ...
-  },
-  "assets": {
-    "count": 25,
-    "facets": [],
-    "items": [
-      {
-        ...
-        "duration": "00:00:05",
-        "exifInfo": {
-          "city": "Zurich",
-          "country": "Switzerland"
-        },
-        "fileCreatedAt": "2025-09-01T10:00:00Z",
-        "fileModifiedAt": "2025-09-01T10:05:00Z",
-        "hasMetadata": true,
-        ...
-      }
-    ],
-    "nextPage": "2",
-    "total": 25
-  }
-}
-```
+<figure className="mx-auto,my-8,max-w-3xl">
 
-Seeing `"Switzerland"` immediately confirmed I was pulling the right field.
+![Stream Deck buttons setup for YouTube Music control](https://subodhdahal.com/images/stream-deck/stream-deck-youtube-music.png)
+  <figcaption className="text-center,mt-2,text-sm,text-gray-600,dark:text-gray-400">
 
-## Sampling the first few items
+My buttons setup for YouTube Music on Stream Deck
 
-When the first asset lacked optional tags, I extended the function to sample the first N items:
+</figcaption>
+</figure>
 
-```bash
-jq '
-def shape_with_samples(n):
-  if type == "array" then
-    if length > 0 then
-      [ .[:n][] | shape_with_samples(n) ]
-    else [] end
-  elif type == "object" then
-    with_entries(.value |= shape_with_samples(n))
-  else
-    .
-  end;
-shape_with_samples(3)
-' response.json
-```
+## Solving a related problem
 
-## Making it reusable
+I use Super Whisper for speech-to-text via a Stream Deck button. But there was a problem: If music is playing, Super Whisper picks up the audio from it and the dictation doesn't work reliably.
 
-I will definitely not remember these functions in a month, so I saved them as reusable scripts:
+I solved this by creating a multi-action button in Stream Deck that first pauses YouTube Music using the `pause` API endpoint, then launches Super Whisper. I added an `&` at the end of the script to run it in the background. This prevents error messages when YouTube Music is not running.
 
-```bash
-~/.jq/shape.jq
-~/.jq/shape_with_samples.jq
-```
+The launcher button for it is on the top right in the image above.
 
-Now I can run them anytime via:
+## Physical layout change
 
-```bash
-jq -f ~/.jq/shape.jq response.json
-jq -f ~/.jq/shape_with_samples.jq response.json
-```
+I moved the Stream Deck from directly in front of me to the left of my keyboard. This position feels more natural, so I no longer reach forward to press buttons.
 
-## Conclusion
+## Beyond music control
 
-It’s a simple trick, but it makes large JSON responses much easier to read. When you hit an undocumented API, jq maps its structure fast and without guesswork.
+I also use Stream Deck for:
+
+- **App launchers** for development tools
+- **Home office lighting** via Home Assistant integration
+- **System shortcuts** like Do Not Disturb or taking screenshots
+
+## The bigger picture
+
+This music control workflow is step one in an ongoing automation experiment. I'm documenting this success to create a template for future improvements and stay motivated. The key was finding the right approach to turn a failed purchase into a useful tool.
 
 ---
 
@@ -1684,423 +1684,6 @@ This setup changed how I manage configs. Here's what it gives me:
 
 ---
 
-- **Page:** Git and the command-line: Take your workflow to the next level
-- **Source:** https://subodhdahal.com/blog/git-and-command-line-next-level-workflow
-- **Description:** Some tips on how to improve your Git productivity using the command-line
-
-# What is git?
-
-Git is a version control system that helps developers track changes to their code and collaborate with others on software projects. It allows developers to easily switch between different versions of their code and work on different features in parallel without affecting the main codebase.
-
-# Why use the command-line?
-
-Although there are many GUI Git applications, using git from the command-line allows you to configure and streamline it to your workflow rather than being constrained by the interfaces of the GUI. It will also force you to understand more of how git works and since it's a tool that developers need to use often, I'd say it's not a bad motivation. You can still use the GUI for taking care of the more complex tasks until you get more familiar with using the command-line.
-
-# Tips to improve your workflow
-
-## 1. Add aliases for commonly used commands
-
-When using git from the command-line you are expected to write commands but this doesn't mean you can't make life easier for yourself. Instead of writing the whole command all the time, you can add shorter versions of them as aliases.
-
-Here are some of the aliases that I use frequently:
-
-<div className="flex,justify-center">
-<table className="table-auto,justify-center,mb-4,w-1/2">
-<thead>
-  <tr>
-    <th>
-      alias
-    </th>
-    
-    
-            <th>
-      command
-    </th>
-  </tr>
-</thead>
-
-
-    <tbody className="font-mono">
-  <tr>
-    <td>
-      g
-    </td>
-    
-    
-            <td>
-      git
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      ga
-    </td>
-    
-    
-            <td>
-      git add
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gb
-    </td>
-    
-    
-            <td>
-      git branch
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gc
-    </td>
-    
-    
-            <td>
-      git commit -v
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gco
-    </td>
-    
-    
-            <td>
-      git checkout
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gcb
-    </td>
-    
-    
-            <td>
-      git checkout -b
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gcp
-    </td>
-    
-    
-            <td>
-      git cherry-pick
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      grb
-    </td>
-    
-    
-            <td>
-      git rebase
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      grbi
-    </td>
-    
-    
-            <td>
-      git rebase -i
-    </td>
-  </tr>
-</tbody>
-</table>
-</div>
-
-So now the following
-
-```bash
-git commit -v -m 'my commit message'
-```
-
-becomes
-
-```bash
-gc -m 'my commit message'
-```
-
-If you have `zsh` as your shell, have `ohmyzsh` installed and the `git` plugin enabled, there are already a lot of git aliases configured and can use them. You can have a look at them [here](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh). Even if you don't use `ohmyzsh`, you can take inspiration from the aliases and set them for your shell.
-
-For the `bash` shell, you can add the following to your `.bashrc` file.
-
-```bash
-alias g='git'
-alias ga='git add'
-alias gb='git branch'
-alias gc='git commit -v'
-alias gco='git checkout'
-alias gcb='git checkout -b'
-alias gcp='git cherry-pick'
-alias grb='git rebase'
-alias grbi='git rebase -i'
-```
-
-## 2. Enable auto-correction of spelling mistakes for commands
-
-We are human after all and sometimes we make spelling mistakes. Instead of having to correct the command ourself, we can let git do it for us if the mistakes are minimal.
-
-We can enable git auto-correct for all git repos by using the following command:
-
-```bash
-git config --global help.autoCorrect 5
-```
-
-The value of `help.autoCorrect` is the number of deciseconds git waits before it auto-corrects and applies the command. In the command above, it will wait 0.5 seconds.
-
-The `--global` flag specifies that auto-correction will be enabled for all git repositories in the system. If you omit this, it will only take effect in the current repo.
-
-<figure className="image">
-
-![git auto-correct in action](https://subodhdahal.com/images/git-and-command-line/git-autocorrect.png)
-  <figcaption>
-
-Git auto-correct in action
-
-</figcaption>
-</figure>
-
-## 3. Improved git checkout with fzf
-
-When you are working on a project you will need to switch between different branches. You can use `git checkout <branch_name>` or `git switch <branch_name>` to do that. But the `<branch_name>` needs to be exact and if you don't remember it you will need to run further commands or look up the branch name somewhere.
-
-We can make switching git branches simpler by integrating the checkout process with [fzf](https://github.com/junegunn/fzf). fzf is a command-line fuzzy finder which means we don't need to precisely remember the branch name. Just typing a few characters will list us the branches that match the existing branches using fuzzy logic.
-
-You can add the following to your `.bashrc` or `.zshrc` file to configure a custom function `git_checkout_branch` to run fzf with the list of branches in the repo, which you can then search fuzzily.
-
-```bash
-# Slightly modified version of the script mentioned in https://revelry.co/insights/development/terminal-workflow-fzf/
-git_checkout_branch() {
-  if [[ $1 != "" ]]; then
-    # pass all the parameters as-is, if provided
-    git checkout $*
-    return
-  fi
-
-  LINES=2
-  # show branches
-  result=$(git branch -a --color=always | grep -v '/HEAD\s' | sort |
-    fzf --height 50% --border --ansi --tac --preview-window right:70% \
-      --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
-    sed 's/^..//' | cut -d' ' -f1)
-
-  if [[ $result != "" ]]; then
-    if [[ $result == remotes/* ]]; then
-      git checkout --track $(echo $result | sed 's#remotes/##')
-    else
-      git checkout "$result"
-    fi
-  fi
-}
-```
-
-**Source:** Modified version of [https://revelry.co/insights/development/terminal-workflow-fzf/](https://revelry.co/insights/development/terminal-workflow-fzf/)
-
-Then when you run the command `git_checkout_branch` in the terminal, you will be presented with the branches in the repo and can type part of the branch name to get the branch name you want. Pressing enter on the selected branch will switch the current branch to that branch.
-
-You can, of course, add this as an alias instead of having to type the whole command.
-
-```bash
-alias gco='git_checkout_branch'
-```
-
-If you already know the branch name and don't want to be presented with a list of options, you can just use the command as `gco <branch_name>`, eg: `gco develop`.
-
-<figure className="image">
-
-![fzf in action](https://subodhdahal.com/images/git-and-command-line/git-checkout-fzf.gif)
-  <figcaption>
-
-Git checkout with fzf in action
-
-</figcaption>
-</figure>
-
-## 4. Using Git Interactive Rebase Tool
-
-Although rebase and interactive rebase can seem like a scary concepts in the beginning, after you get used to it, they can be powerful tools to organize history in a Git repo. It can be useful in a variety of situations, including:
-
-- Combining multiple commits into one
-
-  - Splitting a single commit into multiple commits
-
-  - Reordering commits
-
-  - Removing commits
-
-  - Fixing mistakes in commits
-
-  - Updating your local repository to match the upstream repository
-
-You can learn more about rebasing in [https://git-rebase.io/](https://git-rebase.io/).
-
-[Git Interactive Rebase Tool](https://github.com/MitMaro/git-interactive-rebase-tool) can help make the process of interactive rebasing easier. It is a GUI tool that runs in the terminal and can be used to rebase commits in a git repo. It is written in Rust and is available for Linux, macOS and Windows.
-
-<figure className="image" style="background: #272733">
-
-![fzf in action](https://subodhdahal.com/images/git-and-command-line/interactive-rebase-tool.gif)
-  <figcaption>
-
-Basic usage of Interactive Rebase Tool
-
-</figcaption>
-</figure>
-
-You can view the [documentation](https://mitmaro.github.io/git-interactive-rebase-tool/) for more information on how to set up and use the tool, along with all its features.
-
-# Conclusion
-
-Trying one or more of the above tips can help you become more productive with git. But as with any new workflow, it takes time to get used to it. So it might be good to start with one or two of the aforementioned tips and then move on to trying the others.
-
----
-
-## Bonus:
-
-If you would prefer a more GUI approach to working with git but in the terminal, then you can try one of the followings:
-
-- [tig](https://github.com/jonas/tig)
-
-  - [lazygit](https://github.com/jesseduffield/lazygit)
-
----
-
-- **Page:** Looking back: My 2022 in review
-- **Source:** https://subodhdahal.com/blog/2022-in-review
-- **Description:** From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.
-
-As the earth completes another revolution around the sun and yet another year comes to an end, I can't help but look back and reflect on all that has happened.
-
-For me, this year has been filled with highs and lows, moments of joy and sorrow, and a range of emotions in between. From embarking on solo adventures to creating lasting memories with close friends, I've had the opportunity to learn and grow in ways I never could have imagined.
-
-Join me as I take a journey through the year that was, and discover the lessons and insights I've gained along the way.
-
-# Personal highlights
-
-This year has been filled with exciting adventures, personal growth, and lasting memories. Here are some of the highlights:
-
-## A year of travel: My adventures in 10 countries
-
-This year, I set off on a series of solo adventures that opened my eyes to new experiences and gave me the freedom to make spontaneous decisions. As I traveled to different countries and immersed myself in diverse cultures, I gained a new perspective on the world and my place in it.
-
-Along the way, I met a cast of intriguing characters and took time to reflect on my life and future goals. And when I wasn't venturing out on my own, I made some unforgettable memories with my closest friends.
-
-<figure className="image">
-
-![Europe map](https://subodhdahal.com/images/2022-in-review/europe-map-visited.svg)
-  <figcaption>
-
-A map of Europe with the countries I traveled to in 2022 marked in blue
-
-</figcaption>
-</figure>
-
-I embarked on a journey that took me to 10 countries, 8 of which were new to me. From the beautiful beaches of Greece and the wide landscapes of Norway, to the charming streets of Belgium and the historic sites of Poland, I was constantly in awe of the diverse cultures and landscapes I encountered. In Italy, I marveled at the ancient architecture and savored the delicious cuisine. I also visited the smallest country in the world, Vatican City and marveled at the beauty of St. Peter's Basilica. In Estonia, I was struck by the country's natural beauty and rich history, and in Finland, I was fascinated by the unique blend of modern and traditional culture.
-
-And even though I've visited Switzerland and Austria before, I always find something new and exciting to discover in these beautiful countries. Along the way, I also explored countless charming towns and villages throughout Germany.
-
-All these experiences made this year one of the most memorable and rewarding travel experiences of my life.
-
-<figure className="quote">
-
-> The use of traveling is to regulate imagination by reality, and instead of thinking how things may be, to see them as they are.
-
-
-  <figcaption>
-
-— Samuel Johnson
-
-</figcaption>
-</figure>
-
-## Finding my inner strength: My 50km/day hikes in Germany
-
-This year, I pushed myself to new limits with two epic 50km/day hikes that challenged my physical and mental strength. As someone who has not traditionally considered themselves an athlete, this was a significant accomplishment that I never would have thought myself capable of before.
-
-The first one was along the Rössleweg in Stuttgart, Germany. It is mostly through wooded areas, picturesque vineyards and orchards, all while overlooking the valley known as the Stuttgarter Kessel.
-
-It was in preparation for the second one, which was the [50 km MegaMarsch event in Freiburg](https://www.megamarsch.de/50-12/freiburg/freiburg-anmeldung/), Germany. This was a 50km hike that started in the city and through the Black Forest, which is known for its dense forests and steep hills, before finally ending back in the city.
-
-Despite the exhausting nature of these hikes, they were both amazing experiences that helped me to push myself and discover what I was capable of.
-
-I am grateful to my good friend [Carsten Cierniak](https://www.instagram.com/carsten_thm/) for introducing me to the MegaMarsch event and for providing motivation and companionship during the hikes. Thanks also to him for the guidance and tips that helped me prepare for the hikes.
-
-## The great outdoors: A year of hiking and exploring
-
-Throughout the year, I have been able to do a lot of hiking, ranging from short walks to full-day hikes. Each trail offered its own unique beauty and challenges, from scenic mountain vistas to dense forests and winding rivers.
-
-Hiking has allowed me to disconnect from the stresses of daily life and reconnect with the beauty of the natural world. It has also been a great way to stay active and healthy, both physically and mentally.
-
-The most memorable hikes of the year were: to Zugspitze 🇩🇪, in the Black Forest 🇩🇪, in the Saxon Switzerland National Park 🇩🇪, and in Sognsvann 🇳🇴.
-
-Climbing to the top of Zugspitze, the highest mountain in Germany, proved to be a formidable challenge.The steep and rocky path halfway up the mountain was difficult, and the weather near the top was bad enough that we had to stop just a few hundred meters from the summit. However, the views along the way and the feeling of accomplishment made it all worth it.
-
-I was able to build a strong connection with my friends who accompanied me during these hikes as we bonded over the shared experience of exploring the beautiful nature these regions have to offer.
-
-Hiking has become a passion of mine and I look forward to continuing to explore the many trails that the world has to offer.
-
-## A night to remember: Iron Maiden in concert
-
-I was able to realize a long time desire of mine this year by seeing one of my favorite bands Iron Maiden live in concert. The thrill of hearing the songs I love performed live was an incredible. Despite the age of the band members, they delivered an electric performance and were able to make the 50,000 people present in the venue chant in unison.
-
-It was an unforgettable event that I will always cherish.
-
-# Professional highlights
-
-In addition to my travels, hikes and fun events, this year has also brought its share of challenges and growth in my professional life.
-
-## Stepping into a new role: Overcoming challenges and finding success
-
-As a seasoned Software Engineer with almost a decade of experience under my belt, I thought I had seen it all. But when I accepted the role of Software Engineering Team Lead at [Laserhub GmbH](https://laserhub.com/), I quickly realized that I had a lot to learn. Not only was this a promotion, but it also required me to approach things in a new way and shed some of my old habits.
-
-I'd be lying if I said it has been easy. There have been a lot of challenges, but I've been enjoying it so far and learning to see things from a new perspective. With the help of the wonderful people I work with, I have been able to grow a lot in this role.
-
-# Resilience in adversity: Struggles of those close to me in 2022
-
-In February of this year, a war broke out in Ukraine, causing me great concern for the safety of my colleagues and their loved ones living there. Despite my fears, they are fortunately able to remain safe, but they still have to cope with the ongoing effects of the war. I am in awe of their strength and resilience as they continue to live their lives as normally as possible, despite the challenges they face. I can only hope that the situation will improve and that peace will be restored in the near future.
-
-# Personal key takeaways from 2022
-
-- We are all works in progress. Who we were yesterday is not who we are today, and who we are today is not who we will be tomorrow.
-
-  - There is always the potential for growth and learning, and we should always be open to new knowledge and opportunities for self-improvement.
-
-  - Embracing challenges is essential to personal growth and development.
-
-  - Investing in meaningful relationships with loved ones is always worthwhile.
-
-As I look back on the year that was, I am filled with gratitude for all the things I've learned and experienced.
-
-Unfortunately, not everyone has had the same experience, with some really horrible things that happened in the world. I hope that 2023 will be a better year for everyone.
-
-I am grateful for the support and encouragement of those in my life this year. Your guidance and opportunities have allowed me to grow. Thank you for being a part of my journey and for the amazing times we had together.
-
-Here's to the future and to the continued growth and learning that it holds.
-
----
-
 - **Page:** Re-living memories through proper media organization
 - **Source:** https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization
 - **Description:** Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.
@@ -2256,6 +1839,120 @@ I am still experimenting with the workflow and tools that I use to manage my dig
 - Automatically correct timestamps on media, usually the ones received via chat apps
 - Automatic assignment of GPS coordinates for pictures/videos taken minutes apart, in case they don't have GPS metadata.
 - Add automatic tags for things in pictures, eg. sunsets, lakes, canyons, books
+
+---
+
+- **Page:** Looking back: My 2022 in review
+- **Source:** https://subodhdahal.com/blog/2022-in-review
+- **Description:** From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.
+
+As the earth completes another revolution around the sun and yet another year comes to an end, I can't help but look back and reflect on all that has happened.
+
+For me, this year has been filled with highs and lows, moments of joy and sorrow, and a range of emotions in between. From embarking on solo adventures to creating lasting memories with close friends, I've had the opportunity to learn and grow in ways I never could have imagined.
+
+Join me as I take a journey through the year that was, and discover the lessons and insights I've gained along the way.
+
+# Personal highlights
+
+This year has been filled with exciting adventures, personal growth, and lasting memories. Here are some of the highlights:
+
+## A year of travel: My adventures in 10 countries
+
+This year, I set off on a series of solo adventures that opened my eyes to new experiences and gave me the freedom to make spontaneous decisions. As I traveled to different countries and immersed myself in diverse cultures, I gained a new perspective on the world and my place in it.
+
+Along the way, I met a cast of intriguing characters and took time to reflect on my life and future goals. And when I wasn't venturing out on my own, I made some unforgettable memories with my closest friends.
+
+<figure className="image">
+
+![Europe map](https://subodhdahal.com/images/2022-in-review/europe-map-visited.svg)
+  <figcaption>
+
+A map of Europe with the countries I traveled to in 2022 marked in blue
+
+</figcaption>
+</figure>
+
+I embarked on a journey that took me to 10 countries, 8 of which were new to me. From the beautiful beaches of Greece and the wide landscapes of Norway, to the charming streets of Belgium and the historic sites of Poland, I was constantly in awe of the diverse cultures and landscapes I encountered. In Italy, I marveled at the ancient architecture and savored the delicious cuisine. I also visited the smallest country in the world, Vatican City and marveled at the beauty of St. Peter's Basilica. In Estonia, I was struck by the country's natural beauty and rich history, and in Finland, I was fascinated by the unique blend of modern and traditional culture.
+
+And even though I've visited Switzerland and Austria before, I always find something new and exciting to discover in these beautiful countries. Along the way, I also explored countless charming towns and villages throughout Germany.
+
+All these experiences made this year one of the most memorable and rewarding travel experiences of my life.
+
+<figure className="quote">
+
+> The use of traveling is to regulate imagination by reality, and instead of thinking how things may be, to see them as they are.
+
+
+  <figcaption>
+
+— Samuel Johnson
+
+</figcaption>
+</figure>
+
+## Finding my inner strength: My 50km/day hikes in Germany
+
+This year, I pushed myself to new limits with two epic 50km/day hikes that challenged my physical and mental strength. As someone who has not traditionally considered themselves an athlete, this was a significant accomplishment that I never would have thought myself capable of before.
+
+The first one was along the Rössleweg in Stuttgart, Germany. It is mostly through wooded areas, picturesque vineyards and orchards, all while overlooking the valley known as the Stuttgarter Kessel.
+
+It was in preparation for the second one, which was the [50 km MegaMarsch event in Freiburg](https://www.megamarsch.de/50-12/freiburg/freiburg-anmeldung/), Germany. This was a 50km hike that started in the city and through the Black Forest, which is known for its dense forests and steep hills, before finally ending back in the city.
+
+Despite the exhausting nature of these hikes, they were both amazing experiences that helped me to push myself and discover what I was capable of.
+
+I am grateful to my good friend [Carsten Cierniak](https://www.instagram.com/carsten_thm/) for introducing me to the MegaMarsch event and for providing motivation and companionship during the hikes. Thanks also to him for the guidance and tips that helped me prepare for the hikes.
+
+## The great outdoors: A year of hiking and exploring
+
+Throughout the year, I have been able to do a lot of hiking, ranging from short walks to full-day hikes. Each trail offered its own unique beauty and challenges, from scenic mountain vistas to dense forests and winding rivers.
+
+Hiking has allowed me to disconnect from the stresses of daily life and reconnect with the beauty of the natural world. It has also been a great way to stay active and healthy, both physically and mentally.
+
+The most memorable hikes of the year were: to Zugspitze 🇩🇪, in the Black Forest 🇩🇪, in the Saxon Switzerland National Park 🇩🇪, and in Sognsvann 🇳🇴.
+
+Climbing to the top of Zugspitze, the highest mountain in Germany, proved to be a formidable challenge.The steep and rocky path halfway up the mountain was difficult, and the weather near the top was bad enough that we had to stop just a few hundred meters from the summit. However, the views along the way and the feeling of accomplishment made it all worth it.
+
+I was able to build a strong connection with my friends who accompanied me during these hikes as we bonded over the shared experience of exploring the beautiful nature these regions have to offer.
+
+Hiking has become a passion of mine and I look forward to continuing to explore the many trails that the world has to offer.
+
+## A night to remember: Iron Maiden in concert
+
+I was able to realize a long time desire of mine this year by seeing one of my favorite bands Iron Maiden live in concert. The thrill of hearing the songs I love performed live was an incredible. Despite the age of the band members, they delivered an electric performance and were able to make the 50,000 people present in the venue chant in unison.
+
+It was an unforgettable event that I will always cherish.
+
+# Professional highlights
+
+In addition to my travels, hikes and fun events, this year has also brought its share of challenges and growth in my professional life.
+
+## Stepping into a new role: Overcoming challenges and finding success
+
+As a seasoned Software Engineer with almost a decade of experience under my belt, I thought I had seen it all. But when I accepted the role of Software Engineering Team Lead at [Laserhub GmbH](https://laserhub.com/), I quickly realized that I had a lot to learn. Not only was this a promotion, but it also required me to approach things in a new way and shed some of my old habits.
+
+I'd be lying if I said it has been easy. There have been a lot of challenges, but I've been enjoying it so far and learning to see things from a new perspective. With the help of the wonderful people I work with, I have been able to grow a lot in this role.
+
+# Resilience in adversity: Struggles of those close to me in 2022
+
+In February of this year, a war broke out in Ukraine, causing me great concern for the safety of my colleagues and their loved ones living there. Despite my fears, they are fortunately able to remain safe, but they still have to cope with the ongoing effects of the war. I am in awe of their strength and resilience as they continue to live their lives as normally as possible, despite the challenges they face. I can only hope that the situation will improve and that peace will be restored in the near future.
+
+# Personal key takeaways from 2022
+
+- We are all works in progress. Who we were yesterday is not who we are today, and who we are today is not who we will be tomorrow.
+
+  - There is always the potential for growth and learning, and we should always be open to new knowledge and opportunities for self-improvement.
+
+  - Embracing challenges is essential to personal growth and development.
+
+  - Investing in meaningful relationships with loved ones is always worthwhile.
+
+As I look back on the year that was, I am filled with gratitude for all the things I've learned and experienced.
+
+Unfortunately, not everyone has had the same experience, with some really horrible things that happened in the world. I hope that 2023 will be a better year for everyone.
+
+I am grateful for the support and encouragement of those in my life this year. Your guidance and opportunities have allowed me to grow. Thank you for being a part of my journey and for the amazing times we had together.
+
+Here's to the future and to the continued growth and learning that it holds.
 
 ---
 
@@ -2730,4 +2427,307 @@ I felt like a different person, for the better, after my journey.
 
 </div>
 </div>
+
+---
+
+- **Page:** Git and the command-line: Take your workflow to the next level
+- **Source:** https://subodhdahal.com/blog/git-and-command-line-next-level-workflow
+- **Description:** Some tips on how to improve your Git productivity using the command-line
+
+# What is git?
+
+Git is a version control system that helps developers track changes to their code and collaborate with others on software projects. It allows developers to easily switch between different versions of their code and work on different features in parallel without affecting the main codebase.
+
+# Why use the command-line?
+
+Although there are many GUI Git applications, using git from the command-line allows you to configure and streamline it to your workflow rather than being constrained by the interfaces of the GUI. It will also force you to understand more of how git works and since it's a tool that developers need to use often, I'd say it's not a bad motivation. You can still use the GUI for taking care of the more complex tasks until you get more familiar with using the command-line.
+
+# Tips to improve your workflow
+
+## 1. Add aliases for commonly used commands
+
+When using git from the command-line you are expected to write commands but this doesn't mean you can't make life easier for yourself. Instead of writing the whole command all the time, you can add shorter versions of them as aliases.
+
+Here are some of the aliases that I use frequently:
+
+<div className="flex,justify-center">
+<table className="table-auto,justify-center,mb-4,w-1/2">
+<thead>
+  <tr>
+    <th>
+      alias
+    </th>
+    
+    
+            <th>
+      command
+    </th>
+  </tr>
+</thead>
+
+
+    <tbody className="font-mono">
+  <tr>
+    <td>
+      g
+    </td>
+    
+    
+            <td>
+      git
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      ga
+    </td>
+    
+    
+            <td>
+      git add
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gb
+    </td>
+    
+    
+            <td>
+      git branch
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gc
+    </td>
+    
+    
+            <td>
+      git commit -v
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gco
+    </td>
+    
+    
+            <td>
+      git checkout
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gcb
+    </td>
+    
+    
+            <td>
+      git checkout -b
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gcp
+    </td>
+    
+    
+            <td>
+      git cherry-pick
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      grb
+    </td>
+    
+    
+            <td>
+      git rebase
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      grbi
+    </td>
+    
+    
+            <td>
+      git rebase -i
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+So now the following
+
+```bash
+git commit -v -m 'my commit message'
+```
+
+becomes
+
+```bash
+gc -m 'my commit message'
+```
+
+If you have `zsh` as your shell, have `ohmyzsh` installed and the `git` plugin enabled, there are already a lot of git aliases configured and can use them. You can have a look at them [here](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh). Even if you don't use `ohmyzsh`, you can take inspiration from the aliases and set them for your shell.
+
+For the `bash` shell, you can add the following to your `.bashrc` file.
+
+```bash
+alias g='git'
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit -v'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcp='git cherry-pick'
+alias grb='git rebase'
+alias grbi='git rebase -i'
+```
+
+## 2. Enable auto-correction of spelling mistakes for commands
+
+We are human after all and sometimes we make spelling mistakes. Instead of having to correct the command ourself, we can let git do it for us if the mistakes are minimal.
+
+We can enable git auto-correct for all git repos by using the following command:
+
+```bash
+git config --global help.autoCorrect 5
+```
+
+The value of `help.autoCorrect` is the number of deciseconds git waits before it auto-corrects and applies the command. In the command above, it will wait 0.5 seconds.
+
+The `--global` flag specifies that auto-correction will be enabled for all git repositories in the system. If you omit this, it will only take effect in the current repo.
+
+<figure className="image">
+
+![git auto-correct in action](https://subodhdahal.com/images/git-and-command-line/git-autocorrect.png)
+  <figcaption>
+
+Git auto-correct in action
+
+</figcaption>
+</figure>
+
+## 3. Improved git checkout with fzf
+
+When you are working on a project you will need to switch between different branches. You can use `git checkout <branch_name>` or `git switch <branch_name>` to do that. But the `<branch_name>` needs to be exact and if you don't remember it you will need to run further commands or look up the branch name somewhere.
+
+We can make switching git branches simpler by integrating the checkout process with [fzf](https://github.com/junegunn/fzf). fzf is a command-line fuzzy finder which means we don't need to precisely remember the branch name. Just typing a few characters will list us the branches that match the existing branches using fuzzy logic.
+
+You can add the following to your `.bashrc` or `.zshrc` file to configure a custom function `git_checkout_branch` to run fzf with the list of branches in the repo, which you can then search fuzzily.
+
+```bash
+# Slightly modified version of the script mentioned in https://revelry.co/insights/development/terminal-workflow-fzf/
+git_checkout_branch() {
+  if [[ $1 != "" ]]; then
+    # pass all the parameters as-is, if provided
+    git checkout $*
+    return
+  fi
+
+  LINES=2
+  # show branches
+  result=$(git branch -a --color=always | grep -v '/HEAD\s' | sort |
+    fzf --height 50% --border --ansi --tac --preview-window right:70% \
+      --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
+    sed 's/^..//' | cut -d' ' -f1)
+
+  if [[ $result != "" ]]; then
+    if [[ $result == remotes/* ]]; then
+      git checkout --track $(echo $result | sed 's#remotes/##')
+    else
+      git checkout "$result"
+    fi
+  fi
+}
+```
+
+**Source:** Modified version of [https://revelry.co/insights/development/terminal-workflow-fzf/](https://revelry.co/insights/development/terminal-workflow-fzf/)
+
+Then when you run the command `git_checkout_branch` in the terminal, you will be presented with the branches in the repo and can type part of the branch name to get the branch name you want. Pressing enter on the selected branch will switch the current branch to that branch.
+
+You can, of course, add this as an alias instead of having to type the whole command.
+
+```bash
+alias gco='git_checkout_branch'
+```
+
+If you already know the branch name and don't want to be presented with a list of options, you can just use the command as `gco <branch_name>`, eg: `gco develop`.
+
+<figure className="image">
+
+![fzf in action](https://subodhdahal.com/images/git-and-command-line/git-checkout-fzf.gif)
+  <figcaption>
+
+Git checkout with fzf in action
+
+</figcaption>
+</figure>
+
+## 4. Using Git Interactive Rebase Tool
+
+Although rebase and interactive rebase can seem like a scary concepts in the beginning, after you get used to it, they can be powerful tools to organize history in a Git repo. It can be useful in a variety of situations, including:
+
+- Combining multiple commits into one
+
+  - Splitting a single commit into multiple commits
+
+  - Reordering commits
+
+  - Removing commits
+
+  - Fixing mistakes in commits
+
+  - Updating your local repository to match the upstream repository
+
+You can learn more about rebasing in [https://git-rebase.io/](https://git-rebase.io/).
+
+[Git Interactive Rebase Tool](https://github.com/MitMaro/git-interactive-rebase-tool) can help make the process of interactive rebasing easier. It is a GUI tool that runs in the terminal and can be used to rebase commits in a git repo. It is written in Rust and is available for Linux, macOS and Windows.
+
+<figure className="image" style="background: #272733">
+
+![fzf in action](https://subodhdahal.com/images/git-and-command-line/interactive-rebase-tool.gif)
+  <figcaption>
+
+Basic usage of Interactive Rebase Tool
+
+</figcaption>
+</figure>
+
+You can view the [documentation](https://mitmaro.github.io/git-interactive-rebase-tool/) for more information on how to set up and use the tool, along with all its features.
+
+# Conclusion
+
+Trying one or more of the above tips can help you become more productive with git. But as with any new workflow, it takes time to get used to it. So it might be good to start with one or two of the aforementioned tips and then move on to trying the others.
+
+---
+
+## Bonus:
+
+If you would prefer a more GUI approach to working with git but in the terminal, then you can try one of the followings:
+
+- [tig](https://github.com/jonas/tig)
+
+  - [lazygit](https://github.com/jesseduffield/lazygit)
 
