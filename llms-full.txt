@@ -157,6 +157,61 @@ meta:
 
 ---
 
+- **Page:** Self-Hosting my Git forge with Forgejo
+- **Source:** https://subodhdahal.com/blog/self-hosting-my-git-forge
+- **Description:** Why I moved away from GitHub and chose a lightweight, community-driven alternative
+
+For years, GitHub held all my personal Git repos. It worked fine. I used it with friends during my bachelor's and master's studies. But over time it felt less like a tool and more like a service that just put up with me.
+
+GitHub has had its share of problems lately. Repos scanned for AI training unless you opt out, outages, and [Git history rewritten after merging pull requests](https://github.blog/news-insights/company-news/an-update-on-github-availability/) are a few examples.
+
+What pushed me to self-host was my unease with data on servers whose terms can change anytime. That's the thinking behind most of what I self-host. I run my own reading feed, my own photo library, and now my own Git forge. It's not the easy path, but ownership and privacy are worth the effort.
+
+## Why Not GitLab?
+
+[GitLab](https://gitlab.com) was the obvious first thing to look at. I've used it at work for years and it's solid. But it's built for teams and companies, and that shows in the resources it needs. Running it at home means a platform that needs gigabytes of RAM for things I'd never use. My small NUC runs other services and couldn't handle it.
+
+## Why Forgejo?
+
+[Forgejo](https://forgejo.org) is a lightweight, self-hosted Git forge from [Codeberg e.V.](https://codeberg.org/Codeberg/org), a non-profit. It's written in Go. It runs as one binary that fits in a few hundred megabytes of RAM.
+
+What I use day to day:
+
+- **Repository hosting:** that's mainly what I need it for and it does the job well.
+- **Container registry:** there's a built-in registry for container images. I push Docker images straight to my own instance.
+- **Forgejo Actions:** my projects use Actions to build the container image and push it to the registry. On the VM where I run my personal services, the `docker-compose` files point to my Forgejo registry directly. The syntax is close to GitHub Actions, and the whole flow from code to running container stays inside my homelab.
+- **Pull mirrors:** for repos that still live on GitHub, Forgejo syncs them on a schedule. It's a simple way to keep a local copy without changing the current setup.
+
+I'm also hosting forks of a few open source projects I've tweaked. Those get built and pushed to my own registry too.
+
+I don't use issue tracking, pull requests, or wikis yet. They're there if I need them.
+
+## How It's Running
+
+Forgejo runs on a NUC at home, inside an Ubuntu VM on Proxmox, alongside a few other core services. I only access it over my home network. I could route it through Tailscale to get in when I'm away, but I haven't felt the need yet.
+
+Getting Forgejo Actions to work with the Traefik proxy took a few tries. The Docker build steps took a while too. After that, it has worked without issues for more than 3 months.
+
+## Backups
+
+One thing I didn't want to skip on was backups. Forgejo has a built-in `forgejo dump` command. It packs up the repos, config, and attachments into an archive. I run a daily cronjob with this command. I also dump the Postgres database on its own. Both get pushed to my NAS.
+
+## Migrating from GitHub
+
+The move went better than I expected. Forgejo has a built-in import tool that pulls everything from a GitHub repo: code, issues, pull requests, and history. You just give it the repo URL and a GitHub token.
+
+I put my old projects into an organization of their own on my Forgejo instance, away from my main account. I'm not actively working on them, but they're there if I ever need to look something up.
+
+I also finally found a place for my Logseq notes, now stored in Git. Since I own the server, I don't worry about someone else having access to them.
+
+I still use GitHub where it makes sense. My personal website runs on GitHub Pages at no cost, so that repo stays there. I use Forgejo's pull mirror to sync it to my instance on a schedule. That way I always have a local copy without changing the setup. Most open source projects are on GitHub, so it's still where I go when I want to contribute to something.
+
+## Takeaway
+
+The setup was simple, upkeep is low, and pushing code to my own server feels good.
+
+---
+
 - **Page:** Curating my own reading and discovery feed with RSS
 - **Source:** https://subodhdahal.com/blog/reading-and-discovery-feed-curation
 - **Description:** Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
@@ -366,144 +421,6 @@ I'd rather list these than imply it all works:
 - **Games.** Rendering through the wrapper works, but I haven't run a game on the eGPU yet.
 - **The udev rule alone**, without a hand-made node already in `/dev`.
 - **Safe unplug.** I haven't tried hot-unplugging while the driver is in use. I'd stop everything using the card first.
-
----
-
-- **Page:** Self-Hosting my Git forge with Forgejo
-- **Source:** https://subodhdahal.com/blog/self-hosting-my-git-forge
-- **Description:** Why I moved away from GitHub and chose a lightweight, community-driven alternative
-
-For years, GitHub held all my personal Git repos. It worked fine. I used it with friends during my bachelor's and master's studies. But over time it felt less like a tool and more like a service that just put up with me.
-
-GitHub has had its share of problems lately. Repos scanned for AI training unless you opt out, outages, and [Git history rewritten after merging pull requests](https://github.blog/news-insights/company-news/an-update-on-github-availability/) are a few examples.
-
-What pushed me to self-host was my unease with data on servers whose terms can change anytime. That's the thinking behind most of what I self-host. I run my own reading feed, my own photo library, and now my own Git forge. It's not the easy path, but ownership and privacy are worth the effort.
-
-## Why Not GitLab?
-
-[GitLab](https://gitlab.com) was the obvious first thing to look at. I've used it at work for years and it's solid. But it's built for teams and companies, and that shows in the resources it needs. Running it at home means a platform that needs gigabytes of RAM for things I'd never use. My small NUC runs other services and couldn't handle it.
-
-## Why Forgejo?
-
-[Forgejo](https://forgejo.org) is a lightweight, self-hosted Git forge from [Codeberg e.V.](https://codeberg.org/Codeberg/org), a non-profit. It's written in Go. It runs as one binary that fits in a few hundred megabytes of RAM.
-
-What I use day to day:
-
-- **Repository hosting:** that's mainly what I need it for and it does the job well.
-- **Container registry:** there's a built-in registry for container images. I push Docker images straight to my own instance.
-- **Forgejo Actions:** my projects use Actions to build the container image and push it to the registry. On the VM where I run my personal services, the `docker-compose` files point to my Forgejo registry directly. The syntax is close to GitHub Actions, and the whole flow from code to running container stays inside my homelab.
-- **Pull mirrors:** for repos that still live on GitHub, Forgejo syncs them on a schedule. It's a simple way to keep a local copy without changing the current setup.
-
-I'm also hosting forks of a few open source projects I've tweaked. Those get built and pushed to my own registry too.
-
-I don't use issue tracking, pull requests, or wikis yet. They're there if I need them.
-
-## How It's Running
-
-Forgejo runs on a NUC at home, inside an Ubuntu VM on Proxmox, alongside a few other core services. I only access it over my home network. I could route it through Tailscale to get in when I'm away, but I haven't felt the need yet.
-
-Getting Forgejo Actions to work with the Traefik proxy took a few tries. The Docker build steps took a while too. After that, it has worked without issues for more than 3 months.
-
-## Backups
-
-One thing I didn't want to skip on was backups. Forgejo has a built-in `forgejo dump` command. It packs up the repos, config, and attachments into an archive. I run a daily cronjob with this command. I also dump the Postgres database on its own. Both get pushed to my NAS.
-
-## Migrating from GitHub
-
-The move went better than I expected. Forgejo has a built-in import tool that pulls everything from a GitHub repo: code, issues, pull requests, and history. You just give it the repo URL and a GitHub token.
-
-I put my old projects into an organization of their own on my Forgejo instance, away from my main account. I'm not actively working on them, but they're there if I ever need to look something up.
-
-I also finally found a place for my Logseq notes, now stored in Git. Since I own the server, I don't worry about someone else having access to them.
-
-I still use GitHub where it makes sense. My personal website runs on GitHub Pages at no cost, so that repo stays there. I use Forgejo's pull mirror to sync it to my instance on a schedule. That way I always have a local copy without changing the setup. Most open source projects are on GitHub, so it's still where I go when I want to contribute to something.
-
-## Takeaway
-
-The setup was simple, upkeep is low, and pushing code to my own server feels good.
-
----
-
-- **Page:** Fixing my broken Docker Immich+Traefik setup
-- **Source:** https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup
-- **Description:** Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.
-
-I've used [Immich](https://github.com/immich-app/immich) for over a year in my homelab. Immich is a photo and video app like Google Photos or iCloud, but it's self-hosted. The photos stay on my own hardware. It's open source, has no fees, and no company uses my photos to train models.
-
-Until recently, Immich was in beta. Things break in beta. That's kind of the point. I had this problem where new pictures and videos added to my external library weren't indexed, and metadata wasn't extracted for many of these assets. I chalked it up to beta bugs and moved on.
-
-Immich hit a stable version. Kudos to the team and contributors for the release. It's a great alternative to paid platforms.
-
-After the stable release, I pulled the latest version. I hoped it would fix my issues. Indexing worked for a while, then stopped. None of the jobs seemed to work. I looked for open issues but found none that matched mine. Then it occurred to me that the issue might not be in Immich itself. Maybe my setup was the problem.
-
-## The Setup
-
-I run Immich and all its services on an Ubuntu VM with Docker Compose. I followed the [official install guide](https://docs.immich.app/install/docker-compose) to set them up.
-
-I set up [Traefik](https://doc.traefik.io/traefik/) as a reverse proxy for Immich, using the [tutorial from Jim's Garage](https://www.youtube.com/watch?v=CmUzMi5QLzI). Traefik gives me domain access to services, so I don't have to remember IP addresses and ports. The services stay on my home network, but I can reach them at an easy address like `https://photos.home.mydomain.com`
-
-All I had to do was add a proxy network and Traefik labels to the services. A quick check showed I could access my photos and videos, so I assumed it all worked.
-
-It turns out not everything was.
-
-## The Issue
-
-I connected all services to the same proxy network. One network, everything talks to everything. What could go wrong, right?
-
-Immich could connect to Postgres and fetch data on already indexed photos and videos. Redis, though, didn't receive any jobs. As a result, background jobs like library scans never started.
-
-To isolate the issue, I commented out the proxy network on all services. I then accessed Immich at `<server ip>:<immich-server port>`. Rescanning the external libraries worked. I could see the new media in my Immich timeline.
-
-I'm still not sure why, but I suspect a timing issue. The proxy network's DNS wasn't ready when Immich started. Some connections worked by luck or retry logic. Others failed and never recovered. Redis happened to be one that failed.
-
-## The Fix
-
-I split the setup into two networks:
-
-1. **Internal network**: database, Redis, the machine learning engine, and Immich talk here
-2. **Proxy network**: only the Immich server connects here so Traefik can route to it
-
-Here's a short version of my new `docker-compose.yml` file:
-
-```text
-services:
-    immich-server:
-        image: immich:latest
-        networks:
-        - internal # Talk to database, Redis, etc.
-        - proxy    # Accessible via Traefik
-        labels:
-        - "traefik.enable=true"
-        - "traefik.docker.network=proxy"
-        - "traefik.http.routers.immich.rule=Host(`photos.home.mydomain.com`)"
-        - "traefik.http.services.immich.loadbalancer.server.port=3001"
-
-    immich-machine-learning:
-        networks:
-        - internal
-
-    database:
-        networks:
-        - internal
-
-    redis:
-        networks:
-        - internal
-
-    networks:
-        internal:
-        driver: bridge
-        proxy:
-        external: true
-```
-
-The `traefik.docker.network=proxy` label tells Traefik which network to use for routing.
-
-## How It Works
-
-Compose creates the internal network fresh, so DNS always works. When Immich sends jobs to Redis or reads from Postgres, names resolve fast. Traffic from Traefik arrives on the proxy network instead. Both networks reach the same containers through different paths, so the timing issues vanish.
-
-Now photo indexing and all the other jobs work as intended.
 
 ---
 
@@ -730,6 +647,89 @@ Then I'd add Worktrunk when the repeated environment setup starts getting irrita
 
 ---
 
+- **Page:** Fixing my broken Docker Immich+Traefik setup
+- **Source:** https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup
+- **Description:** Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.
+
+I've used [Immich](https://github.com/immich-app/immich) for over a year in my homelab. Immich is a photo and video app like Google Photos or iCloud, but it's self-hosted. The photos stay on my own hardware. It's open source, has no fees, and no company uses my photos to train models.
+
+Until recently, Immich was in beta. Things break in beta. That's kind of the point. I had this problem where new pictures and videos added to my external library weren't indexed, and metadata wasn't extracted for many of these assets. I chalked it up to beta bugs and moved on.
+
+Immich hit a stable version. Kudos to the team and contributors for the release. It's a great alternative to paid platforms.
+
+After the stable release, I pulled the latest version. I hoped it would fix my issues. Indexing worked for a while, then stopped. None of the jobs seemed to work. I looked for open issues but found none that matched mine. Then it occurred to me that the issue might not be in Immich itself. Maybe my setup was the problem.
+
+## The Setup
+
+I run Immich and all its services on an Ubuntu VM with Docker Compose. I followed the [official install guide](https://docs.immich.app/install/docker-compose) to set them up.
+
+I set up [Traefik](https://doc.traefik.io/traefik/) as a reverse proxy for Immich, using the [tutorial from Jim's Garage](https://www.youtube.com/watch?v=CmUzMi5QLzI). Traefik gives me domain access to services, so I don't have to remember IP addresses and ports. The services stay on my home network, but I can reach them at an easy address like `https://photos.home.mydomain.com`
+
+All I had to do was add a proxy network and Traefik labels to the services. A quick check showed I could access my photos and videos, so I assumed it all worked.
+
+It turns out not everything was.
+
+## The Issue
+
+I connected all services to the same proxy network. One network, everything talks to everything. What could go wrong, right?
+
+Immich could connect to Postgres and fetch data on already indexed photos and videos. Redis, though, didn't receive any jobs. As a result, background jobs like library scans never started.
+
+To isolate the issue, I commented out the proxy network on all services. I then accessed Immich at `<server ip>:<immich-server port>`. Rescanning the external libraries worked. I could see the new media in my Immich timeline.
+
+I'm still not sure why, but I suspect a timing issue. The proxy network's DNS wasn't ready when Immich started. Some connections worked by luck or retry logic. Others failed and never recovered. Redis happened to be one that failed.
+
+## The Fix
+
+I split the setup into two networks:
+
+1. **Internal network**: database, Redis, the machine learning engine, and Immich talk here
+2. **Proxy network**: only the Immich server connects here so Traefik can route to it
+
+Here's a short version of my new `docker-compose.yml` file:
+
+```text
+services:
+    immich-server:
+        image: immich:latest
+        networks:
+        - internal # Talk to database, Redis, etc.
+        - proxy    # Accessible via Traefik
+        labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=proxy"
+        - "traefik.http.routers.immich.rule=Host(`photos.home.mydomain.com`)"
+        - "traefik.http.services.immich.loadbalancer.server.port=3001"
+
+    immich-machine-learning:
+        networks:
+        - internal
+
+    database:
+        networks:
+        - internal
+
+    redis:
+        networks:
+        - internal
+
+    networks:
+        internal:
+        driver: bridge
+        proxy:
+        external: true
+```
+
+The `traefik.docker.network=proxy` label tells Traefik which network to use for routing.
+
+## How It Works
+
+Compose creates the internal network fresh, so DNS always works. When Immich sends jobs to Redis or reads from Postgres, names resolve fast. Traffic from Traefik arrives on the proxy network instead. Both networks reach the same containers through different paths, so the timing issues vanish.
+
+Now photo indexing and all the other jobs work as intended.
+
+---
+
 - **Page:** My 2023 travels: A visual journey
 - **Source:** https://subodhdahal.com/blog/2023-travels-visual-journey
 - **Description:** Looking back at the best pictures from my travel adventures in 2023
@@ -939,165 +939,6 @@ Yet another year has passed. I've been lucky enough to travel to some amazing pl
 Fin
 
 </div>
-
----
-
-- **Page:** Quickly outline large JSON responses with a custom jq function
-- **Source:** https://subodhdahal.com/blog/jq-json-outline
-- **Description:** Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.
-
-I was recently digging into Immich’s API to see if it exposes the fields I needed for some details about my photos. Immich is my self-hosted photo-management service. The API returned hundreds of lines of JSON. I just wanted to see its structure to check the fields I needed, but scrolling through all that data felt slow. I did what any sane programmer would do: I spent even more time trying to automate it.
-
-I’ve used [jq](https://jqlang.org/) before for quick JSON tweaks (it’s basically `sed` or `awk` for JSON), so I wondered if it could help here. A quick search showed that jq can collapse arrays to a single-item preview, then recurse through the whole document for a clean outline of the JSON’s shape in one pass.
-
-I later found out the response structures are already listed in the Immich API docs. I could have just looked that up and saved myself the hassle. But hey, it could well have been an endpoint with no docs, and my method works for any JSON API response.
-
-## The jq function
-
-Here’s the jq function I came up with. You can run it in a terminal:
-
-```bash
-jq '
-def shape:
-  if type == "array" then
-    if length > 0 then [ (.[0] | shape) ] else [] end
-  elif type == "object" then
-    with_entries(.value |= shape)
-  else
-    type
-  end;
-shape
-' response.json
-```
-
-The function checks each value. If it's an array, keep just the first item and recurse. If it's an object, walk through each key and recurse into the value. If it's a primitive like a string or number, return just the type name.
-
-## Actual Immich API shape
-
-Here's a simplified output of the jq function applied to the Immich API response:
-
-```json
-{
-  "albums": {
-    "count": "number",
-    ...
-  },
-  "assets": {
-    "count": "number",
-    "facets": [],
-    "items": [
-      {
-        ...
-        "duration": "string",
-        "exifInfo": {
-          "city": "string",
-          "country": "string",
-          ...
-        },
-        "fileCreatedAt": "string",
-        "fileModifiedAt": "string",
-        "hasMetadata": "boolean",
-        ...
-      }
-    ],
-    "nextPage": "string",
-    "total": "number"
-  }
-}
-```
-
-Now I instantly see that `assets.items[i].exifInfo.country` is a string. That's exactly what I needed to know to map photos by country.
-
-## Extending it for sample values
-
-Next, I wondered: what if I wanted real examples, not just types? I modified the primitive case to return the value itself:
-
-```bash
-jq '
-def shape_with_samples:
-  if type == "array" then
-    if length > 0 then [ (.[0] | shape_with_samples) ] else [] end
-  elif type == "object" then
-    with_entries(.value |= shape_with_samples)
-  else
-    .
-  end;
-shape_with_samples
-' response.json
-```
-
-Now I get sample data like:
-
-```json
-{
-  "albums": {
-    "count": 10,
-    ...
-  },
-  "assets": {
-    "count": 25,
-    "facets": [],
-    "items": [
-      {
-        ...
-        "duration": "00:00:05",
-        "exifInfo": {
-          "city": "Zurich",
-          "country": "Switzerland"
-        },
-        "fileCreatedAt": "2025-09-01T10:00:00Z",
-        "fileModifiedAt": "2025-09-01T10:05:00Z",
-        "hasMetadata": true,
-        ...
-      }
-    ],
-    "nextPage": "2",
-    "total": 25
-  }
-}
-```
-
-Seeing `"Switzerland"` immediately confirmed I was pulling the right field.
-
-## Sampling the first few items
-
-When the first asset lacked optional tags, I extended the function to sample the first N items:
-
-```bash
-jq '
-def shape_with_samples(n):
-  if type == "array" then
-    if length > 0 then
-      [ .[:n][] | shape_with_samples(n) ]
-    else [] end
-  elif type == "object" then
-    with_entries(.value |= shape_with_samples(n))
-  else
-    .
-  end;
-shape_with_samples(3)
-' response.json
-```
-
-## Making it reusable
-
-I will definitely not remember these functions in a month, so I saved them as reusable scripts:
-
-```bash
-~/.jq/shape.jq
-~/.jq/shape_with_samples.jq
-```
-
-Now I can run them anytime via:
-
-```bash
-jq -f ~/.jq/shape.jq response.json
-jq -f ~/.jq/shape_with_samples.jq response.json
-```
-
-## Conclusion
-
-It’s a simple trick, but it makes large JSON responses much easier to read. When you hit an undocumented API, jq maps its structure fast and without guesswork.
 
 ---
 
@@ -1427,6 +1268,165 @@ This music control workflow is step one in an ongoing automation experiment. I'm
 
 ---
 
+- **Page:** Quickly outline large JSON responses with a custom jq function
+- **Source:** https://subodhdahal.com/blog/jq-json-outline
+- **Description:** Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.
+
+I was recently digging into Immich’s API to see if it exposes the fields I needed for some details about my photos. Immich is my self-hosted photo-management service. The API returned hundreds of lines of JSON. I just wanted to see its structure to check the fields I needed, but scrolling through all that data felt slow. I did what any sane programmer would do: I spent even more time trying to automate it.
+
+I’ve used [jq](https://jqlang.org/) before for quick JSON tweaks (it’s basically `sed` or `awk` for JSON), so I wondered if it could help here. A quick search showed that jq can collapse arrays to a single-item preview, then recurse through the whole document for a clean outline of the JSON’s shape in one pass.
+
+I later found out the response structures are already listed in the Immich API docs. I could have just looked that up and saved myself the hassle. But hey, it could well have been an endpoint with no docs, and my method works for any JSON API response.
+
+## The jq function
+
+Here’s the jq function I came up with. You can run it in a terminal:
+
+```bash
+jq '
+def shape:
+  if type == "array" then
+    if length > 0 then [ (.[0] | shape) ] else [] end
+  elif type == "object" then
+    with_entries(.value |= shape)
+  else
+    type
+  end;
+shape
+' response.json
+```
+
+The function checks each value. If it's an array, keep just the first item and recurse. If it's an object, walk through each key and recurse into the value. If it's a primitive like a string or number, return just the type name.
+
+## Actual Immich API shape
+
+Here's a simplified output of the jq function applied to the Immich API response:
+
+```json
+{
+  "albums": {
+    "count": "number",
+    ...
+  },
+  "assets": {
+    "count": "number",
+    "facets": [],
+    "items": [
+      {
+        ...
+        "duration": "string",
+        "exifInfo": {
+          "city": "string",
+          "country": "string",
+          ...
+        },
+        "fileCreatedAt": "string",
+        "fileModifiedAt": "string",
+        "hasMetadata": "boolean",
+        ...
+      }
+    ],
+    "nextPage": "string",
+    "total": "number"
+  }
+}
+```
+
+Now I instantly see that `assets.items[i].exifInfo.country` is a string. That's exactly what I needed to know to map photos by country.
+
+## Extending it for sample values
+
+Next, I wondered: what if I wanted real examples, not just types? I modified the primitive case to return the value itself:
+
+```bash
+jq '
+def shape_with_samples:
+  if type == "array" then
+    if length > 0 then [ (.[0] | shape_with_samples) ] else [] end
+  elif type == "object" then
+    with_entries(.value |= shape_with_samples)
+  else
+    .
+  end;
+shape_with_samples
+' response.json
+```
+
+Now I get sample data like:
+
+```json
+{
+  "albums": {
+    "count": 10,
+    ...
+  },
+  "assets": {
+    "count": 25,
+    "facets": [],
+    "items": [
+      {
+        ...
+        "duration": "00:00:05",
+        "exifInfo": {
+          "city": "Zurich",
+          "country": "Switzerland"
+        },
+        "fileCreatedAt": "2025-09-01T10:00:00Z",
+        "fileModifiedAt": "2025-09-01T10:05:00Z",
+        "hasMetadata": true,
+        ...
+      }
+    ],
+    "nextPage": "2",
+    "total": 25
+  }
+}
+```
+
+Seeing `"Switzerland"` immediately confirmed I was pulling the right field.
+
+## Sampling the first few items
+
+When the first asset lacked optional tags, I extended the function to sample the first N items:
+
+```bash
+jq '
+def shape_with_samples(n):
+  if type == "array" then
+    if length > 0 then
+      [ .[:n][] | shape_with_samples(n) ]
+    else [] end
+  elif type == "object" then
+    with_entries(.value |= shape_with_samples(n))
+  else
+    .
+  end;
+shape_with_samples(3)
+' response.json
+```
+
+## Making it reusable
+
+I will definitely not remember these functions in a month, so I saved them as reusable scripts:
+
+```bash
+~/.jq/shape.jq
+~/.jq/shape_with_samples.jq
+```
+
+Now I can run them anytime via:
+
+```bash
+jq -f ~/.jq/shape.jq response.json
+jq -f ~/.jq/shape_with_samples.jq response.json
+```
+
+## Conclusion
+
+It’s a simple trick, but it makes large JSON responses much easier to read. When you hit an undocumented API, jq maps its structure fast and without guesswork.
+
+---
+
 - **Page:** fzf + fabric: Smart selection for LLM patterns and models
 - **Source:** https://subodhdahal.com/blog/ai-pattern-selection-in-fabric
 - **Description:** Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.
@@ -1571,164 +1571,6 @@ Since patterns are just markdown files, changing them is as easy as editing a te
 I'm not reinventing the wheel here. These are just small tweaks that make fabric feel more natural to use. But sometimes that's all you need: tools that work the way your brain works.
 
 Before, I'd hesitate to use fabric because remembering all the commands felt like work. Now? It's just copy, paste, pick, and done. If you use fabric, give these helpers a try.
-
----
-
-- **Page:** Re-living memories through proper media organization
-- **Source:** https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization
-- **Description:** Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.
-
-# Capturing life's moments
-
-We make priceless memories as life progresses, and these are the ones we want to keep forever. They can be minor, everyday occurrences or significant, life-altering occasions that serve as a reminder of who we were, what we've been through, and what we've learned. They are really valuable and can make us feel sad, happy, or nostalgic.
-
-Unfortunately, our memory is fallible and we can only remember so much. Despite our innate limitations, we have continually sought to immortalize moments of significance. From cave paintings to digital photos and videos, we have come a long way.
-
-Photos and videos help us not just to remember the events, but the associated emotions and feelings as well. They also allow us to show others the experiences we've had and the memories we hold dear, creating a shared history and a sense of connection with those around us.
-
-# Why organize digital media?
-
-With ubiquitous camera technology, capturing memories is easier, but revisiting them can be a challenge. A disorganized and huge photo and video collection can leave us with a sense of dread. Proper organization of digital media serves as a safeguard for our precious memories, ensuring that they remain a constant source of comfort and inspiration.
-
-Like many people of our generation, I have amassed a large personal collection of photos and videos. I had to find a solution that enabled me to effortlessly navigate through the vast collection of my cherished moments.
-
-# Considerations for a solution
-
-Here are a few of the considerations that were important to me in choosing a solution:
-
-- I wanted my digital media stored on a local device, not in a cloud that could restrict my access.
-- The software had to be open-source and have enough features to handle my media organization needs.
-- The metadata I added to my media needed to be in an open format for easy manipulation.
-
-After some research, I came across [digiKam](https://www.digikam.org/) which matched all my requirements. digiKam is a feature-rich free and open-source software to manage your digital media collection. It is available for Linux, Windows, and macOS.
-
-## Workflow
-
-After investing a lot of time trying to figure out what works for me, the workflow that I have settled on is as follows:
-
-1. Import
-2. Culling
-3. Organization
-4. Editing and enhancing
-5. Cloud Backup
-
-I go to steps 1 to 5, mostly in a sequence when importing new media. Occasionally, I look back at my digiKam collections and perform the steps from 2 to 5.
-
-### 1. Import
-
-I have three major sources of my pictures and videos: my cellphone, a GoPro action camera, and a DJI Mini 3 Pro drone. Their media is imported and saved to an external SSD.
-
-I use a card reader to import the media from the GoPro and the DJI drone using digiKam.
-
-For photos and videos that I take with my Android cellphone, I use an open-source program called [Rapid Photo Downloader](https://damonlynch.net/rapid/index.html) to download them to a directory on my computer using File Transfer mode. I use Rapid Photo Downloader due to digiKam's failure to import media from my cellphone.
-
-The imported media is automatically organized by date in the format `YYYY-MM-DD` by digiKam. Rapid Photo Downloader imports it in the format `YYYYMMDD` which I then use a custom script to rename to the format `YYYY-MM-DD`.
-
-This is how my directory structure looks like:
-
-```text
-...
-- 2022
-  - ...
-- 2023
-  - 2023-01-01
-  - 2023-01-03
-  - 2023-01-12
-  ...
-```
-
-### 2. Culling
-
-To maintain focus on the important memories, we need to delete the clutter. Intentional photo-taking and intentional photo-deleting also lead to better memory retention and the ability to revisit experiences.
-
-While browsing through the imported pictures and videos using digiKam, I do the following:
-
-- Delete pictures that are blurry, out of focus, or have a lot of noise unless they represent a special moment that wasn't captured well by other pictures
-- If there are multiple pictures of the same thing, delete the ones that are not the best
-- Delete pictures that are too similar to other pictures
-
-To make the process faster and avoid accidentally deleting pictures that I might want to keep, I add a red flag to the pictures that I want to delete. I have configured the shortcut key `1` to add a red flag to the selected picture.
-
-<figure className="image">
-
-![The list of media with red flags](https://subodhdahal.com/images/digital-media-2023/digikam-red-flags.png)
-  <figcaption>
-
-digiKam interface for working with flagged media
-
-</figcaption>
-</figure>
-
-All these flagged pictures can be seen in the "Rejected items" section under "Labels" in digiKam, which I then delete in bulk.
-
-### 3. Organization
-
-To make it easier to find pictures and videos, I add metadata to them. I use digiKam to add the following metadata to my pictures and videos:
-
-- Add labels based on location
-
-  - digiKam has a feature called "Reverse geocoding" to automatically add labels based on the GPS coordinates of the pictures
-  - Manually assign labels if there was no GPS coordinates or if the location was not recognized by digiKam
-- Tag people in pictures by using the "Face Tags" feature of digiKam
-
-  - digiKam automatically recognizes faces in pictures and allows me to tag them. After having a sufficient number of pictures of a person, it can even suggest the name of the person.
-- Manually tag events in pictures
-
-<figure className="image">
-
-![digiKam sidebar](https://subodhdahal.com/images/digital-media-2023/digikam.png)
-  <figcaption>
-
-digiKam sidebar showing its prominent features
-
-</figcaption>
-</figure>
-
-### 4. Editing and enhancing
-
-Editing pictures is a crucial aspect of preserving and reliving memories. By fine-tuning and refining the images, we bring out the best qualities and features that make each moment special. Moreover, editing can also help eliminate distractions, adjust lighting, and enhance overall image quality. Ultimately, the process of editing pictures is an art that helps preserve and elevate the beauty of our memories.
-
-digiKam has a powerful editing tool called "Image Editor" where I mostly perform the following tasks:
-
-- Crop images to improve composition
-- Rotate and flip images
-- Adjust exposure, contrast, saturation, color balance, and white balance
-- Adjust perspective
-- Adjust lens distortion
-
-<figure className="image">
-
-![Image editing tools in digiKam](https://subodhdahal.com/images/digital-media-2023/digikam-image-editor-tools.png)
-  <figcaption>
-
-Image editing tools in digiKam
-
-</figcaption>
-</figure>
-
-digiKam also has features to create panoramas and HDR images from multiple pictures, which I make occasional use of.
-
-### 5. Cloud backup
-
-Even though I chose local storage as the main destination for my media, I still back them up to the cloud. Hard drives can fail and catastrophes like fire can happen which destroy years of memories. Having an off-site backup is a good way to ensure that the media remain safe.
-
-Any pictures and videos that I take from my cellphone are automatically uploaded to Google Photos once I join a WiFi network. I selectively upload pictures and videos from my GoPro or drone to conserve cloud storage space, uploading directly to Google Photos from digiKam.
-
-# Conclusion
-
-Organizing digital media is crucial for safeguarding our memories and revisiting our experiences. With the right tools, it can be an effortless process that helps us remember and share our precious moments. However, it is important to remember that without the right mindset and discipline, even sophisticated tools are not of much value.
-
-## Future work
-
-I am still experimenting with the workflow and tools that I use to manage my digital media. Here are some ideas that I am considering:
-
-- Move the media to a NAS(Network Attached Storage)
-
-  - using multiple drives with a RAID setup will help prevent data loss in case one or more of the hard drives fail
-  - the media can be accessed on a local network or even from the internet
-- Automatically correct timestamps on media, usually the ones received via chat apps
-- Automatic assignment of GPS coordinates for pictures/videos taken minutes apart, in case they don't have GPS metadata.
-- Add automatic tags for things in pictures, eg. sunsets, lakes, canyons, books
 
 ---
 
@@ -1953,6 +1795,164 @@ Unfortunately, not everyone has had the same experience, with some really horrib
 I am grateful for the support and encouragement of those in my life this year. Your guidance and opportunities have allowed me to grow. Thank you for being a part of my journey and for the amazing times we had together.
 
 Here's to the future and to the continued growth and learning that it holds.
+
+---
+
+- **Page:** Re-living memories through proper media organization
+- **Source:** https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization
+- **Description:** Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.
+
+# Capturing life's moments
+
+We make priceless memories as life progresses, and these are the ones we want to keep forever. They can be minor, everyday occurrences or significant, life-altering occasions that serve as a reminder of who we were, what we've been through, and what we've learned. They are really valuable and can make us feel sad, happy, or nostalgic.
+
+Unfortunately, our memory is fallible and we can only remember so much. Despite our innate limitations, we have continually sought to immortalize moments of significance. From cave paintings to digital photos and videos, we have come a long way.
+
+Photos and videos help us not just to remember the events, but the associated emotions and feelings as well. They also allow us to show others the experiences we've had and the memories we hold dear, creating a shared history and a sense of connection with those around us.
+
+# Why organize digital media?
+
+With ubiquitous camera technology, capturing memories is easier, but revisiting them can be a challenge. A disorganized and huge photo and video collection can leave us with a sense of dread. Proper organization of digital media serves as a safeguard for our precious memories, ensuring that they remain a constant source of comfort and inspiration.
+
+Like many people of our generation, I have amassed a large personal collection of photos and videos. I had to find a solution that enabled me to effortlessly navigate through the vast collection of my cherished moments.
+
+# Considerations for a solution
+
+Here are a few of the considerations that were important to me in choosing a solution:
+
+- I wanted my digital media stored on a local device, not in a cloud that could restrict my access.
+- The software had to be open-source and have enough features to handle my media organization needs.
+- The metadata I added to my media needed to be in an open format for easy manipulation.
+
+After some research, I came across [digiKam](https://www.digikam.org/) which matched all my requirements. digiKam is a feature-rich free and open-source software to manage your digital media collection. It is available for Linux, Windows, and macOS.
+
+## Workflow
+
+After investing a lot of time trying to figure out what works for me, the workflow that I have settled on is as follows:
+
+1. Import
+2. Culling
+3. Organization
+4. Editing and enhancing
+5. Cloud Backup
+
+I go to steps 1 to 5, mostly in a sequence when importing new media. Occasionally, I look back at my digiKam collections and perform the steps from 2 to 5.
+
+### 1. Import
+
+I have three major sources of my pictures and videos: my cellphone, a GoPro action camera, and a DJI Mini 3 Pro drone. Their media is imported and saved to an external SSD.
+
+I use a card reader to import the media from the GoPro and the DJI drone using digiKam.
+
+For photos and videos that I take with my Android cellphone, I use an open-source program called [Rapid Photo Downloader](https://damonlynch.net/rapid/index.html) to download them to a directory on my computer using File Transfer mode. I use Rapid Photo Downloader due to digiKam's failure to import media from my cellphone.
+
+The imported media is automatically organized by date in the format `YYYY-MM-DD` by digiKam. Rapid Photo Downloader imports it in the format `YYYYMMDD` which I then use a custom script to rename to the format `YYYY-MM-DD`.
+
+This is how my directory structure looks like:
+
+```text
+...
+- 2022
+  - ...
+- 2023
+  - 2023-01-01
+  - 2023-01-03
+  - 2023-01-12
+  ...
+```
+
+### 2. Culling
+
+To maintain focus on the important memories, we need to delete the clutter. Intentional photo-taking and intentional photo-deleting also lead to better memory retention and the ability to revisit experiences.
+
+While browsing through the imported pictures and videos using digiKam, I do the following:
+
+- Delete pictures that are blurry, out of focus, or have a lot of noise unless they represent a special moment that wasn't captured well by other pictures
+- If there are multiple pictures of the same thing, delete the ones that are not the best
+- Delete pictures that are too similar to other pictures
+
+To make the process faster and avoid accidentally deleting pictures that I might want to keep, I add a red flag to the pictures that I want to delete. I have configured the shortcut key `1` to add a red flag to the selected picture.
+
+<figure className="image">
+
+![The list of media with red flags](https://subodhdahal.com/images/digital-media-2023/digikam-red-flags.png)
+  <figcaption>
+
+digiKam interface for working with flagged media
+
+</figcaption>
+</figure>
+
+All these flagged pictures can be seen in the "Rejected items" section under "Labels" in digiKam, which I then delete in bulk.
+
+### 3. Organization
+
+To make it easier to find pictures and videos, I add metadata to them. I use digiKam to add the following metadata to my pictures and videos:
+
+- Add labels based on location
+
+  - digiKam has a feature called "Reverse geocoding" to automatically add labels based on the GPS coordinates of the pictures
+  - Manually assign labels if there was no GPS coordinates or if the location was not recognized by digiKam
+- Tag people in pictures by using the "Face Tags" feature of digiKam
+
+  - digiKam automatically recognizes faces in pictures and allows me to tag them. After having a sufficient number of pictures of a person, it can even suggest the name of the person.
+- Manually tag events in pictures
+
+<figure className="image">
+
+![digiKam sidebar](https://subodhdahal.com/images/digital-media-2023/digikam.png)
+  <figcaption>
+
+digiKam sidebar showing its prominent features
+
+</figcaption>
+</figure>
+
+### 4. Editing and enhancing
+
+Editing pictures is a crucial aspect of preserving and reliving memories. By fine-tuning and refining the images, we bring out the best qualities and features that make each moment special. Moreover, editing can also help eliminate distractions, adjust lighting, and enhance overall image quality. Ultimately, the process of editing pictures is an art that helps preserve and elevate the beauty of our memories.
+
+digiKam has a powerful editing tool called "Image Editor" where I mostly perform the following tasks:
+
+- Crop images to improve composition
+- Rotate and flip images
+- Adjust exposure, contrast, saturation, color balance, and white balance
+- Adjust perspective
+- Adjust lens distortion
+
+<figure className="image">
+
+![Image editing tools in digiKam](https://subodhdahal.com/images/digital-media-2023/digikam-image-editor-tools.png)
+  <figcaption>
+
+Image editing tools in digiKam
+
+</figcaption>
+</figure>
+
+digiKam also has features to create panoramas and HDR images from multiple pictures, which I make occasional use of.
+
+### 5. Cloud backup
+
+Even though I chose local storage as the main destination for my media, I still back them up to the cloud. Hard drives can fail and catastrophes like fire can happen which destroy years of memories. Having an off-site backup is a good way to ensure that the media remain safe.
+
+Any pictures and videos that I take from my cellphone are automatically uploaded to Google Photos once I join a WiFi network. I selectively upload pictures and videos from my GoPro or drone to conserve cloud storage space, uploading directly to Google Photos from digiKam.
+
+# Conclusion
+
+Organizing digital media is crucial for safeguarding our memories and revisiting our experiences. With the right tools, it can be an effortless process that helps us remember and share our precious moments. However, it is important to remember that without the right mindset and discipline, even sophisticated tools are not of much value.
+
+## Future work
+
+I am still experimenting with the workflow and tools that I use to manage my digital media. Here are some ideas that I am considering:
+
+- Move the media to a NAS(Network Attached Storage)
+
+  - using multiple drives with a RAID setup will help prevent data loss in case one or more of the hard drives fail
+  - the media can be accessed on a local network or even from the internet
+- Automatically correct timestamps on media, usually the ones received via chat apps
+- Automatic assignment of GPS coordinates for pictures/videos taken minutes apart, in case they don't have GPS metadata.
+- Add automatic tags for things in pictures, eg. sunsets, lakes, canyons, books
 
 ---
 
