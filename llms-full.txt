@@ -1,0 +1,2733 @@
+# Subodh Dahal
+
+> Personal website and blog of Subodh Dahal
+
+Canonical Origin: https://subodhdahal.com/
+
+## LLM Resources
+
+- [Full Content](https://subodhdahal.com/llms-full.txt): Complete page content in markdown format.
+
+---
+
+- **Page:** Subodh Dahal's musings on software engineering, automation, photography and more
+- **Source:** https://subodhdahal.com/
+- **Description:** Subodh Dahal - Software Engineer, Automation Enthusiast, Hobbyist Photographer &amp; Avid Ponderer
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+```
+
+# Hi! I'm [Subodh Dahal](https://subodhdahal.com/#about)
+
+## **Engineering Manager **
+
+From Bhaktapur 🇳🇵·Based in Stuttgart 🇩🇪
+
+- Software Engineer
+- Engineering Leader
+- Automation Enthusiast
+- Photographer & Explorer
+
+- [LinkedIn](https://www.linkedin.com/in/subodhdahal)
+- [Xing](https://www.xing.com/profile/Subodh_Dahal)
+- [GitHub](https://github.com/SubodhDahal)
+- [Stackoverflow](https://stackoverflow.com/users/1083422/sub0dh)
+- [Instagram](https://instagram.com/wanderluster_subodh)
+- [RSS Feed](https://subodhdahal.com/rss.xml)
+
+![Subodh Dahal](https://subodhdahal.com/images/me.jpg)
+
+## **Recent Articles **
+
+- [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>**nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
+- [<h2>**Stop stashing half-finished work: use Git worktrees and Worktrunk**</h2>**git****worktrees****worktrunk****developer productivity****command line****workflow****Aug 16, 2026**](https://subodhdahal.com/blog/worktrees-with-worktrunk/)
+- [<h2>**Self-Hosting my Git forge with Forgejo**</h2>**Homelab****Open source****Self-hosting****Workflow****Apr 29, 2026**](https://subodhdahal.com/blog/self-hosting-my-git-forge/)
+- [<h2>**Curating my own reading and discovery feed with RSS**</h2>**Homelab****Open source****Self-hosting****Workflow****Feb 8, 2026**](https://subodhdahal.com/blog/reading-and-discovery-feed-curation/)
+- [<h2>**Fixing my broken Docker Immich+Traefik setup**</h2>**homelab****networking****Oct 31, 2025**](https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/)
+
+[View All Articles →](https://subodhdahal.com/blog/)
+
+## **About Me **
+
+***More than a decade building different kinds of software, from web systems to products at scale. As an Engineering Manager, I help engineers grow while still writing code with the team. ***
+
+*My work spans people, delivery, technical quality, cross-functional alignment, and organizational clarity. *
+
+*I co-founded a web agency in Nepal, then moved into product engineering for international clients. I joined a German startup for customer-facing and backoffice products, where the team scaled from a dozen to 100+ people; now I lead an engineering team at a large German Edutech company. *
+
+*I also run a small homelab, tinkering with self-hosted services and automation pipelines. *
+
+*In my free time, I like being outdoors and photographing the beauty of nature and the world. *
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/#webpage","@type":"WebPage","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","name":"Subodh Dahal's musings on software engineering, automation, photography and more","url":"https://subodhdahal.com/","about":{"@id":"https://subodhdahal.com/#identity"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Software Engineer","name":"Subodh Dahal","url":"https://subodhdahal.com","image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"sameAs":["https://github.com/subodhdahal","https://linkedin.com/in/subodhdahal"]},{"@id":"https://subodhdahal.com/#about","@type":"ProfilePage","dateCreated":"2020-01-01T00:00:00+05:45","url":"https://subodhdahal.com/#about","mainEntity":{"@type":"Person","name":"Subodh Dahal","alternateName":"subodhdahal","description":"Engineering Manager and Software Engineer. Writes about software engineering, automation, photography, and travel.","image":"https://subodhdahal.com/images/me.jpg","url":"https://subodhdahal.com/#about","sameAs":["https://github.com/subodhdahal","https://www.linkedin.com/in/subodhdahal","https://x.com/subodhdahal"]}},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
+- **Page:** Blog posts · Subodh Dahal
+- **Source:** https://subodhdahal.com/blog
+- **Description:** Blog posts by Subodh Dahal
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+```
+
+# **Blog Articles **
+
+*Notes on software, automation, and the tools I build with. *
+
+- [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>**nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
+- [<h2>**Stop stashing half-finished work: use Git worktrees and Worktrunk**</h2>
+
+  Git worktrees keep separate branches checked out at once. Worktrunk automates per-worktree setup. The same isolation also works for parallel AI agents.**git****worktrees****worktrunk****developer productivity****command line****workflow****Aug 16, 2026**](https://subodhdahal.com/blog/worktrees-with-worktrunk/)
+- [<h2>**Self-Hosting my Git forge with Forgejo**</h2>
+
+  Why I moved away from GitHub and chose a lightweight, community-driven alternative**Homelab****Open source****Self-hosting****Workflow****Apr 29, 2026**](https://subodhdahal.com/blog/self-hosting-my-git-forge/)
+- [<h2>**Curating my own reading and discovery feed with RSS**</h2>
+
+  Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.**Homelab****Open source****Self-hosting****Workflow****Feb 8, 2026**](https://subodhdahal.com/blog/reading-and-discovery-feed-curation/)
+- [<h2>**Fixing my broken Docker Immich+Traefik setup**</h2>
+
+  Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.**homelab****networking****Oct 31, 2025**](https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/)
+- [<h2>**Quickly outline large JSON responses with a custom jq function**</h2>
+
+  Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.**jq****json****command line****automation****developer productivity****Oct 19, 2025**](https://subodhdahal.com/blog/jq-json-outline/)
+- [<h2>**Why I added RSS feeds to my blog (and how I did it in Nuxt 3)**</h2>
+
+  How I built RSS and Atom feed support for my Nuxt 3 website to let readers follow my content without social media algorithms.**Nuxt****web development****tutorial****Aug 31, 2025**](https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3/)
+- [<h2>**Revisiting my Stream Deck for music control**</h2>
+
+  How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.**productivity****Developer Productivity****automation****home-office****Jun 7, 2025**](https://subodhdahal.com/blog/stream-deck-youtube-music/)
+- [<h2>**fzf + fabric: Smart selection for LLM patterns and models**</h2>
+
+  Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.**developer productivity****May 24, 2025**](https://subodhdahal.com/blog/ai-pattern-selection-in-fabric/)
+- [<h2>**Effortless configuration syncing with GNU Stow and Git: a software engineer's workflow**</h2>
+
+  Use GNU Stow and Git to keep config files in sync across Linux and macOS. Keep them in one repo with full history, and set up new machines in minutes.**developer productivity****Jan 12, 2025**](https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow/)
+- [<h2>**My 2023 travels: A visual journey**</h2>
+
+  Looking back at the best pictures from my travel adventures in 2023**personal****travel****photography****Jan 1, 2024**](https://subodhdahal.com/blog/2023-travels-visual-journey/)
+- [<h2>**Re-living memories through proper media organization**</h2>
+
+  Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.**personal****technology****Feb 6, 2023**](https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization/)
+- [<h2>**Looking back: My 2022 in review**</h2>
+
+  From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.**personal****travel****Dec 31, 2022**](https://subodhdahal.com/blog/2022-in-review/)
+- [<h2>**Git and the command-line: Take your workflow to the next level**</h2>
+
+  Some tips on how to improve your Git productivity using the command-line**programming****developer productivity****Dec 18, 2022**](https://subodhdahal.com/blog/git-and-command-line-next-level-workflow/)
+- [<h2>**Hiking Tsho-Rolpa lake trail in Nepal**</h2>
+
+  Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level**travel****Jan 22, 2022**](https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal/)
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/blog/#webpage","@type":"WebPage","description":"Blog posts by Subodh Dahal","name":"Blog posts","url":"https://subodhdahal.com/blog/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/blog/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Software Engineer","name":"Subodh Dahal","url":"https://subodhdahal.com","image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"sameAs":["https://github.com/subodhdahal","https://linkedin.com/in/subodhdahal"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
+- **Page:** Library · Subodh Dahal
+- **Source:** https://subodhdahal.com/library
+- **Description:** Books I have read and recommend, with a short note on why each one earned its place.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+```
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/library/#webpage","@type":"WebPage","description":"Books I have read and recommend, with a short note on why each one earned its place.","name":"Library","url":"https://subodhdahal.com/library/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/library/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Software Engineer","name":"Subodh Dahal","url":"https://subodhdahal.com","image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"sameAs":["https://github.com/subodhdahal","https://linkedin.com/in/subodhdahal"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
+- **Page:** Curating my own reading and discovery feed with RSS
+- **Source:** https://subodhdahal.com/blog/reading-and-discovery-feed-curation
+- **Description:** Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
+
+For quite some time, I have wanted to rely less on algorithmically curated feeds. The daily scroll through YouTube, Substack, or LinkedIn felt less like discovery and more like dopamine mining. I wanted a system that delivered interesting content to satisfy my curiosity, without platforms whose best interest is to have me glued to them. These days, finding such a platform is tough. Even if one exists now, there's no guarantee it won't eventually mimic the ones I wanted to get away from.
+
+I wanted a system where I subscribe directly to creators or communities sharing content I like. That's exactly what a feed reader does. It pulls content chronologically from blogs and sites that support RSS/Atom feeds, with no middleman filtering or recommending.
+
+There are a few feed reader platforms, but I wanted to have full data ownership and more control over the system. This is why I decided to self-host [FreshRSS](https://github.com/FreshRSS/FreshRSS), an open-source feed aggregator and reader, on my homelab running on a mini-PC. This also has the added advantage of being resilient compared to an online service which may stop existing for reasons beyond my control.
+
+## Feed sources
+
+Rather than relying on algorithms of platforms to decide which content they want to show me, I now subscribe to content from sources where I have found interesting writings before. I categorize the content sources broadly into the following:
+
+- Communities: There's many interesting posts being shared on communities like Hacker News RSS, Lobsters, Lemmy. I started by directly subscribing to their content RSS feed. But the number of posts was overwhelming. So I now use [hnrss.com](https://hnrss.github.io/) and [upvote-rss](https://github.com/johnwarne/upvote-rss) to get only the top posts from them.
+- Personal Blogs: If a post catches my eye, I check the author’s site and subscribe to their personal RSS feed if they have other content that I also find interesting.
+- Substack: I subscribe to a creator's publication directly by using their Substack URL.
+- Websites without RSS: Not all websites provide RSS/Atom feeds. Luckily, there's an open-source and self-hostable project called [RSSHub](https://github.com/DIYgod/RSSHub) which can generate RSS feeds for many popular websites. It acts as a bridge between my FreshRSS instance and those websites. It also has a browser extension companion: [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar) to easily find and subscribe to RSS feeds.
+- Newsletters: Previously, I had subscribed to many newsletters on my personal email. This made my email inbox messy and it felt like a chore to go and read there. I now use [Kill the Newsletter!](https://kill-the-newsletter.com/) which provides an email address to subscribe to these newsletters. It generates an Atom feed which I can subscribe to in FreshRSS. This has the benefit of keeping my inbox clean and also consolidating all my reading into a single application.
+- YouTube Channels: Yes, I can directly subscribe to YouTube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
+
+<figure className="w-full,image">
+<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="/images/freshrss-ui.png" style="border: 1px solid black">
+
+
+
+</iframe>
+
+
+  <figcaption>
+
+This is how my FreshRSS looks like
+
+</figcaption>
+</figure>
+
+Since FreshRSS is an aggregator, I don't necessarily need to use the FreshRSS interface to access my feed. There are many applications for different platforms which can use FreshRSS as the source for the feeds. I use the Readrops app on my phone. I have occasionally used the NetNewsWire app on MacOS.
+
+## Filtering my feed
+
+Some newsletters I subscribe to, like those covering AI news, have a short shelf life. If I haven't read them within a month, the content is usually stale and there is little point in me reading them. That's why I've set up the `-pubdate:P30D` filter to automatically mark them as read.
+
+FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a YouTube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
+
+Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenever I get to them, so there's no need to rush.
+
+## Extending and customizing FreshRSS
+
+FreshRSS is not the only self-hostable feed aggregator. The main reason I chose it is because of its support for extensions which allows for augmenting its functionality. The ones I find useful are:
+
+- Youlag: Better interface for YouTube videos than the default view
+- Af_Readability: Inlines full article content for sites that only show excerpts in feeds.
+- Karakeep Button: Saves interesting posts directly to my Karakeep instance for long-term storage.
+
+There's a lot more extensions which can be browsed in the [official repository](https://github.com/FreshRSS/Extensions).
+
+## Conclusion
+
+After migrating to this setup, I am reading more in-depth content than what I did before. I've discovered authors sharing valuable perspectives on topics I find interesting that are not within the current hype-cycle. It's also refreshing to follow the creators whose writing feels like the pre-SEO, pre-marketing, pre-AISlop internet.
+
+I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my default way of finding new content is now the feed reader.
+
+---
+
+- **Page:** Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot
+- **Source:** https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos
+
+My eGPU never got detected if I was already logged into NixOS. To get it working, I had to time switching on the Razer Core X against switching on the laptop. Sometimes that worked first try. Sometimes it took a few reboots and more timing games, and I never found a pattern.
+
+"Not detected" was the wrong diagnosis. The system saw the GPU, but the NVIDIA driver refused to use it, and after I fixed that, nothing in userspace could reach the card. The fixes were a kernel parameter and a device node. Now I can boot first and switch the enclosure on while logged in.
+
+## My setup
+
+- Laptop: ThinkPad X1 Extreme Gen 1 (20MGS0EQ00), BIOS 1.47, with an internal GTX 1050 Ti Mobile and the Intel iGPU
+- eGPU: Razer Core X Chroma (Thunderbolt 3) with an RTX 3060 Ti
+- A Dell Thunderbolt 4 dock is also on the Thunderbolt chain
+- NixOS 26.11 (unstable-ish), kernel 6.18.63, NVIDIA proprietary driver 580.196.07, COSMIC on Wayland
+
+The snippets are NixOS, but the ideas apply to any distro.
+
+## Checking each layer: the system saw the GPU
+
+When a hotplugged GPU doesn't appear, check four layers in order. I should have done this instead of rebooting repeatedly.
+
+```bash
+# 1. Did Thunderbolt authorize the enclosure?
+boltctl list
+
+# 2. Did the PCIe device enumerate? (mine was 09:00.0)
+lspci | grep -i nvidia
+
+# 3. Did the driver bind? Look for NVRM errors and bridge window failures
+journalctl -k | grep -E 'NVRM|bridge window'
+
+# 4. Does userspace have a device node, and does nvidia-smi see the card?
+ls /dev/nvidia*
+nvidia-smi -L
+```
+
+On my machine, steps 1 and 2 passed (bolt had authorized the enclosure, and `lspci` listed the GPU). Step 3 failed:
+
+```text
+NVRM: This PCI I/O region assigned to your NVIDIA device is invalid
+nvidia 0000:09:00.0: probe with driver nvidia failed with error -1
+bridge window [mem size 0x100000000]: can't assign; no space
+```
+
+## What was blocking the card
+
+Checks 3 and 4 failed for different reasons. The first problem stops the driver from binding. The second hides the card from userspace once it does.
+
+### Bug 1: hpmemsize=4G left BAR0 unassigned
+
+My config had `pci=hpmemsize=4G,hpiosize=0` from an earlier attempt. I assumed a big GPU needs a big window.
+
+It doesn't, because `hpmemsize` is the wrong window. It reserves the 32-bit **non-prefetchable** memory window for each hotplug bridge, and the kernel can't fit 4 gigabytes into 32-bit address space. It logged `can't assign; no space` and moved on. That left the GPU's 16 MB BAR0, which lives in the same window, without an address: the device's `resource` file in sysfs was all zeros, even though the 64-bit prefetchable BARs (256 MB and 32 MB) were fine.
+
+The parameter for big GPU BARs is `hpmmioprefsize`, which sizes the 64-bit prefetchable window. Use a small `hpmemsize` and a large `hpmmioprefsize`:
+
+```nix
+boot.kernelParams = lib.mkBefore [
+  "pciehp.pciehp_force=1"
+  "pci=realloc"
+  "pcie_ports=native"
+
+  # hpmemsize: 32-bit non-prefetchable window, keep it small.
+  # hpmmioprefsize: 64-bit prefetchable window for the GPU's big BARs.
+  "pci=hpbussize=0x20,hpmemsize=64M,hpmmioprefsize=1G,hpiosize=0"
+  "iommu=pt"
+];
+boot.extraModprobeConfig = lib.mkAfter ''
+  options pciehp pciehp_force=1
+'';
+```
+
+To check the result without reading dmesg, list the regions for your device (replace `09:00.0` with yours). Every region should have an address, not `<unassigned>`.
+
+```bash
+sudo lspci -vv -s 09:00.0 | grep Region
+```
+
+### Bug 2: nvidia-smi ignored the card because /dev/nvidia1 didn't exist
+
+After the window fix, the driver bound and `/proc/driver/nvidia/gpus/` listed the 3060 Ti. But `nvidia-smi` still showed only the internal 1050 Ti.
+
+This took me longest. `ls /dev/nvidia*` showed `nvidia0` and nothing for the second card. The kernel module doesn't create device nodes itself. On a normal distro `nvidia-modprobe` creates them on demand, but it isn't available in my NixOS setup, so a GPU that appears after boot never gets a node. To confirm, I made one by hand:
+
+```bash
+sudo mknod -m 666 /dev/nvidia1 c 195 1
+```
+
+Both GPUs showed up in `nvidia-smi` immediately.
+
+To automate that, a udev rule runs a script whenever the NVIDIA driver binds to a PCI device. The script reads each minor number from `/proc/driver/nvidia/gpus/*/information` and creates any missing node:
+
+```nix
+services.udev.extraRules = let
+  nvidiaNodes = pkgs.writeShellScript "nvidia-create-nodes" ''
+    for info in /proc/driver/nvidia/gpus/*/information; do
+      [ -e "$info" ] || continue
+      minor=$(${pkgs.gawk}/bin/awk '/Device Minor/ {print $NF}' "$info")
+      [ -n "$minor" ] && [ ! -e "/dev/nvidia$minor" ] &&
+        ${pkgs.coreutils}/bin/mknod -m 666 "/dev/nvidia$minor" c 195 "$minor"
+    done
+    exit 0
+  '';
+in ''
+  ACTION=="bind", SUBSYSTEM=="pci", DRIVER=="nvidia", RUN+="${nvidiaNodes}"
+'';
+```
+
+After a rebuild and reboot, I cold booted, switched the enclosure on while logged in, and the eGPU appeared in `nvidia-smi`.
+
+One caveat: I had created `/dev/nvidia1` by hand earlier and don't know whether I deleted it before testing. So I can't say the rule alone creates the node. It should, but I haven't proven it from a clean `/dev`.
+
+## Running programs on the eGPU with a wrapper script
+
+With both cards visible, I wanted to run one program on the eGPU. My `egpu-prefer` wrapper sets environment variables and then `exec`s the command.
+
+It failed at first. My session sets `VK_LOADER_DRIVERS_SELECT=*intel*` and `DRI_PRIME=pci-0000_00_02_0`, which together hide the NVIDIA Vulkan driver. I never found where those variables come from, and they aren't in my dotfiles.
+
+Native NVIDIA GLX offload also failed: it picked the 1050 Ti even when I gave it the eGPU's UUID. So the wrapper selects the card through Vulkan instead:
+
+```bash
+# Override the session's restrictions
+export VK_LOADER_DRIVERS_SELECT="*nvidia*"
+unset DRI_PRIME
+
+# Pick the 3060 Ti by PCI vendor:device ID
+export MESA_VK_DEVICE_SELECT="10de:2489"
+
+exec "$@"
+```
+
+This is a trimmed version. The full wrapper also sets `VK_DRIVER_FILES` to the NVIDIA ICD path and a few CUDA variables. To check the selection:
+
+```bash
+MESA_VK_DEVICE_SELECT=10de:2489 VK_LOADER_DRIVERS_SELECT='*nvidia*' vulkaninfo --summary | grep deviceName
+```
+
+Vulkan lists the RTX 3060 Ti first, CUDA sees both GPUs, and rendering through `egpu-prefer` works.
+
+## What I haven't tested
+
+I'd rather list these than imply it all works:
+
+- **Games.** Rendering through the wrapper works, but I haven't run a game on the eGPU yet.
+- **The udev rule alone**, without a hand-made node already in `/dev`.
+- **Safe unplug.** I haven't tried hot-unplugging while the driver is in use. I'd stop everything using the card first.
+
+---
+
+- **Page:** Self-Hosting my Git forge with Forgejo
+- **Source:** https://subodhdahal.com/blog/self-hosting-my-git-forge
+- **Description:** Why I moved away from GitHub and chose a lightweight, community-driven alternative
+
+For years, GitHub held all my personal Git repos. It worked fine. I used it with friends during my bachelor's and master's studies. But over time it felt less like a tool and more like a service that just put up with me.
+
+GitHub has had its share of problems lately. Repos scanned for AI training unless you opt out, outages, and [Git history rewritten after merging pull requests](https://github.blog/news-insights/company-news/an-update-on-github-availability/) are a few examples.
+
+What pushed me to self-host was my unease with data on servers whose terms can change anytime. That's the thinking behind most of what I self-host. I run my own reading feed, my own photo library, and now my own Git forge. It's not the easy path, but ownership and privacy are worth the effort.
+
+## Why Not GitLab?
+
+[GitLab](https://gitlab.com) was the obvious first thing to look at. I've used it at work for years and it's solid. But it's built for teams and companies, and that shows in the resources it needs. Running it at home means a platform that needs gigabytes of RAM for things I'd never use. My small NUC runs other services and couldn't handle it.
+
+## Why Forgejo?
+
+[Forgejo](https://forgejo.org) is a lightweight, self-hosted Git forge from [Codeberg e.V.](https://codeberg.org/Codeberg/org), a non-profit. It's written in Go. It runs as one binary that fits in a few hundred megabytes of RAM.
+
+What I use day to day:
+
+- **Repository hosting:** that's mainly what I need it for and it does the job well.
+- **Container registry:** there's a built-in registry for container images. I push Docker images straight to my own instance.
+- **Forgejo Actions:** my projects use Actions to build the container image and push it to the registry. On the VM where I run my personal services, the `docker-compose` files point to my Forgejo registry directly. The syntax is close to GitHub Actions, and the whole flow from code to running container stays inside my homelab.
+- **Pull mirrors:** for repos that still live on GitHub, Forgejo syncs them on a schedule. It's a simple way to keep a local copy without changing the current setup.
+
+I'm also hosting forks of a few open source projects I've tweaked. Those get built and pushed to my own registry too.
+
+I don't use issue tracking, pull requests, or wikis yet. They're there if I need them.
+
+## How It's Running
+
+Forgejo runs on a NUC at home, inside an Ubuntu VM on Proxmox, alongside a few other core services. I only access it over my home network. I could route it through Tailscale to get in when I'm away, but I haven't felt the need yet.
+
+Getting Forgejo Actions to work with the Traefik proxy took a few tries. The Docker build steps took a while too. After that, it has worked without issues for more than 3 months.
+
+## Backups
+
+One thing I didn't want to skip on was backups. Forgejo has a built-in `forgejo dump` command. It packs up the repos, config, and attachments into an archive. I run a daily cronjob with this command. I also dump the Postgres database on its own. Both get pushed to my NAS.
+
+## Migrating from GitHub
+
+The move went better than I expected. Forgejo has a built-in import tool that pulls everything from a GitHub repo: code, issues, pull requests, and history. You just give it the repo URL and a GitHub token.
+
+I put my old projects into an organization of their own on my Forgejo instance, away from my main account. I'm not actively working on them, but they're there if I ever need to look something up.
+
+I also finally found a place for my Logseq notes, now stored in Git. Since I own the server, I don't worry about someone else having access to them.
+
+I still use GitHub where it makes sense. My personal website runs on GitHub Pages at no cost, so that repo stays there. I use Forgejo's pull mirror to sync it to my instance on a schedule. That way I always have a local copy without changing the setup. Most open source projects are on GitHub, so it's still where I go when I want to contribute to something.
+
+## Takeaway
+
+The setup was simple, upkeep is low, and pushing code to my own server feels good.
+
+---
+
+- **Page:** Fixing my broken Docker Immich+Traefik setup
+- **Source:** https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup
+- **Description:** Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.
+
+I've used [Immich](https://github.com/immich-app/immich) for over a year in my homelab. Immich is a photo and video app like Google Photos or iCloud, but it's self-hosted. The photos stay on my own hardware. It's open source, has no fees, and no company uses my photos to train models.
+
+Until recently, Immich was in beta. Things break in beta. That's kind of the point. I had this problem where new pictures and videos added to my external library weren't indexed, and metadata wasn't extracted for many of these assets. I chalked it up to beta bugs and moved on.
+
+Immich hit a stable version. Kudos to the team and contributors for the release. It's a great alternative to paid platforms.
+
+After the stable release, I pulled the latest version. I hoped it would fix my issues. Indexing worked for a while, then stopped. None of the jobs seemed to work. I looked for open issues but found none that matched mine. Then it occurred to me that the issue might not be in Immich itself. Maybe my setup was the problem.
+
+## The Setup
+
+I run Immich and all its services on an Ubuntu VM with Docker Compose. I followed the [official install guide](https://docs.immich.app/install/docker-compose) to set them up.
+
+I set up [Traefik](https://doc.traefik.io/traefik/) as a reverse proxy for Immich, using the [tutorial from Jim's Garage](https://www.youtube.com/watch?v=CmUzMi5QLzI). Traefik gives me domain access to services, so I don't have to remember IP addresses and ports. The services stay on my home network, but I can reach them at an easy address like `https://photos.home.mydomain.com`
+
+All I had to do was add a proxy network and Traefik labels to the services. A quick check showed I could access my photos and videos, so I assumed it all worked.
+
+It turns out not everything was.
+
+## The Issue
+
+I connected all services to the same proxy network. One network, everything talks to everything. What could go wrong, right?
+
+Immich could connect to Postgres and fetch data on already indexed photos and videos. Redis, though, didn't receive any jobs. As a result, background jobs like library scans never started.
+
+To isolate the issue, I commented out the proxy network on all services. I then accessed Immich at `<server ip>:<immich-server port>`. Rescanning the external libraries worked. I could see the new media in my Immich timeline.
+
+I'm still not sure why, but I suspect a timing issue. The proxy network's DNS wasn't ready when Immich started. Some connections worked by luck or retry logic. Others failed and never recovered. Redis happened to be one that failed.
+
+## The Fix
+
+I split the setup into two networks:
+
+1. **Internal network**: database, Redis, the machine learning engine, and Immich talk here
+2. **Proxy network**: only the Immich server connects here so Traefik can route to it
+
+Here's a short version of my new `docker-compose.yml` file:
+
+```text
+services:
+    immich-server:
+        image: immich:latest
+        networks:
+        - internal # Talk to database, Redis, etc.
+        - proxy    # Accessible via Traefik
+        labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=proxy"
+        - "traefik.http.routers.immich.rule=Host(`photos.home.mydomain.com`)"
+        - "traefik.http.services.immich.loadbalancer.server.port=3001"
+
+    immich-machine-learning:
+        networks:
+        - internal
+
+    database:
+        networks:
+        - internal
+
+    redis:
+        networks:
+        - internal
+
+    networks:
+        internal:
+        driver: bridge
+        proxy:
+        external: true
+```
+
+The `traefik.docker.network=proxy` label tells Traefik which network to use for routing.
+
+## How It Works
+
+Compose creates the internal network fresh, so DNS always works. When Immich sends jobs to Redis or reads from Postgres, names resolve fast. Traffic from Traefik arrives on the proxy network instead. Both networks reach the same containers through different paths, so the timing issues vanish.
+
+Now photo indexing and all the other jobs work as intended.
+
+---
+
+- **Page:** Stop stashing half-finished work: use Git worktrees and Worktrunk
+- **Source:** https://subodhdahal.com/blog/worktrees-with-worktrunk
+- **Description:** Git worktrees keep separate branches checked out at once. Worktrunk automates per-worktree setup. The same isolation also works for parallel AI agents.
+
+This has happened more times than I can count. I finish making changes for a ticket and put it into code review. Then I start the next one. Twenty minutes later, a reviewer asks for a 2-line change on the first ticket.
+
+The change might take a few minutes to make. Getting back to the right code can take longer.
+
+My current branch already has modified files. Maybe the app is running with some local state I’ll need again. Or I configured the env variables differently for this task. I stash everything, switch branches, make the fix, then switch back and restore the stash. I hope I didn’t forget which migration or env variable belonged to which task.
+
+Or I can make a work-in-progress commit that I never wanted in the branch. Or create another temporary branch whose name I’ll forget soon. Or leave the review sitting there until I finish my current work.
+
+All those approaches work, and I’ve used them. But they turn a small review comment into a ceremony.
+
+[Git worktrees](https://git-scm.com/docs/git-worktree) give me a better option: separate folders. Each has its own branch checked out.
+
+## What Git worktrees give you
+
+Git worktrees give you a separate working directory per branch, all in the same repo. You can keep more than one branch checked out at once. Each worktree has its own files, editor state, and running dev server.
+
+### A branch and a worktree aren’t the same thing
+
+A branch is a movable reference to a commit. The working tree is the checked-out set of files I edit. In Git’s terminology, a worktree is the working tree plus the Git metadata. That metadata is what makes it an independent checkout.
+
+My normal clone is already one worktree (Git calls it the main worktree). I can attach more linked worktrees to the same repo, each with a different branch checked out.
+
+For example:
+
+```bash
+~/code/shop/                  # main worktree, branch: feature/new-checkout
+~/code/shop.review-fix/        # linked worktree, branch: fix/payment-review
+~/code/shop.order-history/      # linked worktree, branch: feature/order-history
+```
+
+These folders belong to the same repo. They share Git’s object database and refs. Per-worktree state, such as `HEAD` and the index, stays separate ([Git worktree documentation](https://git-scm.com/docs/git-worktree#_description)).
+
+Each folder has its own checked-out files, staged changes, and untracked files. I keep an editor and terminal open in each one. I leave the new checkout work untouched. I address the review in `shop.review-fix` and return without stashing.
+
+The cognitive cost of context switching is real. The Git housekeeping disappears. My editor of choice, Zed, has built-in worktree support. A worktree picker in the command palette makes switching between them fast. Opening a different worktree is one command away.
+
+### Creating the review-fix worktree with Git
+
+Suppose I’m in `~/code/shop`, working on `feature/new-checkout`, and the earlier branch is `fix/payment-review`.
+
+First I create a linked worktree for the existing branch:
+
+```bash
+git worktree add ../shop.review-fix fix/payment-review
+```
+
+My current directory stays on `feature/new-checkout`. It keeps all its unfinished changes.
+
+`git worktree list` shows every attached worktree:
+
+```bash
+~/code/shop             7db81af [feature/new-checkout]
+~/code/shop.review-fix  b132aa0 [fix/payment-review]
+```
+
+Now I can handle the review in the review-fix worktree:
+
+```bash
+cd ../shop.review-fix
+# make the requested change
+git add . && git commit -m "Fix payment retry condition" && git push
+```
+
+When DevQA finishes and I don’t need the checkout anymore:
+
+```bash
+cd ../shop
+git worktree remove ../shop.review-fix
+git branch -d fix/payment-review
+```
+
+Branch deletion is a separate step in native Git. Git normally refuses to remove a dirty worktree. It also refuses to check out the same branch in another worktree. I can override its safeguards ([Git worktree commands and options](https://git-scm.com/docs/git-worktree#_commands)).
+
+For a brand-new task, I can create the branch and worktree together:
+
+```bash
+git worktree add -b feature/order-history ../shop.order-history main
+```
+
+That creates `feature/order-history` from `main` and checks it out in `../shop.order-history`.
+
+This is already enough to improve the review interruption. The part that started to annoy me came next.
+
+### Every new directory needs its project setup
+
+A linked worktree contains the tracked files from its branch. My `.env`, `node_modules`, build output, and local database belong to a particular working directory. Other ignored files do too. A new worktree won’t magically have them.
+
+The first few minutes often become:
+
+```bash
+cp ../shop/.env .env
+npm install
+npm run generate
+```
+
+Except the dev server in another worktree already owns port 3000.
+
+I can solve this with a shell function or a project script. But once worktrees become a daily workflow, the function starts collecting branch naming rules, directory naming rules, and setup steps. Cleanup steps and special cases follow.
+
+## Where Worktrunk comes in
+
+[Worktrunk](https://github.com/max-sixty/worktrunk) wraps Git worktrees with a branch-oriented CLI and lifecycle hooks. I get ordinary Git worktrees underneath. Worktrunk takes care of the repetitive setup around them.
+
+### Making Worktrunk do the boring parts
+
+On macOS or Linux with Homebrew, the current installation command is:
+
+```bash
+brew install worktrunk
+wt config shell install
+```
+
+The shell integration matters because `wt switch` needs to change the current shell's directory ([Worktrunk installation guide](https://worktrunk.dev/#install)).
+
+Now I can create and enter a worktree with:
+
+```bash
+wt switch --create feature/order-history
+```
+
+Worktrunk addresses worktrees by branch name and calculates the directory from a configurable template. If the branch already has a worktree, `wt switch` moves me into it. If not, `wt switch --create` makes one. With no argument, it opens an interactive picker with branch status and diff previews ([`wt switch` documentation](https://worktrunk.dev/switch/)).
+
+`wt remove` defaults to the current worktree. It only deletes the branch when Worktrunk sees it's already merged. The `--no-delete-branch` flag keeps it ([`wt remove` documentation](https://worktrunk.dev/remove/)). See the [Worktrunk reference](https://worktrunk.dev/) for the full list.
+
+### Project hooks turn a checkout into a usable workspace
+
+Every new worktree starts empty. The same setup repeats every time. On switch, I install dependencies and run project generators. I register the worktree with the rest of the toolchain. I unregister it on removal. My hooks do all four from a shared config file. Creating a worktree returns me to "ready to work." The full reference, including the `pre-merge` and `post-merge` lifecycles, is in the [Worktrunk hook docs](https://worktrunk.dev/hook/). It also covers the approval flow for shared configs.
+
+Worktrunk reads those hooks from `.config/wt.toml`. They fire at lifecycle points like `pre-start` and `post-start`. `pre-start` runs before the worktree is usable. `post-start` runs after, in the background. I keep blocking setup in `pre-start` and push anything slow to `post-start`. That way creating a worktree returns fast. There's also `post-switch`, which fires on every checkout rather than just creation. That's the right home for work that tracks the current branch. The Herd link in the closing config is one example.
+
+### Giving every worktree its own dev server
+
+Only one app can listen on port 3000 at a time. Test runs pointed at the same mutable database can produce some creative failures. But a long test suite in one worktree doesn't block me. I can still check out main in another. The other worktree isn't competing for the same resources.
+
+Worktrunk's `hash_port` template filter derives a stable port from the branch name. The port sits between 10000 and 19999. Its `tether` step runs a process in its own process group. It tears that group down when you remove the worktree.
+
+```toml
+# .config/wt.toml
+
+[post-start]
+server = "wt step tether -- npm run dev -- --port {{ branch | hash_port }}"
+
+[list]
+url = "http://localhost:{{ branch | hash_port }}"
+```
+
+The server starts in the background. That way creating the worktree doesn't wait for a long-running process ([Worktrunk's per-worktree dev-server recipe](https://worktrunk.dev/tips-patterns/#dev-server-per-worktree)).
+
+### Worktrees fit coding agents unusually well
+
+Worktrunk becomes even more useful when I have two or more LLM coding agents on the same repo.
+
+Giving two agents the same working directory invites them to edit the same files and stage each other's changes. They can also run cleanup commands against work neither of them created. A worktree gives each agent its own branch, index, and checked-out files.
+
+Worktrunk creates the worktree and runs the project hooks. Then it moves into the worktree and starts an agent in one command:
+
+```bash
+wt switch --create --execute=claude feature/order-history -- \
+  "Add order history to the account page"
+```
+
+I can run a second agent in another terminal with the same pattern. Arguments after `--` go to the launched command. The blocking `pre-start` hooks finish before `--execute` runs. Post-start hooks continue in the background. Each agent begins in a prepared directory ([Worktrunk’s `--execute` workflow](https://worktrunk.dev/switch/#creating-worktrees)).
+
+Their changes can still conflict when I merge the branches. They can also collide through a shared database, port, or container name. A cache outside the worktree can cause problems too. The filesystem boundary solves a specific class of problems. I still need to divide the tasks sensibly and review what comes back.
+
+I also don’t need five agents running because the tool makes it possible. Parallel work is useful when the tasks are independent enough. Then the merge and review cost stays lower than the time saved.
+
+## Trade-offs and takeaway
+
+### The trade-offs, and when I’d skip
+
+Worktrees have a few edges that are easy to miss:
+
+- Every worktree duplicates the checked-out project files. Dependencies and build output can consume much more disk space than the source.
+- Git normally checks out a branch in only one worktree at a time. I treat the directory and branch as a pair.
+- State outside the worktree needs explicit handling. Ignored files and config need copying or generating. Shared resources (dev servers, databases, Docker, caches) need unique names or ports.
+- Worktrees are easy to make and easy to forget. I remove the worktrees after QA testing marks the work as done.
+- Removing a directory with `rm -rf` leaves worktree administration behind. I use `git worktree remove` or `wt remove`. `git worktree prune` cleans up stale metadata after a manual deletion ([Git worktree cleanup](https://git-scm.com/docs/git-worktree#_description)).
+- A third-party Git hook that runs on `post-checkout` can short-circuit `git worktree add`. This happens if it depends on a binary that doesn't exist in a fresh worktree. Patch the hook to exit cleanly when the dependency is missing. Otherwise `wt switch --create` fails before it can start.
+- Git still documents submodule support in more than one worktree as incomplete. I'd test the workflow carefully in a superproject with submodules ([Git worktree bugs](https://git-scm.com/docs/git-worktree#_bugs)).
+
+I'd skip worktrees entirely when those edges outweigh the benefits. That's when I'm on one branch at a time, the repo is large and disk is tight, or the IDE doesn't support worktrees.
+
+Keeping four tasks open in four directories makes switching between them mechanically cheap. It doesn't make holding four trains of thought equally cheap. What works for me is to keep the main task untouched. I handle the review or production fix in another worktree. I remove it when I'm done with the branch. When an agent can take an independent task, I give it a worktree too.
+
+### My takeaway
+
+Git worktrees turn branches into persistent working directories. That alone removes the stash-switch-unstash loop from review fixes and interruptions.
+
+Worktrunk becomes worthwhile once creating a directory isn’t enough. It gives me short branch-based commands, project hooks, and repeatable paths. Plus cleanup checks and a clean way to launch tools inside a prepared worktree.
+
+For a sense of what the resulting `.config/wt.toml` looks like, here's the version I used in a real repo:
+
+```toml
+[post-start]
+node = "sh '{{ primary_worktree_path }}/scripts/worktrunk/setup-node.sh'"
+php = "sh '{{ primary_worktree_path }}/scripts/worktrunk/setup-php.sh' '{{ branch }}' '{{ worktree_name }}' '{{ primary_worktree_path }}'"
+
+[post-switch]
+link = "sh '{{ primary_worktree_path }}/scripts/worktrunk/herd-link.sh' '{{ branch }}' '{{ worktree_name }}'"
+
+[pre-remove]
+unlink = "sh '{{ primary_worktree_path }}/scripts/worktrunk/herd-unlink.sh' '{{ branch }}' '{{ worktree_name }}'"
+```
+
+Each script takes the worktree’s name and does the project-specific work. The cleanup script mirrors the setup script. `{{ primary_worktree_path }}` lets each script reach the canonical `.env` without hardcoding a path.
+
+I’d start with the native commands until the model makes sense:
+
+```bash
+git worktree add ../shop.review-fix fix/payment-review
+git worktree list
+git worktree remove ../shop.review-fix
+```
+
+Then I'd add Worktrunk when the repeated environment setup starts getting irritating.
+
+---
+
+- **Page:** My 2023 travels: A visual journey
+- **Source:** https://subodhdahal.com/blog/2023-travels-visual-journey
+- **Description:** Looking back at the best pictures from my travel adventures in 2023
+
+## My 2023 travels: A visual journey
+
+Yet another year has passed. I've been lucky enough to travel to some amazing places, meet some amazing people and make wonderful memories. Here are some of my favourite pictures from my travels in 2023.
+
+## Nepal 🇳🇵
+
+### Kathmandu valley
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Nyatapole temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-10.jpg)
+  ![The Himalayas as seen from Kathmandu](https://subodhdahal.com/images/2023-visual-journey/nepal-9.jpg)
+  ![A temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-1.jpg)
+
+</div>
+
+### Bharatpur
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-4.jpg)
+  ![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-3.jpg)
+  ![Evening in Sauraha](https://subodhdahal.com/images/2023-visual-journey/nepal-5.jpg)
+
+</div>
+
+### Pokhara
+
+![View of Mount Machhapuchhre](https://subodhdahal.com/images/2023-visual-journey/nepal-2.jpg)![Boating in Phewa Lake](https://subodhdahal.com/images/2023-visual-journey/nepal-11.jpg)## Croatia 🇭🇷
+
+### Plitvice Lakes National Park
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-8.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-9.jpg)
+
+</div>
+
+### Zagreb
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-6.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-3.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-4.jpg)
+
+</div>
+
+### Split
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-10.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-13.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-14.jpg)
+
+</div>
+
+## France 🇫🇷
+
+### Strasbourg
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-1.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-2.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-4.jpg)
+
+</div>
+
+### Colmar
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-2.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-1.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-3.jpg)
+
+</div>
+
+### Nice and surrounding areas
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-7.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-3.jpg)
+  <div>
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-2.jpg)
+    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-8.jpg)
+
+</div>
+
+
+  <div>
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-5.jpg)
+    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-6.jpg)
+
+</div>
+</div>
+
+## Germany 🇩🇪
+
+### Kiel
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/june-kiel-2.jpg)
+
+</div>
+
+### Schwäbisch Hall
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/may-schwaebisch-hall-1.jpg)
+
+</div>
+
+### Würzburg
+
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/aug-wuerzburg-2.jpg)## Monaco 🇲🇨
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Monaco](https://subodhdahal.com/images/2023-visual-journey/may-monaco-1.jpg)
+
+</div>
+
+## Hungary 🇭🇺
+
+### Budapest
+
+![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-6.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-4.jpg)
+  ![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-1.jpg)
+
+</div>
+
+## Netherlands 🇳🇱
+
+### Amsterdam
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-3.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-3.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-2.jpg)
+
+</div>
+
+### The Hague
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-4.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-5.jpg)
+
+</div>
+
+### Zaandam
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-5.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-7.jpg)
+
+</div>
+
+## Spain 🇪🇸
+
+### Barcelona
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-1.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-8.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-7.jpg)
+
+</div>
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-5.jpg)
+  ![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-6.jpg)
+
+</div>
+
+### Montserrat
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-9.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-11.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-10.jpg)
+
+</div>
+
+<div className="text-travel-heading,text-5xl,text-center,mt-8,pb-8">
+
+Fin
+
+</div>
+
+---
+
+- **Page:** Quickly outline large JSON responses with a custom jq function
+- **Source:** https://subodhdahal.com/blog/jq-json-outline
+- **Description:** Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.
+
+I was recently digging into Immich’s API to see if it exposes the fields I needed for some details about my photos. Immich is my self-hosted photo-management service. The API returned hundreds of lines of JSON. I just wanted to see its structure to check the fields I needed, but scrolling through all that data felt slow. I did what any sane programmer would do: I spent even more time trying to automate it.
+
+I’ve used [jq](https://jqlang.org/) before for quick JSON tweaks (it’s basically `sed` or `awk` for JSON), so I wondered if it could help here. A quick search showed that jq can collapse arrays to a single-item preview, then recurse through the whole document for a clean outline of the JSON’s shape in one pass.
+
+I later found out the response structures are already listed in the Immich API docs. I could have just looked that up and saved myself the hassle. But hey, it could well have been an endpoint with no docs, and my method works for any JSON API response.
+
+## The jq function
+
+Here’s the jq function I came up with. You can run it in a terminal:
+
+```bash
+jq '
+def shape:
+  if type == "array" then
+    if length > 0 then [ (.[0] | shape) ] else [] end
+  elif type == "object" then
+    with_entries(.value |= shape)
+  else
+    type
+  end;
+shape
+' response.json
+```
+
+The function checks each value. If it's an array, keep just the first item and recurse. If it's an object, walk through each key and recurse into the value. If it's a primitive like a string or number, return just the type name.
+
+## Actual Immich API shape
+
+Here's a simplified output of the jq function applied to the Immich API response:
+
+```json
+{
+  "albums": {
+    "count": "number",
+    ...
+  },
+  "assets": {
+    "count": "number",
+    "facets": [],
+    "items": [
+      {
+        ...
+        "duration": "string",
+        "exifInfo": {
+          "city": "string",
+          "country": "string",
+          ...
+        },
+        "fileCreatedAt": "string",
+        "fileModifiedAt": "string",
+        "hasMetadata": "boolean",
+        ...
+      }
+    ],
+    "nextPage": "string",
+    "total": "number"
+  }
+}
+```
+
+Now I instantly see that `assets.items[i].exifInfo.country` is a string. That's exactly what I needed to know to map photos by country.
+
+## Extending it for sample values
+
+Next, I wondered: what if I wanted real examples, not just types? I modified the primitive case to return the value itself:
+
+```bash
+jq '
+def shape_with_samples:
+  if type == "array" then
+    if length > 0 then [ (.[0] | shape_with_samples) ] else [] end
+  elif type == "object" then
+    with_entries(.value |= shape_with_samples)
+  else
+    .
+  end;
+shape_with_samples
+' response.json
+```
+
+Now I get sample data like:
+
+```json
+{
+  "albums": {
+    "count": 10,
+    ...
+  },
+  "assets": {
+    "count": 25,
+    "facets": [],
+    "items": [
+      {
+        ...
+        "duration": "00:00:05",
+        "exifInfo": {
+          "city": "Zurich",
+          "country": "Switzerland"
+        },
+        "fileCreatedAt": "2025-09-01T10:00:00Z",
+        "fileModifiedAt": "2025-09-01T10:05:00Z",
+        "hasMetadata": true,
+        ...
+      }
+    ],
+    "nextPage": "2",
+    "total": 25
+  }
+}
+```
+
+Seeing `"Switzerland"` immediately confirmed I was pulling the right field.
+
+## Sampling the first few items
+
+When the first asset lacked optional tags, I extended the function to sample the first N items:
+
+```bash
+jq '
+def shape_with_samples(n):
+  if type == "array" then
+    if length > 0 then
+      [ .[:n][] | shape_with_samples(n) ]
+    else [] end
+  elif type == "object" then
+    with_entries(.value |= shape_with_samples(n))
+  else
+    .
+  end;
+shape_with_samples(3)
+' response.json
+```
+
+## Making it reusable
+
+I will definitely not remember these functions in a month, so I saved them as reusable scripts:
+
+```bash
+~/.jq/shape.jq
+~/.jq/shape_with_samples.jq
+```
+
+Now I can run them anytime via:
+
+```bash
+jq -f ~/.jq/shape.jq response.json
+jq -f ~/.jq/shape_with_samples.jq response.json
+```
+
+## Conclusion
+
+It’s a simple trick, but it makes large JSON responses much easier to read. When you hit an undocumented API, jq maps its structure fast and without guesswork.
+
+---
+
+- **Page:** Why I added RSS feeds to my blog (and how I did it in Nuxt 3)
+- **Source:** https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3
+- **Description:** How I built RSS and Atom feed support for my Nuxt 3 website to let readers follow my content without social media algorithms.
+
+## What are RSS and Atom feeds?
+
+RSS (Really Simple Syndication) and Atom are XML formats for sharing new posts with readers. Instead of visiting each site by hand, readers subscribe to a feed. When a site publishes new content, the feed updates and readers see it in their feed reader.
+
+Some popular web-based feed readers are FreshRSS, Feedly, Inoreader, and NewsBlur. Desktop apps like Fluent Reader and mobile apps like Reeder and Readrops are also available. I run a [FreshRSS](https://freshrss.org/) instance in my homelab and read updates through its web UI or the Readrops app on my phone.
+
+## The rise, fall, and resurgence of RSS/Atom
+
+In the early days, RSS was everywhere. Blogs and news sites all used it, and podcasts did too. Most people, including me, relied on feed readers to keep up with their favorite sites. Feeds were a simple and effective way to follow online content.
+
+Then social platforms came along. They promised to show us content based on our interests using recommendation algorithms. When Google Reader (a prominent feed reader at the time) shut down in 2013, it marked a shift in how we read online. Like many others, I switched to getting my news and updates from social media.
+
+After seeing how social media algorithms favor engagement over user interests, some of us started going back to RSS. While it's not perfect, I prefer the straightforward approach of choosing what I want to read rather than having it chosen for me.
+
+## Adding feeds to my blog
+
+Since I started using RSS feeds again, I wanted my Nuxt 3 blog to support both feed formats. I went with both formats because some feed readers are picky. Since the library generates the feeds, the extra few lines of code don't add much.
+
+Here's how I added RSS and Atom feeds to my blog:
+
+## Setting up the feed package
+
+The first step was installing the `feed` package:
+
+```bash
+npm install feed
+# or with yarn
+yarn add feed
+```
+
+## Creating the feed system
+
+### Fetching blog posts
+
+I started by creating a function to fetch my blog posts. Here's what I put in `server/utils/blog.ts`:
+
+```typescript
+import type { BlogPostPreview } from "~/types";
+
+export async function getBlogPosts(event: any): Promise<BlogPostPreview[]> {
+  try {
+    // event parameter is required for server-side content querying
+    return await queryCollection(event, "blog")
+      .select("title", "description", "tags", "postDate", "path", "url")
+      .order("postDate", "DESC")
+      .all();
+  } catch (e) {
+    console.error("Error fetching blog posts:", e);
+    return [];
+  }
+}
+```
+
+It took me a while to figure this out: on the server-side, we also need to pass the `event` parameter to `queryCollection` to access the server request context. Client-side code doesn't need this.
+
+### Generating the feeds
+
+Next, I needed functions to generate the actual feeds. Here's what I created in `server/utils/feed.ts`:
+
+```typescript
+// Import Feed library and our blog post type
+import { Feed } from "feed";
+import type { BlogPostPreview } from "~/types";
+
+export type FeedFormat = "rss" | "atom";
+
+// Default feed metadata - customize these values
+const DEFAULT_TITLE = "Your Site Name";
+const DEFAULT_DESCRIPTION = "Your site description";
+
+// Creates a new Feed instance with common configuration
+export function createBaseFeed(baseUrl: string) {
+  if (!baseUrl) {
+    throw new Error("Base URL is required to create a feed");
+  }
+
+  return new Feed({
+    title: DEFAULT_TITLE,
+    id: baseUrl,
+    link: baseUrl,
+    description: DEFAULT_DESCRIPTION,
+    language: "en",
+    copyright: `Copyright ${new Date().getFullYear()} Your Name`,
+    // Advertise both feed formats
+    feedLinks: {
+      rss2: `${baseUrl}/rss.xml`,
+      atom: `${baseUrl}/atom.xml`,
+    },
+    author: {
+      name: DEFAULT_TITLE,
+      link: baseUrl,
+    },
+    updated: new Date(), // Required for Atom feeds
+  });
+}
+
+// Adds blog posts to the feed with proper metadata
+export function addPostsToFeed(
+  feed: Feed,
+  posts: BlogPostPreview[],
+  baseUrl: string,
+) {
+  if (!feed || !Array.isArray(posts) || !baseUrl) {
+    throw new Error("Feed, posts array, and base URL are required");
+  }
+
+  for (const post of posts) {
+    // Skip posts without required fields
+    if (!post.title || !post.path) {
+      console.warn("Skipping invalid post:", post);
+      continue;
+    }
+
+    // Add post to feed with full metadata
+    feed.addItem({
+      title: post.title,
+      id: `${baseUrl}${post.path}`, // Unique identifier
+      link: `${baseUrl}${post.path}`, // Full URL to post
+      description: post.description || "",
+      date: new Date(post.postDate || Date.now()),
+      category: post.tags?.map((tag) => ({ name: tag })) || [],
+      author: [
+        {
+          name: DEFAULT_TITLE,
+          link: baseUrl,
+        },
+      ],
+    });
+  }
+}
+
+// Unified feed generation function
+export async function generateFeed(
+  event: any,
+  baseUrl: string,
+  format: FeedFormat,
+): Promise<string> {
+  try {
+    const blogPosts = await getBlogPosts(event);
+    const feed = createBaseFeed(baseUrl);
+    addPostsToFeed(feed, blogPosts, baseUrl);
+
+    return format === "rss" ? feed.rss2() : feed.atom1();
+  } catch (error) {
+    console.error(`Error generating ${format} feed:`, error);
+    throw error;
+  }
+}
+```
+
+## Setting up the routes
+
+With the utility functions in place, I created two route handlers, one for RSS and one for Atom:
+
+In `server/routes/rss.xml.ts`:
+
+```typescript
+import { generateFeed } from "../utils/feed";
+
+export default defineEventHandler(async (event) => {
+  const baseUrl = "https://subodhdahal.com";
+  const feedContent = await generateFeed(event, baseUrl, "rss");
+
+  setResponseHeader(
+    event,
+    "content-type",
+    "application/rss+xml; charset=utf-8",
+  );
+  return feedContent;
+});
+```
+
+In `server/routes/atom.xml.ts`:
+
+```typescript
+import { generateFeed } from "../utils/feed";
+
+export default defineEventHandler(async (event) => {
+  const baseUrl = "https://subodhdahal.com";
+  const feedContent = await generateFeed(event, baseUrl, "atom");
+
+  setResponseHeader(
+    event,
+    "content-type",
+    "application/atom+xml; charset=utf-8",
+  );
+  return feedContent;
+});
+```
+
+My RSS feed is available at `/rss.xml` and my Atom feed at `/atom.xml`.
+
+## Making the feeds discoverable
+
+To help feed readers find my feeds automatically, I added these links to my `app.vue`:
+
+```typescript
+useHead({
+  link: [
+    {
+      rel: "alternate",
+      type: "application/rss+xml",
+      title: "Your Site Name (RSS)",
+      href: "/rss.xml",
+    },
+    {
+      rel: "alternate",
+      type: "application/atom+xml",
+      title: "Your Site Name (Atom)",
+      href: "/atom.xml",
+    },
+  ],
+});
+```
+
+## Making feeds visible to users
+
+I put RSS and Atom feed links in my website's footer with a familiar RSS icon. Visitors can find and subscribe to my feeds through their preferred reader.
+
+## Static site generation
+
+Since my blog is static, I needed to generate the feeds at build time. I added this to my `nuxt.config.ts`:
+
+```typescript
+export default defineNuxtConfig({
+  nitro: {
+    prerender: {
+      routes: ["/rss.xml", "/atom.xml"],
+    },
+  },
+  // ... other config
+});
+```
+
+## Testing the feeds
+
+After setting everything up, I tested my feeds by:
+
+1. Building and deploying the site
+2. Checking both `/rss.xml` and `/atom.xml` URLs
+3. Validating the feeds with online tools like the [W3C Feed Validator](https://validator.w3.org/feed/)
+4. Subscribing to them in my own FreshRSS instance
+
+## Conclusion
+
+Adding RSS and Atom feeds to my Nuxt 3 blog took a library and a few short files. Now my readers can follow my updates in their preferred feed readers, just like I follow other blogs.
+
+The full code is in my [GitHub repository](https://github.com/SubodhDahal/subodhdahal.github.io).
+
+---
+
+- **Page:** Revisiting my Stream Deck for music control
+- **Source:** https://subodhdahal.com/blog/stream-deck-youtube-music
+- **Description:** How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.
+
+I bought a Stream Deck years ago hoping to improve my productivity in the home office, but quickly lost interest after the novelty wore off.
+
+Stream Deck is a customizable control panel with LCD buttons that trigger computer actions like launching apps, controlling media, automating workflows. Originally designed for streamers, it's gained popularity among developers and productivity enthusiasts.
+
+Since I didn't have any specific use for it, it sat in storage for months until I recently decided to give it another chance. This time with a focused approach.
+
+Instead of trying to automate everything at once, I focused on solving one specific daily annoyance: controlling music without breaking my workflow. This targeted approach made me actually use the Stream Deck regularly.
+
+## Setting up music controls
+
+My initial challenge was simple: I wanted to control YouTube Music without switching windows.
+
+While mapping Stream Deck buttons to Mac's multimedia keys for basic playback (play/pause, next, previous) was easy, I also needed a way to like or dislike songs to curate my collection effectively.
+
+I use the unofficial [YouTube Music Desktop App](https://github.com/th-ch/youtube-music) which offers an API server plugin for controlling the app. However, there was a catch: Stream Deck couldn't directly execute terminal commands on Mac, and bash scripts weren't working. After some research, I found that I need to create Automator apps to execute the terminal commands. Not the most straightforward solution, but it works.
+
+Here's how I set it up:
+
+1. Configure buttons on the Stream Deck to use the Mac's multimedia keys for basic playback controls.
+2. Install YouTube Music Desktop App and enable its API server plugin
+3. Install [`xh`](https://github.com/ducaale/xh) for HTTP requests
+4. Create [Automator apps](https://support.apple.com/guide/automator/welcome/mac) for these API endpoints:
+
+```bash
+http://0.0.0.0:26538/api/v1/like     # Like/unlike
+http://0.0.0.0:26538/api/v1/dislike  # Dislike
+http://0.0.0.0:26538/api/v1/pause    # Pause/play
+```
+
+1. Assign the Automator apps to Stream Deck buttons
+
+<figure className="mx-auto,my-8,max-w-3xl">
+
+![Stream Deck buttons setup for YouTube Music control](https://subodhdahal.com/images/stream-deck/stream-deck-youtube-music.png)
+  <figcaption className="text-center,mt-2,text-sm,text-gray-600,dark:text-gray-400">
+
+My buttons setup for YouTube Music on Stream Deck
+
+</figcaption>
+</figure>
+
+## Solving a related problem
+
+I use Super Whisper for speech-to-text via a Stream Deck button. But there was a problem: If music is playing, Super Whisper picks up the audio from it and the dictation doesn't work reliably.
+
+I solved this by creating a multi-action button in Stream Deck that first pauses YouTube Music using the `pause` API endpoint, then launches Super Whisper. I added an `&` at the end of the script to run it in the background. This prevents error messages when YouTube Music is not running.
+
+The launcher button for it is on the top right in the image above.
+
+## Physical layout change
+
+I moved the Stream Deck from directly in front of me to the left of my keyboard. This position feels more natural, so I no longer reach forward to press buttons.
+
+## Beyond music control
+
+I also use Stream Deck for:
+
+- **App launchers** for development tools
+- **Home office lighting** via Home Assistant integration
+- **System shortcuts** like Do Not Disturb or taking screenshots
+
+## The bigger picture
+
+This music control workflow is step one in an ongoing automation experiment. I'm documenting this success to create a template for future improvements and stay motivated. The key was finding the right approach to turn a failed purchase into a useful tool.
+
+---
+
+- **Page:** fzf + fabric: Smart selection for LLM patterns and models
+- **Source:** https://subodhdahal.com/blog/ai-pattern-selection-in-fabric
+- **Description:** Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.
+
+I have been using [fabric](https://github.com/danielmiessler/fabric) to run LLM prompts on text. It's like having a Swiss Army knife of LLM tools. You feed it text, and it helps analyze it in different ways. With 31k+ GitHub stars, lots of people find it useful.
+
+But here's the thing: there were too many patterns available. I kept staring at my screen trying to remember how they are named. Plus, I wanted to have the flexibility to choose different LLM models without having to memorize their names.
+
+## The solution
+
+I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool, to create searchable menus for fabric. Instead of memorizing commands, I just:
+
+1. Send text to fabric
+2. Type any parts of what I want. fzf is smart about matching:
+
+  - `xwis` finds "extract_wisdom"
+  - `sumtext` matches "summarize_text"
+3. Press enter to run
+
+The magic happens with two shell commands (add to `.zshrc` or `.bashrc`):
+
+- `fp` - Pick a pattern with fuzzy search
+- `fps` - Same smart matching, but for both model and pattern
+
+Here's the code that makes it work:
+
+```bash
+# Fabric CLI Helper Functions
+# Interactive selection of models and patterns for fabric AI tool
+# Requirements: fabric(https://github.com/danielmiessler/fabric), fzf(https://github.com/junegunn/fzf)
+#
+# Usage Examples:
+#   Model + Pattern Selection (fps alias):
+#     fps -u <url>                    # Process URL content
+#     pbpaste | fps                   # Process clipboard content
+#     yt <youtube_url> | fps          # Process YouTube transcript
+#     echo "text" | fps               # Process any text content
+#
+#   Pattern Selection Only (fp alias):
+#     fp -u <url>                     # Use default model with URL
+#     pbpaste | fp                    # Use default model with clipboard
+#     yt <youtube_url> | fp           # Use default model with transcript
+#     cat file.txt | fp               # Process any text content
+
+# Handle stdin input for fabric functions
+_fabric_handle_input() {
+  if [ -t 0 ]; then
+    return 1  # No stdin
+  else
+    cat       # Return stdin content
+    return 0
+  fi
+}
+
+# Select a pattern using fzf
+_fabric_select_pattern() {
+  fabric -l | fzf --height 40% --border --ansi --prompt="Select pattern: "
+}
+
+# Select and run fabric with a pattern
+# Usage: fabric_with_pattern [additional_args...]
+fabric_with_pattern() {
+  local input=""
+  local has_stdin=0
+
+  if input=$(_fabric_handle_input); then
+    has_stdin=1
+  fi
+
+  local pattern=$(_fabric_select_pattern)
+  [ -z "$pattern" ] && { echo "No pattern selected."; return 1; }
+
+  if [ $has_stdin -eq 1 ]; then
+    echo "$input" | fabric --pattern "$pattern" "$@"
+  else
+    fabric --pattern "$pattern" "$@"
+  fi
+}
+
+# Select and run fabric with both model and pattern
+# Usage: fabric_with_model_pattern [additional_args...]
+fabric_with_model_pattern() {
+  local input=""
+  local has_stdin=0
+
+  if input=$(_fabric_handle_input); then
+    has_stdin=1
+  fi
+
+  local model_line=$(fabric -L | fzf --height 40% --border --ansi --prompt="Select model: ")
+  [ -z "$model_line" ] && { echo "No model selected."; return 1; }
+
+  local model=$(echo "$model_line" | sed -E 's/.*[[:space:]]([^[:space:]]+)$/\1/')
+
+  local pattern=$(_fabric_select_pattern)
+  [ -z "$pattern" ] && { echo "No pattern selected."; return 1; }
+
+  if [ $has_stdin -eq 1 ]; then
+    echo "$input" | fabric --model "$model" --pattern "$pattern" "$@"
+  else
+    fabric --model "$model" --pattern "$pattern" "$@"
+  fi
+}
+
+# Get YouTube transcript with fabric
+# Usage: yt <video_link>
+yt() {
+  local video_link="$1"
+  fabric -y "$video_link" --transcript
+}
+
+# Aliases for convenience
+alias fp='fabric_with_pattern'
+alias fps='fabric_with_model_pattern'
+```
+
+Also available on [GitHub Gist](https://gist.github.com/SubodhDahal/38436348aedf0596e48d17ffcffa7d51).
+
+## Using It Day-to-Day
+
+It's as simple as:
+
+- `fp -u example.com` to analyze a website
+- `pbpaste | fp` to analyze clipboard content
+- `cat file.txt | fps` to analyze a file with a specific model
+
+The menu pops up, you pick what you want, and fabric does the rest.
+
+## Making It Work for You
+
+You know how your phone probably has dozens of apps, but you only use a handful regularly? It's the same with fabric patterns. While having options is great, too many choices can slow you down.
+
+I cleaned up my pattern collection by:
+
+- Keeping only the patterns I actually use
+- Tweaking the remaining ones to work exactly how I want
+
+Since patterns are just markdown files, changing them is as easy as editing a text file.
+
+## Why This Matters
+
+I'm not reinventing the wheel here. These are just small tweaks that make fabric feel more natural to use. But sometimes that's all you need: tools that work the way your brain works.
+
+Before, I'd hesitate to use fabric because remembering all the commands felt like work. Now? It's just copy, paste, pick, and done. If you use fabric, give these helpers a try.
+
+---
+
+- **Page:** Re-living memories through proper media organization
+- **Source:** https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization
+- **Description:** Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.
+
+# Capturing life's moments
+
+We make priceless memories as life progresses, and these are the ones we want to keep forever. They can be minor, everyday occurrences or significant, life-altering occasions that serve as a reminder of who we were, what we've been through, and what we've learned. They are really valuable and can make us feel sad, happy, or nostalgic.
+
+Unfortunately, our memory is fallible and we can only remember so much. Despite our innate limitations, we have continually sought to immortalize moments of significance. From cave paintings to digital photos and videos, we have come a long way.
+
+Photos and videos help us not just to remember the events, but the associated emotions and feelings as well. They also allow us to show others the experiences we've had and the memories we hold dear, creating a shared history and a sense of connection with those around us.
+
+# Why organize digital media?
+
+With ubiquitous camera technology, capturing memories is easier, but revisiting them can be a challenge. A disorganized and huge photo and video collection can leave us with a sense of dread. Proper organization of digital media serves as a safeguard for our precious memories, ensuring that they remain a constant source of comfort and inspiration.
+
+Like many people of our generation, I have amassed a large personal collection of photos and videos. I had to find a solution that enabled me to effortlessly navigate through the vast collection of my cherished moments.
+
+# Considerations for a solution
+
+Here are a few of the considerations that were important to me in choosing a solution:
+
+- I wanted my digital media stored on a local device, not in a cloud that could restrict my access.
+- The software had to be open-source and have enough features to handle my media organization needs.
+- The metadata I added to my media needed to be in an open format for easy manipulation.
+
+After some research, I came across [digiKam](https://www.digikam.org/) which matched all my requirements. digiKam is a feature-rich free and open-source software to manage your digital media collection. It is available for Linux, Windows, and macOS.
+
+## Workflow
+
+After investing a lot of time trying to figure out what works for me, the workflow that I have settled on is as follows:
+
+1. Import
+2. Culling
+3. Organization
+4. Editing and enhancing
+5. Cloud Backup
+
+I go to steps 1 to 5, mostly in a sequence when importing new media. Occasionally, I look back at my digiKam collections and perform the steps from 2 to 5.
+
+### 1. Import
+
+I have three major sources of my pictures and videos: my cellphone, a GoPro action camera, and a DJI Mini 3 Pro drone. Their media is imported and saved to an external SSD.
+
+I use a card reader to import the media from the GoPro and the DJI drone using digiKam.
+
+For photos and videos that I take with my Android cellphone, I use an open-source program called [Rapid Photo Downloader](https://damonlynch.net/rapid/index.html) to download them to a directory on my computer using File Transfer mode. I use Rapid Photo Downloader due to digiKam's failure to import media from my cellphone.
+
+The imported media is automatically organized by date in the format `YYYY-MM-DD` by digiKam. Rapid Photo Downloader imports it in the format `YYYYMMDD` which I then use a custom script to rename to the format `YYYY-MM-DD`.
+
+This is how my directory structure looks like:
+
+```text
+...
+- 2022
+  - ...
+- 2023
+  - 2023-01-01
+  - 2023-01-03
+  - 2023-01-12
+  ...
+```
+
+### 2. Culling
+
+To maintain focus on the important memories, we need to delete the clutter. Intentional photo-taking and intentional photo-deleting also lead to better memory retention and the ability to revisit experiences.
+
+While browsing through the imported pictures and videos using digiKam, I do the following:
+
+- Delete pictures that are blurry, out of focus, or have a lot of noise unless they represent a special moment that wasn't captured well by other pictures
+- If there are multiple pictures of the same thing, delete the ones that are not the best
+- Delete pictures that are too similar to other pictures
+
+To make the process faster and avoid accidentally deleting pictures that I might want to keep, I add a red flag to the pictures that I want to delete. I have configured the shortcut key `1` to add a red flag to the selected picture.
+
+<figure className="image">
+
+![The list of media with red flags](https://subodhdahal.com/images/digital-media-2023/digikam-red-flags.png)
+  <figcaption>
+
+digiKam interface for working with flagged media
+
+</figcaption>
+</figure>
+
+All these flagged pictures can be seen in the "Rejected items" section under "Labels" in digiKam, which I then delete in bulk.
+
+### 3. Organization
+
+To make it easier to find pictures and videos, I add metadata to them. I use digiKam to add the following metadata to my pictures and videos:
+
+- Add labels based on location
+
+  - digiKam has a feature called "Reverse geocoding" to automatically add labels based on the GPS coordinates of the pictures
+  - Manually assign labels if there was no GPS coordinates or if the location was not recognized by digiKam
+- Tag people in pictures by using the "Face Tags" feature of digiKam
+
+  - digiKam automatically recognizes faces in pictures and allows me to tag them. After having a sufficient number of pictures of a person, it can even suggest the name of the person.
+- Manually tag events in pictures
+
+<figure className="image">
+
+![digiKam sidebar](https://subodhdahal.com/images/digital-media-2023/digikam.png)
+  <figcaption>
+
+digiKam sidebar showing its prominent features
+
+</figcaption>
+</figure>
+
+### 4. Editing and enhancing
+
+Editing pictures is a crucial aspect of preserving and reliving memories. By fine-tuning and refining the images, we bring out the best qualities and features that make each moment special. Moreover, editing can also help eliminate distractions, adjust lighting, and enhance overall image quality. Ultimately, the process of editing pictures is an art that helps preserve and elevate the beauty of our memories.
+
+digiKam has a powerful editing tool called "Image Editor" where I mostly perform the following tasks:
+
+- Crop images to improve composition
+- Rotate and flip images
+- Adjust exposure, contrast, saturation, color balance, and white balance
+- Adjust perspective
+- Adjust lens distortion
+
+<figure className="image">
+
+![Image editing tools in digiKam](https://subodhdahal.com/images/digital-media-2023/digikam-image-editor-tools.png)
+  <figcaption>
+
+Image editing tools in digiKam
+
+</figcaption>
+</figure>
+
+digiKam also has features to create panoramas and HDR images from multiple pictures, which I make occasional use of.
+
+### 5. Cloud backup
+
+Even though I chose local storage as the main destination for my media, I still back them up to the cloud. Hard drives can fail and catastrophes like fire can happen which destroy years of memories. Having an off-site backup is a good way to ensure that the media remain safe.
+
+Any pictures and videos that I take from my cellphone are automatically uploaded to Google Photos once I join a WiFi network. I selectively upload pictures and videos from my GoPro or drone to conserve cloud storage space, uploading directly to Google Photos from digiKam.
+
+# Conclusion
+
+Organizing digital media is crucial for safeguarding our memories and revisiting our experiences. With the right tools, it can be an effortless process that helps us remember and share our precious moments. However, it is important to remember that without the right mindset and discipline, even sophisticated tools are not of much value.
+
+## Future work
+
+I am still experimenting with the workflow and tools that I use to manage my digital media. Here are some ideas that I am considering:
+
+- Move the media to a NAS(Network Attached Storage)
+
+  - using multiple drives with a RAID setup will help prevent data loss in case one or more of the hard drives fail
+  - the media can be accessed on a local network or even from the internet
+- Automatically correct timestamps on media, usually the ones received via chat apps
+- Automatic assignment of GPS coordinates for pictures/videos taken minutes apart, in case they don't have GPS metadata.
+- Add automatic tags for things in pictures, eg. sunsets, lakes, canyons, books
+
+---
+
+- **Page:** Effortless configuration syncing with GNU Stow and Git: a software engineer's workflow
+- **Source:** https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow
+- **Description:** Use GNU Stow and Git to keep config files in sync across Linux and macOS. Keep them in one repo with full history, and set up new machines in minutes.
+
+## Introduction
+
+As a software engineer, I use my terminal, shell, and text editor every day. Each tool has its own config files, or **dotfiles**. Over time, I've tuned these files to fit how I work. Keeping them in sync across machines takes time and is easy to break. My laptop, home server, and work Mac all have their own setups. That's where **GNU Stow** and **Git** come in. They keep my configs neat and in sync. I've relied on this setup for over five years.
+
+## What are dotfiles?
+
+Dotfiles are config files that start with a dot, such as `.zshrc`, `.vimrc`, and `.gitconfig`. They control how your tools look and act. These files sit all over your home folder, so sorting them by hand is a chore. That becomes tedious when you use more than one machine. Putting them in one repo is the key to easy config handling.
+
+## The tools: GNU Stow and Git
+
+**GNU Stow** is a symlink manager. It takes dotfiles from one repo and links them into the folders you pick. Pair it with **Git**, and every change is easy to track and undo. Your setup then syncs across machines.
+
+## Setting up my dotfiles
+
+### 1. Centralized Repository
+
+I keep my dotfiles in a private Git repo. The repo mirrors the layout of my home folder, so Stow can link files where they belong. Here's how I lay out configs for Zsh, Git, Tmux, and Vim (shortened for this post):
+
+```bash
+dotfiles
+├── git
+│   └── .gitconfig
+├── tmux
+│   ├── .tmux.conf
+├── zsh
+│   ├── .config
+│   │   ├── aliasrc.sh
+│   │   ├── custom_fns.sh
+│   │   ├── env.zsh
+│   │   ├── oh-my-posh
+│   │   │   └── info.toml
+│   └── .zshrc
+└── vim
+  └── .vimrc
+```
+
+### 2. Stowing and restowing configurations
+
+A big plus of GNU Stow is that you can pick which configs go on which machine. My repo holds a folder for each tool, such as Zsh, Tmux, and Vim. When I set up a machine, I choose the folders I want and leave the rest.
+
+For example, to apply my Zsh setup I run the `stow` command like this:
+
+```bash
+stow --target=/home/username zsh
+```
+
+This links my Zsh files into my home folder, including `.zshrc` and everything in `.config`.
+When I add files or change a config, I restow the folder to apply the update:
+
+```bash
+stow -R zsh
+```
+
+This clears the old links and makes new ones, so nothing is stale.
+
+### 3. Uninstalling configurations
+
+To remove a config, such as Zsh, I run:
+
+```bash
+stow -D zsh
+```
+
+This deletes every Zsh link in my home folder but leaves the files in my repo alone. I can put them back anytime.
+
+## Pro-tip: Simplify with `.stowrc`
+
+By default, Stow links files into your current folder unless you set a target with `--target`. I got tired of typing `--target=$HOME` every time, so I made a `.stowrc` file in my repo:
+
+```bash
+--target=$HOME
+```
+
+Now Stow uses my home folder on its own, and you can track the file with Git too.
+
+## Syncing with Git
+
+Tracking dotfiles with Git has three big benefits:
+
+- **Change history**: see every tweak I've made over the years and roll back if needed.
+- **Sync across machines**: push changes to a private repo, then pull them onto any new machine.
+- **Works on Linux and macOS**: the same setup works on both, and every machine stays in sync.
+
+For instance, when I got a Mac at work, I cloned my dotfiles repo. After running `stow zsh`, my Zsh setup, aliases, and Oh My Posh theme were ready right away.
+
+## More use cases for Stow
+
+I use Stow for dotfiles, but it can handle any files that need symlinks. Some examples:
+
+- Scripts live in a `bin` folder and link into `$PATH`.
+- Config folders for tools like Docker or Kubernetes are easy to manage.
+- You can test a new version of a config file without touching the current one.
+
+## The benefits of this workflow
+
+This setup changed how I manage configs. Here's what it gives me:
+
+- My configs live in one place, so updates and backups are simple.
+- Stow and Git get a new machine ready in minutes.
+- After five years of tweaks, I can still look back at what I tried and what worked.
+- The same setup works on Linux and macOS.
+
+**GNU Stow** and **Git** make this whole setup possible. My configs stay in sync without much effort, and every machine ends up the same. Every tweak I make leaves a trail, so I can undo mistakes. That leaves me more time to build and solve problems.
+
+---
+
+- **Page:** Looking back: My 2022 in review
+- **Source:** https://subodhdahal.com/blog/2022-in-review
+- **Description:** From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.
+
+As the earth completes another revolution around the sun and yet another year comes to an end, I can't help but look back and reflect on all that has happened.
+
+For me, this year has been filled with highs and lows, moments of joy and sorrow, and a range of emotions in between. From embarking on solo adventures to creating lasting memories with close friends, I've had the opportunity to learn and grow in ways I never could have imagined.
+
+Join me as I take a journey through the year that was, and discover the lessons and insights I've gained along the way.
+
+# Personal highlights
+
+This year has been filled with exciting adventures, personal growth, and lasting memories. Here are some of the highlights:
+
+## A year of travel: My adventures in 10 countries
+
+This year, I set off on a series of solo adventures that opened my eyes to new experiences and gave me the freedom to make spontaneous decisions. As I traveled to different countries and immersed myself in diverse cultures, I gained a new perspective on the world and my place in it.
+
+Along the way, I met a cast of intriguing characters and took time to reflect on my life and future goals. And when I wasn't venturing out on my own, I made some unforgettable memories with my closest friends.
+
+<figure className="image">
+
+![Europe map](https://subodhdahal.com/images/2022-in-review/europe-map-visited.svg)
+  <figcaption>
+
+A map of Europe with the countries I traveled to in 2022 marked in blue
+
+</figcaption>
+</figure>
+
+I embarked on a journey that took me to 10 countries, 8 of which were new to me. From the beautiful beaches of Greece and the wide landscapes of Norway, to the charming streets of Belgium and the historic sites of Poland, I was constantly in awe of the diverse cultures and landscapes I encountered. In Italy, I marveled at the ancient architecture and savored the delicious cuisine. I also visited the smallest country in the world, Vatican City and marveled at the beauty of St. Peter's Basilica. In Estonia, I was struck by the country's natural beauty and rich history, and in Finland, I was fascinated by the unique blend of modern and traditional culture.
+
+And even though I've visited Switzerland and Austria before, I always find something new and exciting to discover in these beautiful countries. Along the way, I also explored countless charming towns and villages throughout Germany.
+
+All these experiences made this year one of the most memorable and rewarding travel experiences of my life.
+
+<figure className="quote">
+
+> The use of traveling is to regulate imagination by reality, and instead of thinking how things may be, to see them as they are.
+
+
+  <figcaption>
+
+— Samuel Johnson
+
+</figcaption>
+</figure>
+
+## Finding my inner strength: My 50km/day hikes in Germany
+
+This year, I pushed myself to new limits with two epic 50km/day hikes that challenged my physical and mental strength. As someone who has not traditionally considered themselves an athlete, this was a significant accomplishment that I never would have thought myself capable of before.
+
+The first one was along the Rössleweg in Stuttgart, Germany. It is mostly through wooded areas, picturesque vineyards and orchards, all while overlooking the valley known as the Stuttgarter Kessel.
+
+It was in preparation for the second one, which was the [50 km MegaMarsch event in Freiburg](https://www.megamarsch.de/50-12/freiburg/freiburg-anmeldung/), Germany. This was a 50km hike that started in the city and through the Black Forest, which is known for its dense forests and steep hills, before finally ending back in the city.
+
+Despite the exhausting nature of these hikes, they were both amazing experiences that helped me to push myself and discover what I was capable of.
+
+I am grateful to my good friend [Carsten Cierniak](https://www.instagram.com/carsten_thm/) for introducing me to the MegaMarsch event and for providing motivation and companionship during the hikes. Thanks also to him for the guidance and tips that helped me prepare for the hikes.
+
+## The great outdoors: A year of hiking and exploring
+
+Throughout the year, I have been able to do a lot of hiking, ranging from short walks to full-day hikes. Each trail offered its own unique beauty and challenges, from scenic mountain vistas to dense forests and winding rivers.
+
+Hiking has allowed me to disconnect from the stresses of daily life and reconnect with the beauty of the natural world. It has also been a great way to stay active and healthy, both physically and mentally.
+
+The most memorable hikes of the year were: to Zugspitze 🇩🇪, in the Black Forest 🇩🇪, in the Saxon Switzerland National Park 🇩🇪, and in Sognsvann 🇳🇴.
+
+Climbing to the top of Zugspitze, the highest mountain in Germany, proved to be a formidable challenge.The steep and rocky path halfway up the mountain was difficult, and the weather near the top was bad enough that we had to stop just a few hundred meters from the summit. However, the views along the way and the feeling of accomplishment made it all worth it.
+
+I was able to build a strong connection with my friends who accompanied me during these hikes as we bonded over the shared experience of exploring the beautiful nature these regions have to offer.
+
+Hiking has become a passion of mine and I look forward to continuing to explore the many trails that the world has to offer.
+
+## A night to remember: Iron Maiden in concert
+
+I was able to realize a long time desire of mine this year by seeing one of my favorite bands Iron Maiden live in concert. The thrill of hearing the songs I love performed live was an incredible. Despite the age of the band members, they delivered an electric performance and were able to make the 50,000 people present in the venue chant in unison.
+
+It was an unforgettable event that I will always cherish.
+
+# Professional highlights
+
+In addition to my travels, hikes and fun events, this year has also brought its share of challenges and growth in my professional life.
+
+## Stepping into a new role: Overcoming challenges and finding success
+
+As a seasoned Software Engineer with almost a decade of experience under my belt, I thought I had seen it all. But when I accepted the role of Software Engineering Team Lead at [Laserhub GmbH](https://laserhub.com/), I quickly realized that I had a lot to learn. Not only was this a promotion, but it also required me to approach things in a new way and shed some of my old habits.
+
+I'd be lying if I said it has been easy. There have been a lot of challenges, but I've been enjoying it so far and learning to see things from a new perspective. With the help of the wonderful people I work with, I have been able to grow a lot in this role.
+
+# Resilience in adversity: Struggles of those close to me in 2022
+
+In February of this year, a war broke out in Ukraine, causing me great concern for the safety of my colleagues and their loved ones living there. Despite my fears, they are fortunately able to remain safe, but they still have to cope with the ongoing effects of the war. I am in awe of their strength and resilience as they continue to live their lives as normally as possible, despite the challenges they face. I can only hope that the situation will improve and that peace will be restored in the near future.
+
+# Personal key takeaways from 2022
+
+- We are all works in progress. Who we were yesterday is not who we are today, and who we are today is not who we will be tomorrow.
+
+  - There is always the potential for growth and learning, and we should always be open to new knowledge and opportunities for self-improvement.
+
+  - Embracing challenges is essential to personal growth and development.
+
+  - Investing in meaningful relationships with loved ones is always worthwhile.
+
+As I look back on the year that was, I am filled with gratitude for all the things I've learned and experienced.
+
+Unfortunately, not everyone has had the same experience, with some really horrible things that happened in the world. I hope that 2023 will be a better year for everyone.
+
+I am grateful for the support and encouragement of those in my life this year. Your guidance and opportunities have allowed me to grow. Thank you for being a part of my journey and for the amazing times we had together.
+
+Here's to the future and to the continued growth and learning that it holds.
+
+---
+
+- **Page:** Git and the command-line: Take your workflow to the next level
+- **Source:** https://subodhdahal.com/blog/git-and-command-line-next-level-workflow
+- **Description:** Some tips on how to improve your Git productivity using the command-line
+
+# What is git?
+
+Git is a version control system that helps developers track changes to their code and collaborate with others on software projects. It allows developers to easily switch between different versions of their code and work on different features in parallel without affecting the main codebase.
+
+# Why use the command-line?
+
+Although there are many GUI Git applications, using git from the command-line allows you to configure and streamline it to your workflow rather than being constrained by the interfaces of the GUI. It will also force you to understand more of how git works and since it's a tool that developers need to use often, I'd say it's not a bad motivation. You can still use the GUI for taking care of the more complex tasks until you get more familiar with using the command-line.
+
+# Tips to improve your workflow
+
+## 1. Add aliases for commonly used commands
+
+When using git from the command-line you are expected to write commands but this doesn't mean you can't make life easier for yourself. Instead of writing the whole command all the time, you can add shorter versions of them as aliases.
+
+Here are some of the aliases that I use frequently:
+
+<div className="flex,justify-center">
+<table className="table-auto,justify-center,mb-4,w-1/2">
+<thead>
+  <tr>
+    <th>
+      alias
+    </th>
+    
+    
+            <th>
+      command
+    </th>
+  </tr>
+</thead>
+
+
+    <tbody className="font-mono">
+  <tr>
+    <td>
+      g
+    </td>
+    
+    
+            <td>
+      git
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      ga
+    </td>
+    
+    
+            <td>
+      git add
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gb
+    </td>
+    
+    
+            <td>
+      git branch
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gc
+    </td>
+    
+    
+            <td>
+      git commit -v
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gco
+    </td>
+    
+    
+            <td>
+      git checkout
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gcb
+    </td>
+    
+    
+            <td>
+      git checkout -b
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gcp
+    </td>
+    
+    
+            <td>
+      git cherry-pick
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      grb
+    </td>
+    
+    
+            <td>
+      git rebase
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      grbi
+    </td>
+    
+    
+            <td>
+      git rebase -i
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+So now the following
+
+```bash
+git commit -v -m 'my commit message'
+```
+
+becomes
+
+```bash
+gc -m 'my commit message'
+```
+
+If you have `zsh` as your shell, have `ohmyzsh` installed and the `git` plugin enabled, there are already a lot of git aliases configured and can use them. You can have a look at them [here](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh). Even if you don't use `ohmyzsh`, you can take inspiration from the aliases and set them for your shell.
+
+For the `bash` shell, you can add the following to your `.bashrc` file.
+
+```bash
+alias g='git'
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit -v'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcp='git cherry-pick'
+alias grb='git rebase'
+alias grbi='git rebase -i'
+```
+
+## 2. Enable auto-correction of spelling mistakes for commands
+
+We are human after all and sometimes we make spelling mistakes. Instead of having to correct the command ourself, we can let git do it for us if the mistakes are minimal.
+
+We can enable git auto-correct for all git repos by using the following command:
+
+```bash
+git config --global help.autoCorrect 5
+```
+
+The value of `help.autoCorrect` is the number of deciseconds git waits before it auto-corrects and applies the command. In the command above, it will wait 0.5 seconds.
+
+The `--global` flag specifies that auto-correction will be enabled for all git repositories in the system. If you omit this, it will only take effect in the current repo.
+
+<figure className="image">
+
+![git auto-correct in action](https://subodhdahal.com/images/git-and-command-line/git-autocorrect.png)
+  <figcaption>
+
+Git auto-correct in action
+
+</figcaption>
+</figure>
+
+## 3. Improved git checkout with fzf
+
+When you are working on a project you will need to switch between different branches. You can use `git checkout <branch_name>` or `git switch <branch_name>` to do that. But the `<branch_name>` needs to be exact and if you don't remember it you will need to run further commands or look up the branch name somewhere.
+
+We can make switching git branches simpler by integrating the checkout process with [fzf](https://github.com/junegunn/fzf). fzf is a command-line fuzzy finder which means we don't need to precisely remember the branch name. Just typing a few characters will list us the branches that match the existing branches using fuzzy logic.
+
+You can add the following to your `.bashrc` or `.zshrc` file to configure a custom function `git_checkout_branch` to run fzf with the list of branches in the repo, which you can then search fuzzily.
+
+```bash
+# Slightly modified version of the script mentioned in https://revelry.co/insights/development/terminal-workflow-fzf/
+git_checkout_branch() {
+  if [[ $1 != "" ]]; then
+    # pass all the parameters as-is, if provided
+    git checkout $*
+    return
+  fi
+
+  LINES=2
+  # show branches
+  result=$(git branch -a --color=always | grep -v '/HEAD\s' | sort |
+    fzf --height 50% --border --ansi --tac --preview-window right:70% \
+      --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
+    sed 's/^..//' | cut -d' ' -f1)
+
+  if [[ $result != "" ]]; then
+    if [[ $result == remotes/* ]]; then
+      git checkout --track $(echo $result | sed 's#remotes/##')
+    else
+      git checkout "$result"
+    fi
+  fi
+}
+```
+
+**Source:** Modified version of [https://revelry.co/insights/development/terminal-workflow-fzf/](https://revelry.co/insights/development/terminal-workflow-fzf/)
+
+Then when you run the command `git_checkout_branch` in the terminal, you will be presented with the branches in the repo and can type part of the branch name to get the branch name you want. Pressing enter on the selected branch will switch the current branch to that branch.
+
+You can, of course, add this as an alias instead of having to type the whole command.
+
+```bash
+alias gco='git_checkout_branch'
+```
+
+If you already know the branch name and don't want to be presented with a list of options, you can just use the command as `gco <branch_name>`, eg: `gco develop`.
+
+<figure className="image">
+
+![fzf in action](https://subodhdahal.com/images/git-and-command-line/git-checkout-fzf.gif)
+  <figcaption>
+
+Git checkout with fzf in action
+
+</figcaption>
+</figure>
+
+## 4. Using Git Interactive Rebase Tool
+
+Although rebase and interactive rebase can seem like a scary concepts in the beginning, after you get used to it, they can be powerful tools to organize history in a Git repo. It can be useful in a variety of situations, including:
+
+- Combining multiple commits into one
+
+  - Splitting a single commit into multiple commits
+
+  - Reordering commits
+
+  - Removing commits
+
+  - Fixing mistakes in commits
+
+  - Updating your local repository to match the upstream repository
+
+You can learn more about rebasing in [https://git-rebase.io/](https://git-rebase.io/).
+
+[Git Interactive Rebase Tool](https://github.com/MitMaro/git-interactive-rebase-tool) can help make the process of interactive rebasing easier. It is a GUI tool that runs in the terminal and can be used to rebase commits in a git repo. It is written in Rust and is available for Linux, macOS and Windows.
+
+<figure className="image" style="background: #272733">
+
+![fzf in action](https://subodhdahal.com/images/git-and-command-line/interactive-rebase-tool.gif)
+  <figcaption>
+
+Basic usage of Interactive Rebase Tool
+
+</figcaption>
+</figure>
+
+You can view the [documentation](https://mitmaro.github.io/git-interactive-rebase-tool/) for more information on how to set up and use the tool, along with all its features.
+
+# Conclusion
+
+Trying one or more of the above tips can help you become more productive with git. But as with any new workflow, it takes time to get used to it. So it might be good to start with one or two of the aforementioned tips and then move on to trying the others.
+
+---
+
+## Bonus:
+
+If you would prefer a more GUI approach to working with git but in the terminal, then you can try one of the followings:
+
+- [tig](https://github.com/jonas/tig)
+
+  - [lazygit](https://github.com/jesseduffield/lazygit)
+
+---
+
+- **Page:** Hiking Tsho-Rolpa lake trail in Nepal
+- **Source:** https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal
+- **Description:** Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level
+
+## Preamble
+
+While on a holiday in Nepal during October - November 2021, my friends and I were planning a hiking trip to the mountainous regions of the country. After some consideration, we decided to hike to Tsho-Rolpa lake and back.
+
+The Tsho-Rolpa lake trail is not a popular trekking route, so we expected less crowd along the way. That was a plus in COVID times.
+The destination is a glacial lake threatened by global warming and climate change. We decided to visit it to remind ourselves what we and future generations would miss if we don't act on the effects of human activities.
+
+# Introduction
+
+Tsho-Rolpa (NE: च्छोरोल्पा) lake, at 4,580m above sea level in Nepal, is one of the biggest glacial lakes in the country.
+The outflows of the lake form the Rolwaling (रोल्वालिङ) and the Tamakoshi (तामाकोशी) river.
+The lake lies in the Rolwaling valley in Dolakha district and is part of the Gaurishankar(गौरीशंकर) Conservation Area.
+The conservation area gets its name from Mount Gaurishankar (7,134m), which rises there, and our trek involves
+walking along the base of the mountain for a long time.
+
+The Nepal Standard Time (UTC +5:45) follows the meridian of Mount Gaurishankar.
+
+<figure className="w-full,image">
+<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=86.46162986755373%2C27.868012661281945%2C86.46517038345338%2C27.871403344815025&layer=mapnik&marker=27.86970801631173%2C86.46340012550354" style="border: 1px solid black">
+
+
+
+</iframe>
+
+
+  <figcaption>
+
+Location of Tsho-Rolpa lake
+
+</figcaption>
+</figure>
+
+# Itinerary
+
+The Tsho-Rolpa trek typically takes 7-9 days, but time constraints forced us to squeeze it into 5 days. We knew we had to walk extreme lengths of the trail each day. We were mentally prepared for it.
+
+The regular 7-9 day trek also accounts for acclimatization. It suits people who are not used to high altitudes, so they don't suffer from altitude sickness. We had been to high altitudes in the past with no such problems,
+so we could skip a day for acclimatization. But we were still prepared to go back to a lower altitude if any of us
+started having debilitating effects from the high altitude.
+
+## Trip summary
+
+- **Total elevation change:** 3,500m
+- **Motorbike ride time:** 15 hours
+- **Hiked time:** 42.5 hours (breaks included)
+- **Difficulty level:** moderate/difficult
+
+<figure className="image,w-full">
+
+![undefined](https://subodhdahal.com/images/tsho-rolpa/elevation-change-graph.png)
+  <figcaption>
+
+Elevation change graph for the trip
+
+</figcaption>
+</figure>
+
+## Day 1: Bhaktapur (भक्तपुर) - Chhetchhet (छेतछेत) - Surmuche (सुर्मुचे)
+
+- **Altitude**: from Bhaktapur (1,400m) through Chhetchhet (1,398m) to Surmuche (2,470m)
+- **Motorbike ride time:** 7.5 hours
+- **Hiked time:** 4.5 hours
+
+### Bhaktapur - Chhetchhet motorbike ride
+
+We(me and three friends) started the trip early, at 5 am from our hometown Bhaktapur in the Kathmandu valley. We
+were going to ride our motorbikes until the last point we could, then start the actual trek from there.
+
+Despite our effort to get 3 motorbikes, we managed only two. There were 2 persons on each
+motorbike along with our backpacks. I rode my younger brother's KTM Duke 200cc motorbike. Its powerful engine made riding on off-road trails a lot easier. But the smaller seat size didn't make for a
+comfortable ride for two persons with heavy backpacks.
+
+<figure className="image">
+
+![undefined](https://subodhdahal.com/images/tsho-rolpa/me-on-motorbike.jpg)
+  <figcaption>
+
+Me on the motorbike at Dolalghat where we had breakfast
+
+</figcaption>
+</figure>
+
+We stopped for lunch at Charikot before continuing our journey via Singati. Charikot is the headquarters of Dolakha district.
+We made a few stops along the way for rest, enjoying the beautiful views of the
+Himalayan mountain range and the waterfalls.
+
+The Gaurishankar Conservation Area starts from
+Singati, where visitors must pay an entrance fee. Foreigners might also need extra documents and trekking permits.
+
+<figure className="image">
+
+![undefined](https://subodhdahal.com/images/tsho-rolpa/himalayas-on-the-way.jpg)
+  <figcaption>
+
+One of the first views of Mount Gaurishankar on our trip
+
+</figcaption>
+</figure>
+
+We rode the motorbikes for around 7.5 hours through the windy roads of Nepal's hilly regions. We reached
+Chhetchhet, where the hiking part of our journey would start.
+
+Shortly before reaching Chhetchhet, we came across a gorgeous waterfall flowing to the turquoise-blue water of the
+Tamakoshi river. A rainbow had also formed in front of it, making the view even more surreal.
+
+<figure className="image">
+
+![Waterfall just before reaching Chhetchhet](https://subodhdahal.com/images/tsho-rolpa/chhetchhet-waterfall2.jpg)
+  <figcaption>
+
+A gorgeous waterfall just before reaching Chhetchhet
+
+</figcaption>
+</figure>
+
+Most travelers reach Chhetchhet from Kathmandu by public transport, but we used motorbikes. You can
+take a bus from Kathmandu to Singati and then a jeep to reach Chhetchhet. Or you can reserve a
+jeep directly from Kathmandu to Chhetchhet.
+
+### Chhetchhet to Surmuche trekking
+
+After leaving our motorbikes in a secure garage in Chhetchhet and resting for a while, we started the actual hike at
+3 pm. The trail ahead climbed a hill almost vertically to the top, and we felt a bit daunted, to say the
+least. But we braved the trail anyway, eager for the journey ahead. The first half-hour was especially hard
+since our body hadn't warmed up. Once we got the hang of it, the walk became easier.
+
+Three hours of walk and a few breaks later, we reached the village of Simigaun. Simigaun is the last village with grid
+electricity. Trekkers on the Tsho-Rolpa route typically stop there first to charge their electronics overnight. But this was not our planned stop for the day. We were going to
+continue further to the next village.
+
+<figure className="image">
+
+![A typical village house in Simigaun](https://subodhdahal.com/images/tsho-rolpa/simigaun.jpg)
+  <figcaption>
+
+A typical village house in Simigaun
+
+</figcaption>
+</figure>
+
+After walking for another 2.5 hours, most of it in the dark, we reached Surmuche. Only headlamps and flashlights lit our way. We felt exhausted and wanted a hearty meal to refill our energy
+at the hotel/teahouse there. There was only one teahouse at this destination and the next village was at least 3 hours
+away.
+
+We were fortunate that the teahouse in Surmuche was open. The owner
+had walked the same path from Surmuche and arrived just an hour ago. He felt tired and a bit
+unwell, so he could only offer a simple meal. Despite this, he showed us our accommodation for the night and made tasty noodle soup for us. The soup was
+more than enough, and we had snacks with us anyway, so we could have them if needed.
+With another day of a long walk ahead of us and the exhaustion from the day's bike ride and walk, we didn't waste much
+time going to bed.
+
+<figure className="image">
+
+![Mount Gaurishankar illuminated by the last rays of the day's sunlight](https://subodhdahal.com/images/tsho-rolpa/mount-gaurishankar-sunlight.jpg)
+  <figcaption>
+
+Mount Gaurishankar illuminated by the last rays of the day's sunlight
+
+</figcaption>
+</figure>
+
+## Day 2: Surmuche (सुर्मुचे) - Beding (बेदिङ्ग)
+
+- **Altitude**: from Surmuche (2,470m) to Beding (3,721m)
+- **Hiked time:** 12 hours
+
+We had an ambitious plan for our second-day hike. We woke up early at 6 am, and right after breakfast we started
+our hike. This was also an uphill hike, but the elevation change didn't feel as aggressive as the previous day, or
+maybe we got used to it.
+
+<figure className="image">
+
+![Morning views from our lodge in Surmuche](https://subodhdahal.com/images/tsho-rolpa/surmuche-morning-views.jpg)
+  <figcaption>
+
+Morning views from our lodge in Surmuche
+
+</figcaption>
+</figure>
+
+After hiking for about 2 hours, we reached the next stop of Kyalche. We felt fine, so we rested briefly and took some pictures before continuing.
+
+<figure className="image">
+
+![Me at the short stop in Kyalche](https://subodhdahal.com/images/tsho-rolpa/stop-at-kyalche.jpg)
+  <figcaption>
+
+Me during the stop in Kyalche
+
+</figcaption>
+</figure>
+
+We noticed that we stopped getting cellphone network reception at some point. It felt odd at first, but it kept us present. We soaked in the views during our rest time instead of scrolling social media.
+
+After two more hours of hiking with little to no elevation change, we reached Dongang (डोंगांग),
+a small settlement along the Tamakoshi river with turquoise
+blue water. The water's almost surreal color probably comes from minerals washed down from the mountains and glaciers
+not so far away.
+
+<figure className="image">
+
+![The settlement at Dongang](https://subodhdahal.com/images/tsho-rolpa/dongang.jpg)
+  <figcaption>
+
+The settlement at Dongang along the Tamakoshi river
+
+</figcaption>
+</figure>
+
+We were starving when we arrived. The
+next stop was hours away, so we stopped for Dal-Bhat (rice with lentils and vegetables on the side), the
+quintessential Nepali food. Sweat had drenched our clothes during the long sunny hike. We took the
+time to dry them and rested until the food was ready. After having a hearty meal, we rested a bit more as we were in
+no position to start walking immediately.
+
+We resumed the hike from Dongang at around 1 pm. The mountains felt closer now, which made us want to continue. We walked along the Tamakoshi river for a long time. We didn't complain, because the turquoise-blue water was something we couldn't get enough of. After a
+while, we began to notice that the vegetation was changing and starting to be more alpine-like.
+
+<figure className="image">
+
+![Views a short while after Dongang](https://subodhdahal.com/images/tsho-rolpa/after-donggang.jpg)
+  <figcaption>
+
+Views a short while after Dongang
+
+</figcaption>
+</figure>
+
+At around 6 pm, as dusk fell, we reached the village of Beding. We felt tired, and some of us felt the altitude. We were glad to see the village signpost where we could stay for the night. To our dismay, the lodges were at the far side of the village. Reaching them took 45 more minutes in utter darkness, with only our headlamps and flashlights to light the
+path.
+
+In the lodge in Beding, we had some Tibetan noodle soup alongside the fire in the kitchen to quickly warm us up
+before having our dinner of Daal-Bhat. The weather in Beding was freezing, and our rooms had no heating. We piled layers of blankets
+on top of us to stay warm at night.
+
+## Day 3: Beding (बेदिङ्ग) - Tsho-Rolpa (च्छोरोल्पा) - Na (ना) village
+
+- **Altitude**: from Beding (3,721m) through Tsho-Rolpa (4,550m) to Na village (4,180m)
+- **Hiked time:** 12 hours
+
+Beding, also known as the village of Everest climbers, was where we stayed on the second night of our trip. Since we
+had arrived in darkness, we got a pleasant surprise in the morning. Beautiful mountain views greeted us from our lodge.
+
+<figure className="image">
+
+![Morning views from our lodge at Beding](https://subodhdahal.com/images/tsho-rolpa/beding-morning-views.jpg)
+  <figcaption>
+
+Morning views from our lodge at Beding
+
+</figcaption>
+</figure>
+
+On the third day, we had a quick breakfast and started the hike at 7 am, soon after waking
+up. This was the first day we didn't have to gain much elevation during our hike. The path ran nearly
+straight with only minor elevation changes.
+
+Along the way, we could enjoy the views of the Rolwaling valley. In the local Sherpa language,
+Rolwaling means "valley carved by a plow," and the landscape did look the part.
+
+<figure className="image">
+
+![Views of the Rolwaling valley](https://subodhdahal.com/images/tsho-rolpa/rolwaling-valley-1.jpg)
+  <figcaption>
+
+Views of the Rolwaling valley
+
+</figcaption>
+</figure>
+
+<figure className="image">
+
+![Views of the Rolwaling valley](https://subodhdahal.com/images/tsho-rolpa/rolwaling-valley-2.jpg)
+  <figcaption>
+
+Views of the Rolwaling valley
+
+</figcaption>
+</figure>
+
+We reached the village of Na at 11 am. After resting for a while at a lodge there, we had our breakfast/lunch. We left our
+bags here, taking only the day's essentials. We would return to stay the night after reaching Tsho-Rolpa lake. Not having to carry the 12
+kilos I had been carrying the past days felt almost magical.
+
+Walking alongside the Tamakoshi river on almost flat terrain, we reached Tsho-Rolpa lake at 3:30 pm.
+The weather favored us that day, and we had clear views of the lake and the mountains. We had heard that fog often hides the lake after 11 am.
+
+Reaching our destination after the grueling walk and the pain we endured the
+past few days felt surreal. We lingered for a while over the lake and the mountains, with the Rolwaling
+valley behind us. We also met other travelers from Nepal at the lake.
+
+<figure className="image,w-full">
+
+![Views of the Tsho-Rolpa lake](https://subodhdahal.com/images/tsho-rolpa/lake-view.jpg)
+  <figcaption>
+
+Views of the Tsho-Rolpa lake
+
+</figcaption>
+</figure>
+
+Despite the captivating view, we couldn't stay there for long because we were losing light and had to return soon. The wind and chill
+also made it impossible to spend more time there. No hotels, lodges, or teahouses stand near
+Tsho-Rolpa lake. Everyone had to return unless they planned to camp.
+
+While making our descent from the lake to Na village, we saw the golden hour set in. Beautiful light filled the horizon ahead of us.
+
+<figure className="image">
+
+![Views of the Na village](https://subodhdahal.com/images/tsho-rolpa/na-village.jpg)
+  <figcaption>
+
+Views of the Na village
+
+</figcaption>
+</figure>
+
+Behind us, the last light
+of the day glowed on top of the mountains, an exquisite view of its own.
+
+<figure className="image">
+
+![Mountain peak illuminated by sunset](https://subodhdahal.com/images/tsho-rolpa/illuminated-mountain.jpg)
+  <figcaption>
+
+Mountain peak illuminated by sunset
+
+</figcaption>
+</figure>
+
+Like the previous days, we reached our destination in utter darkness and sat by the fire to warm ourselves up with some
+soup before having our dinner. We also reflected on our journey and on reaching the Tsho-Rolpa lake in 3 days. Except for seasoned trekkers, reaching the lake takes at least 4 days. We were proud of doing it in 3 days despite our limited experience
+at such a high altitude.
+
+Sleep didn't come easily that night. The high
+altitude and the cold kept us awake despite our exhaustion. We did manage to get to sleep after a while of trying.
+
+## Day 4: Na (ना) village - Simigaun (सिमिगाउँ)
+
+- **Altitude**: from Na village (4,180m) to Simigaun (2,000m)
+- **Hiked time:** 12 hours
+
+The hike back was almost entirely downhill. We planned to cover a long distance to make the next day easier.
+We started our hike at 7:30 from the Na village after having breakfast. We didn't make many stops along the way apart
+from a few snack breaks as going downhill was easier and we had to walk a long distance to cover during the day.
+
+We stopped at Dongang for lunch at 2 pm and resumed our journey soon after. As on the previous
+days, we reached our destination in the dark, arriving in Simigaun at 7 pm. Most of our electronics were low on
+battery, so we recharged them here where there was grid-connected electricity. The power banks we had brought and
+the spare batteries from the GoPro and the drone had lasted us till then.
+
+We hadn't properly celebrated reaching our destination the previous night, so we treated ourselves
+to Tongba, an alcoholic drink made from fermented millet. We mulled over our journey, life, and philosophy in general,
+as often happens over drinks.
+
+<figure className="image">
+
+![Tongba](https://subodhdahal.com/images/tsho-rolpa/tongba-vessel.jpg)
+  <figcaption>
+
+Tongba served in its regular vessel
+
+</figcaption>
+</figure>
+
+After a while, we had dinner and went to sleep. We planned to wake up
+early. We still had a few hours of hiking left before reaching Chhetchhet, where our motorbikes
+waited to take us home.
+
+## Day 5: Simigaun - Bhaktapur
+
+- **Altitude**: from Simigaun (2,000m) to Bhaktapur (1,400m)
+- **Hiked time:** 2 hours
+- **Motorbike ride time:** 7.5 hours
+
+We started our journey at 7 am without having breakfast. We reached Chhetchhet at 9 am. The last 30 minutes of our walk
+felt grueling because I was having knee problems walking downhill on the stone-paved stairs. The long downhill
+distance we covered the previous day probably caused it. But I was glad this
+happened towards the end of the trek and not earlier. Otherwise, it'd have been a nightmare and not a nice
+experience.
+
+Getting on my motorbike was an immense relief for my knee and lower body in general. Now my
+arms and hands felt the pain of riding a motorbike on off-road, uneven terrain. Braving the pain, we
+reached Dolakha Bazar, where we made a short stop to visit the Dolakha Bhimeswor temple.
+
+Our next stop was at nearby Charikot where we had the first meal of the day at noon. We also loaded our heavy bags onto
+a bus bound for Kathmandu, so we wouldn't carry them on our backs all the way home.
+
+Shortly after lunch, we resumed our journey towards Bhaktapur and reached there at 6 pm, just in
+time to retrieve our bags from the bus. Although the motorbike journey is typically much faster than the local bus,
+we arrived together. We had stopped for rest and food in
+Dolalghat.
+
+My whole body was in pain when I reached home after our grueling journey. I couldn't wait to rest
+and not do anything for the next few days.
+
+# Reflections on the journey
+
+The journey was one of the best experiences of my life. The majestic views and well-maintained
+trails of the Gaurishankar Conservation Area made the hike pleasant despite the long hours.
+Having good friends accompanying me on the trip made it even better.
+
+Despite the beautiful journey, we couldn't help but wonder about the people living below the lake. What would happen to them if it suddenly bursts? Due to global warming, the risk grows more severe every day. Some efforts to reduce the risk and set up an early warning
+system are underway, but they aren't enough. The risk remains unless the world acts to curb
+rising temperatures and climate change.
+
+## Things we could've done differently
+
+Since we squeezed a 7-9 day trip into five days, we had to walk up to 12 hours a day. It felt tough at
+times. The trip could've been a lot less stressful. But we did the best we could with our time constraints.
+
+If we had more time we could also have hiked to the Dudh Kunda, a beautiful lake a few hours away from Tsho-Rolpa lake.
+
+Bringing medicines for high altitude, just in case, would've been smart. We didn't need them in the end.
+
+## Lessons learned for life
+
+Towards the end of our daily 12-hour trek, I felt exhausted and couldn't continue.
+Stopping in the dark woods wasn't an option, so I forced myself on despite the weariness and pain.
+This made me realize that we are capable of achieving a lot and most of the time our mind is the
+one limiting us.
+
+Planning the journey and pre-determining the destination for each day made us accountable and determined.
+While on the hike,
+instead of getting daunted by the long path ahead, we focused on the next step.
+Having a bigger picture in mind and taking small steps to achieve it makes even the seemingly impossible possible.
+
+The insights I learned can help me overcome difficult challenges in other facets of life as well.
+
+<figure className="quote">
+
+> Why do you go away? So that you can come back. So that you can see the place you came from with new eyes and extra
+>     colors. And the people there see you differently, too. Coming back to where you started is not the same as never leaving.
+
+
+  <figcaption>
+
+— Terry Pratchett, <cite>
+
+A Hat Full of Sky
+
+</cite>
+</figcaption>
+</figure>
+
+I felt like a different person, for the better, after my journey.
+
+**Looking forward to more journeys to explore the world and discover my true self.**
+
+---
+
+<div className="article-description">
+
+### Addendum
+
+<div className="text-sm">
+
+- All pictures by me (Subodh Dahal) except for the ones of me. I took them all with my One Plus 8 Pro smartphone and did some post-processing.<br />
+
+
+  - There were variations in the reported altitude of the places based on the sources<br />
+
+
+  - Follow me on [Instagram (@sub0dh_d)](https://www.instagram.com/sub0dh_d/) to view more pictures from this and other trips
+
+</div>
+</div>
+
