@@ -202,6 +202,20 @@
   animation: pulseSoft 2.6s ease-in-out infinite;
 }
 
+/* Tailwind 4 ships its own `container` utility, which would override a
+   plain .container in @layer components (dropping the max-width). */
+@utility container {
+  margin-inline: auto;
+  max-width: var(--container-5xl);
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
+  }
+  @media (width >= 48rem) {
+    padding-inline: 2rem;
+  }
+}
+
 /* Base styles */
 @layer base {
   html {
@@ -234,10 +248,6 @@
 
 /* Components */
 @layer components {
-  .container {
-    @apply mx-auto px-4 sm:px-6 md:px-8 max-w-5xl;
-  }
-
   /* Header styles */
   header {
     @apply font-sans bg-white dark:bg-secondary-900 transition-colors duration-200;
