@@ -20,7 +20,7 @@
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.5",
     "@types/node": "^26.6.6",
-    "better-sqlite3": "^12.5.0",
+    "better-sqlite3": "^13.2.0",
     "feed": "^6.0.0",
     "nuxt": "^4.6.4",
     "nuxt-og-image": "^7.0.7",
