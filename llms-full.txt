@@ -212,70 +212,6 @@ The setup was simple, upkeep is low, and pushing code to my own server feels goo
 
 ---
 
-- **Page:** Curating my own reading and discovery feed with RSS
-- **Source:** https://subodhdahal.com/blog/reading-and-discovery-feed-curation
-- **Description:** Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
-
-For quite some time, I have wanted to rely less on algorithmically curated feeds. The daily scroll through YouTube, Substack, or LinkedIn felt less like discovery and more like dopamine mining. I wanted a system that delivered interesting content to satisfy my curiosity, without platforms whose best interest is to have me glued to them. These days, finding such a platform is tough. Even if one exists now, there's no guarantee it won't eventually mimic the ones I wanted to get away from.
-
-I wanted a system where I subscribe directly to creators or communities sharing content I like. That's exactly what a feed reader does. It pulls content chronologically from blogs and sites that support RSS/Atom feeds, with no middleman filtering or recommending.
-
-There are a few feed reader platforms, but I wanted to have full data ownership and more control over the system. This is why I decided to self-host [FreshRSS](https://github.com/FreshRSS/FreshRSS), an open-source feed aggregator and reader, on my homelab running on a mini-PC. This also has the added advantage of being resilient compared to an online service which may stop existing for reasons beyond my control.
-
-## Feed sources
-
-Rather than relying on algorithms of platforms to decide which content they want to show me, I now subscribe to content from sources where I have found interesting writings before. I categorize the content sources broadly into the following:
-
-- Communities: There's many interesting posts being shared on communities like Hacker News RSS, Lobsters, Lemmy. I started by directly subscribing to their content RSS feed. But the number of posts was overwhelming. So I now use [hnrss.com](https://hnrss.github.io/) and [upvote-rss](https://github.com/johnwarne/upvote-rss) to get only the top posts from them.
-- Personal Blogs: If a post catches my eye, I check the author’s site and subscribe to their personal RSS feed if they have other content that I also find interesting.
-- Substack: I subscribe to a creator's publication directly by using their Substack URL.
-- Websites without RSS: Not all websites provide RSS/Atom feeds. Luckily, there's an open-source and self-hostable project called [RSSHub](https://github.com/DIYgod/RSSHub) which can generate RSS feeds for many popular websites. It acts as a bridge between my FreshRSS instance and those websites. It also has a browser extension companion: [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar) to easily find and subscribe to RSS feeds.
-- Newsletters: Previously, I had subscribed to many newsletters on my personal email. This made my email inbox messy and it felt like a chore to go and read there. I now use [Kill the Newsletter!](https://kill-the-newsletter.com/) which provides an email address to subscribe to these newsletters. It generates an Atom feed which I can subscribe to in FreshRSS. This has the benefit of keeping my inbox clean and also consolidating all my reading into a single application.
-- YouTube Channels: Yes, I can directly subscribe to YouTube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
-
-<figure className="w-full,image">
-<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="/images/freshrss-ui.png" style="border: 1px solid black">
-
-
-
-</iframe>
-
-
-  <figcaption>
-
-This is how my FreshRSS looks like
-
-</figcaption>
-</figure>
-
-Since FreshRSS is an aggregator, I don't necessarily need to use the FreshRSS interface to access my feed. There are many applications for different platforms which can use FreshRSS as the source for the feeds. I use the Readrops app on my phone. I have occasionally used the NetNewsWire app on MacOS.
-
-## Filtering my feed
-
-Some newsletters I subscribe to, like those covering AI news, have a short shelf life. If I haven't read them within a month, the content is usually stale and there is little point in me reading them. That's why I've set up the `-pubdate:P30D` filter to automatically mark them as read.
-
-FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a YouTube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
-
-Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenever I get to them, so there's no need to rush.
-
-## Extending and customizing FreshRSS
-
-FreshRSS is not the only self-hostable feed aggregator. The main reason I chose it is because of its support for extensions which allows for augmenting its functionality. The ones I find useful are:
-
-- Youlag: Better interface for YouTube videos than the default view
-- Af_Readability: Inlines full article content for sites that only show excerpts in feeds.
-- Karakeep Button: Saves interesting posts directly to my Karakeep instance for long-term storage.
-
-There's a lot more extensions which can be browsed in the [official repository](https://github.com/FreshRSS/Extensions).
-
-## Conclusion
-
-After migrating to this setup, I am reading more in-depth content than what I did before. I've discovered authors sharing valuable perspectives on topics I find interesting that are not within the current hype-cycle. It's also refreshing to follow the creators whose writing feels like the pre-SEO, pre-marketing, pre-AISlop internet.
-
-I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my default way of finding new content is now the feed reader.
-
----
-
 - **Page:** Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot
 - **Source:** https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos
 
@@ -421,6 +357,89 @@ I'd rather list these than imply it all works:
 - **Games.** Rendering through the wrapper works, but I haven't run a game on the eGPU yet.
 - **The udev rule alone**, without a hand-made node already in `/dev`.
 - **Safe unplug.** I haven't tried hot-unplugging while the driver is in use. I'd stop everything using the card first.
+
+---
+
+- **Page:** Fixing my broken Docker Immich+Traefik setup
+- **Source:** https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup
+- **Description:** Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.
+
+I've used [Immich](https://github.com/immich-app/immich) for over a year in my homelab. Immich is a photo and video app like Google Photos or iCloud, but it's self-hosted. The photos stay on my own hardware. It's open source, has no fees, and no company uses my photos to train models.
+
+Until recently, Immich was in beta. Things break in beta. That's kind of the point. I had this problem where new pictures and videos added to my external library weren't indexed, and metadata wasn't extracted for many of these assets. I chalked it up to beta bugs and moved on.
+
+Immich hit a stable version. Kudos to the team and contributors for the release. It's a great alternative to paid platforms.
+
+After the stable release, I pulled the latest version. I hoped it would fix my issues. Indexing worked for a while, then stopped. None of the jobs seemed to work. I looked for open issues but found none that matched mine. Then it occurred to me that the issue might not be in Immich itself. Maybe my setup was the problem.
+
+## The Setup
+
+I run Immich and all its services on an Ubuntu VM with Docker Compose. I followed the [official install guide](https://docs.immich.app/install/docker-compose) to set them up.
+
+I set up [Traefik](https://doc.traefik.io/traefik/) as a reverse proxy for Immich, using the [tutorial from Jim's Garage](https://www.youtube.com/watch?v=CmUzMi5QLzI). Traefik gives me domain access to services, so I don't have to remember IP addresses and ports. The services stay on my home network, but I can reach them at an easy address like `https://photos.home.mydomain.com`
+
+All I had to do was add a proxy network and Traefik labels to the services. A quick check showed I could access my photos and videos, so I assumed it all worked.
+
+It turns out not everything was.
+
+## The Issue
+
+I connected all services to the same proxy network. One network, everything talks to everything. What could go wrong, right?
+
+Immich could connect to Postgres and fetch data on already indexed photos and videos. Redis, though, didn't receive any jobs. As a result, background jobs like library scans never started.
+
+To isolate the issue, I commented out the proxy network on all services. I then accessed Immich at `<server ip>:<immich-server port>`. Rescanning the external libraries worked. I could see the new media in my Immich timeline.
+
+I'm still not sure why, but I suspect a timing issue. The proxy network's DNS wasn't ready when Immich started. Some connections worked by luck or retry logic. Others failed and never recovered. Redis happened to be one that failed.
+
+## The Fix
+
+I split the setup into two networks:
+
+1. **Internal network**: database, Redis, the machine learning engine, and Immich talk here
+2. **Proxy network**: only the Immich server connects here so Traefik can route to it
+
+Here's a short version of my new `docker-compose.yml` file:
+
+```text
+services:
+    immich-server:
+        image: immich:latest
+        networks:
+        - internal # Talk to database, Redis, etc.
+        - proxy    # Accessible via Traefik
+        labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=proxy"
+        - "traefik.http.routers.immich.rule=Host(`photos.home.mydomain.com`)"
+        - "traefik.http.services.immich.loadbalancer.server.port=3001"
+
+    immich-machine-learning:
+        networks:
+        - internal
+
+    database:
+        networks:
+        - internal
+
+    redis:
+        networks:
+        - internal
+
+    networks:
+        internal:
+        driver: bridge
+        proxy:
+        external: true
+```
+
+The `traefik.docker.network=proxy` label tells Traefik which network to use for routing.
+
+## How It Works
+
+Compose creates the internal network fresh, so DNS always works. When Immich sends jobs to Redis or reads from Postgres, names resolve fast. Traffic from Traefik arrives on the proxy network instead. Both networks reach the same containers through different paths, so the timing issues vanish.
+
+Now photo indexing and all the other jobs work as intended.
 
 ---
 
@@ -647,86 +666,67 @@ Then I'd add Worktrunk when the repeated environment setup starts getting irrita
 
 ---
 
-- **Page:** Fixing my broken Docker Immich+Traefik setup
-- **Source:** https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup
-- **Description:** Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.
+- **Page:** Curating my own reading and discovery feed with RSS
+- **Source:** https://subodhdahal.com/blog/reading-and-discovery-feed-curation
+- **Description:** Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
 
-I've used [Immich](https://github.com/immich-app/immich) for over a year in my homelab. Immich is a photo and video app like Google Photos or iCloud, but it's self-hosted. The photos stay on my own hardware. It's open source, has no fees, and no company uses my photos to train models.
+For quite some time, I have wanted to rely less on algorithmically curated feeds. The daily scroll through YouTube, Substack, or LinkedIn felt less like discovery and more like dopamine mining. I wanted a system that delivered interesting content to satisfy my curiosity, without platforms whose best interest is to have me glued to them. These days, finding such a platform is tough. Even if one exists now, there's no guarantee it won't eventually mimic the ones I wanted to get away from.
 
-Until recently, Immich was in beta. Things break in beta. That's kind of the point. I had this problem where new pictures and videos added to my external library weren't indexed, and metadata wasn't extracted for many of these assets. I chalked it up to beta bugs and moved on.
+I wanted a system where I subscribe directly to creators or communities sharing content I like. That's exactly what a feed reader does. It pulls content chronologically from blogs and sites that support RSS/Atom feeds, with no middleman filtering or recommending.
 
-Immich hit a stable version. Kudos to the team and contributors for the release. It's a great alternative to paid platforms.
+There are a few feed reader platforms, but I wanted to have full data ownership and more control over the system. This is why I decided to self-host [FreshRSS](https://github.com/FreshRSS/FreshRSS), an open-source feed aggregator and reader, on my homelab running on a mini-PC. This also has the added advantage of being resilient compared to an online service which may stop existing for reasons beyond my control.
 
-After the stable release, I pulled the latest version. I hoped it would fix my issues. Indexing worked for a while, then stopped. None of the jobs seemed to work. I looked for open issues but found none that matched mine. Then it occurred to me that the issue might not be in Immich itself. Maybe my setup was the problem.
+## Feed sources
 
-## The Setup
+Rather than relying on algorithms of platforms to decide which content they want to show me, I now subscribe to content from sources where I have found interesting writings before. I categorize the content sources broadly into the following:
 
-I run Immich and all its services on an Ubuntu VM with Docker Compose. I followed the [official install guide](https://docs.immich.app/install/docker-compose) to set them up.
+- Communities: There's many interesting posts being shared on communities like Hacker News RSS, Lobsters, Lemmy. I started by directly subscribing to their content RSS feed. But the number of posts was overwhelming. So I now use [hnrss.com](https://hnrss.github.io/) and [upvote-rss](https://github.com/johnwarne/upvote-rss) to get only the top posts from them.
+- Personal Blogs: If a post catches my eye, I check the author’s site and subscribe to their personal RSS feed if they have other content that I also find interesting.
+- Substack: I subscribe to a creator's publication directly by using their Substack URL.
+- Websites without RSS: Not all websites provide RSS/Atom feeds. Luckily, there's an open-source and self-hostable project called [RSSHub](https://github.com/DIYgod/RSSHub) which can generate RSS feeds for many popular websites. It acts as a bridge between my FreshRSS instance and those websites. It also has a browser extension companion: [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar) to easily find and subscribe to RSS feeds.
+- Newsletters: Previously, I had subscribed to many newsletters on my personal email. This made my email inbox messy and it felt like a chore to go and read there. I now use [Kill the Newsletter!](https://kill-the-newsletter.com/) which provides an email address to subscribe to these newsletters. It generates an Atom feed which I can subscribe to in FreshRSS. This has the benefit of keeping my inbox clean and also consolidating all my reading into a single application.
+- YouTube Channels: Yes, I can directly subscribe to YouTube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
 
-I set up [Traefik](https://doc.traefik.io/traefik/) as a reverse proxy for Immich, using the [tutorial from Jim's Garage](https://www.youtube.com/watch?v=CmUzMi5QLzI). Traefik gives me domain access to services, so I don't have to remember IP addresses and ports. The services stay on my home network, but I can reach them at an easy address like `https://photos.home.mydomain.com`
+<figure className="w-full,image">
+<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="/images/freshrss-ui.png" style="border: 1px solid black">
 
-All I had to do was add a proxy network and Traefik labels to the services. A quick check showed I could access my photos and videos, so I assumed it all worked.
 
-It turns out not everything was.
 
-## The Issue
+</iframe>
 
-I connected all services to the same proxy network. One network, everything talks to everything. What could go wrong, right?
 
-Immich could connect to Postgres and fetch data on already indexed photos and videos. Redis, though, didn't receive any jobs. As a result, background jobs like library scans never started.
+  <figcaption>
 
-To isolate the issue, I commented out the proxy network on all services. I then accessed Immich at `<server ip>:<immich-server port>`. Rescanning the external libraries worked. I could see the new media in my Immich timeline.
+This is how my FreshRSS looks like
 
-I'm still not sure why, but I suspect a timing issue. The proxy network's DNS wasn't ready when Immich started. Some connections worked by luck or retry logic. Others failed and never recovered. Redis happened to be one that failed.
+</figcaption>
+</figure>
 
-## The Fix
+Since FreshRSS is an aggregator, I don't necessarily need to use the FreshRSS interface to access my feed. There are many applications for different platforms which can use FreshRSS as the source for the feeds. I use the Readrops app on my phone. I have occasionally used the NetNewsWire app on MacOS.
 
-I split the setup into two networks:
+## Filtering my feed
 
-1. **Internal network**: database, Redis, the machine learning engine, and Immich talk here
-2. **Proxy network**: only the Immich server connects here so Traefik can route to it
+Some newsletters I subscribe to, like those covering AI news, have a short shelf life. If I haven't read them within a month, the content is usually stale and there is little point in me reading them. That's why I've set up the `-pubdate:P30D` filter to automatically mark them as read.
 
-Here's a short version of my new `docker-compose.yml` file:
+FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a YouTube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
 
-```text
-services:
-    immich-server:
-        image: immich:latest
-        networks:
-        - internal # Talk to database, Redis, etc.
-        - proxy    # Accessible via Traefik
-        labels:
-        - "traefik.enable=true"
-        - "traefik.docker.network=proxy"
-        - "traefik.http.routers.immich.rule=Host(`photos.home.mydomain.com`)"
-        - "traefik.http.services.immich.loadbalancer.server.port=3001"
+Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenever I get to them, so there's no need to rush.
 
-    immich-machine-learning:
-        networks:
-        - internal
+## Extending and customizing FreshRSS
 
-    database:
-        networks:
-        - internal
+FreshRSS is not the only self-hostable feed aggregator. The main reason I chose it is because of its support for extensions which allows for augmenting its functionality. The ones I find useful are:
 
-    redis:
-        networks:
-        - internal
+- Youlag: Better interface for YouTube videos than the default view
+- Af_Readability: Inlines full article content for sites that only show excerpts in feeds.
+- Karakeep Button: Saves interesting posts directly to my Karakeep instance for long-term storage.
 
-    networks:
-        internal:
-        driver: bridge
-        proxy:
-        external: true
-```
+There's a lot more extensions which can be browsed in the [official repository](https://github.com/FreshRSS/Extensions).
 
-The `traefik.docker.network=proxy` label tells Traefik which network to use for routing.
+## Conclusion
 
-## How It Works
+After migrating to this setup, I am reading more in-depth content than what I did before. I've discovered authors sharing valuable perspectives on topics I find interesting that are not within the current hype-cycle. It's also refreshing to follow the creators whose writing feels like the pre-SEO, pre-marketing, pre-AISlop internet.
 
-Compose creates the internal network fresh, so DNS always works. When Immich sends jobs to Redis or reads from Postgres, names resolve fast. Traffic from Traefik arrives on the proxy network instead. Both networks reach the same containers through different paths, so the timing issues vanish.
-
-Now photo indexing and all the other jobs work as intended.
+I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my default way of finding new content is now the feed reader.
 
 ---
 
@@ -939,6 +939,77 @@ Yet another year has passed. I've been lucky enough to travel to some amazing pl
 Fin
 
 </div>
+
+---
+
+- **Page:** Revisiting my Stream Deck for music control
+- **Source:** https://subodhdahal.com/blog/stream-deck-youtube-music
+- **Description:** How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.
+
+I bought a Stream Deck years ago hoping to improve my productivity in the home office, but quickly lost interest after the novelty wore off.
+
+Stream Deck is a customizable control panel with LCD buttons that trigger computer actions like launching apps, controlling media, automating workflows. Originally designed for streamers, it's gained popularity among developers and productivity enthusiasts.
+
+Since I didn't have any specific use for it, it sat in storage for months until I recently decided to give it another chance. This time with a focused approach.
+
+Instead of trying to automate everything at once, I focused on solving one specific daily annoyance: controlling music without breaking my workflow. This targeted approach made me actually use the Stream Deck regularly.
+
+## Setting up music controls
+
+My initial challenge was simple: I wanted to control YouTube Music without switching windows.
+
+While mapping Stream Deck buttons to Mac's multimedia keys for basic playback (play/pause, next, previous) was easy, I also needed a way to like or dislike songs to curate my collection effectively.
+
+I use the unofficial [YouTube Music Desktop App](https://github.com/th-ch/youtube-music) which offers an API server plugin for controlling the app. However, there was a catch: Stream Deck couldn't directly execute terminal commands on Mac, and bash scripts weren't working. After some research, I found that I need to create Automator apps to execute the terminal commands. Not the most straightforward solution, but it works.
+
+Here's how I set it up:
+
+1. Configure buttons on the Stream Deck to use the Mac's multimedia keys for basic playback controls.
+2. Install YouTube Music Desktop App and enable its API server plugin
+3. Install [`xh`](https://github.com/ducaale/xh) for HTTP requests
+4. Create [Automator apps](https://support.apple.com/guide/automator/welcome/mac) for these API endpoints:
+
+```bash
+http://0.0.0.0:26538/api/v1/like     # Like/unlike
+http://0.0.0.0:26538/api/v1/dislike  # Dislike
+http://0.0.0.0:26538/api/v1/pause    # Pause/play
+```
+
+1. Assign the Automator apps to Stream Deck buttons
+
+<figure className="mx-auto,my-8,max-w-3xl">
+
+![Stream Deck buttons setup for YouTube Music control](https://subodhdahal.com/images/stream-deck/stream-deck-youtube-music.png)
+  <figcaption className="text-center,mt-2,text-sm,text-gray-600,dark:text-gray-400">
+
+My buttons setup for YouTube Music on Stream Deck
+
+</figcaption>
+</figure>
+
+## Solving a related problem
+
+I use Super Whisper for speech-to-text via a Stream Deck button. But there was a problem: If music is playing, Super Whisper picks up the audio from it and the dictation doesn't work reliably.
+
+I solved this by creating a multi-action button in Stream Deck that first pauses YouTube Music using the `pause` API endpoint, then launches Super Whisper. I added an `&` at the end of the script to run it in the background. This prevents error messages when YouTube Music is not running.
+
+The launcher button for it is on the top right in the image above.
+
+## Physical layout change
+
+I moved the Stream Deck from directly in front of me to the left of my keyboard. This position feels more natural, so I no longer reach forward to press buttons.
+
+## Beyond music control
+
+I also use Stream Deck for:
+
+- **App launchers** for development tools
+- **Home office lighting** via Home Assistant integration
+- **System shortcuts** like Do Not Disturb or taking screenshots
+
+## The bigger picture
+
+This music control workflow is step one in an ongoing automation experiment. I'm documenting this success to create a template for future improvements and stay motivated. The key was finding the right approach to turn a failed purchase into a useful tool.
 
 ---
 
@@ -1194,77 +1265,6 @@ After setting everything up, I tested my feeds by:
 Adding RSS and Atom feeds to my Nuxt 3 blog took a library and a few short files. Now my readers can follow my updates in their preferred feed readers, just like I follow other blogs.
 
 The full code is in my [GitHub repository](https://github.com/SubodhDahal/subodhdahal.github.io).
-
----
-
-- **Page:** Revisiting my Stream Deck for music control
-- **Source:** https://subodhdahal.com/blog/stream-deck-youtube-music
-- **Description:** How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.
-
-I bought a Stream Deck years ago hoping to improve my productivity in the home office, but quickly lost interest after the novelty wore off.
-
-Stream Deck is a customizable control panel with LCD buttons that trigger computer actions like launching apps, controlling media, automating workflows. Originally designed for streamers, it's gained popularity among developers and productivity enthusiasts.
-
-Since I didn't have any specific use for it, it sat in storage for months until I recently decided to give it another chance. This time with a focused approach.
-
-Instead of trying to automate everything at once, I focused on solving one specific daily annoyance: controlling music without breaking my workflow. This targeted approach made me actually use the Stream Deck regularly.
-
-## Setting up music controls
-
-My initial challenge was simple: I wanted to control YouTube Music without switching windows.
-
-While mapping Stream Deck buttons to Mac's multimedia keys for basic playback (play/pause, next, previous) was easy, I also needed a way to like or dislike songs to curate my collection effectively.
-
-I use the unofficial [YouTube Music Desktop App](https://github.com/th-ch/youtube-music) which offers an API server plugin for controlling the app. However, there was a catch: Stream Deck couldn't directly execute terminal commands on Mac, and bash scripts weren't working. After some research, I found that I need to create Automator apps to execute the terminal commands. Not the most straightforward solution, but it works.
-
-Here's how I set it up:
-
-1. Configure buttons on the Stream Deck to use the Mac's multimedia keys for basic playback controls.
-2. Install YouTube Music Desktop App and enable its API server plugin
-3. Install [`xh`](https://github.com/ducaale/xh) for HTTP requests
-4. Create [Automator apps](https://support.apple.com/guide/automator/welcome/mac) for these API endpoints:
-
-```bash
-http://0.0.0.0:26538/api/v1/like     # Like/unlike
-http://0.0.0.0:26538/api/v1/dislike  # Dislike
-http://0.0.0.0:26538/api/v1/pause    # Pause/play
-```
-
-1. Assign the Automator apps to Stream Deck buttons
-
-<figure className="mx-auto,my-8,max-w-3xl">
-
-![Stream Deck buttons setup for YouTube Music control](https://subodhdahal.com/images/stream-deck/stream-deck-youtube-music.png)
-  <figcaption className="text-center,mt-2,text-sm,text-gray-600,dark:text-gray-400">
-
-My buttons setup for YouTube Music on Stream Deck
-
-</figcaption>
-</figure>
-
-## Solving a related problem
-
-I use Super Whisper for speech-to-text via a Stream Deck button. But there was a problem: If music is playing, Super Whisper picks up the audio from it and the dictation doesn't work reliably.
-
-I solved this by creating a multi-action button in Stream Deck that first pauses YouTube Music using the `pause` API endpoint, then launches Super Whisper. I added an `&` at the end of the script to run it in the background. This prevents error messages when YouTube Music is not running.
-
-The launcher button for it is on the top right in the image above.
-
-## Physical layout change
-
-I moved the Stream Deck from directly in front of me to the left of my keyboard. This position feels more natural, so I no longer reach forward to press buttons.
-
-## Beyond music control
-
-I also use Stream Deck for:
-
-- **App launchers** for development tools
-- **Home office lighting** via Home Assistant integration
-- **System shortcuts** like Do Not Disturb or taking screenshots
-
-## The bigger picture
-
-This music control workflow is step one in an ongoing automation experiment. I'm documenting this success to create a template for future improvements and stay motivated. The key was finding the right approach to turn a failed purchase into a useful tool.
 
 ---
 
@@ -1684,278 +1684,6 @@ This setup changed how I manage configs. Here's what it gives me:
 
 ---
 
-- **Page:** Looking back: My 2022 in review
-- **Source:** https://subodhdahal.com/blog/2022-in-review
-- **Description:** From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.
-
-As the earth completes another revolution around the sun and yet another year comes to an end, I can't help but look back and reflect on all that has happened.
-
-For me, this year has been filled with highs and lows, moments of joy and sorrow, and a range of emotions in between. From embarking on solo adventures to creating lasting memories with close friends, I've had the opportunity to learn and grow in ways I never could have imagined.
-
-Join me as I take a journey through the year that was, and discover the lessons and insights I've gained along the way.
-
-# Personal highlights
-
-This year has been filled with exciting adventures, personal growth, and lasting memories. Here are some of the highlights:
-
-## A year of travel: My adventures in 10 countries
-
-This year, I set off on a series of solo adventures that opened my eyes to new experiences and gave me the freedom to make spontaneous decisions. As I traveled to different countries and immersed myself in diverse cultures, I gained a new perspective on the world and my place in it.
-
-Along the way, I met a cast of intriguing characters and took time to reflect on my life and future goals. And when I wasn't venturing out on my own, I made some unforgettable memories with my closest friends.
-
-<figure className="image">
-
-![Europe map](https://subodhdahal.com/images/2022-in-review/europe-map-visited.svg)
-  <figcaption>
-
-A map of Europe with the countries I traveled to in 2022 marked in blue
-
-</figcaption>
-</figure>
-
-I embarked on a journey that took me to 10 countries, 8 of which were new to me. From the beautiful beaches of Greece and the wide landscapes of Norway, to the charming streets of Belgium and the historic sites of Poland, I was constantly in awe of the diverse cultures and landscapes I encountered. In Italy, I marveled at the ancient architecture and savored the delicious cuisine. I also visited the smallest country in the world, Vatican City and marveled at the beauty of St. Peter's Basilica. In Estonia, I was struck by the country's natural beauty and rich history, and in Finland, I was fascinated by the unique blend of modern and traditional culture.
-
-And even though I've visited Switzerland and Austria before, I always find something new and exciting to discover in these beautiful countries. Along the way, I also explored countless charming towns and villages throughout Germany.
-
-All these experiences made this year one of the most memorable and rewarding travel experiences of my life.
-
-<figure className="quote">
-
-> The use of traveling is to regulate imagination by reality, and instead of thinking how things may be, to see them as they are.
-
-
-  <figcaption>
-
-— Samuel Johnson
-
-</figcaption>
-</figure>
-
-## Finding my inner strength: My 50km/day hikes in Germany
-
-This year, I pushed myself to new limits with two epic 50km/day hikes that challenged my physical and mental strength. As someone who has not traditionally considered themselves an athlete, this was a significant accomplishment that I never would have thought myself capable of before.
-
-The first one was along the Rössleweg in Stuttgart, Germany. It is mostly through wooded areas, picturesque vineyards and orchards, all while overlooking the valley known as the Stuttgarter Kessel.
-
-It was in preparation for the second one, which was the [50 km MegaMarsch event in Freiburg](https://www.megamarsch.de/50-12/freiburg/freiburg-anmeldung/), Germany. This was a 50km hike that started in the city and through the Black Forest, which is known for its dense forests and steep hills, before finally ending back in the city.
-
-Despite the exhausting nature of these hikes, they were both amazing experiences that helped me to push myself and discover what I was capable of.
-
-I am grateful to my good friend [Carsten Cierniak](https://www.instagram.com/carsten_thm/) for introducing me to the MegaMarsch event and for providing motivation and companionship during the hikes. Thanks also to him for the guidance and tips that helped me prepare for the hikes.
-
-## The great outdoors: A year of hiking and exploring
-
-Throughout the year, I have been able to do a lot of hiking, ranging from short walks to full-day hikes. Each trail offered its own unique beauty and challenges, from scenic mountain vistas to dense forests and winding rivers.
-
-Hiking has allowed me to disconnect from the stresses of daily life and reconnect with the beauty of the natural world. It has also been a great way to stay active and healthy, both physically and mentally.
-
-The most memorable hikes of the year were: to Zugspitze 🇩🇪, in the Black Forest 🇩🇪, in the Saxon Switzerland National Park 🇩🇪, and in Sognsvann 🇳🇴.
-
-Climbing to the top of Zugspitze, the highest mountain in Germany, proved to be a formidable challenge.The steep and rocky path halfway up the mountain was difficult, and the weather near the top was bad enough that we had to stop just a few hundred meters from the summit. However, the views along the way and the feeling of accomplishment made it all worth it.
-
-I was able to build a strong connection with my friends who accompanied me during these hikes as we bonded over the shared experience of exploring the beautiful nature these regions have to offer.
-
-Hiking has become a passion of mine and I look forward to continuing to explore the many trails that the world has to offer.
-
-## A night to remember: Iron Maiden in concert
-
-I was able to realize a long time desire of mine this year by seeing one of my favorite bands Iron Maiden live in concert. The thrill of hearing the songs I love performed live was an incredible. Despite the age of the band members, they delivered an electric performance and were able to make the 50,000 people present in the venue chant in unison.
-
-It was an unforgettable event that I will always cherish.
-
-# Professional highlights
-
-In addition to my travels, hikes and fun events, this year has also brought its share of challenges and growth in my professional life.
-
-## Stepping into a new role: Overcoming challenges and finding success
-
-As a seasoned Software Engineer with almost a decade of experience under my belt, I thought I had seen it all. But when I accepted the role of Software Engineering Team Lead at [Laserhub GmbH](https://laserhub.com/), I quickly realized that I had a lot to learn. Not only was this a promotion, but it also required me to approach things in a new way and shed some of my old habits.
-
-I'd be lying if I said it has been easy. There have been a lot of challenges, but I've been enjoying it so far and learning to see things from a new perspective. With the help of the wonderful people I work with, I have been able to grow a lot in this role.
-
-# Resilience in adversity: Struggles of those close to me in 2022
-
-In February of this year, a war broke out in Ukraine, causing me great concern for the safety of my colleagues and their loved ones living there. Despite my fears, they are fortunately able to remain safe, but they still have to cope with the ongoing effects of the war. I am in awe of their strength and resilience as they continue to live their lives as normally as possible, despite the challenges they face. I can only hope that the situation will improve and that peace will be restored in the near future.
-
-# Personal key takeaways from 2022
-
-- We are all works in progress. Who we were yesterday is not who we are today, and who we are today is not who we will be tomorrow.
-
-  - There is always the potential for growth and learning, and we should always be open to new knowledge and opportunities for self-improvement.
-
-  - Embracing challenges is essential to personal growth and development.
-
-  - Investing in meaningful relationships with loved ones is always worthwhile.
-
-As I look back on the year that was, I am filled with gratitude for all the things I've learned and experienced.
-
-Unfortunately, not everyone has had the same experience, with some really horrible things that happened in the world. I hope that 2023 will be a better year for everyone.
-
-I am grateful for the support and encouragement of those in my life this year. Your guidance and opportunities have allowed me to grow. Thank you for being a part of my journey and for the amazing times we had together.
-
-Here's to the future and to the continued growth and learning that it holds.
-
----
-
-- **Page:** Re-living memories through proper media organization
-- **Source:** https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization
-- **Description:** Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.
-
-# Capturing life's moments
-
-We make priceless memories as life progresses, and these are the ones we want to keep forever. They can be minor, everyday occurrences or significant, life-altering occasions that serve as a reminder of who we were, what we've been through, and what we've learned. They are really valuable and can make us feel sad, happy, or nostalgic.
-
-Unfortunately, our memory is fallible and we can only remember so much. Despite our innate limitations, we have continually sought to immortalize moments of significance. From cave paintings to digital photos and videos, we have come a long way.
-
-Photos and videos help us not just to remember the events, but the associated emotions and feelings as well. They also allow us to show others the experiences we've had and the memories we hold dear, creating a shared history and a sense of connection with those around us.
-
-# Why organize digital media?
-
-With ubiquitous camera technology, capturing memories is easier, but revisiting them can be a challenge. A disorganized and huge photo and video collection can leave us with a sense of dread. Proper organization of digital media serves as a safeguard for our precious memories, ensuring that they remain a constant source of comfort and inspiration.
-
-Like many people of our generation, I have amassed a large personal collection of photos and videos. I had to find a solution that enabled me to effortlessly navigate through the vast collection of my cherished moments.
-
-# Considerations for a solution
-
-Here are a few of the considerations that were important to me in choosing a solution:
-
-- I wanted my digital media stored on a local device, not in a cloud that could restrict my access.
-- The software had to be open-source and have enough features to handle my media organization needs.
-- The metadata I added to my media needed to be in an open format for easy manipulation.
-
-After some research, I came across [digiKam](https://www.digikam.org/) which matched all my requirements. digiKam is a feature-rich free and open-source software to manage your digital media collection. It is available for Linux, Windows, and macOS.
-
-## Workflow
-
-After investing a lot of time trying to figure out what works for me, the workflow that I have settled on is as follows:
-
-1. Import
-2. Culling
-3. Organization
-4. Editing and enhancing
-5. Cloud Backup
-
-I go to steps 1 to 5, mostly in a sequence when importing new media. Occasionally, I look back at my digiKam collections and perform the steps from 2 to 5.
-
-### 1. Import
-
-I have three major sources of my pictures and videos: my cellphone, a GoPro action camera, and a DJI Mini 3 Pro drone. Their media is imported and saved to an external SSD.
-
-I use a card reader to import the media from the GoPro and the DJI drone using digiKam.
-
-For photos and videos that I take with my Android cellphone, I use an open-source program called [Rapid Photo Downloader](https://damonlynch.net/rapid/index.html) to download them to a directory on my computer using File Transfer mode. I use Rapid Photo Downloader due to digiKam's failure to import media from my cellphone.
-
-The imported media is automatically organized by date in the format `YYYY-MM-DD` by digiKam. Rapid Photo Downloader imports it in the format `YYYYMMDD` which I then use a custom script to rename to the format `YYYY-MM-DD`.
-
-This is how my directory structure looks like:
-
-```text
-...
-- 2022
-  - ...
-- 2023
-  - 2023-01-01
-  - 2023-01-03
-  - 2023-01-12
-  ...
-```
-
-### 2. Culling
-
-To maintain focus on the important memories, we need to delete the clutter. Intentional photo-taking and intentional photo-deleting also lead to better memory retention and the ability to revisit experiences.
-
-While browsing through the imported pictures and videos using digiKam, I do the following:
-
-- Delete pictures that are blurry, out of focus, or have a lot of noise unless they represent a special moment that wasn't captured well by other pictures
-- If there are multiple pictures of the same thing, delete the ones that are not the best
-- Delete pictures that are too similar to other pictures
-
-To make the process faster and avoid accidentally deleting pictures that I might want to keep, I add a red flag to the pictures that I want to delete. I have configured the shortcut key `1` to add a red flag to the selected picture.
-
-<figure className="image">
-
-![The list of media with red flags](https://subodhdahal.com/images/digital-media-2023/digikam-red-flags.png)
-  <figcaption>
-
-digiKam interface for working with flagged media
-
-</figcaption>
-</figure>
-
-All these flagged pictures can be seen in the "Rejected items" section under "Labels" in digiKam, which I then delete in bulk.
-
-### 3. Organization
-
-To make it easier to find pictures and videos, I add metadata to them. I use digiKam to add the following metadata to my pictures and videos:
-
-- Add labels based on location
-
-  - digiKam has a feature called "Reverse geocoding" to automatically add labels based on the GPS coordinates of the pictures
-  - Manually assign labels if there was no GPS coordinates or if the location was not recognized by digiKam
-- Tag people in pictures by using the "Face Tags" feature of digiKam
-
-  - digiKam automatically recognizes faces in pictures and allows me to tag them. After having a sufficient number of pictures of a person, it can even suggest the name of the person.
-- Manually tag events in pictures
-
-<figure className="image">
-
-![digiKam sidebar](https://subodhdahal.com/images/digital-media-2023/digikam.png)
-  <figcaption>
-
-digiKam sidebar showing its prominent features
-
-</figcaption>
-</figure>
-
-### 4. Editing and enhancing
-
-Editing pictures is a crucial aspect of preserving and reliving memories. By fine-tuning and refining the images, we bring out the best qualities and features that make each moment special. Moreover, editing can also help eliminate distractions, adjust lighting, and enhance overall image quality. Ultimately, the process of editing pictures is an art that helps preserve and elevate the beauty of our memories.
-
-digiKam has a powerful editing tool called "Image Editor" where I mostly perform the following tasks:
-
-- Crop images to improve composition
-- Rotate and flip images
-- Adjust exposure, contrast, saturation, color balance, and white balance
-- Adjust perspective
-- Adjust lens distortion
-
-<figure className="image">
-
-![Image editing tools in digiKam](https://subodhdahal.com/images/digital-media-2023/digikam-image-editor-tools.png)
-  <figcaption>
-
-Image editing tools in digiKam
-
-</figcaption>
-</figure>
-
-digiKam also has features to create panoramas and HDR images from multiple pictures, which I make occasional use of.
-
-### 5. Cloud backup
-
-Even though I chose local storage as the main destination for my media, I still back them up to the cloud. Hard drives can fail and catastrophes like fire can happen which destroy years of memories. Having an off-site backup is a good way to ensure that the media remain safe.
-
-Any pictures and videos that I take from my cellphone are automatically uploaded to Google Photos once I join a WiFi network. I selectively upload pictures and videos from my GoPro or drone to conserve cloud storage space, uploading directly to Google Photos from digiKam.
-
-# Conclusion
-
-Organizing digital media is crucial for safeguarding our memories and revisiting our experiences. With the right tools, it can be an effortless process that helps us remember and share our precious moments. However, it is important to remember that without the right mindset and discipline, even sophisticated tools are not of much value.
-
-## Future work
-
-I am still experimenting with the workflow and tools that I use to manage my digital media. Here are some ideas that I am considering:
-
-- Move the media to a NAS(Network Attached Storage)
-
-  - using multiple drives with a RAID setup will help prevent data loss in case one or more of the hard drives fail
-  - the media can be accessed on a local network or even from the internet
-- Automatically correct timestamps on media, usually the ones received via chat apps
-- Automatic assignment of GPS coordinates for pictures/videos taken minutes apart, in case they don't have GPS metadata.
-- Add automatic tags for things in pictures, eg. sunsets, lakes, canyons, books
-
----
-
 - **Page:** Git and the command-line: Take your workflow to the next level
 - **Source:** https://subodhdahal.com/blog/git-and-command-line-next-level-workflow
 - **Description:** Some tips on how to improve your Git productivity using the command-line
@@ -2256,6 +1984,278 @@ If you would prefer a more GUI approach to working with git but in the terminal,
 - [tig](https://github.com/jonas/tig)
 
   - [lazygit](https://github.com/jesseduffield/lazygit)
+
+---
+
+- **Page:** Looking back: My 2022 in review
+- **Source:** https://subodhdahal.com/blog/2022-in-review
+- **Description:** From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.
+
+As the earth completes another revolution around the sun and yet another year comes to an end, I can't help but look back and reflect on all that has happened.
+
+For me, this year has been filled with highs and lows, moments of joy and sorrow, and a range of emotions in between. From embarking on solo adventures to creating lasting memories with close friends, I've had the opportunity to learn and grow in ways I never could have imagined.
+
+Join me as I take a journey through the year that was, and discover the lessons and insights I've gained along the way.
+
+# Personal highlights
+
+This year has been filled with exciting adventures, personal growth, and lasting memories. Here are some of the highlights:
+
+## A year of travel: My adventures in 10 countries
+
+This year, I set off on a series of solo adventures that opened my eyes to new experiences and gave me the freedom to make spontaneous decisions. As I traveled to different countries and immersed myself in diverse cultures, I gained a new perspective on the world and my place in it.
+
+Along the way, I met a cast of intriguing characters and took time to reflect on my life and future goals. And when I wasn't venturing out on my own, I made some unforgettable memories with my closest friends.
+
+<figure className="image">
+
+![Europe map](https://subodhdahal.com/images/2022-in-review/europe-map-visited.svg)
+  <figcaption>
+
+A map of Europe with the countries I traveled to in 2022 marked in blue
+
+</figcaption>
+</figure>
+
+I embarked on a journey that took me to 10 countries, 8 of which were new to me. From the beautiful beaches of Greece and the wide landscapes of Norway, to the charming streets of Belgium and the historic sites of Poland, I was constantly in awe of the diverse cultures and landscapes I encountered. In Italy, I marveled at the ancient architecture and savored the delicious cuisine. I also visited the smallest country in the world, Vatican City and marveled at the beauty of St. Peter's Basilica. In Estonia, I was struck by the country's natural beauty and rich history, and in Finland, I was fascinated by the unique blend of modern and traditional culture.
+
+And even though I've visited Switzerland and Austria before, I always find something new and exciting to discover in these beautiful countries. Along the way, I also explored countless charming towns and villages throughout Germany.
+
+All these experiences made this year one of the most memorable and rewarding travel experiences of my life.
+
+<figure className="quote">
+
+> The use of traveling is to regulate imagination by reality, and instead of thinking how things may be, to see them as they are.
+
+
+  <figcaption>
+
+— Samuel Johnson
+
+</figcaption>
+</figure>
+
+## Finding my inner strength: My 50km/day hikes in Germany
+
+This year, I pushed myself to new limits with two epic 50km/day hikes that challenged my physical and mental strength. As someone who has not traditionally considered themselves an athlete, this was a significant accomplishment that I never would have thought myself capable of before.
+
+The first one was along the Rössleweg in Stuttgart, Germany. It is mostly through wooded areas, picturesque vineyards and orchards, all while overlooking the valley known as the Stuttgarter Kessel.
+
+It was in preparation for the second one, which was the [50 km MegaMarsch event in Freiburg](https://www.megamarsch.de/50-12/freiburg/freiburg-anmeldung/), Germany. This was a 50km hike that started in the city and through the Black Forest, which is known for its dense forests and steep hills, before finally ending back in the city.
+
+Despite the exhausting nature of these hikes, they were both amazing experiences that helped me to push myself and discover what I was capable of.
+
+I am grateful to my good friend [Carsten Cierniak](https://www.instagram.com/carsten_thm/) for introducing me to the MegaMarsch event and for providing motivation and companionship during the hikes. Thanks also to him for the guidance and tips that helped me prepare for the hikes.
+
+## The great outdoors: A year of hiking and exploring
+
+Throughout the year, I have been able to do a lot of hiking, ranging from short walks to full-day hikes. Each trail offered its own unique beauty and challenges, from scenic mountain vistas to dense forests and winding rivers.
+
+Hiking has allowed me to disconnect from the stresses of daily life and reconnect with the beauty of the natural world. It has also been a great way to stay active and healthy, both physically and mentally.
+
+The most memorable hikes of the year were: to Zugspitze 🇩🇪, in the Black Forest 🇩🇪, in the Saxon Switzerland National Park 🇩🇪, and in Sognsvann 🇳🇴.
+
+Climbing to the top of Zugspitze, the highest mountain in Germany, proved to be a formidable challenge.The steep and rocky path halfway up the mountain was difficult, and the weather near the top was bad enough that we had to stop just a few hundred meters from the summit. However, the views along the way and the feeling of accomplishment made it all worth it.
+
+I was able to build a strong connection with my friends who accompanied me during these hikes as we bonded over the shared experience of exploring the beautiful nature these regions have to offer.
+
+Hiking has become a passion of mine and I look forward to continuing to explore the many trails that the world has to offer.
+
+## A night to remember: Iron Maiden in concert
+
+I was able to realize a long time desire of mine this year by seeing one of my favorite bands Iron Maiden live in concert. The thrill of hearing the songs I love performed live was an incredible. Despite the age of the band members, they delivered an electric performance and were able to make the 50,000 people present in the venue chant in unison.
+
+It was an unforgettable event that I will always cherish.
+
+# Professional highlights
+
+In addition to my travels, hikes and fun events, this year has also brought its share of challenges and growth in my professional life.
+
+## Stepping into a new role: Overcoming challenges and finding success
+
+As a seasoned Software Engineer with almost a decade of experience under my belt, I thought I had seen it all. But when I accepted the role of Software Engineering Team Lead at [Laserhub GmbH](https://laserhub.com/), I quickly realized that I had a lot to learn. Not only was this a promotion, but it also required me to approach things in a new way and shed some of my old habits.
+
+I'd be lying if I said it has been easy. There have been a lot of challenges, but I've been enjoying it so far and learning to see things from a new perspective. With the help of the wonderful people I work with, I have been able to grow a lot in this role.
+
+# Resilience in adversity: Struggles of those close to me in 2022
+
+In February of this year, a war broke out in Ukraine, causing me great concern for the safety of my colleagues and their loved ones living there. Despite my fears, they are fortunately able to remain safe, but they still have to cope with the ongoing effects of the war. I am in awe of their strength and resilience as they continue to live their lives as normally as possible, despite the challenges they face. I can only hope that the situation will improve and that peace will be restored in the near future.
+
+# Personal key takeaways from 2022
+
+- We are all works in progress. Who we were yesterday is not who we are today, and who we are today is not who we will be tomorrow.
+
+  - There is always the potential for growth and learning, and we should always be open to new knowledge and opportunities for self-improvement.
+
+  - Embracing challenges is essential to personal growth and development.
+
+  - Investing in meaningful relationships with loved ones is always worthwhile.
+
+As I look back on the year that was, I am filled with gratitude for all the things I've learned and experienced.
+
+Unfortunately, not everyone has had the same experience, with some really horrible things that happened in the world. I hope that 2023 will be a better year for everyone.
+
+I am grateful for the support and encouragement of those in my life this year. Your guidance and opportunities have allowed me to grow. Thank you for being a part of my journey and for the amazing times we had together.
+
+Here's to the future and to the continued growth and learning that it holds.
+
+---
+
+- **Page:** Re-living memories through proper media organization
+- **Source:** https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization
+- **Description:** Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.
+
+# Capturing life's moments
+
+We make priceless memories as life progresses, and these are the ones we want to keep forever. They can be minor, everyday occurrences or significant, life-altering occasions that serve as a reminder of who we were, what we've been through, and what we've learned. They are really valuable and can make us feel sad, happy, or nostalgic.
+
+Unfortunately, our memory is fallible and we can only remember so much. Despite our innate limitations, we have continually sought to immortalize moments of significance. From cave paintings to digital photos and videos, we have come a long way.
+
+Photos and videos help us not just to remember the events, but the associated emotions and feelings as well. They also allow us to show others the experiences we've had and the memories we hold dear, creating a shared history and a sense of connection with those around us.
+
+# Why organize digital media?
+
+With ubiquitous camera technology, capturing memories is easier, but revisiting them can be a challenge. A disorganized and huge photo and video collection can leave us with a sense of dread. Proper organization of digital media serves as a safeguard for our precious memories, ensuring that they remain a constant source of comfort and inspiration.
+
+Like many people of our generation, I have amassed a large personal collection of photos and videos. I had to find a solution that enabled me to effortlessly navigate through the vast collection of my cherished moments.
+
+# Considerations for a solution
+
+Here are a few of the considerations that were important to me in choosing a solution:
+
+- I wanted my digital media stored on a local device, not in a cloud that could restrict my access.
+- The software had to be open-source and have enough features to handle my media organization needs.
+- The metadata I added to my media needed to be in an open format for easy manipulation.
+
+After some research, I came across [digiKam](https://www.digikam.org/) which matched all my requirements. digiKam is a feature-rich free and open-source software to manage your digital media collection. It is available for Linux, Windows, and macOS.
+
+## Workflow
+
+After investing a lot of time trying to figure out what works for me, the workflow that I have settled on is as follows:
+
+1. Import
+2. Culling
+3. Organization
+4. Editing and enhancing
+5. Cloud Backup
+
+I go to steps 1 to 5, mostly in a sequence when importing new media. Occasionally, I look back at my digiKam collections and perform the steps from 2 to 5.
+
+### 1. Import
+
+I have three major sources of my pictures and videos: my cellphone, a GoPro action camera, and a DJI Mini 3 Pro drone. Their media is imported and saved to an external SSD.
+
+I use a card reader to import the media from the GoPro and the DJI drone using digiKam.
+
+For photos and videos that I take with my Android cellphone, I use an open-source program called [Rapid Photo Downloader](https://damonlynch.net/rapid/index.html) to download them to a directory on my computer using File Transfer mode. I use Rapid Photo Downloader due to digiKam's failure to import media from my cellphone.
+
+The imported media is automatically organized by date in the format `YYYY-MM-DD` by digiKam. Rapid Photo Downloader imports it in the format `YYYYMMDD` which I then use a custom script to rename to the format `YYYY-MM-DD`.
+
+This is how my directory structure looks like:
+
+```text
+...
+- 2022
+  - ...
+- 2023
+  - 2023-01-01
+  - 2023-01-03
+  - 2023-01-12
+  ...
+```
+
+### 2. Culling
+
+To maintain focus on the important memories, we need to delete the clutter. Intentional photo-taking and intentional photo-deleting also lead to better memory retention and the ability to revisit experiences.
+
+While browsing through the imported pictures and videos using digiKam, I do the following:
+
+- Delete pictures that are blurry, out of focus, or have a lot of noise unless they represent a special moment that wasn't captured well by other pictures
+- If there are multiple pictures of the same thing, delete the ones that are not the best
+- Delete pictures that are too similar to other pictures
+
+To make the process faster and avoid accidentally deleting pictures that I might want to keep, I add a red flag to the pictures that I want to delete. I have configured the shortcut key `1` to add a red flag to the selected picture.
+
+<figure className="image">
+
+![The list of media with red flags](https://subodhdahal.com/images/digital-media-2023/digikam-red-flags.png)
+  <figcaption>
+
+digiKam interface for working with flagged media
+
+</figcaption>
+</figure>
+
+All these flagged pictures can be seen in the "Rejected items" section under "Labels" in digiKam, which I then delete in bulk.
+
+### 3. Organization
+
+To make it easier to find pictures and videos, I add metadata to them. I use digiKam to add the following metadata to my pictures and videos:
+
+- Add labels based on location
+
+  - digiKam has a feature called "Reverse geocoding" to automatically add labels based on the GPS coordinates of the pictures
+  - Manually assign labels if there was no GPS coordinates or if the location was not recognized by digiKam
+- Tag people in pictures by using the "Face Tags" feature of digiKam
+
+  - digiKam automatically recognizes faces in pictures and allows me to tag them. After having a sufficient number of pictures of a person, it can even suggest the name of the person.
+- Manually tag events in pictures
+
+<figure className="image">
+
+![digiKam sidebar](https://subodhdahal.com/images/digital-media-2023/digikam.png)
+  <figcaption>
+
+digiKam sidebar showing its prominent features
+
+</figcaption>
+</figure>
+
+### 4. Editing and enhancing
+
+Editing pictures is a crucial aspect of preserving and reliving memories. By fine-tuning and refining the images, we bring out the best qualities and features that make each moment special. Moreover, editing can also help eliminate distractions, adjust lighting, and enhance overall image quality. Ultimately, the process of editing pictures is an art that helps preserve and elevate the beauty of our memories.
+
+digiKam has a powerful editing tool called "Image Editor" where I mostly perform the following tasks:
+
+- Crop images to improve composition
+- Rotate and flip images
+- Adjust exposure, contrast, saturation, color balance, and white balance
+- Adjust perspective
+- Adjust lens distortion
+
+<figure className="image">
+
+![Image editing tools in digiKam](https://subodhdahal.com/images/digital-media-2023/digikam-image-editor-tools.png)
+  <figcaption>
+
+Image editing tools in digiKam
+
+</figcaption>
+</figure>
+
+digiKam also has features to create panoramas and HDR images from multiple pictures, which I make occasional use of.
+
+### 5. Cloud backup
+
+Even though I chose local storage as the main destination for my media, I still back them up to the cloud. Hard drives can fail and catastrophes like fire can happen which destroy years of memories. Having an off-site backup is a good way to ensure that the media remain safe.
+
+Any pictures and videos that I take from my cellphone are automatically uploaded to Google Photos once I join a WiFi network. I selectively upload pictures and videos from my GoPro or drone to conserve cloud storage space, uploading directly to Google Photos from digiKam.
+
+# Conclusion
+
+Organizing digital media is crucial for safeguarding our memories and revisiting our experiences. With the right tools, it can be an effortless process that helps us remember and share our precious moments. However, it is important to remember that without the right mindset and discipline, even sophisticated tools are not of much value.
+
+## Future work
+
+I am still experimenting with the workflow and tools that I use to manage my digital media. Here are some ideas that I am considering:
+
+- Move the media to a NAS(Network Attached Storage)
+
+  - using multiple drives with a RAID setup will help prevent data loss in case one or more of the hard drives fail
+  - the media can be accessed on a local network or even from the internet
+- Automatically correct timestamps on media, usually the ones received via chat apps
+- Automatic assignment of GPS coordinates for pictures/videos taken minutes apart, in case they don't have GPS metadata.
+- Add automatic tags for things in pictures, eg. sunsets, lakes, canyons, books
 
 ---
 
