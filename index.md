@@ -38,11 +38,11 @@ From Bhaktapur 🇳🇵·Based in Stuttgart 🇩🇪
 
 ## **Recent Articles **
 
-- [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>**nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
+- [<h2>**Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU**</h2>**troubleshooting****nixos****cosmic****wayland****speech-to-text****egpu****Nov 19, 2026**](https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/)
+- [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>**troubleshooting****nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
 - [<h2>**Stop stashing half-finished work: use Git worktrees and Worktrunk**</h2>**git****worktrees****worktrunk****developer productivity****command line****workflow****Aug 16, 2026**](https://subodhdahal.com/blog/worktrees-with-worktrunk/)
 - [<h2>**Self-Hosting my Git forge with Forgejo**</h2>**Homelab****Open source****Self-hosting****Workflow****Apr 29, 2026**](https://subodhdahal.com/blog/self-hosting-my-git-forge/)
 - [<h2>**Curating my own reading and discovery feed with RSS**</h2>**Homelab****Open source****Self-hosting****Workflow****Feb 8, 2026**](https://subodhdahal.com/blog/reading-and-discovery-feed-curation/)
-- [<h2>**Fixing my broken Docker Immich+Traefik setup**</h2>**homelab****networking****Oct 31, 2025**](https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/)
 
 [View All Articles →](https://subodhdahal.com/blog/)
 

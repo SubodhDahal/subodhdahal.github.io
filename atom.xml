@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://subodhdahal.com</id>
     <title>Subodh Dahal</title>
-    <updated>2026-11-18T17:51:19.426Z</updated>
+    <updated>2026-11-19T14:46:59.026Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Subodh Dahal</name>
@@ -13,6 +13,25 @@
     <subtitle>Personal website and blog of Subodh Dahal</subtitle>
     <rights>Copyright 2026 Subodh Dahal</rights>
     <entry>
+        <title type="html"><![CDATA[Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU]]></title>
+        <id>https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/</id>
+        <link href="https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/"/>
+        <updated>2026-11-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Handy's shortcut did nothing, and after I fixed that, nothing got typed. A Wayland shortcut, a microphone, the paste method and an autostart file caused it, and the GPU did not.]]></summary>
+        <content type="html"><![CDATA[<p>Handy's shortcut did nothing, and after I fixed that, nothing got typed. A Wayland shortcut, a microphone, the paste method and an autostart file caused it, and the GPU did not.</p>
+<p><a href="https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/">Read the full post on subodhdahal.com →</a></p>]]></content>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com/</uri>
+        </author>
+        <category label="troubleshooting"/>
+        <category label="nixos"/>
+        <category label="cosmic"/>
+        <category label="wayland"/>
+        <category label="speech-to-text"/>
+        <category label="egpu"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot]]></title>
         <id>https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/</id>
         <link href="https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/"/>
@@ -21,6 +40,7 @@
             <name>Subodh Dahal</name>
             <uri>https://subodhdahal.com/</uri>
         </author>
+        <category label="troubleshooting"/>
         <category label="nixos"/>
         <category label="egpu"/>
         <category label="thunderbolt"/>

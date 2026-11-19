@@ -4,18 +4,35 @@
         <title>Subodh Dahal</title>
         <link>https://subodhdahal.com/</link>
         <description>Personal website and blog of Subodh Dahal</description>
-        <lastBuildDate>Wed, 18 Nov 2026 17:51:19 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 19 Nov 2026 14:46:59 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright 2026 Subodh Dahal</copyright>
         <atom:link href="https://subodhdahal.com/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU]]></title>
+            <link>https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/</link>
+            <guid isPermaLink="false">https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/</guid>
+            <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Handy's shortcut did nothing, and after I fixed that, nothing got typed. A Wayland shortcut, a microphone, the paste method and an autostart file caused it, and the GPU did not.]]></description>
+            <content:encoded><![CDATA[<p>Handy's shortcut did nothing, and after I fixed that, nothing got typed. A Wayland shortcut, a microphone, the paste method and an autostart file caused it, and the GPU did not.</p>
+<p><a href="https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/">Read the full post on subodhdahal.com →</a></p>]]></content:encoded>
+            <author>Subodh Dahal</author>
+            <category>troubleshooting</category>
+            <category>nixos</category>
+            <category>cosmic</category>
+            <category>wayland</category>
+            <category>speech-to-text</category>
+            <category>egpu</category>
+        </item>
+        <item>
             <title><![CDATA[Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot]]></title>
             <link>https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/</link>
             <guid isPermaLink="false">https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/</guid>
             <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
             <author>Subodh Dahal</author>
+            <category>troubleshooting</category>
             <category>nixos</category>
             <category>egpu</category>
             <category>thunderbolt</category>

@@ -45,11 +45,11 @@ From Bhaktapur 🇳🇵·Based in Stuttgart 🇩🇪
 
 ## **Recent Articles **
 
-- [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>**nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
+- [<h2>**Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU**</h2>**troubleshooting****nixos****cosmic****wayland****speech-to-text****egpu****Nov 19, 2026**](https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/)
+- [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>**troubleshooting****nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
 - [<h2>**Stop stashing half-finished work: use Git worktrees and Worktrunk**</h2>**git****worktrees****worktrunk****developer productivity****command line****workflow****Aug 16, 2026**](https://subodhdahal.com/blog/worktrees-with-worktrunk/)
 - [<h2>**Self-Hosting my Git forge with Forgejo**</h2>**Homelab****Open source****Self-hosting****Workflow****Apr 29, 2026**](https://subodhdahal.com/blog/self-hosting-my-git-forge/)
 - [<h2>**Curating my own reading and discovery feed with RSS**</h2>**Homelab****Open source****Self-hosting****Workflow****Feb 8, 2026**](https://subodhdahal.com/blog/reading-and-discovery-feed-curation/)
-- [<h2>**Fixing my broken Docker Immich+Traefik setup**</h2>**homelab****networking****Oct 31, 2025**](https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/)
 
 [View All Articles →](https://subodhdahal.com/blog/)
 
@@ -88,7 +88,10 @@ meta:
 
 *Notes on software, automation, and the tools I build with. *
 
-- [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>**nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
+- [<h2>**Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU**</h2>
+
+  Handy's shortcut did nothing, and after I fixed that, nothing got typed. A Wayland shortcut, a microphone, the paste method and an autostart file caused it, and the GPU did not.**troubleshooting****nixos****cosmic****wayland****speech-to-text****egpu****Nov 19, 2026**](https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/)
+- [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>**troubleshooting****nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
 - [<h2>**Stop stashing half-finished work: use Git worktrees and Worktrunk**</h2>
 
   Git worktrees keep separate branches checked out at once. Worktrunk automates per-worktree setup. The same isolation also works for parallel AI agents.**git****worktrees****worktrunk****developer productivity****command line****workflow****Aug 16, 2026**](https://subodhdahal.com/blog/worktrees-with-worktrunk/)
@@ -135,6 +138,212 @@ meta:
 ```json
 {"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/blog/#webpage","@type":"WebPage","description":"Blog posts by Subodh Dahal","name":"Blog posts","url":"https://subodhdahal.com/blog/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/blog/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Software Engineer","name":"Subodh Dahal","url":"https://subodhdahal.com","image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"sameAs":["https://github.com/subodhdahal","https://linkedin.com/in/subodhdahal"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
 ```
+
+---
+
+- **Page:** Library · Subodh Dahal
+- **Source:** https://subodhdahal.com/library
+- **Description:** Books I have read and recommend, with a short note on why each one earned its place.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+```
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/library/#webpage","@type":"WebPage","description":"Books I have read and recommend, with a short note on why each one earned its place.","name":"Library","url":"https://subodhdahal.com/library/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/library/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Software Engineer","name":"Subodh Dahal","url":"https://subodhdahal.com","image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"sameAs":["https://github.com/subodhdahal","https://linkedin.com/in/subodhdahal"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
+- **Page:** Self-Hosting my Git forge with Forgejo
+- **Source:** https://subodhdahal.com/blog/self-hosting-my-git-forge
+- **Description:** Why I moved away from GitHub and chose a lightweight, community-driven alternative
+
+For years, GitHub held all my personal Git repos. It worked fine. I used it with friends during my bachelor's and master's studies. But over time it felt less like a tool and more like a service that just put up with me.
+
+GitHub has had its share of problems lately. Repos scanned for AI training unless you opt out, outages, and [Git history rewritten after merging pull requests](https://github.blog/news-insights/company-news/an-update-on-github-availability/) are a few examples.
+
+What pushed me to self-host was my unease with data on servers whose terms can change anytime. That's the thinking behind most of what I self-host. I run my own reading feed, my own photo library, and now my own Git forge. It's not the easy path, but ownership and privacy are worth the effort.
+
+## Why Not GitLab?
+
+[GitLab](https://gitlab.com) was the obvious first thing to look at. I've used it at work for years and it's solid. But it's built for teams and companies, and that shows in the resources it needs. Running it at home means a platform that needs gigabytes of RAM for things I'd never use. My small NUC runs other services and couldn't handle it.
+
+## Why Forgejo?
+
+[Forgejo](https://forgejo.org) is a lightweight, self-hosted Git forge from [Codeberg e.V.](https://codeberg.org/Codeberg/org), a non-profit. It's written in Go. It runs as one binary that fits in a few hundred megabytes of RAM.
+
+What I use day to day:
+
+- **Repository hosting:** that's mainly what I need it for and it does the job well.
+- **Container registry:** there's a built-in registry for container images. I push Docker images straight to my own instance.
+- **Forgejo Actions:** my projects use Actions to build the container image and push it to the registry. On the VM where I run my personal services, the `docker-compose` files point to my Forgejo registry directly. The syntax is close to GitHub Actions, and the whole flow from code to running container stays inside my homelab.
+- **Pull mirrors:** for repos that still live on GitHub, Forgejo syncs them on a schedule. It's a simple way to keep a local copy without changing the current setup.
+
+I'm also hosting forks of a few open source projects I've tweaked. Those get built and pushed to my own registry too.
+
+I don't use issue tracking, pull requests, or wikis yet. They're there if I need them.
+
+## How It's Running
+
+Forgejo runs on a NUC at home, inside an Ubuntu VM on Proxmox, alongside a few other core services. I only access it over my home network. I could route it through Tailscale to get in when I'm away, but I haven't felt the need yet.
+
+Getting Forgejo Actions to work with the Traefik proxy took a few tries. The Docker build steps took a while too. After that, it has worked without issues for more than 3 months.
+
+## Backups
+
+One thing I didn't want to skip on was backups. Forgejo has a built-in `forgejo dump` command. It packs up the repos, config, and attachments into an archive. I run a daily cronjob with this command. I also dump the Postgres database on its own. Both get pushed to my NAS.
+
+## Migrating from GitHub
+
+The move went better than I expected. Forgejo has a built-in import tool that pulls everything from a GitHub repo: code, issues, pull requests, and history. You just give it the repo URL and a GitHub token.
+
+I put my old projects into an organization of their own on my Forgejo instance, away from my main account. I'm not actively working on them, but they're there if I ever need to look something up.
+
+I also finally found a place for my Logseq notes, now stored in Git. Since I own the server, I don't worry about someone else having access to them.
+
+I still use GitHub where it makes sense. My personal website runs on GitHub Pages at no cost, so that repo stays there. I use Forgejo's pull mirror to sync it to my instance on a schedule. That way I always have a local copy without changing the setup. Most open source projects are on GitHub, so it's still where I go when I want to contribute to something.
+
+## Takeaway
+
+The setup was simple, upkeep is low, and pushing code to my own server feels good.
+
+---
+
+- **Page:** Curating my own reading and discovery feed with RSS
+- **Source:** https://subodhdahal.com/blog/reading-and-discovery-feed-curation
+- **Description:** Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
+
+For quite some time, I have wanted to rely less on algorithmically curated feeds. The daily scroll through YouTube, Substack, or LinkedIn felt less like discovery and more like dopamine mining. I wanted a system that delivered interesting content to satisfy my curiosity, without platforms whose best interest is to have me glued to them. These days, finding such a platform is tough. Even if one exists now, there's no guarantee it won't eventually mimic the ones I wanted to get away from.
+
+I wanted a system where I subscribe directly to creators or communities sharing content I like. That's exactly what a feed reader does. It pulls content chronologically from blogs and sites that support RSS/Atom feeds, with no middleman filtering or recommending.
+
+There are a few feed reader platforms, but I wanted to have full data ownership and more control over the system. This is why I decided to self-host [FreshRSS](https://github.com/FreshRSS/FreshRSS), an open-source feed aggregator and reader, on my homelab running on a mini-PC. This also has the added advantage of being resilient compared to an online service which may stop existing for reasons beyond my control.
+
+## Feed sources
+
+Rather than relying on algorithms of platforms to decide which content they want to show me, I now subscribe to content from sources where I have found interesting writings before. I categorize the content sources broadly into the following:
+
+- Communities: There's many interesting posts being shared on communities like Hacker News RSS, Lobsters, Lemmy. I started by directly subscribing to their content RSS feed. But the number of posts was overwhelming. So I now use [hnrss.com](https://hnrss.github.io/) and [upvote-rss](https://github.com/johnwarne/upvote-rss) to get only the top posts from them.
+- Personal Blogs: If a post catches my eye, I check the author’s site and subscribe to their personal RSS feed if they have other content that I also find interesting.
+- Substack: I subscribe to a creator's publication directly by using their Substack URL.
+- Websites without RSS: Not all websites provide RSS/Atom feeds. Luckily, there's an open-source and self-hostable project called [RSSHub](https://github.com/DIYgod/RSSHub) which can generate RSS feeds for many popular websites. It acts as a bridge between my FreshRSS instance and those websites. It also has a browser extension companion: [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar) to easily find and subscribe to RSS feeds.
+- Newsletters: Previously, I had subscribed to many newsletters on my personal email. This made my email inbox messy and it felt like a chore to go and read there. I now use [Kill the Newsletter!](https://kill-the-newsletter.com/) which provides an email address to subscribe to these newsletters. It generates an Atom feed which I can subscribe to in FreshRSS. This has the benefit of keeping my inbox clean and also consolidating all my reading into a single application.
+- YouTube Channels: Yes, I can directly subscribe to YouTube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
+
+<figure className="w-full,image">
+<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="/images/freshrss-ui.png" style="border: 1px solid black">
+
+
+
+</iframe>
+
+
+  <figcaption>
+
+This is how my FreshRSS looks like
+
+</figcaption>
+</figure>
+
+Since FreshRSS is an aggregator, I don't necessarily need to use the FreshRSS interface to access my feed. There are many applications for different platforms which can use FreshRSS as the source for the feeds. I use the Readrops app on my phone. I have occasionally used the NetNewsWire app on MacOS.
+
+## Filtering my feed
+
+Some newsletters I subscribe to, like those covering AI news, have a short shelf life. If I haven't read them within a month, the content is usually stale and there is little point in me reading them. That's why I've set up the `-pubdate:P30D` filter to automatically mark them as read.
+
+FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a YouTube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
+
+Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenever I get to them, so there's no need to rush.
+
+## Extending and customizing FreshRSS
+
+FreshRSS is not the only self-hostable feed aggregator. The main reason I chose it is because of its support for extensions which allows for augmenting its functionality. The ones I find useful are:
+
+- Youlag: Better interface for YouTube videos than the default view
+- Af_Readability: Inlines full article content for sites that only show excerpts in feeds.
+- Karakeep Button: Saves interesting posts directly to my Karakeep instance for long-term storage.
+
+There's a lot more extensions which can be browsed in the [official repository](https://github.com/FreshRSS/Extensions).
+
+## Conclusion
+
+After migrating to this setup, I am reading more in-depth content than what I did before. I've discovered authors sharing valuable perspectives on topics I find interesting that are not within the current hype-cycle. It's also refreshing to follow the creators whose writing feels like the pre-SEO, pre-marketing, pre-AISlop internet.
+
+I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my default way of finding new content is now the feed reader.
+
+---
+
+- **Page:** Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU
+- **Source:** https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu
+- **Description:** Handy's shortcut did nothing, and after I fixed that, nothing got typed. A Wayland shortcut, a microphone, the paste method and an autostart file caused it, and the GPU did not.
+
+I installed [Handy](https://github.com/cjpais/Handy), an offline speech-to-text app, on NixOS and pressed the shortcut. The tray icon stayed a hand and nothing happened. During onboarding the shortcut did fire and Handy copied the transcript to the clipboard, but the transcript never appeared in the onboarding textbox. After onboarding, nothing worked at all.
+
+For context, here's my setup: NixOS with kernel 6.18, COSMIC on Wayland, Handy 0.10.1 with the `parakeet-unified-en-0.6b` model, and an RTX 3060 Ti in a Thunderbolt enclosure (see [the eGPU hotplug post](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos)).
+
+## Intel was 5x slower than the eGPU, but slow still works
+
+Initially I suspected the issue to be with my Intel iGPU. I thought it was so slow in converting speech to text that it ran into a timeout. So I benchmarked with `handy -f clip.wav --json --repeat 3`, which transcribes a file without the shortcut or microphone. My session had `VK_LOADER_DRIVERS_SELECT=*intel*` set, so Handy only saw the Intel iGPU. For a 2.3 second clip, Intel took about 930 ms and the RTX 3060 Ti about 173 ms. Live in the app on Intel, 7 seconds of audio took 16.5 seconds. That is slow, but slow still produces text, and I was getting none.
+
+## The real causes, in the order I hit them
+
+### The global shortcut only fires in XWayland windows
+
+Handy registers its shortcut through X11, which on Wayland only receives keys while an XWayland window has focus. That is why it worked during onboarding, when Handy's own window had focus.
+
+The fix is to let the compositor own the shortcut and call Handy's CLI. On COSMIC, custom shortcuts live in `~/.config/cosmic/com.system76.CosmicSettings.Shortcuts/v1/custom`. Bind a key to this `Spawn` action:
+
+```text
+Spawn("handy --toggle-transcription")
+```
+
+### The default microphone clipped at full scale
+
+With the shortcut working, I still got an empty result, and Handy's log said `0 voiced`. The default source was the laptop's built-in input. I recorded each source and measured it:
+
+```bash
+parecord --device=<source-name> test.wav
+ffmpeg -i test.wav -af volumedetect -f null - 2>&1 | grep mean_volume
+```
+
+The built-in input read a mean of about -0.6 dB, pinned at full scale. Switching the default to the Logitech BRIO fixed it:
+
+```bash
+pactl set-default-source <brio-source-name>
+```
+
+### Pasting can't reach Wayland-native windows
+
+Now Handy transcribed correctly but typed nothing, just like in onboarding, where the clipboard got the text and the textbox didn't. It pastes with Shift+Insert through XWayland, which can't reach Wayland-native windows (the same boundary as the shortcut).
+
+COSMIC accepts virtual-keyboard input, so `wtype` can type directly. I added `wtype` to the FHS environment that wraps Handy, then set these in `~/.local/share/com.pais.handy/settings_store.json`:
+
+```json
+{
+  "paste_method": "direct",
+  "typing_tool": "wtype"
+}
+```
+
+### The autostart entry bypassed my eGPU wrapper
+
+I run Handy through `egpu-prefer`, a small helper that forces the NVIDIA Vulkan driver. But `~/.config/autostart/Handy.desktop` launched the raw binary, so after a reboot Handy was back on Intel. The fix is one line:
+
+```ini
+Exec=egpu-prefer handy --start-hidden
+```
+
+## Conclusion
+
+Handy now types into COSMIC windows from a compositor shortcut, hears the right microphone, and starts on the eGPU. Every failure was on the trigger or the output side.
+
+I haven't timed live dictation on the eGPU, so the numbers above come from the file benchmark. In daily use it feels instant.
 
 ---
 
@@ -283,384 +492,6 @@ I'd rather list these than imply it all works:
 - **Games.** Rendering through the wrapper works, but I haven't run a game on the eGPU yet.
 - **The udev rule alone**, without a hand-made node already in `/dev`.
 - **Safe unplug.** I haven't tried hot-unplugging while the driver is in use. I'd stop everything using the card first.
-
----
-
-- **Page:** Curating my own reading and discovery feed with RSS
-- **Source:** https://subodhdahal.com/blog/reading-and-discovery-feed-curation
-- **Description:** Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
-
-For quite some time, I have wanted to rely less on algorithmically curated feeds. The daily scroll through YouTube, Substack, or LinkedIn felt less like discovery and more like dopamine mining. I wanted a system that delivered interesting content to satisfy my curiosity, without platforms whose best interest is to have me glued to them. These days, finding such a platform is tough. Even if one exists now, there's no guarantee it won't eventually mimic the ones I wanted to get away from.
-
-I wanted a system where I subscribe directly to creators or communities sharing content I like. That's exactly what a feed reader does. It pulls content chronologically from blogs and sites that support RSS/Atom feeds, with no middleman filtering or recommending.
-
-There are a few feed reader platforms, but I wanted to have full data ownership and more control over the system. This is why I decided to self-host [FreshRSS](https://github.com/FreshRSS/FreshRSS), an open-source feed aggregator and reader, on my homelab running on a mini-PC. This also has the added advantage of being resilient compared to an online service which may stop existing for reasons beyond my control.
-
-## Feed sources
-
-Rather than relying on algorithms of platforms to decide which content they want to show me, I now subscribe to content from sources where I have found interesting writings before. I categorize the content sources broadly into the following:
-
-- Communities: There's many interesting posts being shared on communities like Hacker News RSS, Lobsters, Lemmy. I started by directly subscribing to their content RSS feed. But the number of posts was overwhelming. So I now use [hnrss.com](https://hnrss.github.io/) and [upvote-rss](https://github.com/johnwarne/upvote-rss) to get only the top posts from them.
-- Personal Blogs: If a post catches my eye, I check the author’s site and subscribe to their personal RSS feed if they have other content that I also find interesting.
-- Substack: I subscribe to a creator's publication directly by using their Substack URL.
-- Websites without RSS: Not all websites provide RSS/Atom feeds. Luckily, there's an open-source and self-hostable project called [RSSHub](https://github.com/DIYgod/RSSHub) which can generate RSS feeds for many popular websites. It acts as a bridge between my FreshRSS instance and those websites. It also has a browser extension companion: [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar) to easily find and subscribe to RSS feeds.
-- Newsletters: Previously, I had subscribed to many newsletters on my personal email. This made my email inbox messy and it felt like a chore to go and read there. I now use [Kill the Newsletter!](https://kill-the-newsletter.com/) which provides an email address to subscribe to these newsletters. It generates an Atom feed which I can subscribe to in FreshRSS. This has the benefit of keeping my inbox clean and also consolidating all my reading into a single application.
-- YouTube Channels: Yes, I can directly subscribe to YouTube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
-
-<figure className="w-full,image">
-<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="/images/freshrss-ui.png" style="border: 1px solid black">
-
-
-
-</iframe>
-
-
-  <figcaption>
-
-This is how my FreshRSS looks like
-
-</figcaption>
-</figure>
-
-Since FreshRSS is an aggregator, I don't necessarily need to use the FreshRSS interface to access my feed. There are many applications for different platforms which can use FreshRSS as the source for the feeds. I use the Readrops app on my phone. I have occasionally used the NetNewsWire app on MacOS.
-
-## Filtering my feed
-
-Some newsletters I subscribe to, like those covering AI news, have a short shelf life. If I haven't read them within a month, the content is usually stale and there is little point in me reading them. That's why I've set up the `-pubdate:P30D` filter to automatically mark them as read.
-
-FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a YouTube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
-
-Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenever I get to them, so there's no need to rush.
-
-## Extending and customizing FreshRSS
-
-FreshRSS is not the only self-hostable feed aggregator. The main reason I chose it is because of its support for extensions which allows for augmenting its functionality. The ones I find useful are:
-
-- Youlag: Better interface for YouTube videos than the default view
-- Af_Readability: Inlines full article content for sites that only show excerpts in feeds.
-- Karakeep Button: Saves interesting posts directly to my Karakeep instance for long-term storage.
-
-There's a lot more extensions which can be browsed in the [official repository](https://github.com/FreshRSS/Extensions).
-
-## Conclusion
-
-After migrating to this setup, I am reading more in-depth content than what I did before. I've discovered authors sharing valuable perspectives on topics I find interesting that are not within the current hype-cycle. It's also refreshing to follow the creators whose writing feels like the pre-SEO, pre-marketing, pre-AISlop internet.
-
-I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my default way of finding new content is now the feed reader.
-
----
-
-- **Page:** Library · Subodh Dahal
-- **Source:** https://subodhdahal.com/library
-- **Description:** Books I have read and recommend, with a short note on why each one earned its place.
-
-```yaml
-meta:
-  og:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
-  og:image:height: "600"
-  og:image:type: image/png
-  og:image:width: "1200"
-  twitter:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
-```
-
-```json
-{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/library/#webpage","@type":"WebPage","description":"Books I have read and recommend, with a short note on why each one earned its place.","name":"Library","url":"https://subodhdahal.com/library/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/library/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Software Engineer","name":"Subodh Dahal","url":"https://subodhdahal.com","image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"sameAs":["https://github.com/subodhdahal","https://linkedin.com/in/subodhdahal"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
-```
-
----
-
-- **Page:** Fixing my broken Docker Immich+Traefik setup
-- **Source:** https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup
-- **Description:** Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.
-
-I've used [Immich](https://github.com/immich-app/immich) for over a year in my homelab. Immich is a photo and video app like Google Photos or iCloud, but it's self-hosted. The photos stay on my own hardware. It's open source, has no fees, and no company uses my photos to train models.
-
-Until recently, Immich was in beta. Things break in beta. That's kind of the point. I had this problem where new pictures and videos added to my external library weren't indexed, and metadata wasn't extracted for many of these assets. I chalked it up to beta bugs and moved on.
-
-Immich hit a stable version. Kudos to the team and contributors for the release. It's a great alternative to paid platforms.
-
-After the stable release, I pulled the latest version. I hoped it would fix my issues. Indexing worked for a while, then stopped. None of the jobs seemed to work. I looked for open issues but found none that matched mine. Then it occurred to me that the issue might not be in Immich itself. Maybe my setup was the problem.
-
-## The Setup
-
-I run Immich and all its services on an Ubuntu VM with Docker Compose. I followed the [official install guide](https://docs.immich.app/install/docker-compose) to set them up.
-
-I set up [Traefik](https://doc.traefik.io/traefik/) as a reverse proxy for Immich, using the [tutorial from Jim's Garage](https://www.youtube.com/watch?v=CmUzMi5QLzI). Traefik gives me domain access to services, so I don't have to remember IP addresses and ports. The services stay on my home network, but I can reach them at an easy address like `https://photos.home.mydomain.com`
-
-All I had to do was add a proxy network and Traefik labels to the services. A quick check showed I could access my photos and videos, so I assumed it all worked.
-
-It turns out not everything was.
-
-## The Issue
-
-I connected all services to the same proxy network. One network, everything talks to everything. What could go wrong, right?
-
-Immich could connect to Postgres and fetch data on already indexed photos and videos. Redis, though, didn't receive any jobs. As a result, background jobs like library scans never started.
-
-To isolate the issue, I commented out the proxy network on all services. I then accessed Immich at `<server ip>:<immich-server port>`. Rescanning the external libraries worked. I could see the new media in my Immich timeline.
-
-I'm still not sure why, but I suspect a timing issue. The proxy network's DNS wasn't ready when Immich started. Some connections worked by luck or retry logic. Others failed and never recovered. Redis happened to be one that failed.
-
-## The Fix
-
-I split the setup into two networks:
-
-1. **Internal network**: database, Redis, the machine learning engine, and Immich talk here
-2. **Proxy network**: only the Immich server connects here so Traefik can route to it
-
-Here's a short version of my new `docker-compose.yml` file:
-
-```text
-services:
-    immich-server:
-        image: immich:latest
-        networks:
-        - internal # Talk to database, Redis, etc.
-        - proxy    # Accessible via Traefik
-        labels:
-        - "traefik.enable=true"
-        - "traefik.docker.network=proxy"
-        - "traefik.http.routers.immich.rule=Host(`photos.home.mydomain.com`)"
-        - "traefik.http.services.immich.loadbalancer.server.port=3001"
-
-    immich-machine-learning:
-        networks:
-        - internal
-
-    database:
-        networks:
-        - internal
-
-    redis:
-        networks:
-        - internal
-
-    networks:
-        internal:
-        driver: bridge
-        proxy:
-        external: true
-```
-
-The `traefik.docker.network=proxy` label tells Traefik which network to use for routing.
-
-## How It Works
-
-Compose creates the internal network fresh, so DNS always works. When Immich sends jobs to Redis or reads from Postgres, names resolve fast. Traffic from Traefik arrives on the proxy network instead. Both networks reach the same containers through different paths, so the timing issues vanish.
-
-Now photo indexing and all the other jobs work as intended.
-
----
-
-- **Page:** My 2023 travels: A visual journey
-- **Source:** https://subodhdahal.com/blog/2023-travels-visual-journey
-- **Description:** Looking back at the best pictures from my travel adventures in 2023
-
-## My 2023 travels: A visual journey
-
-Yet another year has passed. I've been lucky enough to travel to some amazing places, meet some amazing people and make wonderful memories. Here are some of my favourite pictures from my travels in 2023.
-
-## Nepal 🇳🇵
-
-### Kathmandu valley
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Nyatapole temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-10.jpg)
-  ![The Himalayas as seen from Kathmandu](https://subodhdahal.com/images/2023-visual-journey/nepal-9.jpg)
-  ![A temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-1.jpg)
-
-</div>
-
-### Bharatpur
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-4.jpg)
-  ![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-3.jpg)
-  ![Evening in Sauraha](https://subodhdahal.com/images/2023-visual-journey/nepal-5.jpg)
-
-</div>
-
-### Pokhara
-
-![View of Mount Machhapuchhre](https://subodhdahal.com/images/2023-visual-journey/nepal-2.jpg)![Boating in Phewa Lake](https://subodhdahal.com/images/2023-visual-journey/nepal-11.jpg)## Croatia 🇭🇷
-
-### Plitvice Lakes National Park
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-8.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-9.jpg)
-
-</div>
-
-### Zagreb
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-6.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-3.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-4.jpg)
-
-</div>
-
-### Split
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-10.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-13.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-14.jpg)
-
-</div>
-
-## France 🇫🇷
-
-### Strasbourg
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-1.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-2.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-4.jpg)
-
-</div>
-
-### Colmar
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-2.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-1.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-3.jpg)
-
-</div>
-
-### Nice and surrounding areas
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-7.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-3.jpg)
-  <div>
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-2.jpg)
-    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-8.jpg)
-
-</div>
-
-
-  <div>
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-5.jpg)
-    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-6.jpg)
-
-</div>
-</div>
-
-## Germany 🇩🇪
-
-### Kiel
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/june-kiel-2.jpg)
-
-</div>
-
-### Schwäbisch Hall
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/may-schwaebisch-hall-1.jpg)
-
-</div>
-
-### Würzburg
-
-![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/aug-wuerzburg-2.jpg)## Monaco 🇲🇨
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Monaco](https://subodhdahal.com/images/2023-visual-journey/may-monaco-1.jpg)
-
-</div>
-
-## Hungary 🇭🇺
-
-### Budapest
-
-![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-6.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-4.jpg)
-  ![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-1.jpg)
-
-</div>
-
-## Netherlands 🇳🇱
-
-### Amsterdam
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-3.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-3.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-2.jpg)
-
-</div>
-
-### The Hague
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-4.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-5.jpg)
-
-</div>
-
-### Zaandam
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-5.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-7.jpg)
-
-</div>
-
-## Spain 🇪🇸
-
-### Barcelona
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-1.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-8.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-7.jpg)
-
-</div>
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-5.jpg)
-  ![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-6.jpg)
-
-</div>
-
-### Montserrat
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-9.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-11.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-10.jpg)
-
-</div>
-
-<div className="text-travel-heading,text-5xl,text-center,mt-8,pb-8">
-
-Fin
-
-</div>
 
 ---
 
@@ -887,217 +718,298 @@ Then I'd add Worktrunk when the repeated environment setup starts getting irrita
 
 ---
 
-- **Page:** Self-Hosting my Git forge with Forgejo
-- **Source:** https://subodhdahal.com/blog/self-hosting-my-git-forge
-- **Description:** Why I moved away from GitHub and chose a lightweight, community-driven alternative
+- **Page:** My 2023 travels: A visual journey
+- **Source:** https://subodhdahal.com/blog/2023-travels-visual-journey
+- **Description:** Looking back at the best pictures from my travel adventures in 2023
 
-For years, GitHub held all my personal Git repos. It worked fine. I used it with friends during my bachelor's and master's studies. But over time it felt less like a tool and more like a service that just put up with me.
+## My 2023 travels: A visual journey
 
-GitHub has had its share of problems lately. Repos scanned for AI training unless you opt out, outages, and [Git history rewritten after merging pull requests](https://github.blog/news-insights/company-news/an-update-on-github-availability/) are a few examples.
+Yet another year has passed. I've been lucky enough to travel to some amazing places, meet some amazing people and make wonderful memories. Here are some of my favourite pictures from my travels in 2023.
 
-What pushed me to self-host was my unease with data on servers whose terms can change anytime. That's the thinking behind most of what I self-host. I run my own reading feed, my own photo library, and now my own Git forge. It's not the easy path, but ownership and privacy are worth the effort.
+## Nepal 🇳🇵
 
-## Why Not GitLab?
+### Kathmandu valley
 
-[GitLab](https://gitlab.com) was the obvious first thing to look at. I've used it at work for years and it's solid. But it's built for teams and companies, and that shows in the resources it needs. Running it at home means a platform that needs gigabytes of RAM for things I'd never use. My small NUC runs other services and couldn't handle it.
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-## Why Forgejo?
+![Nyatapole temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-10.jpg)
+  ![The Himalayas as seen from Kathmandu](https://subodhdahal.com/images/2023-visual-journey/nepal-9.jpg)
+  ![A temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-1.jpg)
 
-[Forgejo](https://forgejo.org) is a lightweight, self-hosted Git forge from [Codeberg e.V.](https://codeberg.org/Codeberg/org), a non-profit. It's written in Go. It runs as one binary that fits in a few hundred megabytes of RAM.
+</div>
 
-What I use day to day:
+### Bharatpur
 
-- **Repository hosting:** that's mainly what I need it for and it does the job well.
-- **Container registry:** there's a built-in registry for container images. I push Docker images straight to my own instance.
-- **Forgejo Actions:** my projects use Actions to build the container image and push it to the registry. On the VM where I run my personal services, the `docker-compose` files point to my Forgejo registry directly. The syntax is close to GitHub Actions, and the whole flow from code to running container stays inside my homelab.
-- **Pull mirrors:** for repos that still live on GitHub, Forgejo syncs them on a schedule. It's a simple way to keep a local copy without changing the current setup.
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-I'm also hosting forks of a few open source projects I've tweaked. Those get built and pushed to my own registry too.
+![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-4.jpg)
+  ![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-3.jpg)
+  ![Evening in Sauraha](https://subodhdahal.com/images/2023-visual-journey/nepal-5.jpg)
 
-I don't use issue tracking, pull requests, or wikis yet. They're there if I need them.
+</div>
 
-## How It's Running
+### Pokhara
 
-Forgejo runs on a NUC at home, inside an Ubuntu VM on Proxmox, alongside a few other core services. I only access it over my home network. I could route it through Tailscale to get in when I'm away, but I haven't felt the need yet.
+![View of Mount Machhapuchhre](https://subodhdahal.com/images/2023-visual-journey/nepal-2.jpg)![Boating in Phewa Lake](https://subodhdahal.com/images/2023-visual-journey/nepal-11.jpg)## Croatia 🇭🇷
 
-Getting Forgejo Actions to work with the Traefik proxy took a few tries. The Docker build steps took a while too. After that, it has worked without issues for more than 3 months.
+### Plitvice Lakes National Park
 
-## Backups
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-One thing I didn't want to skip on was backups. Forgejo has a built-in `forgejo dump` command. It packs up the repos, config, and attachments into an archive. I run a daily cronjob with this command. I also dump the Postgres database on its own. Both get pushed to my NAS.
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-8.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-9.jpg)
 
-## Migrating from GitHub
+</div>
 
-The move went better than I expected. Forgejo has a built-in import tool that pulls everything from a GitHub repo: code, issues, pull requests, and history. You just give it the repo URL and a GitHub token.
+### Zagreb
 
-I put my old projects into an organization of their own on my Forgejo instance, away from my main account. I'm not actively working on them, but they're there if I ever need to look something up.
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-I also finally found a place for my Logseq notes, now stored in Git. Since I own the server, I don't worry about someone else having access to them.
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-6.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-3.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-4.jpg)
 
-I still use GitHub where it makes sense. My personal website runs on GitHub Pages at no cost, so that repo stays there. I use Forgejo's pull mirror to sync it to my instance on a schedule. That way I always have a local copy without changing the setup. Most open source projects are on GitHub, so it's still where I go when I want to contribute to something.
+</div>
 
-## Takeaway
+### Split
 
-The setup was simple, upkeep is low, and pushing code to my own server feels good.
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-10.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-13.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-14.jpg)
+
+</div>
+
+## France 🇫🇷
+
+### Strasbourg
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-1.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-2.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-4.jpg)
+
+</div>
+
+### Colmar
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-2.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-1.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-3.jpg)
+
+</div>
+
+### Nice and surrounding areas
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-7.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-3.jpg)
+  <div>
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-2.jpg)
+    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-8.jpg)
+
+</div>
+
+
+  <div>
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-5.jpg)
+    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-6.jpg)
+
+</div>
+</div>
+
+## Germany 🇩🇪
+
+### Kiel
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/june-kiel-2.jpg)
+
+</div>
+
+### Schwäbisch Hall
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/may-schwaebisch-hall-1.jpg)
+
+</div>
+
+### Würzburg
+
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/aug-wuerzburg-2.jpg)## Monaco 🇲🇨
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Monaco](https://subodhdahal.com/images/2023-visual-journey/may-monaco-1.jpg)
+
+</div>
+
+## Hungary 🇭🇺
+
+### Budapest
+
+![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-6.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-4.jpg)
+  ![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-1.jpg)
+
+</div>
+
+## Netherlands 🇳🇱
+
+### Amsterdam
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-3.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-3.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-2.jpg)
+
+</div>
+
+### The Hague
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-4.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-5.jpg)
+
+</div>
+
+### Zaandam
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-5.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-7.jpg)
+
+</div>
+
+## Spain 🇪🇸
+
+### Barcelona
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-1.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-8.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-7.jpg)
+
+</div>
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-5.jpg)
+  ![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-6.jpg)
+
+</div>
+
+### Montserrat
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-9.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-11.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-10.jpg)
+
+</div>
+
+<div className="text-travel-heading,text-5xl,text-center,mt-8,pb-8">
+
+Fin
+
+</div>
 
 ---
 
-- **Page:** Quickly outline large JSON responses with a custom jq function
-- **Source:** https://subodhdahal.com/blog/jq-json-outline
-- **Description:** Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.
+- **Page:** Fixing my broken Docker Immich+Traefik setup
+- **Source:** https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup
+- **Description:** Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.
 
-I was recently digging into Immich’s API to see if it exposes the fields I needed for some details about my photos. Immich is my self-hosted photo-management service. The API returned hundreds of lines of JSON. I just wanted to see its structure to check the fields I needed, but scrolling through all that data felt slow. I did what any sane programmer would do: I spent even more time trying to automate it.
+I've used [Immich](https://github.com/immich-app/immich) for over a year in my homelab. Immich is a photo and video app like Google Photos or iCloud, but it's self-hosted. The photos stay on my own hardware. It's open source, has no fees, and no company uses my photos to train models.
 
-I’ve used [jq](https://jqlang.org/) before for quick JSON tweaks (it’s basically `sed` or `awk` for JSON), so I wondered if it could help here. A quick search showed that jq can collapse arrays to a single-item preview, then recurse through the whole document for a clean outline of the JSON’s shape in one pass.
+Until recently, Immich was in beta. Things break in beta. That's kind of the point. I had this problem where new pictures and videos added to my external library weren't indexed, and metadata wasn't extracted for many of these assets. I chalked it up to beta bugs and moved on.
 
-I later found out the response structures are already listed in the Immich API docs. I could have just looked that up and saved myself the hassle. But hey, it could well have been an endpoint with no docs, and my method works for any JSON API response.
+Immich hit a stable version. Kudos to the team and contributors for the release. It's a great alternative to paid platforms.
 
-## The jq function
+After the stable release, I pulled the latest version. I hoped it would fix my issues. Indexing worked for a while, then stopped. None of the jobs seemed to work. I looked for open issues but found none that matched mine. Then it occurred to me that the issue might not be in Immich itself. Maybe my setup was the problem.
 
-Here’s the jq function I came up with. You can run it in a terminal:
+## The Setup
 
-```bash
-jq '
-def shape:
-  if type == "array" then
-    if length > 0 then [ (.[0] | shape) ] else [] end
-  elif type == "object" then
-    with_entries(.value |= shape)
-  else
-    type
-  end;
-shape
-' response.json
+I run Immich and all its services on an Ubuntu VM with Docker Compose. I followed the [official install guide](https://docs.immich.app/install/docker-compose) to set them up.
+
+I set up [Traefik](https://doc.traefik.io/traefik/) as a reverse proxy for Immich, using the [tutorial from Jim's Garage](https://www.youtube.com/watch?v=CmUzMi5QLzI). Traefik gives me domain access to services, so I don't have to remember IP addresses and ports. The services stay on my home network, but I can reach them at an easy address like `https://photos.home.mydomain.com`
+
+All I had to do was add a proxy network and Traefik labels to the services. A quick check showed I could access my photos and videos, so I assumed it all worked.
+
+It turns out not everything was.
+
+## The Issue
+
+I connected all services to the same proxy network. One network, everything talks to everything. What could go wrong, right?
+
+Immich could connect to Postgres and fetch data on already indexed photos and videos. Redis, though, didn't receive any jobs. As a result, background jobs like library scans never started.
+
+To isolate the issue, I commented out the proxy network on all services. I then accessed Immich at `<server ip>:<immich-server port>`. Rescanning the external libraries worked. I could see the new media in my Immich timeline.
+
+I'm still not sure why, but I suspect a timing issue. The proxy network's DNS wasn't ready when Immich started. Some connections worked by luck or retry logic. Others failed and never recovered. Redis happened to be one that failed.
+
+## The Fix
+
+I split the setup into two networks:
+
+1. **Internal network**: database, Redis, the machine learning engine, and Immich talk here
+2. **Proxy network**: only the Immich server connects here so Traefik can route to it
+
+Here's a short version of my new `docker-compose.yml` file:
+
+```text
+services:
+    immich-server:
+        image: immich:latest
+        networks:
+        - internal # Talk to database, Redis, etc.
+        - proxy    # Accessible via Traefik
+        labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=proxy"
+        - "traefik.http.routers.immich.rule=Host(`photos.home.mydomain.com`)"
+        - "traefik.http.services.immich.loadbalancer.server.port=3001"
+
+    immich-machine-learning:
+        networks:
+        - internal
+
+    database:
+        networks:
+        - internal
+
+    redis:
+        networks:
+        - internal
+
+    networks:
+        internal:
+        driver: bridge
+        proxy:
+        external: true
 ```
 
-The function checks each value. If it's an array, keep just the first item and recurse. If it's an object, walk through each key and recurse into the value. If it's a primitive like a string or number, return just the type name.
+The `traefik.docker.network=proxy` label tells Traefik which network to use for routing.
 
-## Actual Immich API shape
+## How It Works
 
-Here's a simplified output of the jq function applied to the Immich API response:
+Compose creates the internal network fresh, so DNS always works. When Immich sends jobs to Redis or reads from Postgres, names resolve fast. Traffic from Traefik arrives on the proxy network instead. Both networks reach the same containers through different paths, so the timing issues vanish.
 
-```json
-{
-  "albums": {
-    "count": "number",
-    ...
-  },
-  "assets": {
-    "count": "number",
-    "facets": [],
-    "items": [
-      {
-        ...
-        "duration": "string",
-        "exifInfo": {
-          "city": "string",
-          "country": "string",
-          ...
-        },
-        "fileCreatedAt": "string",
-        "fileModifiedAt": "string",
-        "hasMetadata": "boolean",
-        ...
-      }
-    ],
-    "nextPage": "string",
-    "total": "number"
-  }
-}
-```
-
-Now I instantly see that `assets.items[i].exifInfo.country` is a string. That's exactly what I needed to know to map photos by country.
-
-## Extending it for sample values
-
-Next, I wondered: what if I wanted real examples, not just types? I modified the primitive case to return the value itself:
-
-```bash
-jq '
-def shape_with_samples:
-  if type == "array" then
-    if length > 0 then [ (.[0] | shape_with_samples) ] else [] end
-  elif type == "object" then
-    with_entries(.value |= shape_with_samples)
-  else
-    .
-  end;
-shape_with_samples
-' response.json
-```
-
-Now I get sample data like:
-
-```json
-{
-  "albums": {
-    "count": 10,
-    ...
-  },
-  "assets": {
-    "count": 25,
-    "facets": [],
-    "items": [
-      {
-        ...
-        "duration": "00:00:05",
-        "exifInfo": {
-          "city": "Zurich",
-          "country": "Switzerland"
-        },
-        "fileCreatedAt": "2025-09-01T10:00:00Z",
-        "fileModifiedAt": "2025-09-01T10:05:00Z",
-        "hasMetadata": true,
-        ...
-      }
-    ],
-    "nextPage": "2",
-    "total": 25
-  }
-}
-```
-
-Seeing `"Switzerland"` immediately confirmed I was pulling the right field.
-
-## Sampling the first few items
-
-When the first asset lacked optional tags, I extended the function to sample the first N items:
-
-```bash
-jq '
-def shape_with_samples(n):
-  if type == "array" then
-    if length > 0 then
-      [ .[:n][] | shape_with_samples(n) ]
-    else [] end
-  elif type == "object" then
-    with_entries(.value |= shape_with_samples(n))
-  else
-    .
-  end;
-shape_with_samples(3)
-' response.json
-```
-
-## Making it reusable
-
-I will definitely not remember these functions in a month, so I saved them as reusable scripts:
-
-```bash
-~/.jq/shape.jq
-~/.jq/shape_with_samples.jq
-```
-
-Now I can run them anytime via:
-
-```bash
-jq -f ~/.jq/shape.jq response.json
-jq -f ~/.jq/shape_with_samples.jq response.json
-```
-
-## Conclusion
-
-It’s a simple trick, but it makes large JSON responses much easier to read. When you hit an undocumented API, jq maps its structure fast and without guesswork.
+Now photo indexing and all the other jobs work as intended.
 
 ---
 
@@ -1424,6 +1336,165 @@ I also use Stream Deck for:
 ## The bigger picture
 
 This music control workflow is step one in an ongoing automation experiment. I'm documenting this success to create a template for future improvements and stay motivated. The key was finding the right approach to turn a failed purchase into a useful tool.
+
+---
+
+- **Page:** Quickly outline large JSON responses with a custom jq function
+- **Source:** https://subodhdahal.com/blog/jq-json-outline
+- **Description:** Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.
+
+I was recently digging into Immich’s API to see if it exposes the fields I needed for some details about my photos. Immich is my self-hosted photo-management service. The API returned hundreds of lines of JSON. I just wanted to see its structure to check the fields I needed, but scrolling through all that data felt slow. I did what any sane programmer would do: I spent even more time trying to automate it.
+
+I’ve used [jq](https://jqlang.org/) before for quick JSON tweaks (it’s basically `sed` or `awk` for JSON), so I wondered if it could help here. A quick search showed that jq can collapse arrays to a single-item preview, then recurse through the whole document for a clean outline of the JSON’s shape in one pass.
+
+I later found out the response structures are already listed in the Immich API docs. I could have just looked that up and saved myself the hassle. But hey, it could well have been an endpoint with no docs, and my method works for any JSON API response.
+
+## The jq function
+
+Here’s the jq function I came up with. You can run it in a terminal:
+
+```bash
+jq '
+def shape:
+  if type == "array" then
+    if length > 0 then [ (.[0] | shape) ] else [] end
+  elif type == "object" then
+    with_entries(.value |= shape)
+  else
+    type
+  end;
+shape
+' response.json
+```
+
+The function checks each value. If it's an array, keep just the first item and recurse. If it's an object, walk through each key and recurse into the value. If it's a primitive like a string or number, return just the type name.
+
+## Actual Immich API shape
+
+Here's a simplified output of the jq function applied to the Immich API response:
+
+```json
+{
+  "albums": {
+    "count": "number",
+    ...
+  },
+  "assets": {
+    "count": "number",
+    "facets": [],
+    "items": [
+      {
+        ...
+        "duration": "string",
+        "exifInfo": {
+          "city": "string",
+          "country": "string",
+          ...
+        },
+        "fileCreatedAt": "string",
+        "fileModifiedAt": "string",
+        "hasMetadata": "boolean",
+        ...
+      }
+    ],
+    "nextPage": "string",
+    "total": "number"
+  }
+}
+```
+
+Now I instantly see that `assets.items[i].exifInfo.country` is a string. That's exactly what I needed to know to map photos by country.
+
+## Extending it for sample values
+
+Next, I wondered: what if I wanted real examples, not just types? I modified the primitive case to return the value itself:
+
+```bash
+jq '
+def shape_with_samples:
+  if type == "array" then
+    if length > 0 then [ (.[0] | shape_with_samples) ] else [] end
+  elif type == "object" then
+    with_entries(.value |= shape_with_samples)
+  else
+    .
+  end;
+shape_with_samples
+' response.json
+```
+
+Now I get sample data like:
+
+```json
+{
+  "albums": {
+    "count": 10,
+    ...
+  },
+  "assets": {
+    "count": 25,
+    "facets": [],
+    "items": [
+      {
+        ...
+        "duration": "00:00:05",
+        "exifInfo": {
+          "city": "Zurich",
+          "country": "Switzerland"
+        },
+        "fileCreatedAt": "2025-09-01T10:00:00Z",
+        "fileModifiedAt": "2025-09-01T10:05:00Z",
+        "hasMetadata": true,
+        ...
+      }
+    ],
+    "nextPage": "2",
+    "total": 25
+  }
+}
+```
+
+Seeing `"Switzerland"` immediately confirmed I was pulling the right field.
+
+## Sampling the first few items
+
+When the first asset lacked optional tags, I extended the function to sample the first N items:
+
+```bash
+jq '
+def shape_with_samples(n):
+  if type == "array" then
+    if length > 0 then
+      [ .[:n][] | shape_with_samples(n) ]
+    else [] end
+  elif type == "object" then
+    with_entries(.value |= shape_with_samples(n))
+  else
+    .
+  end;
+shape_with_samples(3)
+' response.json
+```
+
+## Making it reusable
+
+I will definitely not remember these functions in a month, so I saved them as reusable scripts:
+
+```bash
+~/.jq/shape.jq
+~/.jq/shape_with_samples.jq
+```
+
+Now I can run them anytime via:
+
+```bash
+jq -f ~/.jq/shape.jq response.json
+jq -f ~/.jq/shape_with_samples.jq response.json
+```
+
+## Conclusion
+
+It’s a simple trick, but it makes large JSON responses much easier to read. When you hit an undocumented API, jq maps its structure fast and without guesswork.
 
 ---
 
@@ -1956,6 +2027,309 @@ Here's to the future and to the continued growth and learning that it holds.
 
 ---
 
+- **Page:** Git and the command-line: Take your workflow to the next level
+- **Source:** https://subodhdahal.com/blog/git-and-command-line-next-level-workflow
+- **Description:** Some tips on how to improve your Git productivity using the command-line
+
+# What is git?
+
+Git is a version control system that helps developers track changes to their code and collaborate with others on software projects. It allows developers to easily switch between different versions of their code and work on different features in parallel without affecting the main codebase.
+
+# Why use the command-line?
+
+Although there are many GUI Git applications, using git from the command-line allows you to configure and streamline it to your workflow rather than being constrained by the interfaces of the GUI. It will also force you to understand more of how git works and since it's a tool that developers need to use often, I'd say it's not a bad motivation. You can still use the GUI for taking care of the more complex tasks until you get more familiar with using the command-line.
+
+# Tips to improve your workflow
+
+## 1. Add aliases for commonly used commands
+
+When using git from the command-line you are expected to write commands but this doesn't mean you can't make life easier for yourself. Instead of writing the whole command all the time, you can add shorter versions of them as aliases.
+
+Here are some of the aliases that I use frequently:
+
+<div className="flex,justify-center">
+<table className="table-auto,justify-center,mb-4,w-1/2">
+<thead>
+  <tr>
+    <th>
+      alias
+    </th>
+    
+    
+            <th>
+      command
+    </th>
+  </tr>
+</thead>
+
+
+    <tbody className="font-mono">
+  <tr>
+    <td>
+      g
+    </td>
+    
+    
+            <td>
+      git
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      ga
+    </td>
+    
+    
+            <td>
+      git add
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gb
+    </td>
+    
+    
+            <td>
+      git branch
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gc
+    </td>
+    
+    
+            <td>
+      git commit -v
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gco
+    </td>
+    
+    
+            <td>
+      git checkout
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gcb
+    </td>
+    
+    
+            <td>
+      git checkout -b
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gcp
+    </td>
+    
+    
+            <td>
+      git cherry-pick
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      grb
+    </td>
+    
+    
+            <td>
+      git rebase
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      grbi
+    </td>
+    
+    
+            <td>
+      git rebase -i
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+So now the following
+
+```bash
+git commit -v -m 'my commit message'
+```
+
+becomes
+
+```bash
+gc -m 'my commit message'
+```
+
+If you have `zsh` as your shell, have `ohmyzsh` installed and the `git` plugin enabled, there are already a lot of git aliases configured and can use them. You can have a look at them [here](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh). Even if you don't use `ohmyzsh`, you can take inspiration from the aliases and set them for your shell.
+
+For the `bash` shell, you can add the following to your `.bashrc` file.
+
+```bash
+alias g='git'
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit -v'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcp='git cherry-pick'
+alias grb='git rebase'
+alias grbi='git rebase -i'
+```
+
+## 2. Enable auto-correction of spelling mistakes for commands
+
+We are human after all and sometimes we make spelling mistakes. Instead of having to correct the command ourself, we can let git do it for us if the mistakes are minimal.
+
+We can enable git auto-correct for all git repos by using the following command:
+
+```bash
+git config --global help.autoCorrect 5
+```
+
+The value of `help.autoCorrect` is the number of deciseconds git waits before it auto-corrects and applies the command. In the command above, it will wait 0.5 seconds.
+
+The `--global` flag specifies that auto-correction will be enabled for all git repositories in the system. If you omit this, it will only take effect in the current repo.
+
+<figure className="image">
+
+![git auto-correct in action](https://subodhdahal.com/images/git-and-command-line/git-autocorrect.png)
+  <figcaption>
+
+Git auto-correct in action
+
+</figcaption>
+</figure>
+
+## 3. Improved git checkout with fzf
+
+When you are working on a project you will need to switch between different branches. You can use `git checkout <branch_name>` or `git switch <branch_name>` to do that. But the `<branch_name>` needs to be exact and if you don't remember it you will need to run further commands or look up the branch name somewhere.
+
+We can make switching git branches simpler by integrating the checkout process with [fzf](https://github.com/junegunn/fzf). fzf is a command-line fuzzy finder which means we don't need to precisely remember the branch name. Just typing a few characters will list us the branches that match the existing branches using fuzzy logic.
+
+You can add the following to your `.bashrc` or `.zshrc` file to configure a custom function `git_checkout_branch` to run fzf with the list of branches in the repo, which you can then search fuzzily.
+
+```bash
+# Slightly modified version of the script mentioned in https://revelry.co/insights/development/terminal-workflow-fzf/
+git_checkout_branch() {
+  if [[ $1 != "" ]]; then
+    # pass all the parameters as-is, if provided
+    git checkout $*
+    return
+  fi
+
+  LINES=2
+  # show branches
+  result=$(git branch -a --color=always | grep -v '/HEAD\s' | sort |
+    fzf --height 50% --border --ansi --tac --preview-window right:70% \
+      --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
+    sed 's/^..//' | cut -d' ' -f1)
+
+  if [[ $result != "" ]]; then
+    if [[ $result == remotes/* ]]; then
+      git checkout --track $(echo $result | sed 's#remotes/##')
+    else
+      git checkout "$result"
+    fi
+  fi
+}
+```
+
+**Source:** Modified version of [https://revelry.co/insights/development/terminal-workflow-fzf/](https://revelry.co/insights/development/terminal-workflow-fzf/)
+
+Then when you run the command `git_checkout_branch` in the terminal, you will be presented with the branches in the repo and can type part of the branch name to get the branch name you want. Pressing enter on the selected branch will switch the current branch to that branch.
+
+You can, of course, add this as an alias instead of having to type the whole command.
+
+```bash
+alias gco='git_checkout_branch'
+```
+
+If you already know the branch name and don't want to be presented with a list of options, you can just use the command as `gco <branch_name>`, eg: `gco develop`.
+
+<figure className="image">
+
+![fzf in action](https://subodhdahal.com/images/git-and-command-line/git-checkout-fzf.gif)
+  <figcaption>
+
+Git checkout with fzf in action
+
+</figcaption>
+</figure>
+
+## 4. Using Git Interactive Rebase Tool
+
+Although rebase and interactive rebase can seem like a scary concepts in the beginning, after you get used to it, they can be powerful tools to organize history in a Git repo. It can be useful in a variety of situations, including:
+
+- Combining multiple commits into one
+
+  - Splitting a single commit into multiple commits
+
+  - Reordering commits
+
+  - Removing commits
+
+  - Fixing mistakes in commits
+
+  - Updating your local repository to match the upstream repository
+
+You can learn more about rebasing in [https://git-rebase.io/](https://git-rebase.io/).
+
+[Git Interactive Rebase Tool](https://github.com/MitMaro/git-interactive-rebase-tool) can help make the process of interactive rebasing easier. It is a GUI tool that runs in the terminal and can be used to rebase commits in a git repo. It is written in Rust and is available for Linux, macOS and Windows.
+
+<figure className="image" style="background: #272733">
+
+![fzf in action](https://subodhdahal.com/images/git-and-command-line/interactive-rebase-tool.gif)
+  <figcaption>
+
+Basic usage of Interactive Rebase Tool
+
+</figcaption>
+</figure>
+
+You can view the [documentation](https://mitmaro.github.io/git-interactive-rebase-tool/) for more information on how to set up and use the tool, along with all its features.
+
+# Conclusion
+
+Trying one or more of the above tips can help you become more productive with git. But as with any new workflow, it takes time to get used to it. So it might be good to start with one or two of the aforementioned tips and then move on to trying the others.
+
+---
+
+## Bonus:
+
+If you would prefer a more GUI approach to working with git but in the terminal, then you can try one of the followings:
+
+- [tig](https://github.com/jonas/tig)
+
+  - [lazygit](https://github.com/jesseduffield/lazygit)
+
+---
+
 - **Page:** Hiking Tsho-Rolpa lake trail in Nepal
 - **Source:** https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal
 - **Description:** Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level
@@ -2427,307 +2801,4 @@ I felt like a different person, for the better, after my journey.
 
 </div>
 </div>
-
----
-
-- **Page:** Git and the command-line: Take your workflow to the next level
-- **Source:** https://subodhdahal.com/blog/git-and-command-line-next-level-workflow
-- **Description:** Some tips on how to improve your Git productivity using the command-line
-
-# What is git?
-
-Git is a version control system that helps developers track changes to their code and collaborate with others on software projects. It allows developers to easily switch between different versions of their code and work on different features in parallel without affecting the main codebase.
-
-# Why use the command-line?
-
-Although there are many GUI Git applications, using git from the command-line allows you to configure and streamline it to your workflow rather than being constrained by the interfaces of the GUI. It will also force you to understand more of how git works and since it's a tool that developers need to use often, I'd say it's not a bad motivation. You can still use the GUI for taking care of the more complex tasks until you get more familiar with using the command-line.
-
-# Tips to improve your workflow
-
-## 1. Add aliases for commonly used commands
-
-When using git from the command-line you are expected to write commands but this doesn't mean you can't make life easier for yourself. Instead of writing the whole command all the time, you can add shorter versions of them as aliases.
-
-Here are some of the aliases that I use frequently:
-
-<div className="flex,justify-center">
-<table className="table-auto,justify-center,mb-4,w-1/2">
-<thead>
-  <tr>
-    <th>
-      alias
-    </th>
-    
-    
-            <th>
-      command
-    </th>
-  </tr>
-</thead>
-
-
-    <tbody className="font-mono">
-  <tr>
-    <td>
-      g
-    </td>
-    
-    
-            <td>
-      git
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      ga
-    </td>
-    
-    
-            <td>
-      git add
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gb
-    </td>
-    
-    
-            <td>
-      git branch
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gc
-    </td>
-    
-    
-            <td>
-      git commit -v
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gco
-    </td>
-    
-    
-            <td>
-      git checkout
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gcb
-    </td>
-    
-    
-            <td>
-      git checkout -b
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gcp
-    </td>
-    
-    
-            <td>
-      git cherry-pick
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      grb
-    </td>
-    
-    
-            <td>
-      git rebase
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      grbi
-    </td>
-    
-    
-            <td>
-      git rebase -i
-    </td>
-  </tr>
-</tbody>
-</table>
-</div>
-
-So now the following
-
-```bash
-git commit -v -m 'my commit message'
-```
-
-becomes
-
-```bash
-gc -m 'my commit message'
-```
-
-If you have `zsh` as your shell, have `ohmyzsh` installed and the `git` plugin enabled, there are already a lot of git aliases configured and can use them. You can have a look at them [here](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh). Even if you don't use `ohmyzsh`, you can take inspiration from the aliases and set them for your shell.
-
-For the `bash` shell, you can add the following to your `.bashrc` file.
-
-```bash
-alias g='git'
-alias ga='git add'
-alias gb='git branch'
-alias gc='git commit -v'
-alias gco='git checkout'
-alias gcb='git checkout -b'
-alias gcp='git cherry-pick'
-alias grb='git rebase'
-alias grbi='git rebase -i'
-```
-
-## 2. Enable auto-correction of spelling mistakes for commands
-
-We are human after all and sometimes we make spelling mistakes. Instead of having to correct the command ourself, we can let git do it for us if the mistakes are minimal.
-
-We can enable git auto-correct for all git repos by using the following command:
-
-```bash
-git config --global help.autoCorrect 5
-```
-
-The value of `help.autoCorrect` is the number of deciseconds git waits before it auto-corrects and applies the command. In the command above, it will wait 0.5 seconds.
-
-The `--global` flag specifies that auto-correction will be enabled for all git repositories in the system. If you omit this, it will only take effect in the current repo.
-
-<figure className="image">
-
-![git auto-correct in action](https://subodhdahal.com/images/git-and-command-line/git-autocorrect.png)
-  <figcaption>
-
-Git auto-correct in action
-
-</figcaption>
-</figure>
-
-## 3. Improved git checkout with fzf
-
-When you are working on a project you will need to switch between different branches. You can use `git checkout <branch_name>` or `git switch <branch_name>` to do that. But the `<branch_name>` needs to be exact and if you don't remember it you will need to run further commands or look up the branch name somewhere.
-
-We can make switching git branches simpler by integrating the checkout process with [fzf](https://github.com/junegunn/fzf). fzf is a command-line fuzzy finder which means we don't need to precisely remember the branch name. Just typing a few characters will list us the branches that match the existing branches using fuzzy logic.
-
-You can add the following to your `.bashrc` or `.zshrc` file to configure a custom function `git_checkout_branch` to run fzf with the list of branches in the repo, which you can then search fuzzily.
-
-```bash
-# Slightly modified version of the script mentioned in https://revelry.co/insights/development/terminal-workflow-fzf/
-git_checkout_branch() {
-  if [[ $1 != "" ]]; then
-    # pass all the parameters as-is, if provided
-    git checkout $*
-    return
-  fi
-
-  LINES=2
-  # show branches
-  result=$(git branch -a --color=always | grep -v '/HEAD\s' | sort |
-    fzf --height 50% --border --ansi --tac --preview-window right:70% \
-      --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
-    sed 's/^..//' | cut -d' ' -f1)
-
-  if [[ $result != "" ]]; then
-    if [[ $result == remotes/* ]]; then
-      git checkout --track $(echo $result | sed 's#remotes/##')
-    else
-      git checkout "$result"
-    fi
-  fi
-}
-```
-
-**Source:** Modified version of [https://revelry.co/insights/development/terminal-workflow-fzf/](https://revelry.co/insights/development/terminal-workflow-fzf/)
-
-Then when you run the command `git_checkout_branch` in the terminal, you will be presented with the branches in the repo and can type part of the branch name to get the branch name you want. Pressing enter on the selected branch will switch the current branch to that branch.
-
-You can, of course, add this as an alias instead of having to type the whole command.
-
-```bash
-alias gco='git_checkout_branch'
-```
-
-If you already know the branch name and don't want to be presented with a list of options, you can just use the command as `gco <branch_name>`, eg: `gco develop`.
-
-<figure className="image">
-
-![fzf in action](https://subodhdahal.com/images/git-and-command-line/git-checkout-fzf.gif)
-  <figcaption>
-
-Git checkout with fzf in action
-
-</figcaption>
-</figure>
-
-## 4. Using Git Interactive Rebase Tool
-
-Although rebase and interactive rebase can seem like a scary concepts in the beginning, after you get used to it, they can be powerful tools to organize history in a Git repo. It can be useful in a variety of situations, including:
-
-- Combining multiple commits into one
-
-  - Splitting a single commit into multiple commits
-
-  - Reordering commits
-
-  - Removing commits
-
-  - Fixing mistakes in commits
-
-  - Updating your local repository to match the upstream repository
-
-You can learn more about rebasing in [https://git-rebase.io/](https://git-rebase.io/).
-
-[Git Interactive Rebase Tool](https://github.com/MitMaro/git-interactive-rebase-tool) can help make the process of interactive rebasing easier. It is a GUI tool that runs in the terminal and can be used to rebase commits in a git repo. It is written in Rust and is available for Linux, macOS and Windows.
-
-<figure className="image" style="background: #272733">
-
-![fzf in action](https://subodhdahal.com/images/git-and-command-line/interactive-rebase-tool.gif)
-  <figcaption>
-
-Basic usage of Interactive Rebase Tool
-
-</figcaption>
-</figure>
-
-You can view the [documentation](https://mitmaro.github.io/git-interactive-rebase-tool/) for more information on how to set up and use the tool, along with all its features.
-
-# Conclusion
-
-Trying one or more of the above tips can help you become more productive with git. But as with any new workflow, it takes time to get used to it. So it might be good to start with one or two of the aforementioned tips and then move on to trying the others.
-
----
-
-## Bonus:
-
-If you would prefer a more GUI approach to working with git but in the terminal, then you can try one of the followings:
-
-- [tig](https://github.com/jonas/tig)
-
-  - [lazygit](https://github.com/jesseduffield/lazygit)
 

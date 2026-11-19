@@ -13,6 +13,7 @@ All pages in Markdown format.
 - [Effortless configuration syncing with GNU Stow and Git: a software engineer's workflow](https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow.md)
 - [Fixing my broken Docker Immich+Traefik setup](https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup.md)
 - [Git and the command-line: Take your workflow to the next level](https://subodhdahal.com/blog/git-and-command-line-next-level-workflow.md)
+- [Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU](https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu.md)
 - [Hiking Tsho-Rolpa lake trail in Nepal](https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal.md)
 - [Quickly outline large JSON responses with a custom jq function](https://subodhdahal.com/blog/jq-json-outline.md)
 - [Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos.md)

@@ -20,7 +20,10 @@ meta:
 
 *Notes on software, automation, and the tools I build with. *
 
-- [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>**nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
+- [<h2>**Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU**</h2>
+
+  Handy's shortcut did nothing, and after I fixed that, nothing got typed. A Wayland shortcut, a microphone, the paste method and an autostart file caused it, and the GPU did not.**troubleshooting****nixos****cosmic****wayland****speech-to-text****egpu****Nov 19, 2026**](https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/)
+- [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>**troubleshooting****nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
 - [<h2>**Stop stashing half-finished work: use Git worktrees and Worktrunk**</h2>
 
   Git worktrees keep separate branches checked out at once. Worktrunk automates per-worktree setup. The same isolation also works for parallel AI agents.**git****worktrees****worktrunk****developer productivity****command line****workflow****Aug 16, 2026**](https://subodhdahal.com/blog/worktrees-with-worktrunk/)
