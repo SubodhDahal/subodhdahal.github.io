@@ -1,0 +1,91 @@
+---
+title: "Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU"
+description: "Handy's shortcut did nothing, and after I fixed that, nothing got typed. A Wayland shortcut, a microphone, the paste method and an autostart file caused it, and the GPU did not."
+image: /images/handy-speech-to-text-issue.png
+alt: "Laptop connected to an external GPU enclosure"
+postDate: 2026-11-19
+tags:
+  - troubleshooting
+  - nixos
+  - cosmic
+  - wayland
+  - speech-to-text
+  - egpu
+---
+
+I installed [Handy](https://github.com/cjpais/Handy), an offline speech-to-text app, on NixOS and pressed the shortcut. The tray icon stayed a hand and nothing happened. During onboarding the shortcut did fire and Handy copied the transcript to the clipboard, but the transcript never appeared in the onboarding textbox. After onboarding, nothing worked at all.
+
+For context, here's my setup: NixOS with kernel 6.18, COSMIC on Wayland, Handy 0.10.1 with the `parakeet-unified-en-0.6b` model, and an RTX 3060 Ti in a Thunderbolt enclosure (see [the eGPU hotplug post](/blog/razer-core-x-egpu-hotplug-nixos)).
+
+## Intel was 5x slower than the eGPU, but slow still works
+
+Initially I suspected the issue to be with my Intel iGPU. I thought it was so slow in converting speech to text that it ran into a timeout. So I benchmarked with `handy -f clip.wav --json --repeat 3`, which transcribes a file without the shortcut or microphone. My session had `VK_LOADER_DRIVERS_SELECT=*intel*` set, so Handy only saw the Intel iGPU. For a 2.3 second clip, Intel took about 930 ms and the RTX 3060 Ti about 173 ms. Live in the app on Intel, 7 seconds of audio took 16.5 seconds. That is slow, but slow still produces text, and I was getting none.
+
+## The real causes, in the order I hit them
+
+### The global shortcut only fires in XWayland windows
+
+Handy registers its shortcut through X11, which on Wayland only receives keys while an XWayland window has focus. That is why it worked during onboarding, when Handy's own window had focus.
+
+The fix is to let the compositor own the shortcut and call Handy's CLI. On COSMIC, custom shortcuts live in `~/.config/cosmic/com.system76.CosmicSettings.Shortcuts/v1/custom`. Bind a key to this `Spawn` action:
+
+```text
+Spawn("handy --toggle-transcription")
+```
+
+### The default microphone clipped at full scale
+
+With the shortcut working, I still got an empty result, and Handy's log said `0 voiced`. The default source was the laptop's built-in input. I recorded each source and measured it:
+
+```bash
+parecord --device=<source-name> test.wav
+ffmpeg -i test.wav -af volumedetect -f null - 2>&1 | grep mean_volume
+```
+
+The built-in input read a mean of about -0.6 dB, pinned at full scale. Switching the default to the Logitech BRIO fixed it:
+
+```bash
+pactl set-default-source <brio-source-name>
+```
+
+### Pasting can't reach Wayland-native windows
+
+Now Handy transcribed correctly but typed nothing, just like in onboarding, where the clipboard got the text and the textbox didn't. It pastes with Shift+Insert through XWayland, which can't reach Wayland-native windows (the same boundary as the shortcut).
+
+COSMIC accepts virtual-keyboard input, so `wtype` can type directly. I added `wtype` to the FHS environment that wraps Handy, then set these in `~/.local/share/com.pais.handy/settings_store.json`:
+
+```json
+{
+  "paste_method": "direct",
+  "typing_tool": "wtype"
+}
+```
+
+### Handy picked the wrong GPU
+
+Live dictation was still slow. Handy's log showed it bound to my internal GTX 1050 Ti, not the eGPU:
+
+```text
+ggml_vulkan: Found 3 Vulkan devices: Intel UHD 630, GTX 1050 Ti, RTX 3060 Ti
+bound backend 'Vulkan1', bound device 'NVIDIA GeForce GTX 1050 Ti'
+```
+
+With the accelerator on `auto`, ggml enumerates every Vulkan device itself and takes the first discrete GPU. The AppImage's Vulkan library honors `GGML_VK_VISIBLE_DEVICES`, so I wrapped the Nix package to set it only when the eGPU is plugged in:
+
+```bash
+if lspci -D -d 10de: -mm | grep -E 'VGA|3D' | grep -qv '0000:01:00.0'; then
+  export GGML_VK_VISIBLE_DEVICES=${GGML_VK_VISIBLE_DEVICES:-2}
+fi
+```
+
+The check matters, because index 2 doesn't exist without the eGPU. It is also hardcoded to ggml's device order. The log now shows `bound device 'NVIDIA GeForce RTX 3060 Ti'`.
+
+### Direct typing arrives one word at a time
+
+`paste_method: "direct"` types through `wtype`, so text trickles in. Set Paste Method to Clipboard (`ctrl_v`) in Handy's Advanced settings to paste it all at once.
+
+## Conclusion
+
+Handy now types into COSMIC windows from a compositor shortcut, hears the right microphone, and runs on the eGPU.
+
+I haven't timed live dictation on the eGPU, so the numbers above come from the file benchmark. In daily use it feels instant.

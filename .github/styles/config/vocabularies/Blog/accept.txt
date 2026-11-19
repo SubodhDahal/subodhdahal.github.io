@@ -206,3 +206,7 @@ udev
 Vulkan
 XWayland
 eGPU's
+Logitech
+Tauri
+xtest
+autostart

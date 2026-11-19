@@ -5,6 +5,7 @@ image: /images/egpu-nixos-laptop-enclosure.png
 alt: "Abstract image representing a broken connection"
 postDate: 2026-11-18
 tags:
+  - troubleshooting
   - nixos
   - egpu
   - thunderbolt
