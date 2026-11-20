@@ -54,17 +54,32 @@ COSMIC accepts virtual-keyboard input, so `wtype` can type directly. I added `wt
 }
 ```
 
-### The autostart entry bypassed my eGPU wrapper
+### Handy picked the wrong GPU
 
-I run Handy through `egpu-prefer`, a small helper that forces the NVIDIA Vulkan driver. But `~/.config/autostart/Handy.desktop` launched the raw binary, so after a reboot Handy was back on Intel. The fix is one line:
+Live dictation was still slow. Handy's log showed it bound to my internal GTX 1050 Ti, not the eGPU:
 
-```ini
-Exec=egpu-prefer handy --start-hidden
+```text
+ggml_vulkan: Found 3 Vulkan devices: Intel UHD 630, GTX 1050 Ti, RTX 3060 Ti
+bound backend 'Vulkan1', bound device 'NVIDIA GeForce GTX 1050 Ti'
 ```
+
+With the accelerator on `auto`, ggml enumerates every Vulkan device itself and takes the first discrete GPU. The AppImage's Vulkan library honors `GGML_VK_VISIBLE_DEVICES`, so I wrapped the Nix package to set it only when the eGPU is plugged in:
+
+```bash
+if lspci -D -d 10de: -mm | grep -E 'VGA|3D' | grep -qv '0000:01:00.0'; then
+  export GGML_VK_VISIBLE_DEVICES=${GGML_VK_VISIBLE_DEVICES:-2}
+fi
+```
+
+The check matters, because index 2 doesn't exist without the eGPU. It is also hardcoded to ggml's device order. The log now shows `bound device 'NVIDIA GeForce RTX 3060 Ti'`.
+
+### Direct typing arrives one word at a time
+
+`paste_method: "direct"` types through `wtype`, so text trickles in. Set Paste Method to Clipboard (`ctrl_v`) in Handy's Advanced settings to paste it all at once.
 
 ## Conclusion
 
-Handy now types into COSMIC windows from a compositor shortcut, hears the right microphone, and starts on the eGPU. Every failure was on the trigger or the output side.
+Handy now types into COSMIC windows from a compositor shortcut, hears the right microphone, and runs on the eGPU.
 
 I haven't timed live dictation on the eGPU, so the numbers above come from the file benchmark. In daily use it feels instant.
 
