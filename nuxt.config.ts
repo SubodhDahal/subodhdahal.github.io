@@ -2,18 +2,23 @@
 // @ts-nocheck
 import tailwindcss from "@tailwindcss/vite";
 
+const isProd = process.env.NODE_ENV === "production";
+
 export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {
-      script: [
-        {
-          src: "https://app.rybbit.io/api/script.js",
-          async: true,
-          defer: true,
-          "data-site-id": "dbed437cc8b1",
-        },
-      ],
+      // Only load analytics in production builds so local dev doesn't skew stats.
+      script: isProd
+        ? [
+            {
+              src: "https://app.rybbit.io/api/script.js",
+              async: true,
+              defer: true,
+              "data-site-id": "dbed437cc8b1",
+            },
+          ]
+        : [],
     },
     router: {
       options: {
