@@ -54,7 +54,12 @@
       <div class="top-0 flex flex-col md:items-end py-3 float-right md:sticky md:top-0 w-full md:w-1/5">
         <TableOfContents :article="article" :showChildren="false" />
       </div>
-      <article class="md:w-4/6 mx-auto">
+      <article
+        ref="articleRef"
+        class="md:w-4/6 mx-auto"
+        @click="onArticleClick"
+        @keydown="onArticleKeydown"
+      >
         <ContentRenderer
           v-if="article"
           :value="article"
@@ -68,12 +73,22 @@
         <BlogPrevNext :current-path="path" />
       </article>
     </div>
+
+    <PhotoViewer
+      :items="viewerItems"
+      :index="openIndex"
+      @close="close"
+      @step="step"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import type { BlogCollectionItem } from "@nuxt/content";
+
+import PhotoViewer from "~/components/PhotoViewer.vue";
+import { usePhotoViewer, type ViewerItem } from "~/composables/usePhotoViewer";
 
 const images = ref([
   "/images/2023-visual-journey/nepal-11.jpg",
@@ -102,6 +117,68 @@ const { data } = await useAsyncData(uniqueKey, () =>
   queryCollection("blog").where("path", "=", path).first(),
 );
 article.value = unref(data);
+
+// ---- Photo viewer ---------------------------------------------------------
+// Every photo in the article opens in the same viewer as /photography/.
+// Its alt text is the title; the section headings it sits under become
+// the place line, e.g. "Kathmandu valley, Nepal".
+
+const articleRef = ref<HTMLElement | null>(null);
+const photoEls = ref<HTMLImageElement[]>([]);
+const viewerItems = ref<ViewerItem[]>([]);
+const { openIndex, open, close, step } = usePhotoViewer(
+  (i) => photoEls.value[i],
+  () => photoEls.value.length,
+);
+
+// Drop the flag emoji the headings carry ("Nepal 🇳🇵" → "Nepal").
+const headingText = (el: Element) =>
+  (el.textContent ?? "").replace(/[\u{1F1E6}-\u{1F1FF}]/gu, "").trim();
+
+onMounted(() => {
+  const root = articleRef.value;
+  if (!root) return;
+  let country = "";
+  let place = "";
+  const imgs: HTMLImageElement[] = [];
+  const items: ViewerItem[] = [];
+  for (const el of root.querySelectorAll("h2, h3, img")) {
+    if (el.tagName === "H2") {
+      country = headingText(el);
+      place = "";
+    } else if (el.tagName === "H3") {
+      place = headingText(el);
+    } else {
+      const img = el as HTMLImageElement;
+      if (!img.closest(".prose")) continue;
+      const caption = [place, country].filter(Boolean).join(", ");
+      img.classList.add("zoomable");
+      img.tabIndex = 0;
+      img.setAttribute("role", "button");
+      img.setAttribute("aria-label", `${img.alt}${caption ? `, ${caption}` : ""}. View larger`);
+      imgs.push(img);
+      items.push({ src: img.getAttribute("src") ?? img.src, alt: img.alt, title: img.alt, caption });
+    }
+  }
+  photoEls.value = imgs;
+  viewerItems.value = items;
+});
+
+const indexOfTarget = (target: EventTarget | null) =>
+  target instanceof HTMLImageElement ? photoEls.value.indexOf(target) : -1;
+
+const onArticleClick = (event: MouseEvent) => {
+  const i = indexOfTarget(event.target);
+  if (i >= 0) open(i);
+};
+
+const onArticleKeydown = (event: KeyboardEvent) => {
+  if (event.key !== "Enter" && event.key !== " ") return;
+  const i = indexOfTarget(event.target);
+  if (i < 0) return;
+  event.preventDefault();
+  open(i);
+};
 
 function scrollToContent() {
   const content = document.getElementById("main-content");
@@ -238,5 +315,27 @@ if (image.value) {
 .travels-page img {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+/* The viewer sits inside .travels-page; keep the article's image margins
+   off its photo. */
+.travels-page .viewer img {
+  margin: 0;
+}
+
+/* Article photos open in the photo viewer. */
+.travels-page img.zoomable {
+  cursor: zoom-in;
+  transition: opacity 0.2s ease;
+}
+.travels-page img.zoomable:hover {
+  opacity: 0.9;
+}
+.travels-page img.zoomable:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 3px;
+}
+.dark .travels-page img.zoomable:focus-visible {
+  outline-color: var(--color-primary-400);
 }
 </style>
