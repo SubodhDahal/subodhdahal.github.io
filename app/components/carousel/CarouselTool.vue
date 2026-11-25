@@ -232,22 +232,25 @@ const overLimit = computed(() => slides.value.some((s) => (sizes[s.id] ?? 0) > M
 
 <style>
 .carousel-tool {
+/* Site tokens (see app/assets/css/main.css); dark mode follows the site's .dark class */
 & {
-  --bg:#fafafa; --fg:#1a1a1a; --card:#fff; --line:#dbdbdb; --muted:#737373;
-  --accent:#3897f0;        /* borders, hover cues, active dot */
-  --accent-fill:#0f6fc6;   /* filled button (white text ≥4.5:1) */
-  --link:#0f6fc6;          /* blue text on card/page */
-  --warn:#b3380a; --bad:#dc2626;
-  font-family: system-ui, sans-serif;
+  --fg: var(--color-secondary-800); --card: #fff; --line: var(--color-secondary-200); --muted: var(--color-secondary-500);
+  --accent: var(--color-primary-500);       /* borders, hover cues, active dot */
+  --accent-fill: var(--color-primary-600);  /* filled button (white text >= 4.5:1) */
+  --link: var(--color-primary-700);
+  --warn: #b3380a; --bad: #dc2626;
+  font-family: var(--font-sans);
+  color: var(--fg);
 }
-@media (prefers-color-scheme: dark) {
-  & { --bg:#121212; --fg:#eee; --card:#1c1c1c; --line:#333; --muted:#999; --link:#5eb0f7; --warn:#fb923c; --bad:#f87171; }
+:where(.dark) & {
+  --fg: var(--color-secondary-50); --card: var(--color-secondary-800); --line: var(--color-secondary-700); --muted: var(--color-secondary-400);
+  --link: var(--color-primary-300); --accent-fill: var(--color-primary-600); --warn: #fb923c; --bad: #f87171;
 }
 *, *::before, *::after { box-sizing: border-box; }
 ::selection { background: color-mix(in srgb, var(--accent) 35%, transparent); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 4rem;
-h1 { margin: 0 0 .3rem; font-size: 2rem; line-height: 1.2; text-wrap: balance; }
+padding-bottom: 4rem;
+h1 { margin: 0 0 .3rem; font-family: var(--font-serif); font-weight: 700; font-size: 2rem; line-height: 1.2; text-wrap: balance; }
 header p { margin: 0 0 1.2rem; color: var(--muted); max-width: 70ch; text-wrap: pretty; }
 
 .drop { display:flex; gap:.6rem; align-items:center; justify-content:center; flex-wrap:wrap; border:2px dashed var(--line); border-radius:12px; padding:1rem; cursor:pointer; transition: border-color .15s; }
@@ -309,7 +312,6 @@ figcaption { display:flex; flex-direction:column; gap:.15rem; padding:.5rem .6re
 }
 
 @media (max-width: 600px) {
-  padding-top: 1rem;
   h1 { font-size: 1.6rem; }
   .controls { display:grid; grid-template-columns: 1fr 1fr; gap:.8rem 1rem; align-items:end; }
   .ctl.grow, .padctl.grow, .ctl.check { grid-column: 1 / -1; }

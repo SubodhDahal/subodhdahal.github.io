@@ -78,7 +78,7 @@ onBeforeUnmount(() => {
   --pad-fg: #eee; --pad-muted: #999; --pad-line: #444; --pad-btn: #262626; }
 .dots { display: flex; gap: 5px; justify-content: center; padding: 10px; }
 .dots span { width: 6px; height: 6px; border-radius: 50%; background: #777; }
-.dots span.on { background: #3897f0; }
+.dots span.on { background: var(--color-primary-500); }
 .close { position: absolute; top: 10px; right: 12px; display: grid; place-items: center; width: 44px; height: 44px; background: none; border: 0; border-radius: 50%; color: #fff; cursor: pointer; }
 .close svg { width: 20px; height: 20px; }
 .close:hover { background: rgba(255,255,255,.15); }
