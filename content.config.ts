@@ -21,12 +21,29 @@ export default defineContentConfig({
         alt: z.string(),
         ogImage: z.string().optional(),
         tags: z.array(z.string()),
+        // Slug of a content/topics/*.md hub; groups posts into clusters.
+        topic: z.string().optional(),
         published: z.boolean().optional(),
         seo: z.object({
           title: z.string().optional(),
           description: z.string().optional()
         }).optional(),
         // @nuxtjs/seo v5 composed schemas (replaces deprecated asSeoCollection)
+        robots: defineRobotsSchema(),
+        sitemap: defineSitemapSchema(),
+        ogImage: defineOgImageSchema(),
+        schemaOrg: defineSchemaOrgSchema(),
+      })
+    }),
+    // Topic hubs (/topics/<slug>/): intro copy + metadata; the post list is
+    // built from blog posts whose `topic` matches the file name.
+    topics: defineCollection({
+      source: 'topics/*.md',
+      type: 'page',
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        order: z.number().int().optional(),
         robots: defineRobotsSchema(),
         sitemap: defineSitemapSchema(),
         ogImage: defineOgImageSchema(),

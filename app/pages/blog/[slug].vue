@@ -25,6 +25,10 @@
                     <div class="mt-2">
                         <ArticleTags :tags="article.tags" />
                     </div>
+                    <p v-if="topic" class="mt-3 font-sans text-sm text-secondary-600 dark:text-secondary-300">
+                        Part of
+                        <NuxtLink :to="topicPath" class="font-medium text-primary-700 underline underline-offset-2 hover:text-primary-600 dark:text-primary-300 dark:hover:text-primary-200">{{ topic.title }}</NuxtLink>
+                    </p>
                 </div>
                 <div class="flex-1 mt-8 md:mt-0">
                     <nuxt-img
@@ -74,7 +78,7 @@
             <section v-if="relatedArticles.length" class="my-16">
                 <div class="relative mb-10">
                     <h2 class="text-3xl font-serif font-bold text-center text-secondary-800 dark:text-secondary-100">
-                        Related posts
+                        {{ topic ? `More in ${topic.title}` : 'Related posts' }}
                     </h2>
                     <div class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
                 </div>
@@ -105,6 +109,11 @@
                         </div>
                     </NuxtLink>
                 </div>
+                <p v-if="topic" class="mt-8 text-center font-sans text-sm">
+                    <NuxtLink :to="topicPath" class="font-medium text-primary-700 underline underline-offset-2 hover:text-primary-600 dark:text-primary-300 dark:hover:text-primary-200">
+                        All posts in {{ topic.title }}
+                    </NuxtLink>
+                </p>
             </section>
         </div>
     </div>
@@ -136,11 +145,19 @@ watch(
     () => article.value?.path,
     async (newPath) => {
         if (newPath && article.value?.tags) {
-            relatedArticles.value = await getRelatedArticles(article.value.tags, newPath);
+            relatedArticles.value = await getRelatedArticles(article.value.tags, newPath, article.value.topic);
         }
     },
     { immediate: true },
 );
+
+// Topic hub this post belongs to (content/topics/<slug>.md)
+const { data: topic } = await useAsyncData(`topic-of-${uniqueKey}`, () =>
+  article.value?.topic
+    ? queryCollection("topics").path(`/topics/${article.value.topic}`).first()
+    : Promise.resolve(null),
+);
+const topicPath = computed(() => (article.value?.topic ? `/topics/${article.value.topic}/` : ""));
 
 // Format date helper
 function formatDate(date: Date): string {

@@ -4,15 +4,16 @@ description: How I built RSS and Atom feed support for my Nuxt 3 website to let 
 image: /images/rss-atom-feed.jpg
 alt: RSS and Atom feeds in Nuxt 3
 postDate: 2025-08-31
+topic: self-hosting
 tags:
-  - Nuxt
+  - nuxt
   - web development
   - tutorial
 ---
 
 ## What are RSS and Atom feeds?
 
-RSS (Really Simple Syndication) and Atom are XML formats for sharing new posts with readers. Instead of visiting each site by hand, readers subscribe to a feed. When a site publishes new content, the feed updates and readers see it in their feed reader.
+RSS (Really Simple Syndication) and Atom are XML formats for sharing new posts with readers. Instead of visiting each site by hand, readers subscribe to a feed. When a site publishes new content, the feed updates and readers see it in their feed reader. I use [a self-hosted FreshRSS](/blog/reading-and-discovery-feed-curation/) for mine.
 
 Some popular web-based feed readers are FreshRSS, Feedly, Inoreader, and NewsBlur. Desktop apps like Fluent Reader and mobile apps like Reeder and Readrops are also available. I run a [FreshRSS](https://freshrss.org/) instance in my homelab and read updates through its web UI or the Readrops app on my phone.
 

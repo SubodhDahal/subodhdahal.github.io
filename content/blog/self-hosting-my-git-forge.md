@@ -6,18 +6,19 @@ alt: Self-hosting my git forge
 postDate: 2026-04-29
 seo:
   description: "Why I moved my Git repositories from GitHub to a self-hosted Forgejo, why I passed on GitLab, and how the lightweight, community-driven forge runs."
+topic: self-hosting
 tags:
-  - Homelab
-  - Open source
-  - Self-hosting
-  - Workflow
+  - homelab
+  - open source
+  - self-hosting
+  - workflow
 ---
 
 For years, GitHub held all my personal Git repos. It worked fine. I used it with friends during my bachelor's and master's studies. But over time it felt less like a tool and more like a service that just put up with me.
 
 GitHub has had its share of problems lately. Repos scanned for AI training unless you opt out, outages, and [Git history rewritten after merging pull requests](https://github.blog/news-insights/company-news/an-update-on-github-availability/) are a few examples.
 
-What pushed me to self-host was my unease with data on servers whose terms can change anytime. That's the thinking behind most of what I self-host. I run my own reading feed, my own photo library, and now my own Git forge. It's not the easy path, but ownership and privacy are worth the effort.
+What pushed me to self-host was my unease with data on servers whose terms can change anytime. That's the thinking behind most of what I self-host. I run my own [reading feed](/blog/reading-and-discovery-feed-curation/), my own [photo library](/blog/fixing-docker-immich-traefik-setup/), and now my own Git forge. It's not the easy path, but ownership and privacy are worth the effort.
 
 ## Why Not GitLab?
 
@@ -42,7 +43,7 @@ I don't use issue tracking, pull requests, or wikis yet. They're there if I need
 
 Forgejo runs on a NUC at home, inside an Ubuntu VM on Proxmox, alongside a few other core services. I only access it over my home network. I could route it through Tailscale to get in when I'm away, but I haven't felt the need yet.
 
-Getting Forgejo Actions to work with the Traefik proxy took a few tries. The Docker build steps took a while too. After that, it has worked without issues for more than 3 months.
+Getting Forgejo Actions to work with the Traefik proxy took a few tries, much like [the Docker networking issue I hit with Immich](/blog/fixing-docker-immich-traefik-setup/). The Docker build steps took a while too. After that, it has worked without issues for more than 3 months.
 
 ## Backups
 

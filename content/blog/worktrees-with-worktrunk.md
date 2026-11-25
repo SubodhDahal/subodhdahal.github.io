@@ -4,6 +4,7 @@ description: "Git worktrees keep separate branches checked out at once. Worktrun
 image: /images/git-worktrees.webp
 alt: "Git worktree folders side by side, each with its own branch checked out"
 postDate: 2026-08-16
+topic: command-line
 tags:
   - git
   - worktrees

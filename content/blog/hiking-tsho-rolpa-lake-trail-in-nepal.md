@@ -4,6 +4,7 @@ description: Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepa
 image: /images/tsho-rolpa/lake-view.jpg
 alt: Hiking Tsho-Rolpa lake trail
 postDate: 2022-01-22
+topic: hiking-photography
 tags:
   - travel
 ---

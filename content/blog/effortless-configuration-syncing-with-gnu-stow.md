@@ -6,6 +6,7 @@ alt: Supercharge your Dotfiles workflow
 postDate: 2025-01-12
 seo:
   title: "Sync dotfiles across Linux and macOS with GNU Stow and Git"
+topic: command-line
 tags:
   - developer productivity
 ---

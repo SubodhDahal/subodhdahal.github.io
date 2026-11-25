@@ -6,6 +6,7 @@ alt: My 2023 in review
 postDate: 2024-01-01
 seo:
   description: "Travel photos from 2023 across Nepal, Croatia, France, Germany, Monaco, Hungary, the Netherlands and Spain, from Plitvice Lakes to Montserrat."
+topic: hiking-photography
 tags:
   - personal
   - travel

@@ -4,6 +4,7 @@ description: From new adventures and memories to lessons learned and personal gr
 image: /images/2022-in-review/looking-back.png
 alt: My 2022 in review
 postDate: 2022-12-31
+topic: hiking-photography
 tags:
   - personal
   - travel

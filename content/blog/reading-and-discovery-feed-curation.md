@@ -4,11 +4,12 @@ description: Taking concrete steps away from algorithms using FreshRSS, self-hos
 image:  /images/reading-feed-curation.webp
 alt: Shaping my personal reading content flow
 postDate: 2026-02-08
+topic: self-hosting
 tags:
-  - Homelab
-  - Open source
-  - Self-hosting
-  - Workflow
+  - homelab
+  - open source
+  - self-hosting
+  - workflow
 ---
 
 For quite some time, I have wanted to rely less on algorithmically curated feeds. The daily scroll through YouTube, Substack, or LinkedIn felt less like discovery and more like dopamine mining. I wanted a system that delivered interesting content to satisfy my curiosity, without platforms whose best interest is to have me glued to them. These days, finding such a platform is tough. Even if one exists now, there's no guarantee it won't eventually mimic the ones I wanted to get away from.

@@ -2,7 +2,7 @@ import type { ContentNavigationItem, BlogCollectionItem } from '@nuxt/content'
 
 export type Sections = 'blog'
 
-export type BlogPostPreview = Pick<BlogCollectionItem, "title" | "postDate" | "description" | "url" | "tags" | "path">
+export type BlogPostPreview = Pick<BlogCollectionItem, "title" | "postDate" | "description" | "url" | "tags" | "path" | "topic">
 
 export interface PaginationResult {
   articles: BlogPostPreview[]

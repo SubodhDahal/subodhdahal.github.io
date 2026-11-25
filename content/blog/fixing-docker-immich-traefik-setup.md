@@ -4,6 +4,7 @@ description: "Photo indexing failed in my Immich+Traefik setup. I'd misconfigure
 image: /images/docker-broken-network.png
 alt: "Depiction of broken docker networking"
 postDate: 2025-10-31
+topic: self-hosting
 tags:
   - homelab
   - networking

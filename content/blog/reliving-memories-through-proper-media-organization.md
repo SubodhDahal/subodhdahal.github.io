@@ -4,6 +4,7 @@ description: Organizing media such as photos and videos can bring back cherished
 image: /images/digital-media-2023/image-collection.png
 alt: Managing my unwieldy pictures collection
 postDate: 2023-02-06
+topic: self-hosting
 tags:
   - personal
   - technology

@@ -4,9 +4,10 @@ description: "How I turned my neglected Stream Deck into a useful tool for contr
 image: /images/stream-deck/stream-deck-bg.png
 alt: Finding new usages for my Stream Deck
 postDate: 2025-06-07
+topic: command-line
 tags:
   - productivity
-  - Developer Productivity
+  - developer productivity
   - automation
   - home-office
 ---

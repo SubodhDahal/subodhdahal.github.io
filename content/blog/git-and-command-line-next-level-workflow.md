@@ -6,6 +6,7 @@ alt: Supercharge your Git-workflow
 postDate: 2022-12-18
 seo:
   description: "Four Git command-line tips: aliases for common commands, typo auto-correction, faster branch checkout with fzf, and the Git Interactive Rebase Tool."
+topic: command-line
 tags:
   - programming
   - developer productivity

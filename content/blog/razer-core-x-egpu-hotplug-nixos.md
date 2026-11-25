@@ -6,6 +6,7 @@ alt: "Abstract image representing a broken connection"
 postDate: 2026-11-18
 seo:
   title: "Razer Core X eGPU hotplug on NixOS: fixing the NVIDIA driver"
+topic: nixos
 tags:
   - troubleshooting
   - nixos

@@ -6,6 +6,7 @@ alt: "Laptop connected to an external GPU enclosure"
 postDate: 2026-11-19
 seo:
   title: "Handy speech-to-text on NixOS and COSMIC: fixing shortcut and typing"
+topic: nixos
 tags:
   - troubleshooting
   - nixos

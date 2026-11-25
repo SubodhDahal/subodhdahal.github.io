@@ -17,7 +17,7 @@ export function useArticles(options: UseArticlesOptions = {}) {
     try {
       const { data } = await useAsyncData(`articles-${quantity}`, () =>
         queryCollection("blog")
-           .select("title", "description", "tags", "postDate", "path", "url")
+           .select("title", "description", "tags", "postDate", "path", "url", "topic")
           .order("postDate", "DESC")
           .limit(quantity)
           .all(),
@@ -77,8 +77,11 @@ export function useArticles(options: UseArticlesOptions = {}) {
   }
 
   // Get related articles
-  async function getRelatedArticles(sourceTags: string[], excludePath: string): Promise<BlogPostPreview[]> {
-    if (!sourceTags?.length) return [];
+  // Same-topic posts first (the cluster), then by tag overlap. Tags compare
+  // case-insensitively so "Homelab" and "homelab" still match.
+  async function getRelatedArticles(sourceTags: string[], excludePath: string, topic?: string): Promise<BlogPostPreview[]> {
+    const wanted = new Set((sourceTags ?? []).map((t) => t.toLowerCase()));
+    if (!wanted.size && !topic) return [];
 
     // getArticles() rewrites every path with a trailing slash, but the path
     // passed in from the blog post page is the raw @nuxt/content path
@@ -87,21 +90,13 @@ export function useArticles(options: UseArticlesOptions = {}) {
     const normalizedExclude = withTrailingSlash(excludePath);
 
     const allArticles = await getArticles(quantity);
+    const overlap = (a: BlogPostPreview) =>
+      (a.tags ?? []).filter((t: string) => wanted.has(t.toLowerCase())).length;
+    const score = (a: BlogPostPreview) => (topic && a.topic === topic ? 100 : 0) + overlap(a);
+
     return allArticles
-      .filter(
-        (article: BlogPostPreview) =>
-          article.path !== normalizedExclude &&
-          Array.isArray(article.tags) &&
-          article.tags.some((tag: string) => sourceTags.includes(tag)),
-      )
-      .sort((a: BlogPostPreview, b: BlogPostPreview) => {
-        // Sort by number of matching tags
-        const aMatches =
-          (Array.isArray(a.tags) ? a.tags.filter((tag: string) => sourceTags.includes(tag)).length : 0);
-        const bMatches =
-          (Array.isArray(b.tags) ? b.tags.filter((tag: string) => sourceTags.includes(tag)).length : 0);
-        return bMatches - aMatches;
-      })
+      .filter((a: BlogPostPreview) => a.path !== normalizedExclude && score(a) > 0)
+      .sort((a: BlogPostPreview, b: BlogPostPreview) => score(b) - score(a))
       .slice(0, 3); // Limit to 3 related articles
   }
 

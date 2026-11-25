@@ -7,6 +7,7 @@ postDate: 2026-11-25
 seo:
   title: "Instagram carousel without cropping: white borders for mixed photos"
   description: "Why I pad portrait and landscape photos onto one white canvas instead of using Instagram's Mixed option, and the free in-browser tool I built to do it."
+topic: hiking-photography
 tags:
   - tools
   - instagram

@@ -4,6 +4,7 @@ description: Enhance your experience with fabric, the AI prompt tool, by using i
 image:  /images/fabric-ai-pattern-selection.webp
 alt: AI Pattern Selection in Fabric
 postDate: 2025-05-24
+topic: command-line
 tags:
   - developer productivity
 ---
@@ -14,7 +15,7 @@ But here's the thing: there were too many patterns available. I kept staring at 
 
 ## The solution
 
-I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool, to create searchable menus for fabric. Instead of memorizing commands, I just:
+I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool I also use for [checking out Git branches](/blog/git-and-command-line-next-level-workflow/), to create searchable menus for fabric. Instead of memorizing commands, I just:
 1. Send text to fabric
 2. Type any parts of what I want. fzf is smart about matching:
    - `xwis` finds "extract_wisdom"
