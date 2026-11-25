@@ -246,7 +246,7 @@ const readoutValue = 'text-base font-semibold tabular-nums sm:text-lg'
           </figure>
         </template>
       </draggable>
-      <p class="mt-2 max-w-[70ch] text-sm text-pretty text-secondary-500 dark:text-secondary-400">Drag to reorder. The first slide sets the frame on Instagram. Click a slide to preview swiping.</p>
+      <p class="mt-2 max-w-[70ch] text-sm text-pretty text-secondary-500 dark:text-secondary-400">Drag to reorder. The first slide is the cover on Instagram. Click a slide to preview swiping.</p>
 
       <div class="mt-4 flex flex-wrap items-center gap-2.5">
         <button :class="[btnPrimary, 'max-sm:basis-full']" :disabled="busy" @click="downloadZip">{{ busy ? 'Building…' : 'Download all as ZIP' }}</button>
