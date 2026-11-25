@@ -162,15 +162,39 @@ const link = 'font-medium text-primary-700 underline underline-offset-2 hover:te
       </p>
 
       <h2 id="faq">Questions</h2>
-      <template v-for="(f, i) in faqs" :key="i">
-        <h3>{{ f.q }}</h3>
-        <p>{{ f.a }}</p>
-      </template>
+      <div class="not-prose mb-10 border-y border-secondary-200 dark:border-secondary-700">
+        <details
+          v-for="(f, i) in faqs"
+          :key="i"
+          class="group border-secondary-200 dark:border-secondary-700 [&+&]:border-t"
+        >
+          <summary
+            class="flex cursor-pointer list-none items-center justify-between gap-6 rounded-sm py-4 font-serif text-lg font-medium leading-snug text-secondary-800 transition-colors duration-150 hover:text-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:text-secondary-100 dark:hover:text-primary-300 [&::-webkit-details-marker]:hidden"
+          >
+            <h3 class="text-pretty">{{ f.q }}</h3>
+            <svg
+              class="h-4 w-4 flex-none text-secondary-500 transition-transform duration-200 ease-out group-open:rotate-45 dark:text-secondary-400"
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M8 3v10M3 8h10" />
+            </svg>
+          </summary>
+          <p
+            class="max-w-[65ch] pb-5 pr-10 font-serif text-lg leading-relaxed text-secondary-700 motion-safe:group-open:animate-settle dark:text-secondary-200"
+          >
+            {{ f.a }}
+          </p>
+        </details>
+      </div>
 
       <p>
         I built this for posting photos from hikes and trips, and wrote about why in
         <NuxtLink :to="postPath">a post about the carousel padding tool</NuxtLink>.
-        More small utilities live on the <NuxtLink to="/tools/">tools page</NuxtLink>.
       </p>
     </div>
 
