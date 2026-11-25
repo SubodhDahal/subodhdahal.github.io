@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "jszip": "^3.10.2",
+    "mermaid": "^12.3.0",
     "vuedraggable": "^4.1.0"
   }
 }
