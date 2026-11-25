@@ -80,10 +80,15 @@ useSchemaOrg([
     name: "Subodh Dahal",
     url: mySite,
     image: "/images/me.jpg",
-    jobTitle: "Software Engineer",
+    jobTitle: "Engineering Manager",
+    homeLocation: { "@type": "Place", name: "Stuttgart, Germany" },
+    knowsAbout: ["Software engineering", "Automation", "Self-hosting", "NixOS", "Photography"],
     sameAs: [
-      "https://github.com/subodhdahal",
-      "https://linkedin.com/in/subodhdahal",
+      "https://github.com/SubodhDahal",
+      "https://www.linkedin.com/in/subodhdahal",
+      "https://www.xing.com/profile/Subodh_Dahal",
+      "https://stackoverflow.com/users/1083422/sub0dh",
+      "https://instagram.com/wanderluster_subodh",
     ],
   }),
 ]);

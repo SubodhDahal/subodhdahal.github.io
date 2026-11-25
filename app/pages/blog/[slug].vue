@@ -152,8 +152,10 @@ function formatDate(date: Date): string {
     return new Date(date).toLocaleDateString("en-US", options);
 }
 
-const title = computed(() => article.value?.title || "");
-const description = computed(() => article.value?.description || "");
+// Optional `seo.title` / `seo.description` frontmatter lets a post keep a
+// conversational headline on the page while giving search a keyword-led one.
+const title = computed(() => article.value?.seo?.title || article.value?.title || "");
+const description = computed(() => article.value?.seo?.description || article.value?.description || "");
 const image = computed(() => article.value?.image || "");
 const postDate = computed(() => new Date(article.value?.postDate || "").toISOString());
 const updated = computed(() => article.value?.updated ? new Date(article.value.updated).toISOString() : postDate.value);

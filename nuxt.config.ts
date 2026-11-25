@@ -85,8 +85,9 @@ export default defineNuxtConfig({
       },
       {
         userAgent: [
+          // ChatGPT-User (live fetches when a user asks ChatGPT) is allowed so
+          // pages can be cited; GPTBot (training) stays blocked.
           "GPTBot",
-          "ChatGPT-User",
           "CCBot",
           "Google-Extended",
           "anthropic-ai",

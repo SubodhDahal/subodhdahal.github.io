@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const title = 'Tools'
-const description = 'Small browser-based tools I built for myself.'
+const description = 'Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.'
 const path = '/tools/'
 const url = `https://subodhdahal.com${path}`
 
 const tools = [
   {
-    name: 'Instagram Carousel Tools',
+    name: 'Instagram carousel white border tool',
     description:
-      "Pad a set of images onto one shared canvas so mixed photos look like matted gallery prints in a carousel. Runs in your browser.",
+      "Put portrait and landscape photos on one white canvas with an even border so Instagram doesn't crop your carousel. Runs in your browser.",
     to: '/tools/instagram-carousel/',
   },
 ]
@@ -23,6 +23,15 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 defineOgImage('SimpleBlog', { title, description })
+useSchemaOrg([
+  defineWebPage({ '@type': 'CollectionPage', name: title, description }),
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Home', item: 'https://subodhdahal.com/' },
+      { name: title, item: url },
+    ],
+  }),
+])
 </script>
 
 <template>

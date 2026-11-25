@@ -4,6 +4,9 @@ description: "Instagram can keep each photo's original aspect ratio in a carouse
 image: /images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png
 alt: "Instagram Carousel Tools with four autumn photos padded onto a shared 4:5 canvas"
 postDate: 2026-11-25
+seo:
+  title: "Instagram carousel without cropping: white borders for mixed photos"
+  description: "Why I pad portrait and landscape photos onto one white canvas instead of using Instagram's Mixed option, and the free in-browser tool I built to do it."
 tags:
   - tools
   - instagram
@@ -14,7 +17,7 @@ I use Instagram to post pictures from my hikes and trips, and nearly every one i
 
 I wanted every slide on the same white canvas with a border around the photo, like a print in a gallery frame.
 
-So I made a page for it: [Instagram Carousel Tools](/tools/instagram-carousel/). You drop images in, it pads each one onto a shared canvas, and you download the result. Everything runs in your browser, so your photos are never uploaded.
+So I made a page for it: an [Instagram carousel white border tool](/tools/instagram-carousel/). You drop images in, it pads each one onto a shared canvas, and you download the result. Everything runs in your browser, so your photos are never uploaded.
 
 ## Why I don't use Instagram's Mixed option
 
