@@ -229,6 +229,7 @@ const overLimit = computed(() => slides.value.some((s) => (sizes[s.id] ?? 0) > M
 </template>
 
 <style>
+@keyframes carousel-settle { from { opacity:0; transform: translateY(6px) scale(.98); } }
 .carousel-tool {
 /* Site tokens (see app/assets/css/main.css); dark mode follows the site's .dark class */
 & {
@@ -283,8 +284,7 @@ button:disabled { opacity:.6; cursor:default; }
 .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin:1rem 0 .4rem; }
 .card { position:relative; margin:0; background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; cursor:grab; min-width:0; }
 .card.ghost { opacity:.4; }
-@keyframes settle { from { opacity:0; transform: translateY(6px) scale(.98); } }
-.card { animation: settle .35s cubic-bezier(.16,1,.3,1) both; animation-delay: calc(var(--i, 0) * 40ms); }
+.card { animation: carousel-settle .35s cubic-bezier(.16,1,.3,1) both; animation-delay: calc(var(--i, 0) * 40ms); }
 .thumb { cursor:zoom-in; border-bottom:1px solid var(--line); }
 .num { position:absolute; top:6px; left:6px; background:rgba(0,0,0,.7); color:#fff; font-size:.75rem; line-height:1.4; border-radius:99px; padding:1px 8px; z-index:1; font-variant-numeric: tabular-nums; }
 .x { position:absolute; top:4px; right:4px; z-index:1; display:grid; place-items:center; width:28px; height:28px; min-height:0; padding:0; border-radius:99px; background:rgba(0,0,0,.7); color:#fff; border:0; }
