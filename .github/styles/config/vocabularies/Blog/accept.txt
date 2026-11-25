@@ -33,6 +33,8 @@ Proxmox
 Tailscale
 Logseq
 Nuxt
+Vue
+JSZip
 fzf
 jq
 tig
