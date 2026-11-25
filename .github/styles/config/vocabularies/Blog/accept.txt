@@ -213,3 +213,7 @@ Tauri
 xtest
 autostart
 Rybbit
+nixpkgs
+(?i)nixos
+Repology
+Hyprland
