@@ -135,15 +135,15 @@ NixOS has no `/lib` or `/usr/lib`, so programs built for other distributions fai
 
 ### Old generations fill the disk unless you clean them up
 
-Each generation keeps its packages around, so the Nix store grows with every rebuild. [One person measured about 136 gigabytes for 46 generations](https://paulxicao.github.io/linux/nixos/2026/01/27/nixos-deleting-generations.html).
+Each generation keeps its packages around, and builds leave leftovers, so the Nix store grows with every rebuild. Mine had filled 84% of my disk.
 
-My config runs the garbage collector weekly, so I thought I had this handled. While researching this post, I found out why I still had 128 generations: the job had been failing every week.
+My config runs the garbage collector weekly, so I thought I had this handled. While researching this post, I found out why I still had 128 generations: the job had been failing every week, before it collected anything.
 
 ```
 error: invalid number of days specifier '1w', expected something like '14d'
 ```
 
-It only understands days, so `1w` had to be `7d`. (So much for reading every diff.)
+It only understands days, so `1w` had to be `7d`. (So much for reading every diff.) Running `nix-collect-garbage` by hand afterwards deleted 35,749 store paths and freed 84.6 GiB, which took the disk down to 72%. Nix also hard-links identical files, and that was already saving another 111 GiB.
 
 ### Config changes need a rebuild, so some dotfiles stay in GNU Stow
 
