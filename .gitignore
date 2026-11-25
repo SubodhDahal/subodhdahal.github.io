@@ -24,3 +24,5 @@ PRODUCT.md
 
 .github/styles/config/vocabularies/*
 !.github/styles/config/vocabularies/Blog
+test-results/
+playwright-report/

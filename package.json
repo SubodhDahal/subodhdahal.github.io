@@ -6,7 +6,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test"
   },
   "devDependencies": {
     "@fontsource/ibm-plex-mono": "^5.3.0",
@@ -16,6 +18,7 @@
     "@nuxt/image-nightly": "^2.1.1-20260806-131032-bcdd8ed",
     "@nuxtjs/color-mode": "^4.1.0",
     "@nuxtjs/seo": "^6.0.1",
+    "@playwright/test": "^1.65.1",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.5",
@@ -26,10 +29,15 @@
     "nuxt-og-image": "^7.0.7",
     "satori": "^0.47.1",
     "tailwindcss": "^4.3.5",
+    "vitest": "^5.1.2",
     "zod": "^4.6.7"
   },
   "overrides": {
     "@emnapi/core": "^1.11.3",
     "@emnapi/wasi-threads": "^2.0.1"
+  },
+  "dependencies": {
+    "jszip": "^3.10.2",
+    "vuedraggable": "^4.1.0"
   }
 }

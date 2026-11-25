@@ -3,7 +3,33 @@ name: cd
 on: [push, pull_request]
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Setup node env
+        uses: actions/setup-node@v6
+        with:
+          node-version: 26
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Unit tests
+        run: npm run test:unit
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: E2E tests
+        run: npm run test:e2e
+
   cd: # deploy to gh-pages
+    needs: test
     runs-on: ${{ matrix.os }}
 
     if: github.ref == 'refs/heads/master' ## only deploy on master branch
