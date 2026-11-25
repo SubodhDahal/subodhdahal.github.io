@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const title = 'Instagram Carousel Tools'
 const description =
-  "Pad every image onto one shared canvas so Instagram doesn't crop or resize your carousel. Runs in your browser; your images are never uploaded."
+  "Pad every image onto one shared white canvas, so a carousel of mixed photos looks like matted gallery prints. Runs in your browser; your images are never uploaded."
 const path = '/tools/instagram-carousel/'
 const url = `https://subodhdahal.com${path}`
 
@@ -36,7 +36,7 @@ useSchemaOrg([
       {{ title }}
     </h1>
     <p class="font-sans mt-3 max-w-[60ch] text-lg leading-snug text-secondary-700 dark:text-secondary-200 text-pretty">
-      Pad every image onto one white canvas so Instagram doesn't crop or resize your carousel.
+      Pad every image onto one white canvas with an even border, so mixed photos sit in the same frame like gallery prints.
     </p>
     <p class="mt-3 mb-8 flex max-w-[70ch] items-start gap-2 font-sans text-sm leading-relaxed text-secondary-600 dark:text-secondary-300 text-pretty">
       <svg class="mt-0.5 h-4 w-4 flex-none text-accent-600 dark:text-accent-400" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

@@ -8,7 +8,7 @@ const tools = [
   {
     name: 'Instagram Carousel Tools',
     description:
-      "Pad a set of images onto one shared canvas so Instagram doesn't crop or resize your carousel. Runs in your browser.",
+      "Pad a set of images onto one shared canvas so mixed photos look like matted gallery prints in a carousel. Runs in your browser.",
     to: '/tools/instagram-carousel/',
   },
 ]

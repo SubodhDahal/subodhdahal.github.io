@@ -210,3 +210,4 @@ Logitech
 Tauri
 xtest
 autostart
+Rybbit
