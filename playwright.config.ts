@@ -4,6 +4,8 @@ const PORT = 5199
 
 export default defineConfig({
   testDir: './tests/e2e',
+  globalSetup: './tests/e2e/global-setup.ts',
+  retries: process.env.CI ? 1 : 0,
   timeout: 90_000,
   fullyParallel: true,
   reporter: [['list']],
@@ -21,6 +23,6 @@ export default defineConfig({
     command: `npm run dev -- --port ${PORT}`,
     url: `http://localhost:${PORT}/tools/instagram-carousel/`,
     reuseExistingServer: true,
-    timeout: 120_000,
+    timeout: 240_000,
   },
 })

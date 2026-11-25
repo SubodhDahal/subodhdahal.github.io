@@ -42,6 +42,13 @@
           </NuxtLink>
         </li>
         <li>
+          <NuxtLink
+            to="/tools/"
+            :class="['nav-link', { 'is-active': isToolsActive }]">
+            Tools
+          </NuxtLink>
+        </li>
+        <li>
           <NuxtLink to="/#about" class="nav-link"> About </NuxtLink>
         </li>
         <li>
@@ -102,6 +109,14 @@
               </li>
               <li class="mb-5">
                 <NuxtLink
+                  to="/tools/"
+                  :class="['nav-link text-lg', { 'is-active': isToolsActive }]"
+                  @click="isMobileNavOpen = false">
+                  Tools
+                </NuxtLink>
+              </li>
+              <li class="mb-5">
+                <NuxtLink
                   to="/#about"
                   class="nav-link text-lg"
                   @click="isMobileNavOpen = false">
@@ -138,6 +153,7 @@ const normalizedPath = computed(() => {
 });
 const isBlogActive = computed(() => normalizedPath.value === '/blog' || normalizedPath.value.startsWith('/blog/'));
 const isLibraryActive = computed(() => normalizedPath.value === '/library' || normalizedPath.value.startsWith('/library/'));
+const isToolsActive = computed(() => normalizedPath.value === '/tools' || normalizedPath.value.startsWith('/tools/'));
 
 const isMobileNavOpen = ref(false);
 </script>

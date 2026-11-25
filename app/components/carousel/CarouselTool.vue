@@ -68,6 +68,8 @@ function remove(id: number) {
   delete sizes[id]
 }
 function clearAll() {
+  clearTimeout(timer)
+  run++ // cancel any in-flight size estimate before the bitmaps are closed
   slides.value.forEach((s) => s.bitmap.close())
   slides.value = []
   Object.keys(sizes).forEach((k) => delete sizes[+k])
@@ -84,6 +86,7 @@ watch([slides, layout, format], () => {
     const l = layout.value
     if (!l) return
     for (const s of slides.value) {
+      if (me !== run) return // slides were cleared (bitmaps closed) while we were encoding
       const blob = await encodeSlide(s.bitmap, l, format.value)
       if (me !== run) return
       sizes[s.id] = blob.size
@@ -136,11 +139,6 @@ const overLimit = computed(() => slides.value.some((s) => (sizes[s.id] ?? 0) > M
 
 <template>
   <div class="carousel-tool" @dragover.prevent @dragenter.prevent="onEnter" @dragleave="onLeave" @drop.prevent="onDrop">
-    <header>
-      <h1>Instagram Carousel Tools</h1>
-      <p>Pad every image onto one white canvas so Instagram doesn't crop or resize your carousel. Everything runs in your browser; nothing is uploaded.</p>
-    </header>
-
     <label class="drop" :class="{ empty: !slides.length, over }">
       <svg v-if="!slides.length" class="mech" viewBox="0 0 96 72" fill="none" aria-hidden="true">
         <rect class="mech-canvas" x="14" y="2" width="68" height="68" rx="3" />
@@ -250,8 +248,6 @@ const overLimit = computed(() => slides.value.some((s) => (sizes[s.id] ?? 0) > M
 ::selection { background: color-mix(in srgb, var(--accent) 35%, transparent); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 padding-bottom: 4rem;
-h1 { margin: 0 0 .3rem; font-family: var(--font-serif); font-weight: 700; font-size: 2rem; line-height: 1.2; text-wrap: balance; }
-header p { margin: 0 0 1.2rem; color: var(--muted); max-width: 70ch; text-wrap: pretty; }
 
 .drop { display:flex; gap:.6rem; align-items:center; justify-content:center; flex-wrap:wrap; border:2px dashed var(--line); border-radius:12px; padding:1rem; cursor:pointer; transition: border-color .15s; }
 .drop.empty { padding: 4rem 1rem; }
@@ -312,7 +308,6 @@ figcaption { display:flex; flex-direction:column; gap:.15rem; padding:.5rem .6re
 }
 
 @media (max-width: 600px) {
-  h1 { font-size: 1.6rem; }
   .controls { display:grid; grid-template-columns: 1fr 1fr; gap:.8rem 1rem; align-items:end; }
   .ctl.grow, .padctl.grow, .ctl.check { grid-column: 1 / -1; }
   .ctl select { width:100%; }
