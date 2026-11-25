@@ -31,7 +31,7 @@ useSchemaOrg([
 </script>
 
 <template>
-  <main class="md:container mx-auto px-5 py-8">
+  <main class="md:container mx-auto px-5 pt-8 pb-20">
     <h1 class="text-3xl font-serif font-bold text-secondary-800 dark:text-secondary-100">
       {{ title }}
     </h1>

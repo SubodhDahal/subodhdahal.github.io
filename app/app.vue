@@ -90,9 +90,11 @@ useSchemaOrg([
 </script>
 
 <template>
-  <div>
+  <div class="flex min-h-dvh flex-col">
     <TheHeader />
-    <NuxtPage />
+    <div class="flex-1">
+      <NuxtPage />
+    </div>
     <TheFooter />
   </div>
 </template>
