@@ -84,8 +84,8 @@
 </template>
 
 <script setup lang="ts">
-const title: string = 'Subodh Dahal\'s musings on software engineering, automation, photography and more'
-const description: string = 'Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer'
+const title: string = 'Subodh Dahal: software, self-hosting, automation and photography'
+const description: string = 'Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.'
 const image: string = '/images/me.jpg'
 const path: string = '/'
 useHead({

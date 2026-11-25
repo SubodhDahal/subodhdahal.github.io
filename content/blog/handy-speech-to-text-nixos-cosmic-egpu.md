@@ -4,6 +4,8 @@ description: "Handy's shortcut did nothing, and after I fixed that, nothing got 
 image: /images/handy-speech-to-text-issue.png
 alt: "Laptop connected to an external GPU enclosure"
 postDate: 2026-11-19
+seo:
+  title: "Handy speech-to-text on NixOS and COSMIC: fixing shortcut and typing"
 tags:
   - troubleshooting
   - nixos

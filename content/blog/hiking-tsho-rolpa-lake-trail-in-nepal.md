@@ -8,14 +8,14 @@ tags:
   - travel
 ---
 
-## Preamble
+### Preamble
 
 While on a holiday in Nepal during October - November 2021, my friends and I were planning a hiking trip to the mountainous regions of the country. After some consideration, we decided to hike to Tsho-Rolpa lake and back.
 
 The Tsho-Rolpa lake trail is not a popular trekking route, so we expected less crowd along the way. That was a plus in COVID times.
 The destination is a glacial lake threatened by global warming and climate change. We decided to visit it to remind ourselves what we and future generations would miss if we don't act on the effects of human activities.
 
-# Introduction
+## Introduction
 Tsho-Rolpa (NE: च्छोरोल्पा) lake, at 4,580m above sea level in Nepal, is one of the biggest glacial lakes in the country.
 The outflows of the lake form the Rolwaling (रोल्वालिङ) and the Tamakoshi (तामाकोशी) river.
 The lake lies in the Rolwaling valley in Dolakha district and is part of the Gaurishankar(गौरीशंकर) Conservation Area.
@@ -29,30 +29,30 @@ The Nepal Standard Time (UTC +5:45) follows the meridian of Mount Gaurishankar.
   <figcaption>Location of Tsho-Rolpa lake</figcaption>
 </figure>
 
-# Itinerary
+## Itinerary
 The Tsho-Rolpa trek typically takes 7-9 days, but time constraints forced us to squeeze it into 5 days. We knew we had to walk extreme lengths of the trail each day. We were mentally prepared for it.
 
 The regular 7-9 day trek also accounts for acclimatization. It suits people who are not used to high altitudes, so they don't suffer from altitude sickness. We had been to high altitudes in the past with no such problems,
 so we could skip a day for acclimatization. But we were still prepared to go back to a lower altitude if any of us
 started having debilitating effects from the high altitude.
 
-## Trip summary
+### Trip summary
 - **Total elevation change:** 3,500m
 - **Motorbike ride time:** 15 hours
 - **Hiked time:** 42.5 hours (breaks included)
 - **Difficulty level:** moderate/difficult
 
 <figure class="image w-full">
-  <img src="/images/tsho-rolpa/elevation-change-graph.png" width="1200" />
+  <img src="/images/tsho-rolpa/elevation-change-graph.png" width="1200" alt="Elevation profile of the five-day Tsho-Rolpa trip, peaking at 4,580 m" />
   <figcaption>Elevation change graph for the trip</figcaption>
 </figure>
 
-## Day 1: Bhaktapur (भक्तपुर) - Chhetchhet (छेतछेत) - Surmuche (सुर्मुचे)
+### Day 1: Bhaktapur (भक्तपुर) - Chhetchhet (छेतछेत) - Surmuche (सुर्मुचे)
 - **Altitude**: from Bhaktapur (1,400m) through Chhetchhet (1,398m) to Surmuche (2,470m)
 - **Motorbike ride time:** 7.5 hours
 - **Hiked time:** 4.5 hours
 
-### Bhaktapur - Chhetchhet motorbike ride
+#### Bhaktapur - Chhetchhet motorbike ride
 We(me and three friends) started the trip early, at 5 am from our hometown Bhaktapur in the Kathmandu valley. We
 were going to ride our motorbikes until the last point we could, then start the actual trek from there.
 
@@ -61,7 +61,7 @@ motorbike along with our backpacks. I rode my younger brother's KTM Duke 200cc m
 comfortable ride for two persons with heavy backpacks.
 
 <figure class="image">
-  <img src="/images/tsho-rolpa/me-on-motorbike.jpg" />
+  <img src="/images/tsho-rolpa/me-on-motorbike.jpg" alt="Subodh on a KTM Duke motorbike with a backpack at Dolalghat" />
   <figcaption>Me on the motorbike at Dolalghat where we had breakfast</figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ The Gaurishankar Conservation Area starts from
 Singati, where visitors must pay an entrance fee. Foreigners might also need extra documents and trekking permits.
 
 <figure class="image">
-  <img src="/images/tsho-rolpa/himalayas-on-the-way.jpg" />
+  <img src="/images/tsho-rolpa/himalayas-on-the-way.jpg" alt="Snow-capped Mount Gaurishankar, one of the first views on the ride" />
   <figcaption>One of the first views of Mount Gaurishankar on our trip</figcaption>
 </figure>
 
@@ -92,7 +92,7 @@ Most travelers reach Chhetchhet from Kathmandu by public transport, but we used 
 take a bus from Kathmandu to Singati and then a jeep to reach Chhetchhet. Or you can reserve a
 jeep directly from Kathmandu to Chhetchhet.
 
-### Chhetchhet to Surmuche trekking
+#### Chhetchhet to Surmuche trekking
 After leaving our motorbikes in a secure garage in Chhetchhet and resting for a while, we started the actual hike at
 3 pm. The trail ahead climbed a hill almost vertically to the top, and we felt a bit daunted, to say the
 least. But we braved the trail anyway, eager for the journey ahead. The first half-hour was especially hard
@@ -123,7 +123,7 @@ time going to bed.
   <figcaption>Mount Gaurishankar illuminated by the last rays of the day's sunlight</figcaption>
 </figure>
 
-## Day 2: Surmuche (सुर्मुचे) - Beding (बेदिङ्ग)
+### Day 2: Surmuche (सुर्मुचे) - Beding (बेदिङ्ग)
 - **Altitude**: from Surmuche (2,470m) to Beding (3,721m)
 - **Hiked time:** 12 hours
 
@@ -176,7 +176,7 @@ In the lodge in Beding, we had some Tibetan noodle soup alongside the fire in th
 before having our dinner of Daal-Bhat. The weather in Beding was freezing, and our rooms had no heating. We piled layers of blankets
 on top of us to stay warm at night.
 
-## Day 3: Beding (बेदिङ्ग) - Tsho-Rolpa (च्छोरोल्पा) - Na (ना) village
+### Day 3: Beding (बेदिङ्ग) - Tsho-Rolpa (च्छोरोल्पा) - Na (ना) village
 - **Altitude**: from Beding (3,721m) through Tsho-Rolpa (4,550m) to Na village (4,180m)
 - **Hiked time:** 12 hours
 
@@ -246,7 +246,7 @@ at such a high altitude.
 Sleep didn't come easily that night. The high
 altitude and the cold kept us awake despite our exhaustion. We did manage to get to sleep after a while of trying.
 
-## Day 4: Na (ना) village - Simigaun (सिमिगाउँ)
+### Day 4: Na (ना) village - Simigaun (सिमिगाउँ)
 - **Altitude**: from Na village (4,180m) to Simigaun (2,000m)
 - **Hiked time:** 12 hours
 
@@ -272,7 +272,7 @@ After a while, we had dinner and went to sleep. We planned to wake up
 early. We still had a few hours of hiking left before reaching Chhetchhet, where our motorbikes
 waited to take us home.
 
-## Day 5: Simigaun - Bhaktapur
+### Day 5: Simigaun - Bhaktapur
 - **Altitude**: from Simigaun (2,000m) to Bhaktapur (1,400m)
 - **Hiked time:** 2 hours
 - **Motorbike ride time:** 7.5 hours
@@ -298,7 +298,7 @@ Dolalghat.
 My whole body was in pain when I reached home after our grueling journey. I couldn't wait to rest
 and not do anything for the next few days.
 
-# Reflections on the journey
+## Reflections on the journey
 
 The journey was one of the best experiences of my life. The majestic views and well-maintained
 trails of the Gaurishankar Conservation Area made the hike pleasant despite the long hours.
@@ -308,7 +308,7 @@ Despite the beautiful journey, we couldn't help but wonder about the people livi
 system are underway, but they aren't enough. The risk remains unless the world acts to curb
 rising temperatures and climate change.
 
-## Things we could've done differently
+### Things we could've done differently
 Since we squeezed a 7-9 day trip into five days, we had to walk up to 12 hours a day. It felt tough at
 times. The trip could've been a lot less stressful. But we did the best we could with our time constraints.
 
@@ -316,7 +316,7 @@ If we had more time we could also have hiked to the Dudh Kunda, a beautiful lake
 
 Bringing medicines for high altitude, just in case, would've been smart. We didn't need them in the end.
 
-## Lessons learned for life
+### Lessons learned for life
 Towards the end of our daily 12-hour trek, I felt exhausted and couldn't continue.
 Stopping in the dark woods wasn't an option, so I forced myself on despite the weariness and pain.
 This made me realize that we are capable of achieving a lot and most of the time our mind is the
@@ -347,7 +347,7 @@ I felt like a different person, for the better, after my journey.
 
 <div class="article-description">
 
-### Addendum
+#### Addendum
 
 <div class="text-sm">
   - All pictures by me (Subodh Dahal) except for the ones of me. I took them all with my One Plus 8 Pro smartphone and did some post-processing.<br>

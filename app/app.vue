@@ -1,8 +1,7 @@
 <script setup>
 const description =
-  "Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer";
-const ogTitle =
-  "Subodh Dahal's musings on software engineering, automation, photography and more";
+  "Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.";
+const ogTitle = "Subodh Dahal: software, self-hosting, automation and photography";
 const mySite = "https://subodhdahal.com";
 
 useHead({
@@ -11,8 +10,10 @@ useHead({
   },
   charset: "utf-8",
   title: ogTitle,
+  // Brand suffix only when it fits: Google cuts titles at ~60 characters, and
+  // a long post title is worth more in the snippet than the site name.
   titleTemplate: (title) =>
-    title !== ogTitle ? `${title} · Subodh Dahal` : title,
+    !title || title === ogTitle || title.length > 45 ? title || ogTitle : `${title} · Subodh Dahal`,
   link: [
     { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
     { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
@@ -66,9 +67,7 @@ useSeoMeta({
   twitterDescription: description,
 });
 
-defineOgImage("SimpleBlog", {
-  title: "Subodh Dahal's musings on software engineering, automation, photography and more",
-});
+defineOgImage("SimpleBlog", { title: ogTitle });
 
 useSchemaOrg([
   defineWebSite({

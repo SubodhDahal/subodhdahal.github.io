@@ -4,6 +4,8 @@ description: Use GNU Stow and Git to keep config files in sync across Linux and 
 image: /images/configuration-management-across-os.jpg
 alt: Supercharge your Dotfiles workflow
 postDate: 2025-01-12
+seo:
+  title: "Sync dotfiles across Linux and macOS with GNU Stow and Git"
 tags:
   - developer productivity
 ---

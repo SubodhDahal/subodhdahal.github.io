@@ -207,11 +207,9 @@ useSchemaOrg([
         datePublished: postDate.value,
         dateModified: updated.value,
         articleSection: tags.value,
-        author: {
-            "@type": "Person",
-            name: "Subodh Dahal",
-            url: "https://subodhdahal.com/#about"
-        },
+        // Omitting author links it to the site-wide Person (#identity)
+        // instead of emitting a second, disconnected Person node.
+        keywords: tags.value,
     })
 ]);
 

@@ -4,6 +4,8 @@ description: Why I moved away from GitHub and chose a lightweight, community-dri
 image: /images/self-hosting-git-forge.png
 alt: Self-hosting my git forge
 postDate: 2026-04-29
+seo:
+  description: "Why I moved my Git repositories from GitHub to a self-hosted Forgejo, why I passed on GitLab, and how the lightweight, community-driven forge runs."
 tags:
   - Homelab
   - Open source

@@ -5,7 +5,7 @@ import LibraryBookEntry from '~/components/LibraryBookEntry.vue'
 import LibraryShelf from '~/components/LibraryShelf.vue'
 import { bookId, useLibrary } from '~/composables/useLibrary'
 
-const title = 'Library'
+const title = 'Library: books I recommend'
 const description =
   "Books I have read and recommend, with a short note on why each one earned its place."
 const path = '/library/'
@@ -45,6 +45,34 @@ useSeoMeta({
   twitterTitle: title,
   twitterDescription: description,
 })
+
+// Each recommended book as a schema.org Book, so the page reads as a curated
+// reading list rather than a bare image grid.
+useSchemaOrg([
+  defineWebPage({ '@type': 'CollectionPage', name: title, description }),
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Home', item: 'https://subodhdahal.com/' },
+      { name: 'Library', item: `https://subodhdahal.com${path}` },
+    ],
+  }),
+  {
+    '@type': 'ItemList',
+    name: 'Books Subodh Dahal recommends',
+    itemListElement: (data.value?.books ?? []).map((b, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Book',
+        name: b.title,
+        author: { '@type': 'Person', name: b.author },
+        image: `https://subodhdahal.com${b.image}`,
+        ...(b.year ? { datePublished: String(b.year) } : {}),
+        genre: b.genres,
+      },
+    })),
+  },
+])
 
 const bookCount = computed(() => allBooks.value.length)
 const visibleCount = computed(() => filteredBooks.value.length)

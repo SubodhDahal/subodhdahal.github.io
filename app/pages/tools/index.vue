@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const title = 'Tools'
+const title = 'Free browser tools'
 const description = 'Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.'
 const path = '/tools/'
 const url = `https://subodhdahal.com${path}`

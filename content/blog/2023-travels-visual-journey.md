@@ -4,6 +4,8 @@ description: Looking back at the best pictures from my travel adventures in 2023
 image:  /images/2023-visual-journey/cover-image.png
 alt: My 2023 in review
 postDate: 2024-01-01
+seo:
+  description: "Travel photos from 2023 across Nepal, Croatia, France, Germany, Monaco, Hungary, the Netherlands and Spain, from Plitvice Lakes to Montserrat."
 tags:
   - personal
   - travel

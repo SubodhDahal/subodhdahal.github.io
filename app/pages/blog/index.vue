@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-const title: string = 'Blog posts'
+const title: string = 'Blog: software, self-hosting and travel notes'
 const description: string = 'Notes by Subodh Dahal on software, self-hosting, NixOS, automation, developer tools, photography and hiking.'
 const image: string = ''
 const path: string = '/blog/'
@@ -45,5 +45,15 @@ useSeoMeta({
   twitterDescription: description,
   twitterImage: image || undefined
 })
+
+useSchemaOrg([
+  defineWebPage({ '@type': 'CollectionPage', name: title, description }),
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Home', item: 'https://subodhdahal.com/' },
+      { name: 'Blog', item: `https://subodhdahal.com${path}` },
+    ],
+  }),
+])
 
 </script>

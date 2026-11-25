@@ -112,7 +112,7 @@ function scrollToContent() {
 
 // Head meta tags
 const title = computed(() => article.value?.title || "");
-const description = computed(() => article.value?.description || "");
+const description = computed(() => article.value?.seo?.description || article.value?.description || "");
 const image = computed(() => article.value?.image || "");
 const url = computed(() => `https://subodhdahal.com${withTrailingSlash(path)}`);
 const postDate = computed(() => article.value?.postDate ? new Date(article.value.postDate).toISOString() : '');
@@ -150,11 +150,13 @@ useSchemaOrg([
     image: image.value,
     datePublished: postDate.value,
     dateModified: postDate.value,
-    author: {
-      "@type": "Person",
-      name: "Subodh Dahal",
-      url: "https://subodhdahal.com/#about",
-    },
+  }),
+  defineBreadcrumb({
+    itemListElement: [
+      { name: "Home", item: "https://subodhdahal.com/" },
+      { name: "Blog", item: "https://subodhdahal.com/blog/" },
+      { name: title.value || "Article", item: url.value },
+    ],
   }),
 ]);
 
