@@ -135,28 +135,48 @@ const ratioLabel = computed(() => {
   return aspectLabel(l.width, l.height)
 })
 const overLimit = computed(() => slides.value.some((s) => (sizes[s.id] ?? 0) > MAX_BYTES))
+
+// Shared utility strings for the repeated control styles
+const btn = 'min-h-10 cursor-pointer rounded-lg border border-secondary-200 bg-white px-3 py-1.5 transition-colors hover:not-disabled:border-secondary-400 active:not-disabled:translate-y-px disabled:cursor-default disabled:opacity-60 dark:border-secondary-700 dark:bg-secondary-800 dark:hover:not-disabled:border-secondary-500'
+const btnPrimary = 'min-h-10 cursor-pointer rounded-lg border border-primary-600 bg-primary-600 px-3 py-1.5 font-semibold text-white transition hover:not-disabled:brightness-110 active:not-disabled:translate-y-px disabled:cursor-default disabled:opacity-60'
+const field = 'flex flex-col gap-1 text-sm text-secondary-500 dark:text-secondary-400'
+const select = 'min-h-10 w-full cursor-pointer rounded-lg border border-secondary-200 bg-white px-3 py-1.5 text-sm text-secondary-800 transition-colors hover:border-secondary-400 dark:border-secondary-700 dark:bg-secondary-800 dark:text-secondary-50 dark:hover:border-secondary-500'
+const callout = 'mt-3 flex items-start gap-2 rounded-lg border border-orange-800/35 bg-orange-800/8 px-3 py-2.5 text-sm leading-snug text-pretty text-orange-800 dark:border-orange-400/35 dark:bg-orange-400/8 dark:text-orange-400 [&>svg]:mt-0.5 [&>svg]:size-4 [&>svg]:flex-none'
+const readoutItem = 'flex flex-col gap-0.5 border-secondary-200 px-3.5 first:pl-0 first:border-l-0 border-l sm:px-5 dark:border-secondary-700'
+const readoutLabel = 'text-xs tracking-wider text-secondary-500 uppercase dark:text-secondary-400'
+const readoutValue = 'text-base font-semibold tabular-nums sm:text-lg'
 </script>
 
 <template>
-  <div class="carousel-tool" @dragover.prevent @dragenter.prevent="onEnter" @dragleave="onLeave" @drop.prevent="onDrop">
-    <label class="drop" :class="{ empty: !slides.length, over }">
-      <svg v-if="!slides.length" class="mech" viewBox="0 0 96 72" fill="none" aria-hidden="true">
-        <rect class="mech-canvas" x="14" y="2" width="68" height="68" rx="3" />
-        <rect class="mech-photo" x="22" y="20" width="52" height="32" rx="1.5" />
+  <div class="carousel-tool font-sans text-secondary-800 dark:text-secondary-50" @dragover.prevent @dragenter.prevent="onEnter" @dragleave="onLeave" @drop.prevent="onDrop">
+    <label
+      class="drop group flex cursor-pointer flex-wrap items-center justify-center gap-2.5 rounded-xl border-2 border-dashed p-4 transition-colors has-[input:focus-visible]:outline-2 has-[input:focus-visible]:outline-offset-2 has-[input:focus-visible]:outline-primary-500"
+      :class="[
+        slides.length ? '' : 'py-16',
+        over ? 'border-primary-500 bg-primary-500/8' : 'border-secondary-200 hover:border-primary-500 focus-within:border-primary-500 dark:border-secondary-700',
+      ]"
+    >
+      <svg v-if="!slides.length" class="mech mx-auto mb-1 h-[72px] w-24 basis-full" viewBox="0 0 96 72" fill="none" aria-hidden="true">
+        <rect class="fill-white stroke-secondary-200 stroke-[1.5] dark:stroke-secondary-600" x="14" y="2" width="68" height="68" rx="3" />
+        <rect
+          class="origin-[48px_36px] fill-secondary-500 opacity-55 transition-transform duration-500 ease-out group-focus-within:scale-100 group-hover:scale-100 motion-reduce:transition-none"
+          :class="over ? 'scale-100' : 'scale-[.7]'"
+          x="22" y="20" width="52" height="32" rx="1.5"
+        />
       </svg>
-      <input type="file" accept="image/*" multiple @change="onPick" />
+      <input class="sr-only" type="file" accept="image/*" multiple @change="onPick" />
       <template v-if="over"><strong>Drop to add</strong></template>
       <template v-else><strong>Choose images</strong> or drop them here</template>
-      <small>{{ slides.length }}/{{ MAX_SLIDES }}</small>
+      <small class="text-secondary-500 dark:text-secondary-400">{{ slides.length }}/{{ MAX_SLIDES }}</small>
     </label>
-    <p v-if="notice" class="notice">{{ notice }}</p>
+    <p v-if="notice" :class="[callout, 'notice']" role="status"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.2" /><path d="M8 7.2v3.6M8 5v.1" /></svg><span>{{ notice }}</span></p>
 
     <template v-if="layout">
-      <section class="controls">
-        <PaddingControl v-model="padPct" class="grow" />
-        <label class="ctl">
+      <section class="mt-5 grid grid-cols-2 items-end gap-x-4 gap-y-3 sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-4">
+        <PaddingControl v-model="padPct" class="col-span-2 sm:flex-[1_1_280px]" />
+        <label :class="field">
           Aspect ratio
-          <select v-model="ratio">
+          <select v-model="ratio" :class="select">
             <option value="auto">Auto (fit images)</option>
             <option value="0.8">4:5 portrait</option>
             <option value="1">1:1 square</option>
@@ -164,60 +184,77 @@ const overLimit = computed(() => slides.value.some((s) => (sizes[s.id] ?? 0) > M
             <option value="0.75">3:4 (app only)</option>
           </select>
         </label>
-        <label class="ctl">
+        <label :class="field">
           Export width
-          <select v-model="exportWidth">
+          <select v-model="exportWidth" :class="select">
             <option value="original">Original</option>
             <option :value="1080">1080 (best for Instagram)</option>
             <option :value="1440">1440</option>
           </select>
         </label>
-        <label class="ctl">
+        <label :class="field">
           Format
-          <select v-model="format">
+          <select v-model="format" :class="select">
             <option value="jpeg">JPEG 95%</option>
             <option value="png">PNG (text/graphics)</option>
           </select>
         </label>
-        <label class="ctl check"><input v-model="allow34" type="checkbox" /> Allow 3:4 (app only)</label>
+        <label class="col-span-2 flex min-h-10 cursor-pointer items-center gap-2 sm:col-auto">
+          <input v-model="allow34" type="checkbox" class="m-0 size-[1.1rem] flex-none accent-primary-600" /> Allow 3:4 (app only)
+        </label>
       </section>
 
-      <p class="info">
-        Canvas <b>{{ layout.width }} × {{ layout.height }}</b> ({{ ratioLabel }})
-        <span v-if="layout.clamped && ratio === 'auto'"> · extra {{ layout.clamped === 'tall' ? 'side' : 'top/bottom' }} padding added to fit Instagram's {{ allow34 ? '3:4' : '4:5' }}–1.91:1 range</span>
-      </p>
-      <p v-if="overLimit" class="warn">Some files exceed Instagram's 8 MB limit. Use JPEG or a smaller export width.</p>
+      <div class="info mt-4 mb-1">
+        <dl class="m-0 flex flex-wrap gap-y-2.5 border-y border-secondary-200 py-3 dark:border-secondary-700">
+          <div :class="readoutItem"><dt :class="readoutLabel">Canvas</dt><dd :class="readoutValue" class="m-0">{{ layout.width }} × {{ layout.height }} px</dd></div>
+          <div :class="readoutItem"><dt :class="readoutLabel">Aspect ratio</dt><dd :class="readoutValue" class="m-0">{{ ratioLabel }}</dd></div>
+          <div :class="readoutItem"><dt :class="readoutLabel">Slides</dt><dd :class="readoutValue" class="m-0">{{ slides.length }}</dd></div>
+        </dl>
+        <p v-if="layout.clamped && ratio === 'auto'" class="mt-2.5 max-w-[70ch] text-sm text-pretty text-secondary-500 dark:text-secondary-400">
+          Extra {{ layout.clamped === 'tall' ? 'side' : 'top/bottom' }} padding added to fit Instagram's {{ allow34 ? '3:4' : '4:5' }}–1.91:1 range.
+        </p>
+      </div>
+      <p v-if="overLimit" :class="callout" role="alert"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2l6.2 11H1.8z" /><path d="M8 6.8v3M8 12v.1" /></svg><span>Some files exceed Instagram's 8 MB limit. Use JPEG or a smaller export width.</span></p>
 
-      <draggable v-model="slides" item-key="id" class="grid" :animation="150" ghost-class="ghost">
+      <draggable v-model="slides" item-key="id" class="grid mt-4 mb-1 grid-cols-2 gap-2.5 sm:grid-cols-[repeat(auto-fill,minmax(200px,1fr))] sm:gap-4" :animation="150" ghost-class="opacity-40">
         <template #item="{ element, index }">
-          <figure class="card" :style="{ '--i': Math.min(index, 8) }">
-            <span class="num">{{ index + 1 }}</span>
-            <button class="x" :aria-label="`Remove ${element.name}`" @click="remove(element.id)">
-              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" /></svg>
+          <figure
+            class="card relative m-0 min-w-0 animate-settle cursor-grab overflow-hidden rounded-[10px] border border-secondary-200 bg-white [animation-delay:calc(var(--i)*40ms)] motion-reduce:animate-none dark:border-secondary-700 dark:bg-secondary-800"
+            :style="{ '--i': Math.min(index, 8) }"
+          >
+            <span class="num absolute top-1.5 left-1.5 z-10 rounded-full bg-black/70 px-2 text-xs leading-[1.4] text-white tabular-nums">{{ index + 1 }}</span>
+            <button
+              class="x absolute top-1 right-1 z-10 grid size-7 min-h-0 cursor-pointer place-items-center rounded-full border-0 bg-black/70 p-0 text-white transition-colors after:absolute after:-inset-2 after:content-[''] hover:bg-black/90"
+              :aria-label="`Remove ${element.name}`" @click="remove(element.id)"
+            >
+              <svg class="size-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" /></svg>
             </button>
-            <div class="thumb" @click="viewerAt = index">
+            <div class="thumb cursor-zoom-in border-b border-secondary-200 dark:border-secondary-700" @click="viewerAt = index">
               <SlideCanvas :bitmap="element.bitmap" :layout="layout" :width="480" />
             </div>
-            <figcaption>
-              <span class="name" :title="element.name">{{ element.name }}</span>
-              <span class="meta">
-                <span class="line">{{ element.bitmap.width }}×{{ element.bitmap.height }} · {{ aspectLabel(element.bitmap.width, element.bitmap.height) }}</span>
-                <span class="line" :class="{ bad: (sizes[element.id] ?? 0) > MAX_BYTES }">{{ sizes[element.id] ? formatBytes(sizes[element.id]) : '…' }}</span>
+            <figcaption class="flex flex-col gap-0.5 px-2.5 pt-2 pb-2.5 text-xs">
+              <span class="name truncate" :title="element.name">{{ element.name }}</span>
+              <span class="meta flex flex-col text-secondary-500 tabular-nums dark:text-secondary-400">
+                <span>{{ element.bitmap.width }}×{{ element.bitmap.height }} · {{ aspectLabel(element.bitmap.width, element.bitmap.height) }}</span>
+                <span :class="(sizes[element.id] ?? 0) > MAX_BYTES ? 'font-semibold text-red-600 dark:text-red-400' : ''">{{ sizes[element.id] ? formatBytes(sizes[element.id]) : '…' }}</span>
               </span>
-              <button class="link" :aria-label="`Download ${element.name}`" @click="downloadOne(index)">Download</button>
+              <button
+                class="link cursor-pointer self-start border-0 bg-transparent p-0 py-1.5 text-primary-700 underline-offset-[.2em] hover:underline pointer-coarse:py-2.5 dark:text-primary-300"
+                :aria-label="`Download ${element.name}`" @click="downloadOne(index)"
+              >Download</button>
             </figcaption>
           </figure>
         </template>
       </draggable>
-      <p class="hint">Drag to reorder. The first slide sets the frame on Instagram. Click a slide to preview swiping.</p>
+      <p class="mt-2 max-w-[70ch] text-sm text-pretty text-secondary-500 dark:text-secondary-400">Drag to reorder. The first slide sets the frame on Instagram. Click a slide to preview swiping.</p>
 
-      <div class="actions">
-        <button class="primary" :disabled="busy" @click="downloadZip">{{ busy ? 'Building…' : 'Download all as ZIP' }}</button>
-        <button @click="viewerAt = 0">Preview carousel</button>
-        <button @click="clearAll">Clear</button>
-        <span class="saved" role="status" aria-live="polite">
+      <div class="mt-4 flex flex-wrap items-center gap-2.5">
+        <button :class="[btnPrimary, 'max-sm:basis-full']" :disabled="busy" @click="downloadZip">{{ busy ? 'Building…' : 'Download all as ZIP' }}</button>
+        <button :class="[btn, 'max-sm:flex-auto']" @click="viewerAt = 0">Preview carousel</button>
+        <button :class="[btn, 'max-sm:flex-auto']" @click="clearAll">Clear</button>
+        <span class="inline-flex items-center gap-1.5 text-sm text-secondary-500 tabular-nums max-sm:basis-full dark:text-secondary-400" role="status" aria-live="polite">
           <template v-if="saved">
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" /></svg>
+            <svg class="size-3.5 text-primary-700 dark:text-primary-300" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" /></svg>
             {{ saved }}
           </template>
         </span>
@@ -227,98 +264,3 @@ const overLimit = computed(() => slides.value.some((s) => (sizes[s.id] ?? 0) > M
     <Viewer v-if="viewerAt !== null && layout" :slides="slides" :layout="layout" :start="viewerAt" v-model:pad-pct="padPct" @close="viewerAt = null" />
   </div>
 </template>
-
-<style>
-@keyframes carousel-settle { from { opacity:0; transform: translateY(6px) scale(.98); } }
-.carousel-tool {
-/* Site tokens (see app/assets/css/main.css); dark mode follows the site's .dark class */
-& {
-  --fg: var(--color-secondary-800); --card: #fff; --line: var(--color-secondary-200); --muted: var(--color-secondary-500);
-  --accent: var(--color-primary-500);       /* borders, hover cues, active dot */
-  --accent-fill: var(--color-primary-600);  /* filled button (white text >= 4.5:1) */
-  --link: var(--color-primary-700);
-  --warn: #b3380a; --bad: #dc2626;
-  font-family: var(--font-sans);
-  color: var(--fg);
-}
-:where(.dark) & {
-  --fg: var(--color-secondary-50); --card: var(--color-secondary-800); --line: var(--color-secondary-700); --muted: var(--color-secondary-400);
-  --link: var(--color-primary-300); --accent-fill: var(--color-primary-600); --warn: #fb923c; --bad: #f87171;
-}
-*, *::before, *::after { box-sizing: border-box; }
-::selection { background: color-mix(in srgb, var(--accent) 35%, transparent); }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-padding-bottom: 4rem;
-
-.drop { display:flex; gap:.6rem; align-items:center; justify-content:center; flex-wrap:wrap; border:2px dashed var(--line); border-radius:12px; padding:1rem; cursor:pointer; transition: border-color .15s; }
-.drop.empty { padding: 4rem 1rem; }
-.drop:hover, .drop:focus-within { border-color: var(--accent); }
-.drop:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
-.drop input { position:absolute; width:1px; height:1px; opacity:0; overflow:hidden; clip-path: inset(50%); }
-.drop small { color: var(--muted); }
-.drop.over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
-.mech { flex: 0 0 100%; width: 96px; height: 72px; margin: 0 auto .3rem; }
-.mech-canvas { fill: #fff; stroke: var(--line); stroke-width: 1.5; }
-.mech-photo { fill: var(--muted); opacity: .55; transform-origin: 48px 36px; transform: scale(.7); transition: transform .5s cubic-bezier(.16,1,.3,1); }
-.drop:hover .mech-photo, .drop.over .mech-photo, .drop:focus-within .mech-photo { transform: scale(1); }
-.notice, .warn { color:var(--warn); font-size:.9rem; }
-
-.controls { display:flex; flex-wrap:wrap; gap:1rem 1.5rem; margin:1.2rem 0 .6rem; align-items:flex-end; }
-.ctl { display:flex; flex-direction:column; gap:.3rem; font-size:.85rem; color:var(--muted); }
-.ctl.grow, .padctl.grow { flex:1 1 280px; }
-.ctl-head { display:flex; justify-content:space-between; gap:.5rem; }
-.ctl.check { flex-direction:row; align-items:center; gap:.5rem; color:var(--fg); min-height:2.4rem; cursor:pointer; }
-.ctl b { color:var(--fg); font-variant-numeric: tabular-nums; }
-input[type=range], input[type=checkbox] { accent-color: var(--accent-fill); }
-input[type=range] { width:100%; margin:.35rem 0; }
-input[type=checkbox] { width:1.1rem; height:1.1rem; margin:0; flex:none; }
-select, button { font:inherit; padding:.45rem .7rem; min-height:2.4rem; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--fg); cursor:pointer; transition: border-color .15s, background-color .15s, filter .15s; }
-select:hover, button:hover:not(:disabled) { border-color: var(--muted); }
-button.primary { background:var(--accent-fill); border-color:var(--accent-fill); color:#fff; font-weight:600; }
-button.primary:hover:not(:disabled) { filter: brightness(1.08); border-color: var(--accent-fill); }
-button:active:not(:disabled) { transform: translateY(1px); }
-button:disabled { opacity:.6; cursor:default; }
-
-.info { font-size:.9rem; color:var(--muted); margin:.4rem 0; }
-.info b { color:var(--fg); font-variant-numeric: tabular-nums; }
-.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin:1rem 0 .4rem; }
-.card { position:relative; margin:0; background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; cursor:grab; min-width:0; }
-.card.ghost { opacity:.4; }
-.card { animation: carousel-settle .35s cubic-bezier(.16,1,.3,1) both; animation-delay: calc(var(--i, 0) * 40ms); }
-.thumb { cursor:zoom-in; border-bottom:1px solid var(--line); }
-.num { position:absolute; top:6px; left:6px; background:rgba(0,0,0,.7); color:#fff; font-size:.75rem; line-height:1.4; border-radius:99px; padding:1px 8px; z-index:1; font-variant-numeric: tabular-nums; }
-.x { position:absolute; top:4px; right:4px; z-index:1; display:grid; place-items:center; width:28px; height:28px; min-height:0; padding:0; border-radius:99px; background:rgba(0,0,0,.7); color:#fff; border:0; }
-.x::after { content:""; position:absolute; inset:-8px; } /* 44px hit area */
-.x:hover:not(:disabled) { background:rgba(0,0,0,.9); }
-.x svg { width:12px; height:12px; }
-figcaption { display:flex; flex-direction:column; gap:.15rem; padding:.5rem .6rem .6rem; font-size:.8rem; }
-.name { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.meta { color:var(--muted); font-variant-numeric: tabular-nums; }
-.meta .line { display:block; }
-.bad { color:var(--bad); font-weight:600; }
-.link { align-self:flex-start; min-height:0; padding:.35rem 0; border:0; background:none; color:var(--link); text-underline-offset:.2em; }
-.link:hover:not(:disabled) { text-decoration:underline; border-color:transparent; }
-.hint { font-size:.8rem; color:var(--muted); }
-.actions { display:flex; gap:.6rem; flex-wrap:wrap; align-items:center; margin-top:1rem; }
-.saved { display:inline-flex; align-items:center; gap:.35rem; font-size:.85rem; color:var(--muted); font-variant-numeric: tabular-nums; }
-.saved svg { width:14px; height:14px; color:var(--link); }
-@media (prefers-reduced-motion: reduce) {
-  .card { animation: none; }
-  .mech-photo { transition: none; }
-}
-
-@media (max-width: 600px) {
-  .controls { display:grid; grid-template-columns: 1fr 1fr; gap:.8rem 1rem; align-items:end; }
-  .ctl.grow, .padctl.grow, .ctl.check { grid-column: 1 / -1; }
-  .ctl select { width:100%; }
-  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap:.6rem; }
-  .actions button { flex: 1 1 auto; }
-  .actions .primary { flex-basis: 100%; }
-  .saved { flex-basis: 100%; }
-}
-@media (pointer: coarse) {
-  .link { padding: .6rem 0; }
-}
-
-}
-</style>

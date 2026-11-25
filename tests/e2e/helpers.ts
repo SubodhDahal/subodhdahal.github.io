@@ -53,6 +53,8 @@ export async function makeExifJpeg(page: Page, name: string, orientation = 6): P
 export async function upload(page: Page, files: TestFile[]) {
   await page.setInputFiles('input[type=file]', files)
   await expect(page.locator('.card')).toHaveCount(files.length)
+  // Cards animate in; dragging mid-animation makes Sortable measure moving positions.
+  await page.waitForFunction(() => document.getAnimations().every((a) => a.playState !== 'running'))
 }
 
 /** Controls, by their label text. */

@@ -11,14 +11,5 @@ watch(() => [props.bitmap, props.layout, props.width], draw)
 </script>
 
 <template>
-  <canvas ref="el" class="slide-canvas" />
+  <canvas ref="el" class="slide-canvas block h-auto w-full bg-white" />
 </template>
-
-<style scoped>
-.slide-canvas {
-  display: block;
-  width: 100%;
-  height: auto;
-  background: #fff;
-}
-</style>
