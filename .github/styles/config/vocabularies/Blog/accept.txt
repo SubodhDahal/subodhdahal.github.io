@@ -88,6 +88,12 @@ O'Reilly
 # flags it because the canonical form is "e.g." with periods, but the
 # inline style is consistent across posts.
 (?i)eg
+# write-good v0.5.0 added "few" and "many" to write-good.Weasel. "a few
+# days" / "many posts" are plain quantities in the blog's voice, not
+# hedges. Listing them here exempts them from Weasel while the rest of
+# the rule stays on.
+(?i)few
+(?i)many
 
 # ------------------------------------------------------------------
 # Technical terms & jargon (casing not enforced)
