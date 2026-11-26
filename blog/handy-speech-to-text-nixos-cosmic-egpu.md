@@ -8,7 +8,7 @@ canonical_url: "https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-e
 
 I installed [Handy](https://github.com/cjpais/Handy), an offline speech-to-text app, on NixOS and pressed the shortcut. The tray icon stayed a hand and nothing happened. During onboarding the shortcut did fire and Handy copied the transcript to the clipboard, but the transcript never appeared in the onboarding textbox. After onboarding, nothing worked at all.
 
-For context, here's my setup: NixOS with kernel 6.18, COSMIC on Wayland, Handy 0.10.1 with the `parakeet-unified-en-0.6b` model, and an RTX 3060 Ti in a Thunderbolt enclosure (see [the eGPU hotplug post](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos)).
+For context, here's my setup: NixOS with kernel 6.18, COSMIC on Wayland, Handy 0.10.1 with the `parakeet-unified-en-0.6b` model, and an RTX 3060 Ti in a Thunderbolt enclosure (see [the eGPU hotplug post](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)).
 
 ## Intel was 5x slower than the eGPU, but slow still works
 

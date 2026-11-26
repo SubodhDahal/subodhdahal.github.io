@@ -71,6 +71,25 @@ From Bhaktapur 🇳🇵·Based in Stuttgart 🇩🇪
 
 ---
 
+- **Page:** Library: books I recommend · Subodh Dahal
+- **Source:** https://subodhdahal.com/library
+- **Description:** Books I have read and recommend, with a short note on why each one earned its place.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
+```
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/library/#webpage","description":"Books I have read and recommend, with a short note on why each one earned its place.","name":"Library: books I recommend","url":"https://subodhdahal.com/library/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/library/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/library/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/library/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Library","item":"https://subodhdahal.com/library/","position":2}]},{"@id":"https://subodhdahal.com/library/#/schema/item-list/1","@type":"ItemList","name":"Books Subodh Dahal recommends","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Book","name":"Player Piano","author":{"@type":"Person","name":"Kurt Vonnegut Jr."},"image":"https://subodhdahal.complayer-piano.jpg","genre":["Fiction"]}},{"@type":"ListItem","position":2,"item":{"@type":"Book","name":"Brave New World","author":{"@type":"Person","name":"Aldous Huxley"},"image":"https://subodhdahal.combrave-new-world.jpg","genre":["Fiction"]}},{"@type":"ListItem","position":3,"item":{"@type":"Book","name":"Dune","author":{"@type":"Person","name":"Frank Herbert"},"image":"https://subodhdahal.comdune.jpg","genre":["Fiction"]}},{"@type":"ListItem","position":4,"item":{"@type":"Book","name":"Factfulness","author":{"@type":"Person","name":"Hans Rosling, Anna Rosling Rönnlund, and Ola Rosling"},"image":"https://subodhdahal.comfactfulness.jpg","genre":["Non-fiction"]}},{"@type":"ListItem","position":5,"item":{"@type":"Book","name":"Atomic Habits","author":{"@type":"Person","name":"James Clear"},"image":"https://subodhdahal.comatomic-habits.jpg","genre":["Self-help"]}},{"@type":"ListItem","position":6,"item":{"@type":"Book","name":"Stillness Is the Key","author":{"@type":"Person","name":"Ryan Holiday"},"image":"https://subodhdahal.comstillness-is-the-key.jpg","genre":["Self-help","Philosophy"]}},{"@type":"ListItem","position":7,"item":{"@type":"Book","name":"Indistractable","author":{"@type":"Person","name":"Nir Eyal"},"image":"https://subodhdahal.comindistractable.jpg","genre":["Self-help"]}},{"@type":"ListItem","position":8,"item":{"@type":"Book","name":"Show Your Work","author":{"@type":"Person","name":"Austin Kleon"},"image":"https://subodhdahal.comshow-your-work.jpg","genre":["Self-help","Creativity"]}},{"@type":"ListItem","position":9,"item":{"@type":"Book","name":"Deep Work","author":{"@type":"Person","name":"Cal Newport"},"image":"https://subodhdahal.comdeep-work.jpg","genre":["Self-help"]}}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
 - **Page:** Impressum · Subodh Dahal
 - **Source:** https://subodhdahal.com/impressum
 - **Description:** Impressum (legal notice) for subodhdahal.com.
@@ -106,223 +125,6 @@ meta:
 
 ```json
 {"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/impressum/#webpage","@type":"WebPage","description":"Impressum (legal notice) for subodhdahal.com.","name":"Impressum","url":"https://subodhdahal.com/impressum/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/impressum/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
-```
-
----
-
-- **Page:** Library: books I recommend · Subodh Dahal
-- **Source:** https://subodhdahal.com/library
-- **Description:** Books I have read and recommend, with a short note on why each one earned its place.
-
-```yaml
-meta:
-  og:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
-  og:image:height: "600"
-  og:image:type: image/png
-  og:image:width: "1200"
-  twitter:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
-```
-
-```json
-{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/library/#webpage","description":"Books I have read and recommend, with a short note on why each one earned its place.","name":"Library: books I recommend","url":"https://subodhdahal.com/library/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/library/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/library/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/library/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Library","item":"https://subodhdahal.com/library/","position":2}]},{"@id":"https://subodhdahal.com/library/#/schema/item-list/1","@type":"ItemList","name":"Books Subodh Dahal recommends","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Book","name":"Player Piano","author":{"@type":"Person","name":"Kurt Vonnegut Jr."},"image":"https://subodhdahal.complayer-piano.jpg","genre":["Fiction"]}},{"@type":"ListItem","position":2,"item":{"@type":"Book","name":"Brave New World","author":{"@type":"Person","name":"Aldous Huxley"},"image":"https://subodhdahal.combrave-new-world.jpg","genre":["Fiction"]}},{"@type":"ListItem","position":3,"item":{"@type":"Book","name":"Dune","author":{"@type":"Person","name":"Frank Herbert"},"image":"https://subodhdahal.comdune.jpg","genre":["Fiction"]}},{"@type":"ListItem","position":4,"item":{"@type":"Book","name":"Factfulness","author":{"@type":"Person","name":"Hans Rosling, Anna Rosling Rönnlund, and Ola Rosling"},"image":"https://subodhdahal.comfactfulness.jpg","genre":["Non-fiction"]}},{"@type":"ListItem","position":5,"item":{"@type":"Book","name":"Atomic Habits","author":{"@type":"Person","name":"James Clear"},"image":"https://subodhdahal.comatomic-habits.jpg","genre":["Self-help"]}},{"@type":"ListItem","position":6,"item":{"@type":"Book","name":"Stillness Is the Key","author":{"@type":"Person","name":"Ryan Holiday"},"image":"https://subodhdahal.comstillness-is-the-key.jpg","genre":["Self-help","Philosophy"]}},{"@type":"ListItem","position":7,"item":{"@type":"Book","name":"Indistractable","author":{"@type":"Person","name":"Nir Eyal"},"image":"https://subodhdahal.comindistractable.jpg","genre":["Self-help"]}},{"@type":"ListItem","position":8,"item":{"@type":"Book","name":"Show Your Work","author":{"@type":"Person","name":"Austin Kleon"},"image":"https://subodhdahal.comshow-your-work.jpg","genre":["Self-help","Creativity"]}},{"@type":"ListItem","position":9,"item":{"@type":"Book","name":"Deep Work","author":{"@type":"Person","name":"Cal Newport"},"image":"https://subodhdahal.comdeep-work.jpg","genre":["Self-help"]}}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
-```
-
----
-
-- **Page:** Free browser tools · Subodh Dahal
-- **Source:** https://subodhdahal.com/tools
-- **Description:** Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.
-
-```yaml
-meta:
-  og:image: https://subodhdahal.com/_og/s/o_ffcc277b95306b53.png
-  og:image:height: "600"
-  og:image:type: image/png
-  og:image:width: "1200"
-  twitter:image: https://subodhdahal.com/_og/s/o_ffcc277b95306b53.png
-```
-
-# **Tools **
-
-*Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.*
-
-- [<h2>**Instagram carousel white border tool**</h2>
-
-  Put portrait and landscape photos on one white canvas with an even border so Instagram doesn't crop your carousel. Runs in your browser.](https://subodhdahal.com/tools/instagram-carousel/)
-
-```json
-{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/tools/#webpage","description":"Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.","name":"Free browser tools","url":"https://subodhdahal.com/tools/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/tools/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/tools/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/tools/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Free browser tools","item":"https://subodhdahal.com/tools/","position":2}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
-```
-
----
-
-- **Page:** Instagram Carousel White Border Tool (No Crop)
-- **Source:** https://subodhdahal.com/tools/instagram-carousel
-- **Description:** Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.
-
-```yaml
-meta:
-  og:image: https://subodhdahal.com/_og/s/o_7b4d279de2f79e5f.png
-  og:image:height: "600"
-  og:image:type: image/png
-  og:image:width: "1200"
-  twitter:image: https://subodhdahal.com/_og/s/o_7b4d279de2f79e5f.png
-```
-
-# **Instagram carousel white border tool**
-
-Put portrait, landscape and square photos on one white canvas with an even border, so Instagram doesn't crop your carousel and mixed photos sit in the same frame like gallery prints.
-
-Free, no sign-up. Everything runs in your browser and your images never leave your device. This page uses Rybbit for cookieless pageview analytics only ([privacy policy](https://subodhdahal.com/privacy/)).
-
-## How to add white borders to an Instagram carousel
-
-1. Drop your photos onto the page, or pick them from your device. Drag the slides to change their order.
-2. Leave the aspect ratio on **Auto**, or force 4:5, 1:1, 1.91:1 or 3:4.
-3. Move the padding slider until the border looks right. Click any slide to swipe through a preview.
-4. Choose **1080** as the export width for files sized exactly for Instagram, then download the ZIP.
-5. In Instagram, select the slides in their numbered order. They already share one shape, so nothing gets cropped.
-
-## How Auto picks the canvas shape
-
-Instagram makes every slide in a carousel the same shape and crops anything that doesn't fit. Auto looks at every photo in the set and picks the ratio within Instagram's 1.91:1 to 4:5 range that leaves the least empty space overall. Three tall photos and one wide one end up on a 4:5 canvas, with white above and below the wide photo. A set of mostly wide photos gets a landscape canvas instead.
-
-The canvas is the smallest one that holds every photo at its native resolution, so no photo is scaled up. Photos taller than 4:5 or wider than 1.91:1 get extra white on the sides or top and bottom, so they still fit without being cropped.
-
-## Instagram carousel sizes
-
-| Shape | Ratio | Size at 1080 wide |
-| --- | --- | --- |
-| Portrait | 4:5 | 1080 × 1350 px |
-| Tall portrait (app only) | 3:4 | 1080 × 1440 px |
-| Square | 1:1 | 1080 × 1080 px |
-| Landscape | 1.91:1 | 1080 × 566 px |
-
-A carousel holds up to 20 slides. Portrait 4:5 takes up the most room in the feed on every surface, which is why Auto leans toward it when the set has tall photos.
-
-## Questions
-
-<details>
-
-<summary>
-
-### Why not just use Instagram's Mixed option?
-
-</summary>
-
-Instagram's Mixed option keeps each photo's shape, but it fills the empty space with a background that follows the app's light or dark theme, and you can't control its color or size. This tool bakes an even white border into every image, so the carousel looks the same for every viewer.
-
-</details>
-
-<details>
-
-<summary>
-
-### How do I post portrait and landscape photos in one carousel without cropping?
-
-</summary>
-
-Add all the photos here, keep the aspect ratio on Auto, and download the ZIP. Every slide comes out at the same canvas size with the whole photo inside it, so Instagram has nothing to crop. Upload the slides in the numbered order.
-
-</details>
-
-<details>
-
-<summary>
-
-### What size should Instagram carousel images be?
-
-</summary>
-
-Instagram stores posts at 1080 pixels wide, with an aspect ratio between 1.91:1 (1080 × 566) and 4:5 (1080 × 1350). The app also accepts 3:4 (1080 × 1440). Every slide in a carousel should share one ratio. Choose the 1080 export width here for files sized exactly for Instagram.
-
-</details>
-
-<details>
-
-<summary>
-
-### Are my photos uploaded anywhere?
-
-</summary>
-
-No. The images are decoded, padded and encoded by your browser on your own device. Nothing is sent to a server.
-
-</details>
-
-<details>
-
-<summary>
-
-### How many photos can I add?
-
-</summary>
-
-Up to 20, which is the most Instagram allows in one carousel. The tool also warns you when a slide is larger than 8 MB.
-
-</details>
-
-<details>
-
-<summary>
-
-### How wide should the white border be?
-
-</summary>
-
-Padding is a percentage of the shared photo area, from 0 to 20%. Around 5% reads as a thin frame and around 10% looks like a matted gallery print. At 0% the photos still share one canvas, with white only where their shapes differ.
-
-</details>
-
-<details>
-
-<summary>
-
-### Should I export JPEG or PNG?
-
-</summary>
-
-JPEG at 95% quality suits photos and keeps files small. PNG is lossless and better for screenshots, text or flat graphics, but the files are much larger.
-
-</details>
-
-<details>
-
-<summary>
-
-### Can I use a border color other than white?
-
-</summary>
-
-Not yet, the padding is always white. If you want another color, open an issue on GitHub and say what you would use it for.
-
-</details>
-
-I built this for posting photos from hikes and trips, and wrote about why in [a post about the carousel padding tool](https://subodhdahal.com/blog/instagram-carousel-padding-tool/).
-
-Found a bug or want a feature? Please [**open an issue on GitHub**](https://github.com/SubodhDahal/subodhdahal.github.io/issues/new).
-
-```json
-{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#webpage","description":"Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.","name":"Instagram Carousel White Border Tool (No Crop)","url":"https://subodhdahal.com/tools/instagram-carousel/","@type":["WebPage","FAQPage"],"breadcrumb":{"@id":"https://subodhdahal.com/tools/instagram-carousel/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"mainEntity":[{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/1"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/2"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/3"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/4"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/5"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/6"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/7"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/8"}],"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/tools/instagram-carousel/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Tools","item":"https://subodhdahal.com/tools/","position":2},{"@type":"ListItem","name":"Instagram carousel white border tool","item":"https://subodhdahal.com/tools/instagram-carousel/","position":3}]},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/1","@type":"Question","inLanguage":"en","name":"Why not just use Instagram's Mixed option?","acceptedAnswer":{"@type":"Answer","text":"Instagram's Mixed option keeps each photo's shape, but it fills the empty space with a background that follows the app's light or dark theme, and you can't control its color or size. This tool bakes an even white border into every image, so the carousel looks the same for every viewer."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/2","@type":"Question","inLanguage":"en","name":"How do I post portrait and landscape photos in one carousel without cropping?","acceptedAnswer":{"@type":"Answer","text":"Add all the photos here, keep the aspect ratio on Auto, and download the ZIP. Every slide comes out at the same canvas size with the whole photo inside it, so Instagram has nothing to crop. Upload the slides in the numbered order."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/3","@type":"Question","inLanguage":"en","name":"What size should Instagram carousel images be?","acceptedAnswer":{"@type":"Answer","text":"Instagram stores posts at 1080 pixels wide, with an aspect ratio between 1.91:1 (1080 × 566) and 4:5 (1080 × 1350). The app also accepts 3:4 (1080 × 1440). Every slide in a carousel should share one ratio. Choose the 1080 export width here for files sized exactly for Instagram."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/4","@type":"Question","inLanguage":"en","name":"Are my photos uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. The images are decoded, padded and encoded by your browser on your own device. Nothing is sent to a server."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/5","@type":"Question","inLanguage":"en","name":"How many photos can I add?","acceptedAnswer":{"@type":"Answer","text":"Up to 20, which is the most Instagram allows in one carousel. The tool also warns you when a slide is larger than 8 MB."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/6","@type":"Question","inLanguage":"en","name":"How wide should the white border be?","acceptedAnswer":{"@type":"Answer","text":"Padding is a percentage of the shared photo area, from 0 to 20%. Around 5% reads as a thin frame and around 10% looks like a matted gallery print. At 0% the photos still share one canvas, with white only where their shapes differ."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/7","@type":"Question","inLanguage":"en","name":"Should I export JPEG or PNG?","acceptedAnswer":{"@type":"Answer","text":"JPEG at 95% quality suits photos and keeps files small. PNG is lossless and better for screenshots, text or flat graphics, but the files are much larger."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/8","@type":"Question","inLanguage":"en","name":"Can I use a border color other than white?","acceptedAnswer":{"@type":"Answer","text":"Not yet, the padding is always white. If you want another color, open an issue on GitHub and say what you would use it for."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/web-application/1","@type":"WebApplication","applicationCategory":"MultimediaApplication","browserRequirements":"Requires JavaScript and a modern browser","description":"Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.","isAccessibleForFree":true,"name":"Instagram Carousel White Border Tool (No Crop)","operatingSystem":"Any","screenshot":"https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png","url":"https://subodhdahal.com/tools/instagram-carousel/","alternateName":["Instagram Carousel Tools","Instagram white border maker","Instagram no crop tool"],"author":{"@id":"https://subodhdahal.com/#identity"},"featureList":["Pads every photo onto one shared canvas so Instagram does not crop it","Even white border from 0 to 20%","Auto aspect ratio, or fixed 4:5, 1:1, 1.91:1 or 3:4","Export at original size, 1080 or 1440 px wide","JPEG or PNG, downloaded as a ZIP","Up to 20 slides, matching the Instagram carousel limit","Runs entirely in the browser; images are never uploaded"],"offers":{"@type":"Offer","price":0,"priceCurrency":"USD"}},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
-```
-
----
-
-- **Page:** Photography · Subodh Dahal
-- **Source:** https://subodhdahal.com/photography
-- **Description:** Photos from Nepal and trips around Europe, hung as small previews on one wall.
-
-```yaml
-meta:
-  og:image: https://subodhdahal.com/_og/s/o_4df283f00c72087a.png
-  og:image:height: "600"
-  og:image:type: image/png
-  og:image:width: "1200"
-  twitter:image: https://subodhdahal.com/_og/s/o_4df283f00c72087a.png
-```
-
-```json
-{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/photography/#webpage","description":"Photos from Nepal and trips around Europe, hung as small previews on one wall.","name":"Photography","url":"https://subodhdahal.com/photography/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/photography/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/photography/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/photography/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Photography","item":"https://subodhdahal.com/photography/","position":2}]},{"@id":"https://subodhdahal.com/photography/#/schema/image-gallery/1","@type":"ImageGallery","description":"Photos from Nepal and trips around Europe, hung as small previews on one wall.","name":"Photography by Subodh Dahal","url":"https://subodhdahal.com/photography/","image":[{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/st-bartholomae-koenigssee-1200.webp","name":"St. Bartholomä","caption":"St. Bartholomä, Königssee, Germany · 2026","contentLocation":{"@type":"Place","name":"Königssee, Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":801},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/chitwan-snow-peaks-1200.webp","name":"Snow above the jungle","caption":"Snow above the jungle, Chitwan, Nepal · 2026","contentLocation":{"@type":"Place","name":"Chitwan, Nepal"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/trajans-column-1200.webp","name":"Trajan's Column","caption":"Trajan's Column, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":899},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/lichtenstein-castle-1200.webp","name":"Castle in the mist","caption":"Castle in the mist, Lichtenstein Castle, Germany · 2025","contentLocation":{"@type":"Place","name":"Lichtenstein Castle, Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":900,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/bee-on-scabious-1200.webp","name":"Visitor","caption":"Visitor, Germany · 2026","contentLocation":{"@type":"Place","name":"Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/tower-bridge-1200.webp","name":"Tower Bridge","caption":"Tower Bridge, London, England · 2026","contentLocation":{"@type":"Place","name":"London, England"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":802},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/chitwan-morning-light-1200.webp","name":"Morning light","caption":"Morning light, Chitwan, Nepal · 2026","contentLocation":{"@type":"Place","name":"Chitwan, Nepal"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/palma-cathedral-1200.webp","name":"La Seu","caption":"La Seu, Palma, Mallorca · 2025","contentLocation":{"@type":"Place","name":"Palma, Mallorca"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":900},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/autumn-pair-1200.webp","name":"Yellow and orange","caption":"Yellow and orange, Germany · 2026","contentLocation":{"@type":"Place","name":"Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/colosseum-1200.webp","name":"Colosseum","caption":"Colosseum, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":899},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/buckingham-palace-gates-1200.webp","name":"Palace gates","caption":"Palace gates, London, England · 2026","contentLocation":{"@type":"Place","name":"London, England"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":801,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/palma-palms-1200.webp","name":"Palms on the seafront","caption":"Palms on the seafront, Palma, Mallorca · 2025","contentLocation":{"@type":"Place","name":"Palma, Mallorca"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":900},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/chitwan-old-tree-1200.webp","name":"The old tree","caption":"The old tree, Chitwan, Nepal · 2026","contentLocation":{"@type":"Place","name":"Chitwan, Nepal"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":857,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/koenigssee-peaks-1200.webp","name":"Low cloud over the lake","caption":"Low cloud over the lake, Königssee, Germany · 2026","contentLocation":{"@type":"Place","name":"Königssee, Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":801},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/roman-emperor-and-pine-1200.webp","name":"Emperor and pine","caption":"Emperor and pine, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":801,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/basel-barfuesserplatz-1200.webp","name":"Old town, winter sun","caption":"Old town, winter sun, Basel, Switzerland · 2026","contentLocation":{"@type":"Place","name":"Basel, Switzerland"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":801},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/bare-tree-1200.webp","name":"Before winter","caption":"Before winter, Germany · 2026","contentLocation":{"@type":"Place","name":"Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/roman-forum-1200.webp","name":"The Forum","caption":"The Forum, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":900}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
 ```
 
 ---
@@ -471,6 +273,200 @@ You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (A
 
 ---
 
+- **Page:** Photography · Subodh Dahal
+- **Source:** https://subodhdahal.com/photography
+- **Description:** Photos from Nepal and trips around Europe, hung as small previews on one wall.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_4df283f00c72087a.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_4df283f00c72087a.png
+```
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/photography/#webpage","description":"Photos from Nepal and trips around Europe, hung as small previews on one wall.","name":"Photography","url":"https://subodhdahal.com/photography/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/photography/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/photography/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/photography/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Photography","item":"https://subodhdahal.com/photography/","position":2}]},{"@id":"https://subodhdahal.com/photography/#/schema/image-gallery/1","@type":"ImageGallery","description":"Photos from Nepal and trips around Europe, hung as small previews on one wall.","name":"Photography by Subodh Dahal","url":"https://subodhdahal.com/photography/","image":[{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/st-bartholomae-koenigssee-1200.webp","name":"St. Bartholomä","caption":"St. Bartholomä, Königssee, Germany · 2026","contentLocation":{"@type":"Place","name":"Königssee, Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":801},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/chitwan-snow-peaks-1200.webp","name":"Snow above the jungle","caption":"Snow above the jungle, Chitwan, Nepal · 2026","contentLocation":{"@type":"Place","name":"Chitwan, Nepal"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/trajans-column-1200.webp","name":"Trajan's Column","caption":"Trajan's Column, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":899},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/lichtenstein-castle-1200.webp","name":"Castle in the mist","caption":"Castle in the mist, Lichtenstein Castle, Germany · 2025","contentLocation":{"@type":"Place","name":"Lichtenstein Castle, Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":900,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/bee-on-scabious-1200.webp","name":"Visitor","caption":"Visitor, Germany · 2026","contentLocation":{"@type":"Place","name":"Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/tower-bridge-1200.webp","name":"Tower Bridge","caption":"Tower Bridge, London, England · 2026","contentLocation":{"@type":"Place","name":"London, England"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":802},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/chitwan-morning-light-1200.webp","name":"Morning light","caption":"Morning light, Chitwan, Nepal · 2026","contentLocation":{"@type":"Place","name":"Chitwan, Nepal"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/palma-cathedral-1200.webp","name":"La Seu","caption":"La Seu, Palma, Mallorca · 2025","contentLocation":{"@type":"Place","name":"Palma, Mallorca"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":900},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/autumn-pair-1200.webp","name":"Yellow and orange","caption":"Yellow and orange, Germany · 2026","contentLocation":{"@type":"Place","name":"Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/colosseum-1200.webp","name":"Colosseum","caption":"Colosseum, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":899},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/buckingham-palace-gates-1200.webp","name":"Palace gates","caption":"Palace gates, London, England · 2026","contentLocation":{"@type":"Place","name":"London, England"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":801,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/palma-palms-1200.webp","name":"Palms on the seafront","caption":"Palms on the seafront, Palma, Mallorca · 2025","contentLocation":{"@type":"Place","name":"Palma, Mallorca"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":900},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/chitwan-old-tree-1200.webp","name":"The old tree","caption":"The old tree, Chitwan, Nepal · 2026","contentLocation":{"@type":"Place","name":"Chitwan, Nepal"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":857,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/koenigssee-peaks-1200.webp","name":"Low cloud over the lake","caption":"Low cloud over the lake, Königssee, Germany · 2026","contentLocation":{"@type":"Place","name":"Königssee, Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":801},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/roman-emperor-and-pine-1200.webp","name":"Emperor and pine","caption":"Emperor and pine, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":801,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/basel-barfuesserplatz-1200.webp","name":"Old town, winter sun","caption":"Old town, winter sun, Basel, Switzerland · 2026","contentLocation":{"@type":"Place","name":"Basel, Switzerland"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":801},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/bare-tree-1200.webp","name":"Before winter","caption":"Before winter, Germany · 2026","contentLocation":{"@type":"Place","name":"Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/roman-forum-1200.webp","name":"The Forum","caption":"The Forum, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":900}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
+- **Page:** Free browser tools · Subodh Dahal
+- **Source:** https://subodhdahal.com/tools
+- **Description:** Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_ffcc277b95306b53.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_ffcc277b95306b53.png
+```
+
+# **Tools **
+
+*Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.*
+
+- [<h2>**Instagram carousel white border tool**</h2>
+
+  Put portrait and landscape photos on one white canvas with an even border so Instagram doesn't crop your carousel. Runs in your browser.](https://subodhdahal.com/tools/instagram-carousel/)
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/tools/#webpage","description":"Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.","name":"Free browser tools","url":"https://subodhdahal.com/tools/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/tools/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/tools/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/tools/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Free browser tools","item":"https://subodhdahal.com/tools/","position":2}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
+- **Page:** Why I let AI agents change my OS only through Nix
+- **Source:** https://subodhdahal.com/blog/configuring-my-os-with-nix-in-the-age-of-ai
+- **Description:** AI agents make it trivial to change your operating system and hard to remember what they changed. Here's why I manage NixOS and macOS from one Nix config in Git.
+
+With an AI agent, I can change almost anything on my operating system without knowing much about what's happening. That's great until something breaks three months later and nobody, including the agent, remembers what it touched.
+
+My answer is to let agents change my system only through Nix. Each change is code in a Git repository and each rebuild is a snapshot I can boot back into. The same config also runs my NixOS laptop and my work Mac.
+
+The first section is how I got here, starting with the time I broke a friend's computer. If you only want the AI agent part, [skip to letting agents change the OS through Nix](#letting-ai-agents-change-my-os-only-through-nix).
+
+## How I ended up configuring my OS with Nix
+
+### Deleting system32 taught me that a reinstall fixes everything
+
+When I was in school, I advised a friend to delete the system32 directory on his Windows ME computer to reclaim space. My reasoning was that he wasn't using the applications in there, so they didn't need to be there. (I was sure about this.)
+
+Windows ME did have a feature called System File Protection that quietly restored about 900 core files if something deleted them, but it didn't warn us and it didn't save us. The files disappeared, and everything seemed to work for the rest of that session. The next time we turned the computer on, we were horrified. We couldn't log in and nothing was working.
+
+I was afraid I had turned his computer, which was a luxury in Nepal at that time, into basically a hunk of junk. I wasn't there when he told his parents, but I doubt they were happy. A technician came a few days later. Once my friend told him what we had done, he figured a reinstall was the only way, and the guy just reinstalled the operating system. That was it.
+
+I felt relieved, and also happy to learn that the software side of a computer wasn't that scary. Almost anything could be undone with a fresh install.
+
+When I later got my own computer, I used that lesson to tinker. I was running Windows like most people, installing apps and poking around in settings, and if I broke something I couldn't fix, I reinstalled. We didn't have files that needed to persist, so formatting the whole drive didn't cost anything. It let me learn a lot about computers and taught me that messing up was rarely a disaster.
+
+### Reinstalling stopped being an option
+
+During my bachelor's studies, I installed Linux on my laptop. It felt scary at first because everything was different from Windows, and there was still the idea that Linux was hard. But I knew I could reinstall if I broke something.
+
+By then I kept my important data on an external hard disk and on a separate data partition. I could wipe the operating system partition and leave the data alone.
+
+As I got busier with studies and later work, I stopped having the time to reinstall every time I messed something up. So I started keeping notes about what I changed, so I could revert it.
+
+Back then, Linux needed a lot of tweaking for specific hardware because things didn't work out of the box. When I bought my ThinkPad X1 Extreme Gen 1, its built-in NVIDIA GPU didn't work by default. I found a blog post from someone who had figured it out and made the few tweaks they described. They worked.
+
+I don't remember much more about what I changed, and that's the problem. Fixes like that solved the problem I had, and then at some point in the future something else broke because of them, either because the operating system changed underneath or because I changed something else. That was always hard to track down months or years after I'd made the change. My notes never had enough detail. I wanted a system where I could make changes, see exactly what I'd changed, and get back to the previous state when something new broke.
+
+### Finding Nix, and bouncing off it
+
+That's when I came across [Nix](https://nix.dev/), a package manager with its own language for describing builds, and [NixOS](https://nixos.org/), the Linux distribution built on it. You describe your whole system (packages, services, users, settings) in files written in the Nix language, and Nix builds the system from that description.
+
+It looked like exactly what I was looking for. I watched a few videos and skimmed through the manual. There were a lot of new concepts and a lot of barriers before I could do anything useful, and I decided Nix was too complicated before I'd installed anything. So I never tried it.
+
+### LLMs got me over the learning curve
+
+Then LLMs came along, and writing code where you describe what you want and get it done became much easier.
+
+That's when I went all in. My dotfiles repository has commits going back to 2019, but the first Nix commit is from August 2025. I was still on Fedora at the time, so in early September I started from a starter configuration and used Nix with Home Manager just to install packages and manage my user setup. Twelve days later the laptop was running NixOS, and I was configuring the whole operating system in Nix.
+
+I had a lot of help from LLMs, because there were so many things I didn't know. Nix also changes between versions, so what worked in a tutorial a year ago sometimes doesn't work now. The LLMs were good enough to figure out what was breaking and fix it, which is the part I would have given up on alone.
+
+### One Nix config for my NixOS laptop and my work Mac
+
+I first used Nix only on my personal laptop. Then I found [nix-darwin](https://github.com/nix-darwin/nix-darwin), which lets you install packages and manage a good part of the system configuration on macOS with Nix too.
+
+That solved a small but constant annoyance. I'd discover a tool on the weekend on my personal laptop, then reach for it on Monday on my work Mac and realize it wasn't installed or configured there. It's not a big problem, but it happened all the time.
+
+With one flake, I now describe both machines and share most of the configuration between them. The layout looks like this:
+
+```text
+nix/
+├── flake.nix           # nixosConfigurations + darwinConfigurations
+├── hosts/
+│   ├── nixos/          # laptop: hardware, NVIDIA, eGPU, services
+│   └── darwin/         # work Mac: system defaults, Homebrew casks
+├── modules/profiles/   # minimal, workstation, server
+├── lib/                # builders and shared Home Manager config
+└── pkgs/               # packages I build myself (more on that below)
+```
+
+The shared profiles contain the packages and settings both machines need. The `hosts/` directories only contain what's specific to that machine, like the [eGPU fixes on the laptop](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/).
+
+## Letting AI agents change my OS only through Nix
+
+When I had lots of free time, I could try out new distros and desktop environments, then switch back. With adult responsibilities, getting something new set up and figuring out its issues takes time I rarely have.
+
+Now I point my agent at my Nix config and some documentation, describe what I want, and it figures out what to change. In November 2025 my config gained a switch between GNOME, Hyprland and COSMIC, so trying a desktop became a one-line change and a rebuild. A month later COSMIC became the default, and it still is. This is the part I care about most.
+
+### Why direct changes from an agent are hard to track
+
+Plenty of people use AI agents to change their operating system directly: run this command, edit that file in `/etc`, install this package. It often works. But if you make a lot of changes that way, it's hard to keep track of what the agent did, and you're back to my old problem of a fix from months ago breaking something today.
+
+### Every agent change is a Git diff I can read
+
+With Nix, the agent's changes show up as a diff in my config repository. I read the diff before I rebuild, and most of the time it's easy to understand. Even when I don't understand every line, I at least get a sense of what's happening, and it's in Git if I need to come back to it later.
+
+Here's a real one. My [eGPU only worked if I timed switching it on against booting the laptop](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/), and in November 2026 I asked Claude to fix it. The fix touched one file, `egpu.nix`, with 20 lines added and 2 removed. It replaced a kernel parameter that reserved a 4-gigabyte memory window the firmware could never place with smaller windows that fit, and it added a udev rule to create the `/dev/nvidia` device node when the driver binds to a hotplugged card. The commit message explains both changes, so future me knows why they're there.
+
+The more interesting commit came the same day. While we were in that file, the agent noticed `pcie_aspm=off` in my kernel parameters. My laptop's firmware already tells the kernel it doesn't support power management on PCIe links (ASPM), so the kernel turns it off anyway and the flag did nothing. I had added it in December 2025, during my first round of eGPU troubleshooting, and forgotten about it. That's exactly the kind of leftover fix I used to lose track of on Fedora. This time the flag was one line in a file I could read, a commit told me when it arrived, and removing it took a one-line diff.
+
+### Rolling back to a previous NixOS generation
+
+If a rebuild breaks something, NixOS keeps each rebuild as a generation until I garbage-collect it. I can pick a previous generation from the boot menu, or roll back from a terminal:
+
+```bash
+# Switch back to the previous NixOS generation
+sudo nixos-rebuild switch --rollback
+```
+
+When I started writing this post, my laptop had 128 generations going back to September 2025, and the boot menu shows the last 10. (That number turned out to be a bug, more on that in the trade-offs.) Most of them I'll never need, but the one I need is always there. From the last working state, I can either leave the change out or hand the broken diff to the agent and let it debug.
+
+For someone like me who likes having tools set up the way I want rather than the default way, this combination is what makes tinkering safe again. It's the closest I've gotten to the "just reinstall" safety net I had as a kid, without losing anything.
+
+## Trade-offs of managing my OS with Nix
+
+Nix still has a barrier to entry, even with an LLM next to you. These are the things that bother me.
+
+### nixpkgs has the most packages, but some lag behind
+
+According to [Repology](https://repology.org/repositories/statistics/total), nixpkgs unstable has about 121,000 projects, more than any other repository, and about 86% are at the newest version. The other 13,000 or so wait until a contributor updates them. (The project has also had [its share of leadership drama](https://lwn.net/Articles/970824/), but that was about governance, not packages.)
+
+### Packaging from GitHub releases is yours to maintain
+
+When a package is out of date, my agent packages it from the project's GitHub releases. Six of my 13 custom packages, including [Worktrunk](https://subodhdahal.com/blog/worktrees-with-worktrunk/), work this way. (I'm now the maintainer of six packages I never meant to maintain.) When their dependencies change, I have to ask the agent to fix them again.
+
+### Upstream flakes can mean building locally
+
+When a project publishes its own Nix flake outside nixpkgs, the official binary cache doesn't cover it. Unless the project runs its own cache, you build it yourself, and that can take a long time.
+
+### Programs downloaded from the internet don't run as is
+
+NixOS has no `/lib` or `/usr/lib`, so programs built for other distributions fail with `cannot execute: required file not found`. I work around it with `nix-ld` for Python wheels, `autoPatchelf` for one GitHub release package, and a wrapper for [Handy](https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/) that lists 18 libraries its AppImage expects. On other distributions, you'd download the file and run it.
+
+### Old generations fill the disk unless you clean them up
+
+Each generation keeps its packages around, and builds leave leftovers, so the Nix store grows with every rebuild. Mine had filled 84% of my disk.
+
+My config runs the garbage collector weekly, so I thought I had this handled. While researching this post, I found out why I still had 128 generations: the job had been failing every week, before it collected anything.
+
+```text
+error: invalid number of days specifier '1w', expected something like '14d'
+```
+
+It only understands days, so `1w` had to be `7d`. (So much for reading every diff.) Running `nix-collect-garbage` by hand afterwards deleted 35,749 store paths and freed 84.6 GiB, which took the disk down to 72%. Nix also hard-links identical files, and that was already saving another 111 GiB.
+
+### Config changes need a rebuild, so some dotfiles stay in GNU Stow
+
+Changing a config managed by Nix needs a rebuild, and for a tool I'm still experimenting with, that's enough friction to stop me from trying things. So when I start using a new program, its config files (dotfiles) start in [GNU Stow](https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow/), and move into Nix once I stop changing them. Both live in the same repository, so it doesn't matter much which one manages a file.
+
+## Conclusion
+
+The kid who deleted system32 learned that a reinstall could undo almost anything. My friend and I aren't in touch anymore, and I suspect he took a different lesson from it, since he never got into working with computers the way I did.
+
+Nix gave me that safety net back, without the blank disk. Every change, mine or an agent's, is a diff I can read, and every rebuild is a generation I can roll back to. The barrier to entry is real. But if you like tinkering and you're letting AI agents change your system, it's the best way I've found to keep track of what they did.
+
+Next, I'd like to move the Ubuntu VMs on my [home server](https://subodhdahal.com/topics/self-hosting/) to Nix, or to NixOS altogether. They run services I depend on, and the server can't run a test VM next to them, so with hardware prices what they are, that'll probably wait until I get a more powerful machine.
+
+---
+
 - **Page:** Blog: software, self-hosting and travel notes · Subodh Dahal
 - **Source:** https://subodhdahal.com/blog
 - **Description:** Notes by Subodh Dahal on software, self-hosting, NixOS, automation, developer tools, photography and hiking.
@@ -549,478 +545,13 @@ meta:
 
 ---
 
-- **Page:** My 2023 travels: A visual journey
-- **Source:** https://subodhdahal.com/blog/2023-travels-visual-journey
-- **Description:** Looking back at the best pictures from my travel adventures in 2023
-
-## My 2023 travels: A visual journey
-
-Yet another year has passed. I've been lucky enough to travel to some amazing places, meet some amazing people and make wonderful memories. Here are some of my favourite pictures from my travels in 2023.
-
-## Nepal 🇳🇵
-
-### Kathmandu valley
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Nyatapole temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-10.jpg)
-  ![The Himalayas as seen from Kathmandu](https://subodhdahal.com/images/2023-visual-journey/nepal-9.jpg)
-  ![A temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-1.jpg)
-
-</div>
-
-### Bharatpur
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-4.jpg)
-  ![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-3.jpg)
-  ![Evening in Sauraha](https://subodhdahal.com/images/2023-visual-journey/nepal-5.jpg)
-
-</div>
-
-### Pokhara
-
-![View of Mount Machhapuchhre](https://subodhdahal.com/images/2023-visual-journey/nepal-2.jpg)![Boating in Phewa Lake](https://subodhdahal.com/images/2023-visual-journey/nepal-11.jpg)## Croatia 🇭🇷
-
-### Plitvice Lakes National Park
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-8.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-9.jpg)
-
-</div>
-
-### Zagreb
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-6.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-3.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-4.jpg)
-
-</div>
-
-### Split
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-10.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-13.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-14.jpg)
-
-</div>
-
-## France 🇫🇷
-
-### Strasbourg
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-1.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-2.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-4.jpg)
-
-</div>
-
-### Colmar
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-2.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-1.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-3.jpg)
-
-</div>
-
-### Nice and surrounding areas
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-7.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-3.jpg)
-  <div>
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-2.jpg)
-    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-8.jpg)
-
-</div>
-
-
-  <div>
-
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-5.jpg)
-    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-6.jpg)
-
-</div>
-</div>
-
-## Germany 🇩🇪
-
-### Kiel
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/june-kiel-2.jpg)
-
-</div>
-
-### Schwäbisch Hall
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/may-schwaebisch-hall-1.jpg)
-
-</div>
-
-### Würzburg
-
-![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/aug-wuerzburg-2.jpg)## Monaco 🇲🇨
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Monaco](https://subodhdahal.com/images/2023-visual-journey/may-monaco-1.jpg)
-
-</div>
-
-## Hungary 🇭🇺
-
-### Budapest
-
-![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-6.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-4.jpg)
-  ![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-1.jpg)
-
-</div>
-
-## Netherlands 🇳🇱
-
-### Amsterdam
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-3.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-3.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-2.jpg)
-
-</div>
-
-### The Hague
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-4.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-5.jpg)
-
-</div>
-
-### Zaandam
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-5.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-7.jpg)
-
-</div>
-
-## Spain 🇪🇸
-
-### Barcelona
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-1.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-8.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-7.jpg)
-
-</div>
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-5.jpg)
-  ![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-6.jpg)
-
-</div>
-
-### Montserrat
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-9.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-11.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-10.jpg)
-
-</div>
-
-<div className="text-travel-heading,text-5xl,text-center,mt-8,pb-8">
-
-Fin
-
-</div>
-
----
-
-- **Page:** A browser tool that puts every carousel photo on the same white mat, like a gallery print
-- **Source:** https://subodhdahal.com/blog/instagram-carousel-padding-tool
-- **Description:** Instagram can keep each photo's original aspect ratio in a carousel, but I prefer a white canvas with even borders. I built a page that pads every image onto one shared canvas, entirely in the browser.
-
-I use Instagram to post pictures from my hikes and trips, and nearly every one is nature or scenery. I like posting four or five at once as a carousel, but those photos come out in different aspect ratios. A wide mountain view sits next to a tall shot of a tree, and I wanted the whole set to look good when someone swipes through it in the app.
-
-I wanted every slide on the same white canvas with a border around the photo, like a print in a gallery frame.
-
-So I made a page for it: an [Instagram carousel white border tool](https://subodhdahal.com/tools/instagram-carousel/). You drop images in, it pads each one onto a shared canvas, and you download the result. Everything runs in your browser, so your photos are never uploaded.
-
-## Why I don't use Instagram's Mixed option
-
-Instagram's phone app has a **Mixed** option in the crop menu that keeps each photo's own aspect ratio. The space around the wide photos isn't necessarily white, because Instagram fills it with a background that follows the app's theme. I can't control that background or how much space each photo gets, and I'd rather have white, which looks better to me.
-
-## Padding one wide photo and three tall ones to 4:5
-
-I tested it with four photos from a walk in November: one wide 4:3 photo and three 4:5 tall ones. The page picked a 4:5 canvas of 1440 × 1800 pixels. The wide photo got white space above and below, and the tall ones got a thin border.
-
-<figure className="image">
-
-![Instagram Carousel Tools showing four autumn photos on identical white canvases, the first one wide, with white space above and below](https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png)
-  <figcaption>
-
-The first photo is the wide one. The slides share one canvas size.
-
-</figcaption>
-</figure>
-
-The padding slider goes from 0 to 20%. Around 10% it starts to look matted. The ratio defaults to Auto, which picks the best fit for the set, and I can force 4:5, 1:1 or 1.91:1 instead. A click on any slide opens a swipe preview, and the padding slider stays in reach.
-
-<figure className="image">
-
-![Preview viewer showing the wide autumn photo centered on a white 4:5 slide with navigation arrows and dots](https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-preview-viewer.png)
-  <figcaption>
-
-The preview with padding at 10%.
-
-</figcaption>
-</figure>
-
-I export at 1080 wide as JPEG, and the tool gives me a ZIP. It also supports 1440 wide and PNG. It stops at 20 slides, which is Instagram's cap, and warns when a file goes above 8 MB. My test photos came out between 670 KB and 1 MB each.
-
-## The layout math and canvas drawing behind the tool
-
-The tool is a Nuxt page with a few Vue components and two small TypeScript files. One does the layout math and the other draws onto a `<canvas>`.
-
-If you haven't used it, `<canvas>` is an HTML element that gives you a blank grid of pixels that JavaScript can paint into. I picked it because the browser already does the hard parts: it decodes the photos, resizes them with smoothing when you draw them, and encodes the result as JPEG or PNG through `canvas.toBlob`. So the tool doesn't need an image library or a server, which is why nothing gets uploaded. The previews on the page are canvases too, painted by the same code.
-
-```mermaidThe whole tool, from dropping photos in to downloading slides.
-flowchart TD
-  accTitle: How the carousel tool turns photos into slides
-  accDescr: Drop in photos, decode each photo and fix EXIF rotation, pick the aspect ratio with the least empty space, size one box that fits every photo and add padding, draw each photo centered on a white canvas, encode each slide as JPEG or PNG, then download one slide or a ZIP.
-  A["Drop in photos"] --> B["Decode each photo, fix EXIF rotation"]
-  B --> C["Pick the aspect ratio with the least empty space"]
-  C --> D["Size one box that fits every photo, add padding"]
-  D --> E["Draw each photo centered on a white canvas"]
-  E --> F["Encode each slide as JPEG or PNG"]
-  F --> G["Download one slide or a ZIP"]
-```
-
-Picking the aspect ratio and sizing the canvas is where most of the code goes, so here is a closer look at those steps:
-
-```mermaidInside the layout step: choosing the aspect ratio and sizing the canvas.
-flowchart TD
-  accTitle: How the tool picks the aspect ratio and sizes the canvas
-  accDescr: If a ratio is forced, the tool uses it. Otherwise it builds candidates from each photo's ratio, clamped to Instagram's range, plus both range limits, scores each candidate, and picks the highest score, breaking ties toward square. It then sizes the smallest box at that ratio that fits every photo, adds padding, rounds the canvas to whole pixels while ignoring floating-point error, and either keeps the original size capped at 1440 wide or scales to 1080 or 1440 and clamps the height.
-  A{"Ratio forced?"} -- yes --> R["Use that ratio"]
-  A -- no --> B["Candidates: each photo's ratio,<br/>clamped to 4:5 to 1.91:1, plus both limits"]
-  B --> C["Score each: sum of min(R/r, r/R)"]
-  C --> D["Highest score wins<br/>(tie goes to closest to square)"]
-  D --> R
-  R --> E["Box = smallest at ratio R<br/>that fits every photo natively"]
-  E --> F["Add padding on every side"]
-  F --> G["Round to whole pixels,<br/>ignoring float error"]
-  G --> H{"Export width?"}
-  H -- Original --> I["Keep size, cap at 1440 wide"]
-  H -- 1080 / 1440 --> J["Scale, clamp height to Instagram's range"]
-```
-
-### Scoring a few candidates instead of every ratio
-
-The point of the tool is that every slide shares one canvas, so Auto mode needs one ratio for the whole set. A photo with ratio `r` in a box with ratio `R` fills `min(R/r, r/R)` of it. The total over all photos can only peak at one of the photos' own ratios or at a range limit, so the tool only scores those.
-
-For my test set, 4:5 scores 3.6 (the three tall photos fill 100% of it, the wide one 60%) and 4:3 scores 2.8.
-
-Because every photo fits into the same box, photos with the same aspect ratio end up in the same spot, even if one is 6000 pixels wide and the other 2000.
-
-### The floating-point rounding guard
-
-Rounding was the fiddly part. The code rounds one side of the canvas up so it's never too small for the photos. But JavaScript can't store most fractions exactly, so a value that should be whole sometimes comes out a hair above it. For an 878 × 800 photo with no padding, the height works out to `878 / (878 / 800)`, which JavaScript computes as `800.0000000000001`. Rounding that up gives 801, so the canvas is one pixel taller than the photo and a half-pixel strip of white shows along the top and bottom edges.
-
-So the code subtracts `1e-9` before rounding up. That's far bigger than the floating-point error and far smaller than any real fraction of a pixel, so the height comes out as 800.
-
-### Drawing and exporting
-
-Decoding with `createImageBitmap(file, { imageOrientation: 'from-image' })` applies the EXIF rotation, so phone photos don't come out sideways. The thumbnails and the export use the same `drawSlide` function, so what you see in the grid matches the file you download. [JSZip](https://stuk.github.io/jszip/) builds the ZIP.
-
-The file size under each slide comes from encoding it for real, 350 ms after you stop moving the slider, so the 8 MB warning uses real sizes instead of estimates. The layout and drawing code is in [`app/lib/carousel/`](https://github.com/SubodhDahal/subodhdahal.github.io/tree/master/app/lib/carousel).
-
-## What's missing
-
-The padding is always white. I haven't decided whether other colors are worth adding. If something breaks on your photos or you want a feature, please [open an issue on GitHub](https://github.com/SubodhDahal/subodhdahal.github.io/issues/new).
-
----
-
-- **Page:** Why I let AI agents change my OS only through Nix
-- **Source:** https://subodhdahal.com/blog/configuring-my-os-with-nix-in-the-age-of-ai
-- **Description:** AI agents make it trivial to change your operating system and hard to remember what they changed. Here's why I manage NixOS and macOS from one Nix config in Git.
-
-With an AI agent, I can change almost anything on my operating system without knowing much about what's happening. That's great until something breaks three months later and nobody, including the agent, remembers what it touched.
-
-My answer is to let agents change my system only through Nix. Each change is code in a Git repository and each rebuild is a snapshot I can boot back into. The same config also runs my NixOS laptop and my work Mac.
-
-The first section is how I got here, starting with the time I broke a friend's computer. If you only want the AI agent part, [skip to letting agents change the OS through Nix](#letting-ai-agents-change-my-os-only-through-nix).
-
-## How I ended up configuring my OS with Nix
-
-### Deleting system32 taught me that a reinstall fixes everything
-
-When I was in school, I advised a friend to delete the system32 directory on his Windows ME computer to reclaim space. My reasoning was that he wasn't using the applications in there, so they didn't need to be there. (I was sure about this.)
-
-Windows ME did have a feature called System File Protection that quietly restored about 900 core files if something deleted them, but it didn't warn us and it didn't save us. The files disappeared, and everything seemed to work for the rest of that session. The next time we turned the computer on, we were horrified. We couldn't log in and nothing was working.
-
-I was afraid I had turned his computer, which was a luxury in Nepal at that time, into basically a hunk of junk. I wasn't there when he told his parents, but I doubt they were happy. A technician came a few days later. Once my friend told him what we had done, he figured a reinstall was the only way, and the guy just reinstalled the operating system. That was it.
-
-I felt relieved, and also happy to learn that the software side of a computer wasn't that scary. Almost anything could be undone with a fresh install.
-
-When I later got my own computer, I used that lesson to tinker. I was running Windows like most people, installing apps and poking around in settings, and if I broke something I couldn't fix, I reinstalled. We didn't have files that needed to persist, so formatting the whole drive didn't cost anything. It let me learn a lot about computers and taught me that messing up was rarely a disaster.
-
-### Reinstalling stopped being an option
-
-During my bachelor's studies, I installed Linux on my laptop. It felt scary at first because everything was different from Windows, and there was still the idea that Linux was hard. But I knew I could reinstall if I broke something.
-
-By then I kept my important data on an external hard disk and on a separate data partition. I could wipe the operating system partition and leave the data alone.
-
-As I got busier with studies and later work, I stopped having the time to reinstall every time I messed something up. So I started keeping notes about what I changed, so I could revert it.
-
-Back then, Linux needed a lot of tweaking for specific hardware because things didn't work out of the box. When I bought my ThinkPad X1 Extreme Gen 1, its built-in NVIDIA GPU didn't work by default. I found a blog post from someone who had figured it out and made the few tweaks they described. They worked.
-
-I don't remember much more about what I changed, and that's the problem. Fixes like that solved the problem I had, and then at some point in the future something else broke because of them, either because the operating system changed underneath or because I changed something else. That was always hard to track down months or years after I'd made the change. My notes never had enough detail. I wanted a system where I could make changes, see exactly what I'd changed, and get back to the previous state when something new broke.
-
-### Finding Nix, and bouncing off it
-
-That's when I came across [Nix](https://nix.dev/), a package manager with its own language for describing builds, and [NixOS](https://nixos.org/), the Linux distribution built on it. You describe your whole system (packages, services, users, settings) in files written in the Nix language, and Nix builds the system from that description.
-
-It looked like exactly what I was looking for. I watched a few videos and skimmed through the manual. There were a lot of new concepts and a lot of barriers before I could do anything useful, and I decided Nix was too complicated before I'd installed anything. So I never tried it.
-
-### LLMs got me over the learning curve
-
-Then LLMs came along, and writing code where you describe what you want and get it done became much easier.
-
-That's when I went all in. My dotfiles repository has commits going back to 2019, but the first Nix commit is from August 2025. I was still on Fedora at the time, so in early September I started from a starter configuration and used Nix with Home Manager just to install packages and manage my user setup. Twelve days later the laptop was running NixOS, and I was configuring the whole operating system in Nix.
-
-I had a lot of help from LLMs, because there were so many things I didn't know. Nix also changes between versions, so what worked in a tutorial a year ago sometimes doesn't work now. The LLMs were good enough to figure out what was breaking and fix it, which is the part I would have given up on alone.
-
-### One Nix config for my NixOS laptop and my work Mac
-
-I first used Nix only on my personal laptop. Then I found [nix-darwin](https://github.com/nix-darwin/nix-darwin), which lets you install packages and manage a good part of the system configuration on macOS with Nix too.
-
-That solved a small but constant annoyance. I'd discover a tool on the weekend on my personal laptop, then reach for it on Monday on my work Mac and realize it wasn't installed or configured there. It's not a big problem, but it happened all the time.
-
-With one flake, I now describe both machines and share most of the configuration between them. The layout looks like this:
-
-```text
-nix/
-├── flake.nix           # nixosConfigurations + darwinConfigurations
-├── hosts/
-│   ├── nixos/          # laptop: hardware, NVIDIA, eGPU, services
-│   └── darwin/         # work Mac: system defaults, Homebrew casks
-├── modules/profiles/   # minimal, workstation, server
-├── lib/                # builders and shared Home Manager config
-└── pkgs/               # packages I build myself (more on that below)
-```
-
-The shared profiles contain the packages and settings both machines need. The `hosts/` directories only contain what's specific to that machine, like the [eGPU fixes on the laptop](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos).
-
-## Letting AI agents change my OS only through Nix
-
-When I had lots of free time, I could try out new distros and desktop environments, then switch back. With adult responsibilities, getting something new set up and figuring out its issues takes time I rarely have.
-
-Now I point my agent at my Nix config and some documentation, describe what I want, and it figures out what to change. In November 2025 my config gained a switch between GNOME, Hyprland and COSMIC, so trying a desktop became a one-line change and a rebuild. A month later COSMIC became the default, and it still is. This is the part I care about most.
-
-### Why direct changes from an agent are hard to track
-
-Plenty of people use AI agents to change their operating system directly: run this command, edit that file in `/etc`, install this package. It often works. But if you make a lot of changes that way, it's hard to keep track of what the agent did, and you're back to my old problem of a fix from months ago breaking something today.
-
-### Every agent change is a Git diff I can read
-
-With Nix, the agent's changes show up as a diff in my config repository. I read the diff before I rebuild, and most of the time it's easy to understand. Even when I don't understand every line, I at least get a sense of what's happening, and it's in Git if I need to come back to it later.
-
-Here's a real one. My [eGPU only worked if I timed switching it on against booting the laptop](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos), and in November 2026 I asked Claude to fix it. The fix touched one file, `egpu.nix`, with 20 lines added and 2 removed. It replaced a kernel parameter that reserved a 4-gigabyte memory window the firmware could never place with smaller windows that fit, and it added a udev rule to create the `/dev/nvidia` device node when the driver binds to a hotplugged card. The commit message explains both changes, so future me knows why they're there.
-
-The more interesting commit came the same day. While we were in that file, the agent noticed `pcie_aspm=off` in my kernel parameters. My laptop's firmware already tells the kernel it doesn't support power management on PCIe links (ASPM), so the kernel turns it off anyway and the flag did nothing. I had added it in December 2025, during my first round of eGPU troubleshooting, and forgotten about it. That's exactly the kind of leftover fix I used to lose track of on Fedora. This time the flag was one line in a file I could read, a commit told me when it arrived, and removing it took a one-line diff.
-
-### Rolling back to a previous NixOS generation
-
-If a rebuild breaks something, NixOS keeps each rebuild as a generation until I garbage-collect it. I can pick a previous generation from the boot menu, or roll back from a terminal:
-
-```bash
-# Switch back to the previous NixOS generation
-sudo nixos-rebuild switch --rollback
-```
-
-When I started writing this post, my laptop had 128 generations going back to September 2025, and the boot menu shows the last 10. (That number turned out to be a bug, more on that in the trade-offs.) Most of them I'll never need, but the one I need is always there. From the last working state, I can either leave the change out or hand the broken diff to the agent and let it debug.
-
-For someone like me who likes having tools set up the way I want rather than the default way, this combination is what makes tinkering safe again. It's the closest I've gotten to the "just reinstall" safety net I had as a kid, without losing anything.
-
-## Trade-offs of managing my OS with Nix
-
-Nix still has a barrier to entry, even with an LLM next to you. These are the things that bother me.
-
-### nixpkgs has the most packages, but some lag behind
-
-According to [Repology](https://repology.org/repositories/statistics/total), nixpkgs unstable has about 121,000 projects, more than any other repository, and about 86% are at the newest version. The other 13,000 or so wait until a contributor updates them. (The project has also had [its share of leadership drama](https://lwn.net/Articles/970824/), but that was about governance, not packages.)
-
-### Packaging from GitHub releases is yours to maintain
-
-When a package is out of date, my agent packages it from the project's GitHub releases. Six of my 13 custom packages, including [Worktrunk](https://subodhdahal.com/blog/worktrees-with-worktrunk), work this way. (I'm now the maintainer of six packages I never meant to maintain.) When their dependencies change, I have to ask the agent to fix them again.
-
-### Upstream flakes can mean building locally
-
-When a project publishes its own Nix flake outside nixpkgs, the official binary cache doesn't cover it. Unless the project runs its own cache, you build it yourself, and that can take a long time.
-
-### Programs downloaded from the internet don't run as is
-
-NixOS has no `/lib` or `/usr/lib`, so programs built for other distributions fail with `cannot execute: required file not found`. I work around it with `nix-ld` for Python wheels, `autoPatchelf` for one GitHub release package, and a wrapper for [Handy](https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu) that lists 18 libraries its AppImage expects. On other distributions, you'd download the file and run it.
-
-### Old generations fill the disk unless you clean them up
-
-Each generation keeps its packages around, and builds leave leftovers, so the Nix store grows with every rebuild. Mine had filled 84% of my disk.
-
-My config runs the garbage collector weekly, so I thought I had this handled. While researching this post, I found out why I still had 128 generations: the job had been failing every week, before it collected anything.
-
-```text
-error: invalid number of days specifier '1w', expected something like '14d'
-```
-
-It only understands days, so `1w` had to be `7d`. (So much for reading every diff.) Running `nix-collect-garbage` by hand afterwards deleted 35,749 store paths and freed 84.6 GiB, which took the disk down to 72%. Nix also hard-links identical files, and that was already saving another 111 GiB.
-
-### Config changes need a rebuild, so some dotfiles stay in GNU Stow
-
-Changing a config managed by Nix needs a rebuild, and for a tool I'm still experimenting with, that's enough friction to stop me from trying things. So when I start using a new program, its config files (dotfiles) start in [GNU Stow](https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow/), and move into Nix once I stop changing them. Both live in the same repository, so it doesn't matter much which one manages a file.
-
-## Conclusion
-
-The kid who deleted system32 learned that a reinstall could undo almost anything. My friend and I aren't in touch anymore, and I suspect he took a different lesson from it, since he never got into working with computers the way I did.
-
-Nix gave me that safety net back, without the blank disk. Every change, mine or an agent's, is a diff I can read, and every rebuild is a generation I can roll back to. The barrier to entry is real. But if you like tinkering and you're letting AI agents change your system, it's the best way I've found to keep track of what they did.
-
-Next, I'd like to move the Ubuntu VMs on my [home server](https://subodhdahal.com/topics/self-hosting) to Nix, or to NixOS altogether. They run services I depend on, and the server can't run a test VM next to them, so with hardware prices what they are, that'll probably wait until I get a more powerful machine.
-
----
-
 - **Page:** Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU
 - **Source:** https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu
 - **Description:** Handy's shortcut did nothing, and after I fixed that, nothing got typed. A Wayland shortcut, a microphone, the paste method and an autostart file caused it, and the GPU did not.
 
 I installed [Handy](https://github.com/cjpais/Handy), an offline speech-to-text app, on NixOS and pressed the shortcut. The tray icon stayed a hand and nothing happened. During onboarding the shortcut did fire and Handy copied the transcript to the clipboard, but the transcript never appeared in the onboarding textbox. After onboarding, nothing worked at all.
 
-For context, here's my setup: NixOS with kernel 6.18, COSMIC on Wayland, Handy 0.10.1 with the `parakeet-unified-en-0.6b` model, and an RTX 3060 Ti in a Thunderbolt enclosure (see [the eGPU hotplug post](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos)).
+For context, here's my setup: NixOS with kernel 6.18, COSMIC on Wayland, Handy 0.10.1 with the `parakeet-unified-en-0.6b` model, and an RTX 3060 Ti in a Thunderbolt enclosure (see [the eGPU hotplug post](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)).
 
 ## Intel was 5x slower than the eGPU, but slow still works
 
@@ -1094,155 +625,6 @@ The check matters, because index 2 doesn't exist without the eGPU. It is also ha
 Handy now types into COSMIC windows from a compositor shortcut, hears the right microphone, and runs on the eGPU.
 
 I haven't timed live dictation on the eGPU, so the numbers above come from the file benchmark. In daily use it feels instant.
-
----
-
-- **Page:** Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot
-- **Source:** https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos
-- **Description:** My Razer Core X eGPU only worked if I timed it against boot. On NixOS the NVIDIA driver rejected the hotplugged card; PCI kernel parameters and a device node fixed it.
-
-My eGPU never got detected if I was already logged into NixOS. To get it working, I had to time switching on the Razer Core X against switching on the laptop. Sometimes that worked first try. Sometimes it took a few reboots and more timing games, and I never found a pattern.
-
-"Not detected" was the wrong diagnosis. The system saw the GPU, but the NVIDIA driver refused to use it, and after I fixed that, nothing in userspace could reach the card. The fixes were a kernel parameter and a device node. Now I can boot first and switch the enclosure on while logged in.
-
-## My setup
-
-- Laptop: ThinkPad X1 Extreme Gen 1 (20MGS0EQ00), BIOS 1.47, with an internal GTX 1050 Ti Mobile and the Intel iGPU
-- eGPU: Razer Core X Chroma (Thunderbolt 3) with an RTX 3060 Ti
-- A Dell Thunderbolt 4 dock is also on the Thunderbolt chain
-- NixOS 26.11 (unstable-ish), kernel 6.18.63, NVIDIA proprietary driver 580.196.07, COSMIC on Wayland
-
-The snippets are NixOS, but the ideas apply to any distro.
-
-## Checking each layer: the system saw the GPU
-
-When a hotplugged GPU doesn't appear, check four layers in order. I should have done this instead of rebooting repeatedly.
-
-```bash
-# 1. Did Thunderbolt authorize the enclosure?
-boltctl list
-
-# 2. Did the PCIe device enumerate? (mine was 09:00.0)
-lspci | grep -i nvidia
-
-# 3. Did the driver bind? Look for NVRM errors and bridge window failures
-journalctl -k | grep -E 'NVRM|bridge window'
-
-# 4. Does userspace have a device node, and does nvidia-smi see the card?
-ls /dev/nvidia*
-nvidia-smi -L
-```
-
-On my machine, steps 1 and 2 passed (bolt had authorized the enclosure, and `lspci` listed the GPU). Step 3 failed:
-
-```text
-NVRM: This PCI I/O region assigned to your NVIDIA device is invalid
-nvidia 0000:09:00.0: probe with driver nvidia failed with error -1
-bridge window [mem size 0x100000000]: can't assign; no space
-```
-
-## What was blocking the card
-
-Checks 3 and 4 failed for different reasons. The first problem stops the driver from binding. The second hides the card from userspace once it does.
-
-### Bug 1: hpmemsize=4G left BAR0 unassigned
-
-My config had `pci=hpmemsize=4G,hpiosize=0` from an earlier attempt. I assumed a big GPU needs a big window.
-
-It doesn't, because `hpmemsize` is the wrong window. It reserves the 32-bit **non-prefetchable** memory window for each hotplug bridge, and the kernel can't fit 4 gigabytes into 32-bit address space. It logged `can't assign; no space` and moved on. That left the GPU's 16 MB BAR0, which lives in the same window, without an address: the device's `resource` file in sysfs was all zeros, even though the 64-bit prefetchable BARs (256 MB and 32 MB) were fine.
-
-The parameter for big GPU BARs is `hpmmioprefsize`, which sizes the 64-bit prefetchable window. Use a small `hpmemsize` and a large `hpmmioprefsize`:
-
-```nix
-boot.kernelParams = lib.mkBefore [
-  "pciehp.pciehp_force=1"
-  "pci=realloc"
-  "pcie_ports=native"
-
-  # hpmemsize: 32-bit non-prefetchable window, keep it small.
-  # hpmmioprefsize: 64-bit prefetchable window for the GPU's big BARs.
-  "pci=hpbussize=0x20,hpmemsize=64M,hpmmioprefsize=1G,hpiosize=0"
-  "iommu=pt"
-];
-boot.extraModprobeConfig = lib.mkAfter ''
-  options pciehp pciehp_force=1
-'';
-```
-
-To check the result without reading dmesg, list the regions for your device (replace `09:00.0` with yours). Every region should have an address, not `<unassigned>`.
-
-```bash
-sudo lspci -vv -s 09:00.0 | grep Region
-```
-
-### Bug 2: nvidia-smi ignored the card because /dev/nvidia1 didn't exist
-
-After the window fix, the driver bound and `/proc/driver/nvidia/gpus/` listed the 3060 Ti. But `nvidia-smi` still showed only the internal 1050 Ti.
-
-This took me longest. `ls /dev/nvidia*` showed `nvidia0` and nothing for the second card. The kernel module doesn't create device nodes itself. On a normal distro `nvidia-modprobe` creates them on demand, but it isn't available in my NixOS setup, so a GPU that appears after boot never gets a node. To confirm, I made one by hand:
-
-```bash
-sudo mknod -m 666 /dev/nvidia1 c 195 1
-```
-
-Both GPUs showed up in `nvidia-smi` immediately.
-
-To automate that, a udev rule runs a script whenever the NVIDIA driver binds to a PCI device. The script reads each minor number from `/proc/driver/nvidia/gpus/*/information` and creates any missing node:
-
-```nix
-services.udev.extraRules = let
-  nvidiaNodes = pkgs.writeShellScript "nvidia-create-nodes" ''
-    for info in /proc/driver/nvidia/gpus/*/information; do
-      [ -e "$info" ] || continue
-      minor=$(${pkgs.gawk}/bin/awk '/Device Minor/ {print $NF}' "$info")
-      [ -n "$minor" ] && [ ! -e "/dev/nvidia$minor" ] &&
-        ${pkgs.coreutils}/bin/mknod -m 666 "/dev/nvidia$minor" c 195 "$minor"
-    done
-    exit 0
-  '';
-in ''
-  ACTION=="bind", SUBSYSTEM=="pci", DRIVER=="nvidia", RUN+="${nvidiaNodes}"
-'';
-```
-
-After a rebuild and reboot, I cold booted, switched the enclosure on while logged in, and the eGPU appeared in `nvidia-smi`.
-
-One caveat: I had created `/dev/nvidia1` by hand earlier and don't know whether I deleted it before testing. So I can't say the rule alone creates the node. It should, but I haven't proven it from a clean `/dev`.
-
-## Running programs on the eGPU with a wrapper script
-
-With both cards visible, I wanted to run one program on the eGPU. My `egpu-prefer` wrapper sets environment variables and then `exec`s the command.
-
-It failed at first. My session sets `VK_LOADER_DRIVERS_SELECT=*intel*` and `DRI_PRIME=pci-0000_00_02_0`, which together hide the NVIDIA Vulkan driver. I never found where those variables come from, and they aren't in my dotfiles.
-
-Native NVIDIA GLX offload also failed: it picked the 1050 Ti even when I gave it the eGPU's UUID. So the wrapper selects the card through Vulkan instead:
-
-```bash
-# Override the session's restrictions
-export VK_LOADER_DRIVERS_SELECT="*nvidia*"
-unset DRI_PRIME
-
-# Pick the 3060 Ti by PCI vendor:device ID
-export MESA_VK_DEVICE_SELECT="10de:2489"
-
-exec "$@"
-```
-
-This is a trimmed version. The full wrapper also sets `VK_DRIVER_FILES` to the NVIDIA ICD path and a few CUDA variables. To check the selection:
-
-```bash
-MESA_VK_DEVICE_SELECT=10de:2489 VK_LOADER_DRIVERS_SELECT='*nvidia*' vulkaninfo --summary | grep deviceName
-```
-
-Vulkan lists the RTX 3060 Ti first, CUDA sees both GPUs, and rendering through `egpu-prefer` works.
-
-## What I haven't tested
-
-I'd rather list these than imply it all works:
-
-- **Games.** Rendering through the wrapper works, but I haven't run a game on the eGPU yet.
-- **The udev rule alone**, without a hand-made node already in `/dev`.
-- **Safe unplug.** I haven't tried hot-unplugging while the driver is in use. I'd stop everything using the card first.
 
 ---
 
@@ -1469,11 +851,257 @@ Then I'd add Worktrunk when the repeated environment setup starts getting irrita
 
 ---
 
-- **Page:** NixOS on the desktop
-- **Source:** https://subodhdahal.com/topics/nixos
-- **Description:** Fixes from running NixOS with COSMIC on Wayland on a ThinkPad, including a Razer Core X eGPU with an NVIDIA RTX card and Handy speech-to-text.
+- **Page:** Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot
+- **Source:** https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos
+- **Description:** My Razer Core X eGPU only worked if I timed it against boot. On NixOS the NVIDIA driver rejected the hotplugged card; PCI kernel parameters and a device node fixed it.
 
-My laptop runs NixOS with the COSMIC desktop on Wayland, connected to a Razer Core X eGPU. When something on that setup doesn't work, I write down how I tracked it down, layer by layer, with the NixOS config that fixed it. The snippets are NixOS, but the debugging steps apply to most Linux distributions.
+My eGPU never got detected if I was already logged into NixOS. To get it working, I had to time switching on the Razer Core X against switching on the laptop. Sometimes that worked first try. Sometimes it took a few reboots and more timing games, and I never found a pattern.
+
+"Not detected" was the wrong diagnosis. The system saw the GPU, but the NVIDIA driver refused to use it, and after I fixed that, nothing in userspace could reach the card. The fixes were a kernel parameter and a device node. Now I can boot first and switch the enclosure on while logged in.
+
+## My setup
+
+- Laptop: ThinkPad X1 Extreme Gen 1 (20MGS0EQ00), BIOS 1.47, with an internal GTX 1050 Ti Mobile and the Intel iGPU
+- eGPU: Razer Core X Chroma (Thunderbolt 3) with an RTX 3060 Ti
+- A Dell Thunderbolt 4 dock is also on the Thunderbolt chain
+- NixOS 26.11 (unstable-ish), kernel 6.18.63, NVIDIA proprietary driver 580.196.07, COSMIC on Wayland
+
+The snippets are NixOS, but the ideas apply to any distro.
+
+## Checking each layer: the system saw the GPU
+
+When a hotplugged GPU doesn't appear, check four layers in order. I should have done this instead of rebooting repeatedly.
+
+```bash
+# 1. Did Thunderbolt authorize the enclosure?
+boltctl list
+
+# 2. Did the PCIe device enumerate? (mine was 09:00.0)
+lspci | grep -i nvidia
+
+# 3. Did the driver bind? Look for NVRM errors and bridge window failures
+journalctl -k | grep -E 'NVRM|bridge window'
+
+# 4. Does userspace have a device node, and does nvidia-smi see the card?
+ls /dev/nvidia*
+nvidia-smi -L
+```
+
+On my machine, steps 1 and 2 passed (bolt had authorized the enclosure, and `lspci` listed the GPU). Step 3 failed:
+
+```text
+NVRM: This PCI I/O region assigned to your NVIDIA device is invalid
+nvidia 0000:09:00.0: probe with driver nvidia failed with error -1
+bridge window [mem size 0x100000000]: can't assign; no space
+```
+
+## What was blocking the card
+
+Checks 3 and 4 failed for different reasons. The first problem stops the driver from binding. The second hides the card from userspace once it does.
+
+### Bug 1: hpmemsize=4G left BAR0 unassigned
+
+My config had `pci=hpmemsize=4G,hpiosize=0` from an earlier attempt. I assumed a big GPU needs a big window.
+
+It doesn't, because `hpmemsize` is the wrong window. It reserves the 32-bit **non-prefetchable** memory window for each hotplug bridge, and the kernel can't fit 4 gigabytes into 32-bit address space. It logged `can't assign; no space` and moved on. That left the GPU's 16 MB BAR0, which lives in the same window, without an address: the device's `resource` file in sysfs was all zeros, even though the 64-bit prefetchable BARs (256 MB and 32 MB) were fine.
+
+The parameter for big GPU BARs is `hpmmioprefsize`, which sizes the 64-bit prefetchable window. Use a small `hpmemsize` and a large `hpmmioprefsize`:
+
+```nix
+boot.kernelParams = lib.mkBefore [
+  "pciehp.pciehp_force=1"
+  "pci=realloc"
+  "pcie_ports=native"
+
+  # hpmemsize: 32-bit non-prefetchable window, keep it small.
+  # hpmmioprefsize: 64-bit prefetchable window for the GPU's big BARs.
+  "pci=hpbussize=0x20,hpmemsize=64M,hpmmioprefsize=1G,hpiosize=0"
+  "iommu=pt"
+];
+boot.extraModprobeConfig = lib.mkAfter ''
+  options pciehp pciehp_force=1
+'';
+```
+
+To check the result without reading dmesg, list the regions for your device (replace `09:00.0` with yours). Every region should have an address, not `<unassigned>`.
+
+```bash
+sudo lspci -vv -s 09:00.0 | grep Region
+```
+
+### Bug 2: nvidia-smi ignored the card because /dev/nvidia1 didn't exist
+
+After the window fix, the driver bound and `/proc/driver/nvidia/gpus/` listed the 3060 Ti. But `nvidia-smi` still showed only the internal 1050 Ti.
+
+This took me longest. `ls /dev/nvidia*` showed `nvidia0` and nothing for the second card. The kernel module doesn't create device nodes itself. On a normal distro `nvidia-modprobe` creates them on demand, but it isn't available in my NixOS setup, so a GPU that appears after boot never gets a node. To confirm, I made one by hand:
+
+```bash
+sudo mknod -m 666 /dev/nvidia1 c 195 1
+```
+
+Both GPUs showed up in `nvidia-smi` immediately.
+
+To automate that, a udev rule runs a script whenever the NVIDIA driver binds to a PCI device. The script reads each minor number from `/proc/driver/nvidia/gpus/*/information` and creates any missing node:
+
+```nix
+services.udev.extraRules = let
+  nvidiaNodes = pkgs.writeShellScript "nvidia-create-nodes" ''
+    for info in /proc/driver/nvidia/gpus/*/information; do
+      [ -e "$info" ] || continue
+      minor=$(${pkgs.gawk}/bin/awk '/Device Minor/ {print $NF}' "$info")
+      [ -n "$minor" ] && [ ! -e "/dev/nvidia$minor" ] &&
+        ${pkgs.coreutils}/bin/mknod -m 666 "/dev/nvidia$minor" c 195 "$minor"
+    done
+    exit 0
+  '';
+in ''
+  ACTION=="bind", SUBSYSTEM=="pci", DRIVER=="nvidia", RUN+="${nvidiaNodes}"
+'';
+```
+
+After a rebuild and reboot, I cold booted, switched the enclosure on while logged in, and the eGPU appeared in `nvidia-smi`.
+
+One caveat: I had created `/dev/nvidia1` by hand earlier and don't know whether I deleted it before testing. So I can't say the rule alone creates the node. It should, but I haven't proven it from a clean `/dev`.
+
+## Running programs on the eGPU with a wrapper script
+
+With both cards visible, I wanted to run one program on the eGPU. My `egpu-prefer` wrapper sets environment variables and then `exec`s the command.
+
+It failed at first. My session sets `VK_LOADER_DRIVERS_SELECT=*intel*` and `DRI_PRIME=pci-0000_00_02_0`, which together hide the NVIDIA Vulkan driver. I never found where those variables come from, and they aren't in my dotfiles.
+
+Native NVIDIA GLX offload also failed: it picked the 1050 Ti even when I gave it the eGPU's UUID. So the wrapper selects the card through Vulkan instead:
+
+```bash
+# Override the session's restrictions
+export VK_LOADER_DRIVERS_SELECT="*nvidia*"
+unset DRI_PRIME
+
+# Pick the 3060 Ti by PCI vendor:device ID
+export MESA_VK_DEVICE_SELECT="10de:2489"
+
+exec "$@"
+```
+
+This is a trimmed version. The full wrapper also sets `VK_DRIVER_FILES` to the NVIDIA ICD path and a few CUDA variables. To check the selection:
+
+```bash
+MESA_VK_DEVICE_SELECT=10de:2489 VK_LOADER_DRIVERS_SELECT='*nvidia*' vulkaninfo --summary | grep deviceName
+```
+
+Vulkan lists the RTX 3060 Ti first, CUDA sees both GPUs, and rendering through `egpu-prefer` works.
+
+## What I haven't tested
+
+I'd rather list these than imply it all works:
+
+- **Games.** Rendering through the wrapper works, but I haven't run a game on the eGPU yet.
+- **The udev rule alone**, without a hand-made node already in `/dev`.
+- **Safe unplug.** I haven't tried hot-unplugging while the driver is in use. I'd stop everything using the card first.
+
+---
+
+- **Page:** A browser tool that puts every carousel photo on the same white mat, like a gallery print
+- **Source:** https://subodhdahal.com/blog/instagram-carousel-padding-tool
+- **Description:** Instagram can keep each photo's original aspect ratio in a carousel, but I prefer a white canvas with even borders. I built a page that pads every image onto one shared canvas, entirely in the browser.
+
+I use Instagram to post pictures from my hikes and trips, and nearly every one is nature or scenery. I like posting four or five at once as a carousel, but those photos come out in different aspect ratios. A wide mountain view sits next to a tall shot of a tree, and I wanted the whole set to look good when someone swipes through it in the app.
+
+I wanted every slide on the same white canvas with a border around the photo, like a print in a gallery frame.
+
+So I made a page for it: an [Instagram carousel white border tool](https://subodhdahal.com/tools/instagram-carousel/). You drop images in, it pads each one onto a shared canvas, and you download the result. Everything runs in your browser, so your photos are never uploaded.
+
+## Why I don't use Instagram's Mixed option
+
+Instagram's phone app has a **Mixed** option in the crop menu that keeps each photo's own aspect ratio. The space around the wide photos isn't necessarily white, because Instagram fills it with a background that follows the app's theme. I can't control that background or how much space each photo gets, and I'd rather have white, which looks better to me.
+
+## Padding one wide photo and three tall ones to 4:5
+
+I tested it with four photos from a walk in November: one wide 4:3 photo and three 4:5 tall ones. The page picked a 4:5 canvas of 1440 × 1800 pixels. The wide photo got white space above and below, and the tall ones got a thin border.
+
+<figure className="image">
+
+![Instagram Carousel Tools showing four autumn photos on identical white canvases, the first one wide, with white space above and below](https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png)
+  <figcaption>
+
+The first photo is the wide one. The slides share one canvas size.
+
+</figcaption>
+</figure>
+
+The padding slider goes from 0 to 20%. Around 10% it starts to look matted. The ratio defaults to Auto, which picks the best fit for the set, and I can force 4:5, 1:1 or 1.91:1 instead. A click on any slide opens a swipe preview, and the padding slider stays in reach.
+
+<figure className="image">
+
+![Preview viewer showing the wide autumn photo centered on a white 4:5 slide with navigation arrows and dots](https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-preview-viewer.png)
+  <figcaption>
+
+The preview with padding at 10%.
+
+</figcaption>
+</figure>
+
+I export at 1080 wide as JPEG, and the tool gives me a ZIP. It also supports 1440 wide and PNG. It stops at 20 slides, which is Instagram's cap, and warns when a file goes above 8 MB. My test photos came out between 670 KB and 1 MB each.
+
+## The layout math and canvas drawing behind the tool
+
+The tool is a Nuxt page with a few Vue components and two small TypeScript files. One does the layout math and the other draws onto a `<canvas>`.
+
+If you haven't used it, `<canvas>` is an HTML element that gives you a blank grid of pixels that JavaScript can paint into. I picked it because the browser already does the hard parts: it decodes the photos, resizes them with smoothing when you draw them, and encodes the result as JPEG or PNG through `canvas.toBlob`. So the tool doesn't need an image library or a server, which is why nothing gets uploaded. The previews on the page are canvases too, painted by the same code.
+
+```mermaidThe whole tool, from dropping photos in to downloading slides.
+flowchart TD
+  accTitle: How the carousel tool turns photos into slides
+  accDescr: Drop in photos, decode each photo and fix EXIF rotation, pick the aspect ratio with the least empty space, size one box that fits every photo and add padding, draw each photo centered on a white canvas, encode each slide as JPEG or PNG, then download one slide or a ZIP.
+  A["Drop in photos"] --> B["Decode each photo, fix EXIF rotation"]
+  B --> C["Pick the aspect ratio with the least empty space"]
+  C --> D["Size one box that fits every photo, add padding"]
+  D --> E["Draw each photo centered on a white canvas"]
+  E --> F["Encode each slide as JPEG or PNG"]
+  F --> G["Download one slide or a ZIP"]
+```
+
+Picking the aspect ratio and sizing the canvas is where most of the code goes, so here is a closer look at those steps:
+
+```mermaidInside the layout step: choosing the aspect ratio and sizing the canvas.
+flowchart TD
+  accTitle: How the tool picks the aspect ratio and sizes the canvas
+  accDescr: If a ratio is forced, the tool uses it. Otherwise it builds candidates from each photo's ratio, clamped to Instagram's range, plus both range limits, scores each candidate, and picks the highest score, breaking ties toward square. It then sizes the smallest box at that ratio that fits every photo, adds padding, rounds the canvas to whole pixels while ignoring floating-point error, and either keeps the original size capped at 1440 wide or scales to 1080 or 1440 and clamps the height.
+  A{"Ratio forced?"} -- yes --> R["Use that ratio"]
+  A -- no --> B["Candidates: each photo's ratio,<br/>clamped to 4:5 to 1.91:1, plus both limits"]
+  B --> C["Score each: sum of min(R/r, r/R)"]
+  C --> D["Highest score wins<br/>(tie goes to closest to square)"]
+  D --> R
+  R --> E["Box = smallest at ratio R<br/>that fits every photo natively"]
+  E --> F["Add padding on every side"]
+  F --> G["Round to whole pixels,<br/>ignoring float error"]
+  G --> H{"Export width?"}
+  H -- Original --> I["Keep size, cap at 1440 wide"]
+  H -- 1080 / 1440 --> J["Scale, clamp height to Instagram's range"]
+```
+
+### Scoring a few candidates instead of every ratio
+
+The point of the tool is that every slide shares one canvas, so Auto mode needs one ratio for the whole set. A photo with ratio `r` in a box with ratio `R` fills `min(R/r, r/R)` of it. The total over all photos can only peak at one of the photos' own ratios or at a range limit, so the tool only scores those.
+
+For my test set, 4:5 scores 3.6 (the three tall photos fill 100% of it, the wide one 60%) and 4:3 scores 2.8.
+
+Because every photo fits into the same box, photos with the same aspect ratio end up in the same spot, even if one is 6000 pixels wide and the other 2000.
+
+### The floating-point rounding guard
+
+Rounding was the fiddly part. The code rounds one side of the canvas up so it's never too small for the photos. But JavaScript can't store most fractions exactly, so a value that should be whole sometimes comes out a hair above it. For an 878 × 800 photo with no padding, the height works out to `878 / (878 / 800)`, which JavaScript computes as `800.0000000000001`. Rounding that up gives 801, so the canvas is one pixel taller than the photo and a half-pixel strip of white shows along the top and bottom edges.
+
+So the code subtracts `1e-9` before rounding up. That's far bigger than the floating-point error and far smaller than any real fraction of a pixel, so the height comes out as 800.
+
+### Drawing and exporting
+
+Decoding with `createImageBitmap(file, { imageOrientation: 'from-image' })` applies the EXIF rotation, so phone photos don't come out sideways. The thumbnails and the export use the same `drawSlide` function, so what you see in the grid matches the file you download. [JSZip](https://stuk.github.io/jszip/) builds the ZIP.
+
+The file size under each slide comes from encoding it for real, 350 ms after you stop moving the slider, so the 8 MB warning uses real sizes instead of estimates. The layout and drawing code is in [`app/lib/carousel/`](https://github.com/SubodhDahal/subodhdahal.github.io/tree/master/app/lib/carousel).
+
+## What's missing
+
+The padding is always white. I haven't decided whether other colors are worth adding. If something breaks on your photos or you want a feature, please [open an issue on GitHub](https://github.com/SubodhDahal/subodhdahal.github.io/issues/new).
 
 ---
 
@@ -1482,6 +1110,158 @@ My laptop runs NixOS with the COSMIC desktop on Wayland, connected to a Razer Co
 - **Description:** Trail reports from Nepal including the Tsho-Rolpa glacial lake trek, travel photos from across Europe, and tools I built for sharing photos on Instagram.
 
 I take my camera on hikes and trips, from the Tsho-Rolpa glacial lake in Nepal to cities and national parks across Europe. These posts are the trail reports, yearly look-backs and photo essays, plus the tools I built to post those photos the way I want. For the photos on their own, see the [photography wall](https://subodhdahal.com/photography/).
+
+---
+
+- **Page:** Instagram Carousel White Border Tool (No Crop)
+- **Source:** https://subodhdahal.com/tools/instagram-carousel
+- **Description:** Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_7b4d279de2f79e5f.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_7b4d279de2f79e5f.png
+```
+
+# **Instagram carousel white border tool**
+
+Put portrait, landscape and square photos on one white canvas with an even border, so Instagram doesn't crop your carousel and mixed photos sit in the same frame like gallery prints.
+
+Free, no sign-up. Everything runs in your browser and your images never leave your device. This page uses Rybbit for cookieless pageview analytics only ([privacy policy](https://subodhdahal.com/privacy/)).
+
+## How to add white borders to an Instagram carousel
+
+1. Drop your photos onto the page, or pick them from your device. Drag the slides to change their order.
+2. Leave the aspect ratio on **Auto**, or force 4:5, 1:1, 1.91:1 or 3:4.
+3. Move the padding slider until the border looks right. Click any slide to swipe through a preview.
+4. Choose **1080** as the export width for files sized exactly for Instagram, then download the ZIP.
+5. In Instagram, select the slides in their numbered order. They already share one shape, so nothing gets cropped.
+
+## How Auto picks the canvas shape
+
+Instagram makes every slide in a carousel the same shape and crops anything that doesn't fit. Auto looks at every photo in the set and picks the ratio within Instagram's 1.91:1 to 4:5 range that leaves the least empty space overall. Three tall photos and one wide one end up on a 4:5 canvas, with white above and below the wide photo. A set of mostly wide photos gets a landscape canvas instead.
+
+The canvas is the smallest one that holds every photo at its native resolution, so no photo is scaled up. Photos taller than 4:5 or wider than 1.91:1 get extra white on the sides or top and bottom, so they still fit without being cropped.
+
+## Instagram carousel sizes
+
+| Shape | Ratio | Size at 1080 wide |
+| --- | --- | --- |
+| Portrait | 4:5 | 1080 × 1350 px |
+| Tall portrait (app only) | 3:4 | 1080 × 1440 px |
+| Square | 1:1 | 1080 × 1080 px |
+| Landscape | 1.91:1 | 1080 × 566 px |
+
+A carousel holds up to 20 slides. Portrait 4:5 takes up the most room in the feed on every surface, which is why Auto leans toward it when the set has tall photos.
+
+## Questions
+
+<details>
+
+<summary>
+
+### Why not just use Instagram's Mixed option?
+
+</summary>
+
+Instagram's Mixed option keeps each photo's shape, but it fills the empty space with a background that follows the app's light or dark theme, and you can't control its color or size. This tool bakes an even white border into every image, so the carousel looks the same for every viewer.
+
+</details>
+
+<details>
+
+<summary>
+
+### How do I post portrait and landscape photos in one carousel without cropping?
+
+</summary>
+
+Add all the photos here, keep the aspect ratio on Auto, and download the ZIP. Every slide comes out at the same canvas size with the whole photo inside it, so Instagram has nothing to crop. Upload the slides in the numbered order.
+
+</details>
+
+<details>
+
+<summary>
+
+### What size should Instagram carousel images be?
+
+</summary>
+
+Instagram stores posts at 1080 pixels wide, with an aspect ratio between 1.91:1 (1080 × 566) and 4:5 (1080 × 1350). The app also accepts 3:4 (1080 × 1440). Every slide in a carousel should share one ratio. Choose the 1080 export width here for files sized exactly for Instagram.
+
+</details>
+
+<details>
+
+<summary>
+
+### Are my photos uploaded anywhere?
+
+</summary>
+
+No. The images are decoded, padded and encoded by your browser on your own device. Nothing is sent to a server.
+
+</details>
+
+<details>
+
+<summary>
+
+### How many photos can I add?
+
+</summary>
+
+Up to 20, which is the most Instagram allows in one carousel. The tool also warns you when a slide is larger than 8 MB.
+
+</details>
+
+<details>
+
+<summary>
+
+### How wide should the white border be?
+
+</summary>
+
+Padding is a percentage of the shared photo area, from 0 to 20%. Around 5% reads as a thin frame and around 10% looks like a matted gallery print. At 0% the photos still share one canvas, with white only where their shapes differ.
+
+</details>
+
+<details>
+
+<summary>
+
+### Should I export JPEG or PNG?
+
+</summary>
+
+JPEG at 95% quality suits photos and keeps files small. PNG is lossless and better for screenshots, text or flat graphics, but the files are much larger.
+
+</details>
+
+<details>
+
+<summary>
+
+### Can I use a border color other than white?
+
+</summary>
+
+Not yet, the padding is always white. If you want another color, open an issue on GitHub and say what you would use it for.
+
+</details>
+
+I built this for posting photos from hikes and trips, and wrote about why in [a post about the carousel padding tool](https://subodhdahal.com/blog/instagram-carousel-padding-tool/).
+
+Found a bug or want a feature? Please [**open an issue on GitHub**](https://github.com/SubodhDahal/subodhdahal.github.io/issues/new).
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#webpage","description":"Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.","name":"Instagram Carousel White Border Tool (No Crop)","url":"https://subodhdahal.com/tools/instagram-carousel/","@type":["WebPage","FAQPage"],"breadcrumb":{"@id":"https://subodhdahal.com/tools/instagram-carousel/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"mainEntity":[{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/1"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/2"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/3"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/4"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/5"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/6"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/7"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/8"}],"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/tools/instagram-carousel/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Tools","item":"https://subodhdahal.com/tools/","position":2},{"@type":"ListItem","name":"Instagram carousel white border tool","item":"https://subodhdahal.com/tools/instagram-carousel/","position":3}]},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/1","@type":"Question","inLanguage":"en","name":"Why not just use Instagram's Mixed option?","acceptedAnswer":{"@type":"Answer","text":"Instagram's Mixed option keeps each photo's shape, but it fills the empty space with a background that follows the app's light or dark theme, and you can't control its color or size. This tool bakes an even white border into every image, so the carousel looks the same for every viewer."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/2","@type":"Question","inLanguage":"en","name":"How do I post portrait and landscape photos in one carousel without cropping?","acceptedAnswer":{"@type":"Answer","text":"Add all the photos here, keep the aspect ratio on Auto, and download the ZIP. Every slide comes out at the same canvas size with the whole photo inside it, so Instagram has nothing to crop. Upload the slides in the numbered order."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/3","@type":"Question","inLanguage":"en","name":"What size should Instagram carousel images be?","acceptedAnswer":{"@type":"Answer","text":"Instagram stores posts at 1080 pixels wide, with an aspect ratio between 1.91:1 (1080 × 566) and 4:5 (1080 × 1350). The app also accepts 3:4 (1080 × 1440). Every slide in a carousel should share one ratio. Choose the 1080 export width here for files sized exactly for Instagram."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/4","@type":"Question","inLanguage":"en","name":"Are my photos uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. The images are decoded, padded and encoded by your browser on your own device. Nothing is sent to a server."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/5","@type":"Question","inLanguage":"en","name":"How many photos can I add?","acceptedAnswer":{"@type":"Answer","text":"Up to 20, which is the most Instagram allows in one carousel. The tool also warns you when a slide is larger than 8 MB."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/6","@type":"Question","inLanguage":"en","name":"How wide should the white border be?","acceptedAnswer":{"@type":"Answer","text":"Padding is a percentage of the shared photo area, from 0 to 20%. Around 5% reads as a thin frame and around 10% looks like a matted gallery print. At 0% the photos still share one canvas, with white only where their shapes differ."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/7","@type":"Question","inLanguage":"en","name":"Should I export JPEG or PNG?","acceptedAnswer":{"@type":"Answer","text":"JPEG at 95% quality suits photos and keeps files small. PNG is lossless and better for screenshots, text or flat graphics, but the files are much larger."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/8","@type":"Question","inLanguage":"en","name":"Can I use a border color other than white?","acceptedAnswer":{"@type":"Answer","text":"Not yet, the padding is always white. If you want another color, open an issue on GitHub and say what you would use it for."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/web-application/1","@type":"WebApplication","applicationCategory":"MultimediaApplication","browserRequirements":"Requires JavaScript and a modern browser","description":"Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.","isAccessibleForFree":true,"name":"Instagram Carousel White Border Tool (No Crop)","operatingSystem":"Any","screenshot":"https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png","url":"https://subodhdahal.com/tools/instagram-carousel/","alternateName":["Instagram Carousel Tools","Instagram white border maker","Instagram no crop tool"],"author":{"@id":"https://subodhdahal.com/#identity"},"featureList":["Pads every photo onto one shared canvas so Instagram does not crop it","Even white border from 0 to 20%","Auto aspect ratio, or fixed 4:5, 1:1, 1.91:1 or 3:4","Export at original size, 1080 or 1440 px wide","JPEG or PNG, downloaded as a ZIP","Up to 20 slides, matching the Instagram carousel limit","Runs entirely in the browser; images are never uploaded"],"offers":{"@type":"Offer","price":0,"priceCurrency":"USD"}},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
 
 ---
 
@@ -1545,6 +1325,70 @@ I still use GitHub where it makes sense. My personal website runs on GitHub Page
 ## Takeaway
 
 The setup was simple, upkeep is low, and pushing code to my own server feels good.
+
+---
+
+- **Page:** Curating my own reading and discovery feed with RSS
+- **Source:** https://subodhdahal.com/blog/reading-and-discovery-feed-curation
+- **Description:** Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
+
+For quite some time, I have wanted to rely less on algorithmically curated feeds. The daily scroll through YouTube, Substack, or LinkedIn felt less like discovery and more like dopamine mining. I wanted a system that delivered interesting content to satisfy my curiosity, without platforms whose best interest is to have me glued to them. These days, finding such a platform is tough. Even if one exists now, there's no guarantee it won't eventually mimic the ones I wanted to get away from.
+
+I wanted a system where I subscribe directly to creators or communities sharing content I like. That's exactly what a feed reader does. It pulls content chronologically from blogs and sites that support RSS/Atom feeds, with no middleman filtering or recommending.
+
+There are a few feed reader platforms, but I wanted to have full data ownership and more control over the system. This is why I decided to self-host [FreshRSS](https://github.com/FreshRSS/FreshRSS), an open-source feed aggregator and reader, on my homelab running on a mini-PC. This also has the added advantage of being resilient compared to an online service which may stop existing for reasons beyond my control.
+
+## Feed sources
+
+Rather than relying on algorithms of platforms to decide which content they want to show me, I now subscribe to content from sources where I have found interesting writings before. I categorize the content sources broadly into the following:
+
+- Communities: There's many interesting posts being shared on communities like Hacker News RSS, Lobsters, Lemmy. I started by directly subscribing to their content RSS feed. But the number of posts was overwhelming. So I now use [hnrss.com](https://hnrss.github.io/) and [upvote-rss](https://github.com/johnwarne/upvote-rss) to get only the top posts from them.
+- Personal Blogs: If a post catches my eye, I check the author’s site and subscribe to their personal RSS feed if they have other content that I also find interesting.
+- Substack: I subscribe to a creator's publication directly by using their Substack URL.
+- Websites without RSS: Not all websites provide RSS/Atom feeds. Luckily, there's an open-source and self-hostable project called [RSSHub](https://github.com/DIYgod/RSSHub) which can generate RSS feeds for many popular websites. It acts as a bridge between my FreshRSS instance and those websites. It also has a browser extension companion: [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar) to easily find and subscribe to RSS feeds.
+- Newsletters: Previously, I had subscribed to many newsletters on my personal email. This made my email inbox messy and it felt like a chore to go and read there. I now use [Kill the Newsletter!](https://kill-the-newsletter.com/) which provides an email address to subscribe to these newsletters. It generates an Atom feed which I can subscribe to in FreshRSS. This has the benefit of keeping my inbox clean and also consolidating all my reading into a single application.
+- YouTube Channels: Yes, I can directly subscribe to YouTube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
+
+<figure className="w-full,image">
+<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="/images/freshrss-ui.png" style="border: 1px solid black">
+
+
+
+</iframe>
+
+
+  <figcaption>
+
+This is how my FreshRSS looks like
+
+</figcaption>
+</figure>
+
+Since FreshRSS is an aggregator, I don't necessarily need to use the FreshRSS interface to access my feed. There are many applications for different platforms which can use FreshRSS as the source for the feeds. I use the Readrops app on my phone. I have occasionally used the NetNewsWire app on MacOS.
+
+## Filtering my feed
+
+Some newsletters I subscribe to, like those covering AI news, have a short shelf life. If I haven't read them within a month, the content is usually stale and there is little point in me reading them. That's why I've set up the `-pubdate:P30D` filter to automatically mark them as read.
+
+FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a YouTube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
+
+Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenever I get to them, so there's no need to rush.
+
+## Extending and customizing FreshRSS
+
+FreshRSS is not the only self-hostable feed aggregator. The main reason I chose it is because of its support for extensions which allows for augmenting its functionality. The ones I find useful are:
+
+- Youlag: Better interface for YouTube videos than the default view
+- Af_Readability: Inlines full article content for sites that only show excerpts in feeds.
+- Karakeep Button: Saves interesting posts directly to my Karakeep instance for long-term storage.
+
+There's a lot more extensions which can be browsed in the [official repository](https://github.com/FreshRSS/Extensions).
+
+## Conclusion
+
+After migrating to this setup, I am reading more in-depth content than what I did before. I've discovered authors sharing valuable perspectives on topics I find interesting that are not within the current hype-cycle. It's also refreshing to follow the creators whose writing feels like the pre-SEO, pre-marketing, pre-AISlop internet.
+
+I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my default way of finding new content is now the feed reader.
 
 ---
 
@@ -1636,6 +1480,14 @@ The `traefik.docker.network=proxy` label tells Traefik which network to use for 
 Compose creates the internal network fresh, so DNS always works. When Immich sends jobs to Redis or reads from Postgres, names resolve fast. Traffic from Traefik arrives on the proxy network instead. Both networks reach the same containers through different paths, so the timing issues vanish.
 
 Now photo indexing and all the other jobs work as intended.
+
+---
+
+- **Page:** NixOS on the desktop
+- **Source:** https://subodhdahal.com/topics/nixos
+- **Description:** Fixes from running NixOS with COSMIC on Wayland on a ThinkPad, including a Razer Core X eGPU with an NVIDIA RTX card and Handy speech-to-text.
+
+My laptop runs NixOS with the COSMIC desktop on Wayland, connected to a Razer Core X eGPU. When something on that setup doesn't work, I write down how I tracked it down, layer by layer, with the NixOS config that fixed it. The snippets are NixOS, but the debugging steps apply to most Linux distributions.
 
 ---
 
@@ -1795,70 +1647,6 @@ jq -f ~/.jq/shape_with_samples.jq response.json
 ## Conclusion
 
 It’s a simple trick, but it makes large JSON responses much easier to read. When you hit an undocumented API, jq maps its structure fast and without guesswork.
-
----
-
-- **Page:** Curating my own reading and discovery feed with RSS
-- **Source:** https://subodhdahal.com/blog/reading-and-discovery-feed-curation
-- **Description:** Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
-
-For quite some time, I have wanted to rely less on algorithmically curated feeds. The daily scroll through YouTube, Substack, or LinkedIn felt less like discovery and more like dopamine mining. I wanted a system that delivered interesting content to satisfy my curiosity, without platforms whose best interest is to have me glued to them. These days, finding such a platform is tough. Even if one exists now, there's no guarantee it won't eventually mimic the ones I wanted to get away from.
-
-I wanted a system where I subscribe directly to creators or communities sharing content I like. That's exactly what a feed reader does. It pulls content chronologically from blogs and sites that support RSS/Atom feeds, with no middleman filtering or recommending.
-
-There are a few feed reader platforms, but I wanted to have full data ownership and more control over the system. This is why I decided to self-host [FreshRSS](https://github.com/FreshRSS/FreshRSS), an open-source feed aggregator and reader, on my homelab running on a mini-PC. This also has the added advantage of being resilient compared to an online service which may stop existing for reasons beyond my control.
-
-## Feed sources
-
-Rather than relying on algorithms of platforms to decide which content they want to show me, I now subscribe to content from sources where I have found interesting writings before. I categorize the content sources broadly into the following:
-
-- Communities: There's many interesting posts being shared on communities like Hacker News RSS, Lobsters, Lemmy. I started by directly subscribing to their content RSS feed. But the number of posts was overwhelming. So I now use [hnrss.com](https://hnrss.github.io/) and [upvote-rss](https://github.com/johnwarne/upvote-rss) to get only the top posts from them.
-- Personal Blogs: If a post catches my eye, I check the author’s site and subscribe to their personal RSS feed if they have other content that I also find interesting.
-- Substack: I subscribe to a creator's publication directly by using their Substack URL.
-- Websites without RSS: Not all websites provide RSS/Atom feeds. Luckily, there's an open-source and self-hostable project called [RSSHub](https://github.com/DIYgod/RSSHub) which can generate RSS feeds for many popular websites. It acts as a bridge between my FreshRSS instance and those websites. It also has a browser extension companion: [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar) to easily find and subscribe to RSS feeds.
-- Newsletters: Previously, I had subscribed to many newsletters on my personal email. This made my email inbox messy and it felt like a chore to go and read there. I now use [Kill the Newsletter!](https://kill-the-newsletter.com/) which provides an email address to subscribe to these newsletters. It generates an Atom feed which I can subscribe to in FreshRSS. This has the benefit of keeping my inbox clean and also consolidating all my reading into a single application.
-- YouTube Channels: Yes, I can directly subscribe to YouTube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
-
-<figure className="w-full,image">
-<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="/images/freshrss-ui.png" style="border: 1px solid black">
-
-
-
-</iframe>
-
-
-  <figcaption>
-
-This is how my FreshRSS looks like
-
-</figcaption>
-</figure>
-
-Since FreshRSS is an aggregator, I don't necessarily need to use the FreshRSS interface to access my feed. There are many applications for different platforms which can use FreshRSS as the source for the feeds. I use the Readrops app on my phone. I have occasionally used the NetNewsWire app on MacOS.
-
-## Filtering my feed
-
-Some newsletters I subscribe to, like those covering AI news, have a short shelf life. If I haven't read them within a month, the content is usually stale and there is little point in me reading them. That's why I've set up the `-pubdate:P30D` filter to automatically mark them as read.
-
-FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a YouTube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
-
-Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenever I get to them, so there's no need to rush.
-
-## Extending and customizing FreshRSS
-
-FreshRSS is not the only self-hostable feed aggregator. The main reason I chose it is because of its support for extensions which allows for augmenting its functionality. The ones I find useful are:
-
-- Youlag: Better interface for YouTube videos than the default view
-- Af_Readability: Inlines full article content for sites that only show excerpts in feeds.
-- Karakeep Button: Saves interesting posts directly to my Karakeep instance for long-term storage.
-
-There's a lot more extensions which can be browsed in the [official repository](https://github.com/FreshRSS/Extensions).
-
-## Conclusion
-
-After migrating to this setup, I am reading more in-depth content than what I did before. I've discovered authors sharing valuable perspectives on topics I find interesting that are not within the current hype-cycle. It's also refreshing to follow the creators whose writing feels like the pre-SEO, pre-marketing, pre-AISlop internet.
-
-I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my default way of finding new content is now the feed reader.
 
 ---
 
@@ -2188,150 +1976,215 @@ This music control workflow is step one in an ongoing automation experiment. I'm
 
 ---
 
-- **Page:** fzf + fabric: Smart selection for LLM patterns and models
-- **Source:** https://subodhdahal.com/blog/ai-pattern-selection-in-fabric
-- **Description:** Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.
+- **Page:** My 2023 travels: A visual journey
+- **Source:** https://subodhdahal.com/blog/2023-travels-visual-journey
+- **Description:** Looking back at the best pictures from my travel adventures in 2023
 
-I have been using [fabric](https://github.com/danielmiessler/fabric) to run LLM prompts on text. It's like having a Swiss Army knife of LLM tools. You feed it text, and it helps analyze it in different ways. With 31k+ GitHub stars, lots of people find it useful.
+## My 2023 travels: A visual journey
 
-But here's the thing: there were too many patterns available. I kept staring at my screen trying to remember how they are named. Plus, I wanted to have the flexibility to choose different LLM models without having to memorize their names.
+Yet another year has passed. I've been lucky enough to travel to some amazing places, meet some amazing people and make wonderful memories. Here are some of my favourite pictures from my travels in 2023.
 
-## The solution
+## Nepal 🇳🇵
 
-I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool I also use for [checking out Git branches](https://subodhdahal.com/blog/git-and-command-line-next-level-workflow/), to create searchable menus for fabric. Instead of memorizing commands, I just:
+### Kathmandu valley
 
-1. Send text to fabric
-2. Type any parts of what I want. fzf is smart about matching:
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-  - `xwis` finds "extract_wisdom"
-  - `sumtext` matches "summarize_text"
-3. Press enter to run
+![Nyatapole temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-10.jpg)
+  ![The Himalayas as seen from Kathmandu](https://subodhdahal.com/images/2023-visual-journey/nepal-9.jpg)
+  ![A temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-1.jpg)
 
-The magic happens with two shell commands (add to `.zshrc` or `.bashrc`):
+</div>
 
-- `fp` - Pick a pattern with fuzzy search
-- `fps` - Same smart matching, but for both model and pattern
+### Bharatpur
 
-Here's the code that makes it work:
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-```bash
-# Fabric CLI Helper Functions
-# Interactive selection of models and patterns for fabric AI tool
-# Requirements: fabric(https://github.com/danielmiessler/fabric), fzf(https://github.com/junegunn/fzf)
-#
-# Usage Examples:
-#   Model + Pattern Selection (fps alias):
-#     fps -u <url>                    # Process URL content
-#     pbpaste | fps                   # Process clipboard content
-#     yt <youtube_url> | fps          # Process YouTube transcript
-#     echo "text" | fps               # Process any text content
-#
-#   Pattern Selection Only (fp alias):
-#     fp -u <url>                     # Use default model with URL
-#     pbpaste | fp                    # Use default model with clipboard
-#     yt <youtube_url> | fp           # Use default model with transcript
-#     cat file.txt | fp               # Process any text content
+![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-4.jpg)
+  ![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-3.jpg)
+  ![Evening in Sauraha](https://subodhdahal.com/images/2023-visual-journey/nepal-5.jpg)
 
-# Handle stdin input for fabric functions
-_fabric_handle_input() {
-  if [ -t 0 ]; then
-    return 1  # No stdin
-  else
-    cat       # Return stdin content
-    return 0
-  fi
-}
+</div>
 
-# Select a pattern using fzf
-_fabric_select_pattern() {
-  fabric -l | fzf --height 40% --border --ansi --prompt="Select pattern: "
-}
+### Pokhara
 
-# Select and run fabric with a pattern
-# Usage: fabric_with_pattern [additional_args...]
-fabric_with_pattern() {
-  local input=""
-  local has_stdin=0
+![View of Mount Machhapuchhre](https://subodhdahal.com/images/2023-visual-journey/nepal-2.jpg)![Boating in Phewa Lake](https://subodhdahal.com/images/2023-visual-journey/nepal-11.jpg)## Croatia 🇭🇷
 
-  if input=$(_fabric_handle_input); then
-    has_stdin=1
-  fi
+### Plitvice Lakes National Park
 
-  local pattern=$(_fabric_select_pattern)
-  [ -z "$pattern" ] && { echo "No pattern selected."; return 1; }
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-  if [ $has_stdin -eq 1 ]; then
-    echo "$input" | fabric --pattern "$pattern" "$@"
-  else
-    fabric --pattern "$pattern" "$@"
-  fi
-}
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-8.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-9.jpg)
 
-# Select and run fabric with both model and pattern
-# Usage: fabric_with_model_pattern [additional_args...]
-fabric_with_model_pattern() {
-  local input=""
-  local has_stdin=0
+</div>
 
-  if input=$(_fabric_handle_input); then
-    has_stdin=1
-  fi
+### Zagreb
 
-  local model_line=$(fabric -L | fzf --height 40% --border --ansi --prompt="Select model: ")
-  [ -z "$model_line" ] && { echo "No model selected."; return 1; }
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-  local model=$(echo "$model_line" | sed -E 's/.*[[:space:]]([^[:space:]]+)$/\1/')
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-6.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-3.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-4.jpg)
 
-  local pattern=$(_fabric_select_pattern)
-  [ -z "$pattern" ] && { echo "No pattern selected."; return 1; }
+</div>
 
-  if [ $has_stdin -eq 1 ]; then
-    echo "$input" | fabric --model "$model" --pattern "$pattern" "$@"
-  else
-    fabric --model "$model" --pattern "$pattern" "$@"
-  fi
-}
+### Split
 
-# Get YouTube transcript with fabric
-# Usage: yt <video_link>
-yt() {
-  local video_link="$1"
-  fabric -y "$video_link" --transcript
-}
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-# Aliases for convenience
-alias fp='fabric_with_pattern'
-alias fps='fabric_with_model_pattern'
-```
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-10.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-13.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-14.jpg)
 
-Also available on [GitHub Gist](https://gist.github.com/SubodhDahal/38436348aedf0596e48d17ffcffa7d51).
+</div>
 
-## Using It Day-to-Day
+## France 🇫🇷
 
-It's as simple as:
+### Strasbourg
 
-- `fp -u example.com` to analyze a website
-- `pbpaste | fp` to analyze clipboard content
-- `cat file.txt | fps` to analyze a file with a specific model
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-The menu pops up, you pick what you want, and fabric does the rest.
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-1.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-2.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-4.jpg)
 
-## Making It Work for You
+</div>
 
-You know how your phone probably has dozens of apps, but you only use a handful regularly? It's the same with fabric patterns. While having options is great, too many choices can slow you down.
+### Colmar
 
-I cleaned up my pattern collection by:
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-- Keeping only the patterns I actually use
-- Tweaking the remaining ones to work exactly how I want
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-2.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-1.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-3.jpg)
 
-Since patterns are just markdown files, changing them is as easy as editing a text file.
+</div>
 
-## Why This Matters
+### Nice and surrounding areas
 
-I'm not reinventing the wheel here. These are just small tweaks that make fabric feel more natural to use. But sometimes that's all you need: tools that work the way your brain works.
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-7.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-Before, I'd hesitate to use fabric because remembering all the commands felt like work. Now? It's just copy, paste, pick, and done. If you use fabric, give these helpers a try.
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-3.jpg)
+  <div>
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-2.jpg)
+    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-8.jpg)
+
+</div>
+
+
+  <div>
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-5.jpg)
+    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-6.jpg)
+
+</div>
+</div>
+
+## Germany 🇩🇪
+
+### Kiel
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/june-kiel-2.jpg)
+
+</div>
+
+### Schwäbisch Hall
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/may-schwaebisch-hall-1.jpg)
+
+</div>
+
+### Würzburg
+
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/aug-wuerzburg-2.jpg)## Monaco 🇲🇨
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Monaco](https://subodhdahal.com/images/2023-visual-journey/may-monaco-1.jpg)
+
+</div>
+
+## Hungary 🇭🇺
+
+### Budapest
+
+![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-6.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-4.jpg)
+  ![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-1.jpg)
+
+</div>
+
+## Netherlands 🇳🇱
+
+### Amsterdam
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-3.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-3.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-2.jpg)
+
+</div>
+
+### The Hague
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-4.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-5.jpg)
+
+</div>
+
+### Zaandam
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-5.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-7.jpg)
+
+</div>
+
+## Spain 🇪🇸
+
+### Barcelona
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-1.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-8.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-7.jpg)
+
+</div>
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-5.jpg)
+  ![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-6.jpg)
+
+</div>
+
+### Montserrat
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-9.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-11.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-10.jpg)
+
+</div>
+
+<div className="text-travel-heading,text-5xl,text-center,mt-8,pb-8">
+
+Fin
+
+</div>
 
 ---
 
@@ -2603,6 +2456,153 @@ I am still experimenting with the workflow and tools that I use to manage my dig
 
 ---
 
+- **Page:** fzf + fabric: Smart selection for LLM patterns and models
+- **Source:** https://subodhdahal.com/blog/ai-pattern-selection-in-fabric
+- **Description:** Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.
+
+I have been using [fabric](https://github.com/danielmiessler/fabric) to run LLM prompts on text. It's like having a Swiss Army knife of LLM tools. You feed it text, and it helps analyze it in different ways. With 31k+ GitHub stars, lots of people find it useful.
+
+But here's the thing: there were too many patterns available. I kept staring at my screen trying to remember how they are named. Plus, I wanted to have the flexibility to choose different LLM models without having to memorize their names.
+
+## The solution
+
+I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool I also use for [checking out Git branches](https://subodhdahal.com/blog/git-and-command-line-next-level-workflow/), to create searchable menus for fabric. Instead of memorizing commands, I just:
+
+1. Send text to fabric
+2. Type any parts of what I want. fzf is smart about matching:
+
+  - `xwis` finds "extract_wisdom"
+  - `sumtext` matches "summarize_text"
+3. Press enter to run
+
+The magic happens with two shell commands (add to `.zshrc` or `.bashrc`):
+
+- `fp` - Pick a pattern with fuzzy search
+- `fps` - Same smart matching, but for both model and pattern
+
+Here's the code that makes it work:
+
+```bash
+# Fabric CLI Helper Functions
+# Interactive selection of models and patterns for fabric AI tool
+# Requirements: fabric(https://github.com/danielmiessler/fabric), fzf(https://github.com/junegunn/fzf)
+#
+# Usage Examples:
+#   Model + Pattern Selection (fps alias):
+#     fps -u <url>                    # Process URL content
+#     pbpaste | fps                   # Process clipboard content
+#     yt <youtube_url> | fps          # Process YouTube transcript
+#     echo "text" | fps               # Process any text content
+#
+#   Pattern Selection Only (fp alias):
+#     fp -u <url>                     # Use default model with URL
+#     pbpaste | fp                    # Use default model with clipboard
+#     yt <youtube_url> | fp           # Use default model with transcript
+#     cat file.txt | fp               # Process any text content
+
+# Handle stdin input for fabric functions
+_fabric_handle_input() {
+  if [ -t 0 ]; then
+    return 1  # No stdin
+  else
+    cat       # Return stdin content
+    return 0
+  fi
+}
+
+# Select a pattern using fzf
+_fabric_select_pattern() {
+  fabric -l | fzf --height 40% --border --ansi --prompt="Select pattern: "
+}
+
+# Select and run fabric with a pattern
+# Usage: fabric_with_pattern [additional_args...]
+fabric_with_pattern() {
+  local input=""
+  local has_stdin=0
+
+  if input=$(_fabric_handle_input); then
+    has_stdin=1
+  fi
+
+  local pattern=$(_fabric_select_pattern)
+  [ -z "$pattern" ] && { echo "No pattern selected."; return 1; }
+
+  if [ $has_stdin -eq 1 ]; then
+    echo "$input" | fabric --pattern "$pattern" "$@"
+  else
+    fabric --pattern "$pattern" "$@"
+  fi
+}
+
+# Select and run fabric with both model and pattern
+# Usage: fabric_with_model_pattern [additional_args...]
+fabric_with_model_pattern() {
+  local input=""
+  local has_stdin=0
+
+  if input=$(_fabric_handle_input); then
+    has_stdin=1
+  fi
+
+  local model_line=$(fabric -L | fzf --height 40% --border --ansi --prompt="Select model: ")
+  [ -z "$model_line" ] && { echo "No model selected."; return 1; }
+
+  local model=$(echo "$model_line" | sed -E 's/.*[[:space:]]([^[:space:]]+)$/\1/')
+
+  local pattern=$(_fabric_select_pattern)
+  [ -z "$pattern" ] && { echo "No pattern selected."; return 1; }
+
+  if [ $has_stdin -eq 1 ]; then
+    echo "$input" | fabric --model "$model" --pattern "$pattern" "$@"
+  else
+    fabric --model "$model" --pattern "$pattern" "$@"
+  fi
+}
+
+# Get YouTube transcript with fabric
+# Usage: yt <video_link>
+yt() {
+  local video_link="$1"
+  fabric -y "$video_link" --transcript
+}
+
+# Aliases for convenience
+alias fp='fabric_with_pattern'
+alias fps='fabric_with_model_pattern'
+```
+
+Also available on [GitHub Gist](https://gist.github.com/SubodhDahal/38436348aedf0596e48d17ffcffa7d51).
+
+## Using It Day-to-Day
+
+It's as simple as:
+
+- `fp -u example.com` to analyze a website
+- `pbpaste | fp` to analyze clipboard content
+- `cat file.txt | fps` to analyze a file with a specific model
+
+The menu pops up, you pick what you want, and fabric does the rest.
+
+## Making It Work for You
+
+You know how your phone probably has dozens of apps, but you only use a handful regularly? It's the same with fabric patterns. While having options is great, too many choices can slow you down.
+
+I cleaned up my pattern collection by:
+
+- Keeping only the patterns I actually use
+- Tweaking the remaining ones to work exactly how I want
+
+Since patterns are just markdown files, changing them is as easy as editing a text file.
+
+## Why This Matters
+
+I'm not reinventing the wheel here. These are just small tweaks that make fabric feel more natural to use. But sometimes that's all you need: tools that work the way your brain works.
+
+Before, I'd hesitate to use fabric because remembering all the commands felt like work. Now? It's just copy, paste, pick, and done. If you use fabric, give these helpers a try.
+
+---
+
 - **Page:** Looking back: My 2022 in review
 - **Source:** https://subodhdahal.com/blog/2022-in-review
 - **Description:** From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.
@@ -2714,309 +2714,6 @@ Unfortunately, not everyone has had the same experience, with some really horrib
 I am grateful for the support and encouragement of those in my life this year. Your guidance and opportunities have allowed me to grow. Thank you for being a part of my journey and for the amazing times we had together.
 
 Here's to the future and to the continued growth and learning that it holds.
-
----
-
-- **Page:** Git and the command-line: Take your workflow to the next level
-- **Source:** https://subodhdahal.com/blog/git-and-command-line-next-level-workflow
-- **Description:** Some tips on how to improve your Git productivity using the command-line
-
-## What is git?
-
-Git is a version control system that helps developers track changes to their code and collaborate with others on software projects. It allows developers to easily switch between different versions of their code and work on different features in parallel without affecting the main codebase.
-
-## Why use the command-line?
-
-Although there are many GUI Git applications, using git from the command-line allows you to configure and streamline it to your workflow rather than being constrained by the interfaces of the GUI. It will also force you to understand more of how git works and since it's a tool that developers need to use often, I'd say it's not a bad motivation. You can still use the GUI for taking care of the more complex tasks until you get more familiar with using the command-line.
-
-## Tips to improve your workflow
-
-### 1. Add aliases for commonly used commands
-
-When using git from the command-line you are expected to write commands but this doesn't mean you can't make life easier for yourself. Instead of writing the whole command all the time, you can add shorter versions of them as aliases.
-
-Here are some of the aliases that I use frequently:
-
-<div className="flex,justify-center">
-<table className="table-auto,justify-center,mb-4,w-1/2">
-<thead>
-  <tr>
-    <th>
-      alias
-    </th>
-    
-    
-            <th>
-      command
-    </th>
-  </tr>
-</thead>
-
-
-    <tbody className="font-mono">
-  <tr>
-    <td>
-      g
-    </td>
-    
-    
-            <td>
-      git
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      ga
-    </td>
-    
-    
-            <td>
-      git add
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gb
-    </td>
-    
-    
-            <td>
-      git branch
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gc
-    </td>
-    
-    
-            <td>
-      git commit -v
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gco
-    </td>
-    
-    
-            <td>
-      git checkout
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gcb
-    </td>
-    
-    
-            <td>
-      git checkout -b
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gcp
-    </td>
-    
-    
-            <td>
-      git cherry-pick
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      grb
-    </td>
-    
-    
-            <td>
-      git rebase
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      grbi
-    </td>
-    
-    
-            <td>
-      git rebase -i
-    </td>
-  </tr>
-</tbody>
-</table>
-</div>
-
-So now the following
-
-```bash
-git commit -v -m 'my commit message'
-```
-
-becomes
-
-```bash
-gc -m 'my commit message'
-```
-
-If you have `zsh` as your shell, have `ohmyzsh` installed and the `git` plugin enabled, there are already a lot of git aliases configured and can use them. You can have a look at them [here](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh). Even if you don't use `ohmyzsh`, you can take inspiration from the aliases and set them for your shell.
-
-For the `bash` shell, you can add the following to your `.bashrc` file.
-
-```bash
-alias g='git'
-alias ga='git add'
-alias gb='git branch'
-alias gc='git commit -v'
-alias gco='git checkout'
-alias gcb='git checkout -b'
-alias gcp='git cherry-pick'
-alias grb='git rebase'
-alias grbi='git rebase -i'
-```
-
-### 2. Enable auto-correction of spelling mistakes for commands
-
-We are human after all and sometimes we make spelling mistakes. Instead of having to correct the command ourself, we can let git do it for us if the mistakes are minimal.
-
-We can enable git auto-correct for all git repos by using the following command:
-
-```bash
-git config --global help.autoCorrect 5
-```
-
-The value of `help.autoCorrect` is the number of deciseconds git waits before it auto-corrects and applies the command. In the command above, it will wait 0.5 seconds.
-
-The `--global` flag specifies that auto-correction will be enabled for all git repositories in the system. If you omit this, it will only take effect in the current repo.
-
-<figure className="image">
-
-![git auto-correct in action](https://subodhdahal.com/images/git-and-command-line/git-autocorrect.png)
-  <figcaption>
-
-Git auto-correct in action
-
-</figcaption>
-</figure>
-
-### 3. Improved git checkout with fzf
-
-When you are working on a project you will need to switch between different branches. You can use `git checkout <branch_name>` or `git switch <branch_name>` to do that. But the `<branch_name>` needs to be exact and if you don't remember it you will need to run further commands or look up the branch name somewhere.
-
-We can make switching git branches simpler by integrating the checkout process with [fzf](https://github.com/junegunn/fzf). fzf is a command-line fuzzy finder which means we don't need to precisely remember the branch name. Just typing a few characters will list us the branches that match the existing branches using fuzzy logic.
-
-You can add the following to your `.bashrc` or `.zshrc` file to configure a custom function `git_checkout_branch` to run fzf with the list of branches in the repo, which you can then search fuzzily.
-
-```bash
-# Slightly modified version of the script mentioned in https://revelry.co/insights/development/terminal-workflow-fzf/
-git_checkout_branch() {
-  if [[ $1 != "" ]]; then
-    # pass all the parameters as-is, if provided
-    git checkout $*
-    return
-  fi
-
-  LINES=2
-  # show branches
-  result=$(git branch -a --color=always | grep -v '/HEAD\s' | sort |
-    fzf --height 50% --border --ansi --tac --preview-window right:70% \
-      --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
-    sed 's/^..//' | cut -d' ' -f1)
-
-  if [[ $result != "" ]]; then
-    if [[ $result == remotes/* ]]; then
-      git checkout --track $(echo $result | sed 's#remotes/##')
-    else
-      git checkout "$result"
-    fi
-  fi
-}
-```
-
-**Source:** Modified version of [https://revelry.co/insights/development/terminal-workflow-fzf/](https://revelry.co/insights/development/terminal-workflow-fzf/)
-
-Then when you run the command `git_checkout_branch` in the terminal, you will be presented with the branches in the repo and can type part of the branch name to get the branch name you want. Pressing enter on the selected branch will switch the current branch to that branch.
-
-You can, of course, add this as an alias instead of having to type the whole command.
-
-```bash
-alias gco='git_checkout_branch'
-```
-
-If you already know the branch name and don't want to be presented with a list of options, you can just use the command as `gco <branch_name>`, eg: `gco develop`.
-
-<figure className="image">
-
-![fzf in action](https://subodhdahal.com/images/git-and-command-line/git-checkout-fzf.gif)
-  <figcaption>
-
-Git checkout with fzf in action
-
-</figcaption>
-</figure>
-
-### 4. Using Git Interactive Rebase Tool
-
-Although rebase and interactive rebase can seem like a scary concepts in the beginning, after you get used to it, they can be powerful tools to organize history in a Git repo. It can be useful in a variety of situations, including:
-
-- Combining multiple commits into one
-
-  - Splitting a single commit into multiple commits
-
-  - Reordering commits
-
-  - Removing commits
-
-  - Fixing mistakes in commits
-
-  - Updating your local repository to match the upstream repository
-
-You can learn more about rebasing in [https://git-rebase.io/](https://git-rebase.io/).
-
-[Git Interactive Rebase Tool](https://github.com/MitMaro/git-interactive-rebase-tool) can help make the process of interactive rebasing easier. It is a GUI tool that runs in the terminal and can be used to rebase commits in a git repo. It is written in Rust and is available for Linux, macOS and Windows.
-
-<figure className="image" style="background: #272733">
-
-![fzf in action](https://subodhdahal.com/images/git-and-command-line/interactive-rebase-tool.gif)
-  <figcaption>
-
-Basic usage of Interactive Rebase Tool
-
-</figcaption>
-</figure>
-
-You can view the [documentation](https://mitmaro.github.io/git-interactive-rebase-tool/) for more information on how to set up and use the tool, along with all its features.
-
-## Conclusion
-
-Trying one or more of the above tips can help you become more productive with git. But as with any new workflow, it takes time to get used to it. So it might be good to start with one or two of the aforementioned tips and then move on to trying the others.
-
----
-
-### Bonus:
-
-If you would prefer a more GUI approach to working with git but in the terminal, then you can try one of the followings:
-
-- [tig](https://github.com/jonas/tig)
-
-  - [lazygit](https://github.com/jesseduffield/lazygit)
 
 ---
 
@@ -3491,4 +3188,307 @@ I felt like a different person, for the better, after my journey.
 
 </div>
 </div>
+
+---
+
+- **Page:** Git and the command-line: Take your workflow to the next level
+- **Source:** https://subodhdahal.com/blog/git-and-command-line-next-level-workflow
+- **Description:** Some tips on how to improve your Git productivity using the command-line
+
+## What is git?
+
+Git is a version control system that helps developers track changes to their code and collaborate with others on software projects. It allows developers to easily switch between different versions of their code and work on different features in parallel without affecting the main codebase.
+
+## Why use the command-line?
+
+Although there are many GUI Git applications, using git from the command-line allows you to configure and streamline it to your workflow rather than being constrained by the interfaces of the GUI. It will also force you to understand more of how git works and since it's a tool that developers need to use often, I'd say it's not a bad motivation. You can still use the GUI for taking care of the more complex tasks until you get more familiar with using the command-line.
+
+## Tips to improve your workflow
+
+### 1. Add aliases for commonly used commands
+
+When using git from the command-line you are expected to write commands but this doesn't mean you can't make life easier for yourself. Instead of writing the whole command all the time, you can add shorter versions of them as aliases.
+
+Here are some of the aliases that I use frequently:
+
+<div className="flex,justify-center">
+<table className="table-auto,justify-center,mb-4,w-1/2">
+<thead>
+  <tr>
+    <th>
+      alias
+    </th>
+    
+    
+            <th>
+      command
+    </th>
+  </tr>
+</thead>
+
+
+    <tbody className="font-mono">
+  <tr>
+    <td>
+      g
+    </td>
+    
+    
+            <td>
+      git
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      ga
+    </td>
+    
+    
+            <td>
+      git add
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gb
+    </td>
+    
+    
+            <td>
+      git branch
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gc
+    </td>
+    
+    
+            <td>
+      git commit -v
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gco
+    </td>
+    
+    
+            <td>
+      git checkout
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gcb
+    </td>
+    
+    
+            <td>
+      git checkout -b
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gcp
+    </td>
+    
+    
+            <td>
+      git cherry-pick
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      grb
+    </td>
+    
+    
+            <td>
+      git rebase
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      grbi
+    </td>
+    
+    
+            <td>
+      git rebase -i
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+So now the following
+
+```bash
+git commit -v -m 'my commit message'
+```
+
+becomes
+
+```bash
+gc -m 'my commit message'
+```
+
+If you have `zsh` as your shell, have `ohmyzsh` installed and the `git` plugin enabled, there are already a lot of git aliases configured and can use them. You can have a look at them [here](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh). Even if you don't use `ohmyzsh`, you can take inspiration from the aliases and set them for your shell.
+
+For the `bash` shell, you can add the following to your `.bashrc` file.
+
+```bash
+alias g='git'
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit -v'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcp='git cherry-pick'
+alias grb='git rebase'
+alias grbi='git rebase -i'
+```
+
+### 2. Enable auto-correction of spelling mistakes for commands
+
+We are human after all and sometimes we make spelling mistakes. Instead of having to correct the command ourself, we can let git do it for us if the mistakes are minimal.
+
+We can enable git auto-correct for all git repos by using the following command:
+
+```bash
+git config --global help.autoCorrect 5
+```
+
+The value of `help.autoCorrect` is the number of deciseconds git waits before it auto-corrects and applies the command. In the command above, it will wait 0.5 seconds.
+
+The `--global` flag specifies that auto-correction will be enabled for all git repositories in the system. If you omit this, it will only take effect in the current repo.
+
+<figure className="image">
+
+![git auto-correct in action](https://subodhdahal.com/images/git-and-command-line/git-autocorrect.png)
+  <figcaption>
+
+Git auto-correct in action
+
+</figcaption>
+</figure>
+
+### 3. Improved git checkout with fzf
+
+When you are working on a project you will need to switch between different branches. You can use `git checkout <branch_name>` or `git switch <branch_name>` to do that. But the `<branch_name>` needs to be exact and if you don't remember it you will need to run further commands or look up the branch name somewhere.
+
+We can make switching git branches simpler by integrating the checkout process with [fzf](https://github.com/junegunn/fzf). fzf is a command-line fuzzy finder which means we don't need to precisely remember the branch name. Just typing a few characters will list us the branches that match the existing branches using fuzzy logic.
+
+You can add the following to your `.bashrc` or `.zshrc` file to configure a custom function `git_checkout_branch` to run fzf with the list of branches in the repo, which you can then search fuzzily.
+
+```bash
+# Slightly modified version of the script mentioned in https://revelry.co/insights/development/terminal-workflow-fzf/
+git_checkout_branch() {
+  if [[ $1 != "" ]]; then
+    # pass all the parameters as-is, if provided
+    git checkout $*
+    return
+  fi
+
+  LINES=2
+  # show branches
+  result=$(git branch -a --color=always | grep -v '/HEAD\s' | sort |
+    fzf --height 50% --border --ansi --tac --preview-window right:70% \
+      --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
+    sed 's/^..//' | cut -d' ' -f1)
+
+  if [[ $result != "" ]]; then
+    if [[ $result == remotes/* ]]; then
+      git checkout --track $(echo $result | sed 's#remotes/##')
+    else
+      git checkout "$result"
+    fi
+  fi
+}
+```
+
+**Source:** Modified version of [https://revelry.co/insights/development/terminal-workflow-fzf/](https://revelry.co/insights/development/terminal-workflow-fzf/)
+
+Then when you run the command `git_checkout_branch` in the terminal, you will be presented with the branches in the repo and can type part of the branch name to get the branch name you want. Pressing enter on the selected branch will switch the current branch to that branch.
+
+You can, of course, add this as an alias instead of having to type the whole command.
+
+```bash
+alias gco='git_checkout_branch'
+```
+
+If you already know the branch name and don't want to be presented with a list of options, you can just use the command as `gco <branch_name>`, eg: `gco develop`.
+
+<figure className="image">
+
+![fzf in action](https://subodhdahal.com/images/git-and-command-line/git-checkout-fzf.gif)
+  <figcaption>
+
+Git checkout with fzf in action
+
+</figcaption>
+</figure>
+
+### 4. Using Git Interactive Rebase Tool
+
+Although rebase and interactive rebase can seem like a scary concepts in the beginning, after you get used to it, they can be powerful tools to organize history in a Git repo. It can be useful in a variety of situations, including:
+
+- Combining multiple commits into one
+
+  - Splitting a single commit into multiple commits
+
+  - Reordering commits
+
+  - Removing commits
+
+  - Fixing mistakes in commits
+
+  - Updating your local repository to match the upstream repository
+
+You can learn more about rebasing in [https://git-rebase.io/](https://git-rebase.io/).
+
+[Git Interactive Rebase Tool](https://github.com/MitMaro/git-interactive-rebase-tool) can help make the process of interactive rebasing easier. It is a GUI tool that runs in the terminal and can be used to rebase commits in a git repo. It is written in Rust and is available for Linux, macOS and Windows.
+
+<figure className="image" style="background: #272733">
+
+![fzf in action](https://subodhdahal.com/images/git-and-command-line/interactive-rebase-tool.gif)
+  <figcaption>
+
+Basic usage of Interactive Rebase Tool
+
+</figcaption>
+</figure>
+
+You can view the [documentation](https://mitmaro.github.io/git-interactive-rebase-tool/) for more information on how to set up and use the tool, along with all its features.
+
+## Conclusion
+
+Trying one or more of the above tips can help you become more productive with git. But as with any new workflow, it takes time to get used to it. So it might be good to start with one or two of the aforementioned tips and then move on to trying the others.
+
+---
+
+### Bonus:
+
+If you would prefer a more GUI approach to working with git but in the terminal, then you can try one of the followings:
+
+- [tig](https://github.com/jonas/tig)
+
+  - [lazygit](https://github.com/jesseduffield/lazygit)
 
