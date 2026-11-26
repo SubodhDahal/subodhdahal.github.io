@@ -45,7 +45,10 @@ useSchemaOrg([
         {{ description }}
       </p>
     </div>
-    <ul class="grid gap-6 sm:grid-cols-2 list-none p-0">
+    <ul
+      class="grid gap-6 list-none p-0 mx-auto"
+      :class="tools.length > 1 ? 'sm:grid-cols-2' : 'max-w-xl'"
+    >
       <li v-for="tool in tools" :key="tool.to">
         <NuxtLink
           :to="tool.to"

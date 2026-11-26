@@ -45,9 +45,6 @@ export function useArticles(options: UseArticlesOptions = {}) {
     }
   };
 
-  // Initial fetch
-  fetchArticles();
-
   // Get paginated articles
   async function getPaginatedArticles(): Promise<PaginationResult> {
     const start = (page - 1) * pageSize;

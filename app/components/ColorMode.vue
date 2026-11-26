@@ -1,33 +1,40 @@
 <script setup lang="ts">
-type Theme = 'light' | 'dark'
-const setColorTheme = (newTheme: Theme) => {
-  useColorMode().preference = newTheme
+const colorMode = useColorMode()
+
+// Toggle from the resolved mode, not the stored preference: with the
+// default "system" preference, a visitor in dark mode would otherwise
+// "switch to dark" and see nothing happen.
+const toggle = () => {
+  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
 </script>
 
 <template>
+  <!-- Both icons render on the server and CSS picks one, so the toggle
+       matches the page from the first paint and never mismatches on
+       hydration. The label stays constant for the same reason. -->
   <button
-    :aria-label="`Switch to ${$colorMode.preference === 'dark' ? 'light' : 'dark'} mode`"
+    aria-label="Toggle dark mode"
+    title="Toggle dark mode"
     type="button"
-    class="flex items-center justify-center min-h-[44px] min-w-[44px] p-2 rounded-md hover:bg-secondary-200 dark:hover:bg-secondary-700 transition-colors"
-    @click="setColorTheme($colorMode.preference === 'dark' ? 'light' : 'dark')"
-    :title="$colorMode.preference === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+    class="flex items-center justify-center min-h-[44px] min-w-[44px] p-2 rounded-md text-secondary-700 dark:text-secondary-100 hover:bg-secondary-200 dark:hover:bg-secondary-700 transition-colors"
+    @click="toggle"
   >
     <svg
-      v-if="$colorMode.value === 'dark'"
       xmlns="http://www.w3.org/2000/svg"
-      class="w-6 h-6 fill-secondary-50"
+      class="hidden dark:block w-6 h-6 fill-current"
       viewBox="0 0 20 20"
+      aria-hidden="true"
     >
       <path
         d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
       />
     </svg>
     <svg
-      v-else
       xmlns="http://www.w3.org/2000/svg"
-      class="w-6 h-6 fill-secondary-700"
+      class="block dark:hidden w-6 h-6 fill-current"
       viewBox="0 0 20 20"
+      aria-hidden="true"
     >
       <path
         fill-rule="evenodd"

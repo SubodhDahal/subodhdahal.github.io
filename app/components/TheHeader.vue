@@ -1,9 +1,9 @@
 <template>
   <div class="dark:text-secondary-50">
     <div class="border-b border-secondary-200 dark:border-secondary-700">
-      <header class="md:container flex justify-between mx-auto px-5 py-4">
-      <div class="mb-4">
-        <NuxtLink to="/" aria-label="Home">
+      <header class="md:container flex items-center justify-between mx-auto px-5 py-5">
+      <div>
+        <NuxtLink to="/" aria-label="Home" class="flex">
           <IconLogo class="h-12 w-12 transition-transform hover:scale-105" />
         </NuxtLink>
       </div>
@@ -25,7 +25,7 @@
         </button>
       </div>
       <ul
-        class="hidden text-lg mt-1 flex flex-col md:flex-row list-none md:block md:flex items-center gap-6"
+        class="hidden text-lg flex flex-col md:flex-row list-none md:block md:flex items-center gap-6"
       >
         <li>
           <NuxtLink

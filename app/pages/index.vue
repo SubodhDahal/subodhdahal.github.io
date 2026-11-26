@@ -2,7 +2,7 @@
   <div>
     <div class="relative overflow-hidden bg-gradient-to-br from-secondary-100 to-secondary-200 dark:from-secondary-800 dark:to-secondary-900" id="homepage-header">
       <!-- Background Pattern -->
-      <div class="absolute inset-0 opacity-30 dark:opacity-25 background-pattern"></div>
+      <div class="absolute inset-0 opacity-30 dark:opacity-10 dark:invert background-pattern"></div>
 
       <div class="container relative">
         <!-- Two Column Layout -->
@@ -51,7 +51,9 @@
       </div>
 
       <!-- Scroll Indicator -->
-      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-cue">
+      <!-- Desktop only: on phones the portrait sits at the bottom of the
+           hero, so the cue would land on top of it. -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-cue hidden md:block">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary-400 dark:text-secondary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>

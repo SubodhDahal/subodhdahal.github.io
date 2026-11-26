@@ -11,7 +11,11 @@ const props = withDefaults(defineProps<Props>(), {
   showDescription: true,
 });
 
-const { articles, isLoading, error } = useArticles({ quantity: props.quantity });
+const { articles, isLoading, error, fetchArticles } = useArticles({ quantity: props.quantity });
+
+// Await so the server and the client render the same list; an
+// unawaited fetch hydrated against a different state.
+await fetchArticles();
 
 function formatDate(date: string | Date): string {
   return new Date(date).toLocaleDateString("en-US", {

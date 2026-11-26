@@ -45,11 +45,14 @@
 
         <div class="container">
             <div class="lg:flex lg:gap-12">
-                <details class="lg:hidden mb-6">
-                    <summary class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 dark:text-secondary-400 cursor-pointer">
+                <details class="group lg:hidden mt-6 mb-8 border-y border-secondary-200 dark:border-secondary-700">
+                    <summary class="flex items-center gap-2 min-h-[44px] py-2 font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-600 dark:text-secondary-300 cursor-pointer hover:text-primary-600 dark:hover:text-primary-400 transition-colors [&::-webkit-details-marker]:hidden">
+                        <svg class="h-3 w-3 shrink-0 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
+                            <path d="M4 2.5 8.5 6 4 9.5z" />
+                        </svg>
                         Table of Contents
                     </summary>
-                    <TableOfContents :article="article" class="mt-2" />
+                    <TableOfContents :article="article" class="mt-1 pb-4" />
                 </details>
 
                 <article class="flex-1 max-w-3xl mx-auto lg:mx-0">
