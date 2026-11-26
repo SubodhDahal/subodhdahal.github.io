@@ -20,7 +20,7 @@ meta:
 
 Put portrait, landscape and square photos on one white canvas with an even border, so Instagram doesn't crop your carousel and mixed photos sit in the same frame like gallery prints.
 
-Free, no sign-up. Everything runs in your browser and your images never leave your device. This page uses Rybbit for pageview analytics only.
+Free, no sign-up. Everything runs in your browser and your images never leave your device. This page uses Rybbit for cookieless pageview analytics only ([privacy policy](https://subodhdahal.com/privacy/)).
 
 ## How to add white borders to an Instagram carousel
 

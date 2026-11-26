@@ -90,6 +90,201 @@ meta:
 
 ---
 
+- **Page:** Impressum · Subodh Dahal
+- **Source:** https://subodhdahal.com/impressum
+- **Description:** Impressum (legal notice) for subodhdahal.com.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
+```
+
+# Impressum
+
+Deutsch · English
+
+## Angaben gemäß § 5 DDG und § 18 Abs. 1 MStV
+
+Subodh Dahal  
+ Lindenberg 3  
+ 71229 Leonberg  
+ Deutschland
+
+### Kontakt
+
+E-Mail: [sbdhdahal@gmail.com](mailto:sbdhdahal@gmail.com)
+
+### Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+
+Subodh Dahal, Anschrift wie oben.
+
+Informationen zum Umgang mit personenbezogenen Daten stehen in der [Datenschutzerklärung](https://subodhdahal.com/privacy/).
+
+## Legal notice (English)
+
+This is a translation for convenience. The German version above is the legally binding one.
+
+Subodh Dahal  
+ Lindenberg 3  
+ 71229 Leonberg  
+ Germany
+
+Email: [sbdhdahal@gmail.com](mailto:sbdhdahal@gmail.com)
+
+Responsible for the content under § 18(2) MStV: Subodh Dahal, address as above. How this site handles personal data is described in the [privacy policy](https://subodhdahal.com/privacy/).
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/impressum/#webpage","@type":"WebPage","description":"Impressum (legal notice) for subodhdahal.com.","name":"Impressum","url":"https://subodhdahal.com/impressum/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/impressum/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
+- **Page:** Datenschutzerklärung / Privacy policy · Subodh Dahal
+- **Source:** https://subodhdahal.com/privacy
+- **Description:** How subodhdahal.com handles personal data: hosting, cookieless analytics and your rights under the GDPR.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
+```
+
+# Datenschutzerklärung
+
+Deutsch · English
+
+## 1. Verantwortlicher
+
+Verantwortlich für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:
+
+Subodh Dahal  
+ Lindenberg 3  
+ 71229 Leonberg  
+ Deutschland  
+ E-Mail: [sbdhdahal@gmail.com](mailto:sbdhdahal@gmail.com)
+
+## 2. Überblick
+
+Dies ist eine private Website mit Blog, Fotos und kleinen Werkzeugen. Es gibt keine Benutzerkonten, keine Kontaktformulare, keine Kommentare und keine Cookies. Schriftarten und alle Inhalte werden von dieser Domain ausgeliefert, nicht von Drittanbietern. Das [Instagram-Karussell-Werkzeug](https://subodhdahal.com/tools/instagram-carousel/) verarbeitet deine Bilder ausschließlich in deinem Browser; sie werden nicht hochgeladen.
+
+Personenbezogene Daten werden nur in den unten beschriebenen Fällen verarbeitet.
+
+## 3. Hosting über GitHub Pages
+
+Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf einer Seite verarbeitet GitHub technisch notwendige Daten, insbesondere deine IP-Adresse, Datum und Uhrzeit des Abrufs, die aufgerufene Adresse, den Referrer und den User-Agent deines Browsers. GitHub nutzt diese Daten, um die Seite auszuliefern und die Sicherheit des Dienstes zu gewährleisten, und kann sie in Server-Logdateien speichern.
+
+Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse liegt in einer sicheren und zuverlässigen Bereitstellung der Website. Die Übermittlung in die USA stützt sich auf den Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework (Art. 45 DSGVO), unter dem GitHub zertifiziert ist. Details enthält die [Datenschutzerklärung von GitHub](https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement).
+
+## 4. Reichweitenmessung mit Rybbit
+
+Um zu verstehen, welche Beiträge gelesen werden, nutze ich den Analysedienst Rybbit der Tomato.gg LLC, 1276 Rothwell Dr, Troy, MI 48084, USA. Rybbit setzt keine Cookies und speichert nichts auf deinem Gerät.
+
+Beim Seitenaufruf werden folgende Daten erfasst:
+
+- aufgerufene Seite, Seitentitel, Referrer und Kampagnen-Parameter (UTM)
+- Browser, Betriebssystem, Gerätetyp, Bildschirmgröße, Sprache und Zeitzone
+- ungefährer Standort (Land, Region, Stadt), der aus der IP-Adresse abgeleitet wird
+
+Deine IP-Adresse wird nur kurzzeitig für die Standortbestimmung verwendet und nicht gespeichert. Um Besuche zu zählen, bildet Rybbit einen Hashwert aus IP-Adresse und User-Agent, der täglich mit einem neuen Zufallswert erzeugt wird. Du kannst daher nicht über mehrere Tage hinweg wiedererkannt werden.
+
+Rybbit verarbeitet die Daten in meinem Auftrag auf Grundlage eines Auftragsverarbeitungsvertrags (Art. 28 DSGVO). Die Daten werden bei der Hetzner Online GmbH in Deutschland und Finnland gespeichert. Unterauftragsverarbeiter ist außerdem Cloudflare, Inc. (USA), über deren Netzwerk die Anfragen laufen. Für Übermittlungen in die USA gelten die EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO); Cloudflare ist zudem unter dem EU-US Data Privacy Framework zertifiziert. Die Auswertungen werden gespeichert, bis ich sie lösche oder das Konto bei Rybbit beende. Weitere Informationen: [Datenschutzerklärung von Rybbit](https://rybbit.com/privacy).
+
+Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse liegt darin, die Website anhand anonymer Nutzungsstatistiken zu verbessern.
+
+**Widerspruch:** Du kannst der Reichweitenmessung jederzeit widersprechen. Wenn dein Browser „Global Privacy Control“ oder „Do Not Track“ sendet, wird Rybbit gar nicht erst geladen. Alternativ kannst du die Messung hier abschalten. Dafür wird ein Vermerk im lokalen Speicher deines Browsers abgelegt:
+
+## 5. Lokaler Speicher deines Browsers
+
+Wenn du zwischen hellem und dunklem Farbschema wechselst, wird deine Wahl im lokalen Speicher (localStorage) deines Browsers abgelegt; dasselbe gilt für einen Widerspruch gegen die Reichweitenmessung. Diese Angaben verlassen dein Gerät nicht und dienen nur dazu, die von dir gewünschte Einstellung beizubehalten (§ 25 Abs. 2 Nr. 2 TDDDG). Du kannst sie jederzeit über die Einstellungen deines Browsers löschen.
+
+## 6. Kontakt per E-Mail
+
+Wenn du mir eine E-Mail schreibst, verarbeite ich deine E-Mail-Adresse und den Inhalt deiner Nachricht, um sie zu beantworten (Art. 6 Abs. 1 lit. f DSGVO). Ich lösche die Nachricht, sobald sie erledigt ist und keine gesetzlichen Aufbewahrungspflichten bestehen.
+
+Mein E-Mail-Postfach wird von Gmail bereitgestellt, einem Dienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. E-Mails an mich werden daher auf Servern von Google gespeichert, auch außerhalb der EU, etwa in den USA. Google ist unter dem EU-US Data Privacy Framework zertifiziert (Art. 45 DSGVO). Weitere Informationen: [Datenschutzerklärung von Google](https://policies.google.com/privacy?hl=de).
+
+## 7. Links zu anderen Websites
+
+Diese Website verlinkt auf andere Angebote, etwa GitHub, LinkedIn, XING, Stack Overflow und Instagram. Es handelt sich um einfache Links ohne eingebettete Inhalte; Daten werden erst übertragen, wenn du einen Link anklickst. Für die verlinkten Seiten gelten die Datenschutzbestimmungen der jeweiligen Anbieter.
+
+## 8. Deine Rechte
+
+Du hast gegenüber mir folgende Rechte hinsichtlich deiner personenbezogenen Daten:
+
+- Auskunft (Art. 15 DSGVO)
+- Berichtigung (Art. 16 DSGVO)
+- Löschung (Art. 17 DSGVO)
+- Einschränkung der Verarbeitung (Art. 18 DSGVO)
+- Datenübertragbarkeit (Art. 20 DSGVO)
+- Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (Art. 21 DSGVO)
+
+Wende dich dazu an die oben genannte E-Mail-Adresse. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO). Für mich zuständig ist der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg, Lautenschlagerstraße 20, 70173 Stuttgart, [www.baden-wuerttemberg.datenschutz.de](https://www.baden-wuerttemberg.datenschutz.de).
+
+Stand: November 2026
+
+## Privacy policy (English)
+
+This is a translation for convenience. The German version above is the legally binding one.
+
+### 1. Controller
+
+The controller for this website under the General Data Protection Regulation (GDPR) is Subodh Dahal, Lindenberg 3, 71229 Leonberg, Germany. Email: [sbdhdahal@gmail.com](mailto:sbdhdahal@gmail.com).
+
+### 2. Overview
+
+This is a personal website with a blog, photos and small tools. There are no user accounts, contact forms, comments or cookies. Fonts and all content are served from this domain, not from third parties. The [Instagram carousel tool](https://subodhdahal.com/tools/instagram-carousel/) processes your images only in your browser; they are never uploaded. Personal data is processed only in the cases below.
+
+### 3. Hosting on GitHub Pages
+
+This site is hosted on GitHub Pages, a service of GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. When you open a page, GitHub processes technically necessary data, in particular your IP address, the date and time, the requested address, the referrer and your browser's user agent. GitHub uses this data to deliver the site and keep the service secure, and may keep it in server logs.
+
+The legal basis is Art. 6(1)(f) GDPR: my legitimate interest in delivering the site securely and reliably. The transfer to the USA is based on the European Commission's adequacy decision for the EU-US Data Privacy Framework (Art. 45 GDPR), under which GitHub is certified. See [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+
+### 4. Analytics with Rybbit
+
+To see which posts people read, I use Rybbit, an analytics service of Tomato.gg LLC, 1276 Rothwell Dr, Troy, MI 48084, USA. Rybbit sets no cookies and stores nothing on your device. For each page view it records the page, page title, referrer and campaign (UTM) parameters; your browser, operating system, device type, screen size, language and time zone; and an approximate location (country, region, city) derived from your IP address.
+
+Your IP address is used only briefly to work out the location and is not stored. To count visits, Rybbit hashes your IP address and user agent with a random value that changes every day, so you cannot be recognised from one day to the next.
+
+Rybbit processes the data on my behalf under a data processing agreement (Art. 28 GDPR). The data is stored with Hetzner Online GmbH in Germany and Finland. Cloudflare, Inc. (USA) is a sub-processor whose network the requests pass through. Transfers to the USA are covered by the EU Standard Contractual Clauses (Art. 46(2)(c) GDPR), and Cloudflare is also certified under the EU-US Data Privacy Framework. The statistics are kept until I delete them or close my Rybbit account. See [Rybbit's privacy policy](https://rybbit.com/privacy).
+
+The legal basis is Art. 6(1)(f) GDPR: my legitimate interest in improving the site based on anonymous usage statistics.
+
+**Objection:** you can object to analytics at any time. If your browser sends Global Privacy Control or Do Not Track, Rybbit is not loaded at all. You can also turn it off here, which saves a note in your browser's local storage:
+
+### 5. Your browser's local storage
+
+When you switch between the light and dark theme, your choice is saved in your browser's local storage, as is an analytics opt-out. This never leaves your device and only keeps the setting you asked for (§ 25(2) no. 2 TDDDG). You can delete it in your browser settings at any time.
+
+### 6. Contacting me by email
+
+If you email me, I process your email address and message to reply (Art. 6(1)(f) GDPR) and delete it once the matter is closed, unless the law requires me to keep it.
+
+My mailbox is provided by Gmail, a service of Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, so emails to me are stored on Google's servers, including outside the EU, for example in the USA. Google is certified under the EU-US Data Privacy Framework (Art. 45 GDPR). See [Google's privacy policy](https://policies.google.com/privacy?hl=en).
+
+### 7. Links to other websites
+
+This site links to other services such as GitHub, LinkedIn, XING, Stack Overflow and Instagram. These are plain links with no embedded content, so no data is sent until you click one. The linked sites' own privacy policies apply there.
+
+### 8. Your rights
+
+You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20), and to object to processing based on Art. 6(1)(f) (Art. 21). Email me to use them. You can also complain to a data protection supervisory authority (Art. 77 GDPR). Mine is the Landesbeauftragter für den Datenschutz und die Informationsfreiheit Baden-Württemberg, Lautenschlagerstraße 20, 70173 Stuttgart, Germany, [www.baden-wuerttemberg.datenschutz.de](https://www.baden-wuerttemberg.datenschutz.de).
+
+Last updated: November 2026
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/privacy/#webpage","@type":"WebPage","description":"How subodhdahal.com handles personal data: hosting, cookieless analytics and your rights under the GDPR.","name":"Datenschutzerklärung / Privacy policy","url":"https://subodhdahal.com/privacy/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/privacy/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
 - **Page:** Free browser tools · Subodh Dahal
 - **Source:** https://subodhdahal.com/tools
 - **Description:** Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.
@@ -113,158 +308,6 @@ meta:
 
 ```json
 {"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/tools/#webpage","description":"Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.","name":"Free browser tools","url":"https://subodhdahal.com/tools/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/tools/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/tools/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/tools/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Free browser tools","item":"https://subodhdahal.com/tools/","position":2}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
-```
-
----
-
-- **Page:** Instagram Carousel White Border Tool (No Crop)
-- **Source:** https://subodhdahal.com/tools/instagram-carousel
-- **Description:** Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.
-
-```yaml
-meta:
-  og:image: https://subodhdahal.com/_og/s/o_7b4d279de2f79e5f.png
-  og:image:height: "600"
-  og:image:type: image/png
-  og:image:width: "1200"
-  twitter:image: https://subodhdahal.com/_og/s/o_7b4d279de2f79e5f.png
-```
-
-# **Instagram carousel white border tool**
-
-Put portrait, landscape and square photos on one white canvas with an even border, so Instagram doesn't crop your carousel and mixed photos sit in the same frame like gallery prints.
-
-Free, no sign-up. Everything runs in your browser and your images never leave your device. This page uses Rybbit for pageview analytics only.
-
-## How to add white borders to an Instagram carousel
-
-1. Drop your photos onto the page, or pick them from your device. Drag the slides to change their order.
-2. Leave the aspect ratio on **Auto**, or force 4:5, 1:1, 1.91:1 or 3:4.
-3. Move the padding slider until the border looks right. Click any slide to swipe through a preview.
-4. Choose **1080** as the export width for files sized exactly for Instagram, then download the ZIP.
-5. In Instagram, select the slides in their numbered order. They already share one shape, so nothing gets cropped.
-
-## How Auto picks the canvas shape
-
-Instagram makes every slide in a carousel the same shape and crops anything that doesn't fit. Auto looks at every photo in the set and picks the ratio within Instagram's 1.91:1 to 4:5 range that leaves the least empty space overall. Three tall photos and one wide one end up on a 4:5 canvas, with white above and below the wide photo. A set of mostly wide photos gets a landscape canvas instead.
-
-The canvas is the smallest one that holds every photo at its native resolution, so no photo is scaled up. Photos taller than 4:5 or wider than 1.91:1 get extra white on the sides or top and bottom, so they still fit without being cropped.
-
-## Instagram carousel sizes
-
-| Shape | Ratio | Size at 1080 wide |
-| --- | --- | --- |
-| Portrait | 4:5 | 1080 × 1350 px |
-| Tall portrait (app only) | 3:4 | 1080 × 1440 px |
-| Square | 1:1 | 1080 × 1080 px |
-| Landscape | 1.91:1 | 1080 × 566 px |
-
-A carousel holds up to 20 slides. Portrait 4:5 takes up the most room in the feed on every surface, which is why Auto leans toward it when the set has tall photos.
-
-## Questions
-
-<details>
-
-<summary>
-
-### Why not just use Instagram's Mixed option?
-
-</summary>
-
-Instagram's Mixed option keeps each photo's shape, but it fills the empty space with a background that follows the app's light or dark theme, and you can't control its color or size. This tool bakes an even white border into every image, so the carousel looks the same for every viewer.
-
-</details>
-
-<details>
-
-<summary>
-
-### How do I post portrait and landscape photos in one carousel without cropping?
-
-</summary>
-
-Add all the photos here, keep the aspect ratio on Auto, and download the ZIP. Every slide comes out at the same canvas size with the whole photo inside it, so Instagram has nothing to crop. Upload the slides in the numbered order.
-
-</details>
-
-<details>
-
-<summary>
-
-### What size should Instagram carousel images be?
-
-</summary>
-
-Instagram stores posts at 1080 pixels wide, with an aspect ratio between 1.91:1 (1080 × 566) and 4:5 (1080 × 1350). The app also accepts 3:4 (1080 × 1440). Every slide in a carousel should share one ratio. Choose the 1080 export width here for files sized exactly for Instagram.
-
-</details>
-
-<details>
-
-<summary>
-
-### Are my photos uploaded anywhere?
-
-</summary>
-
-No. The images are decoded, padded and encoded by your browser on your own device. Nothing is sent to a server.
-
-</details>
-
-<details>
-
-<summary>
-
-### How many photos can I add?
-
-</summary>
-
-Up to 20, which is the most Instagram allows in one carousel. The tool also warns you when a slide is larger than 8 MB.
-
-</details>
-
-<details>
-
-<summary>
-
-### How wide should the white border be?
-
-</summary>
-
-Padding is a percentage of the shared photo area, from 0 to 20%. Around 5% reads as a thin frame and around 10% looks like a matted gallery print. At 0% the photos still share one canvas, with white only where their shapes differ.
-
-</details>
-
-<details>
-
-<summary>
-
-### Should I export JPEG or PNG?
-
-</summary>
-
-JPEG at 95% quality suits photos and keeps files small. PNG is lossless and better for screenshots, text or flat graphics, but the files are much larger.
-
-</details>
-
-<details>
-
-<summary>
-
-### Can I use a border color other than white?
-
-</summary>
-
-Not yet, the padding is always white. If you want another color, open an issue on GitHub and say what you would use it for.
-
-</details>
-
-I built this for posting photos from hikes and trips, and wrote about why in [a post about the carousel padding tool](https://subodhdahal.com/blog/instagram-carousel-padding-tool/).
-
-Found a bug or want a feature? Please [**open an issue on GitHub**](https://github.com/SubodhDahal/subodhdahal.github.io/issues/new).
-
-```json
-{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#webpage","description":"Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.","name":"Instagram Carousel White Border Tool (No Crop)","url":"https://subodhdahal.com/tools/instagram-carousel/","@type":["WebPage","FAQPage"],"breadcrumb":{"@id":"https://subodhdahal.com/tools/instagram-carousel/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"mainEntity":[{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/1"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/2"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/3"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/4"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/5"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/6"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/7"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/8"}],"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/tools/instagram-carousel/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Tools","item":"https://subodhdahal.com/tools/","position":2},{"@type":"ListItem","name":"Instagram carousel white border tool","item":"https://subodhdahal.com/tools/instagram-carousel/","position":3}]},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/1","@type":"Question","inLanguage":"en","name":"Why not just use Instagram's Mixed option?","acceptedAnswer":{"@type":"Answer","text":"Instagram's Mixed option keeps each photo's shape, but it fills the empty space with a background that follows the app's light or dark theme, and you can't control its color or size. This tool bakes an even white border into every image, so the carousel looks the same for every viewer."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/2","@type":"Question","inLanguage":"en","name":"How do I post portrait and landscape photos in one carousel without cropping?","acceptedAnswer":{"@type":"Answer","text":"Add all the photos here, keep the aspect ratio on Auto, and download the ZIP. Every slide comes out at the same canvas size with the whole photo inside it, so Instagram has nothing to crop. Upload the slides in the numbered order."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/3","@type":"Question","inLanguage":"en","name":"What size should Instagram carousel images be?","acceptedAnswer":{"@type":"Answer","text":"Instagram stores posts at 1080 pixels wide, with an aspect ratio between 1.91:1 (1080 × 566) and 4:5 (1080 × 1350). The app also accepts 3:4 (1080 × 1440). Every slide in a carousel should share one ratio. Choose the 1080 export width here for files sized exactly for Instagram."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/4","@type":"Question","inLanguage":"en","name":"Are my photos uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. The images are decoded, padded and encoded by your browser on your own device. Nothing is sent to a server."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/5","@type":"Question","inLanguage":"en","name":"How many photos can I add?","acceptedAnswer":{"@type":"Answer","text":"Up to 20, which is the most Instagram allows in one carousel. The tool also warns you when a slide is larger than 8 MB."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/6","@type":"Question","inLanguage":"en","name":"How wide should the white border be?","acceptedAnswer":{"@type":"Answer","text":"Padding is a percentage of the shared photo area, from 0 to 20%. Around 5% reads as a thin frame and around 10% looks like a matted gallery print. At 0% the photos still share one canvas, with white only where their shapes differ."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/7","@type":"Question","inLanguage":"en","name":"Should I export JPEG or PNG?","acceptedAnswer":{"@type":"Answer","text":"JPEG at 95% quality suits photos and keeps files small. PNG is lossless and better for screenshots, text or flat graphics, but the files are much larger."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/8","@type":"Question","inLanguage":"en","name":"Can I use a border color other than white?","acceptedAnswer":{"@type":"Answer","text":"Not yet, the padding is always white. If you want another color, open an issue on GitHub and say what you would use it for."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/web-application/1","@type":"WebApplication","applicationCategory":"MultimediaApplication","browserRequirements":"Requires JavaScript and a modern browser","description":"Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.","isAccessibleForFree":true,"name":"Instagram Carousel White Border Tool (No Crop)","operatingSystem":"Any","screenshot":"https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png","url":"https://subodhdahal.com/tools/instagram-carousel/","alternateName":["Instagram Carousel Tools","Instagram white border maker","Instagram no crop tool"],"author":{"@id":"https://subodhdahal.com/#identity"},"featureList":["Pads every photo onto one shared canvas so Instagram does not crop it","Even white border from 0 to 20%","Auto aspect ratio, or fixed 4:5, 1:1, 1.91:1 or 3:4","Export at original size, 1080 or 1440 px wide","JPEG or PNG, downloaded as a ZIP","Up to 20 slides, matching the Instagram carousel limit","Runs entirely in the browser; images are never uploaded"],"offers":{"@type":"Offer","price":0,"priceCurrency":"USD"}},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
 ```
 
 ---
@@ -766,6 +809,229 @@ I haven't timed live dictation on the eGPU, so the numbers above come from the f
 
 ---
 
+- **Page:** Stop stashing half-finished work: use Git worktrees and Worktrunk
+- **Source:** https://subodhdahal.com/blog/worktrees-with-worktrunk
+- **Description:** Git worktrees keep separate branches checked out at once. Worktrunk automates per-worktree setup. The same isolation also works for parallel AI agents.
+
+This has happened more times than I can count. I finish making changes for a ticket and put it into code review. Then I start the next one. Twenty minutes later, a reviewer asks for a 2-line change on the first ticket.
+
+The change might take a few minutes to make. Getting back to the right code can take longer.
+
+My current branch already has modified files. Maybe the app is running with some local state I’ll need again. Or I configured the env variables differently for this task. I stash everything, switch branches, make the fix, then switch back and restore the stash. I hope I didn’t forget which migration or env variable belonged to which task.
+
+Or I can make a work-in-progress commit that I never wanted in the branch. Or create another temporary branch whose name I’ll forget soon. Or leave the review sitting there until I finish my current work.
+
+All those approaches work, and I’ve used them. But they turn a small review comment into a ceremony.
+
+[Git worktrees](https://git-scm.com/docs/git-worktree) give me a better option: separate folders. Each has its own branch checked out.
+
+## What Git worktrees give you
+
+Git worktrees give you a separate working directory per branch, all in the same repo. You can keep more than one branch checked out at once. Each worktree has its own files, editor state, and running dev server.
+
+### A branch and a worktree aren’t the same thing
+
+A branch is a movable reference to a commit. The working tree is the checked-out set of files I edit. In Git’s terminology, a worktree is the working tree plus the Git metadata. That metadata is what makes it an independent checkout.
+
+My normal clone is already one worktree (Git calls it the main worktree). I can attach more linked worktrees to the same repo, each with a different branch checked out.
+
+For example:
+
+```bash
+~/code/shop/                  # main worktree, branch: feature/new-checkout
+~/code/shop.review-fix/        # linked worktree, branch: fix/payment-review
+~/code/shop.order-history/      # linked worktree, branch: feature/order-history
+```
+
+These folders belong to the same repo. They share Git’s object database and refs. Per-worktree state, such as `HEAD` and the index, stays separate ([Git worktree documentation](https://git-scm.com/docs/git-worktree#_description)).
+
+Each folder has its own checked-out files, staged changes, and untracked files. I keep an editor and terminal open in each one. I leave the new checkout work untouched. I address the review in `shop.review-fix` and return without stashing.
+
+The cognitive cost of context switching is real. The Git housekeeping disappears. My editor of choice, Zed, has built-in worktree support. A worktree picker in the command palette makes switching between them fast. Opening a different worktree is one command away.
+
+### Creating the review-fix worktree with Git
+
+Suppose I’m in `~/code/shop`, working on `feature/new-checkout`, and the earlier branch is `fix/payment-review`.
+
+First I create a linked worktree for the existing branch:
+
+```bash
+git worktree add ../shop.review-fix fix/payment-review
+```
+
+My current directory stays on `feature/new-checkout`. It keeps all its unfinished changes.
+
+`git worktree list` shows every attached worktree:
+
+```bash
+~/code/shop             7db81af [feature/new-checkout]
+~/code/shop.review-fix  b132aa0 [fix/payment-review]
+```
+
+Now I can handle the review in the review-fix worktree:
+
+```bash
+cd ../shop.review-fix
+# make the requested change
+git add . && git commit -m "Fix payment retry condition" && git push
+```
+
+When DevQA finishes and I don’t need the checkout anymore:
+
+```bash
+cd ../shop
+git worktree remove ../shop.review-fix
+git branch -d fix/payment-review
+```
+
+Branch deletion is a separate step in native Git. Git normally refuses to remove a dirty worktree. It also refuses to check out the same branch in another worktree. I can override its safeguards ([Git worktree commands and options](https://git-scm.com/docs/git-worktree#_commands)).
+
+For a brand-new task, I can create the branch and worktree together:
+
+```bash
+git worktree add -b feature/order-history ../shop.order-history main
+```
+
+That creates `feature/order-history` from `main` and checks it out in `../shop.order-history`.
+
+This is already enough to improve the review interruption. The part that started to annoy me came next.
+
+### Every new directory needs its project setup
+
+A linked worktree contains the tracked files from its branch. My `.env`, `node_modules`, build output, and local database belong to a particular working directory. Other ignored files do too. A new worktree won’t magically have them.
+
+The first few minutes often become:
+
+```bash
+cp ../shop/.env .env
+npm install
+npm run generate
+```
+
+Except the dev server in another worktree already owns port 3000.
+
+I can solve this with a shell function or a project script. But once worktrees become a daily workflow, the function starts collecting branch naming rules, directory naming rules, and setup steps. Cleanup steps and special cases follow.
+
+## Where Worktrunk comes in
+
+[Worktrunk](https://github.com/max-sixty/worktrunk) wraps Git worktrees with a branch-oriented CLI and lifecycle hooks. I get ordinary Git worktrees underneath. Worktrunk takes care of the repetitive setup around them.
+
+### Making Worktrunk do the boring parts
+
+On macOS or Linux with Homebrew, the current installation command is:
+
+```bash
+brew install worktrunk
+wt config shell install
+```
+
+The shell integration matters because `wt switch` needs to change the current shell's directory ([Worktrunk installation guide](https://worktrunk.dev/#install)).
+
+Now I can create and enter a worktree with:
+
+```bash
+wt switch --create feature/order-history
+```
+
+Worktrunk addresses worktrees by branch name and calculates the directory from a configurable template. If the branch already has a worktree, `wt switch` moves me into it. If not, `wt switch --create` makes one. With no argument, it opens an interactive picker with branch status and diff previews ([`wt switch` documentation](https://worktrunk.dev/switch/)).
+
+`wt remove` defaults to the current worktree. It only deletes the branch when Worktrunk sees it's already merged. The `--no-delete-branch` flag keeps it ([`wt remove` documentation](https://worktrunk.dev/remove/)). See the [Worktrunk reference](https://worktrunk.dev/) for the full list.
+
+### Project hooks turn a checkout into a usable workspace
+
+Every new worktree starts empty. The same setup repeats every time. On switch, I install dependencies and run project generators. I register the worktree with the rest of the toolchain. I unregister it on removal. My hooks do all four from a shared config file. Creating a worktree returns me to "ready to work." The full reference, including the `pre-merge` and `post-merge` lifecycles, is in the [Worktrunk hook docs](https://worktrunk.dev/hook/). It also covers the approval flow for shared configs.
+
+Worktrunk reads those hooks from `.config/wt.toml`. They fire at lifecycle points like `pre-start` and `post-start`. `pre-start` runs before the worktree is usable. `post-start` runs after, in the background. I keep blocking setup in `pre-start` and push anything slow to `post-start`. That way creating a worktree returns fast. There's also `post-switch`, which fires on every checkout rather than just creation. That's the right home for work that tracks the current branch. The Herd link in the closing config is one example.
+
+### Giving every worktree its own dev server
+
+Only one app can listen on port 3000 at a time. Test runs pointed at the same mutable database can produce some creative failures. But a long test suite in one worktree doesn't block me. I can still check out main in another. The other worktree isn't competing for the same resources.
+
+Worktrunk's `hash_port` template filter derives a stable port from the branch name. The port sits between 10000 and 19999. Its `tether` step runs a process in its own process group. It tears that group down when you remove the worktree.
+
+```toml
+# .config/wt.toml
+
+[post-start]
+server = "wt step tether -- npm run dev -- --port {{ branch | hash_port }}"
+
+[list]
+url = "http://localhost:{{ branch | hash_port }}"
+```
+
+The server starts in the background. That way creating the worktree doesn't wait for a long-running process ([Worktrunk's per-worktree dev-server recipe](https://worktrunk.dev/tips-patterns/#dev-server-per-worktree)).
+
+### Worktrees fit coding agents unusually well
+
+Worktrunk becomes even more useful when I have two or more LLM coding agents on the same repo.
+
+Giving two agents the same working directory invites them to edit the same files and stage each other's changes. They can also run cleanup commands against work neither of them created. A worktree gives each agent its own branch, index, and checked-out files.
+
+Worktrunk creates the worktree and runs the project hooks. Then it moves into the worktree and starts an agent in one command:
+
+```bash
+wt switch --create --execute=claude feature/order-history -- \
+  "Add order history to the account page"
+```
+
+I can run a second agent in another terminal with the same pattern. Arguments after `--` go to the launched command. The blocking `pre-start` hooks finish before `--execute` runs. Post-start hooks continue in the background. Each agent begins in a prepared directory ([Worktrunk’s `--execute` workflow](https://worktrunk.dev/switch/#creating-worktrees)).
+
+Their changes can still conflict when I merge the branches. They can also collide through a shared database, port, or container name. A cache outside the worktree can cause problems too. The filesystem boundary solves a specific class of problems. I still need to divide the tasks sensibly and review what comes back.
+
+I also don’t need five agents running because the tool makes it possible. Parallel work is useful when the tasks are independent enough. Then the merge and review cost stays lower than the time saved.
+
+## Trade-offs and takeaway
+
+### The trade-offs, and when I’d skip
+
+Worktrees have a few edges that are easy to miss:
+
+- Every worktree duplicates the checked-out project files. Dependencies and build output can consume much more disk space than the source.
+- Git normally checks out a branch in only one worktree at a time. I treat the directory and branch as a pair.
+- State outside the worktree needs explicit handling. Ignored files and config need copying or generating. Shared resources (dev servers, databases, Docker, caches) need unique names or ports.
+- Worktrees are easy to make and easy to forget. I remove the worktrees after QA testing marks the work as done.
+- Removing a directory with `rm -rf` leaves worktree administration behind. I use `git worktree remove` or `wt remove`. `git worktree prune` cleans up stale metadata after a manual deletion ([Git worktree cleanup](https://git-scm.com/docs/git-worktree#_description)).
+- A third-party Git hook that runs on `post-checkout` can short-circuit `git worktree add`. This happens if it depends on a binary that doesn't exist in a fresh worktree. Patch the hook to exit cleanly when the dependency is missing. Otherwise `wt switch --create` fails before it can start.
+- Git still documents submodule support in more than one worktree as incomplete. I'd test the workflow carefully in a superproject with submodules ([Git worktree bugs](https://git-scm.com/docs/git-worktree#_bugs)).
+
+I'd skip worktrees entirely when those edges outweigh the benefits. That's when I'm on one branch at a time, the repo is large and disk is tight, or the IDE doesn't support worktrees.
+
+Keeping four tasks open in four directories makes switching between them mechanically cheap. It doesn't make holding four trains of thought equally cheap. What works for me is to keep the main task untouched. I handle the review or production fix in another worktree. I remove it when I'm done with the branch. When an agent can take an independent task, I give it a worktree too.
+
+### My takeaway
+
+Git worktrees turn branches into persistent working directories. That alone removes the stash-switch-unstash loop from review fixes and interruptions.
+
+Worktrunk becomes worthwhile once creating a directory isn’t enough. It gives me short branch-based commands, project hooks, and repeatable paths. Plus cleanup checks and a clean way to launch tools inside a prepared worktree.
+
+For a sense of what the resulting `.config/wt.toml` looks like, here's the version I used in a real repo:
+
+```toml
+[post-start]
+node = "sh '{{ primary_worktree_path }}/scripts/worktrunk/setup-node.sh'"
+php = "sh '{{ primary_worktree_path }}/scripts/worktrunk/setup-php.sh' '{{ branch }}' '{{ worktree_name }}' '{{ primary_worktree_path }}'"
+
+[post-switch]
+link = "sh '{{ primary_worktree_path }}/scripts/worktrunk/herd-link.sh' '{{ branch }}' '{{ worktree_name }}'"
+
+[pre-remove]
+unlink = "sh '{{ primary_worktree_path }}/scripts/worktrunk/herd-unlink.sh' '{{ branch }}' '{{ worktree_name }}'"
+```
+
+Each script takes the worktree’s name and does the project-specific work. The cleanup script mirrors the setup script. `{{ primary_worktree_path }}` lets each script reach the canonical `.env` without hardcoding a path.
+
+I’d start with the native commands until the model makes sense:
+
+```bash
+git worktree add ../shop.review-fix fix/payment-review
+git worktree list
+git worktree remove ../shop.review-fix
+```
+
+Then I'd add Worktrunk when the repeated environment setup starts getting irritating.
+
+---
+
 - **Page:** Why I let AI agents change my OS only through Nix
 - **Source:** https://subodhdahal.com/blog/configuring-my-os-with-nix-in-the-age-of-ai
 - **Description:** AI agents make it trivial to change your operating system and hard to remember what they changed. Here's why I manage NixOS and macOS from one Nix config in Git.
@@ -1063,814 +1329,163 @@ I'd rather list these than imply it all works:
 
 ---
 
-- **Page:** Stop stashing half-finished work: use Git worktrees and Worktrunk
-- **Source:** https://subodhdahal.com/blog/worktrees-with-worktrunk
-- **Description:** Git worktrees keep separate branches checked out at once. Worktrunk automates per-worktree setup. The same isolation also works for parallel AI agents.
+- **Page:** Instagram Carousel White Border Tool (No Crop)
+- **Source:** https://subodhdahal.com/tools/instagram-carousel
+- **Description:** Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.
 
-This has happened more times than I can count. I finish making changes for a ticket and put it into code review. Then I start the next one. Twenty minutes later, a reviewer asks for a 2-line change on the first ticket.
-
-The change might take a few minutes to make. Getting back to the right code can take longer.
-
-My current branch already has modified files. Maybe the app is running with some local state I’ll need again. Or I configured the env variables differently for this task. I stash everything, switch branches, make the fix, then switch back and restore the stash. I hope I didn’t forget which migration or env variable belonged to which task.
-
-Or I can make a work-in-progress commit that I never wanted in the branch. Or create another temporary branch whose name I’ll forget soon. Or leave the review sitting there until I finish my current work.
-
-All those approaches work, and I’ve used them. But they turn a small review comment into a ceremony.
-
-[Git worktrees](https://git-scm.com/docs/git-worktree) give me a better option: separate folders. Each has its own branch checked out.
-
-## What Git worktrees give you
-
-Git worktrees give you a separate working directory per branch, all in the same repo. You can keep more than one branch checked out at once. Each worktree has its own files, editor state, and running dev server.
-
-### A branch and a worktree aren’t the same thing
-
-A branch is a movable reference to a commit. The working tree is the checked-out set of files I edit. In Git’s terminology, a worktree is the working tree plus the Git metadata. That metadata is what makes it an independent checkout.
-
-My normal clone is already one worktree (Git calls it the main worktree). I can attach more linked worktrees to the same repo, each with a different branch checked out.
-
-For example:
-
-```bash
-~/code/shop/                  # main worktree, branch: feature/new-checkout
-~/code/shop.review-fix/        # linked worktree, branch: fix/payment-review
-~/code/shop.order-history/      # linked worktree, branch: feature/order-history
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_7b4d279de2f79e5f.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_7b4d279de2f79e5f.png
 ```
 
-These folders belong to the same repo. They share Git’s object database and refs. Per-worktree state, such as `HEAD` and the index, stays separate ([Git worktree documentation](https://git-scm.com/docs/git-worktree#_description)).
+# **Instagram carousel white border tool**
 
-Each folder has its own checked-out files, staged changes, and untracked files. I keep an editor and terminal open in each one. I leave the new checkout work untouched. I address the review in `shop.review-fix` and return without stashing.
+Put portrait, landscape and square photos on one white canvas with an even border, so Instagram doesn't crop your carousel and mixed photos sit in the same frame like gallery prints.
 
-The cognitive cost of context switching is real. The Git housekeeping disappears. My editor of choice, Zed, has built-in worktree support. A worktree picker in the command palette makes switching between them fast. Opening a different worktree is one command away.
+Free, no sign-up. Everything runs in your browser and your images never leave your device. This page uses Rybbit for cookieless pageview analytics only ([privacy policy](https://subodhdahal.com/privacy/)).
 
-### Creating the review-fix worktree with Git
+## How to add white borders to an Instagram carousel
 
-Suppose I’m in `~/code/shop`, working on `feature/new-checkout`, and the earlier branch is `fix/payment-review`.
+1. Drop your photos onto the page, or pick them from your device. Drag the slides to change their order.
+2. Leave the aspect ratio on **Auto**, or force 4:5, 1:1, 1.91:1 or 3:4.
+3. Move the padding slider until the border looks right. Click any slide to swipe through a preview.
+4. Choose **1080** as the export width for files sized exactly for Instagram, then download the ZIP.
+5. In Instagram, select the slides in their numbered order. They already share one shape, so nothing gets cropped.
 
-First I create a linked worktree for the existing branch:
+## How Auto picks the canvas shape
 
-```bash
-git worktree add ../shop.review-fix fix/payment-review
+Instagram makes every slide in a carousel the same shape and crops anything that doesn't fit. Auto looks at every photo in the set and picks the ratio within Instagram's 1.91:1 to 4:5 range that leaves the least empty space overall. Three tall photos and one wide one end up on a 4:5 canvas, with white above and below the wide photo. A set of mostly wide photos gets a landscape canvas instead.
+
+The canvas is the smallest one that holds every photo at its native resolution, so no photo is scaled up. Photos taller than 4:5 or wider than 1.91:1 get extra white on the sides or top and bottom, so they still fit without being cropped.
+
+## Instagram carousel sizes
+
+| Shape | Ratio | Size at 1080 wide |
+| --- | --- | --- |
+| Portrait | 4:5 | 1080 × 1350 px |
+| Tall portrait (app only) | 3:4 | 1080 × 1440 px |
+| Square | 1:1 | 1080 × 1080 px |
+| Landscape | 1.91:1 | 1080 × 566 px |
+
+A carousel holds up to 20 slides. Portrait 4:5 takes up the most room in the feed on every surface, which is why Auto leans toward it when the set has tall photos.
+
+## Questions
+
+<details>
+
+<summary>
+
+### Why not just use Instagram's Mixed option?
+
+</summary>
+
+Instagram's Mixed option keeps each photo's shape, but it fills the empty space with a background that follows the app's light or dark theme, and you can't control its color or size. This tool bakes an even white border into every image, so the carousel looks the same for every viewer.
+
+</details>
+
+<details>
+
+<summary>
+
+### How do I post portrait and landscape photos in one carousel without cropping?
+
+</summary>
+
+Add all the photos here, keep the aspect ratio on Auto, and download the ZIP. Every slide comes out at the same canvas size with the whole photo inside it, so Instagram has nothing to crop. Upload the slides in the numbered order.
+
+</details>
+
+<details>
+
+<summary>
+
+### What size should Instagram carousel images be?
+
+</summary>
+
+Instagram stores posts at 1080 pixels wide, with an aspect ratio between 1.91:1 (1080 × 566) and 4:5 (1080 × 1350). The app also accepts 3:4 (1080 × 1440). Every slide in a carousel should share one ratio. Choose the 1080 export width here for files sized exactly for Instagram.
+
+</details>
+
+<details>
+
+<summary>
+
+### Are my photos uploaded anywhere?
+
+</summary>
+
+No. The images are decoded, padded and encoded by your browser on your own device. Nothing is sent to a server.
+
+</details>
+
+<details>
+
+<summary>
+
+### How many photos can I add?
+
+</summary>
+
+Up to 20, which is the most Instagram allows in one carousel. The tool also warns you when a slide is larger than 8 MB.
+
+</details>
+
+<details>
+
+<summary>
+
+### How wide should the white border be?
+
+</summary>
+
+Padding is a percentage of the shared photo area, from 0 to 20%. Around 5% reads as a thin frame and around 10% looks like a matted gallery print. At 0% the photos still share one canvas, with white only where their shapes differ.
+
+</details>
+
+<details>
+
+<summary>
+
+### Should I export JPEG or PNG?
+
+</summary>
+
+JPEG at 95% quality suits photos and keeps files small. PNG is lossless and better for screenshots, text or flat graphics, but the files are much larger.
+
+</details>
+
+<details>
+
+<summary>
+
+### Can I use a border color other than white?
+
+</summary>
+
+Not yet, the padding is always white. If you want another color, open an issue on GitHub and say what you would use it for.
+
+</details>
+
+I built this for posting photos from hikes and trips, and wrote about why in [a post about the carousel padding tool](https://subodhdahal.com/blog/instagram-carousel-padding-tool/).
+
+Found a bug or want a feature? Please [**open an issue on GitHub**](https://github.com/SubodhDahal/subodhdahal.github.io/issues/new).
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#webpage","description":"Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.","name":"Instagram Carousel White Border Tool (No Crop)","url":"https://subodhdahal.com/tools/instagram-carousel/","@type":["WebPage","FAQPage"],"breadcrumb":{"@id":"https://subodhdahal.com/tools/instagram-carousel/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"mainEntity":[{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/1"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/2"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/3"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/4"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/5"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/6"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/7"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/8"}],"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/tools/instagram-carousel/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Tools","item":"https://subodhdahal.com/tools/","position":2},{"@type":"ListItem","name":"Instagram carousel white border tool","item":"https://subodhdahal.com/tools/instagram-carousel/","position":3}]},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/1","@type":"Question","inLanguage":"en","name":"Why not just use Instagram's Mixed option?","acceptedAnswer":{"@type":"Answer","text":"Instagram's Mixed option keeps each photo's shape, but it fills the empty space with a background that follows the app's light or dark theme, and you can't control its color or size. This tool bakes an even white border into every image, so the carousel looks the same for every viewer."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/2","@type":"Question","inLanguage":"en","name":"How do I post portrait and landscape photos in one carousel without cropping?","acceptedAnswer":{"@type":"Answer","text":"Add all the photos here, keep the aspect ratio on Auto, and download the ZIP. Every slide comes out at the same canvas size with the whole photo inside it, so Instagram has nothing to crop. Upload the slides in the numbered order."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/3","@type":"Question","inLanguage":"en","name":"What size should Instagram carousel images be?","acceptedAnswer":{"@type":"Answer","text":"Instagram stores posts at 1080 pixels wide, with an aspect ratio between 1.91:1 (1080 × 566) and 4:5 (1080 × 1350). The app also accepts 3:4 (1080 × 1440). Every slide in a carousel should share one ratio. Choose the 1080 export width here for files sized exactly for Instagram."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/4","@type":"Question","inLanguage":"en","name":"Are my photos uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. The images are decoded, padded and encoded by your browser on your own device. Nothing is sent to a server."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/5","@type":"Question","inLanguage":"en","name":"How many photos can I add?","acceptedAnswer":{"@type":"Answer","text":"Up to 20, which is the most Instagram allows in one carousel. The tool also warns you when a slide is larger than 8 MB."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/6","@type":"Question","inLanguage":"en","name":"How wide should the white border be?","acceptedAnswer":{"@type":"Answer","text":"Padding is a percentage of the shared photo area, from 0 to 20%. Around 5% reads as a thin frame and around 10% looks like a matted gallery print. At 0% the photos still share one canvas, with white only where their shapes differ."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/7","@type":"Question","inLanguage":"en","name":"Should I export JPEG or PNG?","acceptedAnswer":{"@type":"Answer","text":"JPEG at 95% quality suits photos and keeps files small. PNG is lossless and better for screenshots, text or flat graphics, but the files are much larger."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/8","@type":"Question","inLanguage":"en","name":"Can I use a border color other than white?","acceptedAnswer":{"@type":"Answer","text":"Not yet, the padding is always white. If you want another color, open an issue on GitHub and say what you would use it for."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/web-application/1","@type":"WebApplication","applicationCategory":"MultimediaApplication","browserRequirements":"Requires JavaScript and a modern browser","description":"Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.","isAccessibleForFree":true,"name":"Instagram Carousel White Border Tool (No Crop)","operatingSystem":"Any","screenshot":"https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png","url":"https://subodhdahal.com/tools/instagram-carousel/","alternateName":["Instagram Carousel Tools","Instagram white border maker","Instagram no crop tool"],"author":{"@id":"https://subodhdahal.com/#identity"},"featureList":["Pads every photo onto one shared canvas so Instagram does not crop it","Even white border from 0 to 20%","Auto aspect ratio, or fixed 4:5, 1:1, 1.91:1 or 3:4","Export at original size, 1080 or 1440 px wide","JPEG or PNG, downloaded as a ZIP","Up to 20 slides, matching the Instagram carousel limit","Runs entirely in the browser; images are never uploaded"],"offers":{"@type":"Offer","price":0,"priceCurrency":"USD"}},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
 ```
-
-My current directory stays on `feature/new-checkout`. It keeps all its unfinished changes.
-
-`git worktree list` shows every attached worktree:
-
-```bash
-~/code/shop             7db81af [feature/new-checkout]
-~/code/shop.review-fix  b132aa0 [fix/payment-review]
-```
-
-Now I can handle the review in the review-fix worktree:
-
-```bash
-cd ../shop.review-fix
-# make the requested change
-git add . && git commit -m "Fix payment retry condition" && git push
-```
-
-When DevQA finishes and I don’t need the checkout anymore:
-
-```bash
-cd ../shop
-git worktree remove ../shop.review-fix
-git branch -d fix/payment-review
-```
-
-Branch deletion is a separate step in native Git. Git normally refuses to remove a dirty worktree. It also refuses to check out the same branch in another worktree. I can override its safeguards ([Git worktree commands and options](https://git-scm.com/docs/git-worktree#_commands)).
-
-For a brand-new task, I can create the branch and worktree together:
-
-```bash
-git worktree add -b feature/order-history ../shop.order-history main
-```
-
-That creates `feature/order-history` from `main` and checks it out in `../shop.order-history`.
-
-This is already enough to improve the review interruption. The part that started to annoy me came next.
-
-### Every new directory needs its project setup
-
-A linked worktree contains the tracked files from its branch. My `.env`, `node_modules`, build output, and local database belong to a particular working directory. Other ignored files do too. A new worktree won’t magically have them.
-
-The first few minutes often become:
-
-```bash
-cp ../shop/.env .env
-npm install
-npm run generate
-```
-
-Except the dev server in another worktree already owns port 3000.
-
-I can solve this with a shell function or a project script. But once worktrees become a daily workflow, the function starts collecting branch naming rules, directory naming rules, and setup steps. Cleanup steps and special cases follow.
-
-## Where Worktrunk comes in
-
-[Worktrunk](https://github.com/max-sixty/worktrunk) wraps Git worktrees with a branch-oriented CLI and lifecycle hooks. I get ordinary Git worktrees underneath. Worktrunk takes care of the repetitive setup around them.
-
-### Making Worktrunk do the boring parts
-
-On macOS or Linux with Homebrew, the current installation command is:
-
-```bash
-brew install worktrunk
-wt config shell install
-```
-
-The shell integration matters because `wt switch` needs to change the current shell's directory ([Worktrunk installation guide](https://worktrunk.dev/#install)).
-
-Now I can create and enter a worktree with:
-
-```bash
-wt switch --create feature/order-history
-```
-
-Worktrunk addresses worktrees by branch name and calculates the directory from a configurable template. If the branch already has a worktree, `wt switch` moves me into it. If not, `wt switch --create` makes one. With no argument, it opens an interactive picker with branch status and diff previews ([`wt switch` documentation](https://worktrunk.dev/switch/)).
-
-`wt remove` defaults to the current worktree. It only deletes the branch when Worktrunk sees it's already merged. The `--no-delete-branch` flag keeps it ([`wt remove` documentation](https://worktrunk.dev/remove/)). See the [Worktrunk reference](https://worktrunk.dev/) for the full list.
-
-### Project hooks turn a checkout into a usable workspace
-
-Every new worktree starts empty. The same setup repeats every time. On switch, I install dependencies and run project generators. I register the worktree with the rest of the toolchain. I unregister it on removal. My hooks do all four from a shared config file. Creating a worktree returns me to "ready to work." The full reference, including the `pre-merge` and `post-merge` lifecycles, is in the [Worktrunk hook docs](https://worktrunk.dev/hook/). It also covers the approval flow for shared configs.
-
-Worktrunk reads those hooks from `.config/wt.toml`. They fire at lifecycle points like `pre-start` and `post-start`. `pre-start` runs before the worktree is usable. `post-start` runs after, in the background. I keep blocking setup in `pre-start` and push anything slow to `post-start`. That way creating a worktree returns fast. There's also `post-switch`, which fires on every checkout rather than just creation. That's the right home for work that tracks the current branch. The Herd link in the closing config is one example.
-
-### Giving every worktree its own dev server
-
-Only one app can listen on port 3000 at a time. Test runs pointed at the same mutable database can produce some creative failures. But a long test suite in one worktree doesn't block me. I can still check out main in another. The other worktree isn't competing for the same resources.
-
-Worktrunk's `hash_port` template filter derives a stable port from the branch name. The port sits between 10000 and 19999. Its `tether` step runs a process in its own process group. It tears that group down when you remove the worktree.
-
-```toml
-# .config/wt.toml
-
-[post-start]
-server = "wt step tether -- npm run dev -- --port {{ branch | hash_port }}"
-
-[list]
-url = "http://localhost:{{ branch | hash_port }}"
-```
-
-The server starts in the background. That way creating the worktree doesn't wait for a long-running process ([Worktrunk's per-worktree dev-server recipe](https://worktrunk.dev/tips-patterns/#dev-server-per-worktree)).
-
-### Worktrees fit coding agents unusually well
-
-Worktrunk becomes even more useful when I have two or more LLM coding agents on the same repo.
-
-Giving two agents the same working directory invites them to edit the same files and stage each other's changes. They can also run cleanup commands against work neither of them created. A worktree gives each agent its own branch, index, and checked-out files.
-
-Worktrunk creates the worktree and runs the project hooks. Then it moves into the worktree and starts an agent in one command:
-
-```bash
-wt switch --create --execute=claude feature/order-history -- \
-  "Add order history to the account page"
-```
-
-I can run a second agent in another terminal with the same pattern. Arguments after `--` go to the launched command. The blocking `pre-start` hooks finish before `--execute` runs. Post-start hooks continue in the background. Each agent begins in a prepared directory ([Worktrunk’s `--execute` workflow](https://worktrunk.dev/switch/#creating-worktrees)).
-
-Their changes can still conflict when I merge the branches. They can also collide through a shared database, port, or container name. A cache outside the worktree can cause problems too. The filesystem boundary solves a specific class of problems. I still need to divide the tasks sensibly and review what comes back.
-
-I also don’t need five agents running because the tool makes it possible. Parallel work is useful when the tasks are independent enough. Then the merge and review cost stays lower than the time saved.
-
-## Trade-offs and takeaway
-
-### The trade-offs, and when I’d skip
-
-Worktrees have a few edges that are easy to miss:
-
-- Every worktree duplicates the checked-out project files. Dependencies and build output can consume much more disk space than the source.
-- Git normally checks out a branch in only one worktree at a time. I treat the directory and branch as a pair.
-- State outside the worktree needs explicit handling. Ignored files and config need copying or generating. Shared resources (dev servers, databases, Docker, caches) need unique names or ports.
-- Worktrees are easy to make and easy to forget. I remove the worktrees after QA testing marks the work as done.
-- Removing a directory with `rm -rf` leaves worktree administration behind. I use `git worktree remove` or `wt remove`. `git worktree prune` cleans up stale metadata after a manual deletion ([Git worktree cleanup](https://git-scm.com/docs/git-worktree#_description)).
-- A third-party Git hook that runs on `post-checkout` can short-circuit `git worktree add`. This happens if it depends on a binary that doesn't exist in a fresh worktree. Patch the hook to exit cleanly when the dependency is missing. Otherwise `wt switch --create` fails before it can start.
-- Git still documents submodule support in more than one worktree as incomplete. I'd test the workflow carefully in a superproject with submodules ([Git worktree bugs](https://git-scm.com/docs/git-worktree#_bugs)).
-
-I'd skip worktrees entirely when those edges outweigh the benefits. That's when I'm on one branch at a time, the repo is large and disk is tight, or the IDE doesn't support worktrees.
-
-Keeping four tasks open in four directories makes switching between them mechanically cheap. It doesn't make holding four trains of thought equally cheap. What works for me is to keep the main task untouched. I handle the review or production fix in another worktree. I remove it when I'm done with the branch. When an agent can take an independent task, I give it a worktree too.
-
-### My takeaway
-
-Git worktrees turn branches into persistent working directories. That alone removes the stash-switch-unstash loop from review fixes and interruptions.
-
-Worktrunk becomes worthwhile once creating a directory isn’t enough. It gives me short branch-based commands, project hooks, and repeatable paths. Plus cleanup checks and a clean way to launch tools inside a prepared worktree.
-
-For a sense of what the resulting `.config/wt.toml` looks like, here's the version I used in a real repo:
-
-```toml
-[post-start]
-node = "sh '{{ primary_worktree_path }}/scripts/worktrunk/setup-node.sh'"
-php = "sh '{{ primary_worktree_path }}/scripts/worktrunk/setup-php.sh' '{{ branch }}' '{{ worktree_name }}' '{{ primary_worktree_path }}'"
-
-[post-switch]
-link = "sh '{{ primary_worktree_path }}/scripts/worktrunk/herd-link.sh' '{{ branch }}' '{{ worktree_name }}'"
-
-[pre-remove]
-unlink = "sh '{{ primary_worktree_path }}/scripts/worktrunk/herd-unlink.sh' '{{ branch }}' '{{ worktree_name }}'"
-```
-
-Each script takes the worktree’s name and does the project-specific work. The cleanup script mirrors the setup script. `{{ primary_worktree_path }}` lets each script reach the canonical `.env` without hardcoding a path.
-
-I’d start with the native commands until the model makes sense:
-
-```bash
-git worktree add ../shop.review-fix fix/payment-review
-git worktree list
-git worktree remove ../shop.review-fix
-```
-
-Then I'd add Worktrunk when the repeated environment setup starts getting irritating.
 
 ---
 
-- **Page:** Looking back: My 2022 in review
-- **Source:** https://subodhdahal.com/blog/2022-in-review
-- **Description:** From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.
-
-As the earth completes another revolution around the sun and yet another year comes to an end, I can't help but look back and reflect on all that has happened.
-
-For me, this year has been filled with highs and lows, moments of joy and sorrow, and a range of emotions in between. From embarking on solo adventures to creating lasting memories with close friends, I've had the opportunity to learn and grow in ways I never could have imagined.
-
-Join me as I take a journey through the year that was, and discover the lessons and insights I've gained along the way.
-
-## Personal highlights
-
-This year has been filled with exciting adventures, personal growth, and lasting memories. Here are some of the highlights:
-
-### A year of travel: My adventures in 10 countries
-
-This year, I set off on a series of solo adventures that opened my eyes to new experiences and gave me the freedom to make spontaneous decisions. As I traveled to different countries and immersed myself in diverse cultures, I gained a new perspective on the world and my place in it.
-
-Along the way, I met a cast of intriguing characters and took time to reflect on my life and future goals. And when I wasn't venturing out on my own, I made some unforgettable memories with my closest friends.
-
-<figure className="image">
-
-![Europe map](https://subodhdahal.com/images/2022-in-review/europe-map-visited.svg)
-  <figcaption>
-
-A map of Europe with the countries I traveled to in 2022 marked in blue
-
-</figcaption>
-</figure>
-
-I embarked on a journey that took me to 10 countries, 8 of which were new to me. From the beautiful beaches of Greece and the wide landscapes of Norway, to the charming streets of Belgium and the historic sites of Poland, I was constantly in awe of the diverse cultures and landscapes I encountered. In Italy, I marveled at the ancient architecture and savored the delicious cuisine. I also visited the smallest country in the world, Vatican City and marveled at the beauty of St. Peter's Basilica. In Estonia, I was struck by the country's natural beauty and rich history, and in Finland, I was fascinated by the unique blend of modern and traditional culture.
-
-And even though I've visited Switzerland and Austria before, I always find something new and exciting to discover in these beautiful countries. Along the way, I also explored countless charming towns and villages throughout Germany.
-
-All these experiences made this year one of the most memorable and rewarding travel experiences of my life.
-
-<figure className="quote">
-
-> The use of traveling is to regulate imagination by reality, and instead of thinking how things may be, to see them as they are.
-
-
-  <figcaption>
-
-— Samuel Johnson
-
-</figcaption>
-</figure>
-
-### Finding my inner strength: My 50km/day hikes in Germany
-
-This year, I pushed myself to new limits with two epic 50km/day hikes that challenged my physical and mental strength. As someone who has not traditionally considered themselves an athlete, this was a significant accomplishment that I never would have thought myself capable of before.
-
-The first one was along the Rössleweg in Stuttgart, Germany. It is mostly through wooded areas, picturesque vineyards and orchards, all while overlooking the valley known as the Stuttgarter Kessel.
-
-It was in preparation for the second one, which was the [50 km MegaMarsch event in Freiburg](https://www.megamarsch.de/50-12/freiburg/freiburg-anmeldung/), Germany. This was a 50km hike that started in the city and through the Black Forest, which is known for its dense forests and steep hills, before finally ending back in the city.
-
-Despite the exhausting nature of these hikes, they were both amazing experiences that helped me to push myself and discover what I was capable of.
-
-I am grateful to my good friend [Carsten Cierniak](https://www.instagram.com/carsten_thm/) for introducing me to the MegaMarsch event and for providing motivation and companionship during the hikes. Thanks also to him for the guidance and tips that helped me prepare for the hikes.
-
-### The great outdoors: A year of hiking and exploring
-
-Throughout the year, I have been able to do a lot of hiking, ranging from short walks to full-day hikes. Each trail offered its own unique beauty and challenges, from scenic mountain vistas to dense forests and winding rivers.
-
-Hiking has allowed me to disconnect from the stresses of daily life and reconnect with the beauty of the natural world. It has also been a great way to stay active and healthy, both physically and mentally.
-
-The most memorable hikes of the year were: to Zugspitze 🇩🇪, in the Black Forest 🇩🇪, in the Saxon Switzerland National Park 🇩🇪, and in Sognsvann 🇳🇴.
-
-Climbing to the top of Zugspitze, the highest mountain in Germany, proved to be a formidable challenge.The steep and rocky path halfway up the mountain was difficult, and the weather near the top was bad enough that we had to stop just a few hundred meters from the summit. However, the views along the way and the feeling of accomplishment made it all worth it.
-
-I was able to build a strong connection with my friends who accompanied me during these hikes as we bonded over the shared experience of exploring the beautiful nature these regions have to offer.
-
-Hiking has become a passion of mine and I look forward to continuing to explore the many trails that the world has to offer.
-
-### A night to remember: Iron Maiden in concert
-
-I was able to realize a long time desire of mine this year by seeing one of my favorite bands Iron Maiden live in concert. The thrill of hearing the songs I love performed live was an incredible. Despite the age of the band members, they delivered an electric performance and were able to make the 50,000 people present in the venue chant in unison.
-
-It was an unforgettable event that I will always cherish.
-
-## Professional highlights
-
-In addition to my travels, hikes and fun events, this year has also brought its share of challenges and growth in my professional life.
-
-### Stepping into a new role: Overcoming challenges and finding success
-
-As a seasoned Software Engineer with almost a decade of experience under my belt, I thought I had seen it all. But when I accepted the role of Software Engineering Team Lead at [Laserhub GmbH](https://laserhub.com/), I quickly realized that I had a lot to learn. Not only was this a promotion, but it also required me to approach things in a new way and shed some of my old habits.
-
-I'd be lying if I said it has been easy. There have been a lot of challenges, but I've been enjoying it so far and learning to see things from a new perspective. With the help of the wonderful people I work with, I have been able to grow a lot in this role.
-
-## Resilience in adversity: Struggles of those close to me in 2022
-
-In February of this year, a war broke out in Ukraine, causing me great concern for the safety of my colleagues and their loved ones living there. Despite my fears, they are fortunately able to remain safe, but they still have to cope with the ongoing effects of the war. I am in awe of their strength and resilience as they continue to live their lives as normally as possible, despite the challenges they face. I can only hope that the situation will improve and that peace will be restored in the near future.
-
-## Personal key takeaways from 2022
-
-- We are all works in progress. Who we were yesterday is not who we are today, and who we are today is not who we will be tomorrow.
-
-  - There is always the potential for growth and learning, and we should always be open to new knowledge and opportunities for self-improvement.
-
-  - Embracing challenges is essential to personal growth and development.
-
-  - Investing in meaningful relationships with loved ones is always worthwhile.
-
-As I look back on the year that was, I am filled with gratitude for all the things I've learned and experienced.
-
-Unfortunately, not everyone has had the same experience, with some really horrible things that happened in the world. I hope that 2023 will be a better year for everyone.
-
-I am grateful for the support and encouragement of those in my life this year. Your guidance and opportunities have allowed me to grow. Thank you for being a part of my journey and for the amazing times we had together.
-
-Here's to the future and to the continued growth and learning that it holds.
-
----
-
-- **Page:** Hiking Tsho-Rolpa lake trail in Nepal
-- **Source:** https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal
-- **Description:** Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level
-
-### Preamble
-
-While on a holiday in Nepal during October - November 2021, my friends and I were planning a hiking trip to the mountainous regions of the country. After some consideration, we decided to hike to Tsho-Rolpa lake and back.
-
-The Tsho-Rolpa lake trail is not a popular trekking route, so we expected less crowd along the way. That was a plus in COVID times.
-The destination is a glacial lake threatened by global warming and climate change. We decided to visit it to remind ourselves what we and future generations would miss if we don't act on the effects of human activities.
-
-## Introduction
-
-Tsho-Rolpa (NE: च्छोरोल्पा) lake, at 4,580m above sea level in Nepal, is one of the biggest glacial lakes in the country.
-The outflows of the lake form the Rolwaling (रोल्वालिङ) and the Tamakoshi (तामाकोशी) river.
-The lake lies in the Rolwaling valley in Dolakha district and is part of the Gaurishankar(गौरीशंकर) Conservation Area.
-The conservation area gets its name from Mount Gaurishankar (7,134m), which rises there, and our trek involves
-walking along the base of the mountain for a long time.
-
-The Nepal Standard Time (UTC +5:45) follows the meridian of Mount Gaurishankar.
-
-<figure className="w-full,image">
-<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=86.46162986755373%2C27.868012661281945%2C86.46517038345338%2C27.871403344815025&layer=mapnik&marker=27.86970801631173%2C86.46340012550354" style="border: 1px solid black">
-
-
-
-</iframe>
-
-
-  <figcaption>
-
-Location of Tsho-Rolpa lake
-
-</figcaption>
-</figure>
-
-## Itinerary
-
-The Tsho-Rolpa trek typically takes 7-9 days, but time constraints forced us to squeeze it into 5 days. We knew we had to walk extreme lengths of the trail each day. We were mentally prepared for it.
-
-The regular 7-9 day trek also accounts for acclimatization. It suits people who are not used to high altitudes, so they don't suffer from altitude sickness. We had been to high altitudes in the past with no such problems,
-so we could skip a day for acclimatization. But we were still prepared to go back to a lower altitude if any of us
-started having debilitating effects from the high altitude.
-
-### Trip summary
-
-- **Total elevation change:** 3,500m
-- **Motorbike ride time:** 15 hours
-- **Hiked time:** 42.5 hours (breaks included)
-- **Difficulty level:** moderate/difficult
-
-<figure className="image,w-full">
-
-![Elevation profile of the five-day Tsho-Rolpa trip, peaking at 4,580 m](https://subodhdahal.com/images/tsho-rolpa/elevation-change-graph.png)
-  <figcaption>
-
-Elevation change graph for the trip
-
-</figcaption>
-</figure>
-
-### Day 1: Bhaktapur (भक्तपुर) - Chhetchhet (छेतछेत) - Surmuche (सुर्मुचे)
-
-- **Altitude**: from Bhaktapur (1,400m) through Chhetchhet (1,398m) to Surmuche (2,470m)
-- **Motorbike ride time:** 7.5 hours
-- **Hiked time:** 4.5 hours
-
-#### Bhaktapur - Chhetchhet motorbike ride
-
-We(me and three friends) started the trip early, at 5 am from our hometown Bhaktapur in the Kathmandu valley. We
-were going to ride our motorbikes until the last point we could, then start the actual trek from there.
-
-Despite our effort to get 3 motorbikes, we managed only two. There were 2 persons on each
-motorbike along with our backpacks. I rode my younger brother's KTM Duke 200cc motorbike. Its powerful engine made riding on off-road trails a lot easier. But the smaller seat size didn't make for a
-comfortable ride for two persons with heavy backpacks.
-
-<figure className="image">
-
-![Subodh on a KTM Duke motorbike with a backpack at Dolalghat](https://subodhdahal.com/images/tsho-rolpa/me-on-motorbike.jpg)
-  <figcaption>
-
-Me on the motorbike at Dolalghat where we had breakfast
-
-</figcaption>
-</figure>
-
-We stopped for lunch at Charikot before continuing our journey via Singati. Charikot is the headquarters of Dolakha district.
-We made a few stops along the way for rest, enjoying the beautiful views of the
-Himalayan mountain range and the waterfalls.
-
-The Gaurishankar Conservation Area starts from
-Singati, where visitors must pay an entrance fee. Foreigners might also need extra documents and trekking permits.
-
-<figure className="image">
-
-![Snow-capped Mount Gaurishankar, one of the first views on the ride](https://subodhdahal.com/images/tsho-rolpa/himalayas-on-the-way.jpg)
-  <figcaption>
-
-One of the first views of Mount Gaurishankar on our trip
-
-</figcaption>
-</figure>
-
-We rode the motorbikes for around 7.5 hours through the windy roads of Nepal's hilly regions. We reached
-Chhetchhet, where the hiking part of our journey would start.
-
-Shortly before reaching Chhetchhet, we came across a gorgeous waterfall flowing to the turquoise-blue water of the
-Tamakoshi river. A rainbow had also formed in front of it, making the view even more surreal.
-
-<figure className="image">
-
-![Waterfall just before reaching Chhetchhet](https://subodhdahal.com/images/tsho-rolpa/chhetchhet-waterfall2.jpg)
-  <figcaption>
-
-A gorgeous waterfall just before reaching Chhetchhet
-
-</figcaption>
-</figure>
-
-Most travelers reach Chhetchhet from Kathmandu by public transport, but we used motorbikes. You can
-take a bus from Kathmandu to Singati and then a jeep to reach Chhetchhet. Or you can reserve a
-jeep directly from Kathmandu to Chhetchhet.
-
-#### Chhetchhet to Surmuche trekking
-
-After leaving our motorbikes in a secure garage in Chhetchhet and resting for a while, we started the actual hike at
-3 pm. The trail ahead climbed a hill almost vertically to the top, and we felt a bit daunted, to say the
-least. But we braved the trail anyway, eager for the journey ahead. The first half-hour was especially hard
-since our body hadn't warmed up. Once we got the hang of it, the walk became easier.
-
-Three hours of walk and a few breaks later, we reached the village of Simigaun. Simigaun is the last village with grid
-electricity. Trekkers on the Tsho-Rolpa route typically stop there first to charge their electronics overnight. But this was not our planned stop for the day. We were going to
-continue further to the next village.
-
-<figure className="image">
-
-![A typical village house in Simigaun](https://subodhdahal.com/images/tsho-rolpa/simigaun.jpg)
-  <figcaption>
-
-A typical village house in Simigaun
-
-</figcaption>
-</figure>
-
-After walking for another 2.5 hours, most of it in the dark, we reached Surmuche. Only headlamps and flashlights lit our way. We felt exhausted and wanted a hearty meal to refill our energy
-at the hotel/teahouse there. There was only one teahouse at this destination and the next village was at least 3 hours
-away.
-
-We were fortunate that the teahouse in Surmuche was open. The owner
-had walked the same path from Surmuche and arrived just an hour ago. He felt tired and a bit
-unwell, so he could only offer a simple meal. Despite this, he showed us our accommodation for the night and made tasty noodle soup for us. The soup was
-more than enough, and we had snacks with us anyway, so we could have them if needed.
-With another day of a long walk ahead of us and the exhaustion from the day's bike ride and walk, we didn't waste much
-time going to bed.
-
-<figure className="image">
-
-![Mount Gaurishankar illuminated by the last rays of the day's sunlight](https://subodhdahal.com/images/tsho-rolpa/mount-gaurishankar-sunlight.jpg)
-  <figcaption>
-
-Mount Gaurishankar illuminated by the last rays of the day's sunlight
-
-</figcaption>
-</figure>
-
-### Day 2: Surmuche (सुर्मुचे) - Beding (बेदिङ्ग)
-
-- **Altitude**: from Surmuche (2,470m) to Beding (3,721m)
-- **Hiked time:** 12 hours
-
-We had an ambitious plan for our second-day hike. We woke up early at 6 am, and right after breakfast we started
-our hike. This was also an uphill hike, but the elevation change didn't feel as aggressive as the previous day, or
-maybe we got used to it.
-
-<figure className="image">
-
-![Morning views from our lodge in Surmuche](https://subodhdahal.com/images/tsho-rolpa/surmuche-morning-views.jpg)
-  <figcaption>
-
-Morning views from our lodge in Surmuche
-
-</figcaption>
-</figure>
-
-After hiking for about 2 hours, we reached the next stop of Kyalche. We felt fine, so we rested briefly and took some pictures before continuing.
-
-<figure className="image">
-
-![Me at the short stop in Kyalche](https://subodhdahal.com/images/tsho-rolpa/stop-at-kyalche.jpg)
-  <figcaption>
-
-Me during the stop in Kyalche
-
-</figcaption>
-</figure>
-
-We noticed that we stopped getting cellphone network reception at some point. It felt odd at first, but it kept us present. We soaked in the views during our rest time instead of scrolling social media.
-
-After two more hours of hiking with little to no elevation change, we reached Dongang (डोंगांग),
-a small settlement along the Tamakoshi river with turquoise
-blue water. The water's almost surreal color probably comes from minerals washed down from the mountains and glaciers
-not so far away.
-
-<figure className="image">
-
-![The settlement at Dongang](https://subodhdahal.com/images/tsho-rolpa/dongang.jpg)
-  <figcaption>
-
-The settlement at Dongang along the Tamakoshi river
-
-</figcaption>
-</figure>
-
-We were starving when we arrived. The
-next stop was hours away, so we stopped for Dal-Bhat (rice with lentils and vegetables on the side), the
-quintessential Nepali food. Sweat had drenched our clothes during the long sunny hike. We took the
-time to dry them and rested until the food was ready. After having a hearty meal, we rested a bit more as we were in
-no position to start walking immediately.
-
-We resumed the hike from Dongang at around 1 pm. The mountains felt closer now, which made us want to continue. We walked along the Tamakoshi river for a long time. We didn't complain, because the turquoise-blue water was something we couldn't get enough of. After a
-while, we began to notice that the vegetation was changing and starting to be more alpine-like.
-
-<figure className="image">
-
-![Views a short while after Dongang](https://subodhdahal.com/images/tsho-rolpa/after-donggang.jpg)
-  <figcaption>
-
-Views a short while after Dongang
-
-</figcaption>
-</figure>
-
-At around 6 pm, as dusk fell, we reached the village of Beding. We felt tired, and some of us felt the altitude. We were glad to see the village signpost where we could stay for the night. To our dismay, the lodges were at the far side of the village. Reaching them took 45 more minutes in utter darkness, with only our headlamps and flashlights to light the
-path.
-
-In the lodge in Beding, we had some Tibetan noodle soup alongside the fire in the kitchen to quickly warm us up
-before having our dinner of Daal-Bhat. The weather in Beding was freezing, and our rooms had no heating. We piled layers of blankets
-on top of us to stay warm at night.
-
-### Day 3: Beding (बेदिङ्ग) - Tsho-Rolpa (च्छोरोल्पा) - Na (ना) village
-
-- **Altitude**: from Beding (3,721m) through Tsho-Rolpa (4,550m) to Na village (4,180m)
-- **Hiked time:** 12 hours
-
-Beding, also known as the village of Everest climbers, was where we stayed on the second night of our trip. Since we
-had arrived in darkness, we got a pleasant surprise in the morning. Beautiful mountain views greeted us from our lodge.
-
-<figure className="image">
-
-![Morning views from our lodge at Beding](https://subodhdahal.com/images/tsho-rolpa/beding-morning-views.jpg)
-  <figcaption>
-
-Morning views from our lodge at Beding
-
-</figcaption>
-</figure>
-
-On the third day, we had a quick breakfast and started the hike at 7 am, soon after waking
-up. This was the first day we didn't have to gain much elevation during our hike. The path ran nearly
-straight with only minor elevation changes.
-
-Along the way, we could enjoy the views of the Rolwaling valley. In the local Sherpa language,
-Rolwaling means "valley carved by a plow," and the landscape did look the part.
-
-<figure className="image">
-
-![Views of the Rolwaling valley](https://subodhdahal.com/images/tsho-rolpa/rolwaling-valley-1.jpg)
-  <figcaption>
-
-Views of the Rolwaling valley
-
-</figcaption>
-</figure>
-
-<figure className="image">
-
-![Views of the Rolwaling valley](https://subodhdahal.com/images/tsho-rolpa/rolwaling-valley-2.jpg)
-  <figcaption>
-
-Views of the Rolwaling valley
-
-</figcaption>
-</figure>
-
-We reached the village of Na at 11 am. After resting for a while at a lodge there, we had our breakfast/lunch. We left our
-bags here, taking only the day's essentials. We would return to stay the night after reaching Tsho-Rolpa lake. Not having to carry the 12
-kilos I had been carrying the past days felt almost magical.
-
-Walking alongside the Tamakoshi river on almost flat terrain, we reached Tsho-Rolpa lake at 3:30 pm.
-The weather favored us that day, and we had clear views of the lake and the mountains. We had heard that fog often hides the lake after 11 am.
-
-Reaching our destination after the grueling walk and the pain we endured the
-past few days felt surreal. We lingered for a while over the lake and the mountains, with the Rolwaling
-valley behind us. We also met other travelers from Nepal at the lake.
-
-<figure className="image,w-full">
-
-![Views of the Tsho-Rolpa lake](https://subodhdahal.com/images/tsho-rolpa/lake-view.jpg)
-  <figcaption>
-
-Views of the Tsho-Rolpa lake
-
-</figcaption>
-</figure>
-
-Despite the captivating view, we couldn't stay there for long because we were losing light and had to return soon. The wind and chill
-also made it impossible to spend more time there. No hotels, lodges, or teahouses stand near
-Tsho-Rolpa lake. Everyone had to return unless they planned to camp.
-
-While making our descent from the lake to Na village, we saw the golden hour set in. Beautiful light filled the horizon ahead of us.
-
-<figure className="image">
-
-![Views of the Na village](https://subodhdahal.com/images/tsho-rolpa/na-village.jpg)
-  <figcaption>
-
-Views of the Na village
-
-</figcaption>
-</figure>
-
-Behind us, the last light
-of the day glowed on top of the mountains, an exquisite view of its own.
-
-<figure className="image">
-
-![Mountain peak illuminated by sunset](https://subodhdahal.com/images/tsho-rolpa/illuminated-mountain.jpg)
-  <figcaption>
-
-Mountain peak illuminated by sunset
-
-</figcaption>
-</figure>
-
-Like the previous days, we reached our destination in utter darkness and sat by the fire to warm ourselves up with some
-soup before having our dinner. We also reflected on our journey and on reaching the Tsho-Rolpa lake in 3 days. Except for seasoned trekkers, reaching the lake takes at least 4 days. We were proud of doing it in 3 days despite our limited experience
-at such a high altitude.
-
-Sleep didn't come easily that night. The high
-altitude and the cold kept us awake despite our exhaustion. We did manage to get to sleep after a while of trying.
-
-### Day 4: Na (ना) village - Simigaun (सिमिगाउँ)
-
-- **Altitude**: from Na village (4,180m) to Simigaun (2,000m)
-- **Hiked time:** 12 hours
-
-The hike back was almost entirely downhill. We planned to cover a long distance to make the next day easier.
-We started our hike at 7:30 from the Na village after having breakfast. We didn't make many stops along the way apart
-from a few snack breaks as going downhill was easier and we had to walk a long distance to cover during the day.
-
-We stopped at Dongang for lunch at 2 pm and resumed our journey soon after. As on the previous
-days, we reached our destination in the dark, arriving in Simigaun at 7 pm. Most of our electronics were low on
-battery, so we recharged them here where there was grid-connected electricity. The power banks we had brought and
-the spare batteries from the GoPro and the drone had lasted us till then.
-
-We hadn't properly celebrated reaching our destination the previous night, so we treated ourselves
-to Tongba, an alcoholic drink made from fermented millet. We mulled over our journey, life, and philosophy in general,
-as often happens over drinks.
-
-<figure className="image">
-
-![Tongba](https://subodhdahal.com/images/tsho-rolpa/tongba-vessel.jpg)
-  <figcaption>
-
-Tongba served in its regular vessel
-
-</figcaption>
-</figure>
-
-After a while, we had dinner and went to sleep. We planned to wake up
-early. We still had a few hours of hiking left before reaching Chhetchhet, where our motorbikes
-waited to take us home.
-
-### Day 5: Simigaun - Bhaktapur
-
-- **Altitude**: from Simigaun (2,000m) to Bhaktapur (1,400m)
-- **Hiked time:** 2 hours
-- **Motorbike ride time:** 7.5 hours
-
-We started our journey at 7 am without having breakfast. We reached Chhetchhet at 9 am. The last 30 minutes of our walk
-felt grueling because I was having knee problems walking downhill on the stone-paved stairs. The long downhill
-distance we covered the previous day probably caused it. But I was glad this
-happened towards the end of the trek and not earlier. Otherwise, it'd have been a nightmare and not a nice
-experience.
-
-Getting on my motorbike was an immense relief for my knee and lower body in general. Now my
-arms and hands felt the pain of riding a motorbike on off-road, uneven terrain. Braving the pain, we
-reached Dolakha Bazar, where we made a short stop to visit the Dolakha Bhimeswor temple.
-
-Our next stop was at nearby Charikot where we had the first meal of the day at noon. We also loaded our heavy bags onto
-a bus bound for Kathmandu, so we wouldn't carry them on our backs all the way home.
-
-Shortly after lunch, we resumed our journey towards Bhaktapur and reached there at 6 pm, just in
-time to retrieve our bags from the bus. Although the motorbike journey is typically much faster than the local bus,
-we arrived together. We had stopped for rest and food in
-Dolalghat.
-
-My whole body was in pain when I reached home after our grueling journey. I couldn't wait to rest
-and not do anything for the next few days.
-
-## Reflections on the journey
-
-The journey was one of the best experiences of my life. The majestic views and well-maintained
-trails of the Gaurishankar Conservation Area made the hike pleasant despite the long hours.
-Having good friends accompanying me on the trip made it even better.
-
-Despite the beautiful journey, we couldn't help but wonder about the people living below the lake. What would happen to them if it suddenly bursts? Due to global warming, the risk grows more severe every day. Some efforts to reduce the risk and set up an early warning
-system are underway, but they aren't enough. The risk remains unless the world acts to curb
-rising temperatures and climate change.
-
-### Things we could've done differently
-
-Since we squeezed a 7-9 day trip into five days, we had to walk up to 12 hours a day. It felt tough at
-times. The trip could've been a lot less stressful. But we did the best we could with our time constraints.
-
-If we had more time we could also have hiked to the Dudh Kunda, a beautiful lake a few hours away from Tsho-Rolpa lake.
-
-Bringing medicines for high altitude, just in case, would've been smart. We didn't need them in the end.
-
-### Lessons learned for life
-
-Towards the end of our daily 12-hour trek, I felt exhausted and couldn't continue.
-Stopping in the dark woods wasn't an option, so I forced myself on despite the weariness and pain.
-This made me realize that we are capable of achieving a lot and most of the time our mind is the
-one limiting us.
-
-Planning the journey and pre-determining the destination for each day made us accountable and determined.
-While on the hike,
-instead of getting daunted by the long path ahead, we focused on the next step.
-Having a bigger picture in mind and taking small steps to achieve it makes even the seemingly impossible possible.
-
-The insights I learned can help me overcome difficult challenges in other facets of life as well.
-
-<figure className="quote">
-
-> Why do you go away? So that you can come back. So that you can see the place you came from with new eyes and extra
->     colors. And the people there see you differently, too. Coming back to where you started is not the same as never leaving.
-
-
-  <figcaption>
-
-— Terry Pratchett, <cite>
-
-A Hat Full of Sky
-
-</cite>
-</figcaption>
-</figure>
-
-I felt like a different person, for the better, after my journey.
-
-**Looking forward to more journeys to explore the world and discover my true self.**
-
----
-
-<div className="article-description">
-
-#### Addendum
-
-<div className="text-sm">
-
-- All pictures by me (Subodh Dahal) except for the ones of me. I took them all with my One Plus 8 Pro smartphone and did some post-processing.<br />
-
-
-  - There were variations in the reported altitude of the places based on the sources<br />
-
-
-  - Follow me on [Instagram (@sub0dh_d)](https://www.instagram.com/sub0dh_d/) to view more pictures from this and other trips
-
-</div>
-</div>
+- **Page:** NixOS on the desktop
+- **Source:** https://subodhdahal.com/topics/nixos
+- **Description:** Fixes from running NixOS with COSMIC on Wayland on a ThinkPad, including a Razer Core X eGPU with an NVIDIA RTX card and Handy speech-to-text.
+
+My laptop runs NixOS with the COSMIC desktop on Wayland, connected to a Razer Core X eGPU. When something on that setup doesn't work, I write down how I tracked it down, layer by layer, with the NixOS config that fixed it. The snippets are NixOS, but the debugging steps apply to most Linux distributions.
 
 ---
 
@@ -1882,27 +1497,11 @@ I take my camera on hikes and trips, from the Tsho-Rolpa glacial lake in Nepal t
 
 ---
 
-- **Page:** Command line and developer workflow
-- **Source:** https://subodhdahal.com/topics/command-line
-- **Description:** Git aliases, fzf, Git worktrees with Worktrunk, jq, GNU Stow dotfiles and other command-line habits that make my daily development work faster.
-
-Most of my work happens in a terminal, so small improvements there add up. These posts collect the Git habits, shell functions and tools I use every day. They include fzf-powered pickers, worktrees for parallel branches, a jq function for exploring JSON APIs, and dotfiles synced with GNU Stow.
-
----
-
 - **Page:** Self-hosting and homelab
 - **Source:** https://subodhdahal.com/topics/self-hosting
 - **Description:** Running my own Git forge, RSS reader and photo library at home with Forgejo, FreshRSS, Immich, Docker and Traefik, and what broke along the way.
 
 I'd rather keep my code, photos and reading on hardware I own than on servers whose terms can change. My homelab runs on a small home server with Proxmox, Docker and Traefik. These posts cover why I moved each service home, how it's set up, and the problems I had to fix.
-
----
-
-- **Page:** NixOS on the desktop
-- **Source:** https://subodhdahal.com/topics/nixos
-- **Description:** Fixes from running NixOS with COSMIC on Wayland on a ThinkPad, including a Razer Core X eGPU with an NVIDIA RTX card and Handy speech-to-text.
-
-My laptop runs NixOS with the COSMIC desktop on Wayland, connected to a Razer Core X eGPU. When something on that setup doesn't work, I write down how I tracked it down, layer by layer, with the NixOS config that fixed it. The snippets are NixOS, but the debugging steps apply to most Linux distributions.
 
 ---
 
@@ -2022,6 +1621,14 @@ There's a lot more extensions which can be browsed in the [official repository](
 After migrating to this setup, I am reading more in-depth content than what I did before. I've discovered authors sharing valuable perspectives on topics I find interesting that are not within the current hype-cycle. It's also refreshing to follow the creators whose writing feels like the pre-SEO, pre-marketing, pre-AISlop internet.
 
 I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my default way of finding new content is now the feed reader.
+
+---
+
+- **Page:** Command line and developer workflow
+- **Source:** https://subodhdahal.com/topics/command-line
+- **Description:** Git aliases, fzf, Git worktrees with Worktrunk, jq, GNU Stow dotfiles and other command-line habits that make my daily development work faster.
+
+Most of my work happens in a terminal, so small improvements there add up. These posts collect the Git habits, shell functions and tools I use every day. They include fzf-powered pickers, worktrees for parallel branches, a jq function for exploring JSON APIs, and dotfiles synced with GNU Stow.
 
 ---
 
@@ -2593,6 +2200,116 @@ This music control workflow is step one in an ongoing automation experiment. I'm
 
 ---
 
+- **Page:** Effortless configuration syncing with GNU Stow and Git: a software engineer's workflow
+- **Source:** https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow
+- **Description:** Use GNU Stow and Git to keep config files in sync across Linux and macOS. Keep them in one repo with full history, and set up new machines in minutes.
+
+## Introduction
+
+As a software engineer, I use my terminal, shell, and text editor every day. Each tool has its own config files, or **dotfiles**. Over time, I've tuned these files to fit how I work. Keeping them in sync across machines takes time and is easy to break. My laptop, home server, and work Mac all have their own setups. That's where **GNU Stow** and **Git** come in. They keep my configs neat and in sync. I've relied on this setup for over five years.
+
+## What are dotfiles?
+
+Dotfiles are config files that start with a dot, such as `.zshrc`, `.vimrc`, and `.gitconfig`. They control how your tools look and act. These files sit all over your home folder, so sorting them by hand is a chore. That becomes tedious when you use more than one machine. Putting them in one repo is the key to easy config handling.
+
+## The tools: GNU Stow and Git
+
+**GNU Stow** is a symlink manager. It takes dotfiles from one repo and links them into the folders you pick. Pair it with **Git**, and every change is easy to track and undo. Your setup then syncs across machines.
+
+## Setting up my dotfiles
+
+### 1. Centralized Repository
+
+I keep my dotfiles in a private Git repo. The repo mirrors the layout of my home folder, so Stow can link files where they belong. Here's how I lay out configs for Zsh, Git, Tmux, and Vim (shortened for this post):
+
+```bash
+dotfiles
+├── git
+│   └── .gitconfig
+├── tmux
+│   ├── .tmux.conf
+├── zsh
+│   ├── .config
+│   │   ├── aliasrc.sh
+│   │   ├── custom_fns.sh
+│   │   ├── env.zsh
+│   │   ├── oh-my-posh
+│   │   │   └── info.toml
+│   └── .zshrc
+└── vim
+  └── .vimrc
+```
+
+### 2. Stowing and restowing configurations
+
+A big plus of GNU Stow is that you can pick which configs go on which machine. My repo holds a folder for each tool, such as Zsh, Tmux, and Vim. When I set up a machine, I choose the folders I want and leave the rest.
+
+For example, to apply my Zsh setup I run the `stow` command like this:
+
+```bash
+stow --target=/home/username zsh
+```
+
+This links my Zsh files into my home folder, including `.zshrc` and everything in `.config`.
+When I add files or change a config, I restow the folder to apply the update:
+
+```bash
+stow -R zsh
+```
+
+This clears the old links and makes new ones, so nothing is stale.
+
+### 3. Uninstalling configurations
+
+To remove a config, such as Zsh, I run:
+
+```bash
+stow -D zsh
+```
+
+This deletes every Zsh link in my home folder but leaves the files in my repo alone. I can put them back anytime.
+
+## Pro-tip: Simplify with `.stowrc`
+
+By default, Stow links files into your current folder unless you set a target with `--target`. I got tired of typing `--target=$HOME` every time, so I made a `.stowrc` file in my repo:
+
+```bash
+--target=$HOME
+```
+
+Now Stow uses my home folder on its own, and you can track the file with Git too.
+
+## Syncing with Git
+
+Tracking dotfiles with Git has three big benefits:
+
+- **Change history**: see every tweak I've made over the years and roll back if needed.
+- **Sync across machines**: push changes to a private repo, then pull them onto any new machine.
+- **Works on Linux and macOS**: the same setup works on both, and every machine stays in sync.
+
+For instance, when I got a Mac at work, I cloned my dotfiles repo. After running `stow zsh`, my Zsh setup, aliases, and Oh My Posh theme were ready right away.
+
+## More use cases for Stow
+
+I use Stow for dotfiles, but it can handle any files that need symlinks. Some examples:
+
+- Scripts live in a `bin` folder and link into `$PATH`.
+- Config folders for tools like Docker or Kubernetes are easy to manage.
+- You can test a new version of a config file without touching the current one.
+
+## The benefits of this workflow
+
+This setup changed how I manage configs. Here's what it gives me:
+
+- My configs live in one place, so updates and backups are simple.
+- Stow and Git get a new machine ready in minutes.
+- After five years of tweaks, I can still look back at what I tried and what worked.
+- The same setup works on Linux and macOS.
+
+**GNU Stow** and **Git** make this whole setup possible. My configs stay in sync without much effort, and every machine ends up the same. Every tweak I make leaves a trail, so I can undo mistakes. That leaves me more time to build and solve problems.
+
+---
+
 - **Page:** fzf + fabric: Smart selection for LLM patterns and models
 - **Source:** https://subodhdahal.com/blog/ai-pattern-selection-in-fabric
 - **Description:** Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.
@@ -2895,6 +2612,120 @@ I am still experimenting with the workflow and tools that I use to manage my dig
 - Automatically correct timestamps on media, usually the ones received via chat apps
 - Automatic assignment of GPS coordinates for pictures/videos taken minutes apart, in case they don't have GPS metadata.
 - Add automatic tags for things in pictures, eg. sunsets, lakes, canyons, books
+
+---
+
+- **Page:** Looking back: My 2022 in review
+- **Source:** https://subodhdahal.com/blog/2022-in-review
+- **Description:** From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.
+
+As the earth completes another revolution around the sun and yet another year comes to an end, I can't help but look back and reflect on all that has happened.
+
+For me, this year has been filled with highs and lows, moments of joy and sorrow, and a range of emotions in between. From embarking on solo adventures to creating lasting memories with close friends, I've had the opportunity to learn and grow in ways I never could have imagined.
+
+Join me as I take a journey through the year that was, and discover the lessons and insights I've gained along the way.
+
+## Personal highlights
+
+This year has been filled with exciting adventures, personal growth, and lasting memories. Here are some of the highlights:
+
+### A year of travel: My adventures in 10 countries
+
+This year, I set off on a series of solo adventures that opened my eyes to new experiences and gave me the freedom to make spontaneous decisions. As I traveled to different countries and immersed myself in diverse cultures, I gained a new perspective on the world and my place in it.
+
+Along the way, I met a cast of intriguing characters and took time to reflect on my life and future goals. And when I wasn't venturing out on my own, I made some unforgettable memories with my closest friends.
+
+<figure className="image">
+
+![Europe map](https://subodhdahal.com/images/2022-in-review/europe-map-visited.svg)
+  <figcaption>
+
+A map of Europe with the countries I traveled to in 2022 marked in blue
+
+</figcaption>
+</figure>
+
+I embarked on a journey that took me to 10 countries, 8 of which were new to me. From the beautiful beaches of Greece and the wide landscapes of Norway, to the charming streets of Belgium and the historic sites of Poland, I was constantly in awe of the diverse cultures and landscapes I encountered. In Italy, I marveled at the ancient architecture and savored the delicious cuisine. I also visited the smallest country in the world, Vatican City and marveled at the beauty of St. Peter's Basilica. In Estonia, I was struck by the country's natural beauty and rich history, and in Finland, I was fascinated by the unique blend of modern and traditional culture.
+
+And even though I've visited Switzerland and Austria before, I always find something new and exciting to discover in these beautiful countries. Along the way, I also explored countless charming towns and villages throughout Germany.
+
+All these experiences made this year one of the most memorable and rewarding travel experiences of my life.
+
+<figure className="quote">
+
+> The use of traveling is to regulate imagination by reality, and instead of thinking how things may be, to see them as they are.
+
+
+  <figcaption>
+
+— Samuel Johnson
+
+</figcaption>
+</figure>
+
+### Finding my inner strength: My 50km/day hikes in Germany
+
+This year, I pushed myself to new limits with two epic 50km/day hikes that challenged my physical and mental strength. As someone who has not traditionally considered themselves an athlete, this was a significant accomplishment that I never would have thought myself capable of before.
+
+The first one was along the Rössleweg in Stuttgart, Germany. It is mostly through wooded areas, picturesque vineyards and orchards, all while overlooking the valley known as the Stuttgarter Kessel.
+
+It was in preparation for the second one, which was the [50 km MegaMarsch event in Freiburg](https://www.megamarsch.de/50-12/freiburg/freiburg-anmeldung/), Germany. This was a 50km hike that started in the city and through the Black Forest, which is known for its dense forests and steep hills, before finally ending back in the city.
+
+Despite the exhausting nature of these hikes, they were both amazing experiences that helped me to push myself and discover what I was capable of.
+
+I am grateful to my good friend [Carsten Cierniak](https://www.instagram.com/carsten_thm/) for introducing me to the MegaMarsch event and for providing motivation and companionship during the hikes. Thanks also to him for the guidance and tips that helped me prepare for the hikes.
+
+### The great outdoors: A year of hiking and exploring
+
+Throughout the year, I have been able to do a lot of hiking, ranging from short walks to full-day hikes. Each trail offered its own unique beauty and challenges, from scenic mountain vistas to dense forests and winding rivers.
+
+Hiking has allowed me to disconnect from the stresses of daily life and reconnect with the beauty of the natural world. It has also been a great way to stay active and healthy, both physically and mentally.
+
+The most memorable hikes of the year were: to Zugspitze 🇩🇪, in the Black Forest 🇩🇪, in the Saxon Switzerland National Park 🇩🇪, and in Sognsvann 🇳🇴.
+
+Climbing to the top of Zugspitze, the highest mountain in Germany, proved to be a formidable challenge.The steep and rocky path halfway up the mountain was difficult, and the weather near the top was bad enough that we had to stop just a few hundred meters from the summit. However, the views along the way and the feeling of accomplishment made it all worth it.
+
+I was able to build a strong connection with my friends who accompanied me during these hikes as we bonded over the shared experience of exploring the beautiful nature these regions have to offer.
+
+Hiking has become a passion of mine and I look forward to continuing to explore the many trails that the world has to offer.
+
+### A night to remember: Iron Maiden in concert
+
+I was able to realize a long time desire of mine this year by seeing one of my favorite bands Iron Maiden live in concert. The thrill of hearing the songs I love performed live was an incredible. Despite the age of the band members, they delivered an electric performance and were able to make the 50,000 people present in the venue chant in unison.
+
+It was an unforgettable event that I will always cherish.
+
+## Professional highlights
+
+In addition to my travels, hikes and fun events, this year has also brought its share of challenges and growth in my professional life.
+
+### Stepping into a new role: Overcoming challenges and finding success
+
+As a seasoned Software Engineer with almost a decade of experience under my belt, I thought I had seen it all. But when I accepted the role of Software Engineering Team Lead at [Laserhub GmbH](https://laserhub.com/), I quickly realized that I had a lot to learn. Not only was this a promotion, but it also required me to approach things in a new way and shed some of my old habits.
+
+I'd be lying if I said it has been easy. There have been a lot of challenges, but I've been enjoying it so far and learning to see things from a new perspective. With the help of the wonderful people I work with, I have been able to grow a lot in this role.
+
+## Resilience in adversity: Struggles of those close to me in 2022
+
+In February of this year, a war broke out in Ukraine, causing me great concern for the safety of my colleagues and their loved ones living there. Despite my fears, they are fortunately able to remain safe, but they still have to cope with the ongoing effects of the war. I am in awe of their strength and resilience as they continue to live their lives as normally as possible, despite the challenges they face. I can only hope that the situation will improve and that peace will be restored in the near future.
+
+## Personal key takeaways from 2022
+
+- We are all works in progress. Who we were yesterday is not who we are today, and who we are today is not who we will be tomorrow.
+
+  - There is always the potential for growth and learning, and we should always be open to new knowledge and opportunities for self-improvement.
+
+  - Embracing challenges is essential to personal growth and development.
+
+  - Investing in meaningful relationships with loved ones is always worthwhile.
+
+As I look back on the year that was, I am filled with gratitude for all the things I've learned and experienced.
+
+Unfortunately, not everyone has had the same experience, with some really horrible things that happened in the world. I hope that 2023 will be a better year for everyone.
+
+I am grateful for the support and encouragement of those in my life this year. Your guidance and opportunities have allowed me to grow. Thank you for being a part of my journey and for the amazing times we had together.
+
+Here's to the future and to the continued growth and learning that it holds.
 
 ---
 
@@ -3201,111 +3032,475 @@ If you would prefer a more GUI approach to working with git but in the terminal,
 
 ---
 
-- **Page:** Effortless configuration syncing with GNU Stow and Git: a software engineer's workflow
-- **Source:** https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow
-- **Description:** Use GNU Stow and Git to keep config files in sync across Linux and macOS. Keep them in one repo with full history, and set up new machines in minutes.
+- **Page:** Hiking Tsho-Rolpa lake trail in Nepal
+- **Source:** https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal
+- **Description:** Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level
+
+### Preamble
+
+While on a holiday in Nepal during October - November 2021, my friends and I were planning a hiking trip to the mountainous regions of the country. After some consideration, we decided to hike to Tsho-Rolpa lake and back.
+
+The Tsho-Rolpa lake trail is not a popular trekking route, so we expected less crowd along the way. That was a plus in COVID times.
+The destination is a glacial lake threatened by global warming and climate change. We decided to visit it to remind ourselves what we and future generations would miss if we don't act on the effects of human activities.
 
 ## Introduction
 
-As a software engineer, I use my terminal, shell, and text editor every day. Each tool has its own config files, or **dotfiles**. Over time, I've tuned these files to fit how I work. Keeping them in sync across machines takes time and is easy to break. My laptop, home server, and work Mac all have their own setups. That's where **GNU Stow** and **Git** come in. They keep my configs neat and in sync. I've relied on this setup for over five years.
+Tsho-Rolpa (NE: च्छोरोल्पा) lake, at 4,580m above sea level in Nepal, is one of the biggest glacial lakes in the country.
+The outflows of the lake form the Rolwaling (रोल्वालिङ) and the Tamakoshi (तामाकोशी) river.
+The lake lies in the Rolwaling valley in Dolakha district and is part of the Gaurishankar(गौरीशंकर) Conservation Area.
+The conservation area gets its name from Mount Gaurishankar (7,134m), which rises there, and our trek involves
+walking along the base of the mountain for a long time.
 
-## What are dotfiles?
+The Nepal Standard Time (UTC +5:45) follows the meridian of Mount Gaurishankar.
 
-Dotfiles are config files that start with a dot, such as `.zshrc`, `.vimrc`, and `.gitconfig`. They control how your tools look and act. These files sit all over your home folder, so sorting them by hand is a chore. That becomes tedious when you use more than one machine. Putting them in one repo is the key to easy config handling.
+<figure className="w-full,image">
+<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=86.46162986755373%2C27.868012661281945%2C86.46517038345338%2C27.871403344815025&layer=mapnik&marker=27.86970801631173%2C86.46340012550354" style="border: 1px solid black">
 
-## The tools: GNU Stow and Git
 
-**GNU Stow** is a symlink manager. It takes dotfiles from one repo and links them into the folders you pick. Pair it with **Git**, and every change is easy to track and undo. Your setup then syncs across machines.
 
-## Setting up my dotfiles
+</iframe>
 
-### 1. Centralized Repository
 
-I keep my dotfiles in a private Git repo. The repo mirrors the layout of my home folder, so Stow can link files where they belong. Here's how I lay out configs for Zsh, Git, Tmux, and Vim (shortened for this post):
+  <figcaption>
 
-```bash
-dotfiles
-├── git
-│   └── .gitconfig
-├── tmux
-│   ├── .tmux.conf
-├── zsh
-│   ├── .config
-│   │   ├── aliasrc.sh
-│   │   ├── custom_fns.sh
-│   │   ├── env.zsh
-│   │   ├── oh-my-posh
-│   │   │   └── info.toml
-│   └── .zshrc
-└── vim
-  └── .vimrc
-```
+Location of Tsho-Rolpa lake
 
-### 2. Stowing and restowing configurations
+</figcaption>
+</figure>
 
-A big plus of GNU Stow is that you can pick which configs go on which machine. My repo holds a folder for each tool, such as Zsh, Tmux, and Vim. When I set up a machine, I choose the folders I want and leave the rest.
+## Itinerary
 
-For example, to apply my Zsh setup I run the `stow` command like this:
+The Tsho-Rolpa trek typically takes 7-9 days, but time constraints forced us to squeeze it into 5 days. We knew we had to walk extreme lengths of the trail each day. We were mentally prepared for it.
 
-```bash
-stow --target=/home/username zsh
-```
+The regular 7-9 day trek also accounts for acclimatization. It suits people who are not used to high altitudes, so they don't suffer from altitude sickness. We had been to high altitudes in the past with no such problems,
+so we could skip a day for acclimatization. But we were still prepared to go back to a lower altitude if any of us
+started having debilitating effects from the high altitude.
 
-This links my Zsh files into my home folder, including `.zshrc` and everything in `.config`.
-When I add files or change a config, I restow the folder to apply the update:
+### Trip summary
 
-```bash
-stow -R zsh
-```
+- **Total elevation change:** 3,500m
+- **Motorbike ride time:** 15 hours
+- **Hiked time:** 42.5 hours (breaks included)
+- **Difficulty level:** moderate/difficult
 
-This clears the old links and makes new ones, so nothing is stale.
+<figure className="image,w-full">
 
-### 3. Uninstalling configurations
+![Elevation profile of the five-day Tsho-Rolpa trip, peaking at 4,580 m](https://subodhdahal.com/images/tsho-rolpa/elevation-change-graph.png)
+  <figcaption>
 
-To remove a config, such as Zsh, I run:
+Elevation change graph for the trip
 
-```bash
-stow -D zsh
-```
+</figcaption>
+</figure>
 
-This deletes every Zsh link in my home folder but leaves the files in my repo alone. I can put them back anytime.
+### Day 1: Bhaktapur (भक्तपुर) - Chhetchhet (छेतछेत) - Surmuche (सुर्मुचे)
 
-## Pro-tip: Simplify with `.stowrc`
+- **Altitude**: from Bhaktapur (1,400m) through Chhetchhet (1,398m) to Surmuche (2,470m)
+- **Motorbike ride time:** 7.5 hours
+- **Hiked time:** 4.5 hours
 
-By default, Stow links files into your current folder unless you set a target with `--target`. I got tired of typing `--target=$HOME` every time, so I made a `.stowrc` file in my repo:
+#### Bhaktapur - Chhetchhet motorbike ride
 
-```bash
---target=$HOME
-```
+We(me and three friends) started the trip early, at 5 am from our hometown Bhaktapur in the Kathmandu valley. We
+were going to ride our motorbikes until the last point we could, then start the actual trek from there.
 
-Now Stow uses my home folder on its own, and you can track the file with Git too.
+Despite our effort to get 3 motorbikes, we managed only two. There were 2 persons on each
+motorbike along with our backpacks. I rode my younger brother's KTM Duke 200cc motorbike. Its powerful engine made riding on off-road trails a lot easier. But the smaller seat size didn't make for a
+comfortable ride for two persons with heavy backpacks.
 
-## Syncing with Git
+<figure className="image">
 
-Tracking dotfiles with Git has three big benefits:
+![Subodh on a KTM Duke motorbike with a backpack at Dolalghat](https://subodhdahal.com/images/tsho-rolpa/me-on-motorbike.jpg)
+  <figcaption>
 
-- **Change history**: see every tweak I've made over the years and roll back if needed.
-- **Sync across machines**: push changes to a private repo, then pull them onto any new machine.
-- **Works on Linux and macOS**: the same setup works on both, and every machine stays in sync.
+Me on the motorbike at Dolalghat where we had breakfast
 
-For instance, when I got a Mac at work, I cloned my dotfiles repo. After running `stow zsh`, my Zsh setup, aliases, and Oh My Posh theme were ready right away.
+</figcaption>
+</figure>
 
-## More use cases for Stow
+We stopped for lunch at Charikot before continuing our journey via Singati. Charikot is the headquarters of Dolakha district.
+We made a few stops along the way for rest, enjoying the beautiful views of the
+Himalayan mountain range and the waterfalls.
 
-I use Stow for dotfiles, but it can handle any files that need symlinks. Some examples:
+The Gaurishankar Conservation Area starts from
+Singati, where visitors must pay an entrance fee. Foreigners might also need extra documents and trekking permits.
 
-- Scripts live in a `bin` folder and link into `$PATH`.
-- Config folders for tools like Docker or Kubernetes are easy to manage.
-- You can test a new version of a config file without touching the current one.
+<figure className="image">
 
-## The benefits of this workflow
+![Snow-capped Mount Gaurishankar, one of the first views on the ride](https://subodhdahal.com/images/tsho-rolpa/himalayas-on-the-way.jpg)
+  <figcaption>
 
-This setup changed how I manage configs. Here's what it gives me:
+One of the first views of Mount Gaurishankar on our trip
 
-- My configs live in one place, so updates and backups are simple.
-- Stow and Git get a new machine ready in minutes.
-- After five years of tweaks, I can still look back at what I tried and what worked.
-- The same setup works on Linux and macOS.
+</figcaption>
+</figure>
 
-**GNU Stow** and **Git** make this whole setup possible. My configs stay in sync without much effort, and every machine ends up the same. Every tweak I make leaves a trail, so I can undo mistakes. That leaves me more time to build and solve problems.
+We rode the motorbikes for around 7.5 hours through the windy roads of Nepal's hilly regions. We reached
+Chhetchhet, where the hiking part of our journey would start.
+
+Shortly before reaching Chhetchhet, we came across a gorgeous waterfall flowing to the turquoise-blue water of the
+Tamakoshi river. A rainbow had also formed in front of it, making the view even more surreal.
+
+<figure className="image">
+
+![Waterfall just before reaching Chhetchhet](https://subodhdahal.com/images/tsho-rolpa/chhetchhet-waterfall2.jpg)
+  <figcaption>
+
+A gorgeous waterfall just before reaching Chhetchhet
+
+</figcaption>
+</figure>
+
+Most travelers reach Chhetchhet from Kathmandu by public transport, but we used motorbikes. You can
+take a bus from Kathmandu to Singati and then a jeep to reach Chhetchhet. Or you can reserve a
+jeep directly from Kathmandu to Chhetchhet.
+
+#### Chhetchhet to Surmuche trekking
+
+After leaving our motorbikes in a secure garage in Chhetchhet and resting for a while, we started the actual hike at
+3 pm. The trail ahead climbed a hill almost vertically to the top, and we felt a bit daunted, to say the
+least. But we braved the trail anyway, eager for the journey ahead. The first half-hour was especially hard
+since our body hadn't warmed up. Once we got the hang of it, the walk became easier.
+
+Three hours of walk and a few breaks later, we reached the village of Simigaun. Simigaun is the last village with grid
+electricity. Trekkers on the Tsho-Rolpa route typically stop there first to charge their electronics overnight. But this was not our planned stop for the day. We were going to
+continue further to the next village.
+
+<figure className="image">
+
+![A typical village house in Simigaun](https://subodhdahal.com/images/tsho-rolpa/simigaun.jpg)
+  <figcaption>
+
+A typical village house in Simigaun
+
+</figcaption>
+</figure>
+
+After walking for another 2.5 hours, most of it in the dark, we reached Surmuche. Only headlamps and flashlights lit our way. We felt exhausted and wanted a hearty meal to refill our energy
+at the hotel/teahouse there. There was only one teahouse at this destination and the next village was at least 3 hours
+away.
+
+We were fortunate that the teahouse in Surmuche was open. The owner
+had walked the same path from Surmuche and arrived just an hour ago. He felt tired and a bit
+unwell, so he could only offer a simple meal. Despite this, he showed us our accommodation for the night and made tasty noodle soup for us. The soup was
+more than enough, and we had snacks with us anyway, so we could have them if needed.
+With another day of a long walk ahead of us and the exhaustion from the day's bike ride and walk, we didn't waste much
+time going to bed.
+
+<figure className="image">
+
+![Mount Gaurishankar illuminated by the last rays of the day's sunlight](https://subodhdahal.com/images/tsho-rolpa/mount-gaurishankar-sunlight.jpg)
+  <figcaption>
+
+Mount Gaurishankar illuminated by the last rays of the day's sunlight
+
+</figcaption>
+</figure>
+
+### Day 2: Surmuche (सुर्मुचे) - Beding (बेदिङ्ग)
+
+- **Altitude**: from Surmuche (2,470m) to Beding (3,721m)
+- **Hiked time:** 12 hours
+
+We had an ambitious plan for our second-day hike. We woke up early at 6 am, and right after breakfast we started
+our hike. This was also an uphill hike, but the elevation change didn't feel as aggressive as the previous day, or
+maybe we got used to it.
+
+<figure className="image">
+
+![Morning views from our lodge in Surmuche](https://subodhdahal.com/images/tsho-rolpa/surmuche-morning-views.jpg)
+  <figcaption>
+
+Morning views from our lodge in Surmuche
+
+</figcaption>
+</figure>
+
+After hiking for about 2 hours, we reached the next stop of Kyalche. We felt fine, so we rested briefly and took some pictures before continuing.
+
+<figure className="image">
+
+![Me at the short stop in Kyalche](https://subodhdahal.com/images/tsho-rolpa/stop-at-kyalche.jpg)
+  <figcaption>
+
+Me during the stop in Kyalche
+
+</figcaption>
+</figure>
+
+We noticed that we stopped getting cellphone network reception at some point. It felt odd at first, but it kept us present. We soaked in the views during our rest time instead of scrolling social media.
+
+After two more hours of hiking with little to no elevation change, we reached Dongang (डोंगांग),
+a small settlement along the Tamakoshi river with turquoise
+blue water. The water's almost surreal color probably comes from minerals washed down from the mountains and glaciers
+not so far away.
+
+<figure className="image">
+
+![The settlement at Dongang](https://subodhdahal.com/images/tsho-rolpa/dongang.jpg)
+  <figcaption>
+
+The settlement at Dongang along the Tamakoshi river
+
+</figcaption>
+</figure>
+
+We were starving when we arrived. The
+next stop was hours away, so we stopped for Dal-Bhat (rice with lentils and vegetables on the side), the
+quintessential Nepali food. Sweat had drenched our clothes during the long sunny hike. We took the
+time to dry them and rested until the food was ready. After having a hearty meal, we rested a bit more as we were in
+no position to start walking immediately.
+
+We resumed the hike from Dongang at around 1 pm. The mountains felt closer now, which made us want to continue. We walked along the Tamakoshi river for a long time. We didn't complain, because the turquoise-blue water was something we couldn't get enough of. After a
+while, we began to notice that the vegetation was changing and starting to be more alpine-like.
+
+<figure className="image">
+
+![Views a short while after Dongang](https://subodhdahal.com/images/tsho-rolpa/after-donggang.jpg)
+  <figcaption>
+
+Views a short while after Dongang
+
+</figcaption>
+</figure>
+
+At around 6 pm, as dusk fell, we reached the village of Beding. We felt tired, and some of us felt the altitude. We were glad to see the village signpost where we could stay for the night. To our dismay, the lodges were at the far side of the village. Reaching them took 45 more minutes in utter darkness, with only our headlamps and flashlights to light the
+path.
+
+In the lodge in Beding, we had some Tibetan noodle soup alongside the fire in the kitchen to quickly warm us up
+before having our dinner of Daal-Bhat. The weather in Beding was freezing, and our rooms had no heating. We piled layers of blankets
+on top of us to stay warm at night.
+
+### Day 3: Beding (बेदिङ्ग) - Tsho-Rolpa (च्छोरोल्पा) - Na (ना) village
+
+- **Altitude**: from Beding (3,721m) through Tsho-Rolpa (4,550m) to Na village (4,180m)
+- **Hiked time:** 12 hours
+
+Beding, also known as the village of Everest climbers, was where we stayed on the second night of our trip. Since we
+had arrived in darkness, we got a pleasant surprise in the morning. Beautiful mountain views greeted us from our lodge.
+
+<figure className="image">
+
+![Morning views from our lodge at Beding](https://subodhdahal.com/images/tsho-rolpa/beding-morning-views.jpg)
+  <figcaption>
+
+Morning views from our lodge at Beding
+
+</figcaption>
+</figure>
+
+On the third day, we had a quick breakfast and started the hike at 7 am, soon after waking
+up. This was the first day we didn't have to gain much elevation during our hike. The path ran nearly
+straight with only minor elevation changes.
+
+Along the way, we could enjoy the views of the Rolwaling valley. In the local Sherpa language,
+Rolwaling means "valley carved by a plow," and the landscape did look the part.
+
+<figure className="image">
+
+![Views of the Rolwaling valley](https://subodhdahal.com/images/tsho-rolpa/rolwaling-valley-1.jpg)
+  <figcaption>
+
+Views of the Rolwaling valley
+
+</figcaption>
+</figure>
+
+<figure className="image">
+
+![Views of the Rolwaling valley](https://subodhdahal.com/images/tsho-rolpa/rolwaling-valley-2.jpg)
+  <figcaption>
+
+Views of the Rolwaling valley
+
+</figcaption>
+</figure>
+
+We reached the village of Na at 11 am. After resting for a while at a lodge there, we had our breakfast/lunch. We left our
+bags here, taking only the day's essentials. We would return to stay the night after reaching Tsho-Rolpa lake. Not having to carry the 12
+kilos I had been carrying the past days felt almost magical.
+
+Walking alongside the Tamakoshi river on almost flat terrain, we reached Tsho-Rolpa lake at 3:30 pm.
+The weather favored us that day, and we had clear views of the lake and the mountains. We had heard that fog often hides the lake after 11 am.
+
+Reaching our destination after the grueling walk and the pain we endured the
+past few days felt surreal. We lingered for a while over the lake and the mountains, with the Rolwaling
+valley behind us. We also met other travelers from Nepal at the lake.
+
+<figure className="image,w-full">
+
+![Views of the Tsho-Rolpa lake](https://subodhdahal.com/images/tsho-rolpa/lake-view.jpg)
+  <figcaption>
+
+Views of the Tsho-Rolpa lake
+
+</figcaption>
+</figure>
+
+Despite the captivating view, we couldn't stay there for long because we were losing light and had to return soon. The wind and chill
+also made it impossible to spend more time there. No hotels, lodges, or teahouses stand near
+Tsho-Rolpa lake. Everyone had to return unless they planned to camp.
+
+While making our descent from the lake to Na village, we saw the golden hour set in. Beautiful light filled the horizon ahead of us.
+
+<figure className="image">
+
+![Views of the Na village](https://subodhdahal.com/images/tsho-rolpa/na-village.jpg)
+  <figcaption>
+
+Views of the Na village
+
+</figcaption>
+</figure>
+
+Behind us, the last light
+of the day glowed on top of the mountains, an exquisite view of its own.
+
+<figure className="image">
+
+![Mountain peak illuminated by sunset](https://subodhdahal.com/images/tsho-rolpa/illuminated-mountain.jpg)
+  <figcaption>
+
+Mountain peak illuminated by sunset
+
+</figcaption>
+</figure>
+
+Like the previous days, we reached our destination in utter darkness and sat by the fire to warm ourselves up with some
+soup before having our dinner. We also reflected on our journey and on reaching the Tsho-Rolpa lake in 3 days. Except for seasoned trekkers, reaching the lake takes at least 4 days. We were proud of doing it in 3 days despite our limited experience
+at such a high altitude.
+
+Sleep didn't come easily that night. The high
+altitude and the cold kept us awake despite our exhaustion. We did manage to get to sleep after a while of trying.
+
+### Day 4: Na (ना) village - Simigaun (सिमिगाउँ)
+
+- **Altitude**: from Na village (4,180m) to Simigaun (2,000m)
+- **Hiked time:** 12 hours
+
+The hike back was almost entirely downhill. We planned to cover a long distance to make the next day easier.
+We started our hike at 7:30 from the Na village after having breakfast. We didn't make many stops along the way apart
+from a few snack breaks as going downhill was easier and we had to walk a long distance to cover during the day.
+
+We stopped at Dongang for lunch at 2 pm and resumed our journey soon after. As on the previous
+days, we reached our destination in the dark, arriving in Simigaun at 7 pm. Most of our electronics were low on
+battery, so we recharged them here where there was grid-connected electricity. The power banks we had brought and
+the spare batteries from the GoPro and the drone had lasted us till then.
+
+We hadn't properly celebrated reaching our destination the previous night, so we treated ourselves
+to Tongba, an alcoholic drink made from fermented millet. We mulled over our journey, life, and philosophy in general,
+as often happens over drinks.
+
+<figure className="image">
+
+![Tongba](https://subodhdahal.com/images/tsho-rolpa/tongba-vessel.jpg)
+  <figcaption>
+
+Tongba served in its regular vessel
+
+</figcaption>
+</figure>
+
+After a while, we had dinner and went to sleep. We planned to wake up
+early. We still had a few hours of hiking left before reaching Chhetchhet, where our motorbikes
+waited to take us home.
+
+### Day 5: Simigaun - Bhaktapur
+
+- **Altitude**: from Simigaun (2,000m) to Bhaktapur (1,400m)
+- **Hiked time:** 2 hours
+- **Motorbike ride time:** 7.5 hours
+
+We started our journey at 7 am without having breakfast. We reached Chhetchhet at 9 am. The last 30 minutes of our walk
+felt grueling because I was having knee problems walking downhill on the stone-paved stairs. The long downhill
+distance we covered the previous day probably caused it. But I was glad this
+happened towards the end of the trek and not earlier. Otherwise, it'd have been a nightmare and not a nice
+experience.
+
+Getting on my motorbike was an immense relief for my knee and lower body in general. Now my
+arms and hands felt the pain of riding a motorbike on off-road, uneven terrain. Braving the pain, we
+reached Dolakha Bazar, where we made a short stop to visit the Dolakha Bhimeswor temple.
+
+Our next stop was at nearby Charikot where we had the first meal of the day at noon. We also loaded our heavy bags onto
+a bus bound for Kathmandu, so we wouldn't carry them on our backs all the way home.
+
+Shortly after lunch, we resumed our journey towards Bhaktapur and reached there at 6 pm, just in
+time to retrieve our bags from the bus. Although the motorbike journey is typically much faster than the local bus,
+we arrived together. We had stopped for rest and food in
+Dolalghat.
+
+My whole body was in pain when I reached home after our grueling journey. I couldn't wait to rest
+and not do anything for the next few days.
+
+## Reflections on the journey
+
+The journey was one of the best experiences of my life. The majestic views and well-maintained
+trails of the Gaurishankar Conservation Area made the hike pleasant despite the long hours.
+Having good friends accompanying me on the trip made it even better.
+
+Despite the beautiful journey, we couldn't help but wonder about the people living below the lake. What would happen to them if it suddenly bursts? Due to global warming, the risk grows more severe every day. Some efforts to reduce the risk and set up an early warning
+system are underway, but they aren't enough. The risk remains unless the world acts to curb
+rising temperatures and climate change.
+
+### Things we could've done differently
+
+Since we squeezed a 7-9 day trip into five days, we had to walk up to 12 hours a day. It felt tough at
+times. The trip could've been a lot less stressful. But we did the best we could with our time constraints.
+
+If we had more time we could also have hiked to the Dudh Kunda, a beautiful lake a few hours away from Tsho-Rolpa lake.
+
+Bringing medicines for high altitude, just in case, would've been smart. We didn't need them in the end.
+
+### Lessons learned for life
+
+Towards the end of our daily 12-hour trek, I felt exhausted and couldn't continue.
+Stopping in the dark woods wasn't an option, so I forced myself on despite the weariness and pain.
+This made me realize that we are capable of achieving a lot and most of the time our mind is the
+one limiting us.
+
+Planning the journey and pre-determining the destination for each day made us accountable and determined.
+While on the hike,
+instead of getting daunted by the long path ahead, we focused on the next step.
+Having a bigger picture in mind and taking small steps to achieve it makes even the seemingly impossible possible.
+
+The insights I learned can help me overcome difficult challenges in other facets of life as well.
+
+<figure className="quote">
+
+> Why do you go away? So that you can come back. So that you can see the place you came from with new eyes and extra
+>     colors. And the people there see you differently, too. Coming back to where you started is not the same as never leaving.
+
+
+  <figcaption>
+
+— Terry Pratchett, <cite>
+
+A Hat Full of Sky
+
+</cite>
+</figcaption>
+</figure>
+
+I felt like a different person, for the better, after my journey.
+
+**Looking forward to more journeys to explore the world and discover my true self.**
+
+---
+
+<div className="article-description">
+
+#### Addendum
+
+<div className="text-sm">
+
+- All pictures by me (Subodh Dahal) except for the ones of me. I took them all with my One Plus 8 Pro smartphone and did some post-processing.<br />
+
+
+  - There were variations in the reported altitude of the places based on the sources<br />
+
+
+  - Follow me on [Instagram (@sub0dh_d)](https://www.instagram.com/sub0dh_d/) to view more pictures from this and other trips
+
+</div>
+</div>
 

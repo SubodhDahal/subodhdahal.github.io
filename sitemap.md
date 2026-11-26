@@ -26,11 +26,17 @@ All pages in Markdown format.
 - [Revisiting my Stream Deck for music control](https://subodhdahal.com/blog/stream-deck-youtube-music.md)
 - [Stop stashing half-finished work: use Git worktrees and Worktrunk](https://subodhdahal.com/blog/worktrees-with-worktrunk.md)
 
+## impressum
+- [Impressum · Subodh Dahal](https://subodhdahal.com/impressum.md)
+
 ## library
 - [Library: books I recommend · Subodh Dahal](https://subodhdahal.com/library.md)
 
 ## photography
 - [Photography · Subodh Dahal](https://subodhdahal.com/photography.md)
+
+## privacy
+- [Datenschutzerklärung / Privacy policy · Subodh Dahal](https://subodhdahal.com/privacy.md)
 
 ## tools
 - [Free browser tools · Subodh Dahal](https://subodhdahal.com/tools.md)
