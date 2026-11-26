@@ -90,6 +90,116 @@ meta:
 
 ---
 
+- **Page:** Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU
+- **Source:** https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu
+- **Description:** Handy's shortcut did nothing, and after I fixed that, nothing got typed. A Wayland shortcut, a microphone, the paste method and an autostart file caused it, and the GPU did not.
+
+I installed [Handy](https://github.com/cjpais/Handy), an offline speech-to-text app, on NixOS and pressed the shortcut. The tray icon stayed a hand and nothing happened. During onboarding the shortcut did fire and Handy copied the transcript to the clipboard, but the transcript never appeared in the onboarding textbox. After onboarding, nothing worked at all.
+
+For context, here's my setup: NixOS with kernel 6.18, COSMIC on Wayland, Handy 0.10.1 with the `parakeet-unified-en-0.6b` model, and an RTX 3060 Ti in a Thunderbolt enclosure (see [the eGPU hotplug post](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)).
+
+## Intel was 5x slower than the eGPU, but slow still works
+
+Initially I suspected the issue to be with my Intel iGPU. I thought it was so slow in converting speech to text that it ran into a timeout. So I benchmarked with `handy -f clip.wav --json --repeat 3`, which transcribes a file without the shortcut or microphone. My session had `VK_LOADER_DRIVERS_SELECT=*intel*` set, so Handy only saw the Intel iGPU. For a 2.3 second clip, Intel took about 930 ms and the RTX 3060 Ti about 173 ms. Live in the app on Intel, 7 seconds of audio took 16.5 seconds. That is slow, but slow still produces text, and I was getting none.
+
+## The real causes, in the order I hit them
+
+### The global shortcut only fires in XWayland windows
+
+Handy registers its shortcut through X11, which on Wayland only receives keys while an XWayland window has focus. That is why it worked during onboarding, when Handy's own window had focus.
+
+The fix is to let the compositor own the shortcut and call Handy's CLI. On COSMIC, custom shortcuts live in `~/.config/cosmic/com.system76.CosmicSettings.Shortcuts/v1/custom`. Bind a key to this `Spawn` action:
+
+```text
+Spawn("handy --toggle-transcription")
+```
+
+### The default microphone clipped at full scale
+
+With the shortcut working, I still got an empty result, and Handy's log said `0 voiced`. The default source was the laptop's built-in input. I recorded each source and measured it:
+
+```bash
+parecord --device=<source-name> test.wav
+ffmpeg -i test.wav -af volumedetect -f null - 2>&1 | grep mean_volume
+```
+
+The built-in input read a mean of about -0.6 dB, pinned at full scale. Switching the default to the Logitech BRIO fixed it:
+
+```bash
+pactl set-default-source <brio-source-name>
+```
+
+### Pasting can't reach Wayland-native windows
+
+Now Handy transcribed correctly but typed nothing, just like in onboarding, where the clipboard got the text and the textbox didn't. It pastes with Shift+Insert through XWayland, which can't reach Wayland-native windows (the same boundary as the shortcut).
+
+COSMIC accepts virtual-keyboard input, so `wtype` can type directly. I added `wtype` to the FHS environment that wraps Handy, then set these in `~/.local/share/com.pais.handy/settings_store.json`:
+
+```json
+{
+  "paste_method": "direct",
+  "typing_tool": "wtype"
+}
+```
+
+### Handy picked the wrong GPU
+
+Live dictation was still slow. Handy's log showed it bound to my internal GTX 1050 Ti, not the eGPU:
+
+```text
+ggml_vulkan: Found 3 Vulkan devices: Intel UHD 630, GTX 1050 Ti, RTX 3060 Ti
+bound backend 'Vulkan1', bound device 'NVIDIA GeForce GTX 1050 Ti'
+```
+
+With the accelerator on `auto`, ggml enumerates every Vulkan device itself and takes the first discrete GPU. The AppImage's Vulkan library honors `GGML_VK_VISIBLE_DEVICES`, so I wrapped the Nix package to set it only when the eGPU is plugged in:
+
+```bash
+if lspci -D -d 10de: -mm | grep -E 'VGA|3D' | grep -qv '0000:01:00.0'; then
+  export GGML_VK_VISIBLE_DEVICES=${GGML_VK_VISIBLE_DEVICES:-2}
+fi
+```
+
+The check matters, because index 2 doesn't exist without the eGPU. It is also hardcoded to ggml's device order. The log now shows `bound device 'NVIDIA GeForce RTX 3060 Ti'`.
+
+### Direct typing arrives one word at a time
+
+`paste_method: "direct"` types through `wtype`, so text trickles in. Set Paste Method to Clipboard (`ctrl_v`) in Handy's Advanced settings to paste it all at once.
+
+## Conclusion
+
+Handy now types into COSMIC windows from a compositor shortcut, hears the right microphone, and runs on the eGPU.
+
+I haven't timed live dictation on the eGPU, so the numbers above come from the file benchmark. In daily use it feels instant.
+
+---
+
+- **Page:** Free browser tools · Subodh Dahal
+- **Source:** https://subodhdahal.com/tools
+- **Description:** Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_ffcc277b95306b53.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_ffcc277b95306b53.png
+```
+
+# **Tools **
+
+*Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.*
+
+- [<h2>**Instagram carousel white border tool**</h2>
+
+  Put portrait and landscape photos on one white canvas with an even border so Instagram doesn't crop your carousel. Runs in your browser.](https://subodhdahal.com/tools/instagram-carousel/)
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/tools/#webpage","description":"Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.","name":"Free browser tools","url":"https://subodhdahal.com/tools/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/tools/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/tools/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/tools/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Free browser tools","item":"https://subodhdahal.com/tools/","position":2}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
 - **Page:** Impressum · Subodh Dahal
 - **Source:** https://subodhdahal.com/impressum
 - **Description:** Impressum (legal notice) for subodhdahal.com.
@@ -288,33 +398,6 @@ meta:
 
 ```json
 {"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/photography/#webpage","description":"Photos from Nepal and trips around Europe, hung as small previews on one wall.","name":"Photography","url":"https://subodhdahal.com/photography/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/photography/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/photography/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/photography/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Photography","item":"https://subodhdahal.com/photography/","position":2}]},{"@id":"https://subodhdahal.com/photography/#/schema/image-gallery/1","@type":"ImageGallery","description":"Photos from Nepal and trips around Europe, hung as small previews on one wall.","name":"Photography by Subodh Dahal","url":"https://subodhdahal.com/photography/","image":[{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/st-bartholomae-koenigssee-1200.webp","name":"St. Bartholomä","caption":"St. Bartholomä, Königssee, Germany · 2026","contentLocation":{"@type":"Place","name":"Königssee, Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":801},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/chitwan-snow-peaks-1200.webp","name":"Snow above the jungle","caption":"Snow above the jungle, Chitwan, Nepal · 2026","contentLocation":{"@type":"Place","name":"Chitwan, Nepal"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/trajans-column-1200.webp","name":"Trajan's Column","caption":"Trajan's Column, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":899},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/lichtenstein-castle-1200.webp","name":"Castle in the mist","caption":"Castle in the mist, Lichtenstein Castle, Germany · 2025","contentLocation":{"@type":"Place","name":"Lichtenstein Castle, Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":900,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/bee-on-scabious-1200.webp","name":"Visitor","caption":"Visitor, Germany · 2026","contentLocation":{"@type":"Place","name":"Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/tower-bridge-1200.webp","name":"Tower Bridge","caption":"Tower Bridge, London, England · 2026","contentLocation":{"@type":"Place","name":"London, England"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":802},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/chitwan-morning-light-1200.webp","name":"Morning light","caption":"Morning light, Chitwan, Nepal · 2026","contentLocation":{"@type":"Place","name":"Chitwan, Nepal"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/palma-cathedral-1200.webp","name":"La Seu","caption":"La Seu, Palma, Mallorca · 2025","contentLocation":{"@type":"Place","name":"Palma, Mallorca"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":900},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/autumn-pair-1200.webp","name":"Yellow and orange","caption":"Yellow and orange, Germany · 2026","contentLocation":{"@type":"Place","name":"Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/colosseum-1200.webp","name":"Colosseum","caption":"Colosseum, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":899},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/buckingham-palace-gates-1200.webp","name":"Palace gates","caption":"Palace gates, London, England · 2026","contentLocation":{"@type":"Place","name":"London, England"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":801,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/palma-palms-1200.webp","name":"Palms on the seafront","caption":"Palms on the seafront, Palma, Mallorca · 2025","contentLocation":{"@type":"Place","name":"Palma, Mallorca"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":900},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/chitwan-old-tree-1200.webp","name":"The old tree","caption":"The old tree, Chitwan, Nepal · 2026","contentLocation":{"@type":"Place","name":"Chitwan, Nepal"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":857,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/koenigssee-peaks-1200.webp","name":"Low cloud over the lake","caption":"Low cloud over the lake, Königssee, Germany · 2026","contentLocation":{"@type":"Place","name":"Königssee, Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":801},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/roman-emperor-and-pine-1200.webp","name":"Emperor and pine","caption":"Emperor and pine, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":801,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/basel-barfuesserplatz-1200.webp","name":"Old town, winter sun","caption":"Old town, winter sun, Basel, Switzerland · 2026","contentLocation":{"@type":"Place","name":"Basel, Switzerland"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":801},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/bare-tree-1200.webp","name":"Before winter","caption":"Before winter, Germany · 2026","contentLocation":{"@type":"Place","name":"Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/roman-forum-1200.webp","name":"The Forum","caption":"The Forum, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":900}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
-```
-
----
-
-- **Page:** Free browser tools · Subodh Dahal
-- **Source:** https://subodhdahal.com/tools
-- **Description:** Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.
-
-```yaml
-meta:
-  og:image: https://subodhdahal.com/_og/s/o_ffcc277b95306b53.png
-  og:image:height: "600"
-  og:image:type: image/png
-  og:image:width: "1200"
-  twitter:image: https://subodhdahal.com/_og/s/o_ffcc277b95306b53.png
-```
-
-# **Tools **
-
-*Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.*
-
-- [<h2>**Instagram carousel white border tool**</h2>
-
-  Put portrait and landscape photos on one white canvas with an even border so Instagram doesn't crop your carousel. Runs in your browser.](https://subodhdahal.com/tools/instagram-carousel/)
-
-```json
-{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/tools/#webpage","description":"Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.","name":"Free browser tools","url":"https://subodhdahal.com/tools/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/tools/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/tools/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/tools/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Free browser tools","item":"https://subodhdahal.com/tools/","position":2}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
 ```
 
 ---
@@ -545,86 +628,257 @@ meta:
 
 ---
 
-- **Page:** Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU
-- **Source:** https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu
-- **Description:** Handy's shortcut did nothing, and after I fixed that, nothing got typed. A Wayland shortcut, a microphone, the paste method and an autostart file caused it, and the GPU did not.
+- **Page:** A browser tool that puts every carousel photo on the same white mat, like a gallery print
+- **Source:** https://subodhdahal.com/blog/instagram-carousel-padding-tool
+- **Description:** Instagram can keep each photo's original aspect ratio in a carousel, but I prefer a white canvas with even borders. I built a page that pads every image onto one shared canvas, entirely in the browser.
 
-I installed [Handy](https://github.com/cjpais/Handy), an offline speech-to-text app, on NixOS and pressed the shortcut. The tray icon stayed a hand and nothing happened. During onboarding the shortcut did fire and Handy copied the transcript to the clipboard, but the transcript never appeared in the onboarding textbox. After onboarding, nothing worked at all.
+I use Instagram to post pictures from my hikes and trips, and nearly every one is nature or scenery. I like posting four or five at once as a carousel, but those photos come out in different aspect ratios. A wide mountain view sits next to a tall shot of a tree, and I wanted the whole set to look good when someone swipes through it in the app.
 
-For context, here's my setup: NixOS with kernel 6.18, COSMIC on Wayland, Handy 0.10.1 with the `parakeet-unified-en-0.6b` model, and an RTX 3060 Ti in a Thunderbolt enclosure (see [the eGPU hotplug post](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)).
+I wanted every slide on the same white canvas with a border around the photo, like a print in a gallery frame.
 
-## Intel was 5x slower than the eGPU, but slow still works
+So I made a page for it: an [Instagram carousel white border tool](https://subodhdahal.com/tools/instagram-carousel/). You drop images in, it pads each one onto a shared canvas, and you download the result. Everything runs in your browser, so your photos are never uploaded.
 
-Initially I suspected the issue to be with my Intel iGPU. I thought it was so slow in converting speech to text that it ran into a timeout. So I benchmarked with `handy -f clip.wav --json --repeat 3`, which transcribes a file without the shortcut or microphone. My session had `VK_LOADER_DRIVERS_SELECT=*intel*` set, so Handy only saw the Intel iGPU. For a 2.3 second clip, Intel took about 930 ms and the RTX 3060 Ti about 173 ms. Live in the app on Intel, 7 seconds of audio took 16.5 seconds. That is slow, but slow still produces text, and I was getting none.
+## Why I don't use Instagram's Mixed option
 
-## The real causes, in the order I hit them
+Instagram's phone app has a **Mixed** option in the crop menu that keeps each photo's own aspect ratio. The space around the wide photos isn't necessarily white, because Instagram fills it with a background that follows the app's theme. I can't control that background or how much space each photo gets, and I'd rather have white, which looks better to me.
 
-### The global shortcut only fires in XWayland windows
+## Padding one wide photo and three tall ones to 4:5
 
-Handy registers its shortcut through X11, which on Wayland only receives keys while an XWayland window has focus. That is why it worked during onboarding, when Handy's own window had focus.
+I tested it with four photos from a walk in November: one wide 4:3 photo and three 4:5 tall ones. The page picked a 4:5 canvas of 1440 × 1800 pixels. The wide photo got white space above and below, and the tall ones got a thin border.
 
-The fix is to let the compositor own the shortcut and call Handy's CLI. On COSMIC, custom shortcuts live in `~/.config/cosmic/com.system76.CosmicSettings.Shortcuts/v1/custom`. Bind a key to this `Spawn` action:
+<figure className="image">
+
+![Instagram Carousel Tools showing four autumn photos on identical white canvases, the first one wide, with white space above and below](https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png)
+  <figcaption>
+
+The first photo is the wide one. The slides share one canvas size.
+
+</figcaption>
+</figure>
+
+The padding slider goes from 0 to 20%. Around 10% it starts to look matted. The ratio defaults to Auto, which picks the best fit for the set, and I can force 4:5, 1:1 or 1.91:1 instead. A click on any slide opens a swipe preview, and the padding slider stays in reach.
+
+<figure className="image">
+
+![Preview viewer showing the wide autumn photo centered on a white 4:5 slide with navigation arrows and dots](https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-preview-viewer.png)
+  <figcaption>
+
+The preview with padding at 10%.
+
+</figcaption>
+</figure>
+
+I export at 1080 wide as JPEG, and the tool gives me a ZIP. It also supports 1440 wide and PNG. It stops at 20 slides, which is Instagram's cap, and warns when a file goes above 8 MB. My test photos came out between 670 KB and 1 MB each.
+
+## The layout math and canvas drawing behind the tool
+
+The tool is a Nuxt page with a few Vue components and two small TypeScript files. One does the layout math and the other draws onto a `<canvas>`.
+
+If you haven't used it, `<canvas>` is an HTML element that gives you a blank grid of pixels that JavaScript can paint into. I picked it because the browser already does the hard parts: it decodes the photos, resizes them with smoothing when you draw them, and encodes the result as JPEG or PNG through `canvas.toBlob`. So the tool doesn't need an image library or a server, which is why nothing gets uploaded. The previews on the page are canvases too, painted by the same code.
+
+```mermaidThe whole tool, from dropping photos in to downloading slides.
+flowchart TD
+  accTitle: How the carousel tool turns photos into slides
+  accDescr: Drop in photos, decode each photo and fix EXIF rotation, pick the aspect ratio with the least empty space, size one box that fits every photo and add padding, draw each photo centered on a white canvas, encode each slide as JPEG or PNG, then download one slide or a ZIP.
+  A["Drop in photos"] --> B["Decode each photo, fix EXIF rotation"]
+  B --> C["Pick the aspect ratio with the least empty space"]
+  C --> D["Size one box that fits every photo, add padding"]
+  D --> E["Draw each photo centered on a white canvas"]
+  E --> F["Encode each slide as JPEG or PNG"]
+  F --> G["Download one slide or a ZIP"]
+```
+
+Picking the aspect ratio and sizing the canvas is where most of the code goes, so here is a closer look at those steps:
+
+```mermaidInside the layout step: choosing the aspect ratio and sizing the canvas.
+flowchart TD
+  accTitle: How the tool picks the aspect ratio and sizes the canvas
+  accDescr: If a ratio is forced, the tool uses it. Otherwise it builds candidates from each photo's ratio, clamped to Instagram's range, plus both range limits, scores each candidate, and picks the highest score, breaking ties toward square. It then sizes the smallest box at that ratio that fits every photo, adds padding, rounds the canvas to whole pixels while ignoring floating-point error, and either keeps the original size capped at 1440 wide or scales to 1080 or 1440 and clamps the height.
+  A{"Ratio forced?"} -- yes --> R["Use that ratio"]
+  A -- no --> B["Candidates: each photo's ratio,<br/>clamped to 4:5 to 1.91:1, plus both limits"]
+  B --> C["Score each: sum of min(R/r, r/R)"]
+  C --> D["Highest score wins<br/>(tie goes to closest to square)"]
+  D --> R
+  R --> E["Box = smallest at ratio R<br/>that fits every photo natively"]
+  E --> F["Add padding on every side"]
+  F --> G["Round to whole pixels,<br/>ignoring float error"]
+  G --> H{"Export width?"}
+  H -- Original --> I["Keep size, cap at 1440 wide"]
+  H -- 1080 / 1440 --> J["Scale, clamp height to Instagram's range"]
+```
+
+### Scoring a few candidates instead of every ratio
+
+The point of the tool is that every slide shares one canvas, so Auto mode needs one ratio for the whole set. A photo with ratio `r` in a box with ratio `R` fills `min(R/r, r/R)` of it. The total over all photos can only peak at one of the photos' own ratios or at a range limit, so the tool only scores those.
+
+For my test set, 4:5 scores 3.6 (the three tall photos fill 100% of it, the wide one 60%) and 4:3 scores 2.8.
+
+Because every photo fits into the same box, photos with the same aspect ratio end up in the same spot, even if one is 6000 pixels wide and the other 2000.
+
+### The floating-point rounding guard
+
+Rounding was the fiddly part. The code rounds one side of the canvas up so it's never too small for the photos. But JavaScript can't store most fractions exactly, so a value that should be whole sometimes comes out a hair above it. For an 878 × 800 photo with no padding, the height works out to `878 / (878 / 800)`, which JavaScript computes as `800.0000000000001`. Rounding that up gives 801, so the canvas is one pixel taller than the photo and a half-pixel strip of white shows along the top and bottom edges.
+
+So the code subtracts `1e-9` before rounding up. That's far bigger than the floating-point error and far smaller than any real fraction of a pixel, so the height comes out as 800.
+
+### Drawing and exporting
+
+Decoding with `createImageBitmap(file, { imageOrientation: 'from-image' })` applies the EXIF rotation, so phone photos don't come out sideways. The thumbnails and the export use the same `drawSlide` function, so what you see in the grid matches the file you download. [JSZip](https://stuk.github.io/jszip/) builds the ZIP.
+
+The file size under each slide comes from encoding it for real, 350 ms after you stop moving the slider, so the 8 MB warning uses real sizes instead of estimates. The layout and drawing code is in [`app/lib/carousel/`](https://github.com/SubodhDahal/subodhdahal.github.io/tree/master/app/lib/carousel).
+
+## What's missing
+
+The padding is always white. I haven't decided whether other colors are worth adding. If something breaks on your photos or you want a feature, please [open an issue on GitHub](https://github.com/SubodhDahal/subodhdahal.github.io/issues/new).
+
+---
+
+- **Page:** Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot
+- **Source:** https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos
+- **Description:** My Razer Core X eGPU only worked if I timed it against boot. On NixOS the NVIDIA driver rejected the hotplugged card; PCI kernel parameters and a device node fixed it.
+
+My eGPU never got detected if I was already logged into NixOS. To get it working, I had to time switching on the Razer Core X against switching on the laptop. Sometimes that worked first try. Sometimes it took a few reboots and more timing games, and I never found a pattern.
+
+"Not detected" was the wrong diagnosis. The system saw the GPU, but the NVIDIA driver refused to use it, and after I fixed that, nothing in userspace could reach the card. The fixes were a kernel parameter and a device node. Now I can boot first and switch the enclosure on while logged in.
+
+## My setup
+
+- Laptop: ThinkPad X1 Extreme Gen 1 (20MGS0EQ00), BIOS 1.47, with an internal GTX 1050 Ti Mobile and the Intel iGPU
+- eGPU: Razer Core X Chroma (Thunderbolt 3) with an RTX 3060 Ti
+- A Dell Thunderbolt 4 dock is also on the Thunderbolt chain
+- NixOS 26.11 (unstable-ish), kernel 6.18.63, NVIDIA proprietary driver 580.196.07, COSMIC on Wayland
+
+The snippets are NixOS, but the ideas apply to any distro.
+
+## Checking each layer: the system saw the GPU
+
+When a hotplugged GPU doesn't appear, check four layers in order. I should have done this instead of rebooting repeatedly.
+
+```bash
+# 1. Did Thunderbolt authorize the enclosure?
+boltctl list
+
+# 2. Did the PCIe device enumerate? (mine was 09:00.0)
+lspci | grep -i nvidia
+
+# 3. Did the driver bind? Look for NVRM errors and bridge window failures
+journalctl -k | grep -E 'NVRM|bridge window'
+
+# 4. Does userspace have a device node, and does nvidia-smi see the card?
+ls /dev/nvidia*
+nvidia-smi -L
+```
+
+On my machine, steps 1 and 2 passed (bolt had authorized the enclosure, and `lspci` listed the GPU). Step 3 failed:
 
 ```text
-Spawn("handy --toggle-transcription")
+NVRM: This PCI I/O region assigned to your NVIDIA device is invalid
+nvidia 0000:09:00.0: probe with driver nvidia failed with error -1
+bridge window [mem size 0x100000000]: can't assign; no space
 ```
 
-### The default microphone clipped at full scale
+## What was blocking the card
 
-With the shortcut working, I still got an empty result, and Handy's log said `0 voiced`. The default source was the laptop's built-in input. I recorded each source and measured it:
+Checks 3 and 4 failed for different reasons. The first problem stops the driver from binding. The second hides the card from userspace once it does.
+
+### Bug 1: hpmemsize=4G left BAR0 unassigned
+
+My config had `pci=hpmemsize=4G,hpiosize=0` from an earlier attempt. I assumed a big GPU needs a big window.
+
+It doesn't, because `hpmemsize` is the wrong window. It reserves the 32-bit **non-prefetchable** memory window for each hotplug bridge, and the kernel can't fit 4 gigabytes into 32-bit address space. It logged `can't assign; no space` and moved on. That left the GPU's 16 MB BAR0, which lives in the same window, without an address: the device's `resource` file in sysfs was all zeros, even though the 64-bit prefetchable BARs (256 MB and 32 MB) were fine.
+
+The parameter for big GPU BARs is `hpmmioprefsize`, which sizes the 64-bit prefetchable window. Use a small `hpmemsize` and a large `hpmmioprefsize`:
+
+```nix
+boot.kernelParams = lib.mkBefore [
+  "pciehp.pciehp_force=1"
+  "pci=realloc"
+  "pcie_ports=native"
+
+  # hpmemsize: 32-bit non-prefetchable window, keep it small.
+  # hpmmioprefsize: 64-bit prefetchable window for the GPU's big BARs.
+  "pci=hpbussize=0x20,hpmemsize=64M,hpmmioprefsize=1G,hpiosize=0"
+  "iommu=pt"
+];
+boot.extraModprobeConfig = lib.mkAfter ''
+  options pciehp pciehp_force=1
+'';
+```
+
+To check the result without reading dmesg, list the regions for your device (replace `09:00.0` with yours). Every region should have an address, not `<unassigned>`.
 
 ```bash
-parecord --device=<source-name> test.wav
-ffmpeg -i test.wav -af volumedetect -f null - 2>&1 | grep mean_volume
+sudo lspci -vv -s 09:00.0 | grep Region
 ```
 
-The built-in input read a mean of about -0.6 dB, pinned at full scale. Switching the default to the Logitech BRIO fixed it:
+### Bug 2: nvidia-smi ignored the card because /dev/nvidia1 didn't exist
+
+After the window fix, the driver bound and `/proc/driver/nvidia/gpus/` listed the 3060 Ti. But `nvidia-smi` still showed only the internal 1050 Ti.
+
+This took me longest. `ls /dev/nvidia*` showed `nvidia0` and nothing for the second card. The kernel module doesn't create device nodes itself. On a normal distro `nvidia-modprobe` creates them on demand, but it isn't available in my NixOS setup, so a GPU that appears after boot never gets a node. To confirm, I made one by hand:
 
 ```bash
-pactl set-default-source <brio-source-name>
+sudo mknod -m 666 /dev/nvidia1 c 195 1
 ```
 
-### Pasting can't reach Wayland-native windows
+Both GPUs showed up in `nvidia-smi` immediately.
 
-Now Handy transcribed correctly but typed nothing, just like in onboarding, where the clipboard got the text and the textbox didn't. It pastes with Shift+Insert through XWayland, which can't reach Wayland-native windows (the same boundary as the shortcut).
+To automate that, a udev rule runs a script whenever the NVIDIA driver binds to a PCI device. The script reads each minor number from `/proc/driver/nvidia/gpus/*/information` and creates any missing node:
 
-COSMIC accepts virtual-keyboard input, so `wtype` can type directly. I added `wtype` to the FHS environment that wraps Handy, then set these in `~/.local/share/com.pais.handy/settings_store.json`:
-
-```json
-{
-  "paste_method": "direct",
-  "typing_tool": "wtype"
-}
+```nix
+services.udev.extraRules = let
+  nvidiaNodes = pkgs.writeShellScript "nvidia-create-nodes" ''
+    for info in /proc/driver/nvidia/gpus/*/information; do
+      [ -e "$info" ] || continue
+      minor=$(${pkgs.gawk}/bin/awk '/Device Minor/ {print $NF}' "$info")
+      [ -n "$minor" ] && [ ! -e "/dev/nvidia$minor" ] &&
+        ${pkgs.coreutils}/bin/mknod -m 666 "/dev/nvidia$minor" c 195 "$minor"
+    done
+    exit 0
+  '';
+in ''
+  ACTION=="bind", SUBSYSTEM=="pci", DRIVER=="nvidia", RUN+="${nvidiaNodes}"
+'';
 ```
 
-### Handy picked the wrong GPU
+After a rebuild and reboot, I cold booted, switched the enclosure on while logged in, and the eGPU appeared in `nvidia-smi`.
 
-Live dictation was still slow. Handy's log showed it bound to my internal GTX 1050 Ti, not the eGPU:
+One caveat: I had created `/dev/nvidia1` by hand earlier and don't know whether I deleted it before testing. So I can't say the rule alone creates the node. It should, but I haven't proven it from a clean `/dev`.
 
-```text
-ggml_vulkan: Found 3 Vulkan devices: Intel UHD 630, GTX 1050 Ti, RTX 3060 Ti
-bound backend 'Vulkan1', bound device 'NVIDIA GeForce GTX 1050 Ti'
-```
+## Running programs on the eGPU with a wrapper script
 
-With the accelerator on `auto`, ggml enumerates every Vulkan device itself and takes the first discrete GPU. The AppImage's Vulkan library honors `GGML_VK_VISIBLE_DEVICES`, so I wrapped the Nix package to set it only when the eGPU is plugged in:
+With both cards visible, I wanted to run one program on the eGPU. My `egpu-prefer` wrapper sets environment variables and then `exec`s the command.
+
+It failed at first. My session sets `VK_LOADER_DRIVERS_SELECT=*intel*` and `DRI_PRIME=pci-0000_00_02_0`, which together hide the NVIDIA Vulkan driver. I never found where those variables come from, and they aren't in my dotfiles.
+
+Native NVIDIA GLX offload also failed: it picked the 1050 Ti even when I gave it the eGPU's UUID. So the wrapper selects the card through Vulkan instead:
 
 ```bash
-if lspci -D -d 10de: -mm | grep -E 'VGA|3D' | grep -qv '0000:01:00.0'; then
-  export GGML_VK_VISIBLE_DEVICES=${GGML_VK_VISIBLE_DEVICES:-2}
-fi
+# Override the session's restrictions
+export VK_LOADER_DRIVERS_SELECT="*nvidia*"
+unset DRI_PRIME
+
+# Pick the 3060 Ti by PCI vendor:device ID
+export MESA_VK_DEVICE_SELECT="10de:2489"
+
+exec "$@"
 ```
 
-The check matters, because index 2 doesn't exist without the eGPU. It is also hardcoded to ggml's device order. The log now shows `bound device 'NVIDIA GeForce RTX 3060 Ti'`.
+This is a trimmed version. The full wrapper also sets `VK_DRIVER_FILES` to the NVIDIA ICD path and a few CUDA variables. To check the selection:
 
-### Direct typing arrives one word at a time
+```bash
+MESA_VK_DEVICE_SELECT=10de:2489 VK_LOADER_DRIVERS_SELECT='*nvidia*' vulkaninfo --summary | grep deviceName
+```
 
-`paste_method: "direct"` types through `wtype`, so text trickles in. Set Paste Method to Clipboard (`ctrl_v`) in Handy's Advanced settings to paste it all at once.
+Vulkan lists the RTX 3060 Ti first, CUDA sees both GPUs, and rendering through `egpu-prefer` works.
 
-## Conclusion
+## What I haven't tested
 
-Handy now types into COSMIC windows from a compositor shortcut, hears the right microphone, and runs on the eGPU.
+I'd rather list these than imply it all works:
 
-I haven't timed live dictation on the eGPU, so the numbers above come from the file benchmark. In daily use it feels instant.
+- **Games.** Rendering through the wrapper works, but I haven't run a game on the eGPU yet.
+- **The udev rule alone**, without a hand-made node already in `/dev`.
+- **Safe unplug.** I haven't tried hot-unplugging while the driver is in use. I'd stop everything using the card first.
 
 ---
 
@@ -851,265 +1105,11 @@ Then I'd add Worktrunk when the repeated environment setup starts getting irrita
 
 ---
 
-- **Page:** Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot
-- **Source:** https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos
-- **Description:** My Razer Core X eGPU only worked if I timed it against boot. On NixOS the NVIDIA driver rejected the hotplugged card; PCI kernel parameters and a device node fixed it.
-
-My eGPU never got detected if I was already logged into NixOS. To get it working, I had to time switching on the Razer Core X against switching on the laptop. Sometimes that worked first try. Sometimes it took a few reboots and more timing games, and I never found a pattern.
-
-"Not detected" was the wrong diagnosis. The system saw the GPU, but the NVIDIA driver refused to use it, and after I fixed that, nothing in userspace could reach the card. The fixes were a kernel parameter and a device node. Now I can boot first and switch the enclosure on while logged in.
-
-## My setup
-
-- Laptop: ThinkPad X1 Extreme Gen 1 (20MGS0EQ00), BIOS 1.47, with an internal GTX 1050 Ti Mobile and the Intel iGPU
-- eGPU: Razer Core X Chroma (Thunderbolt 3) with an RTX 3060 Ti
-- A Dell Thunderbolt 4 dock is also on the Thunderbolt chain
-- NixOS 26.11 (unstable-ish), kernel 6.18.63, NVIDIA proprietary driver 580.196.07, COSMIC on Wayland
-
-The snippets are NixOS, but the ideas apply to any distro.
-
-## Checking each layer: the system saw the GPU
-
-When a hotplugged GPU doesn't appear, check four layers in order. I should have done this instead of rebooting repeatedly.
-
-```bash
-# 1. Did Thunderbolt authorize the enclosure?
-boltctl list
-
-# 2. Did the PCIe device enumerate? (mine was 09:00.0)
-lspci | grep -i nvidia
-
-# 3. Did the driver bind? Look for NVRM errors and bridge window failures
-journalctl -k | grep -E 'NVRM|bridge window'
-
-# 4. Does userspace have a device node, and does nvidia-smi see the card?
-ls /dev/nvidia*
-nvidia-smi -L
-```
-
-On my machine, steps 1 and 2 passed (bolt had authorized the enclosure, and `lspci` listed the GPU). Step 3 failed:
-
-```text
-NVRM: This PCI I/O region assigned to your NVIDIA device is invalid
-nvidia 0000:09:00.0: probe with driver nvidia failed with error -1
-bridge window [mem size 0x100000000]: can't assign; no space
-```
-
-## What was blocking the card
-
-Checks 3 and 4 failed for different reasons. The first problem stops the driver from binding. The second hides the card from userspace once it does.
-
-### Bug 1: hpmemsize=4G left BAR0 unassigned
-
-My config had `pci=hpmemsize=4G,hpiosize=0` from an earlier attempt. I assumed a big GPU needs a big window.
-
-It doesn't, because `hpmemsize` is the wrong window. It reserves the 32-bit **non-prefetchable** memory window for each hotplug bridge, and the kernel can't fit 4 gigabytes into 32-bit address space. It logged `can't assign; no space` and moved on. That left the GPU's 16 MB BAR0, which lives in the same window, without an address: the device's `resource` file in sysfs was all zeros, even though the 64-bit prefetchable BARs (256 MB and 32 MB) were fine.
-
-The parameter for big GPU BARs is `hpmmioprefsize`, which sizes the 64-bit prefetchable window. Use a small `hpmemsize` and a large `hpmmioprefsize`:
-
-```nix
-boot.kernelParams = lib.mkBefore [
-  "pciehp.pciehp_force=1"
-  "pci=realloc"
-  "pcie_ports=native"
-
-  # hpmemsize: 32-bit non-prefetchable window, keep it small.
-  # hpmmioprefsize: 64-bit prefetchable window for the GPU's big BARs.
-  "pci=hpbussize=0x20,hpmemsize=64M,hpmmioprefsize=1G,hpiosize=0"
-  "iommu=pt"
-];
-boot.extraModprobeConfig = lib.mkAfter ''
-  options pciehp pciehp_force=1
-'';
-```
-
-To check the result without reading dmesg, list the regions for your device (replace `09:00.0` with yours). Every region should have an address, not `<unassigned>`.
-
-```bash
-sudo lspci -vv -s 09:00.0 | grep Region
-```
-
-### Bug 2: nvidia-smi ignored the card because /dev/nvidia1 didn't exist
-
-After the window fix, the driver bound and `/proc/driver/nvidia/gpus/` listed the 3060 Ti. But `nvidia-smi` still showed only the internal 1050 Ti.
-
-This took me longest. `ls /dev/nvidia*` showed `nvidia0` and nothing for the second card. The kernel module doesn't create device nodes itself. On a normal distro `nvidia-modprobe` creates them on demand, but it isn't available in my NixOS setup, so a GPU that appears after boot never gets a node. To confirm, I made one by hand:
-
-```bash
-sudo mknod -m 666 /dev/nvidia1 c 195 1
-```
-
-Both GPUs showed up in `nvidia-smi` immediately.
-
-To automate that, a udev rule runs a script whenever the NVIDIA driver binds to a PCI device. The script reads each minor number from `/proc/driver/nvidia/gpus/*/information` and creates any missing node:
-
-```nix
-services.udev.extraRules = let
-  nvidiaNodes = pkgs.writeShellScript "nvidia-create-nodes" ''
-    for info in /proc/driver/nvidia/gpus/*/information; do
-      [ -e "$info" ] || continue
-      minor=$(${pkgs.gawk}/bin/awk '/Device Minor/ {print $NF}' "$info")
-      [ -n "$minor" ] && [ ! -e "/dev/nvidia$minor" ] &&
-        ${pkgs.coreutils}/bin/mknod -m 666 "/dev/nvidia$minor" c 195 "$minor"
-    done
-    exit 0
-  '';
-in ''
-  ACTION=="bind", SUBSYSTEM=="pci", DRIVER=="nvidia", RUN+="${nvidiaNodes}"
-'';
-```
-
-After a rebuild and reboot, I cold booted, switched the enclosure on while logged in, and the eGPU appeared in `nvidia-smi`.
-
-One caveat: I had created `/dev/nvidia1` by hand earlier and don't know whether I deleted it before testing. So I can't say the rule alone creates the node. It should, but I haven't proven it from a clean `/dev`.
-
-## Running programs on the eGPU with a wrapper script
-
-With both cards visible, I wanted to run one program on the eGPU. My `egpu-prefer` wrapper sets environment variables and then `exec`s the command.
-
-It failed at first. My session sets `VK_LOADER_DRIVERS_SELECT=*intel*` and `DRI_PRIME=pci-0000_00_02_0`, which together hide the NVIDIA Vulkan driver. I never found where those variables come from, and they aren't in my dotfiles.
-
-Native NVIDIA GLX offload also failed: it picked the 1050 Ti even when I gave it the eGPU's UUID. So the wrapper selects the card through Vulkan instead:
-
-```bash
-# Override the session's restrictions
-export VK_LOADER_DRIVERS_SELECT="*nvidia*"
-unset DRI_PRIME
-
-# Pick the 3060 Ti by PCI vendor:device ID
-export MESA_VK_DEVICE_SELECT="10de:2489"
-
-exec "$@"
-```
-
-This is a trimmed version. The full wrapper also sets `VK_DRIVER_FILES` to the NVIDIA ICD path and a few CUDA variables. To check the selection:
-
-```bash
-MESA_VK_DEVICE_SELECT=10de:2489 VK_LOADER_DRIVERS_SELECT='*nvidia*' vulkaninfo --summary | grep deviceName
-```
-
-Vulkan lists the RTX 3060 Ti first, CUDA sees both GPUs, and rendering through `egpu-prefer` works.
-
-## What I haven't tested
-
-I'd rather list these than imply it all works:
-
-- **Games.** Rendering through the wrapper works, but I haven't run a game on the eGPU yet.
-- **The udev rule alone**, without a hand-made node already in `/dev`.
-- **Safe unplug.** I haven't tried hot-unplugging while the driver is in use. I'd stop everything using the card first.
-
----
-
-- **Page:** A browser tool that puts every carousel photo on the same white mat, like a gallery print
-- **Source:** https://subodhdahal.com/blog/instagram-carousel-padding-tool
-- **Description:** Instagram can keep each photo's original aspect ratio in a carousel, but I prefer a white canvas with even borders. I built a page that pads every image onto one shared canvas, entirely in the browser.
-
-I use Instagram to post pictures from my hikes and trips, and nearly every one is nature or scenery. I like posting four or five at once as a carousel, but those photos come out in different aspect ratios. A wide mountain view sits next to a tall shot of a tree, and I wanted the whole set to look good when someone swipes through it in the app.
-
-I wanted every slide on the same white canvas with a border around the photo, like a print in a gallery frame.
-
-So I made a page for it: an [Instagram carousel white border tool](https://subodhdahal.com/tools/instagram-carousel/). You drop images in, it pads each one onto a shared canvas, and you download the result. Everything runs in your browser, so your photos are never uploaded.
-
-## Why I don't use Instagram's Mixed option
-
-Instagram's phone app has a **Mixed** option in the crop menu that keeps each photo's own aspect ratio. The space around the wide photos isn't necessarily white, because Instagram fills it with a background that follows the app's theme. I can't control that background or how much space each photo gets, and I'd rather have white, which looks better to me.
-
-## Padding one wide photo and three tall ones to 4:5
-
-I tested it with four photos from a walk in November: one wide 4:3 photo and three 4:5 tall ones. The page picked a 4:5 canvas of 1440 × 1800 pixels. The wide photo got white space above and below, and the tall ones got a thin border.
-
-<figure className="image">
-
-![Instagram Carousel Tools showing four autumn photos on identical white canvases, the first one wide, with white space above and below](https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png)
-  <figcaption>
-
-The first photo is the wide one. The slides share one canvas size.
-
-</figcaption>
-</figure>
-
-The padding slider goes from 0 to 20%. Around 10% it starts to look matted. The ratio defaults to Auto, which picks the best fit for the set, and I can force 4:5, 1:1 or 1.91:1 instead. A click on any slide opens a swipe preview, and the padding slider stays in reach.
-
-<figure className="image">
-
-![Preview viewer showing the wide autumn photo centered on a white 4:5 slide with navigation arrows and dots](https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-preview-viewer.png)
-  <figcaption>
-
-The preview with padding at 10%.
-
-</figcaption>
-</figure>
-
-I export at 1080 wide as JPEG, and the tool gives me a ZIP. It also supports 1440 wide and PNG. It stops at 20 slides, which is Instagram's cap, and warns when a file goes above 8 MB. My test photos came out between 670 KB and 1 MB each.
-
-## The layout math and canvas drawing behind the tool
-
-The tool is a Nuxt page with a few Vue components and two small TypeScript files. One does the layout math and the other draws onto a `<canvas>`.
-
-If you haven't used it, `<canvas>` is an HTML element that gives you a blank grid of pixels that JavaScript can paint into. I picked it because the browser already does the hard parts: it decodes the photos, resizes them with smoothing when you draw them, and encodes the result as JPEG or PNG through `canvas.toBlob`. So the tool doesn't need an image library or a server, which is why nothing gets uploaded. The previews on the page are canvases too, painted by the same code.
-
-```mermaidThe whole tool, from dropping photos in to downloading slides.
-flowchart TD
-  accTitle: How the carousel tool turns photos into slides
-  accDescr: Drop in photos, decode each photo and fix EXIF rotation, pick the aspect ratio with the least empty space, size one box that fits every photo and add padding, draw each photo centered on a white canvas, encode each slide as JPEG or PNG, then download one slide or a ZIP.
-  A["Drop in photos"] --> B["Decode each photo, fix EXIF rotation"]
-  B --> C["Pick the aspect ratio with the least empty space"]
-  C --> D["Size one box that fits every photo, add padding"]
-  D --> E["Draw each photo centered on a white canvas"]
-  E --> F["Encode each slide as JPEG or PNG"]
-  F --> G["Download one slide or a ZIP"]
-```
-
-Picking the aspect ratio and sizing the canvas is where most of the code goes, so here is a closer look at those steps:
-
-```mermaidInside the layout step: choosing the aspect ratio and sizing the canvas.
-flowchart TD
-  accTitle: How the tool picks the aspect ratio and sizes the canvas
-  accDescr: If a ratio is forced, the tool uses it. Otherwise it builds candidates from each photo's ratio, clamped to Instagram's range, plus both range limits, scores each candidate, and picks the highest score, breaking ties toward square. It then sizes the smallest box at that ratio that fits every photo, adds padding, rounds the canvas to whole pixels while ignoring floating-point error, and either keeps the original size capped at 1440 wide or scales to 1080 or 1440 and clamps the height.
-  A{"Ratio forced?"} -- yes --> R["Use that ratio"]
-  A -- no --> B["Candidates: each photo's ratio,<br/>clamped to 4:5 to 1.91:1, plus both limits"]
-  B --> C["Score each: sum of min(R/r, r/R)"]
-  C --> D["Highest score wins<br/>(tie goes to closest to square)"]
-  D --> R
-  R --> E["Box = smallest at ratio R<br/>that fits every photo natively"]
-  E --> F["Add padding on every side"]
-  F --> G["Round to whole pixels,<br/>ignoring float error"]
-  G --> H{"Export width?"}
-  H -- Original --> I["Keep size, cap at 1440 wide"]
-  H -- 1080 / 1440 --> J["Scale, clamp height to Instagram's range"]
-```
-
-### Scoring a few candidates instead of every ratio
-
-The point of the tool is that every slide shares one canvas, so Auto mode needs one ratio for the whole set. A photo with ratio `r` in a box with ratio `R` fills `min(R/r, r/R)` of it. The total over all photos can only peak at one of the photos' own ratios or at a range limit, so the tool only scores those.
-
-For my test set, 4:5 scores 3.6 (the three tall photos fill 100% of it, the wide one 60%) and 4:3 scores 2.8.
-
-Because every photo fits into the same box, photos with the same aspect ratio end up in the same spot, even if one is 6000 pixels wide and the other 2000.
-
-### The floating-point rounding guard
-
-Rounding was the fiddly part. The code rounds one side of the canvas up so it's never too small for the photos. But JavaScript can't store most fractions exactly, so a value that should be whole sometimes comes out a hair above it. For an 878 × 800 photo with no padding, the height works out to `878 / (878 / 800)`, which JavaScript computes as `800.0000000000001`. Rounding that up gives 801, so the canvas is one pixel taller than the photo and a half-pixel strip of white shows along the top and bottom edges.
-
-So the code subtracts `1e-9` before rounding up. That's far bigger than the floating-point error and far smaller than any real fraction of a pixel, so the height comes out as 800.
-
-### Drawing and exporting
-
-Decoding with `createImageBitmap(file, { imageOrientation: 'from-image' })` applies the EXIF rotation, so phone photos don't come out sideways. The thumbnails and the export use the same `drawSlide` function, so what you see in the grid matches the file you download. [JSZip](https://stuk.github.io/jszip/) builds the ZIP.
-
-The file size under each slide comes from encoding it for real, 350 ms after you stop moving the slider, so the 8 MB warning uses real sizes instead of estimates. The layout and drawing code is in [`app/lib/carousel/`](https://github.com/SubodhDahal/subodhdahal.github.io/tree/master/app/lib/carousel).
-
-## What's missing
-
-The padding is always white. I haven't decided whether other colors are worth adding. If something breaks on your photos or you want a feature, please [open an issue on GitHub](https://github.com/SubodhDahal/subodhdahal.github.io/issues/new).
-
----
-
-- **Page:** Hiking, travel and photography
-- **Source:** https://subodhdahal.com/topics/hiking-photography
-- **Description:** Trail reports from Nepal including the Tsho-Rolpa glacial lake trek, travel photos from across Europe, and tools I built for sharing photos on Instagram.
-
-I take my camera on hikes and trips, from the Tsho-Rolpa glacial lake in Nepal to cities and national parks across Europe. These posts are the trail reports, yearly look-backs and photo essays, plus the tools I built to post those photos the way I want. For the photos on their own, see the [photography wall](https://subodhdahal.com/photography/).
+- **Page:** NixOS on the desktop
+- **Source:** https://subodhdahal.com/topics/nixos
+- **Description:** Fixes from running NixOS with COSMIC on Wayland on a ThinkPad, including a Razer Core X eGPU with an NVIDIA RTX card and Handy speech-to-text.
+
+My laptop runs NixOS with the COSMIC desktop on Wayland, connected to a Razer Core X eGPU. When something on that setup doesn't work, I write down how I tracked it down, layer by layer, with the NixOS config that fixed it. The snippets are NixOS, but the debugging steps apply to most Linux distributions.
 
 ---
 
@@ -1273,6 +1273,22 @@ I'd rather keep my code, photos and reading on hardware I own than on servers wh
 
 ---
 
+- **Page:** Command line and developer workflow
+- **Source:** https://subodhdahal.com/topics/command-line
+- **Description:** Git aliases, fzf, Git worktrees with Worktrunk, jq, GNU Stow dotfiles and other command-line habits that make my daily development work faster.
+
+Most of my work happens in a terminal, so small improvements there add up. These posts collect the Git habits, shell functions and tools I use every day. They include fzf-powered pickers, worktrees for parallel branches, a jq function for exploring JSON APIs, and dotfiles synced with GNU Stow.
+
+---
+
+- **Page:** Hiking, travel and photography
+- **Source:** https://subodhdahal.com/topics/hiking-photography
+- **Description:** Trail reports from Nepal including the Tsho-Rolpa glacial lake trek, travel photos from across Europe, and tools I built for sharing photos on Instagram.
+
+I take my camera on hikes and trips, from the Tsho-Rolpa glacial lake in Nepal to cities and national parks across Europe. These posts are the trail reports, yearly look-backs and photo essays, plus the tools I built to post those photos the way I want. For the photos on their own, see the [photography wall](https://subodhdahal.com/photography/).
+
+---
+
 - **Page:** Self-Hosting my Git forge with Forgejo
 - **Source:** https://subodhdahal.com/blog/self-hosting-my-git-forge
 - **Description:** Why I moved away from GitHub and chose a lightweight, community-driven alternative
@@ -1392,14 +1408,6 @@ I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my
 
 ---
 
-- **Page:** Command line and developer workflow
-- **Source:** https://subodhdahal.com/topics/command-line
-- **Description:** Git aliases, fzf, Git worktrees with Worktrunk, jq, GNU Stow dotfiles and other command-line habits that make my daily development work faster.
-
-Most of my work happens in a terminal, so small improvements there add up. These posts collect the Git habits, shell functions and tools I use every day. They include fzf-powered pickers, worktrees for parallel branches, a jq function for exploring JSON APIs, and dotfiles synced with GNU Stow.
-
----
-
 - **Page:** Fixing my broken Docker Immich+Traefik setup
 - **Source:** https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup
 - **Description:** Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.
@@ -1480,14 +1488,6 @@ The `traefik.docker.network=proxy` label tells Traefik which network to use for 
 Compose creates the internal network fresh, so DNS always works. When Immich sends jobs to Redis or reads from Postgres, names resolve fast. Traffic from Traefik arrives on the proxy network instead. Both networks reach the same containers through different paths, so the timing issues vanish.
 
 Now photo indexing and all the other jobs work as intended.
-
----
-
-- **Page:** NixOS on the desktop
-- **Source:** https://subodhdahal.com/topics/nixos
-- **Description:** Fixes from running NixOS with COSMIC on Wayland on a ThinkPad, including a Razer Core X eGPU with an NVIDIA RTX card and Handy speech-to-text.
-
-My laptop runs NixOS with the COSMIC desktop on Wayland, connected to a Razer Core X eGPU. When something on that setup doesn't work, I write down how I tracked it down, layer by layer, with the NixOS config that fixed it. The snippets are NixOS, but the debugging steps apply to most Linux distributions.
 
 ---
 
@@ -1976,6 +1976,263 @@ This music control workflow is step one in an ongoing automation experiment. I'm
 
 ---
 
+- **Page:** fzf + fabric: Smart selection for LLM patterns and models
+- **Source:** https://subodhdahal.com/blog/ai-pattern-selection-in-fabric
+- **Description:** Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.
+
+I have been using [fabric](https://github.com/danielmiessler/fabric) to run LLM prompts on text. It's like having a Swiss Army knife of LLM tools. You feed it text, and it helps analyze it in different ways. With 31k+ GitHub stars, lots of people find it useful.
+
+But here's the thing: there were too many patterns available. I kept staring at my screen trying to remember how they are named. Plus, I wanted to have the flexibility to choose different LLM models without having to memorize their names.
+
+## The solution
+
+I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool I also use for [checking out Git branches](https://subodhdahal.com/blog/git-and-command-line-next-level-workflow/), to create searchable menus for fabric. Instead of memorizing commands, I just:
+
+1. Send text to fabric
+2. Type any parts of what I want. fzf is smart about matching:
+
+  - `xwis` finds "extract_wisdom"
+  - `sumtext` matches "summarize_text"
+3. Press enter to run
+
+The magic happens with two shell commands (add to `.zshrc` or `.bashrc`):
+
+- `fp` - Pick a pattern with fuzzy search
+- `fps` - Same smart matching, but for both model and pattern
+
+Here's the code that makes it work:
+
+```bash
+# Fabric CLI Helper Functions
+# Interactive selection of models and patterns for fabric AI tool
+# Requirements: fabric(https://github.com/danielmiessler/fabric), fzf(https://github.com/junegunn/fzf)
+#
+# Usage Examples:
+#   Model + Pattern Selection (fps alias):
+#     fps -u <url>                    # Process URL content
+#     pbpaste | fps                   # Process clipboard content
+#     yt <youtube_url> | fps          # Process YouTube transcript
+#     echo "text" | fps               # Process any text content
+#
+#   Pattern Selection Only (fp alias):
+#     fp -u <url>                     # Use default model with URL
+#     pbpaste | fp                    # Use default model with clipboard
+#     yt <youtube_url> | fp           # Use default model with transcript
+#     cat file.txt | fp               # Process any text content
+
+# Handle stdin input for fabric functions
+_fabric_handle_input() {
+  if [ -t 0 ]; then
+    return 1  # No stdin
+  else
+    cat       # Return stdin content
+    return 0
+  fi
+}
+
+# Select a pattern using fzf
+_fabric_select_pattern() {
+  fabric -l | fzf --height 40% --border --ansi --prompt="Select pattern: "
+}
+
+# Select and run fabric with a pattern
+# Usage: fabric_with_pattern [additional_args...]
+fabric_with_pattern() {
+  local input=""
+  local has_stdin=0
+
+  if input=$(_fabric_handle_input); then
+    has_stdin=1
+  fi
+
+  local pattern=$(_fabric_select_pattern)
+  [ -z "$pattern" ] && { echo "No pattern selected."; return 1; }
+
+  if [ $has_stdin -eq 1 ]; then
+    echo "$input" | fabric --pattern "$pattern" "$@"
+  else
+    fabric --pattern "$pattern" "$@"
+  fi
+}
+
+# Select and run fabric with both model and pattern
+# Usage: fabric_with_model_pattern [additional_args...]
+fabric_with_model_pattern() {
+  local input=""
+  local has_stdin=0
+
+  if input=$(_fabric_handle_input); then
+    has_stdin=1
+  fi
+
+  local model_line=$(fabric -L | fzf --height 40% --border --ansi --prompt="Select model: ")
+  [ -z "$model_line" ] && { echo "No model selected."; return 1; }
+
+  local model=$(echo "$model_line" | sed -E 's/.*[[:space:]]([^[:space:]]+)$/\1/')
+
+  local pattern=$(_fabric_select_pattern)
+  [ -z "$pattern" ] && { echo "No pattern selected."; return 1; }
+
+  if [ $has_stdin -eq 1 ]; then
+    echo "$input" | fabric --model "$model" --pattern "$pattern" "$@"
+  else
+    fabric --model "$model" --pattern "$pattern" "$@"
+  fi
+}
+
+# Get YouTube transcript with fabric
+# Usage: yt <video_link>
+yt() {
+  local video_link="$1"
+  fabric -y "$video_link" --transcript
+}
+
+# Aliases for convenience
+alias fp='fabric_with_pattern'
+alias fps='fabric_with_model_pattern'
+```
+
+Also available on [GitHub Gist](https://gist.github.com/SubodhDahal/38436348aedf0596e48d17ffcffa7d51).
+
+## Using It Day-to-Day
+
+It's as simple as:
+
+- `fp -u example.com` to analyze a website
+- `pbpaste | fp` to analyze clipboard content
+- `cat file.txt | fps` to analyze a file with a specific model
+
+The menu pops up, you pick what you want, and fabric does the rest.
+
+## Making It Work for You
+
+You know how your phone probably has dozens of apps, but you only use a handful regularly? It's the same with fabric patterns. While having options is great, too many choices can slow you down.
+
+I cleaned up my pattern collection by:
+
+- Keeping only the patterns I actually use
+- Tweaking the remaining ones to work exactly how I want
+
+Since patterns are just markdown files, changing them is as easy as editing a text file.
+
+## Why This Matters
+
+I'm not reinventing the wheel here. These are just small tweaks that make fabric feel more natural to use. But sometimes that's all you need: tools that work the way your brain works.
+
+Before, I'd hesitate to use fabric because remembering all the commands felt like work. Now? It's just copy, paste, pick, and done. If you use fabric, give these helpers a try.
+
+---
+
+- **Page:** Effortless configuration syncing with GNU Stow and Git: a software engineer's workflow
+- **Source:** https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow
+- **Description:** Use GNU Stow and Git to keep config files in sync across Linux and macOS. Keep them in one repo with full history, and set up new machines in minutes.
+
+## Introduction
+
+As a software engineer, I use my terminal, shell, and text editor every day. Each tool has its own config files, or **dotfiles**. Over time, I've tuned these files to fit how I work. Keeping them in sync across machines takes time and is easy to break. My laptop, home server, and work Mac all have their own setups. That's where **GNU Stow** and **Git** come in. They keep my configs neat and in sync. I've relied on this setup for over five years.
+
+## What are dotfiles?
+
+Dotfiles are config files that start with a dot, such as `.zshrc`, `.vimrc`, and `.gitconfig`. They control how your tools look and act. These files sit all over your home folder, so sorting them by hand is a chore. That becomes tedious when you use more than one machine. Putting them in one repo is the key to easy config handling.
+
+## The tools: GNU Stow and Git
+
+**GNU Stow** is a symlink manager. It takes dotfiles from one repo and links them into the folders you pick. Pair it with **Git**, and every change is easy to track and undo. Your setup then syncs across machines.
+
+## Setting up my dotfiles
+
+### 1. Centralized Repository
+
+I keep my dotfiles in a private Git repo. The repo mirrors the layout of my home folder, so Stow can link files where they belong. Here's how I lay out configs for Zsh, Git, Tmux, and Vim (shortened for this post):
+
+```bash
+dotfiles
+├── git
+│   └── .gitconfig
+├── tmux
+│   ├── .tmux.conf
+├── zsh
+│   ├── .config
+│   │   ├── aliasrc.sh
+│   │   ├── custom_fns.sh
+│   │   ├── env.zsh
+│   │   ├── oh-my-posh
+│   │   │   └── info.toml
+│   └── .zshrc
+└── vim
+  └── .vimrc
+```
+
+### 2. Stowing and restowing configurations
+
+A big plus of GNU Stow is that you can pick which configs go on which machine. My repo holds a folder for each tool, such as Zsh, Tmux, and Vim. When I set up a machine, I choose the folders I want and leave the rest.
+
+For example, to apply my Zsh setup I run the `stow` command like this:
+
+```bash
+stow --target=/home/username zsh
+```
+
+This links my Zsh files into my home folder, including `.zshrc` and everything in `.config`.
+When I add files or change a config, I restow the folder to apply the update:
+
+```bash
+stow -R zsh
+```
+
+This clears the old links and makes new ones, so nothing is stale.
+
+### 3. Uninstalling configurations
+
+To remove a config, such as Zsh, I run:
+
+```bash
+stow -D zsh
+```
+
+This deletes every Zsh link in my home folder but leaves the files in my repo alone. I can put them back anytime.
+
+## Pro-tip: Simplify with `.stowrc`
+
+By default, Stow links files into your current folder unless you set a target with `--target`. I got tired of typing `--target=$HOME` every time, so I made a `.stowrc` file in my repo:
+
+```bash
+--target=$HOME
+```
+
+Now Stow uses my home folder on its own, and you can track the file with Git too.
+
+## Syncing with Git
+
+Tracking dotfiles with Git has three big benefits:
+
+- **Change history**: see every tweak I've made over the years and roll back if needed.
+- **Sync across machines**: push changes to a private repo, then pull them onto any new machine.
+- **Works on Linux and macOS**: the same setup works on both, and every machine stays in sync.
+
+For instance, when I got a Mac at work, I cloned my dotfiles repo. After running `stow zsh`, my Zsh setup, aliases, and Oh My Posh theme were ready right away.
+
+## More use cases for Stow
+
+I use Stow for dotfiles, but it can handle any files that need symlinks. Some examples:
+
+- Scripts live in a `bin` folder and link into `$PATH`.
+- Config folders for tools like Docker or Kubernetes are easy to manage.
+- You can test a new version of a config file without touching the current one.
+
+## The benefits of this workflow
+
+This setup changed how I manage configs. Here's what it gives me:
+
+- My configs live in one place, so updates and backups are simple.
+- Stow and Git get a new machine ready in minutes.
+- After five years of tweaks, I can still look back at what I tried and what worked.
+- The same setup works on Linux and macOS.
+
+**GNU Stow** and **Git** make this whole setup possible. My configs stay in sync without much effort, and every machine ends up the same. Every tweak I make leaves a trail, so I can undo mistakes. That leaves me more time to build and solve problems.
+
+---
+
 - **Page:** My 2023 travels: A visual journey
 - **Source:** https://subodhdahal.com/blog/2023-travels-visual-journey
 - **Description:** Looking back at the best pictures from my travel adventures in 2023
@@ -2188,116 +2445,6 @@ Fin
 
 ---
 
-- **Page:** Effortless configuration syncing with GNU Stow and Git: a software engineer's workflow
-- **Source:** https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow
-- **Description:** Use GNU Stow and Git to keep config files in sync across Linux and macOS. Keep them in one repo with full history, and set up new machines in minutes.
-
-## Introduction
-
-As a software engineer, I use my terminal, shell, and text editor every day. Each tool has its own config files, or **dotfiles**. Over time, I've tuned these files to fit how I work. Keeping them in sync across machines takes time and is easy to break. My laptop, home server, and work Mac all have their own setups. That's where **GNU Stow** and **Git** come in. They keep my configs neat and in sync. I've relied on this setup for over five years.
-
-## What are dotfiles?
-
-Dotfiles are config files that start with a dot, such as `.zshrc`, `.vimrc`, and `.gitconfig`. They control how your tools look and act. These files sit all over your home folder, so sorting them by hand is a chore. That becomes tedious when you use more than one machine. Putting them in one repo is the key to easy config handling.
-
-## The tools: GNU Stow and Git
-
-**GNU Stow** is a symlink manager. It takes dotfiles from one repo and links them into the folders you pick. Pair it with **Git**, and every change is easy to track and undo. Your setup then syncs across machines.
-
-## Setting up my dotfiles
-
-### 1. Centralized Repository
-
-I keep my dotfiles in a private Git repo. The repo mirrors the layout of my home folder, so Stow can link files where they belong. Here's how I lay out configs for Zsh, Git, Tmux, and Vim (shortened for this post):
-
-```bash
-dotfiles
-├── git
-│   └── .gitconfig
-├── tmux
-│   ├── .tmux.conf
-├── zsh
-│   ├── .config
-│   │   ├── aliasrc.sh
-│   │   ├── custom_fns.sh
-│   │   ├── env.zsh
-│   │   ├── oh-my-posh
-│   │   │   └── info.toml
-│   └── .zshrc
-└── vim
-  └── .vimrc
-```
-
-### 2. Stowing and restowing configurations
-
-A big plus of GNU Stow is that you can pick which configs go on which machine. My repo holds a folder for each tool, such as Zsh, Tmux, and Vim. When I set up a machine, I choose the folders I want and leave the rest.
-
-For example, to apply my Zsh setup I run the `stow` command like this:
-
-```bash
-stow --target=/home/username zsh
-```
-
-This links my Zsh files into my home folder, including `.zshrc` and everything in `.config`.
-When I add files or change a config, I restow the folder to apply the update:
-
-```bash
-stow -R zsh
-```
-
-This clears the old links and makes new ones, so nothing is stale.
-
-### 3. Uninstalling configurations
-
-To remove a config, such as Zsh, I run:
-
-```bash
-stow -D zsh
-```
-
-This deletes every Zsh link in my home folder but leaves the files in my repo alone. I can put them back anytime.
-
-## Pro-tip: Simplify with `.stowrc`
-
-By default, Stow links files into your current folder unless you set a target with `--target`. I got tired of typing `--target=$HOME` every time, so I made a `.stowrc` file in my repo:
-
-```bash
---target=$HOME
-```
-
-Now Stow uses my home folder on its own, and you can track the file with Git too.
-
-## Syncing with Git
-
-Tracking dotfiles with Git has three big benefits:
-
-- **Change history**: see every tweak I've made over the years and roll back if needed.
-- **Sync across machines**: push changes to a private repo, then pull them onto any new machine.
-- **Works on Linux and macOS**: the same setup works on both, and every machine stays in sync.
-
-For instance, when I got a Mac at work, I cloned my dotfiles repo. After running `stow zsh`, my Zsh setup, aliases, and Oh My Posh theme were ready right away.
-
-## More use cases for Stow
-
-I use Stow for dotfiles, but it can handle any files that need symlinks. Some examples:
-
-- Scripts live in a `bin` folder and link into `$PATH`.
-- Config folders for tools like Docker or Kubernetes are easy to manage.
-- You can test a new version of a config file without touching the current one.
-
-## The benefits of this workflow
-
-This setup changed how I manage configs. Here's what it gives me:
-
-- My configs live in one place, so updates and backups are simple.
-- Stow and Git get a new machine ready in minutes.
-- After five years of tweaks, I can still look back at what I tried and what worked.
-- The same setup works on Linux and macOS.
-
-**GNU Stow** and **Git** make this whole setup possible. My configs stay in sync without much effort, and every machine ends up the same. Every tweak I make leaves a trail, so I can undo mistakes. That leaves me more time to build and solve problems.
-
----
-
 - **Page:** Re-living memories through proper media organization
 - **Source:** https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization
 - **Description:** Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.
@@ -2456,153 +2603,6 @@ I am still experimenting with the workflow and tools that I use to manage my dig
 
 ---
 
-- **Page:** fzf + fabric: Smart selection for LLM patterns and models
-- **Source:** https://subodhdahal.com/blog/ai-pattern-selection-in-fabric
-- **Description:** Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.
-
-I have been using [fabric](https://github.com/danielmiessler/fabric) to run LLM prompts on text. It's like having a Swiss Army knife of LLM tools. You feed it text, and it helps analyze it in different ways. With 31k+ GitHub stars, lots of people find it useful.
-
-But here's the thing: there were too many patterns available. I kept staring at my screen trying to remember how they are named. Plus, I wanted to have the flexibility to choose different LLM models without having to memorize their names.
-
-## The solution
-
-I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool I also use for [checking out Git branches](https://subodhdahal.com/blog/git-and-command-line-next-level-workflow/), to create searchable menus for fabric. Instead of memorizing commands, I just:
-
-1. Send text to fabric
-2. Type any parts of what I want. fzf is smart about matching:
-
-  - `xwis` finds "extract_wisdom"
-  - `sumtext` matches "summarize_text"
-3. Press enter to run
-
-The magic happens with two shell commands (add to `.zshrc` or `.bashrc`):
-
-- `fp` - Pick a pattern with fuzzy search
-- `fps` - Same smart matching, but for both model and pattern
-
-Here's the code that makes it work:
-
-```bash
-# Fabric CLI Helper Functions
-# Interactive selection of models and patterns for fabric AI tool
-# Requirements: fabric(https://github.com/danielmiessler/fabric), fzf(https://github.com/junegunn/fzf)
-#
-# Usage Examples:
-#   Model + Pattern Selection (fps alias):
-#     fps -u <url>                    # Process URL content
-#     pbpaste | fps                   # Process clipboard content
-#     yt <youtube_url> | fps          # Process YouTube transcript
-#     echo "text" | fps               # Process any text content
-#
-#   Pattern Selection Only (fp alias):
-#     fp -u <url>                     # Use default model with URL
-#     pbpaste | fp                    # Use default model with clipboard
-#     yt <youtube_url> | fp           # Use default model with transcript
-#     cat file.txt | fp               # Process any text content
-
-# Handle stdin input for fabric functions
-_fabric_handle_input() {
-  if [ -t 0 ]; then
-    return 1  # No stdin
-  else
-    cat       # Return stdin content
-    return 0
-  fi
-}
-
-# Select a pattern using fzf
-_fabric_select_pattern() {
-  fabric -l | fzf --height 40% --border --ansi --prompt="Select pattern: "
-}
-
-# Select and run fabric with a pattern
-# Usage: fabric_with_pattern [additional_args...]
-fabric_with_pattern() {
-  local input=""
-  local has_stdin=0
-
-  if input=$(_fabric_handle_input); then
-    has_stdin=1
-  fi
-
-  local pattern=$(_fabric_select_pattern)
-  [ -z "$pattern" ] && { echo "No pattern selected."; return 1; }
-
-  if [ $has_stdin -eq 1 ]; then
-    echo "$input" | fabric --pattern "$pattern" "$@"
-  else
-    fabric --pattern "$pattern" "$@"
-  fi
-}
-
-# Select and run fabric with both model and pattern
-# Usage: fabric_with_model_pattern [additional_args...]
-fabric_with_model_pattern() {
-  local input=""
-  local has_stdin=0
-
-  if input=$(_fabric_handle_input); then
-    has_stdin=1
-  fi
-
-  local model_line=$(fabric -L | fzf --height 40% --border --ansi --prompt="Select model: ")
-  [ -z "$model_line" ] && { echo "No model selected."; return 1; }
-
-  local model=$(echo "$model_line" | sed -E 's/.*[[:space:]]([^[:space:]]+)$/\1/')
-
-  local pattern=$(_fabric_select_pattern)
-  [ -z "$pattern" ] && { echo "No pattern selected."; return 1; }
-
-  if [ $has_stdin -eq 1 ]; then
-    echo "$input" | fabric --model "$model" --pattern "$pattern" "$@"
-  else
-    fabric --model "$model" --pattern "$pattern" "$@"
-  fi
-}
-
-# Get YouTube transcript with fabric
-# Usage: yt <video_link>
-yt() {
-  local video_link="$1"
-  fabric -y "$video_link" --transcript
-}
-
-# Aliases for convenience
-alias fp='fabric_with_pattern'
-alias fps='fabric_with_model_pattern'
-```
-
-Also available on [GitHub Gist](https://gist.github.com/SubodhDahal/38436348aedf0596e48d17ffcffa7d51).
-
-## Using It Day-to-Day
-
-It's as simple as:
-
-- `fp -u example.com` to analyze a website
-- `pbpaste | fp` to analyze clipboard content
-- `cat file.txt | fps` to analyze a file with a specific model
-
-The menu pops up, you pick what you want, and fabric does the rest.
-
-## Making It Work for You
-
-You know how your phone probably has dozens of apps, but you only use a handful regularly? It's the same with fabric patterns. While having options is great, too many choices can slow you down.
-
-I cleaned up my pattern collection by:
-
-- Keeping only the patterns I actually use
-- Tweaking the remaining ones to work exactly how I want
-
-Since patterns are just markdown files, changing them is as easy as editing a text file.
-
-## Why This Matters
-
-I'm not reinventing the wheel here. These are just small tweaks that make fabric feel more natural to use. But sometimes that's all you need: tools that work the way your brain works.
-
-Before, I'd hesitate to use fabric because remembering all the commands felt like work. Now? It's just copy, paste, pick, and done. If you use fabric, give these helpers a try.
-
----
-
 - **Page:** Looking back: My 2022 in review
 - **Source:** https://subodhdahal.com/blog/2022-in-review
 - **Description:** From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.
@@ -2714,6 +2714,309 @@ Unfortunately, not everyone has had the same experience, with some really horrib
 I am grateful for the support and encouragement of those in my life this year. Your guidance and opportunities have allowed me to grow. Thank you for being a part of my journey and for the amazing times we had together.
 
 Here's to the future and to the continued growth and learning that it holds.
+
+---
+
+- **Page:** Git and the command-line: Take your workflow to the next level
+- **Source:** https://subodhdahal.com/blog/git-and-command-line-next-level-workflow
+- **Description:** Some tips on how to improve your Git productivity using the command-line
+
+## What is git?
+
+Git is a version control system that helps developers track changes to their code and collaborate with others on software projects. It allows developers to easily switch between different versions of their code and work on different features in parallel without affecting the main codebase.
+
+## Why use the command-line?
+
+Although there are many GUI Git applications, using git from the command-line allows you to configure and streamline it to your workflow rather than being constrained by the interfaces of the GUI. It will also force you to understand more of how git works and since it's a tool that developers need to use often, I'd say it's not a bad motivation. You can still use the GUI for taking care of the more complex tasks until you get more familiar with using the command-line.
+
+## Tips to improve your workflow
+
+### 1. Add aliases for commonly used commands
+
+When using git from the command-line you are expected to write commands but this doesn't mean you can't make life easier for yourself. Instead of writing the whole command all the time, you can add shorter versions of them as aliases.
+
+Here are some of the aliases that I use frequently:
+
+<div className="flex,justify-center">
+<table className="table-auto,justify-center,mb-4,w-1/2">
+<thead>
+  <tr>
+    <th>
+      alias
+    </th>
+    
+    
+            <th>
+      command
+    </th>
+  </tr>
+</thead>
+
+
+    <tbody className="font-mono">
+  <tr>
+    <td>
+      g
+    </td>
+    
+    
+            <td>
+      git
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      ga
+    </td>
+    
+    
+            <td>
+      git add
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gb
+    </td>
+    
+    
+            <td>
+      git branch
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gc
+    </td>
+    
+    
+            <td>
+      git commit -v
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gco
+    </td>
+    
+    
+            <td>
+      git checkout
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gcb
+    </td>
+    
+    
+            <td>
+      git checkout -b
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      gcp
+    </td>
+    
+    
+            <td>
+      git cherry-pick
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      grb
+    </td>
+    
+    
+            <td>
+      git rebase
+    </td>
+  </tr>
+  
+  
+        <tr>
+    <td>
+      grbi
+    </td>
+    
+    
+            <td>
+      git rebase -i
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+So now the following
+
+```bash
+git commit -v -m 'my commit message'
+```
+
+becomes
+
+```bash
+gc -m 'my commit message'
+```
+
+If you have `zsh` as your shell, have `ohmyzsh` installed and the `git` plugin enabled, there are already a lot of git aliases configured and can use them. You can have a look at them [here](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh). Even if you don't use `ohmyzsh`, you can take inspiration from the aliases and set them for your shell.
+
+For the `bash` shell, you can add the following to your `.bashrc` file.
+
+```bash
+alias g='git'
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit -v'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcp='git cherry-pick'
+alias grb='git rebase'
+alias grbi='git rebase -i'
+```
+
+### 2. Enable auto-correction of spelling mistakes for commands
+
+We are human after all and sometimes we make spelling mistakes. Instead of having to correct the command ourself, we can let git do it for us if the mistakes are minimal.
+
+We can enable git auto-correct for all git repos by using the following command:
+
+```bash
+git config --global help.autoCorrect 5
+```
+
+The value of `help.autoCorrect` is the number of deciseconds git waits before it auto-corrects and applies the command. In the command above, it will wait 0.5 seconds.
+
+The `--global` flag specifies that auto-correction will be enabled for all git repositories in the system. If you omit this, it will only take effect in the current repo.
+
+<figure className="image">
+
+![git auto-correct in action](https://subodhdahal.com/images/git-and-command-line/git-autocorrect.png)
+  <figcaption>
+
+Git auto-correct in action
+
+</figcaption>
+</figure>
+
+### 3. Improved git checkout with fzf
+
+When you are working on a project you will need to switch between different branches. You can use `git checkout <branch_name>` or `git switch <branch_name>` to do that. But the `<branch_name>` needs to be exact and if you don't remember it you will need to run further commands or look up the branch name somewhere.
+
+We can make switching git branches simpler by integrating the checkout process with [fzf](https://github.com/junegunn/fzf). fzf is a command-line fuzzy finder which means we don't need to precisely remember the branch name. Just typing a few characters will list us the branches that match the existing branches using fuzzy logic.
+
+You can add the following to your `.bashrc` or `.zshrc` file to configure a custom function `git_checkout_branch` to run fzf with the list of branches in the repo, which you can then search fuzzily.
+
+```bash
+# Slightly modified version of the script mentioned in https://revelry.co/insights/development/terminal-workflow-fzf/
+git_checkout_branch() {
+  if [[ $1 != "" ]]; then
+    # pass all the parameters as-is, if provided
+    git checkout $*
+    return
+  fi
+
+  LINES=2
+  # show branches
+  result=$(git branch -a --color=always | grep -v '/HEAD\s' | sort |
+    fzf --height 50% --border --ansi --tac --preview-window right:70% \
+      --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
+    sed 's/^..//' | cut -d' ' -f1)
+
+  if [[ $result != "" ]]; then
+    if [[ $result == remotes/* ]]; then
+      git checkout --track $(echo $result | sed 's#remotes/##')
+    else
+      git checkout "$result"
+    fi
+  fi
+}
+```
+
+**Source:** Modified version of [https://revelry.co/insights/development/terminal-workflow-fzf/](https://revelry.co/insights/development/terminal-workflow-fzf/)
+
+Then when you run the command `git_checkout_branch` in the terminal, you will be presented with the branches in the repo and can type part of the branch name to get the branch name you want. Pressing enter on the selected branch will switch the current branch to that branch.
+
+You can, of course, add this as an alias instead of having to type the whole command.
+
+```bash
+alias gco='git_checkout_branch'
+```
+
+If you already know the branch name and don't want to be presented with a list of options, you can just use the command as `gco <branch_name>`, eg: `gco develop`.
+
+<figure className="image">
+
+![fzf in action](https://subodhdahal.com/images/git-and-command-line/git-checkout-fzf.gif)
+  <figcaption>
+
+Git checkout with fzf in action
+
+</figcaption>
+</figure>
+
+### 4. Using Git Interactive Rebase Tool
+
+Although rebase and interactive rebase can seem like a scary concepts in the beginning, after you get used to it, they can be powerful tools to organize history in a Git repo. It can be useful in a variety of situations, including:
+
+- Combining multiple commits into one
+
+  - Splitting a single commit into multiple commits
+
+  - Reordering commits
+
+  - Removing commits
+
+  - Fixing mistakes in commits
+
+  - Updating your local repository to match the upstream repository
+
+You can learn more about rebasing in [https://git-rebase.io/](https://git-rebase.io/).
+
+[Git Interactive Rebase Tool](https://github.com/MitMaro/git-interactive-rebase-tool) can help make the process of interactive rebasing easier. It is a GUI tool that runs in the terminal and can be used to rebase commits in a git repo. It is written in Rust and is available for Linux, macOS and Windows.
+
+<figure className="image" style="background: #272733">
+
+![fzf in action](https://subodhdahal.com/images/git-and-command-line/interactive-rebase-tool.gif)
+  <figcaption>
+
+Basic usage of Interactive Rebase Tool
+
+</figcaption>
+</figure>
+
+You can view the [documentation](https://mitmaro.github.io/git-interactive-rebase-tool/) for more information on how to set up and use the tool, along with all its features.
+
+## Conclusion
+
+Trying one or more of the above tips can help you become more productive with git. But as with any new workflow, it takes time to get used to it. So it might be good to start with one or two of the aforementioned tips and then move on to trying the others.
+
+---
+
+### Bonus:
+
+If you would prefer a more GUI approach to working with git but in the terminal, then you can try one of the followings:
+
+- [tig](https://github.com/jonas/tig)
+
+  - [lazygit](https://github.com/jesseduffield/lazygit)
 
 ---
 
@@ -3188,307 +3491,4 @@ I felt like a different person, for the better, after my journey.
 
 </div>
 </div>
-
----
-
-- **Page:** Git and the command-line: Take your workflow to the next level
-- **Source:** https://subodhdahal.com/blog/git-and-command-line-next-level-workflow
-- **Description:** Some tips on how to improve your Git productivity using the command-line
-
-## What is git?
-
-Git is a version control system that helps developers track changes to their code and collaborate with others on software projects. It allows developers to easily switch between different versions of their code and work on different features in parallel without affecting the main codebase.
-
-## Why use the command-line?
-
-Although there are many GUI Git applications, using git from the command-line allows you to configure and streamline it to your workflow rather than being constrained by the interfaces of the GUI. It will also force you to understand more of how git works and since it's a tool that developers need to use often, I'd say it's not a bad motivation. You can still use the GUI for taking care of the more complex tasks until you get more familiar with using the command-line.
-
-## Tips to improve your workflow
-
-### 1. Add aliases for commonly used commands
-
-When using git from the command-line you are expected to write commands but this doesn't mean you can't make life easier for yourself. Instead of writing the whole command all the time, you can add shorter versions of them as aliases.
-
-Here are some of the aliases that I use frequently:
-
-<div className="flex,justify-center">
-<table className="table-auto,justify-center,mb-4,w-1/2">
-<thead>
-  <tr>
-    <th>
-      alias
-    </th>
-    
-    
-            <th>
-      command
-    </th>
-  </tr>
-</thead>
-
-
-    <tbody className="font-mono">
-  <tr>
-    <td>
-      g
-    </td>
-    
-    
-            <td>
-      git
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      ga
-    </td>
-    
-    
-            <td>
-      git add
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gb
-    </td>
-    
-    
-            <td>
-      git branch
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gc
-    </td>
-    
-    
-            <td>
-      git commit -v
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gco
-    </td>
-    
-    
-            <td>
-      git checkout
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gcb
-    </td>
-    
-    
-            <td>
-      git checkout -b
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      gcp
-    </td>
-    
-    
-            <td>
-      git cherry-pick
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      grb
-    </td>
-    
-    
-            <td>
-      git rebase
-    </td>
-  </tr>
-  
-  
-        <tr>
-    <td>
-      grbi
-    </td>
-    
-    
-            <td>
-      git rebase -i
-    </td>
-  </tr>
-</tbody>
-</table>
-</div>
-
-So now the following
-
-```bash
-git commit -v -m 'my commit message'
-```
-
-becomes
-
-```bash
-gc -m 'my commit message'
-```
-
-If you have `zsh` as your shell, have `ohmyzsh` installed and the `git` plugin enabled, there are already a lot of git aliases configured and can use them. You can have a look at them [here](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh). Even if you don't use `ohmyzsh`, you can take inspiration from the aliases and set them for your shell.
-
-For the `bash` shell, you can add the following to your `.bashrc` file.
-
-```bash
-alias g='git'
-alias ga='git add'
-alias gb='git branch'
-alias gc='git commit -v'
-alias gco='git checkout'
-alias gcb='git checkout -b'
-alias gcp='git cherry-pick'
-alias grb='git rebase'
-alias grbi='git rebase -i'
-```
-
-### 2. Enable auto-correction of spelling mistakes for commands
-
-We are human after all and sometimes we make spelling mistakes. Instead of having to correct the command ourself, we can let git do it for us if the mistakes are minimal.
-
-We can enable git auto-correct for all git repos by using the following command:
-
-```bash
-git config --global help.autoCorrect 5
-```
-
-The value of `help.autoCorrect` is the number of deciseconds git waits before it auto-corrects and applies the command. In the command above, it will wait 0.5 seconds.
-
-The `--global` flag specifies that auto-correction will be enabled for all git repositories in the system. If you omit this, it will only take effect in the current repo.
-
-<figure className="image">
-
-![git auto-correct in action](https://subodhdahal.com/images/git-and-command-line/git-autocorrect.png)
-  <figcaption>
-
-Git auto-correct in action
-
-</figcaption>
-</figure>
-
-### 3. Improved git checkout with fzf
-
-When you are working on a project you will need to switch between different branches. You can use `git checkout <branch_name>` or `git switch <branch_name>` to do that. But the `<branch_name>` needs to be exact and if you don't remember it you will need to run further commands or look up the branch name somewhere.
-
-We can make switching git branches simpler by integrating the checkout process with [fzf](https://github.com/junegunn/fzf). fzf is a command-line fuzzy finder which means we don't need to precisely remember the branch name. Just typing a few characters will list us the branches that match the existing branches using fuzzy logic.
-
-You can add the following to your `.bashrc` or `.zshrc` file to configure a custom function `git_checkout_branch` to run fzf with the list of branches in the repo, which you can then search fuzzily.
-
-```bash
-# Slightly modified version of the script mentioned in https://revelry.co/insights/development/terminal-workflow-fzf/
-git_checkout_branch() {
-  if [[ $1 != "" ]]; then
-    # pass all the parameters as-is, if provided
-    git checkout $*
-    return
-  fi
-
-  LINES=2
-  # show branches
-  result=$(git branch -a --color=always | grep -v '/HEAD\s' | sort |
-    fzf --height 50% --border --ansi --tac --preview-window right:70% \
-      --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
-    sed 's/^..//' | cut -d' ' -f1)
-
-  if [[ $result != "" ]]; then
-    if [[ $result == remotes/* ]]; then
-      git checkout --track $(echo $result | sed 's#remotes/##')
-    else
-      git checkout "$result"
-    fi
-  fi
-}
-```
-
-**Source:** Modified version of [https://revelry.co/insights/development/terminal-workflow-fzf/](https://revelry.co/insights/development/terminal-workflow-fzf/)
-
-Then when you run the command `git_checkout_branch` in the terminal, you will be presented with the branches in the repo and can type part of the branch name to get the branch name you want. Pressing enter on the selected branch will switch the current branch to that branch.
-
-You can, of course, add this as an alias instead of having to type the whole command.
-
-```bash
-alias gco='git_checkout_branch'
-```
-
-If you already know the branch name and don't want to be presented with a list of options, you can just use the command as `gco <branch_name>`, eg: `gco develop`.
-
-<figure className="image">
-
-![fzf in action](https://subodhdahal.com/images/git-and-command-line/git-checkout-fzf.gif)
-  <figcaption>
-
-Git checkout with fzf in action
-
-</figcaption>
-</figure>
-
-### 4. Using Git Interactive Rebase Tool
-
-Although rebase and interactive rebase can seem like a scary concepts in the beginning, after you get used to it, they can be powerful tools to organize history in a Git repo. It can be useful in a variety of situations, including:
-
-- Combining multiple commits into one
-
-  - Splitting a single commit into multiple commits
-
-  - Reordering commits
-
-  - Removing commits
-
-  - Fixing mistakes in commits
-
-  - Updating your local repository to match the upstream repository
-
-You can learn more about rebasing in [https://git-rebase.io/](https://git-rebase.io/).
-
-[Git Interactive Rebase Tool](https://github.com/MitMaro/git-interactive-rebase-tool) can help make the process of interactive rebasing easier. It is a GUI tool that runs in the terminal and can be used to rebase commits in a git repo. It is written in Rust and is available for Linux, macOS and Windows.
-
-<figure className="image" style="background: #272733">
-
-![fzf in action](https://subodhdahal.com/images/git-and-command-line/interactive-rebase-tool.gif)
-  <figcaption>
-
-Basic usage of Interactive Rebase Tool
-
-</figcaption>
-</figure>
-
-You can view the [documentation](https://mitmaro.github.io/git-interactive-rebase-tool/) for more information on how to set up and use the tool, along with all its features.
-
-## Conclusion
-
-Trying one or more of the above tips can help you become more productive with git. But as with any new workflow, it takes time to get used to it. So it might be good to start with one or two of the aforementioned tips and then move on to trying the others.
-
----
-
-### Bonus:
-
-If you would prefer a more GUI approach to working with git but in the terminal, then you can try one of the followings:
-
-- [tig](https://github.com/jonas/tig)
-
-  - [lazygit](https://github.com/jesseduffield/lazygit)
 
