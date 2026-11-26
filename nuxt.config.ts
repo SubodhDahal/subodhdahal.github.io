@@ -140,6 +140,16 @@ export default defineNuxtConfig({
     preset: "static", // Use static for GitHub Pages
     prerender: {
       routes: ["/rss.xml", "/atom.xml"],
+      // Nuxt queues static pages without the trailing slash ("/privacy") while
+      // links use it ("/privacy/"). Both render to privacy/index.html at the
+      // same time, and a shorter second write leaves the first one's tail
+      // ("/html>") under the footer. Skip extensionless routes lacking the slash.
+      ignore: [
+        (route: string) => {
+          const path = route.split("?")[0];
+          return !path.endsWith("/") && !path.split("/").pop()!.includes(".");
+        },
+      ],
     },
   },
 

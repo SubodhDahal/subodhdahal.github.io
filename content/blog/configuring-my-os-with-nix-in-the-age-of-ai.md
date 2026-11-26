@@ -80,7 +80,7 @@ nix/
 └── pkgs/               # packages I build myself (more on that below)
 ```
 
-The shared profiles contain the packages and settings both machines need. The `hosts/` directories only contain what's specific to that machine, like the [eGPU fixes on the laptop](/blog/razer-core-x-egpu-hotplug-nixos).
+The shared profiles contain the packages and settings both machines need. The `hosts/` directories only contain what's specific to that machine, like the [eGPU fixes on the laptop](/blog/razer-core-x-egpu-hotplug-nixos/).
 
 ## Letting AI agents change my OS only through Nix
 
@@ -96,7 +96,7 @@ Plenty of people use AI agents to change their operating system directly: run th
 
 With Nix, the agent's changes show up as a diff in my config repository. I read the diff before I rebuild, and most of the time it's easy to understand. Even when I don't understand every line, I at least get a sense of what's happening, and it's in Git if I need to come back to it later.
 
-Here's a real one. My [eGPU only worked if I timed switching it on against booting the laptop](/blog/razer-core-x-egpu-hotplug-nixos), and in November 2026 I asked Claude to fix it. The fix touched one file, `egpu.nix`, with 20 lines added and 2 removed. It replaced a kernel parameter that reserved a 4-gigabyte memory window the firmware could never place with smaller windows that fit, and it added a udev rule to create the `/dev/nvidia` device node when the driver binds to a hotplugged card. The commit message explains both changes, so future me knows why they're there.
+Here's a real one. My [eGPU only worked if I timed switching it on against booting the laptop](/blog/razer-core-x-egpu-hotplug-nixos/), and in November 2026 I asked Claude to fix it. The fix touched one file, `egpu.nix`, with 20 lines added and 2 removed. It replaced a kernel parameter that reserved a 4-gigabyte memory window the firmware could never place with smaller windows that fit, and it added a udev rule to create the `/dev/nvidia` device node when the driver binds to a hotplugged card. The commit message explains both changes, so future me knows why they're there.
 
 The more interesting commit came the same day. While we were in that file, the agent noticed `pcie_aspm=off` in my kernel parameters. My laptop's firmware already tells the kernel it doesn't support power management on PCIe links (ASPM), so the kernel turns it off anyway and the flag did nothing. I had added it in December 2025, during my first round of eGPU troubleshooting, and forgotten about it. That's exactly the kind of leftover fix I used to lose track of on Fedora. This time the flag was one line in a file I could read, a commit told me when it arrived, and removing it took a one-line diff.
 
@@ -123,7 +123,7 @@ According to [Repology](https://repology.org/repositories/statistics/total), nix
 
 ### Packaging from GitHub releases is yours to maintain
 
-When a package is out of date, my agent packages it from the project's GitHub releases. Six of my 13 custom packages, including [Worktrunk](/blog/worktrees-with-worktrunk), work this way. (I'm now the maintainer of six packages I never meant to maintain.) When their dependencies change, I have to ask the agent to fix them again.
+When a package is out of date, my agent packages it from the project's GitHub releases. Six of my 13 custom packages, including [Worktrunk](/blog/worktrees-with-worktrunk/), work this way. (I'm now the maintainer of six packages I never meant to maintain.) When their dependencies change, I have to ask the agent to fix them again.
 
 ### Upstream flakes can mean building locally
 
@@ -131,7 +131,7 @@ When a project publishes its own Nix flake outside nixpkgs, the official binary 
 
 ### Programs downloaded from the internet don't run as is
 
-NixOS has no `/lib` or `/usr/lib`, so programs built for other distributions fail with `cannot execute: required file not found`. I work around it with `nix-ld` for Python wheels, `autoPatchelf` for one GitHub release package, and a wrapper for [Handy](/blog/handy-speech-to-text-nixos-cosmic-egpu) that lists 18 libraries its AppImage expects. On other distributions, you'd download the file and run it.
+NixOS has no `/lib` or `/usr/lib`, so programs built for other distributions fail with `cannot execute: required file not found`. I work around it with `nix-ld` for Python wheels, `autoPatchelf` for one GitHub release package, and a wrapper for [Handy](/blog/handy-speech-to-text-nixos-cosmic-egpu/) that lists 18 libraries its AppImage expects. On other distributions, you'd download the file and run it.
 
 ### Old generations fill the disk unless you clean them up
 
@@ -155,4 +155,4 @@ The kid who deleted system32 learned that a reinstall could undo almost anything
 
 Nix gave me that safety net back, without the blank disk. Every change, mine or an agent's, is a diff I can read, and every rebuild is a generation I can roll back to. The barrier to entry is real. But if you like tinkering and you're letting AI agents change your system, it's the best way I've found to keep track of what they did.
 
-Next, I'd like to move the Ubuntu VMs on my [home server](/topics/self-hosting) to Nix, or to NixOS altogether. They run services I depend on, and the server can't run a test VM next to them, so with hardware prices what they are, that'll probably wait until I get a more powerful machine.
+Next, I'd like to move the Ubuntu VMs on my [home server](/topics/self-hosting/) to Nix, or to NixOS altogether. They run services I depend on, and the server can't run a test VM next to them, so with hardware prices what they are, that'll probably wait until I get a more powerful machine.
