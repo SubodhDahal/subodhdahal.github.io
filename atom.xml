@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://subodhdahal.com</id>
     <title>Subodh Dahal</title>
-    <updated>2026-11-20T08:59:29.663Z</updated>
+    <updated>2026-11-26T11:34:41.548Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Subodh Dahal</name>
@@ -12,6 +12,40 @@
     <link rel="self" href="https://subodhdahal.com/atom.xml"/>
     <subtitle>Personal website and blog of Subodh Dahal</subtitle>
     <rights>Copyright 2026 Subodh Dahal</rights>
+    <entry>
+        <title type="html"><![CDATA[Why I let AI agents change my OS only through Nix]]></title>
+        <id>https://subodhdahal.com/blog/configuring-my-os-with-nix-in-the-age-of-ai/</id>
+        <link href="https://subodhdahal.com/blog/configuring-my-os-with-nix-in-the-age-of-ai/"/>
+        <updated>2026-11-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AI agents make it trivial to change your operating system and hard to remember what they changed. Here's why I manage NixOS and macOS from one Nix config in Git.]]></summary>
+        <content type="html"><![CDATA[<p>AI agents make it trivial to change your operating system and hard to remember what they changed. Here's why I manage NixOS and macOS from one Nix config in Git.</p>
+<p><a href="https://subodhdahal.com/blog/configuring-my-os-with-nix-in-the-age-of-ai/">Read the full post on subodhdahal.com →</a></p>]]></content>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com/</uri>
+        </author>
+        <category label="nixos"/>
+        <category label="nix"/>
+        <category label="nix-darwin"/>
+        <category label="ai"/>
+        <category label="developer productivity"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A browser tool that puts every carousel photo on the same white mat, like a gallery print]]></title>
+        <id>https://subodhdahal.com/blog/instagram-carousel-padding-tool/</id>
+        <link href="https://subodhdahal.com/blog/instagram-carousel-padding-tool/"/>
+        <updated>2026-11-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Instagram can keep each photo's original aspect ratio in a carousel, but I prefer a white canvas with even borders. I built a page that pads every image onto one shared canvas, entirely in the browser.]]></summary>
+        <content type="html"><![CDATA[<p>Instagram can keep each photo's original aspect ratio in a carousel, but I prefer a white canvas with even borders. I built a page that pads every image onto one shared canvas, entirely in the browser.</p>
+<p><a href="https://subodhdahal.com/blog/instagram-carousel-padding-tool/">Read the full post on subodhdahal.com →</a></p>]]></content>
+        <author>
+            <name>Subodh Dahal</name>
+            <uri>https://subodhdahal.com/</uri>
+        </author>
+        <category label="tools"/>
+        <category label="instagram"/>
+        <category label="photography"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU]]></title>
         <id>https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/</id>
@@ -36,6 +70,9 @@
         <id>https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/</id>
         <link href="https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/"/>
         <updated>2026-11-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[My Razer Core X eGPU only worked if I timed it against boot. On NixOS the NVIDIA driver rejected the hotplugged card; PCI kernel parameters and a device node fixed it.]]></summary>
+        <content type="html"><![CDATA[<p>My Razer Core X eGPU only worked if I timed it against boot. On NixOS the NVIDIA driver rejected the hotplugged card; PCI kernel parameters and a device node fixed it.</p>
+<p><a href="https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/">Read the full post on subodhdahal.com →</a></p>]]></content>
         <author>
             <name>Subodh Dahal</name>
             <uri>https://subodhdahal.com/</uri>
@@ -78,10 +115,10 @@
             <name>Subodh Dahal</name>
             <uri>https://subodhdahal.com/</uri>
         </author>
-        <category label="Homelab"/>
-        <category label="Open source"/>
-        <category label="Self-hosting"/>
-        <category label="Workflow"/>
+        <category label="homelab"/>
+        <category label="open source"/>
+        <category label="self-hosting"/>
+        <category label="workflow"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Curating my own reading and discovery feed with RSS]]></title>
@@ -95,10 +132,10 @@
             <name>Subodh Dahal</name>
             <uri>https://subodhdahal.com/</uri>
         </author>
-        <category label="Homelab"/>
-        <category label="Open source"/>
-        <category label="Self-hosting"/>
-        <category label="Workflow"/>
+        <category label="homelab"/>
+        <category label="open source"/>
+        <category label="self-hosting"/>
+        <category label="workflow"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Fixing my broken Docker Immich+Traefik setup]]></title>
@@ -145,7 +182,7 @@
             <name>Subodh Dahal</name>
             <uri>https://subodhdahal.com/</uri>
         </author>
-        <category label="Nuxt"/>
+        <category label="nuxt"/>
         <category label="web development"/>
         <category label="tutorial"/>
     </entry>
@@ -162,7 +199,7 @@
             <uri>https://subodhdahal.com/</uri>
         </author>
         <category label="productivity"/>
-        <category label="Developer Productivity"/>
+        <category label="developer productivity"/>
         <category label="automation"/>
         <category label="home-office"/>
     </entry>

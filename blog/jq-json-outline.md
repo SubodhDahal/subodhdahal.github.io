@@ -6,7 +6,7 @@ canonical_url: "https://subodhdahal.com/blog/jq-json-outline/"
 
 > Index of every page on this site: [llms.txt](https://subodhdahal.com/llms.txt)
 
-I was recently digging into Immich’s API to see if it exposes the fields I needed for some details about my photos. Immich is my self-hosted photo-management service. The API returned hundreds of lines of JSON. I just wanted to see its structure to check the fields I needed, but scrolling through all that data felt slow. I did what any sane programmer would do: I spent even more time trying to automate it.
+I was recently digging into Immich’s API to see if it exposes the fields I needed for some details about my photos. Immich is my [self-hosted photo-management service](https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/). The API returned hundreds of lines of JSON. I just wanted to see its structure to check the fields I needed, but scrolling through all that data felt slow. I did what any sane programmer would do: I spent even more time trying to automate it.
 
 I’ve used [jq](https://jqlang.org/) before for quick JSON tweaks (it’s basically `sed` or `awk` for JSON), so I wondered if it could help here. A quick search showed that jq can collapse arrays to a single-item preview, then recurse through the whole document for a clean outline of the JSON’s shape in one pass.
 

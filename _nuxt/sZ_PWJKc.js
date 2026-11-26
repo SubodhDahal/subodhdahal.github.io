@@ -1,0 +1,1 @@
+import{V as e,k as t,y as n}from"./D0tihvOb.js";import{t as r}from"./BDNMzG2s.js";t();var i={};function a(t,r){return e(),n(`hr`)}var o=Object.assign(r(i,[[`render`,a]]),{__name:`ProseHr`});export{o as default};

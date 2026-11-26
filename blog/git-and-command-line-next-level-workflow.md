@@ -6,17 +6,17 @@ canonical_url: "https://subodhdahal.com/blog/git-and-command-line-next-level-wor
 
 > Index of every page on this site: [llms.txt](https://subodhdahal.com/llms.txt)
 
-# What is git?
+## What is git?
 
 Git is a version control system that helps developers track changes to their code and collaborate with others on software projects. It allows developers to easily switch between different versions of their code and work on different features in parallel without affecting the main codebase.
 
-# Why use the command-line?
+## Why use the command-line?
 
 Although there are many GUI Git applications, using git from the command-line allows you to configure and streamline it to your workflow rather than being constrained by the interfaces of the GUI. It will also force you to understand more of how git works and since it's a tool that developers need to use often, I'd say it's not a bad motivation. You can still use the GUI for taking care of the more complex tasks until you get more familiar with using the command-line.
 
-# Tips to improve your workflow
+## Tips to improve your workflow
 
-## 1. Add aliases for commonly used commands
+### 1. Add aliases for commonly used commands
 
 When using git from the command-line you are expected to write commands but this doesn't mean you can't make life easier for yourself. Instead of writing the whole command all the time, you can add shorter versions of them as aliases.
 
@@ -177,7 +177,7 @@ alias grb='git rebase'
 alias grbi='git rebase -i'
 ```
 
-## 2. Enable auto-correction of spelling mistakes for commands
+### 2. Enable auto-correction of spelling mistakes for commands
 
 We are human after all and sometimes we make spelling mistakes. Instead of having to correct the command ourself, we can let git do it for us if the mistakes are minimal.
 
@@ -201,7 +201,7 @@ Git auto-correct in action
 </figcaption>
 </figure>
 
-## 3. Improved git checkout with fzf
+### 3. Improved git checkout with fzf
 
 When you are working on a project you will need to switch between different branches. You can use `git checkout <branch_name>` or `git switch <branch_name>` to do that. But the `<branch_name>` needs to be exact and if you don't remember it you will need to run further commands or look up the branch name somewhere.
 
@@ -257,7 +257,7 @@ Git checkout with fzf in action
 </figcaption>
 </figure>
 
-## 4. Using Git Interactive Rebase Tool
+### 4. Using Git Interactive Rebase Tool
 
 Although rebase and interactive rebase can seem like a scary concepts in the beginning, after you get used to it, they can be powerful tools to organize history in a Git repo. It can be useful in a variety of situations, including:
 
@@ -289,13 +289,13 @@ Basic usage of Interactive Rebase Tool
 
 You can view the [documentation](https://mitmaro.github.io/git-interactive-rebase-tool/) for more information on how to set up and use the tool, along with all its features.
 
-# Conclusion
+## Conclusion
 
 Trying one or more of the above tips can help you become more productive with git. But as with any new workflow, it takes time to get used to it. So it might be good to start with one or two of the aforementioned tips and then move on to trying the others.
 
 ---
 
-## Bonus:
+### Bonus:
 
 If you would prefer a more GUI approach to working with git but in the terminal, then you can try one of the followings:
 

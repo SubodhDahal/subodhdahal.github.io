@@ -1,5 +1,6 @@
 ---
 title: "Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot"
+description: "My Razer Core X eGPU only worked if I timed it against boot. On NixOS the NVIDIA driver rejected the hotplugged card; PCI kernel parameters and a device node fixed it."
 canonical_url: "https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/"
 ---
 

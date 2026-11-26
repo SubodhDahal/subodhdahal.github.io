@@ -46,6 +46,70 @@
         </image:image>
     </url>
     <url>
+        <loc>https://subodhdahal.com/photography/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/st-bartholomae-koenigssee-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/chitwan-snow-peaks-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/trajans-column-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/lichtenstein-castle-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/bee-on-scabious-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/tower-bridge-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/chitwan-morning-light-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/palma-cathedral-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/autumn-pair-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/colosseum-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/buckingham-palace-gates-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/palma-palms-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/chitwan-old-tree-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/koenigssee-peaks-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/roman-emperor-and-pine-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/basel-barfuesserplatz-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/bare-tree-600.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/images/photography/roman-forum-600.webp</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://subodhdahal.com/tools/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://subodhdahal.com/blog/2022-in-review/</loc>
         <lastmod>2022-12-31</lastmod>
         <changefreq>daily</changefreq>
@@ -256,6 +320,15 @@
         </image:image>
     </url>
     <url>
+        <loc>https://subodhdahal.com/blog/configuring-my-os-with-nix-in-the-age-of-ai/</loc>
+        <lastmod>2026-11-26</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/nix-declarative-os-config.png</image:loc>
+        </image:image>
+    </url>
+    <url>
         <loc>https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow/</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>daily</changefreq>
@@ -361,6 +434,21 @@
         </image:image>
     </url>
     <url>
+        <loc>https://subodhdahal.com/blog/instagram-carousel-padding-tool/</loc>
+        <lastmod>2026-11-25</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://subodhdahal.com/_ipx/_/images/instagram-carousel-tool/carousel-tool-preview-viewer.png</image:loc>
+        </image:image>
+    </url>
+    <url>
         <loc>https://subodhdahal.com/blog/jq-json-outline/</loc>
         <lastmod>2025-10-19</lastmod>
         <changefreq>daily</changefreq>
@@ -444,5 +532,30 @@
             <image:loc>https://subodhdahal.com/_ipx/f_webp&amp;s_800x400/images/git-worktrees.webp</image:loc>
         </image:image>
     </url>
+    <url>
+        <loc>https://subodhdahal.com/tools/instagram-carousel/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://subodhdahal.com/topics/command-line/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://subodhdahal.com/topics/hiking-photography/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://subodhdahal.com/topics/nixos/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://subodhdahal.com/topics/self-hosting/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v9.1.0 at 2026-11-20T08:59:38.833Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v9.1.0 at 2026-11-26T11:34:55.266Z -->

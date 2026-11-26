@@ -10,17 +10,17 @@ Canonical Origin: https://subodhdahal.com/
 
 ---
 
-- **Page:** Subodh Dahal's musings on software engineering, automation, photography and more
+- **Page:** Subodh Dahal: software, self-hosting, automation and photography
 - **Source:** https://subodhdahal.com/
-- **Description:** Subodh Dahal - Software Engineer, Automation Enthusiast, Hobbyist Photographer &amp; Avid Ponderer
+- **Description:** Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.
 
 ```yaml
 meta:
-  og:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+  og:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
   og:image:height: "600"
   og:image:type: image/png
   og:image:width: "1200"
-  twitter:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+  twitter:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
 ```
 
 # Hi! I'm [Subodh Dahal](https://subodhdahal.com/#about)
@@ -45,11 +45,11 @@ From Bhaktapur 🇳🇵·Based in Stuttgart 🇩🇪
 
 ## **Recent Articles **
 
+- [<h2>**Why I let AI agents change my OS only through Nix**</h2>**nixos****nix****nix-darwin****ai****developer productivity****Nov 26, 2026**](https://subodhdahal.com/blog/configuring-my-os-with-nix-in-the-age-of-ai/)
+- [<h2>**A browser tool that puts every carousel photo on the same white mat, like a gallery print**</h2>**tools****instagram****photography****Nov 25, 2026**](https://subodhdahal.com/blog/instagram-carousel-padding-tool/)
 - [<h2>**Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU**</h2>**troubleshooting****nixos****cosmic****wayland****speech-to-text****egpu****Nov 19, 2026**](https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/)
 - [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>**troubleshooting****nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
 - [<h2>**Stop stashing half-finished work: use Git worktrees and Worktrunk**</h2>**git****worktrees****worktrunk****developer productivity****command line****workflow****Aug 16, 2026**](https://subodhdahal.com/blog/worktrees-with-worktrunk/)
-- [<h2>**Self-Hosting my Git forge with Forgejo**</h2>**Homelab****Open source****Self-hosting****Workflow****Apr 29, 2026**](https://subodhdahal.com/blog/self-hosting-my-git-forge/)
-- [<h2>**Curating my own reading and discovery feed with RSS**</h2>**Homelab****Open source****Self-hosting****Workflow****Feb 8, 2026**](https://subodhdahal.com/blog/reading-and-discovery-feed-curation/)
 
 [View All Articles →](https://subodhdahal.com/blog/)
 
@@ -66,60 +66,371 @@ From Bhaktapur 🇳🇵·Based in Stuttgart 🇩🇪
 *In my free time, I like being outdoors and photographing the beauty of nature and the world. *
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/#webpage","@type":"WebPage","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","name":"Subodh Dahal's musings on software engineering, automation, photography and more","url":"https://subodhdahal.com/","about":{"@id":"https://subodhdahal.com/#identity"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Software Engineer","name":"Subodh Dahal","url":"https://subodhdahal.com","image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"sameAs":["https://github.com/subodhdahal","https://linkedin.com/in/subodhdahal"]},{"@id":"https://subodhdahal.com/#about","@type":"ProfilePage","dateCreated":"2020-01-01T00:00:00+05:45","url":"https://subodhdahal.com/#about","mainEntity":{"@type":"Person","name":"Subodh Dahal","alternateName":"subodhdahal","description":"Engineering Manager and Software Engineer. Writes about software engineering, automation, photography, and travel.","image":"https://subodhdahal.com/images/me.jpg","url":"https://subodhdahal.com/#about","sameAs":["https://github.com/subodhdahal","https://www.linkedin.com/in/subodhdahal","https://x.com/subodhdahal"]}},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/#webpage","@type":"WebPage","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","name":"Subodh Dahal: software, self-hosting, automation and photography","url":"https://subodhdahal.com/","about":{"@id":"https://subodhdahal.com/#identity"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/#about","@type":"ProfilePage","dateCreated":"2020-01-01T00:00:00+05:45","url":"https://subodhdahal.com/#about","mainEntity":{"@type":"Person","name":"Subodh Dahal","alternateName":"subodhdahal","description":"Engineering Manager and Software Engineer. Writes about software engineering, automation, photography, and travel.","image":"https://subodhdahal.com/images/me.jpg","url":"https://subodhdahal.com/#about","sameAs":["https://github.com/subodhdahal","https://www.linkedin.com/in/subodhdahal","https://x.com/subodhdahal"]}},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
 ```
 
 ---
 
-- **Page:** Library · Subodh Dahal
+- **Page:** Library: books I recommend · Subodh Dahal
 - **Source:** https://subodhdahal.com/library
 - **Description:** Books I have read and recommend, with a short note on why each one earned its place.
 
 ```yaml
 meta:
-  og:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+  og:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
   og:image:height: "600"
   og:image:type: image/png
   og:image:width: "1200"
-  twitter:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+  twitter:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/library/#webpage","@type":"WebPage","description":"Books I have read and recommend, with a short note on why each one earned its place.","name":"Library","url":"https://subodhdahal.com/library/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/library/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Software Engineer","name":"Subodh Dahal","url":"https://subodhdahal.com","image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"sameAs":["https://github.com/subodhdahal","https://linkedin.com/in/subodhdahal"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/library/#webpage","description":"Books I have read and recommend, with a short note on why each one earned its place.","name":"Library: books I recommend","url":"https://subodhdahal.com/library/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/library/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/library/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/library/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Library","item":"https://subodhdahal.com/library/","position":2}]},{"@id":"https://subodhdahal.com/library/#/schema/item-list/1","@type":"ItemList","name":"Books Subodh Dahal recommends","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Book","name":"Player Piano","author":{"@type":"Person","name":"Kurt Vonnegut Jr."},"image":"https://subodhdahal.complayer-piano.jpg","genre":["Fiction"]}},{"@type":"ListItem","position":2,"item":{"@type":"Book","name":"Brave New World","author":{"@type":"Person","name":"Aldous Huxley"},"image":"https://subodhdahal.combrave-new-world.jpg","genre":["Fiction"]}},{"@type":"ListItem","position":3,"item":{"@type":"Book","name":"Dune","author":{"@type":"Person","name":"Frank Herbert"},"image":"https://subodhdahal.comdune.jpg","genre":["Fiction"]}},{"@type":"ListItem","position":4,"item":{"@type":"Book","name":"Factfulness","author":{"@type":"Person","name":"Hans Rosling, Anna Rosling Rönnlund, and Ola Rosling"},"image":"https://subodhdahal.comfactfulness.jpg","genre":["Non-fiction"]}},{"@type":"ListItem","position":5,"item":{"@type":"Book","name":"Atomic Habits","author":{"@type":"Person","name":"James Clear"},"image":"https://subodhdahal.comatomic-habits.jpg","genre":["Self-help"]}},{"@type":"ListItem","position":6,"item":{"@type":"Book","name":"Stillness Is the Key","author":{"@type":"Person","name":"Ryan Holiday"},"image":"https://subodhdahal.comstillness-is-the-key.jpg","genre":["Self-help","Philosophy"]}},{"@type":"ListItem","position":7,"item":{"@type":"Book","name":"Indistractable","author":{"@type":"Person","name":"Nir Eyal"},"image":"https://subodhdahal.comindistractable.jpg","genre":["Self-help"]}},{"@type":"ListItem","position":8,"item":{"@type":"Book","name":"Show Your Work","author":{"@type":"Person","name":"Austin Kleon"},"image":"https://subodhdahal.comshow-your-work.jpg","genre":["Self-help","Creativity"]}},{"@type":"ListItem","position":9,"item":{"@type":"Book","name":"Deep Work","author":{"@type":"Person","name":"Cal Newport"},"image":"https://subodhdahal.comdeep-work.jpg","genre":["Self-help"]}}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
 ```
 
 ---
 
-- **Page:** Blog posts · Subodh Dahal
-- **Source:** https://subodhdahal.com/blog
-- **Description:** Blog posts by Subodh Dahal
+- **Page:** Free browser tools · Subodh Dahal
+- **Source:** https://subodhdahal.com/tools
+- **Description:** Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.
 
 ```yaml
 meta:
-  og:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+  og:image: https://subodhdahal.com/_og/s/o_ffcc277b95306b53.png
   og:image:height: "600"
   og:image:type: image/png
   og:image:width: "1200"
-  twitter:image: https://subodhdahal.com/_og/s/o_f5be30d8909cb79d.png
+  twitter:image: https://subodhdahal.com/_og/s/o_ffcc277b95306b53.png
+```
+
+# **Tools **
+
+*Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.*
+
+- [<h2>**Instagram carousel white border tool**</h2>
+
+  Put portrait and landscape photos on one white canvas with an even border so Instagram doesn't crop your carousel. Runs in your browser.](https://subodhdahal.com/tools/instagram-carousel/)
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/tools/#webpage","description":"Free, small browser-based tools I built for myself. They run on your device, with no upload and no sign-up.","name":"Free browser tools","url":"https://subodhdahal.com/tools/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/tools/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/tools/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/tools/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Free browser tools","item":"https://subodhdahal.com/tools/","position":2}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
+- **Page:** Instagram Carousel White Border Tool (No Crop)
+- **Source:** https://subodhdahal.com/tools/instagram-carousel
+- **Description:** Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_7b4d279de2f79e5f.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_7b4d279de2f79e5f.png
+```
+
+# **Instagram carousel white border tool**
+
+Put portrait, landscape and square photos on one white canvas with an even border, so Instagram doesn't crop your carousel and mixed photos sit in the same frame like gallery prints.
+
+Free, no sign-up. Everything runs in your browser and your images never leave your device. This page uses Rybbit for pageview analytics only.
+
+## How to add white borders to an Instagram carousel
+
+1. Drop your photos onto the page, or pick them from your device. Drag the slides to change their order.
+2. Leave the aspect ratio on **Auto**, or force 4:5, 1:1, 1.91:1 or 3:4.
+3. Move the padding slider until the border looks right. Click any slide to swipe through a preview.
+4. Choose **1080** as the export width for files sized exactly for Instagram, then download the ZIP.
+5. In Instagram, select the slides in their numbered order. They already share one shape, so nothing gets cropped.
+
+## How Auto picks the canvas shape
+
+Instagram makes every slide in a carousel the same shape and crops anything that doesn't fit. Auto looks at every photo in the set and picks the ratio within Instagram's 1.91:1 to 4:5 range that leaves the least empty space overall. Three tall photos and one wide one end up on a 4:5 canvas, with white above and below the wide photo. A set of mostly wide photos gets a landscape canvas instead.
+
+The canvas is the smallest one that holds every photo at its native resolution, so no photo is scaled up. Photos taller than 4:5 or wider than 1.91:1 get extra white on the sides or top and bottom, so they still fit without being cropped.
+
+## Instagram carousel sizes
+
+| Shape | Ratio | Size at 1080 wide |
+| --- | --- | --- |
+| Portrait | 4:5 | 1080 × 1350 px |
+| Tall portrait (app only) | 3:4 | 1080 × 1440 px |
+| Square | 1:1 | 1080 × 1080 px |
+| Landscape | 1.91:1 | 1080 × 566 px |
+
+A carousel holds up to 20 slides. Portrait 4:5 takes up the most room in the feed on every surface, which is why Auto leans toward it when the set has tall photos.
+
+## Questions
+
+<details>
+
+<summary>
+
+### Why not just use Instagram's Mixed option?
+
+</summary>
+
+Instagram's Mixed option keeps each photo's shape, but it fills the empty space with a background that follows the app's light or dark theme, and you can't control its color or size. This tool bakes an even white border into every image, so the carousel looks the same for every viewer.
+
+</details>
+
+<details>
+
+<summary>
+
+### How do I post portrait and landscape photos in one carousel without cropping?
+
+</summary>
+
+Add all the photos here, keep the aspect ratio on Auto, and download the ZIP. Every slide comes out at the same canvas size with the whole photo inside it, so Instagram has nothing to crop. Upload the slides in the numbered order.
+
+</details>
+
+<details>
+
+<summary>
+
+### What size should Instagram carousel images be?
+
+</summary>
+
+Instagram stores posts at 1080 pixels wide, with an aspect ratio between 1.91:1 (1080 × 566) and 4:5 (1080 × 1350). The app also accepts 3:4 (1080 × 1440). Every slide in a carousel should share one ratio. Choose the 1080 export width here for files sized exactly for Instagram.
+
+</details>
+
+<details>
+
+<summary>
+
+### Are my photos uploaded anywhere?
+
+</summary>
+
+No. The images are decoded, padded and encoded by your browser on your own device. Nothing is sent to a server.
+
+</details>
+
+<details>
+
+<summary>
+
+### How many photos can I add?
+
+</summary>
+
+Up to 20, which is the most Instagram allows in one carousel. The tool also warns you when a slide is larger than 8 MB.
+
+</details>
+
+<details>
+
+<summary>
+
+### How wide should the white border be?
+
+</summary>
+
+Padding is a percentage of the shared photo area, from 0 to 20%. Around 5% reads as a thin frame and around 10% looks like a matted gallery print. At 0% the photos still share one canvas, with white only where their shapes differ.
+
+</details>
+
+<details>
+
+<summary>
+
+### Should I export JPEG or PNG?
+
+</summary>
+
+JPEG at 95% quality suits photos and keeps files small. PNG is lossless and better for screenshots, text or flat graphics, but the files are much larger.
+
+</details>
+
+<details>
+
+<summary>
+
+### Can I use a border color other than white?
+
+</summary>
+
+Not yet, the padding is always white. If you want another color, open an issue on GitHub and say what you would use it for.
+
+</details>
+
+I built this for posting photos from hikes and trips, and wrote about why in [a post about the carousel padding tool](https://subodhdahal.com/blog/instagram-carousel-padding-tool/).
+
+Found a bug or want a feature? Please [**open an issue on GitHub**](https://github.com/SubodhDahal/subodhdahal.github.io/issues/new).
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#webpage","description":"Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.","name":"Instagram Carousel White Border Tool (No Crop)","url":"https://subodhdahal.com/tools/instagram-carousel/","@type":["WebPage","FAQPage"],"breadcrumb":{"@id":"https://subodhdahal.com/tools/instagram-carousel/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"mainEntity":[{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/1"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/2"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/3"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/4"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/5"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/6"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/7"},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/8"}],"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/tools/instagram-carousel/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Tools","item":"https://subodhdahal.com/tools/","position":2},{"@type":"ListItem","name":"Instagram carousel white border tool","item":"https://subodhdahal.com/tools/instagram-carousel/","position":3}]},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/1","@type":"Question","inLanguage":"en","name":"Why not just use Instagram's Mixed option?","acceptedAnswer":{"@type":"Answer","text":"Instagram's Mixed option keeps each photo's shape, but it fills the empty space with a background that follows the app's light or dark theme, and you can't control its color or size. This tool bakes an even white border into every image, so the carousel looks the same for every viewer."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/2","@type":"Question","inLanguage":"en","name":"How do I post portrait and landscape photos in one carousel without cropping?","acceptedAnswer":{"@type":"Answer","text":"Add all the photos here, keep the aspect ratio on Auto, and download the ZIP. Every slide comes out at the same canvas size with the whole photo inside it, so Instagram has nothing to crop. Upload the slides in the numbered order."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/3","@type":"Question","inLanguage":"en","name":"What size should Instagram carousel images be?","acceptedAnswer":{"@type":"Answer","text":"Instagram stores posts at 1080 pixels wide, with an aspect ratio between 1.91:1 (1080 × 566) and 4:5 (1080 × 1350). The app also accepts 3:4 (1080 × 1440). Every slide in a carousel should share one ratio. Choose the 1080 export width here for files sized exactly for Instagram."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/4","@type":"Question","inLanguage":"en","name":"Are my photos uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. The images are decoded, padded and encoded by your browser on your own device. Nothing is sent to a server."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/5","@type":"Question","inLanguage":"en","name":"How many photos can I add?","acceptedAnswer":{"@type":"Answer","text":"Up to 20, which is the most Instagram allows in one carousel. The tool also warns you when a slide is larger than 8 MB."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/6","@type":"Question","inLanguage":"en","name":"How wide should the white border be?","acceptedAnswer":{"@type":"Answer","text":"Padding is a percentage of the shared photo area, from 0 to 20%. Around 5% reads as a thin frame and around 10% looks like a matted gallery print. At 0% the photos still share one canvas, with white only where their shapes differ."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/7","@type":"Question","inLanguage":"en","name":"Should I export JPEG or PNG?","acceptedAnswer":{"@type":"Answer","text":"JPEG at 95% quality suits photos and keeps files small. PNG is lossless and better for screenshots, text or flat graphics, but the files are much larger."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/question/8","@type":"Question","inLanguage":"en","name":"Can I use a border color other than white?","acceptedAnswer":{"@type":"Answer","text":"Not yet, the padding is always white. If you want another color, open an issue on GitHub and say what you would use it for."}},{"@id":"https://subodhdahal.com/tools/instagram-carousel/#/schema/web-application/1","@type":"WebApplication","applicationCategory":"MultimediaApplication","browserRequirements":"Requires JavaScript and a modern browser","description":"Free white border tool for Instagram carousels: fit portrait and landscape photos on one matching canvas so nothing gets cropped. No upload, no sign-up.","isAccessibleForFree":true,"name":"Instagram Carousel White Border Tool (No Crop)","operatingSystem":"Any","screenshot":"https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png","url":"https://subodhdahal.com/tools/instagram-carousel/","alternateName":["Instagram Carousel Tools","Instagram white border maker","Instagram no crop tool"],"author":{"@id":"https://subodhdahal.com/#identity"},"featureList":["Pads every photo onto one shared canvas so Instagram does not crop it","Even white border from 0 to 20%","Auto aspect ratio, or fixed 4:5, 1:1, 1.91:1 or 3:4","Export at original size, 1080 or 1440 px wide","JPEG or PNG, downloaded as a ZIP","Up to 20 slides, matching the Instagram carousel limit","Runs entirely in the browser; images are never uploaded"],"offers":{"@type":"Offer","price":0,"priceCurrency":"USD"}},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
+- **Page:** Photography · Subodh Dahal
+- **Source:** https://subodhdahal.com/photography
+- **Description:** Photos from Nepal and trips around Europe, hung as small previews on one wall.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_4df283f00c72087a.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_4df283f00c72087a.png
+```
+
+```json
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/photography/#webpage","description":"Photos from Nepal and trips around Europe, hung as small previews on one wall.","name":"Photography","url":"https://subodhdahal.com/photography/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/photography/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/photography/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/photography/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Photography","item":"https://subodhdahal.com/photography/","position":2}]},{"@id":"https://subodhdahal.com/photography/#/schema/image-gallery/1","@type":"ImageGallery","description":"Photos from Nepal and trips around Europe, hung as small previews on one wall.","name":"Photography by Subodh Dahal","url":"https://subodhdahal.com/photography/","image":[{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/st-bartholomae-koenigssee-1200.webp","name":"St. Bartholomä","caption":"St. Bartholomä, Königssee, Germany · 2026","contentLocation":{"@type":"Place","name":"Königssee, Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":801},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/chitwan-snow-peaks-1200.webp","name":"Snow above the jungle","caption":"Snow above the jungle, Chitwan, Nepal · 2026","contentLocation":{"@type":"Place","name":"Chitwan, Nepal"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/trajans-column-1200.webp","name":"Trajan's Column","caption":"Trajan's Column, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":899},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/lichtenstein-castle-1200.webp","name":"Castle in the mist","caption":"Castle in the mist, Lichtenstein Castle, Germany · 2025","contentLocation":{"@type":"Place","name":"Lichtenstein Castle, Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":900,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/bee-on-scabious-1200.webp","name":"Visitor","caption":"Visitor, Germany · 2026","contentLocation":{"@type":"Place","name":"Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/tower-bridge-1200.webp","name":"Tower Bridge","caption":"Tower Bridge, London, England · 2026","contentLocation":{"@type":"Place","name":"London, England"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":802},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/chitwan-morning-light-1200.webp","name":"Morning light","caption":"Morning light, Chitwan, Nepal · 2026","contentLocation":{"@type":"Place","name":"Chitwan, Nepal"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/palma-cathedral-1200.webp","name":"La Seu","caption":"La Seu, Palma, Mallorca · 2025","contentLocation":{"@type":"Place","name":"Palma, Mallorca"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":900},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/autumn-pair-1200.webp","name":"Yellow and orange","caption":"Yellow and orange, Germany · 2026","contentLocation":{"@type":"Place","name":"Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/colosseum-1200.webp","name":"Colosseum","caption":"Colosseum, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":899},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/buckingham-palace-gates-1200.webp","name":"Palace gates","caption":"Palace gates, London, England · 2026","contentLocation":{"@type":"Place","name":"London, England"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":801,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/palma-palms-1200.webp","name":"Palms on the seafront","caption":"Palms on the seafront, Palma, Mallorca · 2025","contentLocation":{"@type":"Place","name":"Palma, Mallorca"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":900},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/chitwan-old-tree-1200.webp","name":"The old tree","caption":"The old tree, Chitwan, Nepal · 2026","contentLocation":{"@type":"Place","name":"Chitwan, Nepal"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":857,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/koenigssee-peaks-1200.webp","name":"Low cloud over the lake","caption":"Low cloud over the lake, Königssee, Germany · 2026","contentLocation":{"@type":"Place","name":"Königssee, Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":801},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/roman-emperor-and-pine-1200.webp","name":"Emperor and pine","caption":"Emperor and pine, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":801,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/basel-barfuesserplatz-1200.webp","name":"Old town, winter sun","caption":"Old town, winter sun, Basel, Switzerland · 2026","contentLocation":{"@type":"Place","name":"Basel, Switzerland"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":801},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/bare-tree-1200.webp","name":"Before winter","caption":"Before winter, Germany · 2026","contentLocation":{"@type":"Place","name":"Germany"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":960,"height":1200},{"@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/photography/roman-forum-1200.webp","name":"The Forum","caption":"The Forum, Rome, Italy · 2026","contentLocation":{"@type":"Place","name":"Rome, Italy"},"creator":{"@type":"Person","name":"Subodh Dahal"},"creditText":"Subodh Dahal","copyrightNotice":"© Subodh Dahal. All rights reserved.","width":1200,"height":900}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+```
+
+---
+
+- **Page:** A browser tool that puts every carousel photo on the same white mat, like a gallery print
+- **Source:** https://subodhdahal.com/blog/instagram-carousel-padding-tool
+- **Description:** Instagram can keep each photo's original aspect ratio in a carousel, but I prefer a white canvas with even borders. I built a page that pads every image onto one shared canvas, entirely in the browser.
+
+I use Instagram to post pictures from my hikes and trips, and nearly every one is nature or scenery. I like posting four or five at once as a carousel, but those photos come out in different aspect ratios. A wide mountain view sits next to a tall shot of a tree, and I wanted the whole set to look good when someone swipes through it in the app.
+
+I wanted every slide on the same white canvas with a border around the photo, like a print in a gallery frame.
+
+So I made a page for it: an [Instagram carousel white border tool](https://subodhdahal.com/tools/instagram-carousel/). You drop images in, it pads each one onto a shared canvas, and you download the result. Everything runs in your browser, so your photos are never uploaded.
+
+## Why I don't use Instagram's Mixed option
+
+Instagram's phone app has a **Mixed** option in the crop menu that keeps each photo's own aspect ratio. The space around the wide photos isn't necessarily white, because Instagram fills it with a background that follows the app's theme. I can't control that background or how much space each photo gets, and I'd rather have white, which looks better to me.
+
+## Padding one wide photo and three tall ones to 4:5
+
+I tested it with four photos from a walk in November: one wide 4:3 photo and three 4:5 tall ones. The page picked a 4:5 canvas of 1440 × 1800 pixels. The wide photo got white space above and below, and the tall ones got a thin border.
+
+<figure className="image">
+
+![Instagram Carousel Tools showing four autumn photos on identical white canvases, the first one wide, with white space above and below](https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-four-photos-loaded.png)
+  <figcaption>
+
+The first photo is the wide one. The slides share one canvas size.
+
+</figcaption>
+</figure>
+
+The padding slider goes from 0 to 20%. Around 10% it starts to look matted. The ratio defaults to Auto, which picks the best fit for the set, and I can force 4:5, 1:1 or 1.91:1 instead. A click on any slide opens a swipe preview, and the padding slider stays in reach.
+
+<figure className="image">
+
+![Preview viewer showing the wide autumn photo centered on a white 4:5 slide with navigation arrows and dots](https://subodhdahal.com/images/instagram-carousel-tool/carousel-tool-preview-viewer.png)
+  <figcaption>
+
+The preview with padding at 10%.
+
+</figcaption>
+</figure>
+
+I export at 1080 wide as JPEG, and the tool gives me a ZIP. It also supports 1440 wide and PNG. It stops at 20 slides, which is Instagram's cap, and warns when a file goes above 8 MB. My test photos came out between 670 KB and 1 MB each.
+
+## The layout math and canvas drawing behind the tool
+
+The tool is a Nuxt page with a few Vue components and two small TypeScript files. One does the layout math and the other draws onto a `<canvas>`.
+
+If you haven't used it, `<canvas>` is an HTML element that gives you a blank grid of pixels that JavaScript can paint into. I picked it because the browser already does the hard parts: it decodes the photos, resizes them with smoothing when you draw them, and encodes the result as JPEG or PNG through `canvas.toBlob`. So the tool doesn't need an image library or a server, which is why nothing gets uploaded. The previews on the page are canvases too, painted by the same code.
+
+```mermaidThe whole tool, from dropping photos in to downloading slides.
+flowchart TD
+  accTitle: How the carousel tool turns photos into slides
+  accDescr: Drop in photos, decode each photo and fix EXIF rotation, pick the aspect ratio with the least empty space, size one box that fits every photo and add padding, draw each photo centered on a white canvas, encode each slide as JPEG or PNG, then download one slide or a ZIP.
+  A["Drop in photos"] --> B["Decode each photo, fix EXIF rotation"]
+  B --> C["Pick the aspect ratio with the least empty space"]
+  C --> D["Size one box that fits every photo, add padding"]
+  D --> E["Draw each photo centered on a white canvas"]
+  E --> F["Encode each slide as JPEG or PNG"]
+  F --> G["Download one slide or a ZIP"]
+```
+
+Picking the aspect ratio and sizing the canvas is where most of the code goes, so here is a closer look at those steps:
+
+```mermaidInside the layout step: choosing the aspect ratio and sizing the canvas.
+flowchart TD
+  accTitle: How the tool picks the aspect ratio and sizes the canvas
+  accDescr: If a ratio is forced, the tool uses it. Otherwise it builds candidates from each photo's ratio, clamped to Instagram's range, plus both range limits, scores each candidate, and picks the highest score, breaking ties toward square. It then sizes the smallest box at that ratio that fits every photo, adds padding, rounds the canvas to whole pixels while ignoring floating-point error, and either keeps the original size capped at 1440 wide or scales to 1080 or 1440 and clamps the height.
+  A{"Ratio forced?"} -- yes --> R["Use that ratio"]
+  A -- no --> B["Candidates: each photo's ratio,<br/>clamped to 4:5 to 1.91:1, plus both limits"]
+  B --> C["Score each: sum of min(R/r, r/R)"]
+  C --> D["Highest score wins<br/>(tie goes to closest to square)"]
+  D --> R
+  R --> E["Box = smallest at ratio R<br/>that fits every photo natively"]
+  E --> F["Add padding on every side"]
+  F --> G["Round to whole pixels,<br/>ignoring float error"]
+  G --> H{"Export width?"}
+  H -- Original --> I["Keep size, cap at 1440 wide"]
+  H -- 1080 / 1440 --> J["Scale, clamp height to Instagram's range"]
+```
+
+### Scoring a few candidates instead of every ratio
+
+The point of the tool is that every slide shares one canvas, so Auto mode needs one ratio for the whole set. A photo with ratio `r` in a box with ratio `R` fills `min(R/r, r/R)` of it. The total over all photos can only peak at one of the photos' own ratios or at a range limit, so the tool only scores those.
+
+For my test set, 4:5 scores 3.6 (the three tall photos fill 100% of it, the wide one 60%) and 4:3 scores 2.8.
+
+Because every photo fits into the same box, photos with the same aspect ratio end up in the same spot, even if one is 6000 pixels wide and the other 2000.
+
+### The floating-point rounding guard
+
+Rounding was the fiddly part. The code rounds one side of the canvas up so it's never too small for the photos. But JavaScript can't store most fractions exactly, so a value that should be whole sometimes comes out a hair above it. For an 878 × 800 photo with no padding, the height works out to `878 / (878 / 800)`, which JavaScript computes as `800.0000000000001`. Rounding that up gives 801, so the canvas is one pixel taller than the photo and a half-pixel strip of white shows along the top and bottom edges.
+
+So the code subtracts `1e-9` before rounding up. That's far bigger than the floating-point error and far smaller than any real fraction of a pixel, so the height comes out as 800.
+
+### Drawing and exporting
+
+Decoding with `createImageBitmap(file, { imageOrientation: 'from-image' })` applies the EXIF rotation, so phone photos don't come out sideways. The thumbnails and the export use the same `drawSlide` function, so what you see in the grid matches the file you download. [JSZip](https://stuk.github.io/jszip/) builds the ZIP.
+
+The file size under each slide comes from encoding it for real, 350 ms after you stop moving the slider, so the 8 MB warning uses real sizes instead of estimates. The layout and drawing code is in [`app/lib/carousel/`](https://github.com/SubodhDahal/subodhdahal.github.io/tree/master/app/lib/carousel).
+
+## What's missing
+
+The padding is always white. I haven't decided whether other colors are worth adding. If something breaks on your photos or you want a feature, please [open an issue on GitHub](https://github.com/SubodhDahal/subodhdahal.github.io/issues/new).
+
+---
+
+- **Page:** Blog: software, self-hosting and travel notes · Subodh Dahal
+- **Source:** https://subodhdahal.com/blog
+- **Description:** Notes by Subodh Dahal on software, self-hosting, NixOS, automation, developer tools, photography and hiking.
+
+```yaml
+meta:
+  og:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
+  og:image:height: "600"
+  og:image:type: image/png
+  og:image:width: "1200"
+  twitter:image: https://subodhdahal.com/_og/s/o_7a8938987962a4d4.png
 ```
 
 # **Blog Articles **
 
 *Notes on software, automation, and the tools I build with. *
 
+- [<h2>**Why I let AI agents change my OS only through Nix**</h2>
+
+  AI agents make it trivial to change your operating system and hard to remember what they changed. Here's why I manage NixOS and macOS from one Nix config in Git.**nixos****nix****nix-darwin****ai****developer productivity****Nov 26, 2026**](https://subodhdahal.com/blog/configuring-my-os-with-nix-in-the-age-of-ai/)
+- [<h2>**A browser tool that puts every carousel photo on the same white mat, like a gallery print**</h2>
+
+  Instagram can keep each photo's original aspect ratio in a carousel, but I prefer a white canvas with even borders. I built a page that pads every image onto one shared canvas, entirely in the browser.**tools****instagram****photography****Nov 25, 2026**](https://subodhdahal.com/blog/instagram-carousel-padding-tool/)
 - [<h2>**Getting Handy speech-to-text to type on NixOS and COSMIC, and to use my eGPU**</h2>
 
   Handy's shortcut did nothing, and after I fixed that, nothing got typed. A Wayland shortcut, a microphone, the paste method and an autostart file caused it, and the GPU did not.**troubleshooting****nixos****cosmic****wayland****speech-to-text****egpu****Nov 19, 2026**](https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu/)
-- [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>**troubleshooting****nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
+- [<h2>**Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot**</h2>
+
+  My Razer Core X eGPU only worked if I timed it against boot. On NixOS the NVIDIA driver rejected the hotplugged card; PCI kernel parameters and a device node fixed it.**troubleshooting****nixos****egpu****thunderbolt****nvidia****linux****Nov 18, 2026**](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos/)
 - [<h2>**Stop stashing half-finished work: use Git worktrees and Worktrunk**</h2>
 
   Git worktrees keep separate branches checked out at once. Worktrunk automates per-worktree setup. The same isolation also works for parallel AI agents.**git****worktrees****worktrunk****developer productivity****command line****workflow****Aug 16, 2026**](https://subodhdahal.com/blog/worktrees-with-worktrunk/)
 - [<h2>**Self-Hosting my Git forge with Forgejo**</h2>
 
-  Why I moved away from GitHub and chose a lightweight, community-driven alternative**Homelab****Open source****Self-hosting****Workflow****Apr 29, 2026**](https://subodhdahal.com/blog/self-hosting-my-git-forge/)
+  Why I moved away from GitHub and chose a lightweight, community-driven alternative**homelab****open source****self-hosting****workflow****Apr 29, 2026**](https://subodhdahal.com/blog/self-hosting-my-git-forge/)
 - [<h2>**Curating my own reading and discovery feed with RSS**</h2>
 
-  Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.**Homelab****Open source****Self-hosting****Workflow****Feb 8, 2026**](https://subodhdahal.com/blog/reading-and-discovery-feed-curation/)
+  Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.**homelab****open source****self-hosting****workflow****Feb 8, 2026**](https://subodhdahal.com/blog/reading-and-discovery-feed-curation/)
 - [<h2>**Fixing my broken Docker Immich+Traefik setup**</h2>
 
   Photo indexing failed in my Immich+Traefik setup. I'd misconfigured my Docker networking. Here's how I figured it out and what I changed.**homelab****networking****Oct 31, 2025**](https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/)
@@ -128,10 +439,10 @@ meta:
   Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.**jq****json****command line****automation****developer productivity****Oct 19, 2025**](https://subodhdahal.com/blog/jq-json-outline/)
 - [<h2>**Why I added RSS feeds to my blog (and how I did it in Nuxt 3)**</h2>
 
-  How I built RSS and Atom feed support for my Nuxt 3 website to let readers follow my content without social media algorithms.**Nuxt****web development****tutorial****Aug 31, 2025**](https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3/)
+  How I built RSS and Atom feed support for my Nuxt 3 website to let readers follow my content without social media algorithms.**nuxt****web development****tutorial****Aug 31, 2025**](https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3/)
 - [<h2>**Revisiting my Stream Deck for music control**</h2>
 
-  How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.**productivity****Developer Productivity****automation****home-office****Jun 7, 2025**](https://subodhdahal.com/blog/stream-deck-youtube-music/)
+  How I turned my neglected Stream Deck into a useful tool for controlling YouTube Music without breaking my workflow.**productivity****developer productivity****automation****home-office****Jun 7, 2025**](https://subodhdahal.com/blog/stream-deck-youtube-music/)
 - [<h2>**fzf + fabric: Smart selection for LLM patterns and models**</h2>
 
   Enhance your experience with fabric, the AI prompt tool, by using interactive selection for patterns and models.**developer productivity****May 24, 2025**](https://subodhdahal.com/blog/ai-pattern-selection-in-fabric/)
@@ -155,127 +466,220 @@ meta:
   Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level**travel****Jan 22, 2022**](https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal/)
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal -  Software Engineer, Automation Enthusiast, Hobbyist Photographer & Avid Ponderer","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/blog/#webpage","@type":"WebPage","description":"Blog posts by Subodh Dahal","name":"Blog posts","url":"https://subodhdahal.com/blog/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/blog/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Software Engineer","name":"Subodh Dahal","url":"https://subodhdahal.com","image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"sameAs":["https://github.com/subodhdahal","https://linkedin.com/in/subodhdahal"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
+{"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/blog/#webpage","description":"Notes by Subodh Dahal on software, self-hosting, NixOS, automation, developer tools, photography and hiking.","name":"Blog: software, self-hosting and travel notes","url":"https://subodhdahal.com/blog/","@type":["WebPage","CollectionPage"],"breadcrumb":{"@id":"https://subodhdahal.com/blog/#breadcrumb"},"isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/blog/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/blog/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","name":"Home","item":"https://subodhdahal.com/","position":1},{"@type":"ListItem","name":"Blog","item":"https://subodhdahal.com/blog/","position":2}]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
 ```
 
 ---
 
-- **Page:** Self-Hosting my Git forge with Forgejo
-- **Source:** https://subodhdahal.com/blog/self-hosting-my-git-forge
-- **Description:** Why I moved away from GitHub and chose a lightweight, community-driven alternative
+- **Page:** My 2023 travels: A visual journey
+- **Source:** https://subodhdahal.com/blog/2023-travels-visual-journey
+- **Description:** Looking back at the best pictures from my travel adventures in 2023
 
-For years, GitHub held all my personal Git repos. It worked fine. I used it with friends during my bachelor's and master's studies. But over time it felt less like a tool and more like a service that just put up with me.
+## My 2023 travels: A visual journey
 
-GitHub has had its share of problems lately. Repos scanned for AI training unless you opt out, outages, and [Git history rewritten after merging pull requests](https://github.blog/news-insights/company-news/an-update-on-github-availability/) are a few examples.
+Yet another year has passed. I've been lucky enough to travel to some amazing places, meet some amazing people and make wonderful memories. Here are some of my favourite pictures from my travels in 2023.
 
-What pushed me to self-host was my unease with data on servers whose terms can change anytime. That's the thinking behind most of what I self-host. I run my own reading feed, my own photo library, and now my own Git forge. It's not the easy path, but ownership and privacy are worth the effort.
+## Nepal 🇳🇵
 
-## Why Not GitLab?
+### Kathmandu valley
 
-[GitLab](https://gitlab.com) was the obvious first thing to look at. I've used it at work for years and it's solid. But it's built for teams and companies, and that shows in the resources it needs. Running it at home means a platform that needs gigabytes of RAM for things I'd never use. My small NUC runs other services and couldn't handle it.
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-## Why Forgejo?
+![Nyatapole temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-10.jpg)
+  ![The Himalayas as seen from Kathmandu](https://subodhdahal.com/images/2023-visual-journey/nepal-9.jpg)
+  ![A temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-1.jpg)
 
-[Forgejo](https://forgejo.org) is a lightweight, self-hosted Git forge from [Codeberg e.V.](https://codeberg.org/Codeberg/org), a non-profit. It's written in Go. It runs as one binary that fits in a few hundred megabytes of RAM.
+</div>
 
-What I use day to day:
+### Bharatpur
 
-- **Repository hosting:** that's mainly what I need it for and it does the job well.
-- **Container registry:** there's a built-in registry for container images. I push Docker images straight to my own instance.
-- **Forgejo Actions:** my projects use Actions to build the container image and push it to the registry. On the VM where I run my personal services, the `docker-compose` files point to my Forgejo registry directly. The syntax is close to GitHub Actions, and the whole flow from code to running container stays inside my homelab.
-- **Pull mirrors:** for repos that still live on GitHub, Forgejo syncs them on a schedule. It's a simple way to keep a local copy without changing the current setup.
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-I'm also hosting forks of a few open source projects I've tweaked. Those get built and pushed to my own registry too.
+![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-4.jpg)
+  ![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-3.jpg)
+  ![Evening in Sauraha](https://subodhdahal.com/images/2023-visual-journey/nepal-5.jpg)
 
-I don't use issue tracking, pull requests, or wikis yet. They're there if I need them.
+</div>
 
-## How It's Running
+### Pokhara
 
-Forgejo runs on a NUC at home, inside an Ubuntu VM on Proxmox, alongside a few other core services. I only access it over my home network. I could route it through Tailscale to get in when I'm away, but I haven't felt the need yet.
+![View of Mount Machhapuchhre](https://subodhdahal.com/images/2023-visual-journey/nepal-2.jpg)![Boating in Phewa Lake](https://subodhdahal.com/images/2023-visual-journey/nepal-11.jpg)## Croatia 🇭🇷
 
-Getting Forgejo Actions to work with the Traefik proxy took a few tries. The Docker build steps took a while too. After that, it has worked without issues for more than 3 months.
+### Plitvice Lakes National Park
 
-## Backups
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-One thing I didn't want to skip on was backups. Forgejo has a built-in `forgejo dump` command. It packs up the repos, config, and attachments into an archive. I run a daily cronjob with this command. I also dump the Postgres database on its own. Both get pushed to my NAS.
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-8.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-9.jpg)
 
-## Migrating from GitHub
+</div>
 
-The move went better than I expected. Forgejo has a built-in import tool that pulls everything from a GitHub repo: code, issues, pull requests, and history. You just give it the repo URL and a GitHub token.
+### Zagreb
 
-I put my old projects into an organization of their own on my Forgejo instance, away from my main account. I'm not actively working on them, but they're there if I ever need to look something up.
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-I also finally found a place for my Logseq notes, now stored in Git. Since I own the server, I don't worry about someone else having access to them.
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-6.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-3.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-4.jpg)
 
-I still use GitHub where it makes sense. My personal website runs on GitHub Pages at no cost, so that repo stays there. I use Forgejo's pull mirror to sync it to my instance on a schedule. That way I always have a local copy without changing the setup. Most open source projects are on GitHub, so it's still where I go when I want to contribute to something.
+</div>
 
-## Takeaway
+### Split
 
-The setup was simple, upkeep is low, and pushing code to my own server feels good.
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
----
+![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-10.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-13.jpg)
+  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-14.jpg)
 
-- **Page:** Curating my own reading and discovery feed with RSS
-- **Source:** https://subodhdahal.com/blog/reading-and-discovery-feed-curation
-- **Description:** Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
+</div>
 
-For quite some time, I have wanted to rely less on algorithmically curated feeds. The daily scroll through YouTube, Substack, or LinkedIn felt less like discovery and more like dopamine mining. I wanted a system that delivered interesting content to satisfy my curiosity, without platforms whose best interest is to have me glued to them. These days, finding such a platform is tough. Even if one exists now, there's no guarantee it won't eventually mimic the ones I wanted to get away from.
+## France 🇫🇷
 
-I wanted a system where I subscribe directly to creators or communities sharing content I like. That's exactly what a feed reader does. It pulls content chronologically from blogs and sites that support RSS/Atom feeds, with no middleman filtering or recommending.
+### Strasbourg
 
-There are a few feed reader platforms, but I wanted to have full data ownership and more control over the system. This is why I decided to self-host [FreshRSS](https://github.com/FreshRSS/FreshRSS), an open-source feed aggregator and reader, on my homelab running on a mini-PC. This also has the added advantage of being resilient compared to an online service which may stop existing for reasons beyond my control.
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-## Feed sources
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-1.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-2.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-4.jpg)
 
-Rather than relying on algorithms of platforms to decide which content they want to show me, I now subscribe to content from sources where I have found interesting writings before. I categorize the content sources broadly into the following:
+</div>
 
-- Communities: There's many interesting posts being shared on communities like Hacker News RSS, Lobsters, Lemmy. I started by directly subscribing to their content RSS feed. But the number of posts was overwhelming. So I now use [hnrss.com](https://hnrss.github.io/) and [upvote-rss](https://github.com/johnwarne/upvote-rss) to get only the top posts from them.
-- Personal Blogs: If a post catches my eye, I check the author’s site and subscribe to their personal RSS feed if they have other content that I also find interesting.
-- Substack: I subscribe to a creator's publication directly by using their Substack URL.
-- Websites without RSS: Not all websites provide RSS/Atom feeds. Luckily, there's an open-source and self-hostable project called [RSSHub](https://github.com/DIYgod/RSSHub) which can generate RSS feeds for many popular websites. It acts as a bridge between my FreshRSS instance and those websites. It also has a browser extension companion: [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar) to easily find and subscribe to RSS feeds.
-- Newsletters: Previously, I had subscribed to many newsletters on my personal email. This made my email inbox messy and it felt like a chore to go and read there. I now use [Kill the Newsletter!](https://kill-the-newsletter.com/) which provides an email address to subscribe to these newsletters. It generates an Atom feed which I can subscribe to in FreshRSS. This has the benefit of keeping my inbox clean and also consolidating all my reading into a single application.
-- YouTube Channels: Yes, I can directly subscribe to YouTube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
+### Colmar
 
-<figure className="w-full,image">
-<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="/images/freshrss-ui.png" style="border: 1px solid black">
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-2.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-1.jpg)
+  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-3.jpg)
+
+</div>
+
+### Nice and surrounding areas
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-7.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-3.jpg)
+  <div>
+
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-2.jpg)
+    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-8.jpg)
+
+</div>
 
 
+  <div>
 
-</iframe>
+![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-5.jpg)
+    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-6.jpg)
 
+</div>
+</div>
 
-  <figcaption>
+## Germany 🇩🇪
 
-This is how my FreshRSS looks like
+### Kiel
 
-</figcaption>
-</figure>
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-Since FreshRSS is an aggregator, I don't necessarily need to use the FreshRSS interface to access my feed. There are many applications for different platforms which can use FreshRSS as the source for the feeds. I use the Readrops app on my phone. I have occasionally used the NetNewsWire app on MacOS.
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/june-kiel-2.jpg)
 
-## Filtering my feed
+</div>
 
-Some newsletters I subscribe to, like those covering AI news, have a short shelf life. If I haven't read them within a month, the content is usually stale and there is little point in me reading them. That's why I've set up the `-pubdate:P30D` filter to automatically mark them as read.
+### Schwäbisch Hall
 
-FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a YouTube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenever I get to them, so there's no need to rush.
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/may-schwaebisch-hall-1.jpg)
 
-## Extending and customizing FreshRSS
+</div>
 
-FreshRSS is not the only self-hostable feed aggregator. The main reason I chose it is because of its support for extensions which allows for augmenting its functionality. The ones I find useful are:
+### Würzburg
 
-- Youlag: Better interface for YouTube videos than the default view
-- Af_Readability: Inlines full article content for sites that only show excerpts in feeds.
-- Karakeep Button: Saves interesting posts directly to my Karakeep instance for long-term storage.
+![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/aug-wuerzburg-2.jpg)## Monaco 🇲🇨
 
-There's a lot more extensions which can be browsed in the [official repository](https://github.com/FreshRSS/Extensions).
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
 
-## Conclusion
+![Travel photo in Monaco](https://subodhdahal.com/images/2023-visual-journey/may-monaco-1.jpg)
 
-After migrating to this setup, I am reading more in-depth content than what I did before. I've discovered authors sharing valuable perspectives on topics I find interesting that are not within the current hype-cycle. It's also refreshing to follow the creators whose writing feels like the pre-SEO, pre-marketing, pre-AISlop internet.
+</div>
 
-I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my default way of finding new content is now the feed reader.
+## Hungary 🇭🇺
+
+### Budapest
+
+![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-6.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-4.jpg)
+  ![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-1.jpg)
+
+</div>
+
+## Netherlands 🇳🇱
+
+### Amsterdam
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-3.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-3.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-2.jpg)
+
+</div>
+
+### The Hague
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-4.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-5.jpg)
+
+</div>
+
+### Zaandam
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-5.jpg)
+  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-7.jpg)
+
+</div>
+
+## Spain 🇪🇸
+
+### Barcelona
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-1.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-8.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-7.jpg)
+
+</div>
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-5.jpg)
+  ![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-6.jpg)
+
+</div>
+
+### Montserrat
+
+<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+
+![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-9.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-11.jpg)
+  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-10.jpg)
+
+</div>
+
+<div className="text-travel-heading,text-5xl,text-center,mt-8,pb-8">
+
+Fin
+
+</div>
 
 ---
 
@@ -362,8 +766,157 @@ I haven't timed live dictation on the eGPU, so the numbers above come from the f
 
 ---
 
+- **Page:** Why I let AI agents change my OS only through Nix
+- **Source:** https://subodhdahal.com/blog/configuring-my-os-with-nix-in-the-age-of-ai
+- **Description:** AI agents make it trivial to change your operating system and hard to remember what they changed. Here's why I manage NixOS and macOS from one Nix config in Git.
+
+With an AI agent, I can change almost anything on my operating system without knowing much about what's happening. That's great until something breaks three months later and nobody, including the agent, remembers what it touched.
+
+My answer is to let agents change my system only through Nix. Each change is code in a Git repository and each rebuild is a snapshot I can boot back into. The same config also runs my NixOS laptop and my work Mac.
+
+The first section is how I got here, starting with the time I broke a friend's computer. If you only want the AI agent part, [skip to letting agents change the OS through Nix](#letting-ai-agents-change-my-os-only-through-nix).
+
+## How I ended up configuring my OS with Nix
+
+### Deleting system32 taught me that a reinstall fixes everything
+
+When I was in school, I advised a friend to delete the system32 directory on his Windows ME computer to reclaim space. My reasoning was that he wasn't using the applications in there, so they didn't need to be there. (I was sure about this.)
+
+Windows ME did have a feature called System File Protection that quietly restored about 900 core files if something deleted them, but it didn't warn us and it didn't save us. The files disappeared, and everything seemed to work for the rest of that session. The next time we turned the computer on, we were horrified. We couldn't log in and nothing was working.
+
+I was afraid I had turned his computer, which was a luxury in Nepal at that time, into basically a hunk of junk. I wasn't there when he told his parents, but I doubt they were happy. A technician came a few days later. Once my friend told him what we had done, he figured a reinstall was the only way, and the guy just reinstalled the operating system. That was it.
+
+I felt relieved, and also happy to learn that the software side of a computer wasn't that scary. Almost anything could be undone with a fresh install.
+
+When I later got my own computer, I used that lesson to tinker. I was running Windows like most people, installing apps and poking around in settings, and if I broke something I couldn't fix, I reinstalled. We didn't have files that needed to persist, so formatting the whole drive didn't cost anything. It let me learn a lot about computers and taught me that messing up was rarely a disaster.
+
+### Reinstalling stopped being an option
+
+During my bachelor's studies, I installed Linux on my laptop. It felt scary at first because everything was different from Windows, and there was still the idea that Linux was hard. But I knew I could reinstall if I broke something.
+
+By then I kept my important data on an external hard disk and on a separate data partition. I could wipe the operating system partition and leave the data alone.
+
+As I got busier with studies and later work, I stopped having the time to reinstall every time I messed something up. So I started keeping notes about what I changed, so I could revert it.
+
+Back then, Linux needed a lot of tweaking for specific hardware because things didn't work out of the box. When I bought my ThinkPad X1 Extreme Gen 1, its built-in NVIDIA GPU didn't work by default. I found a blog post from someone who had figured it out and made the few tweaks they described. They worked.
+
+I don't remember much more about what I changed, and that's the problem. Fixes like that solved the problem I had, and then at some point in the future something else broke because of them, either because the operating system changed underneath or because I changed something else. That was always hard to track down months or years after I'd made the change. My notes never had enough detail. I wanted a system where I could make changes, see exactly what I'd changed, and get back to the previous state when something new broke.
+
+### Finding Nix, and bouncing off it
+
+That's when I came across [Nix](https://nix.dev/), a package manager with its own language for describing builds, and [NixOS](https://nixos.org/), the Linux distribution built on it. You describe your whole system (packages, services, users, settings) in files written in the Nix language, and Nix builds the system from that description.
+
+It looked like exactly what I was looking for. I watched a few videos and skimmed through the manual. There were a lot of new concepts and a lot of barriers before I could do anything useful, and I decided Nix was too complicated before I'd installed anything. So I never tried it.
+
+### LLMs got me over the learning curve
+
+Then LLMs came along, and writing code where you describe what you want and get it done became much easier.
+
+That's when I went all in. My dotfiles repository has commits going back to 2019, but the first Nix commit is from August 2025. I was still on Fedora at the time, so in early September I started from a starter configuration and used Nix with Home Manager just to install packages and manage my user setup. Twelve days later the laptop was running NixOS, and I was configuring the whole operating system in Nix.
+
+I had a lot of help from LLMs, because there were so many things I didn't know. Nix also changes between versions, so what worked in a tutorial a year ago sometimes doesn't work now. The LLMs were good enough to figure out what was breaking and fix it, which is the part I would have given up on alone.
+
+### One Nix config for my NixOS laptop and my work Mac
+
+I first used Nix only on my personal laptop. Then I found [nix-darwin](https://github.com/nix-darwin/nix-darwin), which lets you install packages and manage a good part of the system configuration on macOS with Nix too.
+
+That solved a small but constant annoyance. I'd discover a tool on the weekend on my personal laptop, then reach for it on Monday on my work Mac and realize it wasn't installed or configured there. It's not a big problem, but it happened all the time.
+
+With one flake, I now describe both machines and share most of the configuration between them. The layout looks like this:
+
+```text
+nix/
+├── flake.nix           # nixosConfigurations + darwinConfigurations
+├── hosts/
+│   ├── nixos/          # laptop: hardware, NVIDIA, eGPU, services
+│   └── darwin/         # work Mac: system defaults, Homebrew casks
+├── modules/profiles/   # minimal, workstation, server
+├── lib/                # builders and shared Home Manager config
+└── pkgs/               # packages I build myself (more on that below)
+```
+
+The shared profiles contain the packages and settings both machines need. The `hosts/` directories only contain what's specific to that machine, like the [eGPU fixes on the laptop](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos).
+
+## Letting AI agents change my OS only through Nix
+
+When I had lots of free time, I could try out new distros and desktop environments, then switch back. With adult responsibilities, getting something new set up and figuring out its issues takes time I rarely have.
+
+Now I point my agent at my Nix config and some documentation, describe what I want, and it figures out what to change. In November 2025 my config gained a switch between GNOME, Hyprland and COSMIC, so trying a desktop became a one-line change and a rebuild. A month later COSMIC became the default, and it still is. This is the part I care about most.
+
+### Why direct changes from an agent are hard to track
+
+Plenty of people use AI agents to change their operating system directly: run this command, edit that file in `/etc`, install this package. It often works. But if you make a lot of changes that way, it's hard to keep track of what the agent did, and you're back to my old problem of a fix from months ago breaking something today.
+
+### Every agent change is a Git diff I can read
+
+With Nix, the agent's changes show up as a diff in my config repository. I read the diff before I rebuild, and most of the time it's easy to understand. Even when I don't understand every line, I at least get a sense of what's happening, and it's in Git if I need to come back to it later.
+
+Here's a real one. My [eGPU only worked if I timed switching it on against booting the laptop](https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos), and in November 2026 I asked Claude to fix it. The fix touched one file, `egpu.nix`, with 20 lines added and 2 removed. It replaced a kernel parameter that reserved a 4-gigabyte memory window the firmware could never place with smaller windows that fit, and it added a udev rule to create the `/dev/nvidia` device node when the driver binds to a hotplugged card. The commit message explains both changes, so future me knows why they're there.
+
+The more interesting commit came the same day. While we were in that file, the agent noticed `pcie_aspm=off` in my kernel parameters. My laptop's firmware already tells the kernel it doesn't support power management on PCIe links (ASPM), so the kernel turns it off anyway and the flag did nothing. I had added it in December 2025, during my first round of eGPU troubleshooting, and forgotten about it. That's exactly the kind of leftover fix I used to lose track of on Fedora. This time the flag was one line in a file I could read, a commit told me when it arrived, and removing it took a one-line diff.
+
+### Rolling back to a previous NixOS generation
+
+If a rebuild breaks something, NixOS keeps each rebuild as a generation until I garbage-collect it. I can pick a previous generation from the boot menu, or roll back from a terminal:
+
+```bash
+# Switch back to the previous NixOS generation
+sudo nixos-rebuild switch --rollback
+```
+
+When I started writing this post, my laptop had 128 generations going back to September 2025, and the boot menu shows the last 10. (That number turned out to be a bug, more on that in the trade-offs.) Most of them I'll never need, but the one I need is always there. From the last working state, I can either leave the change out or hand the broken diff to the agent and let it debug.
+
+For someone like me who likes having tools set up the way I want rather than the default way, this combination is what makes tinkering safe again. It's the closest I've gotten to the "just reinstall" safety net I had as a kid, without losing anything.
+
+## Trade-offs of managing my OS with Nix
+
+Nix still has a barrier to entry, even with an LLM next to you. These are the things that bother me.
+
+### nixpkgs has the most packages, but some lag behind
+
+According to [Repology](https://repology.org/repositories/statistics/total), nixpkgs unstable has about 121,000 projects, more than any other repository, and about 86% are at the newest version. The other 13,000 or so wait until a contributor updates them. (The project has also had [its share of leadership drama](https://lwn.net/Articles/970824/), but that was about governance, not packages.)
+
+### Packaging from GitHub releases is yours to maintain
+
+When a package is out of date, my agent packages it from the project's GitHub releases. Six of my 13 custom packages, including [Worktrunk](https://subodhdahal.com/blog/worktrees-with-worktrunk), work this way. (I'm now the maintainer of six packages I never meant to maintain.) When their dependencies change, I have to ask the agent to fix them again.
+
+### Upstream flakes can mean building locally
+
+When a project publishes its own Nix flake outside nixpkgs, the official binary cache doesn't cover it. Unless the project runs its own cache, you build it yourself, and that can take a long time.
+
+### Programs downloaded from the internet don't run as is
+
+NixOS has no `/lib` or `/usr/lib`, so programs built for other distributions fail with `cannot execute: required file not found`. I work around it with `nix-ld` for Python wheels, `autoPatchelf` for one GitHub release package, and a wrapper for [Handy](https://subodhdahal.com/blog/handy-speech-to-text-nixos-cosmic-egpu) that lists 18 libraries its AppImage expects. On other distributions, you'd download the file and run it.
+
+### Old generations fill the disk unless you clean them up
+
+Each generation keeps its packages around, and builds leave leftovers, so the Nix store grows with every rebuild. Mine had filled 84% of my disk.
+
+My config runs the garbage collector weekly, so I thought I had this handled. While researching this post, I found out why I still had 128 generations: the job had been failing every week, before it collected anything.
+
+```text
+error: invalid number of days specifier '1w', expected something like '14d'
+```
+
+It only understands days, so `1w` had to be `7d`. (So much for reading every diff.) Running `nix-collect-garbage` by hand afterwards deleted 35,749 store paths and freed 84.6 GiB, which took the disk down to 72%. Nix also hard-links identical files, and that was already saving another 111 GiB.
+
+### Config changes need a rebuild, so some dotfiles stay in GNU Stow
+
+Changing a config managed by Nix needs a rebuild, and for a tool I'm still experimenting with, that's enough friction to stop me from trying things. So when I start using a new program, its config files (dotfiles) start in [GNU Stow](https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow/), and move into Nix once I stop changing them. Both live in the same repository, so it doesn't matter much which one manages a file.
+
+## Conclusion
+
+The kid who deleted system32 learned that a reinstall could undo almost anything. My friend and I aren't in touch anymore, and I suspect he took a different lesson from it, since he never got into working with computers the way I did.
+
+Nix gave me that safety net back, without the blank disk. Every change, mine or an agent's, is a diff I can read, and every rebuild is a generation I can roll back to. The barrier to entry is real. But if you like tinkering and you're letting AI agents change your system, it's the best way I've found to keep track of what they did.
+
+Next, I'd like to move the Ubuntu VMs on my [home server](https://subodhdahal.com/topics/self-hosting) to Nix, or to NixOS altogether. They run services I depend on, and the server can't run a test VM next to them, so with hardware prices what they are, that'll probably wait until I get a more powerful machine.
+
+---
+
 - **Page:** Getting a Razer Core X eGPU to work after login on NixOS, without timing the boot
 - **Source:** https://subodhdahal.com/blog/razer-core-x-egpu-hotplug-nixos
+- **Description:** My Razer Core X eGPU only worked if I timed it against boot. On NixOS the NVIDIA driver rejected the hotplugged card; PCI kernel parameters and a device node fixed it.
 
 My eGPU never got detected if I was already logged into NixOS. To get it working, I had to time switching on the Razer Core X against switching on the laptop. Sometimes that worked first try. Sometimes it took a few reboots and more timing games, and I never found a pattern.
 
@@ -733,215 +1286,742 @@ Then I'd add Worktrunk when the repeated environment setup starts getting irrita
 
 ---
 
-- **Page:** My 2023 travels: A visual journey
-- **Source:** https://subodhdahal.com/blog/2023-travels-visual-journey
-- **Description:** Looking back at the best pictures from my travel adventures in 2023
+- **Page:** Looking back: My 2022 in review
+- **Source:** https://subodhdahal.com/blog/2022-in-review
+- **Description:** From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.
 
-## My 2023 travels: A visual journey
+As the earth completes another revolution around the sun and yet another year comes to an end, I can't help but look back and reflect on all that has happened.
 
-Yet another year has passed. I've been lucky enough to travel to some amazing places, meet some amazing people and make wonderful memories. Here are some of my favourite pictures from my travels in 2023.
+For me, this year has been filled with highs and lows, moments of joy and sorrow, and a range of emotions in between. From embarking on solo adventures to creating lasting memories with close friends, I've had the opportunity to learn and grow in ways I never could have imagined.
 
-## Nepal 🇳🇵
+Join me as I take a journey through the year that was, and discover the lessons and insights I've gained along the way.
 
-### Kathmandu valley
+## Personal highlights
 
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+This year has been filled with exciting adventures, personal growth, and lasting memories. Here are some of the highlights:
 
-![Nyatapole temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-10.jpg)
-  ![The Himalayas as seen from Kathmandu](https://subodhdahal.com/images/2023-visual-journey/nepal-9.jpg)
-  ![A temple in Bhaktapur](https://subodhdahal.com/images/2023-visual-journey/nepal-1.jpg)
+### A year of travel: My adventures in 10 countries
+
+This year, I set off on a series of solo adventures that opened my eyes to new experiences and gave me the freedom to make spontaneous decisions. As I traveled to different countries and immersed myself in diverse cultures, I gained a new perspective on the world and my place in it.
+
+Along the way, I met a cast of intriguing characters and took time to reflect on my life and future goals. And when I wasn't venturing out on my own, I made some unforgettable memories with my closest friends.
+
+<figure className="image">
+
+![Europe map](https://subodhdahal.com/images/2022-in-review/europe-map-visited.svg)
+  <figcaption>
+
+A map of Europe with the countries I traveled to in 2022 marked in blue
+
+</figcaption>
+</figure>
+
+I embarked on a journey that took me to 10 countries, 8 of which were new to me. From the beautiful beaches of Greece and the wide landscapes of Norway, to the charming streets of Belgium and the historic sites of Poland, I was constantly in awe of the diverse cultures and landscapes I encountered. In Italy, I marveled at the ancient architecture and savored the delicious cuisine. I also visited the smallest country in the world, Vatican City and marveled at the beauty of St. Peter's Basilica. In Estonia, I was struck by the country's natural beauty and rich history, and in Finland, I was fascinated by the unique blend of modern and traditional culture.
+
+And even though I've visited Switzerland and Austria before, I always find something new and exciting to discover in these beautiful countries. Along the way, I also explored countless charming towns and villages throughout Germany.
+
+All these experiences made this year one of the most memorable and rewarding travel experiences of my life.
+
+<figure className="quote">
+
+> The use of traveling is to regulate imagination by reality, and instead of thinking how things may be, to see them as they are.
+
+
+  <figcaption>
+
+— Samuel Johnson
+
+</figcaption>
+</figure>
+
+### Finding my inner strength: My 50km/day hikes in Germany
+
+This year, I pushed myself to new limits with two epic 50km/day hikes that challenged my physical and mental strength. As someone who has not traditionally considered themselves an athlete, this was a significant accomplishment that I never would have thought myself capable of before.
+
+The first one was along the Rössleweg in Stuttgart, Germany. It is mostly through wooded areas, picturesque vineyards and orchards, all while overlooking the valley known as the Stuttgarter Kessel.
+
+It was in preparation for the second one, which was the [50 km MegaMarsch event in Freiburg](https://www.megamarsch.de/50-12/freiburg/freiburg-anmeldung/), Germany. This was a 50km hike that started in the city and through the Black Forest, which is known for its dense forests and steep hills, before finally ending back in the city.
+
+Despite the exhausting nature of these hikes, they were both amazing experiences that helped me to push myself and discover what I was capable of.
+
+I am grateful to my good friend [Carsten Cierniak](https://www.instagram.com/carsten_thm/) for introducing me to the MegaMarsch event and for providing motivation and companionship during the hikes. Thanks also to him for the guidance and tips that helped me prepare for the hikes.
+
+### The great outdoors: A year of hiking and exploring
+
+Throughout the year, I have been able to do a lot of hiking, ranging from short walks to full-day hikes. Each trail offered its own unique beauty and challenges, from scenic mountain vistas to dense forests and winding rivers.
+
+Hiking has allowed me to disconnect from the stresses of daily life and reconnect with the beauty of the natural world. It has also been a great way to stay active and healthy, both physically and mentally.
+
+The most memorable hikes of the year were: to Zugspitze 🇩🇪, in the Black Forest 🇩🇪, in the Saxon Switzerland National Park 🇩🇪, and in Sognsvann 🇳🇴.
+
+Climbing to the top of Zugspitze, the highest mountain in Germany, proved to be a formidable challenge.The steep and rocky path halfway up the mountain was difficult, and the weather near the top was bad enough that we had to stop just a few hundred meters from the summit. However, the views along the way and the feeling of accomplishment made it all worth it.
+
+I was able to build a strong connection with my friends who accompanied me during these hikes as we bonded over the shared experience of exploring the beautiful nature these regions have to offer.
+
+Hiking has become a passion of mine and I look forward to continuing to explore the many trails that the world has to offer.
+
+### A night to remember: Iron Maiden in concert
+
+I was able to realize a long time desire of mine this year by seeing one of my favorite bands Iron Maiden live in concert. The thrill of hearing the songs I love performed live was an incredible. Despite the age of the band members, they delivered an electric performance and were able to make the 50,000 people present in the venue chant in unison.
+
+It was an unforgettable event that I will always cherish.
+
+## Professional highlights
+
+In addition to my travels, hikes and fun events, this year has also brought its share of challenges and growth in my professional life.
+
+### Stepping into a new role: Overcoming challenges and finding success
+
+As a seasoned Software Engineer with almost a decade of experience under my belt, I thought I had seen it all. But when I accepted the role of Software Engineering Team Lead at [Laserhub GmbH](https://laserhub.com/), I quickly realized that I had a lot to learn. Not only was this a promotion, but it also required me to approach things in a new way and shed some of my old habits.
+
+I'd be lying if I said it has been easy. There have been a lot of challenges, but I've been enjoying it so far and learning to see things from a new perspective. With the help of the wonderful people I work with, I have been able to grow a lot in this role.
+
+## Resilience in adversity: Struggles of those close to me in 2022
+
+In February of this year, a war broke out in Ukraine, causing me great concern for the safety of my colleagues and their loved ones living there. Despite my fears, they are fortunately able to remain safe, but they still have to cope with the ongoing effects of the war. I am in awe of their strength and resilience as they continue to live their lives as normally as possible, despite the challenges they face. I can only hope that the situation will improve and that peace will be restored in the near future.
+
+## Personal key takeaways from 2022
+
+- We are all works in progress. Who we were yesterday is not who we are today, and who we are today is not who we will be tomorrow.
+
+  - There is always the potential for growth and learning, and we should always be open to new knowledge and opportunities for self-improvement.
+
+  - Embracing challenges is essential to personal growth and development.
+
+  - Investing in meaningful relationships with loved ones is always worthwhile.
+
+As I look back on the year that was, I am filled with gratitude for all the things I've learned and experienced.
+
+Unfortunately, not everyone has had the same experience, with some really horrible things that happened in the world. I hope that 2023 will be a better year for everyone.
+
+I am grateful for the support and encouragement of those in my life this year. Your guidance and opportunities have allowed me to grow. Thank you for being a part of my journey and for the amazing times we had together.
+
+Here's to the future and to the continued growth and learning that it holds.
+
+---
+
+- **Page:** Hiking Tsho-Rolpa lake trail in Nepal
+- **Source:** https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal
+- **Description:** Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level
+
+### Preamble
+
+While on a holiday in Nepal during October - November 2021, my friends and I were planning a hiking trip to the mountainous regions of the country. After some consideration, we decided to hike to Tsho-Rolpa lake and back.
+
+The Tsho-Rolpa lake trail is not a popular trekking route, so we expected less crowd along the way. That was a plus in COVID times.
+The destination is a glacial lake threatened by global warming and climate change. We decided to visit it to remind ourselves what we and future generations would miss if we don't act on the effects of human activities.
+
+## Introduction
+
+Tsho-Rolpa (NE: च्छोरोल्पा) lake, at 4,580m above sea level in Nepal, is one of the biggest glacial lakes in the country.
+The outflows of the lake form the Rolwaling (रोल्वालिङ) and the Tamakoshi (तामाकोशी) river.
+The lake lies in the Rolwaling valley in Dolakha district and is part of the Gaurishankar(गौरीशंकर) Conservation Area.
+The conservation area gets its name from Mount Gaurishankar (7,134m), which rises there, and our trek involves
+walking along the base of the mountain for a long time.
+
+The Nepal Standard Time (UTC +5:45) follows the meridian of Mount Gaurishankar.
+
+<figure className="w-full,image">
+<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=86.46162986755373%2C27.868012661281945%2C86.46517038345338%2C27.871403344815025&layer=mapnik&marker=27.86970801631173%2C86.46340012550354" style="border: 1px solid black">
+
+
+
+</iframe>
+
+
+  <figcaption>
+
+Location of Tsho-Rolpa lake
+
+</figcaption>
+</figure>
+
+## Itinerary
+
+The Tsho-Rolpa trek typically takes 7-9 days, but time constraints forced us to squeeze it into 5 days. We knew we had to walk extreme lengths of the trail each day. We were mentally prepared for it.
+
+The regular 7-9 day trek also accounts for acclimatization. It suits people who are not used to high altitudes, so they don't suffer from altitude sickness. We had been to high altitudes in the past with no such problems,
+so we could skip a day for acclimatization. But we were still prepared to go back to a lower altitude if any of us
+started having debilitating effects from the high altitude.
+
+### Trip summary
+
+- **Total elevation change:** 3,500m
+- **Motorbike ride time:** 15 hours
+- **Hiked time:** 42.5 hours (breaks included)
+- **Difficulty level:** moderate/difficult
+
+<figure className="image,w-full">
+
+![Elevation profile of the five-day Tsho-Rolpa trip, peaking at 4,580 m](https://subodhdahal.com/images/tsho-rolpa/elevation-change-graph.png)
+  <figcaption>
+
+Elevation change graph for the trip
+
+</figcaption>
+</figure>
+
+### Day 1: Bhaktapur (भक्तपुर) - Chhetchhet (छेतछेत) - Surmuche (सुर्मुचे)
+
+- **Altitude**: from Bhaktapur (1,400m) through Chhetchhet (1,398m) to Surmuche (2,470m)
+- **Motorbike ride time:** 7.5 hours
+- **Hiked time:** 4.5 hours
+
+#### Bhaktapur - Chhetchhet motorbike ride
+
+We(me and three friends) started the trip early, at 5 am from our hometown Bhaktapur in the Kathmandu valley. We
+were going to ride our motorbikes until the last point we could, then start the actual trek from there.
+
+Despite our effort to get 3 motorbikes, we managed only two. There were 2 persons on each
+motorbike along with our backpacks. I rode my younger brother's KTM Duke 200cc motorbike. Its powerful engine made riding on off-road trails a lot easier. But the smaller seat size didn't make for a
+comfortable ride for two persons with heavy backpacks.
+
+<figure className="image">
+
+![Subodh on a KTM Duke motorbike with a backpack at Dolalghat](https://subodhdahal.com/images/tsho-rolpa/me-on-motorbike.jpg)
+  <figcaption>
+
+Me on the motorbike at Dolalghat where we had breakfast
+
+</figcaption>
+</figure>
+
+We stopped for lunch at Charikot before continuing our journey via Singati. Charikot is the headquarters of Dolakha district.
+We made a few stops along the way for rest, enjoying the beautiful views of the
+Himalayan mountain range and the waterfalls.
+
+The Gaurishankar Conservation Area starts from
+Singati, where visitors must pay an entrance fee. Foreigners might also need extra documents and trekking permits.
+
+<figure className="image">
+
+![Snow-capped Mount Gaurishankar, one of the first views on the ride](https://subodhdahal.com/images/tsho-rolpa/himalayas-on-the-way.jpg)
+  <figcaption>
+
+One of the first views of Mount Gaurishankar on our trip
+
+</figcaption>
+</figure>
+
+We rode the motorbikes for around 7.5 hours through the windy roads of Nepal's hilly regions. We reached
+Chhetchhet, where the hiking part of our journey would start.
+
+Shortly before reaching Chhetchhet, we came across a gorgeous waterfall flowing to the turquoise-blue water of the
+Tamakoshi river. A rainbow had also formed in front of it, making the view even more surreal.
+
+<figure className="image">
+
+![Waterfall just before reaching Chhetchhet](https://subodhdahal.com/images/tsho-rolpa/chhetchhet-waterfall2.jpg)
+  <figcaption>
+
+A gorgeous waterfall just before reaching Chhetchhet
+
+</figcaption>
+</figure>
+
+Most travelers reach Chhetchhet from Kathmandu by public transport, but we used motorbikes. You can
+take a bus from Kathmandu to Singati and then a jeep to reach Chhetchhet. Or you can reserve a
+jeep directly from Kathmandu to Chhetchhet.
+
+#### Chhetchhet to Surmuche trekking
+
+After leaving our motorbikes in a secure garage in Chhetchhet and resting for a while, we started the actual hike at
+3 pm. The trail ahead climbed a hill almost vertically to the top, and we felt a bit daunted, to say the
+least. But we braved the trail anyway, eager for the journey ahead. The first half-hour was especially hard
+since our body hadn't warmed up. Once we got the hang of it, the walk became easier.
+
+Three hours of walk and a few breaks later, we reached the village of Simigaun. Simigaun is the last village with grid
+electricity. Trekkers on the Tsho-Rolpa route typically stop there first to charge their electronics overnight. But this was not our planned stop for the day. We were going to
+continue further to the next village.
+
+<figure className="image">
+
+![A typical village house in Simigaun](https://subodhdahal.com/images/tsho-rolpa/simigaun.jpg)
+  <figcaption>
+
+A typical village house in Simigaun
+
+</figcaption>
+</figure>
+
+After walking for another 2.5 hours, most of it in the dark, we reached Surmuche. Only headlamps and flashlights lit our way. We felt exhausted and wanted a hearty meal to refill our energy
+at the hotel/teahouse there. There was only one teahouse at this destination and the next village was at least 3 hours
+away.
+
+We were fortunate that the teahouse in Surmuche was open. The owner
+had walked the same path from Surmuche and arrived just an hour ago. He felt tired and a bit
+unwell, so he could only offer a simple meal. Despite this, he showed us our accommodation for the night and made tasty noodle soup for us. The soup was
+more than enough, and we had snacks with us anyway, so we could have them if needed.
+With another day of a long walk ahead of us and the exhaustion from the day's bike ride and walk, we didn't waste much
+time going to bed.
+
+<figure className="image">
+
+![Mount Gaurishankar illuminated by the last rays of the day's sunlight](https://subodhdahal.com/images/tsho-rolpa/mount-gaurishankar-sunlight.jpg)
+  <figcaption>
+
+Mount Gaurishankar illuminated by the last rays of the day's sunlight
+
+</figcaption>
+</figure>
+
+### Day 2: Surmuche (सुर्मुचे) - Beding (बेदिङ्ग)
+
+- **Altitude**: from Surmuche (2,470m) to Beding (3,721m)
+- **Hiked time:** 12 hours
+
+We had an ambitious plan for our second-day hike. We woke up early at 6 am, and right after breakfast we started
+our hike. This was also an uphill hike, but the elevation change didn't feel as aggressive as the previous day, or
+maybe we got used to it.
+
+<figure className="image">
+
+![Morning views from our lodge in Surmuche](https://subodhdahal.com/images/tsho-rolpa/surmuche-morning-views.jpg)
+  <figcaption>
+
+Morning views from our lodge in Surmuche
+
+</figcaption>
+</figure>
+
+After hiking for about 2 hours, we reached the next stop of Kyalche. We felt fine, so we rested briefly and took some pictures before continuing.
+
+<figure className="image">
+
+![Me at the short stop in Kyalche](https://subodhdahal.com/images/tsho-rolpa/stop-at-kyalche.jpg)
+  <figcaption>
+
+Me during the stop in Kyalche
+
+</figcaption>
+</figure>
+
+We noticed that we stopped getting cellphone network reception at some point. It felt odd at first, but it kept us present. We soaked in the views during our rest time instead of scrolling social media.
+
+After two more hours of hiking with little to no elevation change, we reached Dongang (डोंगांग),
+a small settlement along the Tamakoshi river with turquoise
+blue water. The water's almost surreal color probably comes from minerals washed down from the mountains and glaciers
+not so far away.
+
+<figure className="image">
+
+![The settlement at Dongang](https://subodhdahal.com/images/tsho-rolpa/dongang.jpg)
+  <figcaption>
+
+The settlement at Dongang along the Tamakoshi river
+
+</figcaption>
+</figure>
+
+We were starving when we arrived. The
+next stop was hours away, so we stopped for Dal-Bhat (rice with lentils and vegetables on the side), the
+quintessential Nepali food. Sweat had drenched our clothes during the long sunny hike. We took the
+time to dry them and rested until the food was ready. After having a hearty meal, we rested a bit more as we were in
+no position to start walking immediately.
+
+We resumed the hike from Dongang at around 1 pm. The mountains felt closer now, which made us want to continue. We walked along the Tamakoshi river for a long time. We didn't complain, because the turquoise-blue water was something we couldn't get enough of. After a
+while, we began to notice that the vegetation was changing and starting to be more alpine-like.
+
+<figure className="image">
+
+![Views a short while after Dongang](https://subodhdahal.com/images/tsho-rolpa/after-donggang.jpg)
+  <figcaption>
+
+Views a short while after Dongang
+
+</figcaption>
+</figure>
+
+At around 6 pm, as dusk fell, we reached the village of Beding. We felt tired, and some of us felt the altitude. We were glad to see the village signpost where we could stay for the night. To our dismay, the lodges were at the far side of the village. Reaching them took 45 more minutes in utter darkness, with only our headlamps and flashlights to light the
+path.
+
+In the lodge in Beding, we had some Tibetan noodle soup alongside the fire in the kitchen to quickly warm us up
+before having our dinner of Daal-Bhat. The weather in Beding was freezing, and our rooms had no heating. We piled layers of blankets
+on top of us to stay warm at night.
+
+### Day 3: Beding (बेदिङ्ग) - Tsho-Rolpa (च्छोरोल्पा) - Na (ना) village
+
+- **Altitude**: from Beding (3,721m) through Tsho-Rolpa (4,550m) to Na village (4,180m)
+- **Hiked time:** 12 hours
+
+Beding, also known as the village of Everest climbers, was where we stayed on the second night of our trip. Since we
+had arrived in darkness, we got a pleasant surprise in the morning. Beautiful mountain views greeted us from our lodge.
+
+<figure className="image">
+
+![Morning views from our lodge at Beding](https://subodhdahal.com/images/tsho-rolpa/beding-morning-views.jpg)
+  <figcaption>
+
+Morning views from our lodge at Beding
+
+</figcaption>
+</figure>
+
+On the third day, we had a quick breakfast and started the hike at 7 am, soon after waking
+up. This was the first day we didn't have to gain much elevation during our hike. The path ran nearly
+straight with only minor elevation changes.
+
+Along the way, we could enjoy the views of the Rolwaling valley. In the local Sherpa language,
+Rolwaling means "valley carved by a plow," and the landscape did look the part.
+
+<figure className="image">
+
+![Views of the Rolwaling valley](https://subodhdahal.com/images/tsho-rolpa/rolwaling-valley-1.jpg)
+  <figcaption>
+
+Views of the Rolwaling valley
+
+</figcaption>
+</figure>
+
+<figure className="image">
+
+![Views of the Rolwaling valley](https://subodhdahal.com/images/tsho-rolpa/rolwaling-valley-2.jpg)
+  <figcaption>
+
+Views of the Rolwaling valley
+
+</figcaption>
+</figure>
+
+We reached the village of Na at 11 am. After resting for a while at a lodge there, we had our breakfast/lunch. We left our
+bags here, taking only the day's essentials. We would return to stay the night after reaching Tsho-Rolpa lake. Not having to carry the 12
+kilos I had been carrying the past days felt almost magical.
+
+Walking alongside the Tamakoshi river on almost flat terrain, we reached Tsho-Rolpa lake at 3:30 pm.
+The weather favored us that day, and we had clear views of the lake and the mountains. We had heard that fog often hides the lake after 11 am.
+
+Reaching our destination after the grueling walk and the pain we endured the
+past few days felt surreal. We lingered for a while over the lake and the mountains, with the Rolwaling
+valley behind us. We also met other travelers from Nepal at the lake.
+
+<figure className="image,w-full">
+
+![Views of the Tsho-Rolpa lake](https://subodhdahal.com/images/tsho-rolpa/lake-view.jpg)
+  <figcaption>
+
+Views of the Tsho-Rolpa lake
+
+</figcaption>
+</figure>
+
+Despite the captivating view, we couldn't stay there for long because we were losing light and had to return soon. The wind and chill
+also made it impossible to spend more time there. No hotels, lodges, or teahouses stand near
+Tsho-Rolpa lake. Everyone had to return unless they planned to camp.
+
+While making our descent from the lake to Na village, we saw the golden hour set in. Beautiful light filled the horizon ahead of us.
+
+<figure className="image">
+
+![Views of the Na village](https://subodhdahal.com/images/tsho-rolpa/na-village.jpg)
+  <figcaption>
+
+Views of the Na village
+
+</figcaption>
+</figure>
+
+Behind us, the last light
+of the day glowed on top of the mountains, an exquisite view of its own.
+
+<figure className="image">
+
+![Mountain peak illuminated by sunset](https://subodhdahal.com/images/tsho-rolpa/illuminated-mountain.jpg)
+  <figcaption>
+
+Mountain peak illuminated by sunset
+
+</figcaption>
+</figure>
+
+Like the previous days, we reached our destination in utter darkness and sat by the fire to warm ourselves up with some
+soup before having our dinner. We also reflected on our journey and on reaching the Tsho-Rolpa lake in 3 days. Except for seasoned trekkers, reaching the lake takes at least 4 days. We were proud of doing it in 3 days despite our limited experience
+at such a high altitude.
+
+Sleep didn't come easily that night. The high
+altitude and the cold kept us awake despite our exhaustion. We did manage to get to sleep after a while of trying.
+
+### Day 4: Na (ना) village - Simigaun (सिमिगाउँ)
+
+- **Altitude**: from Na village (4,180m) to Simigaun (2,000m)
+- **Hiked time:** 12 hours
+
+The hike back was almost entirely downhill. We planned to cover a long distance to make the next day easier.
+We started our hike at 7:30 from the Na village after having breakfast. We didn't make many stops along the way apart
+from a few snack breaks as going downhill was easier and we had to walk a long distance to cover during the day.
+
+We stopped at Dongang for lunch at 2 pm and resumed our journey soon after. As on the previous
+days, we reached our destination in the dark, arriving in Simigaun at 7 pm. Most of our electronics were low on
+battery, so we recharged them here where there was grid-connected electricity. The power banks we had brought and
+the spare batteries from the GoPro and the drone had lasted us till then.
+
+We hadn't properly celebrated reaching our destination the previous night, so we treated ourselves
+to Tongba, an alcoholic drink made from fermented millet. We mulled over our journey, life, and philosophy in general,
+as often happens over drinks.
+
+<figure className="image">
+
+![Tongba](https://subodhdahal.com/images/tsho-rolpa/tongba-vessel.jpg)
+  <figcaption>
+
+Tongba served in its regular vessel
+
+</figcaption>
+</figure>
+
+After a while, we had dinner and went to sleep. We planned to wake up
+early. We still had a few hours of hiking left before reaching Chhetchhet, where our motorbikes
+waited to take us home.
+
+### Day 5: Simigaun - Bhaktapur
+
+- **Altitude**: from Simigaun (2,000m) to Bhaktapur (1,400m)
+- **Hiked time:** 2 hours
+- **Motorbike ride time:** 7.5 hours
+
+We started our journey at 7 am without having breakfast. We reached Chhetchhet at 9 am. The last 30 minutes of our walk
+felt grueling because I was having knee problems walking downhill on the stone-paved stairs. The long downhill
+distance we covered the previous day probably caused it. But I was glad this
+happened towards the end of the trek and not earlier. Otherwise, it'd have been a nightmare and not a nice
+experience.
+
+Getting on my motorbike was an immense relief for my knee and lower body in general. Now my
+arms and hands felt the pain of riding a motorbike on off-road, uneven terrain. Braving the pain, we
+reached Dolakha Bazar, where we made a short stop to visit the Dolakha Bhimeswor temple.
+
+Our next stop was at nearby Charikot where we had the first meal of the day at noon. We also loaded our heavy bags onto
+a bus bound for Kathmandu, so we wouldn't carry them on our backs all the way home.
+
+Shortly after lunch, we resumed our journey towards Bhaktapur and reached there at 6 pm, just in
+time to retrieve our bags from the bus. Although the motorbike journey is typically much faster than the local bus,
+we arrived together. We had stopped for rest and food in
+Dolalghat.
+
+My whole body was in pain when I reached home after our grueling journey. I couldn't wait to rest
+and not do anything for the next few days.
+
+## Reflections on the journey
+
+The journey was one of the best experiences of my life. The majestic views and well-maintained
+trails of the Gaurishankar Conservation Area made the hike pleasant despite the long hours.
+Having good friends accompanying me on the trip made it even better.
+
+Despite the beautiful journey, we couldn't help but wonder about the people living below the lake. What would happen to them if it suddenly bursts? Due to global warming, the risk grows more severe every day. Some efforts to reduce the risk and set up an early warning
+system are underway, but they aren't enough. The risk remains unless the world acts to curb
+rising temperatures and climate change.
+
+### Things we could've done differently
+
+Since we squeezed a 7-9 day trip into five days, we had to walk up to 12 hours a day. It felt tough at
+times. The trip could've been a lot less stressful. But we did the best we could with our time constraints.
+
+If we had more time we could also have hiked to the Dudh Kunda, a beautiful lake a few hours away from Tsho-Rolpa lake.
+
+Bringing medicines for high altitude, just in case, would've been smart. We didn't need them in the end.
+
+### Lessons learned for life
+
+Towards the end of our daily 12-hour trek, I felt exhausted and couldn't continue.
+Stopping in the dark woods wasn't an option, so I forced myself on despite the weariness and pain.
+This made me realize that we are capable of achieving a lot and most of the time our mind is the
+one limiting us.
+
+Planning the journey and pre-determining the destination for each day made us accountable and determined.
+While on the hike,
+instead of getting daunted by the long path ahead, we focused on the next step.
+Having a bigger picture in mind and taking small steps to achieve it makes even the seemingly impossible possible.
+
+The insights I learned can help me overcome difficult challenges in other facets of life as well.
+
+<figure className="quote">
+
+> Why do you go away? So that you can come back. So that you can see the place you came from with new eyes and extra
+>     colors. And the people there see you differently, too. Coming back to where you started is not the same as never leaving.
+
+
+  <figcaption>
+
+— Terry Pratchett, <cite>
+
+A Hat Full of Sky
+
+</cite>
+</figcaption>
+</figure>
+
+I felt like a different person, for the better, after my journey.
+
+**Looking forward to more journeys to explore the world and discover my true self.**
+
+---
+
+<div className="article-description">
+
+#### Addendum
+
+<div className="text-sm">
+
+- All pictures by me (Subodh Dahal) except for the ones of me. I took them all with my One Plus 8 Pro smartphone and did some post-processing.<br />
+
+
+  - There were variations in the reported altitude of the places based on the sources<br />
+
+
+  - Follow me on [Instagram (@sub0dh_d)](https://www.instagram.com/sub0dh_d/) to view more pictures from this and other trips
 
 </div>
-
-### Bharatpur
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-4.jpg)
-  ![Landscape view from Maulakalika temple](https://subodhdahal.com/images/2023-visual-journey/nepal-3.jpg)
-  ![Evening in Sauraha](https://subodhdahal.com/images/2023-visual-journey/nepal-5.jpg)
-
 </div>
 
-### Pokhara
+---
 
-![View of Mount Machhapuchhre](https://subodhdahal.com/images/2023-visual-journey/nepal-2.jpg)![Boating in Phewa Lake](https://subodhdahal.com/images/2023-visual-journey/nepal-11.jpg)## Croatia 🇭🇷
+- **Page:** Hiking, travel and photography
+- **Source:** https://subodhdahal.com/topics/hiking-photography
+- **Description:** Trail reports from Nepal including the Tsho-Rolpa glacial lake trek, travel photos from across Europe, and tools I built for sharing photos on Instagram.
 
-### Plitvice Lakes National Park
+I take my camera on hikes and trips, from the Tsho-Rolpa glacial lake in Nepal to cities and national parks across Europe. These posts are the trail reports, yearly look-backs and photo essays, plus the tools I built to post those photos the way I want. For the photos on their own, see the [photography wall](https://subodhdahal.com/photography/).
 
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+---
 
-![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-8.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-9.jpg)
+- **Page:** Command line and developer workflow
+- **Source:** https://subodhdahal.com/topics/command-line
+- **Description:** Git aliases, fzf, Git worktrees with Worktrunk, jq, GNU Stow dotfiles and other command-line habits that make my daily development work faster.
 
-</div>
+Most of my work happens in a terminal, so small improvements there add up. These posts collect the Git habits, shell functions and tools I use every day. They include fzf-powered pickers, worktrees for parallel branches, a jq function for exploring JSON APIs, and dotfiles synced with GNU Stow.
 
-### Zagreb
+---
 
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+- **Page:** Self-hosting and homelab
+- **Source:** https://subodhdahal.com/topics/self-hosting
+- **Description:** Running my own Git forge, RSS reader and photo library at home with Forgejo, FreshRSS, Immich, Docker and Traefik, and what broke along the way.
 
-![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-6.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-3.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-4.jpg)
+I'd rather keep my code, photos and reading on hardware I own than on servers whose terms can change. My homelab runs on a small home server with Proxmox, Docker and Traefik. These posts cover why I moved each service home, how it's set up, and the problems I had to fix.
 
-</div>
+---
 
-### Split
+- **Page:** NixOS on the desktop
+- **Source:** https://subodhdahal.com/topics/nixos
+- **Description:** Fixes from running NixOS with COSMIC on Wayland on a ThinkPad, including a Razer Core X eGPU with an NVIDIA RTX card and Handy speech-to-text.
 
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+My laptop runs NixOS with the COSMIC desktop on Wayland, connected to a Razer Core X eGPU. When something on that setup doesn't work, I write down how I tracked it down, layer by layer, with the NixOS config that fixed it. The snippets are NixOS, but the debugging steps apply to most Linux distributions.
 
-![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-10.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-13.jpg)
-  ![Travel photo in Croatia](https://subodhdahal.com/images/2023-visual-journey/apr-14.jpg)
+---
 
-</div>
+- **Page:** Self-Hosting my Git forge with Forgejo
+- **Source:** https://subodhdahal.com/blog/self-hosting-my-git-forge
+- **Description:** Why I moved away from GitHub and chose a lightweight, community-driven alternative
 
-## France 🇫🇷
+For years, GitHub held all my personal Git repos. It worked fine. I used it with friends during my bachelor's and master's studies. But over time it felt less like a tool and more like a service that just put up with me.
 
-### Strasbourg
+GitHub has had its share of problems lately. Repos scanned for AI training unless you opt out, outages, and [Git history rewritten after merging pull requests](https://github.blog/news-insights/company-news/an-update-on-github-availability/) are a few examples.
 
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+What pushed me to self-host was my unease with data on servers whose terms can change anytime. That's the thinking behind most of what I self-host. I run my own [reading feed](https://subodhdahal.com/blog/reading-and-discovery-feed-curation/), my own [photo library](https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/), and now my own Git forge. It's not the easy path, but ownership and privacy are worth the effort.
 
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-1.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-2.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-strasbourg-4.jpg)
+## Why Not GitLab?
 
-</div>
+[GitLab](https://gitlab.com) was the obvious first thing to look at. I've used it at work for years and it's solid. But it's built for teams and companies, and that shows in the resources it needs. Running it at home means a platform that needs gigabytes of RAM for things I'd never use. My small NUC runs other services and couldn't handle it.
 
-### Colmar
+## Why Forgejo?
 
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+[Forgejo](https://forgejo.org) is a lightweight, self-hosted Git forge from [Codeberg e.V.](https://codeberg.org/Codeberg/org), a non-profit. It's written in Go. It runs as one binary that fits in a few hundred megabytes of RAM.
 
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-2.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-1.jpg)
-  ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/apr-colmar-3.jpg)
+What I use day to day:
 
-</div>
+- **Repository hosting:** that's mainly what I need it for and it does the job well.
+- **Container registry:** there's a built-in registry for container images. I push Docker images straight to my own instance.
+- **Forgejo Actions:** my projects use Actions to build the container image and push it to the registry. On the VM where I run my personal services, the `docker-compose` files point to my Forgejo registry directly. The syntax is close to GitHub Actions, and the whole flow from code to running container stays inside my homelab.
+- **Pull mirrors:** for repos that still live on GitHub, Forgejo syncs them on a schedule. It's a simple way to keep a local copy without changing the current setup.
 
-### Nice and surrounding areas
+I'm also hosting forks of a few open source projects I've tweaked. Those get built and pushed to my own registry too.
 
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-7.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+I don't use issue tracking, pull requests, or wikis yet. They're there if I need them.
 
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-3.jpg)
-  <div>
+## How It's Running
 
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-2.jpg)
-    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-8.jpg)
+Forgejo runs on a NUC at home, inside an Ubuntu VM on Proxmox, alongside a few other core services. I only access it over my home network. I could route it through Tailscale to get in when I'm away, but I haven't felt the need yet.
 
-</div>
+Getting Forgejo Actions to work with the Traefik proxy took a few tries, much like [the Docker networking issue I hit with Immich](https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/). The Docker build steps took a while too. After that, it has worked without issues for more than 3 months.
 
+## Backups
 
-  <div>
+One thing I didn't want to skip on was backups. Forgejo has a built-in `forgejo dump` command. It packs up the repos, config, and attachments into an archive. I run a daily cronjob with this command. I also dump the Postgres database on its own. Both get pushed to my NAS.
 
-![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-5.jpg)
-    ![Travel photo in France](https://subodhdahal.com/images/2023-visual-journey/may-nice-6.jpg)
+## Migrating from GitHub
 
-</div>
-</div>
+The move went better than I expected. Forgejo has a built-in import tool that pulls everything from a GitHub repo: code, issues, pull requests, and history. You just give it the repo URL and a GitHub token.
 
-## Germany 🇩🇪
+I put my old projects into an organization of their own on my Forgejo instance, away from my main account. I'm not actively working on them, but they're there if I ever need to look something up.
 
-### Kiel
+I also finally found a place for my Logseq notes, now stored in Git. Since I own the server, I don't worry about someone else having access to them.
 
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+I still use GitHub where it makes sense. My personal website runs on GitHub Pages at no cost, so that repo stays there. I use Forgejo's pull mirror to sync it to my instance on a schedule. That way I always have a local copy without changing the setup. Most open source projects are on GitHub, so it's still where I go when I want to contribute to something.
 
-![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/june-kiel-2.jpg)
+## Takeaway
 
-</div>
+The setup was simple, upkeep is low, and pushing code to my own server feels good.
 
-### Schwäbisch Hall
+---
 
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+- **Page:** Curating my own reading and discovery feed with RSS
+- **Source:** https://subodhdahal.com/blog/reading-and-discovery-feed-curation
+- **Description:** Taking concrete steps away from algorithms using FreshRSS, self-hosted tools, and a pipeline built for me.
 
-![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/may-schwaebisch-hall-1.jpg)
+For quite some time, I have wanted to rely less on algorithmically curated feeds. The daily scroll through YouTube, Substack, or LinkedIn felt less like discovery and more like dopamine mining. I wanted a system that delivered interesting content to satisfy my curiosity, without platforms whose best interest is to have me glued to them. These days, finding such a platform is tough. Even if one exists now, there's no guarantee it won't eventually mimic the ones I wanted to get away from.
 
-</div>
+I wanted a system where I subscribe directly to creators or communities sharing content I like. That's exactly what a feed reader does. It pulls content chronologically from blogs and sites that support RSS/Atom feeds, with no middleman filtering or recommending.
 
-### Würzburg
+There are a few feed reader platforms, but I wanted to have full data ownership and more control over the system. This is why I decided to self-host [FreshRSS](https://github.com/FreshRSS/FreshRSS), an open-source feed aggregator and reader, on my homelab running on a mini-PC. This also has the added advantage of being resilient compared to an online service which may stop existing for reasons beyond my control.
 
-![Travel photo in Germany](https://subodhdahal.com/images/2023-visual-journey/aug-wuerzburg-2.jpg)## Monaco 🇲🇨
+## Feed sources
 
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+Rather than relying on algorithms of platforms to decide which content they want to show me, I now subscribe to content from sources where I have found interesting writings before. I categorize the content sources broadly into the following:
 
-![Travel photo in Monaco](https://subodhdahal.com/images/2023-visual-journey/may-monaco-1.jpg)
+- Communities: There's many interesting posts being shared on communities like Hacker News RSS, Lobsters, Lemmy. I started by directly subscribing to their content RSS feed. But the number of posts was overwhelming. So I now use [hnrss.com](https://hnrss.github.io/) and [upvote-rss](https://github.com/johnwarne/upvote-rss) to get only the top posts from them.
+- Personal Blogs: If a post catches my eye, I check the author’s site and subscribe to their personal RSS feed if they have other content that I also find interesting.
+- Substack: I subscribe to a creator's publication directly by using their Substack URL.
+- Websites without RSS: Not all websites provide RSS/Atom feeds. Luckily, there's an open-source and self-hostable project called [RSSHub](https://github.com/DIYgod/RSSHub) which can generate RSS feeds for many popular websites. It acts as a bridge between my FreshRSS instance and those websites. It also has a browser extension companion: [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar) to easily find and subscribe to RSS feeds.
+- Newsletters: Previously, I had subscribed to many newsletters on my personal email. This made my email inbox messy and it felt like a chore to go and read there. I now use [Kill the Newsletter!](https://kill-the-newsletter.com/) which provides an email address to subscribe to these newsletters. It generates an Atom feed which I can subscribe to in FreshRSS. This has the benefit of keeping my inbox clean and also consolidating all my reading into a single application.
+- YouTube Channels: Yes, I can directly subscribe to YouTube channels from FreshRSS and get any new uploads from the channel directly into FreshRSS.
 
-</div>
+<figure className="w-full,image">
+<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="/images/freshrss-ui.png" style="border: 1px solid black">
 
-## Hungary 🇭🇺
 
-### Budapest
 
-![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-6.jpg)<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+</iframe>
 
-![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-4.jpg)
-  ![Travel photo in Hungary](https://subodhdahal.com/images/2023-visual-journey/june-budapest-1.jpg)
 
-</div>
+  <figcaption>
 
-## Netherlands 🇳🇱
+This is how my FreshRSS looks like
 
-### Amsterdam
+</figcaption>
+</figure>
 
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+Since FreshRSS is an aggregator, I don't necessarily need to use the FreshRSS interface to access my feed. There are many applications for different platforms which can use FreshRSS as the source for the feeds. I use the Readrops app on my phone. I have occasionally used the NetNewsWire app on MacOS.
 
-![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-3.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-3.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-2.jpg)
+## Filtering my feed
 
-</div>
+Some newsletters I subscribe to, like those covering AI news, have a short shelf life. If I haven't read them within a month, the content is usually stale and there is little point in me reading them. That's why I've set up the `-pubdate:P30D` filter to automatically mark them as read.
 
-### The Hague
+FreshRSS also allows me to automatically mark incoming content as read if it matches some conditions that I set. For example: I am following a YouTube channel for content on Go programming language. But the creator also posts videos on Rust, which I am not interested in at the moment. So I've set a filter `-intitle:" Rust:"` for the channel which automatically marks videos that have " Rust" in the title as read so it doesn't show up on my feed.
 
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+Despite these filters, I have a lot of unread posts in FreshRSS. I initially felt the ["phantom obligation"](https://www.terrygodier.com/phantom-obligation) to reach "inbox zero" with my feeds. Now, I accept that most of those articles are timeless. They'll still be valuable whenever I get to them, so there's no need to rush.
 
-![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-4.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/sep-amsterdam-5.jpg)
+## Extending and customizing FreshRSS
 
-</div>
+FreshRSS is not the only self-hostable feed aggregator. The main reason I chose it is because of its support for extensions which allows for augmenting its functionality. The ones I find useful are:
 
-### Zaandam
+- Youlag: Better interface for YouTube videos than the default view
+- Af_Readability: Inlines full article content for sites that only show excerpts in feeds.
+- Karakeep Button: Saves interesting posts directly to my Karakeep instance for long-term storage.
 
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
+There's a lot more extensions which can be browsed in the [official repository](https://github.com/FreshRSS/Extensions).
 
-![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-5.jpg)
-  ![Travel photo in Netherlands](https://subodhdahal.com/images/2023-visual-journey/jan-7.jpg)
+## Conclusion
 
-</div>
+After migrating to this setup, I am reading more in-depth content than what I did before. I've discovered authors sharing valuable perspectives on topics I find interesting that are not within the current hype-cycle. It's also refreshing to follow the creators whose writing feels like the pre-SEO, pre-marketing, pre-AISlop internet.
 
-## Spain 🇪🇸
-
-### Barcelona
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-1.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-8.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-7.jpg)
-
-</div>
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-5.jpg)
-  ![The illuminated stained glass windows of Sagrada Família church](https://subodhdahal.com/images/2023-visual-journey/mar-6.jpg)
-
-</div>
-
-### Montserrat
-
-<div className="grid,grid-cols-1,sm:grid-cols-2,md:grid-cols-3,gap-4">
-
-![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-9.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-11.jpg)
-  ![Travel photo in Spain](https://subodhdahal.com/images/2023-visual-journey/mar-10.jpg)
-
-</div>
-
-<div className="text-travel-heading,text-5xl,text-center,mt-8,pb-8">
-
-Fin
-
-</div>
+I still haven't completely stopped randomly browsing YouTube or LinkedIn, but my default way of finding new content is now the feed reader.
 
 ---
 
@@ -1032,7 +2112,7 @@ Now photo indexing and all the other jobs work as intended.
 - **Source:** https://subodhdahal.com/blog/jq-json-outline
 - **Description:** Use jq to automatically map and visualize the structure of large JSON responses, perfect for exploring undocumented endpoints.
 
-I was recently digging into Immich’s API to see if it exposes the fields I needed for some details about my photos. Immich is my self-hosted photo-management service. The API returned hundreds of lines of JSON. I just wanted to see its structure to check the fields I needed, but scrolling through all that data felt slow. I did what any sane programmer would do: I spent even more time trying to automate it.
+I was recently digging into Immich’s API to see if it exposes the fields I needed for some details about my photos. Immich is my [self-hosted photo-management service](https://subodhdahal.com/blog/fixing-docker-immich-traefik-setup/). The API returned hundreds of lines of JSON. I just wanted to see its structure to check the fields I needed, but scrolling through all that data felt slow. I did what any sane programmer would do: I spent even more time trying to automate it.
 
 I’ve used [jq](https://jqlang.org/) before for quick JSON tweaks (it’s basically `sed` or `awk` for JSON), so I wondered if it could help here. A quick search showed that jq can collapse arrays to a single-item preview, then recurse through the whole document for a clean outline of the JSON’s shape in one pass.
 
@@ -1193,7 +2273,7 @@ It’s a simple trick, but it makes large JSON responses much easier to read. Wh
 
 ## What are RSS and Atom feeds?
 
-RSS (Really Simple Syndication) and Atom are XML formats for sharing new posts with readers. Instead of visiting each site by hand, readers subscribe to a feed. When a site publishes new content, the feed updates and readers see it in their feed reader.
+RSS (Really Simple Syndication) and Atom are XML formats for sharing new posts with readers. Instead of visiting each site by hand, readers subscribe to a feed. When a site publishes new content, the feed updates and readers see it in their feed reader. I use [a self-hosted FreshRSS](https://subodhdahal.com/blog/reading-and-discovery-feed-curation/) for mine.
 
 Some popular web-based feed readers are FreshRSS, Feedly, Inoreader, and NewsBlur. Desktop apps like Fluent Reader and mobile apps like Reeder and Readrops are also available. I run a [FreshRSS](https://freshrss.org/) instance in my homelab and read updates through its web UI or the Readrops app on my phone.
 
@@ -1523,7 +2603,7 @@ But here's the thing: there were too many patterns available. I kept staring at 
 
 ## The solution
 
-I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool, to create searchable menus for fabric. Instead of memorizing commands, I just:
+I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool I also use for [checking out Git branches](https://subodhdahal.com/blog/git-and-command-line-next-level-workflow/), to create searchable menus for fabric. Instead of memorizing commands, I just:
 
 1. Send text to fabric
 2. Type any parts of what I want. fzf is smart about matching:
@@ -1660,121 +2740,11 @@ Before, I'd hesitate to use fabric because remembering all the commands felt lik
 
 ---
 
-- **Page:** Effortless configuration syncing with GNU Stow and Git: a software engineer's workflow
-- **Source:** https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow
-- **Description:** Use GNU Stow and Git to keep config files in sync across Linux and macOS. Keep them in one repo with full history, and set up new machines in minutes.
-
-## Introduction
-
-As a software engineer, I use my terminal, shell, and text editor every day. Each tool has its own config files, or **dotfiles**. Over time, I've tuned these files to fit how I work. Keeping them in sync across machines takes time and is easy to break. My laptop, home server, and work Mac all have their own setups. That's where **GNU Stow** and **Git** come in. They keep my configs neat and in sync. I've relied on this setup for over five years.
-
-## What are dotfiles?
-
-Dotfiles are config files that start with a dot, such as `.zshrc`, `.vimrc`, and `.gitconfig`. They control how your tools look and act. These files sit all over your home folder, so sorting them by hand is a chore. That becomes tedious when you use more than one machine. Putting them in one repo is the key to easy config handling.
-
-## The tools: GNU Stow and Git
-
-**GNU Stow** is a symlink manager. It takes dotfiles from one repo and links them into the folders you pick. Pair it with **Git**, and every change is easy to track and undo. Your setup then syncs across machines.
-
-## Setting up my dotfiles
-
-### 1. Centralized Repository
-
-I keep my dotfiles in a private Git repo. The repo mirrors the layout of my home folder, so Stow can link files where they belong. Here's how I lay out configs for Zsh, Git, Tmux, and Vim (shortened for this post):
-
-```bash
-dotfiles
-├── git
-│   └── .gitconfig
-├── tmux
-│   ├── .tmux.conf
-├── zsh
-│   ├── .config
-│   │   ├── aliasrc.sh
-│   │   ├── custom_fns.sh
-│   │   ├── env.zsh
-│   │   ├── oh-my-posh
-│   │   │   └── info.toml
-│   └── .zshrc
-└── vim
-  └── .vimrc
-```
-
-### 2. Stowing and restowing configurations
-
-A big plus of GNU Stow is that you can pick which configs go on which machine. My repo holds a folder for each tool, such as Zsh, Tmux, and Vim. When I set up a machine, I choose the folders I want and leave the rest.
-
-For example, to apply my Zsh setup I run the `stow` command like this:
-
-```bash
-stow --target=/home/username zsh
-```
-
-This links my Zsh files into my home folder, including `.zshrc` and everything in `.config`.
-When I add files or change a config, I restow the folder to apply the update:
-
-```bash
-stow -R zsh
-```
-
-This clears the old links and makes new ones, so nothing is stale.
-
-### 3. Uninstalling configurations
-
-To remove a config, such as Zsh, I run:
-
-```bash
-stow -D zsh
-```
-
-This deletes every Zsh link in my home folder but leaves the files in my repo alone. I can put them back anytime.
-
-## Pro-tip: Simplify with `.stowrc`
-
-By default, Stow links files into your current folder unless you set a target with `--target`. I got tired of typing `--target=$HOME` every time, so I made a `.stowrc` file in my repo:
-
-```bash
---target=$HOME
-```
-
-Now Stow uses my home folder on its own, and you can track the file with Git too.
-
-## Syncing with Git
-
-Tracking dotfiles with Git has three big benefits:
-
-- **Change history**: see every tweak I've made over the years and roll back if needed.
-- **Sync across machines**: push changes to a private repo, then pull them onto any new machine.
-- **Works on Linux and macOS**: the same setup works on both, and every machine stays in sync.
-
-For instance, when I got a Mac at work, I cloned my dotfiles repo. After running `stow zsh`, my Zsh setup, aliases, and Oh My Posh theme were ready right away.
-
-## More use cases for Stow
-
-I use Stow for dotfiles, but it can handle any files that need symlinks. Some examples:
-
-- Scripts live in a `bin` folder and link into `$PATH`.
-- Config folders for tools like Docker or Kubernetes are easy to manage.
-- You can test a new version of a config file without touching the current one.
-
-## The benefits of this workflow
-
-This setup changed how I manage configs. Here's what it gives me:
-
-- My configs live in one place, so updates and backups are simple.
-- Stow and Git get a new machine ready in minutes.
-- After five years of tweaks, I can still look back at what I tried and what worked.
-- The same setup works on Linux and macOS.
-
-**GNU Stow** and **Git** make this whole setup possible. My configs stay in sync without much effort, and every machine ends up the same. Every tweak I make leaves a trail, so I can undo mistakes. That leaves me more time to build and solve problems.
-
----
-
 - **Page:** Re-living memories through proper media organization
 - **Source:** https://subodhdahal.com/blog/reliving-memories-through-proper-media-organization
 - **Description:** Organizing media such as photos and videos can bring back cherished memories and help relive them. Here's my approach to organizing my digital media collection.
 
-# Capturing life's moments
+## Capturing life's moments
 
 We make priceless memories as life progresses, and these are the ones we want to keep forever. They can be minor, everyday occurrences or significant, life-altering occasions that serve as a reminder of who we were, what we've been through, and what we've learned. They are really valuable and can make us feel sad, happy, or nostalgic.
 
@@ -1782,13 +2752,13 @@ Unfortunately, our memory is fallible and we can only remember so much. Despite 
 
 Photos and videos help us not just to remember the events, but the associated emotions and feelings as well. They also allow us to show others the experiences we've had and the memories we hold dear, creating a shared history and a sense of connection with those around us.
 
-# Why organize digital media?
+## Why organize digital media?
 
 With ubiquitous camera technology, capturing memories is easier, but revisiting them can be a challenge. A disorganized and huge photo and video collection can leave us with a sense of dread. Proper organization of digital media serves as a safeguard for our precious memories, ensuring that they remain a constant source of comfort and inspiration.
 
 Like many people of our generation, I have amassed a large personal collection of photos and videos. I had to find a solution that enabled me to effortlessly navigate through the vast collection of my cherished moments.
 
-# Considerations for a solution
+## Considerations for a solution
 
 Here are a few of the considerations that were important to me in choosing a solution:
 
@@ -1798,7 +2768,7 @@ Here are a few of the considerations that were important to me in choosing a sol
 
 After some research, I came across [digiKam](https://www.digikam.org/) which matched all my requirements. digiKam is a feature-rich free and open-source software to manage your digital media collection. It is available for Linux, Windows, and macOS.
 
-## Workflow
+### Workflow
 
 After investing a lot of time trying to figure out what works for me, the workflow that I have settled on is as follows:
 
@@ -1810,7 +2780,7 @@ After investing a lot of time trying to figure out what works for me, the workfl
 
 I go to steps 1 to 5, mostly in a sequence when importing new media. Occasionally, I look back at my digiKam collections and perform the steps from 2 to 5.
 
-### 1. Import
+#### 1. Import
 
 I have three major sources of my pictures and videos: my cellphone, a GoPro action camera, and a DJI Mini 3 Pro drone. Their media is imported and saved to an external SSD.
 
@@ -1833,7 +2803,7 @@ This is how my directory structure looks like:
   ...
 ```
 
-### 2. Culling
+#### 2. Culling
 
 To maintain focus on the important memories, we need to delete the clutter. Intentional photo-taking and intentional photo-deleting also lead to better memory retention and the ability to revisit experiences.
 
@@ -1857,7 +2827,7 @@ digiKam interface for working with flagged media
 
 All these flagged pictures can be seen in the "Rejected items" section under "Labels" in digiKam, which I then delete in bulk.
 
-### 3. Organization
+#### 3. Organization
 
 To make it easier to find pictures and videos, I add metadata to them. I use digiKam to add the following metadata to my pictures and videos:
 
@@ -1880,7 +2850,7 @@ digiKam sidebar showing its prominent features
 </figcaption>
 </figure>
 
-### 4. Editing and enhancing
+#### 4. Editing and enhancing
 
 Editing pictures is a crucial aspect of preserving and reliving memories. By fine-tuning and refining the images, we bring out the best qualities and features that make each moment special. Moreover, editing can also help eliminate distractions, adjust lighting, and enhance overall image quality. Ultimately, the process of editing pictures is an art that helps preserve and elevate the beauty of our memories.
 
@@ -1904,17 +2874,17 @@ Image editing tools in digiKam
 
 digiKam also has features to create panoramas and HDR images from multiple pictures, which I make occasional use of.
 
-### 5. Cloud backup
+#### 5. Cloud backup
 
 Even though I chose local storage as the main destination for my media, I still back them up to the cloud. Hard drives can fail and catastrophes like fire can happen which destroy years of memories. Having an off-site backup is a good way to ensure that the media remain safe.
 
 Any pictures and videos that I take from my cellphone are automatically uploaded to Google Photos once I join a WiFi network. I selectively upload pictures and videos from my GoPro or drone to conserve cloud storage space, uploading directly to Google Photos from digiKam.
 
-# Conclusion
+## Conclusion
 
 Organizing digital media is crucial for safeguarding our memories and revisiting our experiences. With the right tools, it can be an effortless process that helps us remember and share our precious moments. However, it is important to remember that without the right mindset and discipline, even sophisticated tools are not of much value.
 
-## Future work
+### Future work
 
 I am still experimenting with the workflow and tools that I use to manage my digital media. Here are some ideas that I am considering:
 
@@ -1928,135 +2898,21 @@ I am still experimenting with the workflow and tools that I use to manage my dig
 
 ---
 
-- **Page:** Looking back: My 2022 in review
-- **Source:** https://subodhdahal.com/blog/2022-in-review
-- **Description:** From new adventures and memories to lessons learned and personal growth, this year has been a year of discovery. Here's my 2022 in review.
-
-As the earth completes another revolution around the sun and yet another year comes to an end, I can't help but look back and reflect on all that has happened.
-
-For me, this year has been filled with highs and lows, moments of joy and sorrow, and a range of emotions in between. From embarking on solo adventures to creating lasting memories with close friends, I've had the opportunity to learn and grow in ways I never could have imagined.
-
-Join me as I take a journey through the year that was, and discover the lessons and insights I've gained along the way.
-
-# Personal highlights
-
-This year has been filled with exciting adventures, personal growth, and lasting memories. Here are some of the highlights:
-
-## A year of travel: My adventures in 10 countries
-
-This year, I set off on a series of solo adventures that opened my eyes to new experiences and gave me the freedom to make spontaneous decisions. As I traveled to different countries and immersed myself in diverse cultures, I gained a new perspective on the world and my place in it.
-
-Along the way, I met a cast of intriguing characters and took time to reflect on my life and future goals. And when I wasn't venturing out on my own, I made some unforgettable memories with my closest friends.
-
-<figure className="image">
-
-![Europe map](https://subodhdahal.com/images/2022-in-review/europe-map-visited.svg)
-  <figcaption>
-
-A map of Europe with the countries I traveled to in 2022 marked in blue
-
-</figcaption>
-</figure>
-
-I embarked on a journey that took me to 10 countries, 8 of which were new to me. From the beautiful beaches of Greece and the wide landscapes of Norway, to the charming streets of Belgium and the historic sites of Poland, I was constantly in awe of the diverse cultures and landscapes I encountered. In Italy, I marveled at the ancient architecture and savored the delicious cuisine. I also visited the smallest country in the world, Vatican City and marveled at the beauty of St. Peter's Basilica. In Estonia, I was struck by the country's natural beauty and rich history, and in Finland, I was fascinated by the unique blend of modern and traditional culture.
-
-And even though I've visited Switzerland and Austria before, I always find something new and exciting to discover in these beautiful countries. Along the way, I also explored countless charming towns and villages throughout Germany.
-
-All these experiences made this year one of the most memorable and rewarding travel experiences of my life.
-
-<figure className="quote">
-
-> The use of traveling is to regulate imagination by reality, and instead of thinking how things may be, to see them as they are.
-
-
-  <figcaption>
-
-— Samuel Johnson
-
-</figcaption>
-</figure>
-
-## Finding my inner strength: My 50km/day hikes in Germany
-
-This year, I pushed myself to new limits with two epic 50km/day hikes that challenged my physical and mental strength. As someone who has not traditionally considered themselves an athlete, this was a significant accomplishment that I never would have thought myself capable of before.
-
-The first one was along the Rössleweg in Stuttgart, Germany. It is mostly through wooded areas, picturesque vineyards and orchards, all while overlooking the valley known as the Stuttgarter Kessel.
-
-It was in preparation for the second one, which was the [50 km MegaMarsch event in Freiburg](https://www.megamarsch.de/50-12/freiburg/freiburg-anmeldung/), Germany. This was a 50km hike that started in the city and through the Black Forest, which is known for its dense forests and steep hills, before finally ending back in the city.
-
-Despite the exhausting nature of these hikes, they were both amazing experiences that helped me to push myself and discover what I was capable of.
-
-I am grateful to my good friend [Carsten Cierniak](https://www.instagram.com/carsten_thm/) for introducing me to the MegaMarsch event and for providing motivation and companionship during the hikes. Thanks also to him for the guidance and tips that helped me prepare for the hikes.
-
-## The great outdoors: A year of hiking and exploring
-
-Throughout the year, I have been able to do a lot of hiking, ranging from short walks to full-day hikes. Each trail offered its own unique beauty and challenges, from scenic mountain vistas to dense forests and winding rivers.
-
-Hiking has allowed me to disconnect from the stresses of daily life and reconnect with the beauty of the natural world. It has also been a great way to stay active and healthy, both physically and mentally.
-
-The most memorable hikes of the year were: to Zugspitze 🇩🇪, in the Black Forest 🇩🇪, in the Saxon Switzerland National Park 🇩🇪, and in Sognsvann 🇳🇴.
-
-Climbing to the top of Zugspitze, the highest mountain in Germany, proved to be a formidable challenge.The steep and rocky path halfway up the mountain was difficult, and the weather near the top was bad enough that we had to stop just a few hundred meters from the summit. However, the views along the way and the feeling of accomplishment made it all worth it.
-
-I was able to build a strong connection with my friends who accompanied me during these hikes as we bonded over the shared experience of exploring the beautiful nature these regions have to offer.
-
-Hiking has become a passion of mine and I look forward to continuing to explore the many trails that the world has to offer.
-
-## A night to remember: Iron Maiden in concert
-
-I was able to realize a long time desire of mine this year by seeing one of my favorite bands Iron Maiden live in concert. The thrill of hearing the songs I love performed live was an incredible. Despite the age of the band members, they delivered an electric performance and were able to make the 50,000 people present in the venue chant in unison.
-
-It was an unforgettable event that I will always cherish.
-
-# Professional highlights
-
-In addition to my travels, hikes and fun events, this year has also brought its share of challenges and growth in my professional life.
-
-## Stepping into a new role: Overcoming challenges and finding success
-
-As a seasoned Software Engineer with almost a decade of experience under my belt, I thought I had seen it all. But when I accepted the role of Software Engineering Team Lead at [Laserhub GmbH](https://laserhub.com/), I quickly realized that I had a lot to learn. Not only was this a promotion, but it also required me to approach things in a new way and shed some of my old habits.
-
-I'd be lying if I said it has been easy. There have been a lot of challenges, but I've been enjoying it so far and learning to see things from a new perspective. With the help of the wonderful people I work with, I have been able to grow a lot in this role.
-
-# Resilience in adversity: Struggles of those close to me in 2022
-
-In February of this year, a war broke out in Ukraine, causing me great concern for the safety of my colleagues and their loved ones living there. Despite my fears, they are fortunately able to remain safe, but they still have to cope with the ongoing effects of the war. I am in awe of their strength and resilience as they continue to live their lives as normally as possible, despite the challenges they face. I can only hope that the situation will improve and that peace will be restored in the near future.
-
-# Personal key takeaways from 2022
-
-- We are all works in progress. Who we were yesterday is not who we are today, and who we are today is not who we will be tomorrow.
-
-  - There is always the potential for growth and learning, and we should always be open to new knowledge and opportunities for self-improvement.
-
-  - Embracing challenges is essential to personal growth and development.
-
-  - Investing in meaningful relationships with loved ones is always worthwhile.
-
-As I look back on the year that was, I am filled with gratitude for all the things I've learned and experienced.
-
-Unfortunately, not everyone has had the same experience, with some really horrible things that happened in the world. I hope that 2023 will be a better year for everyone.
-
-I am grateful for the support and encouragement of those in my life this year. Your guidance and opportunities have allowed me to grow. Thank you for being a part of my journey and for the amazing times we had together.
-
-Here's to the future and to the continued growth and learning that it holds.
-
----
-
 - **Page:** Git and the command-line: Take your workflow to the next level
 - **Source:** https://subodhdahal.com/blog/git-and-command-line-next-level-workflow
 - **Description:** Some tips on how to improve your Git productivity using the command-line
 
-# What is git?
+## What is git?
 
 Git is a version control system that helps developers track changes to their code and collaborate with others on software projects. It allows developers to easily switch between different versions of their code and work on different features in parallel without affecting the main codebase.
 
-# Why use the command-line?
+## Why use the command-line?
 
 Although there are many GUI Git applications, using git from the command-line allows you to configure and streamline it to your workflow rather than being constrained by the interfaces of the GUI. It will also force you to understand more of how git works and since it's a tool that developers need to use often, I'd say it's not a bad motivation. You can still use the GUI for taking care of the more complex tasks until you get more familiar with using the command-line.
 
-# Tips to improve your workflow
+## Tips to improve your workflow
 
-## 1. Add aliases for commonly used commands
+### 1. Add aliases for commonly used commands
 
 When using git from the command-line you are expected to write commands but this doesn't mean you can't make life easier for yourself. Instead of writing the whole command all the time, you can add shorter versions of them as aliases.
 
@@ -2217,7 +3073,7 @@ alias grb='git rebase'
 alias grbi='git rebase -i'
 ```
 
-## 2. Enable auto-correction of spelling mistakes for commands
+### 2. Enable auto-correction of spelling mistakes for commands
 
 We are human after all and sometimes we make spelling mistakes. Instead of having to correct the command ourself, we can let git do it for us if the mistakes are minimal.
 
@@ -2241,7 +3097,7 @@ Git auto-correct in action
 </figcaption>
 </figure>
 
-## 3. Improved git checkout with fzf
+### 3. Improved git checkout with fzf
 
 When you are working on a project you will need to switch between different branches. You can use `git checkout <branch_name>` or `git switch <branch_name>` to do that. But the `<branch_name>` needs to be exact and if you don't remember it you will need to run further commands or look up the branch name somewhere.
 
@@ -2297,7 +3153,7 @@ Git checkout with fzf in action
 </figcaption>
 </figure>
 
-## 4. Using Git Interactive Rebase Tool
+### 4. Using Git Interactive Rebase Tool
 
 Although rebase and interactive rebase can seem like a scary concepts in the beginning, after you get used to it, they can be powerful tools to organize history in a Git repo. It can be useful in a variety of situations, including:
 
@@ -2329,13 +3185,13 @@ Basic usage of Interactive Rebase Tool
 
 You can view the [documentation](https://mitmaro.github.io/git-interactive-rebase-tool/) for more information on how to set up and use the tool, along with all its features.
 
-# Conclusion
+## Conclusion
 
 Trying one or more of the above tips can help you become more productive with git. But as with any new workflow, it takes time to get used to it. So it might be good to start with one or two of the aforementioned tips and then move on to trying the others.
 
 ---
 
-## Bonus:
+### Bonus:
 
 If you would prefer a more GUI approach to working with git but in the terminal, then you can try one of the followings:
 
@@ -2345,475 +3201,111 @@ If you would prefer a more GUI approach to working with git but in the terminal,
 
 ---
 
-- **Page:** Hiking Tsho-Rolpa lake trail in Nepal
-- **Source:** https://subodhdahal.com/blog/hiking-tsho-rolpa-lake-trail-in-nepal
-- **Description:** Details of my hiking journey to the Tsho-Rolpa glacial lake in Nepal 🇳🇵, situated at 4,580m from sea level
+- **Page:** Effortless configuration syncing with GNU Stow and Git: a software engineer's workflow
+- **Source:** https://subodhdahal.com/blog/effortless-configuration-syncing-with-gnu-stow
+- **Description:** Use GNU Stow and Git to keep config files in sync across Linux and macOS. Keep them in one repo with full history, and set up new machines in minutes.
 
-## Preamble
+## Introduction
 
-While on a holiday in Nepal during October - November 2021, my friends and I were planning a hiking trip to the mountainous regions of the country. After some consideration, we decided to hike to Tsho-Rolpa lake and back.
+As a software engineer, I use my terminal, shell, and text editor every day. Each tool has its own config files, or **dotfiles**. Over time, I've tuned these files to fit how I work. Keeping them in sync across machines takes time and is easy to break. My laptop, home server, and work Mac all have their own setups. That's where **GNU Stow** and **Git** come in. They keep my configs neat and in sync. I've relied on this setup for over five years.
 
-The Tsho-Rolpa lake trail is not a popular trekking route, so we expected less crowd along the way. That was a plus in COVID times.
-The destination is a glacial lake threatened by global warming and climate change. We decided to visit it to remind ourselves what we and future generations would miss if we don't act on the effects of human activities.
+## What are dotfiles?
 
-# Introduction
+Dotfiles are config files that start with a dot, such as `.zshrc`, `.vimrc`, and `.gitconfig`. They control how your tools look and act. These files sit all over your home folder, so sorting them by hand is a chore. That becomes tedious when you use more than one machine. Putting them in one repo is the key to easy config handling.
 
-Tsho-Rolpa (NE: च्छोरोल्पा) lake, at 4,580m above sea level in Nepal, is one of the biggest glacial lakes in the country.
-The outflows of the lake form the Rolwaling (रोल्वालिङ) and the Tamakoshi (तामाकोशी) river.
-The lake lies in the Rolwaling valley in Dolakha district and is part of the Gaurishankar(गौरीशंकर) Conservation Area.
-The conservation area gets its name from Mount Gaurishankar (7,134m), which rises there, and our trek involves
-walking along the base of the mountain for a long time.
+## The tools: GNU Stow and Git
 
-The Nepal Standard Time (UTC +5:45) follows the meridian of Mount Gaurishankar.
+**GNU Stow** is a symlink manager. It takes dotfiles from one repo and links them into the folders you pick. Pair it with **Git**, and every change is easy to track and undo. Your setup then syncs across machines.
 
-<figure className="w-full,image">
-<iframe className="w-full" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=86.46162986755373%2C27.868012661281945%2C86.46517038345338%2C27.871403344815025&layer=mapnik&marker=27.86970801631173%2C86.46340012550354" style="border: 1px solid black">
+## Setting up my dotfiles
 
+### 1. Centralized Repository
 
+I keep my dotfiles in a private Git repo. The repo mirrors the layout of my home folder, so Stow can link files where they belong. Here's how I lay out configs for Zsh, Git, Tmux, and Vim (shortened for this post):
 
-</iframe>
+```bash
+dotfiles
+├── git
+│   └── .gitconfig
+├── tmux
+│   ├── .tmux.conf
+├── zsh
+│   ├── .config
+│   │   ├── aliasrc.sh
+│   │   ├── custom_fns.sh
+│   │   ├── env.zsh
+│   │   ├── oh-my-posh
+│   │   │   └── info.toml
+│   └── .zshrc
+└── vim
+  └── .vimrc
+```
 
+### 2. Stowing and restowing configurations
 
-  <figcaption>
+A big plus of GNU Stow is that you can pick which configs go on which machine. My repo holds a folder for each tool, such as Zsh, Tmux, and Vim. When I set up a machine, I choose the folders I want and leave the rest.
 
-Location of Tsho-Rolpa lake
+For example, to apply my Zsh setup I run the `stow` command like this:
 
-</figcaption>
-</figure>
+```bash
+stow --target=/home/username zsh
+```
 
-# Itinerary
+This links my Zsh files into my home folder, including `.zshrc` and everything in `.config`.
+When I add files or change a config, I restow the folder to apply the update:
 
-The Tsho-Rolpa trek typically takes 7-9 days, but time constraints forced us to squeeze it into 5 days. We knew we had to walk extreme lengths of the trail each day. We were mentally prepared for it.
+```bash
+stow -R zsh
+```
 
-The regular 7-9 day trek also accounts for acclimatization. It suits people who are not used to high altitudes, so they don't suffer from altitude sickness. We had been to high altitudes in the past with no such problems,
-so we could skip a day for acclimatization. But we were still prepared to go back to a lower altitude if any of us
-started having debilitating effects from the high altitude.
+This clears the old links and makes new ones, so nothing is stale.
 
-## Trip summary
+### 3. Uninstalling configurations
 
-- **Total elevation change:** 3,500m
-- **Motorbike ride time:** 15 hours
-- **Hiked time:** 42.5 hours (breaks included)
-- **Difficulty level:** moderate/difficult
+To remove a config, such as Zsh, I run:
 
-<figure className="image,w-full">
+```bash
+stow -D zsh
+```
 
-![undefined](https://subodhdahal.com/images/tsho-rolpa/elevation-change-graph.png)
-  <figcaption>
+This deletes every Zsh link in my home folder but leaves the files in my repo alone. I can put them back anytime.
 
-Elevation change graph for the trip
+## Pro-tip: Simplify with `.stowrc`
 
-</figcaption>
-</figure>
+By default, Stow links files into your current folder unless you set a target with `--target`. I got tired of typing `--target=$HOME` every time, so I made a `.stowrc` file in my repo:
 
-## Day 1: Bhaktapur (भक्तपुर) - Chhetchhet (छेतछेत) - Surmuche (सुर्मुचे)
+```bash
+--target=$HOME
+```
 
-- **Altitude**: from Bhaktapur (1,400m) through Chhetchhet (1,398m) to Surmuche (2,470m)
-- **Motorbike ride time:** 7.5 hours
-- **Hiked time:** 4.5 hours
+Now Stow uses my home folder on its own, and you can track the file with Git too.
 
-### Bhaktapur - Chhetchhet motorbike ride
+## Syncing with Git
 
-We(me and three friends) started the trip early, at 5 am from our hometown Bhaktapur in the Kathmandu valley. We
-were going to ride our motorbikes until the last point we could, then start the actual trek from there.
+Tracking dotfiles with Git has three big benefits:
 
-Despite our effort to get 3 motorbikes, we managed only two. There were 2 persons on each
-motorbike along with our backpacks. I rode my younger brother's KTM Duke 200cc motorbike. Its powerful engine made riding on off-road trails a lot easier. But the smaller seat size didn't make for a
-comfortable ride for two persons with heavy backpacks.
+- **Change history**: see every tweak I've made over the years and roll back if needed.
+- **Sync across machines**: push changes to a private repo, then pull them onto any new machine.
+- **Works on Linux and macOS**: the same setup works on both, and every machine stays in sync.
 
-<figure className="image">
+For instance, when I got a Mac at work, I cloned my dotfiles repo. After running `stow zsh`, my Zsh setup, aliases, and Oh My Posh theme were ready right away.
 
-![undefined](https://subodhdahal.com/images/tsho-rolpa/me-on-motorbike.jpg)
-  <figcaption>
+## More use cases for Stow
 
-Me on the motorbike at Dolalghat where we had breakfast
+I use Stow for dotfiles, but it can handle any files that need symlinks. Some examples:
 
-</figcaption>
-</figure>
+- Scripts live in a `bin` folder and link into `$PATH`.
+- Config folders for tools like Docker or Kubernetes are easy to manage.
+- You can test a new version of a config file without touching the current one.
 
-We stopped for lunch at Charikot before continuing our journey via Singati. Charikot is the headquarters of Dolakha district.
-We made a few stops along the way for rest, enjoying the beautiful views of the
-Himalayan mountain range and the waterfalls.
+## The benefits of this workflow
 
-The Gaurishankar Conservation Area starts from
-Singati, where visitors must pay an entrance fee. Foreigners might also need extra documents and trekking permits.
+This setup changed how I manage configs. Here's what it gives me:
 
-<figure className="image">
+- My configs live in one place, so updates and backups are simple.
+- Stow and Git get a new machine ready in minutes.
+- After five years of tweaks, I can still look back at what I tried and what worked.
+- The same setup works on Linux and macOS.
 
-![undefined](https://subodhdahal.com/images/tsho-rolpa/himalayas-on-the-way.jpg)
-  <figcaption>
-
-One of the first views of Mount Gaurishankar on our trip
-
-</figcaption>
-</figure>
-
-We rode the motorbikes for around 7.5 hours through the windy roads of Nepal's hilly regions. We reached
-Chhetchhet, where the hiking part of our journey would start.
-
-Shortly before reaching Chhetchhet, we came across a gorgeous waterfall flowing to the turquoise-blue water of the
-Tamakoshi river. A rainbow had also formed in front of it, making the view even more surreal.
-
-<figure className="image">
-
-![Waterfall just before reaching Chhetchhet](https://subodhdahal.com/images/tsho-rolpa/chhetchhet-waterfall2.jpg)
-  <figcaption>
-
-A gorgeous waterfall just before reaching Chhetchhet
-
-</figcaption>
-</figure>
-
-Most travelers reach Chhetchhet from Kathmandu by public transport, but we used motorbikes. You can
-take a bus from Kathmandu to Singati and then a jeep to reach Chhetchhet. Or you can reserve a
-jeep directly from Kathmandu to Chhetchhet.
-
-### Chhetchhet to Surmuche trekking
-
-After leaving our motorbikes in a secure garage in Chhetchhet and resting for a while, we started the actual hike at
-3 pm. The trail ahead climbed a hill almost vertically to the top, and we felt a bit daunted, to say the
-least. But we braved the trail anyway, eager for the journey ahead. The first half-hour was especially hard
-since our body hadn't warmed up. Once we got the hang of it, the walk became easier.
-
-Three hours of walk and a few breaks later, we reached the village of Simigaun. Simigaun is the last village with grid
-electricity. Trekkers on the Tsho-Rolpa route typically stop there first to charge their electronics overnight. But this was not our planned stop for the day. We were going to
-continue further to the next village.
-
-<figure className="image">
-
-![A typical village house in Simigaun](https://subodhdahal.com/images/tsho-rolpa/simigaun.jpg)
-  <figcaption>
-
-A typical village house in Simigaun
-
-</figcaption>
-</figure>
-
-After walking for another 2.5 hours, most of it in the dark, we reached Surmuche. Only headlamps and flashlights lit our way. We felt exhausted and wanted a hearty meal to refill our energy
-at the hotel/teahouse there. There was only one teahouse at this destination and the next village was at least 3 hours
-away.
-
-We were fortunate that the teahouse in Surmuche was open. The owner
-had walked the same path from Surmuche and arrived just an hour ago. He felt tired and a bit
-unwell, so he could only offer a simple meal. Despite this, he showed us our accommodation for the night and made tasty noodle soup for us. The soup was
-more than enough, and we had snacks with us anyway, so we could have them if needed.
-With another day of a long walk ahead of us and the exhaustion from the day's bike ride and walk, we didn't waste much
-time going to bed.
-
-<figure className="image">
-
-![Mount Gaurishankar illuminated by the last rays of the day's sunlight](https://subodhdahal.com/images/tsho-rolpa/mount-gaurishankar-sunlight.jpg)
-  <figcaption>
-
-Mount Gaurishankar illuminated by the last rays of the day's sunlight
-
-</figcaption>
-</figure>
-
-## Day 2: Surmuche (सुर्मुचे) - Beding (बेदिङ्ग)
-
-- **Altitude**: from Surmuche (2,470m) to Beding (3,721m)
-- **Hiked time:** 12 hours
-
-We had an ambitious plan for our second-day hike. We woke up early at 6 am, and right after breakfast we started
-our hike. This was also an uphill hike, but the elevation change didn't feel as aggressive as the previous day, or
-maybe we got used to it.
-
-<figure className="image">
-
-![Morning views from our lodge in Surmuche](https://subodhdahal.com/images/tsho-rolpa/surmuche-morning-views.jpg)
-  <figcaption>
-
-Morning views from our lodge in Surmuche
-
-</figcaption>
-</figure>
-
-After hiking for about 2 hours, we reached the next stop of Kyalche. We felt fine, so we rested briefly and took some pictures before continuing.
-
-<figure className="image">
-
-![Me at the short stop in Kyalche](https://subodhdahal.com/images/tsho-rolpa/stop-at-kyalche.jpg)
-  <figcaption>
-
-Me during the stop in Kyalche
-
-</figcaption>
-</figure>
-
-We noticed that we stopped getting cellphone network reception at some point. It felt odd at first, but it kept us present. We soaked in the views during our rest time instead of scrolling social media.
-
-After two more hours of hiking with little to no elevation change, we reached Dongang (डोंगांग),
-a small settlement along the Tamakoshi river with turquoise
-blue water. The water's almost surreal color probably comes from minerals washed down from the mountains and glaciers
-not so far away.
-
-<figure className="image">
-
-![The settlement at Dongang](https://subodhdahal.com/images/tsho-rolpa/dongang.jpg)
-  <figcaption>
-
-The settlement at Dongang along the Tamakoshi river
-
-</figcaption>
-</figure>
-
-We were starving when we arrived. The
-next stop was hours away, so we stopped for Dal-Bhat (rice with lentils and vegetables on the side), the
-quintessential Nepali food. Sweat had drenched our clothes during the long sunny hike. We took the
-time to dry them and rested until the food was ready. After having a hearty meal, we rested a bit more as we were in
-no position to start walking immediately.
-
-We resumed the hike from Dongang at around 1 pm. The mountains felt closer now, which made us want to continue. We walked along the Tamakoshi river for a long time. We didn't complain, because the turquoise-blue water was something we couldn't get enough of. After a
-while, we began to notice that the vegetation was changing and starting to be more alpine-like.
-
-<figure className="image">
-
-![Views a short while after Dongang](https://subodhdahal.com/images/tsho-rolpa/after-donggang.jpg)
-  <figcaption>
-
-Views a short while after Dongang
-
-</figcaption>
-</figure>
-
-At around 6 pm, as dusk fell, we reached the village of Beding. We felt tired, and some of us felt the altitude. We were glad to see the village signpost where we could stay for the night. To our dismay, the lodges were at the far side of the village. Reaching them took 45 more minutes in utter darkness, with only our headlamps and flashlights to light the
-path.
-
-In the lodge in Beding, we had some Tibetan noodle soup alongside the fire in the kitchen to quickly warm us up
-before having our dinner of Daal-Bhat. The weather in Beding was freezing, and our rooms had no heating. We piled layers of blankets
-on top of us to stay warm at night.
-
-## Day 3: Beding (बेदिङ्ग) - Tsho-Rolpa (च्छोरोल्पा) - Na (ना) village
-
-- **Altitude**: from Beding (3,721m) through Tsho-Rolpa (4,550m) to Na village (4,180m)
-- **Hiked time:** 12 hours
-
-Beding, also known as the village of Everest climbers, was where we stayed on the second night of our trip. Since we
-had arrived in darkness, we got a pleasant surprise in the morning. Beautiful mountain views greeted us from our lodge.
-
-<figure className="image">
-
-![Morning views from our lodge at Beding](https://subodhdahal.com/images/tsho-rolpa/beding-morning-views.jpg)
-  <figcaption>
-
-Morning views from our lodge at Beding
-
-</figcaption>
-</figure>
-
-On the third day, we had a quick breakfast and started the hike at 7 am, soon after waking
-up. This was the first day we didn't have to gain much elevation during our hike. The path ran nearly
-straight with only minor elevation changes.
-
-Along the way, we could enjoy the views of the Rolwaling valley. In the local Sherpa language,
-Rolwaling means "valley carved by a plow," and the landscape did look the part.
-
-<figure className="image">
-
-![Views of the Rolwaling valley](https://subodhdahal.com/images/tsho-rolpa/rolwaling-valley-1.jpg)
-  <figcaption>
-
-Views of the Rolwaling valley
-
-</figcaption>
-</figure>
-
-<figure className="image">
-
-![Views of the Rolwaling valley](https://subodhdahal.com/images/tsho-rolpa/rolwaling-valley-2.jpg)
-  <figcaption>
-
-Views of the Rolwaling valley
-
-</figcaption>
-</figure>
-
-We reached the village of Na at 11 am. After resting for a while at a lodge there, we had our breakfast/lunch. We left our
-bags here, taking only the day's essentials. We would return to stay the night after reaching Tsho-Rolpa lake. Not having to carry the 12
-kilos I had been carrying the past days felt almost magical.
-
-Walking alongside the Tamakoshi river on almost flat terrain, we reached Tsho-Rolpa lake at 3:30 pm.
-The weather favored us that day, and we had clear views of the lake and the mountains. We had heard that fog often hides the lake after 11 am.
-
-Reaching our destination after the grueling walk and the pain we endured the
-past few days felt surreal. We lingered for a while over the lake and the mountains, with the Rolwaling
-valley behind us. We also met other travelers from Nepal at the lake.
-
-<figure className="image,w-full">
-
-![Views of the Tsho-Rolpa lake](https://subodhdahal.com/images/tsho-rolpa/lake-view.jpg)
-  <figcaption>
-
-Views of the Tsho-Rolpa lake
-
-</figcaption>
-</figure>
-
-Despite the captivating view, we couldn't stay there for long because we were losing light and had to return soon. The wind and chill
-also made it impossible to spend more time there. No hotels, lodges, or teahouses stand near
-Tsho-Rolpa lake. Everyone had to return unless they planned to camp.
-
-While making our descent from the lake to Na village, we saw the golden hour set in. Beautiful light filled the horizon ahead of us.
-
-<figure className="image">
-
-![Views of the Na village](https://subodhdahal.com/images/tsho-rolpa/na-village.jpg)
-  <figcaption>
-
-Views of the Na village
-
-</figcaption>
-</figure>
-
-Behind us, the last light
-of the day glowed on top of the mountains, an exquisite view of its own.
-
-<figure className="image">
-
-![Mountain peak illuminated by sunset](https://subodhdahal.com/images/tsho-rolpa/illuminated-mountain.jpg)
-  <figcaption>
-
-Mountain peak illuminated by sunset
-
-</figcaption>
-</figure>
-
-Like the previous days, we reached our destination in utter darkness and sat by the fire to warm ourselves up with some
-soup before having our dinner. We also reflected on our journey and on reaching the Tsho-Rolpa lake in 3 days. Except for seasoned trekkers, reaching the lake takes at least 4 days. We were proud of doing it in 3 days despite our limited experience
-at such a high altitude.
-
-Sleep didn't come easily that night. The high
-altitude and the cold kept us awake despite our exhaustion. We did manage to get to sleep after a while of trying.
-
-## Day 4: Na (ना) village - Simigaun (सिमिगाउँ)
-
-- **Altitude**: from Na village (4,180m) to Simigaun (2,000m)
-- **Hiked time:** 12 hours
-
-The hike back was almost entirely downhill. We planned to cover a long distance to make the next day easier.
-We started our hike at 7:30 from the Na village after having breakfast. We didn't make many stops along the way apart
-from a few snack breaks as going downhill was easier and we had to walk a long distance to cover during the day.
-
-We stopped at Dongang for lunch at 2 pm and resumed our journey soon after. As on the previous
-days, we reached our destination in the dark, arriving in Simigaun at 7 pm. Most of our electronics were low on
-battery, so we recharged them here where there was grid-connected electricity. The power banks we had brought and
-the spare batteries from the GoPro and the drone had lasted us till then.
-
-We hadn't properly celebrated reaching our destination the previous night, so we treated ourselves
-to Tongba, an alcoholic drink made from fermented millet. We mulled over our journey, life, and philosophy in general,
-as often happens over drinks.
-
-<figure className="image">
-
-![Tongba](https://subodhdahal.com/images/tsho-rolpa/tongba-vessel.jpg)
-  <figcaption>
-
-Tongba served in its regular vessel
-
-</figcaption>
-</figure>
-
-After a while, we had dinner and went to sleep. We planned to wake up
-early. We still had a few hours of hiking left before reaching Chhetchhet, where our motorbikes
-waited to take us home.
-
-## Day 5: Simigaun - Bhaktapur
-
-- **Altitude**: from Simigaun (2,000m) to Bhaktapur (1,400m)
-- **Hiked time:** 2 hours
-- **Motorbike ride time:** 7.5 hours
-
-We started our journey at 7 am without having breakfast. We reached Chhetchhet at 9 am. The last 30 minutes of our walk
-felt grueling because I was having knee problems walking downhill on the stone-paved stairs. The long downhill
-distance we covered the previous day probably caused it. But I was glad this
-happened towards the end of the trek and not earlier. Otherwise, it'd have been a nightmare and not a nice
-experience.
-
-Getting on my motorbike was an immense relief for my knee and lower body in general. Now my
-arms and hands felt the pain of riding a motorbike on off-road, uneven terrain. Braving the pain, we
-reached Dolakha Bazar, where we made a short stop to visit the Dolakha Bhimeswor temple.
-
-Our next stop was at nearby Charikot where we had the first meal of the day at noon. We also loaded our heavy bags onto
-a bus bound for Kathmandu, so we wouldn't carry them on our backs all the way home.
-
-Shortly after lunch, we resumed our journey towards Bhaktapur and reached there at 6 pm, just in
-time to retrieve our bags from the bus. Although the motorbike journey is typically much faster than the local bus,
-we arrived together. We had stopped for rest and food in
-Dolalghat.
-
-My whole body was in pain when I reached home after our grueling journey. I couldn't wait to rest
-and not do anything for the next few days.
-
-# Reflections on the journey
-
-The journey was one of the best experiences of my life. The majestic views and well-maintained
-trails of the Gaurishankar Conservation Area made the hike pleasant despite the long hours.
-Having good friends accompanying me on the trip made it even better.
-
-Despite the beautiful journey, we couldn't help but wonder about the people living below the lake. What would happen to them if it suddenly bursts? Due to global warming, the risk grows more severe every day. Some efforts to reduce the risk and set up an early warning
-system are underway, but they aren't enough. The risk remains unless the world acts to curb
-rising temperatures and climate change.
-
-## Things we could've done differently
-
-Since we squeezed a 7-9 day trip into five days, we had to walk up to 12 hours a day. It felt tough at
-times. The trip could've been a lot less stressful. But we did the best we could with our time constraints.
-
-If we had more time we could also have hiked to the Dudh Kunda, a beautiful lake a few hours away from Tsho-Rolpa lake.
-
-Bringing medicines for high altitude, just in case, would've been smart. We didn't need them in the end.
-
-## Lessons learned for life
-
-Towards the end of our daily 12-hour trek, I felt exhausted and couldn't continue.
-Stopping in the dark woods wasn't an option, so I forced myself on despite the weariness and pain.
-This made me realize that we are capable of achieving a lot and most of the time our mind is the
-one limiting us.
-
-Planning the journey and pre-determining the destination for each day made us accountable and determined.
-While on the hike,
-instead of getting daunted by the long path ahead, we focused on the next step.
-Having a bigger picture in mind and taking small steps to achieve it makes even the seemingly impossible possible.
-
-The insights I learned can help me overcome difficult challenges in other facets of life as well.
-
-<figure className="quote">
-
-> Why do you go away? So that you can come back. So that you can see the place you came from with new eyes and extra
->     colors. And the people there see you differently, too. Coming back to where you started is not the same as never leaving.
-
-
-  <figcaption>
-
-— Terry Pratchett, <cite>
-
-A Hat Full of Sky
-
-</cite>
-</figcaption>
-</figure>
-
-I felt like a different person, for the better, after my journey.
-
-**Looking forward to more journeys to explore the world and discover my true self.**
-
----
-
-<div className="article-description">
-
-### Addendum
-
-<div className="text-sm">
-
-- All pictures by me (Subodh Dahal) except for the ones of me. I took them all with my One Plus 8 Pro smartphone and did some post-processing.<br />
-
-
-  - There were variations in the reported altitude of the places based on the sources<br />
-
-
-  - Follow me on [Instagram (@sub0dh_d)](https://www.instagram.com/sub0dh_d/) to view more pictures from this and other trips
-
-</div>
-</div>
+**GNU Stow** and **Git** make this whole setup possible. My configs stay in sync without much effort, and every machine ends up the same. Every tweak I make leaves a trail, so I can undo mistakes. That leaves me more time to build and solve problems.
 

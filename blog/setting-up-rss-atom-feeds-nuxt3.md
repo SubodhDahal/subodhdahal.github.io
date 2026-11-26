@@ -8,7 +8,7 @@ canonical_url: "https://subodhdahal.com/blog/setting-up-rss-atom-feeds-nuxt3/"
 
 ## What are RSS and Atom feeds?
 
-RSS (Really Simple Syndication) and Atom are XML formats for sharing new posts with readers. Instead of visiting each site by hand, readers subscribe to a feed. When a site publishes new content, the feed updates and readers see it in their feed reader.
+RSS (Really Simple Syndication) and Atom are XML formats for sharing new posts with readers. Instead of visiting each site by hand, readers subscribe to a feed. When a site publishes new content, the feed updates and readers see it in their feed reader. I use [a self-hosted FreshRSS](https://subodhdahal.com/blog/reading-and-discovery-feed-curation/) for mine.
 
 Some popular web-based feed readers are FreshRSS, Feedly, Inoreader, and NewsBlur. Desktop apps like Fluent Reader and mobile apps like Reeder and Readrops are also available. I run a [FreshRSS](https://freshrss.org/) instance in my homelab and read updates through its web UI or the Readrops app on my phone.
 

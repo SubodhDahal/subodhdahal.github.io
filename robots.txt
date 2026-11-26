@@ -6,7 +6,6 @@ Disallow: /api/*
 Content-Signal: search=yes, ai-input=yes
 
 User-agent: GPTBot
-User-agent: ChatGPT-User
 User-agent: CCBot
 User-agent: Google-Extended
 User-agent: anthropic-ai

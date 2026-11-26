@@ -1,0 +1,1 @@
+import{G as e,V as t,k as n,y as r}from"./D0tihvOb.js";import{t as i}from"./BDNMzG2s.js";n();var a={};function o(n,i){return t(),r(`strong`,null,[e(n.$slots,`default`)])}var s=Object.assign(i(a,[[`render`,o]]),{__name:`ProseStrong`});export{s as default};

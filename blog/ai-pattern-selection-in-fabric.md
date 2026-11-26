@@ -12,7 +12,7 @@ But here's the thing: there were too many patterns available. I kept staring at 
 
 ## The solution
 
-I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool, to create searchable menus for fabric. Instead of memorizing commands, I just:
+I used [fzf](https://github.com/junegunn/fzf), a fuzzy finder tool I also use for [checking out Git branches](https://subodhdahal.com/blog/git-and-command-line-next-level-workflow/), to create searchable menus for fabric. Instead of memorizing commands, I just:
 
 1. Send text to fabric
 2. Type any parts of what I want. fzf is smart about matching:
