@@ -11,9 +11,16 @@
       <a href="/#about" class="link-underline">About</a>
     </nav>
     <SocialLinks />
-    <nav aria-label="Legal" class="flex gap-x-4 text-xs text-secondary-600 dark:text-secondary-300">
-      <NuxtLink to="/impressum/" class="link-underline">Impressum</NuxtLink>
-      <NuxtLink to="/privacy/" class="link-underline">Datenschutz / Privacy</NuxtLink>
+    <nav
+      aria-label="Legal"
+      class="-mt-4 flex gap-x-6 font-sans text-xs text-secondary-600 dark:text-secondary-300"
+    >
+      <NuxtLink to="/impressum/" class="link-hit hover:text-primary-700 dark:hover:text-primary-300">
+        <span class="link-underline">Impressum</span>
+      </NuxtLink>
+      <NuxtLink to="/privacy/" class="link-hit hover:text-primary-700 dark:hover:text-primary-300">
+        <span class="link-underline">Datenschutz / Privacy</span>
+      </NuxtLink>
     </nav>
   </footer>
 </template>

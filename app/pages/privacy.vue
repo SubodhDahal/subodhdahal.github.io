@@ -8,15 +8,26 @@ useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogU
 </script>
 
 <template>
-  <main class="container my-10">
-    <article class="blog-page">
-      <h1>Datenschutzerklärung</h1>
-      <p class="font-sans text-sm">
-        <a href="#de">Deutsch</a> · <a href="#en">English</a>
+  <main class="container my-10 pb-10">
+    <header class="mb-10 text-center">
+      <h1 class="text-3xl font-serif font-bold text-secondary-800 dark:text-secondary-100">Datenschutzerklärung</h1>
+      <div class="w-24 h-1 bg-primary-500 mx-auto mt-4" />
+      <p class="font-serif italic text-secondary-600 dark:text-secondary-300 mt-4 text-pretty">
+        Welche Daten beim Besuch dieser Website anfallen und welche Rechte du hast.
       </p>
+      <a
+        href="#en"
+        lang="en"
+        class="link-hit mt-2 font-sans text-sm text-primary-700 dark:text-primary-300"
+      >
+        <span class="link-underline">Read the privacy policy in English</span>
+        <span aria-hidden="true">&nbsp;↓</span>
+      </a>
+    </header>
 
+    <article class="blog-page">
       <!-- ───────────────────────── Deutsch ───────────────────────── -->
-      <section id="de" lang="de">
+      <section id="de" lang="de" class="hyphens-auto">
         <h2>1. Verantwortlicher</h2>
         <p>
           Verantwortlich für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO)
@@ -138,14 +149,20 @@ useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogU
           <a href="https://www.baden-wuerttemberg.datenschutz.de" rel="noopener noreferrer" target="_blank">www.baden-wuerttemberg.datenschutz.de</a>.
         </p>
 
-        <p class="text-sm">Stand: {{ LEGAL.updated.de }}</p>
+        <p class="not-prose mt-10 font-sans text-xs font-medium uppercase tracking-[0.06em] text-secondary-500 dark:text-secondary-400">
+          Stand: {{ LEGAL.updated.de }}
+        </p>
       </section>
 
       <!-- ───────────────────────── English ───────────────────────── -->
-      <section id="en" lang="en">
-        <h2>Privacy policy (English)</h2>
-        <p>
-          This is a translation for convenience. The German version above is the legally binding one.
+      <section
+        id="en"
+        lang="en"
+        class="mt-16 scroll-mt-8 border-t border-secondary-200 pt-12 dark:border-secondary-700"
+      >
+        <h2 class="!mt-0">Privacy policy</h2>
+        <p class="italic text-secondary-600 dark:text-secondary-300">
+          A translation for convenience. The German version above is the legally binding one.
         </p>
 
         <h3>1. Controller</h3>
@@ -245,7 +262,9 @@ useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogU
           <a href="https://www.baden-wuerttemberg.datenschutz.de" rel="noopener noreferrer" target="_blank">www.baden-wuerttemberg.datenschutz.de</a>.
         </p>
 
-        <p class="text-sm">Last updated: {{ LEGAL.updated.en }}</p>
+        <p class="not-prose mt-10 font-sans text-xs font-medium uppercase tracking-[0.06em] text-secondary-500 dark:text-secondary-400">
+          Last updated: {{ LEGAL.updated.en }}
+        </p>
       </section>
     </article>
   </main>

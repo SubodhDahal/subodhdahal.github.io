@@ -455,6 +455,15 @@
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+  /* A 44px hit area around a small .link-underline label (The 44 Rule):
+     <a class="link-hit"><span class="link-underline">…</span></a> */
+  .link-hit {
+    @apply inline-flex min-h-[44px] items-center;
+  }
+  .link-hit:hover .link-underline::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 
   .nav-link {
     @apply relative inline-block font-medium pb-1 text-secondary-800 dark:text-secondary-50 transition-colors duration-200;
