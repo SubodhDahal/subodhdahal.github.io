@@ -1,14 +1,14 @@
 <template>
   <section class="bg-secondary-100 dark:bg-secondary-900 border-t border-secondary-200 dark:border-secondary-700" id="about">
     <div class="container pt-16 pb-20">
-      <div class="relative mb-20 md:mb-28">
+      <div class="mb-20 md:mb-28">
         <h2
           class="text-3xl font-serif font-bold text-center text-secondary-800 dark:text-secondary-100"
         >
           About Me
         </h2>
         <div
-          class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"
+          class="w-24 h-1 bg-primary-500 mx-auto mt-4"
         ></div>
       </div>
 

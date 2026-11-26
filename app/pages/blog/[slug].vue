@@ -10,15 +10,15 @@
                         >
                             {{ article.title }}
                         </h1>
-                        <span class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500">
+                        <span class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 dark:text-secondary-400">
                             {{ formatDate(article.postDate) }}
                         </span>
-                        <span v-if="article.updated" class="font-sans font-normal text-xs text-secondary-400 dark:text-secondary-500">
+                        <span v-if="article.updated" class="font-sans font-normal text-xs text-secondary-500 dark:text-secondary-400">
                             · Updated {{ formatDate(article.updated) }}
                         </span>
                     </div>
                     <p
-                        class="text-lg md:text-xl mb-4 text-secondary-600 dark:text-secondary-300"
+                        class="text-base leading-relaxed text-pretty mb-4 text-secondary-600 dark:text-secondary-300"
                     >
                         {{ article.description }}
                     </p>
@@ -46,7 +46,7 @@
         <div class="container">
             <div class="lg:flex lg:gap-12">
                 <details class="lg:hidden mb-6">
-                    <summary class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 cursor-pointer">
+                    <summary class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 dark:text-secondary-400 cursor-pointer">
                         Table of Contents
                     </summary>
                     <TableOfContents :article="article" class="mt-2" />
@@ -76,11 +76,11 @@
                  rose title on hover. All carried from the system; no new
                  colors, no new geometry. -->
             <section v-if="relatedArticles.length" class="my-16">
-                <div class="relative mb-10">
-                    <h2 class="text-3xl font-serif font-bold text-center text-secondary-800 dark:text-secondary-100">
+                <div class="mb-10">
+                    <h2 class="text-3xl font-serif font-bold text-center text-balance text-secondary-800 dark:text-secondary-100">
                         {{ topic ? `More in ${topic.title}` : 'Related posts' }}
                     </h2>
-                    <div class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
+                    <div class="w-24 h-1 bg-primary-500 mx-auto mt-4"></div>
                 </div>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <NuxtLink
@@ -94,15 +94,17 @@
                         </h3>
                         <p
                             v-if="rel.description"
-                            class="font-sans text-base leading-relaxed text-secondary-600 dark:text-secondary-300 line-clamp-2 mb-3"
+                            class="font-sans text-sm leading-relaxed text-secondary-600 dark:text-secondary-300 line-clamp-2 mb-3"
                         >
                             {{ rel.description }}
                         </p>
                         <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
-                            <ArticleTags v-if="rel.tags?.length" :tags="rel.tags" />
+                            <div v-if="rel.tags?.length">
+                                <ArticleTags :tags="rel.tags" />
+                            </div>
                             <time
                                 v-if="rel.postDate"
-                                class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 ml-auto"
+                                class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 dark:text-secondary-400 ml-auto"
                             >
                                 {{ formatDate(rel.postDate) }}
                             </time>

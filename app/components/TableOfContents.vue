@@ -66,7 +66,7 @@ onUnmounted(() => {
 
 <template>
   <nav class="max-h-[calc(100vh-7rem)] overflow-y-auto">
-    <h4 class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 mb-3">
+    <h4 class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 dark:text-secondary-400 mb-3">
       Table of Contents
     </h4>
     <ul class="space-y-1">

@@ -66,7 +66,7 @@ function formatDate(date: string | Date): string {
 <template>
   <div v-if="topic" class="container my-10">
     <div class="mb-8 max-w-2xl mx-auto">
-      <p class="text-center font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500">
+      <p class="text-center font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 dark:text-secondary-400">
         <NuxtLink to="/blog/" class="hover:text-primary-600 dark:hover:text-primary-400">Blog</NuxtLink> · Topic
       </p>
       <h1 class="mt-2 text-3xl font-serif font-bold text-center text-secondary-800 dark:text-secondary-100">
@@ -97,7 +97,7 @@ function formatDate(date: string | Date): string {
             </div>
             <time
               v-if="post.postDate"
-              class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 flex-shrink-0 hidden sm:block"
+              class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 dark:text-secondary-400 flex-shrink-0 hidden sm:block"
             >
               {{ formatDate(post.postDate) }}
             </time>

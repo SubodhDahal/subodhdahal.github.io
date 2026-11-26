@@ -60,7 +60,7 @@ function formatDate(date: string | Date): string {
             </div>
             <time
               v-if="article.postDate"
-              class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 flex-shrink-0 hidden sm:block"
+              class="font-sans font-medium text-xs uppercase tracking-[0.06em] text-secondary-500 dark:text-secondary-400 flex-shrink-0 hidden sm:block"
             >
               {{ formatDate(article.postDate) }}
             </time>
@@ -69,6 +69,6 @@ function formatDate(date: string | Date): string {
       </li>
     </ul>
 
-    <p v-else class="text-center text-secondary-500">No articles found</p>
+    <p v-else class="text-center text-secondary-500 dark:text-secondary-400">No articles found</p>
   </div>
 </template>

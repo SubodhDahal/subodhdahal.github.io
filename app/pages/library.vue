@@ -122,11 +122,11 @@ const handleEntryNavigate = (title: string) => {
          rest of the site. -->
     <header class="bg-secondary-50 dark:bg-secondary-800 border-b border-secondary-200 dark:border-secondary-700">
       <div class="container pt-16 pb-10 md:pt-20 md:pb-12">
-        <div class="relative mb-6">
+        <div class="mb-6">
           <h1 class="font-serif text-3xl md:text-4xl font-bold text-center text-secondary-800 dark:text-secondary-100 tracking-tight">
             Library
           </h1>
-          <div class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4" />
+          <div class="w-24 h-1 bg-primary-500 mx-auto mt-4" />
         </div>
 
         <p class="font-serif italic text-lg md:text-xl text-center max-w-2xl mx-auto leading-relaxed text-secondary-700 dark:text-secondary-200">

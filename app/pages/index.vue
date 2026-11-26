@@ -59,11 +59,11 @@
     </div>
     <div class="bg-white dark:bg-secondary-800 pt-20 pb-16">
       <div class="container">
-        <div class="relative mb-8">
+        <div class="mb-8">
           <h2 class="text-3xl font-serif font-bold text-center text-secondary-800 dark:text-secondary-100">
             Recent Articles
           </h2>
-          <div class="absolute w-24 h-1 bg-primary-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
+          <div class="w-24 h-1 bg-primary-500 mx-auto mt-4"></div>
         </div>
         <div class="mb-2">
           <BlogPosts content="blog" :tags="[]" :quantity="5" :showDescription="false" />
