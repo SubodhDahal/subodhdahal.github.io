@@ -21,7 +21,8 @@ export default defineConfig({
   },
   webServer: {
     command: `npm run dev -- --port ${PORT}`,
-    url: `http://localhost:${PORT}/tools/instagram-carousel/`,
+    // Wait for the port only; global-setup waits for the page (see the note there).
+    port: PORT,
     reuseExistingServer: true,
     timeout: 240_000,
   },
