@@ -152,6 +152,17 @@
   src: url("/fonts/IBM_Plex_Mono/IBMPlexMono-400-normal.woff2") format("woff2");
 }
 
+/* Box-drawing characters (directory trees) are missing from the Latin file.
+   Without them a fallback font with a different width breaks the alignment. */
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/IBM_Plex_Mono/IBMPlexMono-400-symbols.woff2") format("woff2");
+  unicode-range: U+2500-259F;
+}
+
 @font-face {
   font-family: "IBM Plex Mono";
   font-style: normal;
@@ -234,6 +245,12 @@
 
   body {
     @apply bg-white text-secondary-900 leading-relaxed transition-colors duration-300;
+  }
+
+  /* The html word-spacing would make spaces wider than other characters
+     and break column alignment in code blocks. */
+  pre {
+    word-spacing: normal;
   }
 
   ::selection {
