@@ -114,7 +114,8 @@ const link = 'font-medium text-primary-700 underline underline-offset-2 hover:te
       </svg>
       <span>
         Free, no sign-up. Everything runs in your browser and your images never leave your device.
-        This page uses Rybbit for pageview analytics only.
+        This page uses Rybbit for cookieless pageview analytics only
+        (<NuxtLink to="/privacy/" class="underline">privacy policy</NuxtLink>).
       </span>
     </p>
     <ClientOnly>
