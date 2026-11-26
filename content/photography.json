@@ -1,0 +1,184 @@
+{
+  "photos": [
+    {
+      "slug": "st-bartholomae-koenigssee",
+      "width": 1200,
+      "height": 801,
+      "title": "St. Bartholomä",
+      "place": "Königssee, Germany",
+      "year": 2026,
+      "alt": "A white chapel with red onion domes on the shore of a still lake, beneath a steep forested mountain",
+      "size": "feature"
+    },
+    {
+      "slug": "chitwan-snow-peaks",
+      "width": 960,
+      "height": 1200,
+      "title": "Snow above the jungle",
+      "place": "Chitwan, Nepal",
+      "year": 2026,
+      "alt": "Snow-covered Himalayan peaks rising above dense forest, a river and dry grassland",
+      "size": "feature"
+    },
+    {
+      "slug": "trajans-column",
+      "width": 1200,
+      "height": 899,
+      "title": "Trajan's Column",
+      "place": "Rome, Italy",
+      "year": 2026,
+      "alt": "Trajan's Column beside a domed church above ochre rooftops, under a streaked blue sky",
+      "size": "standard"
+    },
+    {
+      "slug": "lichtenstein-castle",
+      "width": 900,
+      "height": 1200,
+      "title": "Castle in the mist",
+      "place": "Lichtenstein Castle, Germany",
+      "year": 2025,
+      "alt": "Lichtenstein Castle with its tall round tower, perched on a limestone cliff in drifting mist",
+      "size": "feature"
+    },
+    {
+      "slug": "bee-on-scabious",
+      "width": 960,
+      "height": 1200,
+      "title": "Visitor",
+      "place": "Germany",
+      "year": 2026,
+      "alt": "A bee feeding on a pink pincushion flower against a soft green background",
+      "size": "small"
+    },
+    {
+      "slug": "tower-bridge",
+      "width": 1200,
+      "height": 802,
+      "title": "Tower Bridge",
+      "place": "London, England",
+      "year": 2026,
+      "alt": "Tower Bridge over the Thames under a cloudy sky, a red bus crossing between the towers",
+      "size": "standard"
+    },
+    {
+      "slug": "chitwan-morning-light",
+      "width": 960,
+      "height": 1200,
+      "title": "Morning light",
+      "place": "Chitwan, Nepal",
+      "year": 2026,
+      "alt": "Rays of morning sun breaking through the canopy of a misty forest",
+      "size": "feature"
+    },
+    {
+      "slug": "palma-cathedral",
+      "width": 1200,
+      "height": 900,
+      "title": "La Seu",
+      "place": "Palma, Mallorca",
+      "year": 2025,
+      "alt": "Palma Cathedral in warm sandstone above rows of palm trees under a clear blue sky",
+      "size": "standard"
+    },
+    {
+      "slug": "autumn-pair",
+      "width": 960,
+      "height": 1200,
+      "title": "Yellow and orange",
+      "place": "Germany",
+      "year": 2026,
+      "alt": "A slender yellow birch and a broad orange tree on a grassy rise against a blue sky",
+      "size": "standard"
+    },
+    {
+      "slug": "colosseum",
+      "width": 1200,
+      "height": 899,
+      "title": "Colosseum",
+      "place": "Rome, Italy",
+      "year": 2026,
+      "alt": "The arched outer wall of the Colosseum under wispy clouds",
+      "size": "standard"
+    },
+    {
+      "slug": "buckingham-palace-gates",
+      "width": 801,
+      "height": 1200,
+      "title": "Palace gates",
+      "place": "London, England",
+      "year": 2026,
+      "alt": "A gilded royal coat of arms with a lion and unicorn on the black iron gates of Buckingham Palace",
+      "size": "small"
+    },
+    {
+      "slug": "palma-palms",
+      "width": 1200,
+      "height": 900,
+      "title": "Palms on the seafront",
+      "place": "Palma, Mallorca",
+      "year": 2025,
+      "alt": "Tall palm trees silhouetted against a pale blue sky above a lawn, with a passing car and a lone figure",
+      "size": "standard"
+    },
+    {
+      "slug": "chitwan-old-tree",
+      "width": 857,
+      "height": 1200,
+      "title": "The old tree",
+      "place": "Chitwan, Nepal",
+      "year": 2026,
+      "alt": "A huge spreading tree standing over a dirt path, with a suspension bridge behind it",
+      "size": "standard"
+    },
+    {
+      "slug": "koenigssee-peaks",
+      "width": 1200,
+      "height": 801,
+      "title": "Low cloud over the lake",
+      "place": "Königssee, Germany",
+      "year": 2026,
+      "alt": "Steep green and grey mountains under heavy cloud, rising from a dark lake",
+      "size": "feature"
+    },
+    {
+      "slug": "roman-emperor-and-pine",
+      "width": 801,
+      "height": 1200,
+      "title": "Emperor and pine",
+      "place": "Rome, Italy",
+      "year": 2026,
+      "alt": "A bronze statue of a Roman emperor with an outstretched arm beside a leaning pine, red flowers in front",
+      "size": "standard"
+    },
+    {
+      "slug": "basel-barfuesserplatz",
+      "width": 1200,
+      "height": 801,
+      "title": "Old town, winter sun",
+      "place": "Basel, Switzerland",
+      "year": 2026,
+      "alt": "Rows of old townhouses climbing a slope to a church with a red-roofed turret",
+      "size": "standard"
+    },
+    {
+      "slug": "bare-tree",
+      "width": 960,
+      "height": 1200,
+      "title": "Before winter",
+      "place": "Germany",
+      "year": 2026,
+      "alt": "A leafless tree at the edge of a ploughed field, with village roofs and large clouds behind",
+      "size": "small"
+    },
+    {
+      "slug": "roman-forum",
+      "width": 1200,
+      "height": 900,
+      "title": "The Forum",
+      "place": "Rome, Italy",
+      "year": 2026,
+      "alt": "Temples and ruins of the Roman Forum framed by overhanging leaves",
+      "size": "feature"
+    }
+  ]
+}

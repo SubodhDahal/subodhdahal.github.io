@@ -6,6 +6,7 @@
     <nav aria-label="Footer" class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
       <NuxtLink to="/blog/" class="link-underline">Blog</NuxtLink>
       <NuxtLink to="/library/" class="link-underline">Library</NuxtLink>
+      <NuxtLink to="/photography/" class="link-underline">Photography</NuxtLink>
       <NuxtLink to="/tools/" class="link-underline">Tools</NuxtLink>
       <a href="/#about" class="link-underline">About</a>
     </nav>

@@ -43,6 +43,13 @@
         </li>
         <li>
           <NuxtLink
+            to="/photography/"
+            :class="['nav-link', { 'is-active': isPhotographyActive }]">
+            Photography
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink
             to="/tools/"
             :class="['nav-link', { 'is-active': isToolsActive }]">
             Tools
@@ -109,6 +116,14 @@
               </li>
               <li class="mb-5">
                 <NuxtLink
+                  to="/photography/"
+                  :class="['nav-link text-lg', { 'is-active': isPhotographyActive }]"
+                  @click="isMobileNavOpen = false">
+                  Photography
+                </NuxtLink>
+              </li>
+              <li class="mb-5">
+                <NuxtLink
                   to="/tools/"
                   :class="['nav-link text-lg', { 'is-active': isToolsActive }]"
                   @click="isMobileNavOpen = false">
@@ -153,6 +168,7 @@ const normalizedPath = computed(() => {
 });
 const isBlogActive = computed(() => normalizedPath.value === '/blog' || normalizedPath.value.startsWith('/blog/'));
 const isLibraryActive = computed(() => normalizedPath.value === '/library' || normalizedPath.value.startsWith('/library/'));
+const isPhotographyActive = computed(() => normalizedPath.value === '/photography');
 const isToolsActive = computed(() => normalizedPath.value === '/tools' || normalizedPath.value.startsWith('/tools/'));
 
 const isMobileNavOpen = ref(false);

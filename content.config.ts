@@ -78,6 +78,30 @@ export default defineContentConfig({
         ogImage: defineOgImageSchema(),
         schemaOrg: defineSchemaOrgSchema(),
       })
+    }),
+    // /photography/: preview-sized, marked photos written by
+    // scripts/photos.mjs. Array order is the hanging order on the wall.
+    photography: defineCollection({
+      type: 'page',
+      source: 'photography.json',
+      schema: z.object({
+        photos: z.array(z.object({
+          slug: z.string(),
+          width: z.number().int(),
+          height: z.number().int(),
+          title: z.string(),
+          place: z.string(),
+          year: z.number().int().optional(),
+          alt: z.string(),
+          // How large the print hangs: feature prints anchor the wall,
+          // small ones fill around them.
+          size: z.enum(['small', 'standard', 'feature']).default('standard'),
+        })),
+        robots: defineRobotsSchema(),
+        sitemap: defineSitemapSchema(),
+        ogImage: defineOgImageSchema(),
+        schemaOrg: defineSchemaOrgSchema(),
+      })
     })
   }
 })
