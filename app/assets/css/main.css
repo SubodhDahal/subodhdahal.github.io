@@ -277,6 +277,7 @@
            prose-code:font-normal
            prose-code:border prose-code:border-secondary-200 dark:prose-code:border-secondary-700
            prose-pre:bg-secondary-50 dark:prose-pre:bg-secondary-800/90
+           prose-pre:text-secondary-800 dark:prose-pre:text-secondary-100
            prose-pre:border prose-pre:border-secondary-100 dark:prose-pre:border-secondary-700
            prose-pre:rounded-lg prose-pre:my-4
            [&>pre]:my-4 [&>pre>code]:my-0 [&>pre]:!p-0
