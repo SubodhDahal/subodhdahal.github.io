@@ -16,9 +16,11 @@ meta:
 
 > Index of every page on this site: [llms.txt](https://subodhdahal.com/llms.txt)
 
-# Datenschutzerklärung
+# **Datenschutzerklärung**
 
-Deutsch · English
+*Welche Daten beim Besuch dieser Website anfallen und welche Rechte du hast. *
+
+Read the privacy policy in English ↓
 
 ## 1. Verantwortlicher
 
@@ -87,11 +89,11 @@ Du hast gegenüber mir folgende Rechte hinsichtlich deiner personenbezogenen Dat
 
 Wende dich dazu an die oben genannte E-Mail-Adresse. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO). Für mich zuständig ist der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg, Lautenschlagerstraße 20, 70173 Stuttgart, [www.baden-wuerttemberg.datenschutz.de](https://www.baden-wuerttemberg.datenschutz.de).
 
-Stand: November 2026
+**Stand: November 2026**
 
-## Privacy policy (English)
+## Privacy policy
 
-This is a translation for convenience. The German version above is the legally binding one.
+*A translation for convenience. The German version above is the legally binding one. *
 
 ### 1. Controller
 
@@ -137,7 +139,7 @@ This site links to other services such as GitHub, LinkedIn, XING, Stack Overflow
 
 You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20), and to object to processing based on Art. 6(1)(f) (Art. 21). Email me to use them. You can also complain to a data protection supervisory authority (Art. 77 GDPR). Mine is the Landesbeauftragter für den Datenschutz und die Informationsfreiheit Baden-Württemberg, Lautenschlagerstraße 20, 70173 Stuttgart, Germany, [www.baden-wuerttemberg.datenschutz.de](https://www.baden-wuerttemberg.datenschutz.de).
 
-Last updated: November 2026
+**Last updated: November 2026**
 
 ```json
 {"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/privacy/#webpage","@type":"WebPage","description":"How subodhdahal.com handles personal data: hosting, cookieless analytics and your rights under the GDPR.","name":"Datenschutzerklärung / Privacy policy","url":"https://subodhdahal.com/privacy/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/privacy/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}

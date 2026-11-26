@@ -16,39 +16,25 @@ meta:
 
 > Index of every page on this site: [llms.txt](https://subodhdahal.com/llms.txt)
 
-# Impressum
+# **Impressum**
 
-Deutsch · English
+*Angaben gemäß § 5 DDG und § 18 Abs. 1 MStV *Legal notice under German law
 
-## Angaben gemäß § 5 DDG und § 18 Abs. 1 MStV
+<dl>
 
-Subodh Dahal  
- Lindenberg 3  
- 71229 Leonberg  
- Deutschland
+<dt>**Anschrift **Address</dt>
+<dd><address>Subodh Dahal<br> Lindenberg 3<br> 71229 Leonberg<br> Deutschland</address></dd>
 
-### Kontakt
+<dt>**Kontakt **Contact</dt>
+<dd><a href="mailto:sbdhdahal@gmail.com">sbdhdahal@gmail.com</a></dd>
 
-E-Mail: [sbdhdahal@gmail.com](mailto:sbdhdahal@gmail.com)
+<dt>**Verantwortlich für den Inhalt **Responsible for content</dt>
+<dd>Subodh Dahal, Anschrift wie oben nach § 18 Abs. 2 MStV</dd>
 
-### Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+<dt>**Datenschutz **Privacy</dt>
+<dd><a href="https://subodhdahal.com/privacy/">Datenschutzerklärung / Privacy policy →</a></dd>
 
-Subodh Dahal, Anschrift wie oben.
-
-Informationen zum Umgang mit personenbezogenen Daten stehen in der [Datenschutzerklärung](https://subodhdahal.com/privacy/).
-
-## Legal notice (English)
-
-This is a translation for convenience. The German version above is the legally binding one.
-
-Subodh Dahal  
- Lindenberg 3  
- 71229 Leonberg  
- Germany
-
-Email: [sbdhdahal@gmail.com](mailto:sbdhdahal@gmail.com)
-
-Responsible for the content under § 18(2) MStV: Subodh Dahal, address as above. How this site handles personal data is described in the [privacy policy](https://subodhdahal.com/privacy/).
+</dl>
 
 ```json
 {"@context":"https://schema.org","@graph":[{"@id":"https://subodhdahal.com/#website","@type":"WebSite","description":"Subodh Dahal is an engineering manager in Stuttgart. He writes about software, self-hosting, NixOS, automation, photography and hiking in Nepal.","inLanguage":"en","name":"Subodh Dahal","url":"https://subodhdahal.com","publisher":{"@id":"https://subodhdahal.com/#identity"}},{"@id":"https://subodhdahal.com/impressum/#webpage","@type":"WebPage","description":"Impressum (legal notice) for subodhdahal.com.","name":"Impressum","url":"https://subodhdahal.com/impressum/","isPartOf":{"@id":"https://subodhdahal.com/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://subodhdahal.com/impressum/"]}]},{"@id":"https://subodhdahal.com/#identity","@type":"Person","jobTitle":"Engineering Manager","name":"Subodh Dahal","url":"https://subodhdahal.com","homeLocation":{"@type":"Place","name":"Stuttgart, Germany"},"image":{"@id":"https://subodhdahal.com/#/schema/image/1"},"knowsAbout":["Software engineering","Automation","Self-hosting","NixOS","Photography"],"sameAs":["https://github.com/SubodhDahal","https://www.linkedin.com/in/subodhdahal","https://www.xing.com/profile/Subodh_Dahal","https://stackoverflow.com/users/1083422/sub0dh","https://instagram.com/wanderluster_subodh"]},{"@id":"https://subodhdahal.com/#/schema/image/1","@type":"ImageObject","contentUrl":"https://subodhdahal.com/images/me.jpg","inLanguage":"en","url":"https://subodhdahal.com/images/me.jpg"}]}
